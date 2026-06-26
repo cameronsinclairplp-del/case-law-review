@@ -1,0 +1,28 @@
+name: Test email
+
+on:
+  workflow_dispatch:        # adds a manual "Run workflow" button in the Actions tab
+
+jobs:
+  send-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: Case-Law Review <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.MAIL_USERNAME }}
+          subject: "Case-Law Review — email test"
+          body: |
+            This is a test from your Case-Law Review repo.
+
+            If you're reading this, your Gmail app password and the two GitHub
+            secrets (MAIL_USERNAME / MAIL_PASSWORD) are wired up correctly.
+
+            Next step: the twice-daily pipeline will send you the real update
+            emails — a link to the app plus a short summary of what's new.
