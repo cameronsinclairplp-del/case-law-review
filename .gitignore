@@ -11,3 +11,7 @@
 # scratch
 /tmp/
 *.tmp
+
+# python
+__pycache__/
+*.pyc
