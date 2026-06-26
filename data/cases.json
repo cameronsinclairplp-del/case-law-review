@@ -1,0 +1,24 @@
+[
+  {
+    "id": "hca-2026-19",
+    "date": "2026-06-17",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Cullen v The State of New South Wales",
+    "citation": "[2026] HCA 19",
+    "decided": "17/06/2026",
+    "appealFrom": "NSW Court of Appeal",
+    "outcome": "Appeal dismissed — State not liable",
+    "weight": "Persuasive principle (HCA); statute is NSW",
+    "tags": ["duty of care", "crowd control", "arrest", "use of force", "civil liability"],
+    "relevance": "AWARENESS",
+    "oneLine": "Police owe bystanders a duty of care when they move into a crowd to make an arrest — but a proportionate response to a real threat is not negligence, even when someone gets hurt.",
+    "whatHappened": "On 26 January 2017, an “Invasion Day” protest march of about 5,000 people moved through inner Sydney. Laura CULLEN was watching from the crowd. As officers of the Operational Support Group moved in — and while Leading Senior Constable Livermore was arresting a marcher — a melee erupted and CULLEN was knocked to the ground and seriously injured. At trial she was awarded $800,000; the NSW Court of Appeal reversed that. She appealed to the High Court.",
+    "whatHeld": "The appeal turned on three questions — duty, breach, and scope. <b>Duty — yes:</b> when intervening in the march, the officers owed a duty to avoid physical injury to a class of people that included bystanders foreseeably at risk from the operation. <b>Breach — no:</b> their actions were not unreasonable given the public-safety threat they were responding to at the time. With no breach, the scope question did not arise. <b>Appeal dismissed.</b>",
+    "whatItMeans": "Read it for the principle, not the charge — this is NSW civil negligence, not WA criminal law, so it changes no offence you lay. But the principle is High Court and it travels: when you intervene operationally (a crowd, a public-order job, an arrest in a tight space) you owe bystanders a duty of care, and you are judged on the reasonableness of your response to the threat <i>as it appeared at the time</i>, not with hindsight. What saved the officers was a documented, proportionate plan (their “Operational Orders” and “Actions On”) — so record your threat assessment and why the response was proportionate (running sheet, notes, BWC). The same duty/breach reasoning runs through the <i>Civil Liability Act 2002</i> (WA).",
+    "verdict": "Useful for use-of-force and civil-liability exposure. It does not change how you investigate, gather evidence, or lay a charge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/19.html",
+    "jadeUrl": "",
+    "files": { "judgment": "", "source": "" }
+  }
+]
