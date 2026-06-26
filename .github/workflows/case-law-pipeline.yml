@@ -1,0 +1,39 @@
+name: Case-Law Pipeline
+
+on:
+  schedule:
+    # Times are UTC. AWST = UTC+8 (no daylight saving). Three runs a day:
+    - cron: "0 19 * * *"   # 03:00 AWST — early morning digest
+    - cron: "0 4 * * *"    # 12:00 AWST — midday
+    - cron: "0 10 * * *"   # 18:00 AWST — evening
+    # Note: GitHub may delay scheduled runs by several minutes under load.
+  workflow_dispatch: {}        # manual "Run workflow" button for testing
+
+permissions:
+  contents: write              # so GITHUB_TOKEN can commit cases.json + files
+
+concurrency:
+  group: case-law-pipeline     # never let two runs race on the data file
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Run pipeline
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python pipeline/update.py

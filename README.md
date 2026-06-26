@@ -121,6 +121,17 @@ python3 -m http.server 8000
 ## Deploy (GitHub Pages)
 Pages is served from `main` (root). Any push that updates `cases.json` publishes within a minute.
 
+## The automatic pipeline
+`pipeline/update.py`, run by [`.github/workflows/case-law-pipeline.yml`](.github/workflows/case-law-pipeline.yml) **three times a day** (03:00 / 12:00 / 18:00 AWST) and on demand via *Actions → Run workflow*. Each run:
+
+1. reads BarNet Jade alert emails from Gmail (IMAP),
+2. keeps in-scope matters — **HCA / WASCA / WASC** (binding/WA), **WADC** and the persuasive Code jurisdictions **QCA / TASCCA / NTCCA / NTSC** when an investigation/evidence topic matches — dedupes by `id`,
+3. fetches the judgment from AustLII (a case whose judgment isn't published yet is held in `data/state.json`'s durable **`pending`** queue and retried every run until it resolves or ages out at 30 days),
+4. writes the analysis with the Anthropic API (`claude-opus-4-8`, strict JSON, detective house style),
+5. saves `data/files/<id>/<id>.md`, prepends the case to `cases.json`, commits, and emails a digest **only if there's something new** (no spam on quiet days).
+
+Secrets (GitHub → Settings → Secrets → Actions): `MAIL_USERNAME`, `MAIL_PASSWORD` (Gmail app password), `ANTHROPIC_API_KEY`. The job needs `permissions: contents: write` (already set) — no PAT.
+
 ---
 
 *Not legal advice — verify against the judgment before you rely on it. No case, citation or holding is invented.*
