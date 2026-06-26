@@ -215,6 +215,54 @@
       "blurb": "Soma v WA Police [No 2] [2026] WASC 256",
       "firstSeen": "2026-06-26T16:19:24.593720+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-94",
+      "citation": "[2026] WASCA 94",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "94",
+      "caseName": "The State of Western Australia v Aiden Santo (a pseudonym)",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1234238&pid=108229876&h=172913152",
+      "blurb": "The State of Western Australia v Aiden Santo (a pseudonym) [2026] WASCA 94",
+      "firstSeen": "2026-06-26T20:29:09.702454+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-261",
+      "citation": "[2026] WASC 261",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "261",
+      "caseName": "Roe v Director of Public Prosecutions",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1234255&pid=108229876&h=172913152",
+      "blurb": "Roe v Director of Public Prosecutions [2026] WASC 261",
+      "firstSeen": "2026-06-26T20:29:09.702456+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2013-37",
+      "citation": "[2013] HCA 37",
+      "courtTag": "HCA",
+      "year": "2013",
+      "num": "37",
+      "caseName": "be undertaken when applying principles in Bugmy v The Queen (2013) 249 CLR 571;",
+      "jadeUrl": "https://jade.io/summary/mnc/2013/HCA/37",
+      "blurb": "ender’s disadvantaged background — moral culpability — discussion of process to be undertaken when applying principles in Bugmy v The Queen (2013) 249 CLR 571; [2013] HCA 37 CRIME — appeals — appeal against senten",
+      "firstSeen": "2026-06-26T20:29:09.702457+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2008-36",
+      "citation": "[2008] HCA 36",
+      "courtTag": "HCA",
+      "year": "2008",
+      "num": "36",
+      "caseName": "AC 280 and Hearne v Street",
+      "jadeUrl": "https://jade.io/summary/mnc/2008/HCA/36",
+      "blurb": "estigation and prosecution – release granted in part – consideration of Harman v Secretary of State for the Home Department [1983] 1 AC 280 and Hearne v Street [2008] HCA 36; 235 CLR 125 principles McGoogan v Mull",
+      "firstSeen": "2026-06-26T20:29:09.702459+00:00",
+      "notified": true
     }
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 30 days). Written by pipeline/update.py."
