@@ -85,19 +85,26 @@
 
   function stripTags(s) { return String(s == null ? '' : s).replace(/<[^>]*>/g, ' '); }
 
-  /* ---------- date helpers (house style: DD/MM/YYYY) ---------- */
-  function isoParts(iso) {
-    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || '');
-    return m ? { y: m[1], mo: m[2], d: m[3] } : null;
-  }
-  function isoToDMY(iso) {
-    var p = isoParts(iso);
-    return p ? p.d + '/' + p.mo + '/' + p.y : '';
+  /* ---------- date helpers ---------- */
+  // Render whatever precision the data carries:
+  //   "2026-06-17" -> "17 JUN 2026"  (daily entries)
+  //   "2026-06"    -> "JUN 2026"
+  //   "2017"       -> "2017"         (year-only authorities — exact date pending)
+  var MON = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  function fmtDate(raw) {
+    var s = String(raw == null ? '' : raw).trim();
+    var f = /^(\d{4})-(\d{2})-(\d{2})/.exec(s);
+    if (f) return f[3] + ' ' + (MON[parseInt(f[2], 10) - 1] || f[2]) + ' ' + f[1];
+    var ym = /^(\d{4})-(\d{2})$/.exec(s);
+    if (ym) return (MON[parseInt(ym[2], 10) - 1] || ym[2]) + ' ' + ym[1];
+    var y = /^(\d{4})$/.exec(s);
+    if (y) return y[1];
+    return s; // unknown format: show verbatim rather than blank
   }
   function yearOf(c) {
-    var p = isoParts(c.date);
-    if (p) return p.y;
-    var m = /(\d{4})/.exec(c.citation || c.decided || '');
+    var m = /(\d{4})/.exec(String(c.date || ''));
+    if (m) return m[1];
+    m = /(\d{4})/.exec(c.citation || c.decided || '');
     return m ? m[1] : '';
   }
 
@@ -273,7 +280,7 @@
     var view = h('div', { class: 'view' });
 
     // masthead
-    var updated = ALLCASES.length ? isoToDMY(ALLCASES[0].date) : '—';
+    var updated = ALLCASES.length ? fmtDate(ALLCASES[0].date) : '—';
     view.appendChild(h('div', { class: 'wrap' },
       h('header', { class: 'masthead' },
         h('div', { class: 'label eyebrow' }, 'WA Criminal Case-Law · prepared for C. SINCLAIR'),
@@ -437,7 +444,7 @@
     },
       h('div', { class: 'case-rail' },
         h('span', { class: 'court-tag', text: c.courtTag || '' }),
-        h('span', { class: 'case-date', text: isoToDMY(c.date) })
+        h('span', { class: 'case-date', text: fmtDate(c.date) })
       ),
       h('div', { class: 'case-main' },
         c.court ? h('div', { class: 'label case-court', text: c.court }) : null,
@@ -520,7 +527,7 @@
       h('div', { class: 'facts' },
         fact('Citation', c.citation),
         fact('Court', c.court),
-        fact('Decided', c.decided || isoToDMY(c.date)),
+        fact('Decided', c.decided || fmtDate(c.date)),
         fact('On appeal from', c.appealFrom),
         fact('Outcome', c.outcome),
         fact('Weight in WA', c.weight)

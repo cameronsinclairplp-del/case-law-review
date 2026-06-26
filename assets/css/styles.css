@@ -264,7 +264,7 @@ button {
   border-radius: 5px;
   padding: 3px 7px;
 }
-.case-date { margin-top: 9px; font-size: 11px; letter-spacing: 0.08em; color: var(--muted); }
+.case-date { display: block; margin-top: 9px; font-size: 11px; letter-spacing: 0.08em; color: var(--muted); white-space: nowrap; }
 
 .case-main { min-width: 0; }
 .case-court { margin-bottom: 5px; }
