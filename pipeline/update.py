@@ -334,9 +334,15 @@ def _item_from_match(m, name, href, blurb):
         "year": year,
         "num": num,
         "caseName": clean_case_name(name, f"[{year}] {code} {num}"),
-        "jadeUrl": href if _is_jade_url(href) else "",
+        # trust the alert's href only if it's genuinely a jade.io host; otherwise
+        # build the canonical Jade summary URL from the citation ourselves (safe).
+        "jadeUrl": href if _is_jade_url(href) else jade_summary_url(code, year, num),
         "blurb": blurb or "",
     }
+
+
+def jade_summary_url(court_tag, year, num):
+    return f"https://jade.io/summary/mnc/{year}/{court_tag}/{num}"
 
 
 def _is_jade_url(url):
@@ -611,6 +617,45 @@ def send_email(user, password, new_cases):
     log(f"email sent: {subject}")
 
 
+def send_watchlist_email(user, password, items):
+    n = len(items)
+    today = dt.datetime.now(dt.timezone.utc).strftime("%d/%m/%Y")
+    subject = f"WA Case-Law Review — {n} new decision{'s' if n != 1 else ''} to read ({today})"
+    intro = ("New in-scope WA / High Court decisions from your Jade alerts. "
+             "Written analysis is pending (automated full-text retrieval is currently "
+             "blocked at the source) — these are the ones to be across; tap a link to read:")
+    lines = [intro, ""]
+    html_items = []
+    for it in items:
+        au = austlii_url(it)
+        jd = it.get("jadeUrl") or jade_summary_url(it["courtTag"], it["year"], it["num"])
+        blurb = re.sub(r"\s+", " ", it.get("blurb", "")).strip()[:240]
+        lines += [f"• {it['caseName']} {it['citation']} — {it['courtTag']}"]
+        if blurb:
+            lines.append(f"  {blurb}")
+        lines += [f"  AustLII: {au}", f"  Jade: {jd}", ""]
+        html_items.append(
+            f"<li style='margin-bottom:14px'><strong>{esc(it['caseName'])} {esc(it['citation'])}</strong> "
+            f"— {esc(it['courtTag'])}<br>"
+            + (f"<span style='color:#46423A'>{esc(blurb)}</span><br>" if blurb else "")
+            + f"<a href='{esc(au)}'>AustLII</a> · <a href='{esc(jd)}'>Jade</a></li>")
+    lines += ["", "(The app library is unchanged until full analysis is available.)"]
+    html = (f"<div style='font-family:Inter,Arial,sans-serif;color:#1A1813'>"
+            f"<p>{esc(intro)}</p><ul style='list-style:none;padding-left:0'>{''.join(html_items)}</ul>"
+            f"<p style='color:#7C7563;font-size:13px'>The app library is unchanged until full "
+            f"analysis is available: <a href='{esc(APP_BASE)}/'>{esc(APP_BASE)}/</a></p></div>")
+    em = EmailMessage()
+    em["Subject"] = subject
+    em["From"] = f"Case-Law Review <{user}>"
+    em["To"] = user
+    em.set_content("\n".join(lines))
+    em.add_alternative(html, subtype="html")
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context()) as s:
+        s.login(user, password)
+        s.send_message(em)
+    log(f"watchlist email sent: {subject}")
+
+
 def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;")
             .replace(">", "&gt;").replace('"', "&quot;"))
@@ -667,11 +712,11 @@ def main():
     log(f"work items (new alerts + pending): {len(work)} (kept={len(kept)}, pending_in={len(pending)})")
 
     client = get_client() if work else None
-    new_cases, still_pending, gave_up = [], [], []
+    new_cases, unresolved, gave_up = [], [], []
     for it in work.values():
         try:
             text = fetch_judgment(austlii_url(it))
-            if not text and it.get("jadeUrl"):
+            if not text and _is_jade_url(it.get("jadeUrl", "")):
                 text = fetch_judgment(it["jadeUrl"])
             if not text:
                 age = _age_days(it.get("firstSeen"))
@@ -679,8 +724,8 @@ def main():
                     gave_up.append(it)
                     log(f"  GAVE UP {it['id']} ({it['citation']}): unresolved after {age:.0f} days")
                 else:
-                    still_pending.append(_pending_record(it))
-                    log(f"  pending {it['id']} ({it['citation']}): judgment not out yet ({age:.0f}d)")
+                    unresolved.append(it)
+                    log(f"  pending {it['id']} ({it['citation']}): full text not retrievable yet ({age:.0f}d)")
                 continue
             truncated = len(text) > MAX_JUDGMENT_CHARS
             if truncated:
@@ -692,10 +737,13 @@ def main():
             new_cases.append(case)
             log(f"  built {it['id']} [{case['relevance']}] {case['caseName']}")
         except Exception as e:
-            # keep it pending so a transient analysis/fetch error retries next run
-            still_pending.append(_pending_record(it))
+            unresolved.append(it)   # transient error -> retry next run
             log(f"  ERROR on {it['id']} ({it['citation']}): {e} — kept pending")
             continue
+
+    # Watchlist: surface newly-detected in-scope cases we couldn't full-text yet,
+    # exactly once each (the "notified" flag prevents re-emailing on every run).
+    to_notify = [w for w in unresolved if not w.get("notified")]
 
     if new_cases:
         merged = new_cases + existing
@@ -703,19 +751,23 @@ def main():
         save_cases(merged)
         log(f"cases.json: {len(existing)} -> {len(merged)}")
 
-    save_state(still_pending)
+    for w in to_notify:
+        w["notified"] = True
+    save_state([_pending_record(w) for w in unresolved])
 
     label = (f"Pipeline: add {len(new_cases)} case(s)" if new_cases
-             else "Pipeline: update pending queue")
+             else "Pipeline: update watchlist/queue")
     pushed = commit_and_push(label)
 
     if new_cases:
         send_email(user, password, new_cases)
-    else:
-        log("no new cases — no email (no spam on quiet days)")
+    if to_notify:
+        send_watchlist_email(user, password, to_notify)
+    if not new_cases and not to_notify:
+        log("nothing new — no email (no spam on quiet days)")
 
-    log(f"RUN SUMMARY: alerts={len(bodies)} candidates={len(candidates)} "
-        f"new={len(new_cases)} pending={len(still_pending)} gave_up={len(gave_up)} pushed={pushed}")
+    log(f"RUN SUMMARY: alerts={len(bodies)} candidates={len(candidates)} new={len(new_cases)} "
+        f"notified={len(to_notify)} pending={len(unresolved)} gave_up={len(gave_up)} pushed={pushed}")
 
 
 def _pending_record(it):
@@ -724,6 +776,7 @@ def _pending_record(it):
         "year": it["year"], "num": it["num"], "caseName": it.get("caseName", ""),
         "jadeUrl": it.get("jadeUrl", ""), "blurb": it.get("blurb", ""),
         "firstSeen": it.get("firstSeen", now_iso()),
+        "notified": bool(it.get("notified", False)),
     }
 
 
