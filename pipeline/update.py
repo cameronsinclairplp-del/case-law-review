@@ -706,6 +706,7 @@ def main():
     for it in kept:
         prev = work.get(it["id"], {})
         it["firstSeen"] = prev.get("firstSeen", now_iso())
+        it["notified"] = prev.get("notified", False)   # carry forward so we email each case ONCE
         work[it["id"]] = it
     for p in work.values():
         p.setdefault("firstSeen", now_iso())
