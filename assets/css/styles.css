@@ -227,6 +227,7 @@ button {
   .chip { min-height: 44px; }
   .back { min-height: 44px; }
   .doclink { padding-top: 11px; padding-bottom: 11px; }   /* >=44px tap height, underline stays attached */
+  .doclink--dl { min-height: 44px; }
 }
 
 /* ---------- 7. Case list ---------- */
@@ -483,6 +484,18 @@ button {
 }
 .doclink:hover { color: var(--teal); border-color: var(--teal); }
 .doclink svg { width: 14px; height: 14px; opacity: 0.8; }
+
+/* download buttons: pill-style actions, distinct from the underline source links */
+.doclink--dl {
+  border: 1px solid var(--hair);
+  border-radius: var(--pill);
+  padding: 9px 16px;
+  background: var(--paper2);
+  color: var(--ink);
+  font-weight: 500;
+}
+.doclink--dl:hover { color: var(--teal); border-color: var(--teal); background: var(--tealsoft); }
+.doclink--dl svg { opacity: 0.9; }
 
 /* ---------- 10. Footer ---------- */
 .footer {

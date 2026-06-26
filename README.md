@@ -78,7 +78,9 @@ Each object:
   "verdict": "…",
   "austliiUrl": "https://www.austlii.edu.au/...",
   "jadeUrl": "",
-  "files": { "judgment": "", "source": "" }
+  "sourceUrl": "",
+  "sourceLabel": "",
+  "files": { "judgment": "data/files/<id>/judgment.pdf", "llm": "data/files/<id>/<id>.md" }
 }
 ```
 
@@ -94,7 +96,11 @@ Each object:
 | `oneLine` | yes | plain text, one sentence. |
 | `whatHappened`, `whatHeld`, `whatItMeans`, `verdict` | — | plain text or inline `<b>/<i>` only. Italicise legislation. |
 | `austliiUrl`, `jadeUrl` | — | full `http(s)` URLs. Empty string = hidden. |
-| `files.judgment`, `files.source` | — | URL or relative path. Empty = hidden. |
+| `sourceUrl`, `sourceLabel` | — | fallback source link when there's no AustLII/JADE page (e.g. an obscure/old report). `sourceLabel` is the button text (defaults to "Source"). |
+| `files.judgment` | — | repo-relative path to the judgment PDF (`data/files/<id>/judgment.pdf`). Renders a **Download judgment (PDF)** button. Empty/absent = no button. |
+| `files.llm` | — | repo-relative path to the full-text LLM-retrieval markdown (`data/files/<id>/<id>.md`). Renders a **Download LLM file (.md)** button. Empty/absent = no button. |
+
+Download buttons use the HTML `download` attribute (save, not navigate) and only work for same-origin repo paths. The pipeline commits these files under `data/files/<id>/` and sets the `files` field; until then a case simply shows its source link(s).
 
 **House style:** dates `DD/MM/YYYY` · UPPERCASE surnames · legislation *italicised* (use `<i>…</i>`).
 

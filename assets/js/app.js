@@ -74,6 +74,7 @@
   function safeUrl(u) {
     if (typeof u !== 'string') return '';
     var s = u.trim();
+    if (!s) return '';   // empty/blank: no link (don't resolve "" to the current page)
     var isAbsolute = /^https?:\/\//i.test(s);
     var url;
     try { url = new URL(s, document.baseURI); } catch (e) { return ''; }
@@ -246,7 +247,8 @@
     chevR: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>',
     arrowL: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>',
     ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>',
-    file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>'
+    file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>',
+    download: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>'
   };
 
   function skeleton() {
@@ -484,6 +486,15 @@
       h('span', { text: label }), h('span', { html: icon, 'aria-hidden': 'true' }));
   }
 
+  // A download button (saves rather than navigates). Only http(s)/same-origin
+  // targets pass safeUrl; absent paths render nothing (graceful fallback).
+  function dlButton(href, label, downloadName) {
+    var u = safeUrl(href);
+    if (!u) return null;
+    return h('a', { class: 'doclink doclink--dl', href: u, download: downloadName || '' },
+      h('span', { html: ICON.download, 'aria-hidden': 'true' }), h('span', { text: label }));
+  }
+
   function renderDetail(id) {
     var c = findCase(id);
     var backHref = '#/' + filtersToQuery();
@@ -504,12 +515,18 @@
     document.title = (c.caseName || 'Case') + ' — The Case-Law Review';
 
     var files = c.files || {};
-    var links = [
+    // source links: AustLII / JADE, with sourceUrl as a fallback when both are absent
+    var sourceLinks = [
       docLink(c.austliiUrl, 'Full judgment · AustLII', ICON.ext),
       docLink(c.jadeUrl, 'BarNet Jade', ICON.ext),
-      docLink(files.judgment, 'Judgment (file)', ICON.file),
-      docLink(files.source, 'Source', ICON.file)
+      docLink(c.sourceUrl, c.sourceLabel || 'Source', ICON.ext)
     ].filter(Boolean);
+    // download buttons (optional files committed by the pipeline)
+    var downloads = [
+      dlButton(files.judgment, 'Download judgment (PDF)', (c.id || 'judgment') + '-judgment.pdf'),
+      dlButton(files.llm, 'Download LLM file (.md)', (c.id || 'case') + '.md')
+    ].filter(Boolean);
+    var links = downloads.concat(sourceLinks);
 
     var tier = String(c.relevance || '').toUpperCase() === 'ACTION' ? 'Action.' : 'Awareness.';
 
