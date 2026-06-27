@@ -119,6 +119,8 @@
   var listEl = null, sentinelEl = null, countEl = null, io = null;
   var filtered = [], rendered = 0;
   var listMemo = null; // { key, count, scroll } for back-navigation restore
+  var filtersOpen = false;      // mobile: filter panel starts collapsed (toggle to reveal)
+  var filterToggleEl = null;    // the "Filters" toggle button (shown on mobile only)
 
   var app = document.getElementById('app');
 
@@ -245,6 +247,7 @@
   var ICON = {
     search: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
     chevR: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>',
+    chevD: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>',
     arrowL: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>',
     ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>',
     file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>',
@@ -285,7 +288,7 @@
     var updated = ALLCASES.length ? fmtDate(ALLCASES[0].date) : '—';
     view.appendChild(h('div', { class: 'wrap' },
       h('header', { class: 'masthead' },
-        h('div', { class: 'label eyebrow' }, 'WA Criminal Case-Law · prepared for C. SINCLAIR'),
+        h('div', { class: 'label eyebrow' }, 'WA Criminal Case-Law'),
         h('h1', {}, 'The Case-Law Review'),
         h('p', { class: 'deck' }, "A growing archive of the decisions that touch a detective’s work — the law, what it changed, and what it means for your jobs."),
         h('div', { class: 'label', style: 'margin-top:18px;letter-spacing:.1em;' },
@@ -344,12 +347,53 @@
     var yearGroup = YEARS.length > 1 ? chipGroup('Year', 'year',
       [{ v: 'ALL', label: 'All' }].concat(YEARS.map(function (y) { return { v: y, label: y }; }))) : null;
 
+    var filtersPanel = h('div',
+      { class: 'filters' + (filtersOpen ? '' : ' is-collapsed'), id: 'filter-panel' },
+      courtGroup, relGroup, yearGroup);
+
+    // Mobile-only toggle: the filter panel is tall (esp. the year row), so it
+    // starts collapsed and the first case sits near the top. Hidden on desktop.
+    filterToggleEl = h('button', {
+      type: 'button', class: 'filter-toggle', 'aria-controls': 'filter-panel',
+      'aria-expanded': filtersOpen ? 'true' : 'false',
+      onclick: function () {
+        filtersOpen = !filtersOpen;
+        filtersPanel.classList.toggle('is-collapsed', !filtersOpen);
+        filterToggleEl.setAttribute('aria-expanded', filtersOpen ? 'true' : 'false');
+      }
+    },
+      h('span', { class: 'ft-label' }, 'Filters'),
+      h('span', { class: 'ft-right' })
+    );
+    refreshFilterToggle();
+
     return h('div', { class: 'controls' },
       h('div', { class: 'wrap controls-inner' },
         searchRow,
-        h('div', { class: 'filters' }, courtGroup, relGroup, yearGroup)
+        filterToggleEl,
+        filtersPanel
       )
     );
+  }
+
+  // Count of non-default filters, surfaced as a badge on the collapsed toggle so
+  // an active filter is never hidden.
+  function activeFilterCount() {
+    var n = 0;
+    if (state.court && state.court !== 'ALL') n++;
+    if (state.rel && state.rel !== 'ALL') n++;
+    if (state.year && state.year !== 'ALL') n++;
+    return n;
+  }
+
+  function refreshFilterToggle() {
+    if (!filterToggleEl) return;
+    var right = filterToggleEl.querySelector('.ft-right');
+    if (!right) return;
+    right.innerHTML = '';
+    var n = activeFilterCount();
+    if (n) right.appendChild(h('span', { class: 'ft-count' }, String(n)));
+    right.appendChild(h('span', { class: 'chev', html: ICON.chevD }));
   }
 
   function chipGroup(label, dim, opts) {
@@ -398,6 +442,7 @@
         ? filtered.length + (filtered.length === 1 ? ' case' : ' cases')
         : filtered.length + ' of ' + ALLCASES.length;
     }
+    refreshFilterToggle();
 
     if (!filtered.length) {
       var anyFilter = state.q || state.court !== 'ALL' || state.rel !== 'ALL' || state.year !== 'ALL';

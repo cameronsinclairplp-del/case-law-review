@@ -202,6 +202,39 @@ button {
 .filter-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .filter-group > .label { flex: 0 0 auto; margin-right: 2px; }
 
+/* Filter toggle — shown on mobile only (see responsive block); hidden on desktop */
+.filter-toggle {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 16px;
+  border: 1px solid var(--hair);
+  border-radius: var(--pill);
+  background: transparent;
+  color: var(--inksoft);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.18s var(--ease);
+}
+.filter-toggle:hover { border-color: rgba(26, 24, 19, 0.45); }
+.filter-toggle .ft-right { display: inline-flex; align-items: center; gap: 8px; }
+.filter-toggle .chev { display: inline-flex; transition: transform 0.2s var(--ease); }
+.filter-toggle .chev svg { width: 16px; height: 16px; display: block; }
+.filter-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.filter-toggle .ft-count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 5px;
+  border-radius: 9px; background: var(--teal); color: var(--paper);
+  font-size: 11px; font-weight: 600; letter-spacing: 0;
+}
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -533,6 +566,9 @@ button {
   .case-oneline { max-width: none; }
   .search-row { flex-wrap: wrap; }
   .result-count { order: 3; flex-basis: 100%; }
+  .filter-toggle { display: flex; }     /* reveal the toggle */
+  .filters.is-collapsed { display: none; }  /* collapsed by default until toggled */
+  .filters { margin-top: 12px; }
 }
 
 /* ---------- 12. Motion ---------- */

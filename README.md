@@ -1,7 +1,7 @@
 # The Case-Law Review
 
-A personal, ever-growing web archive of WA-relevant **criminal case law**, prepared for
-Cameron SINCLAIR (First Class Constable, WA Police — detective track, Karratha).
+A personal, ever-growing web archive of WA-relevant **criminal case law**, written for a
+WA Police detective (detective training).
 
 Each entry is a judgment plus plain-English analysis written for a detective: what happened,
 what the court held, what it means for casework, and an **ACTION vs AWARENESS** verdict.

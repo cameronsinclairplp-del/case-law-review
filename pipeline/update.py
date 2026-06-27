@@ -109,8 +109,8 @@ DROP_KEYWORDS = re.compile(
     r"defamation|planning|strata|residential tenanc|industrial relations)\b", re.I)
 
 SYSTEM_PROMPT = (
-    "You are the case-law analyst for Cameron SINCLAIR, a First Class Constable and "
-    "detective-in-training with WA Police in Karratha. From the judgment text provided, "
+    "You are the case-law analyst for a detective in training with WA Police. "
+    "From the judgment text provided, "
     "produce a briefing for a working detective. Return strict JSON only with keys: "
     "oneLine, whatHappened, whatHeld, whatItMeans, verdict, outcome, weight, tags, "
     "relevance, decided, appealFrom, flags.\n"
