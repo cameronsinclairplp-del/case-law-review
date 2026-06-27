@@ -465,7 +465,10 @@
     "whatItMeans": "<b>Pilbara-critical for you.</b> Build the Anunga Rules into every relevant interview in your patch — interpreter, prisoner’s friend, caution explained and confirmed — or the admissions are at real risk of exclusion.",
     "verdict": "Directly changes interview practice in your region — Anunga compliance, every relevant job.",
     "austliiUrl": "",
-    "jadeUrl": "https://jade.io/citation/2341322"
+    "jadeUrl": "https://jade.io/citation/2341322",
+    "files": {
+      "llm": "data/files/ntsc-1976-anunga/ntsc-1976-anunga.md"
+    }
   },
   {
     "id": "hca-1970-21",
@@ -532,6 +535,41 @@
     }
   },
   {
+    "id": "ukhl-1935-woolmington",
+    "date": "1935-05-23",
+    "court": "House of Lords (UK)",
+    "courtTag": "UKHL",
+    "caseName": "Woolmington v DPP",
+    "citation": "[1935] AC 462 (HL)",
+    "decided": "23/05/1935",
+    "appealFrom": "Court of Criminal Appeal (England)",
+    "outcome": "Conviction quashed; appeal allowed — the prosecution bears the burden of proving guilt.",
+    "weight": "House of Lords (UK) — foundational; the presumption-of-innocence cornerstone, applied across the common-law world including WA.",
+    "tags": [
+      "burden of proof",
+      "presumption of innocence",
+      "golden thread",
+      "standard of proof",
+      "reasonable doubt"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The “golden thread” of the criminal law — the prosecution must prove the accused’s guilt; the accused need not prove innocence (subject only to insanity and statutory exceptions).",
+    "whatHappened": "Reginald WOOLMINGTON, aged 21, was charged with murdering his estranged 17-year-old wife. He claimed the killing was an accident — that he only meant to frighten her into returning to him by threatening suicide with a gun, but it went off. The trial judge directed the jury that, once the killing was proved, it was for WOOLMINGTON to prove it was an accident. He was convicted and sentenced to death; the Court of Criminal Appeal upheld the conviction; the House of Lords quashed it.",
+    "whatHeld": "Viscount SANKEY LC stated the “golden thread”: <b>it is the duty of the prosecution to prove the prisoner’s guilt</b>, subject only to the defence of insanity and to any statutory exception. If, on the whole of the case, there is a reasonable doubt — raised by either the prosecution’s or the prisoner’s evidence — the prosecution has not made out its case and the accused is entitled to an acquittal. The accused never has to prove innocence.",
+    "whatItMeans": "This is the cornerstone you build every brief on: <b>the State proves guilt — the suspect proves nothing</b>. Assemble your evidence to discharge that burden to the criminal standard, and never structure a case (or an interview) on the premise that a suspect must explain themselves or account for their innocence. The main carve-out you’ll meet on the job is insanity / unsoundness of mind, which the accused must raise and prove (see <i>Stefanski</i>), plus specific statutory reverse-onus provisions.",
+    "verdict": "AWARENESS — the foundational statement of the prosecution’s burden; it shapes how you build and think about every brief, even though it lays down no operational procedure.",
+    "austliiUrl": "",
+    "jadeUrl": "",
+    "sourceUrl": "https://www.bailii.org/uk/cases/UKHL/1935/1.html",
+    "sourceLabel": "BAILII",
+    "flags": [
+      "Full speech not yet in the app — the verbatim ‘golden thread’ ratio is shown; add the complete [1935] AC 462 speech when available."
+    ],
+    "files": {
+      "llm": "data/files/ukhl-1935-woolmington/ukhl-1935-woolmington.md"
+    }
+  },
+  {
     "id": "ukhl-1893-browne-v-dunn",
     "date": "1893-11-28",
     "court": "House of Lords (UK)",
@@ -558,6 +596,9 @@
     "austliiUrl": "",
     "jadeUrl": "",
     "sourceUrl": "https://www.brownevdunn.com/read-the-decision/",
-    "sourceLabel": "Full text (public-domain report)"
+    "sourceLabel": "Full text (public-domain report)",
+    "files": {
+      "llm": "data/files/ukhl-1893-browne-v-dunn/ukhl-1893-browne-v-dunn.md"
+    }
   }
 ]
