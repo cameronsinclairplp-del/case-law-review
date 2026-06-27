@@ -6,7 +6,8 @@ Flow:
   1. Read BarNet Jade alert emails from Gmail via IMAP (rolling lookback window).
   2. Parse alerts into candidate cases; filter to scope; dedupe by id.
   3. Merge in any "pending" cases whose judgment wasn't published last time.
-  4. Fetch each judgment's full text from AustLII.
+  4. Fetch each judgment's full text from the Open Australian Legal Corpus
+     (openly licensed; HCA/interstate only - the corpus carries NO WA cases).
   5. Analyse it with the Anthropic API (strict JSON, detective house style).
   6. Write data/files/<id>/<id>.md (full text + metadata) for the download button.
   7. Prepend the new case object(s) to data/cases.json (newest-first).
@@ -37,8 +38,10 @@ from email.message import EmailMessage
 from pathlib import Path
 from urllib.parse import urlparse
 
-import requests
 from bs4 import BeautifulSoup
+
+# Sibling module (pipeline/ is sys.path[0] when run as `python pipeline/update.py`).
+from corpus import fetch_judgment_text  # legitimate full-text source (Open Australian Legal Corpus)
 
 # ---------------------------------------------------------------------------
 # Config
@@ -55,8 +58,6 @@ MODEL = os.environ.get("ANALYSIS_MODEL", "claude-opus-4-8")
 MAX_JUDGMENT_CHARS = 500_000      # ~125k tokens; truncate longer judgments (flagged)
 LOOKBACK_DAYS = 3                 # rolling IMAP window; dedupe-by-id makes overlap safe
 PENDING_MAX_DAYS = 30             # give up on an unresolvable case after this (logged)
-UA = ("Mozilla/5.0 (compatible; CaseLawReviewBot/1.0; "
-      "+https://cameronsinclairplp-del.github.io/case-law-review/)")
 
 # Courts in scope. "gated": only kept when a TOPIC keyword matches (noise control).
 # HCA/WASCA/WASC = binding/WA primary. QCA/TASCCA/NTCCA/NTSC = persuasive Code
@@ -384,29 +385,6 @@ def austlii_url(item):
 
 
 # ---------------------------------------------------------------------------
-# Fetch full judgment text
-# ---------------------------------------------------------------------------
-def fetch_judgment(url):
-    try:
-        r = requests.get(url, headers={"User-Agent": UA}, timeout=60)
-    except Exception as e:
-        log(f"  fetch error {url}: {e}")
-        return None
-    if r.status_code != 200:
-        log(f"  fetch {url} -> HTTP {r.status_code}")
-        return None
-    soup = BeautifulSoup(r.text, "html.parser")
-    for t in soup(["script", "style", "nav", "header", "footer", "form"]):
-        t.decompose()
-    lines = [ln.strip() for ln in soup.get_text("\n").splitlines()]
-    text = "\n".join(ln for ln in lines if ln)
-    if len(text) < 800:
-        log(f"  fetched text too short ({len(text)} chars) — treating as unresolved")
-        return None
-    return text
-
-
-# ---------------------------------------------------------------------------
 # Analyse via Anthropic API (strict JSON)
 # ---------------------------------------------------------------------------
 def get_client():
@@ -621,9 +599,10 @@ def send_watchlist_email(user, password, items):
     n = len(items)
     today = dt.datetime.now(dt.timezone.utc).strftime("%d/%m/%Y")
     subject = f"WA Case-Law Review — {n} new decision{'s' if n != 1 else ''} to read ({today})"
-    intro = ("New in-scope WA / High Court decisions from your Jade alerts. "
-             "Written analysis is pending (automated full-text retrieval is currently "
-             "blocked at the source) — these are the ones to be across; tap a link to read:")
+    intro = ("New in-scope decisions from your Jade alerts that the free corpus "
+             "doesn't carry (all WA cases, plus the odd High Court gap). Full text and "
+             "analysis are pending — these are the ones to be across; tap a link to read, "
+             "or forward one to ingest it into the app:")
     lines = [intro, ""]
     html_items = []
     for it in items:
@@ -716,9 +695,12 @@ def main():
     new_cases, unresolved, gave_up = [], [], []
     for it in work.values():
         try:
-            text = fetch_judgment(austlii_url(it))
-            if not text and _is_jade_url(it.get("jadeUrl", "")):
-                text = fetch_judgment(it["jadeUrl"])
+            # Full text comes ONLY from the openly-licensed Open Australian Legal
+            # Corpus. AustLII/JADE scraping was removed - their terms forbid it
+            # (AustLII's policy bars scraping AND AI/LLM use). The corpus carries
+            # HCA/interstate judgments but NO WA cases, so WASC/WASCA fall through
+            # to the watchlist + the human-in-the-loop ingest path (pipeline/ingest.py).
+            text = fetch_judgment_text(it["citation"])
             if not text:
                 age = _age_days(it.get("firstSeen"))
                 if age > PENDING_MAX_DAYS:

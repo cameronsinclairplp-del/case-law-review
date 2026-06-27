@@ -10,7 +10,13 @@
     "appealFrom": "NSW Court of Appeal",
     "outcome": "Appeal dismissed — State not liable",
     "weight": "Persuasive principle (HCA); statute is NSW",
-    "tags": ["duty of care", "crowd control", "arrest", "use of force", "civil liability"],
+    "tags": [
+      "duty of care",
+      "crowd control",
+      "arrest",
+      "use of force",
+      "civil liability"
+    ],
     "relevance": "AWARENESS",
     "oneLine": "Police owe bystanders a duty of care when they move into a crowd to make an arrest — but a proportionate response to a real threat is not negligence, even when someone gets hurt.",
     "whatHappened": "On 26 January 2017, an “Invasion Day” protest march of about 5,000 people moved through inner Sydney. Laura CULLEN was watching from the crowd. As officers of the Operational Support Group moved in — and while Leading Senior Constable Livermore was arresting a marcher — a melee erupted and CULLEN was knocked to the ground and seriously injured. At trial she was awarded $800,000; the NSW Court of Appeal reversed that. She appealed to the High Court.",
@@ -32,7 +38,13 @@
     "appealFrom": "Supreme Court of WA",
     "outcome": "Conviction quashed — miscarriage of justice",
     "weight": "WA Court of Appeal — binds WA courts below",
-    "tags": ["reasonable suspicion", "s 4 CIA", "suspect status", "arrest", "admissibility"],
+    "tags": [
+      "reasonable suspicion",
+      "s 4 CIA",
+      "suspect status",
+      "arrest",
+      "admissibility"
+    ],
     "relevance": "ACTION",
     "oneLine": "On the objective facts, police had enough to reasonably suspect GIBSON — he should have been treated as a suspect with full rights, not interviewed as a witness. The bar for reasonable suspicion is low.",
     "whatHappened": "Arising from the killing of Joshua WARNEKE at Broome, GIBSON was spoken to as a witness under s 28 of the CIA when, on the objective facts known to police, he should have been treated as a suspect. The Court of Appeal found the failure to afford him a suspect’s rights (ss 137–138 CIA) produced a miscarriage and quashed the conviction.",
@@ -53,7 +65,13 @@
     "appealFrom": "",
     "outcome": "Leading authority on lies as consciousness of guilt (the Edwards direction)",
     "weight": "High Court — binds all Australian courts",
-    "tags": ["lies", "consciousness of guilt", "interviews", "circumstantial", "jury directions"],
+    "tags": [
+      "lies",
+      "consciousness of guilt",
+      "interviews",
+      "circumstantial",
+      "jury directions"
+    ],
     "relevance": "ACTION",
     "oneLine": "A lie shows consciousness of guilt only if it is deliberate, material, and told because the truth would implicate — otherwise it just goes to credit.",
     "whatHappened": "The High Court’s statement of when an accused’s lie can be used as evidence of guilt rather than merely as a matter of credit. (Held at principle level here — facts not reproduced.)",
@@ -61,7 +79,10 @@
     "whatItMeans": "When a suspect gives a false account it can become <b>evidence</b>, not just bad credit — but only if it meets the three limbs. So <b>lock the account down in free recall before you challenge</b>: pin them to a clear, detailed version first, so a later lie is demonstrably deliberate and material.",
     "verdict": "Changes interview craft: secure the account before the challenge so a lie can carry evidential weight.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1993/63.html",
-    "jadeUrl": "https://jade.io/summary/mnc/1993/HCA/63"
+    "jadeUrl": "https://jade.io/summary/mnc/1993/HCA/63",
+    "files": {
+      "llm": "data/files/hca-1993-63/hca-1993-63.md"
+    }
   },
   {
     "id": "hca-2016-35",
@@ -74,7 +95,13 @@
     "appealFrom": "Court of Appeal (Qld)",
     "outcome": "Murder conviction restored",
     "weight": "High Court — binds all Australian courts",
-    "tags": ["consciousness of guilt", "circumstantial", "inference", "homicide", "lies"],
+    "tags": [
+      "consciousness of guilt",
+      "circumstantial",
+      "inference",
+      "homicide",
+      "lies"
+    ],
     "relevance": "AWARENESS",
     "oneLine": "The High Court’s worked example of lies and conduct as consciousness of guilt in a circumstantial murder case — and of drawing inferences properly. It restored the murder verdict.",
     "whatHappened": "Gerard BADEN-CLAY was convicted of murdering his wife, Allison. The case was circumstantial; his conduct and lies — including an affair and a claim that scratches on his neck were ‘from shaving’ — featured at trial. The Queensland Court of Appeal substituted manslaughter; the High Court restored the murder conviction, addressing how inferences may be drawn in a circumstantial case.",
@@ -95,7 +122,13 @@
     "appealFrom": "Supreme Court of WA",
     "outcome": "Appeal dismissed — voluntary intoxication cannot ground unsoundness of mind (ss 27/28 Criminal Code)",
     "weight": "WA Court of Appeal — binds WA courts below",
-    "tags": ["intoxication", "insanity", "s 27 / s 28 Criminal Code", "forensic procedures", "bloods"],
+    "tags": [
+      "intoxication",
+      "insanity",
+      "s 27 / s 28 Criminal Code",
+      "forensic procedures",
+      "bloods"
+    ],
     "relevance": "ACTION",
     "oneLine": "Voluntary or intentional intoxication cannot ground unsoundness of mind under ss 27/28 of the Criminal Code — the Code is read on its own terms.",
     "whatHappened": "An appeal against conviction on guilty pleas to two counts of murder. The appellant argued he could not in law be guilty (or was not guilty by reason of unsoundness of mind) where a psychosis had been triggered by his <b>voluntary cannabis use</b> — turning on the construction of ss 27, 28(1) and 28(2) of the <i>Criminal Code</i> (WA). The Court of Appeal dismissed the appeal. (Your instructor placed the facts at a ‘Greenwood’ murder; the judgment does not name Greenwood — the legal point and citation are what matter.)",
@@ -116,7 +149,12 @@
     "appealFrom": "",
     "outcome": "Established the discretion to exclude improperly/illegally obtained evidence",
     "weight": "High Court — binds all Australian courts",
-    "tags": ["improperly obtained evidence", "admissibility discretion", "search", "police powers"],
+    "tags": [
+      "improperly obtained evidence",
+      "admissibility discretion",
+      "search",
+      "police powers"
+    ],
     "relevance": "ACTION",
     "oneLine": "Courts have a discretion to exclude improperly or illegally obtained evidence, weighing the public interest in convicting against the unfairness or illegality in how it was obtained.",
     "whatHappened": "The case concerned evidence obtained through an improper/unlawful exercise of police power; the High Court set out how courts decide whether to admit or exclude such evidence. (Held at principle level here.)",
@@ -124,7 +162,10 @@
     "whatItMeans": "Get the <b>power right the first time</b>. An unlawful search, entry or seizure hands the defence the <i>Bunning v Cross</i> argument to exclude your evidence. Record your authority for every act — which power, what grounds, when — so the balance falls your way if it’s litigated.",
     "verdict": "Drives the habit: lawful power + recorded authority for every search, entry and seizure.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1978/22.html",
-    "jadeUrl": "https://jade.io/summary/mnc/1978/HCA/22"
+    "jadeUrl": "https://jade.io/summary/mnc/1978/HCA/22",
+    "files": {
+      "llm": "data/files/hca-1978-22/hca-1978-22.md"
+    }
   },
   {
     "id": "hca-1948-23",
@@ -137,7 +178,13 @@
     "appealFrom": "",
     "outcome": "Confession admissible only if voluntary (basal voluntariness)",
     "weight": "High Court — binds all Australian courts",
-    "tags": ["confessions", "voluntariness", "interviews", "admissions", "caution"],
+    "tags": [
+      "confessions",
+      "voluntariness",
+      "interviews",
+      "admissions",
+      "caution"
+    ],
     "relevance": "ACTION",
     "oneLine": "A confession is admissible only if it is voluntary — not obtained by inducement, threat, or a will that has been overborne.",
     "whatHappened": "The High Court’s statement of the voluntariness rule governing the admissibility of confessions. (Held at principle level here.)",
@@ -145,7 +192,10 @@
     "whatItMeans": "<b>Voluntariness is the whole ball game</b> in an interview. Caution properly, offer no inducements, apply no oppression — and beware over-repetition that ‘overbears’ a suspect (the lesson the DSS drove home). If voluntariness fails, the admission is gone, however true.",
     "verdict": "Drives interview conduct: a clean caution, no inducements, no oppression — protect voluntariness.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1948/23.html",
-    "jadeUrl": "https://jade.io/summary/mnc/1948/HCA/23"
+    "jadeUrl": "https://jade.io/summary/mnc/1948/HCA/23",
+    "files": {
+      "llm": "data/files/hca-1948-23/hca-1948-23.md"
+    }
   },
   {
     "id": "hca-1991-34",
@@ -158,7 +208,12 @@
     "appealFrom": "",
     "outcome": "No adverse inference from exercising the right to silence pre-trial",
     "weight": "High Court — binds all Australian courts",
-    "tags": ["right to silence", "no adverse inference", "interviews", "burden of proof"],
+    "tags": [
+      "right to silence",
+      "no adverse inference",
+      "interviews",
+      "burden of proof"
+    ],
     "relevance": "ACTION",
     "oneLine": "No adverse inference may be drawn against a suspect for exercising the right to silence before trial.",
     "whatHappened": "The High Court confirmed the protection attaching to pre-trial silence. (Held at principle level here.)",
@@ -166,7 +221,10 @@
     "whatItMeans": "Don’t build your case on, or invite comment on, a suspect’s silence. A no-comment interview is their right — keep proving the case from the evidence, not from the silence. (The DSS’s ‘have a rip’ is about lawful persistence within the interview, not using silence against them.)",
     "verdict": "Drives the habit: never rely on or remark on a suspect’s silence.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1991/34.html",
-    "jadeUrl": "https://jade.io/summary/mnc/1991/HCA/34"
+    "jadeUrl": "https://jade.io/summary/mnc/1991/HCA/34",
+    "files": {
+      "llm": "data/files/hca-1991-34/hca-1991-34.md"
+    }
   },
   {
     "id": "hca-1992-13",
@@ -179,7 +237,12 @@
     "appealFrom": "",
     "outcome": "Mandatory cogent warning on disputed identification evidence",
     "weight": "High Court — binds all Australian courts",
-    "tags": ["identification", "ID warning", "admissibility", "jury directions"],
+    "tags": [
+      "identification",
+      "ID warning",
+      "admissibility",
+      "jury directions"
+    ],
     "relevance": "ACTION",
     "oneLine": "Where identification is significant and disputed, the judge must give a cogent, specific warning about its dangers — ID evidence is inherently risky.",
     "whatHappened": "The High Court on the directions required where disputed identification evidence is significant to the case. (Held at principle level here.)",
@@ -187,7 +250,10 @@
     "whatItMeans": "Treat ID as <b>fragile</b> and process it properly — proper identification procedures, a contemporaneous note of the witness’s first description and confidence, no contamination. It will be scrutinised hard, so the integrity of how you obtained it is everything.",
     "verdict": "Drives the habit: rigorous, well-documented identification procedures.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1992/13.html",
-    "jadeUrl": "https://jade.io/summary/mnc/1992/HCA/13"
+    "jadeUrl": "https://jade.io/summary/mnc/1992/HCA/13",
+    "files": {
+      "llm": "data/files/hca-1992-13/hca-1992-13.md"
+    }
   },
   {
     "id": "ntsc-1976-anunga",
@@ -200,7 +266,13 @@
     "appealFrom": "",
     "outcome": "Established the Anunga Rules for interviewing Aboriginal suspects",
     "weight": "NT Supreme Court — strong persuasive weight in WA",
-    "tags": ["Anunga rules", "Aboriginal suspects", "interpreter", "prisoner's friend", "interviews"],
+    "tags": [
+      "Anunga rules",
+      "Aboriginal suspects",
+      "interpreter",
+      "prisoner's friend",
+      "interviews"
+    ],
     "relevance": "ACTION",
     "oneLine": "Guidelines for interviewing Aboriginal suspects — an interpreter where needed, a prisoner’s friend, and explaining the caution phrase by phrase with the suspect repeating it back.",
     "whatHappened": "The NT Supreme Court laid down practical guidelines (the ‘Anunga Rules’) for the fair interviewing of Aboriginal suspects. (Held at principle level here.)",
@@ -221,7 +293,13 @@
     "appealFrom": "",
     "outcome": "Established the rule of practice: put your case to a witness you intend to contradict",
     "weight": "UK House of Lords — long-accepted rule of practice in Australian courts",
-    "tags": ["Browne v Dunn", "cross-examination", "procedural fairness", "giving evidence", "court craft"],
+    "tags": [
+      "Browne v Dunn",
+      "cross-examination",
+      "procedural fairness",
+      "giving evidence",
+      "court craft"
+    ],
     "relevance": "AWARENESS",
     "oneLine": "If a party intends to contradict a witness, it must put that case to the witness in cross-examination and give them a chance to respond.",
     "whatHappened": "The classic statement of the rule of fair cross-examination. (Held at principle level here.)",
