@@ -52,7 +52,10 @@
     "whatItMeans": "Your go-to authority on <b>reasonable suspicion (s 4 CIA)</b>, which underpins every CIA power. Decide a person’s status <b>before</b> you ask the first question — the instant the objective facts cross the line, caution and give full rights, or you lose what follows. Build the habit: every time you use s 4 (door, arrest, search), take two minutes and record <i>this was my suspicion at the time</i> — date, time, the facts, before you act.",
     "verdict": "Directly changes how you work: status discipline and a contemporaneous s 4 note on every job.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2017/141.html",
-    "jadeUrl": "https://jade.io/summary/mnc/2017/WASCA/141"
+    "jadeUrl": "https://jade.io/summary/mnc/2017/WASCA/141",
+    "files": {
+      "llm": "data/files/wasca-2017-141/wasca-2017-141.md"
+    }
   },
   {
     "id": "hca-1993-63",
@@ -136,7 +139,10 @@
     "whatItMeans": "This is <b>why you get bloods early</b>. For any serious matter (murder, sexual offence, GBH), arrange a forensic procedure for blood ASAP — before alcohol/meth/GHB metabolises. If the defence runs mental impairment, proving a <b>voluntarily-taken</b> intoxicant in the system takes the insanity route away. As the DSS put it: bloods, bloods, bloods.",
     "verdict": "Changes an investigative step: forensic bloods as early as possible to defeat the intoxication/insanity defence.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2022/5.html",
-    "jadeUrl": "https://jade.io/summary/mnc/2022/WASCA/5"
+    "jadeUrl": "https://jade.io/summary/mnc/2022/WASCA/5",
+    "files": {
+      "llm": "data/files/wasca-2022-5/wasca-2022-5.md"
+    }
   },
   {
     "id": "hca-1978-22",

@@ -540,6 +540,132 @@
       h('span', { html: ICON.download, 'aria-hidden': 'true' }), h('span', { text: label }));
   }
 
+  /* ---------- full judgment reader (lazy-loaded from the case .md) ---------- */
+  var _judgmentCache = {};   // id -> { source, text } | 'NA'
+
+  function judgmentSection(c, mdPath) {
+    var bodyEl = h('div', { class: 'judgment-body is-hidden' });
+    var label = h('span', { class: 'jt-label', text: 'Read the full judgment' });
+    var btn = h('button', {
+      type: 'button', class: 'judgment-toggle', 'aria-expanded': 'false',
+      onclick: function () {
+        var nowHidden = bodyEl.classList.toggle('is-hidden');
+        btn.setAttribute('aria-expanded', nowHidden ? 'false' : 'true');
+        label.textContent = nowHidden ? 'Read the full judgment' : 'Hide the full judgment';
+        if (!nowHidden && !bodyEl.getAttribute('data-loaded')) {
+          bodyEl.setAttribute('data-loaded', '1');
+          loadJudgment(c, mdPath, bodyEl);
+        }
+      }
+    }, h('span', { html: ICON.file, 'aria-hidden': 'true' }), label,
+       h('span', { class: 'chev', html: ICON.chevD }));
+    return h('div', { class: 'judgment' },
+      h('div', { class: 'label jh-eyebrow' }, 'The judgment, in full'),
+      btn, bodyEl);
+  }
+
+  function loadJudgment(c, mdPath, container) {
+    container.appendChild(h('div', { class: 'judgment-loading', text: 'Loading the judgment…' }));
+    var render = function (j) {
+      container.innerHTML = '';
+      if (!j || j === 'NA' || !j.text) {
+        container.appendChild(h('p', { class: 'judgment-na' },
+          'The verbatim text isn’t in the app for this case yet — read it at the source link above.'));
+        return;
+      }
+      container.appendChild(h('div', { class: 'judgment-source' },
+        h('span', { text: 'Verbatim judgment text' }),
+        h('a', {
+          class: 'jsrc', target: '_blank', rel: 'noopener noreferrer',
+          href: safeUrl(j.source) || safeUrl(c.austliiUrl) || safeUrl(c.jadeUrl) || '#'
+        }, 'view source ↗')));
+      var article = h('div', { class: 'judgment-text' });
+      judgmentNodes(j.text).forEach(function (n) { article.appendChild(n); });
+      container.appendChild(article);
+    };
+    if (_judgmentCache[c.id]) { render(_judgmentCache[c.id]); return; }
+    fetch(mdPath)
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+      .then(function (md) { var j = extractJudgment(md) || 'NA'; _judgmentCache[c.id] = j; render(j); })
+      .catch(function (e) {
+        container.innerHTML = '';
+        container.appendChild(h('p', { class: 'judgment-na',
+          text: 'Could not load the judgment (' + (e && e.message ? e.message : 'error') + ').' }));
+      });
+  }
+
+  // Pull the verbatim "## Full judgment" section (+ its source url) out of the .md.
+  function extractJudgment(md) {
+    var i = md.indexOf('## Full judgment');
+    if (i === -1) return null;
+    var rest = md.slice(i);
+    var nl = rest.indexOf('\n');
+    var header = nl === -1 ? rest : rest.slice(0, nl);
+    var text = (nl === -1 ? '' : rest.slice(nl + 1)).replace(/^\s+/, '');
+    var m = header.match(/https?:\/\/[^\s)]+/);
+    return { source: m ? m[0] : '', text: text };
+  }
+
+  // Format plain judgment text into readable nodes: stacked header blocks,
+  // section headings, and hanging paragraph numbers. Heuristic but robust.
+  function judgmentNodes(text) {
+    var out = [];
+    var norm = String(text).replace(/\r/g, '').replace(/\n{3,}/g, '\n\n')
+      .replace(/\n(?=\d{1,4}\.\s)/g, '\n\n');   // each numbered paragraph starts its own block
+    var blocks = norm.split(/\n{2,}/);
+    blocks.forEach(function (raw) {
+      var lines = raw.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
+      if (!lines.length) return;
+      // peel a leading standalone label (ORDER / HELD / INTRODUCTION ...) into a heading
+      var lead = lines[0];
+      if (lines.length > 1 && lead.length <= 40 &&
+          /^(orders?|held|introduction|background|conclusion|disposition|result|reasons|catchwords)\b[:.]?$/i.test(lead)) {
+        out.push(h('h4', { class: 'jh', text: lead.length <= 14 ? lead : titleish(lead) }));
+        lines = lines.slice(1);
+        if (!lines.length) return;
+      }
+      var oneLine = lines.join(' ').replace(/\s+/g, ' ').trim();
+
+      // short, multi-line, non-numbered block -> a stacked header (court/parties/coram)
+      var isHeaderBlock = lines.length >= 2 && lines.length <= 8 &&
+        lines.every(function (l) { return l.length < 52 && !/^\d/.test(l); });
+      if (isHeaderBlock) {
+        var box = h('div', { class: 'jhead' });
+        lines.forEach(function (l) { box.appendChild(h('div', { class: 'jhead-line', text: l })); });
+        out.push(box);
+        return;
+      }
+      // "LABEL : value" header metadata (jurisdiction / coram / citation / ...) -> compact row
+      var meta = oneLine.match(/^([A-Z][A-Za-z()\/ .]{1,28}?)\s:\s+(\S.*)$/);
+      if (meta && meta[1].trim() === meta[1].trim().toUpperCase()) {
+        out.push(h('p', { class: 'jmeta' },
+          h('span', { class: 'jmeta-k', text: titleish(meta[1].trim()) }),
+          h('span', { class: 'jmeta-v', text: meta[2] })));
+        return;
+      }
+      // section heading: short, ALL-CAPS or a known label, no trailing sentence punctuation
+      var isCaps = /[A-Z]/.test(oneLine) && oneLine === oneLine.toUpperCase();
+      var isHeadingWord = /^(orders?|introduction|background|conclusion|disposition|catchwords|result|the appeal|grounds? of appeal|reasons)\b/i.test(oneLine);
+      if (oneLine.length <= 80 && (isCaps || isHeadingWord) && !/[.,;]$/.test(oneLine)) {
+        out.push(h('h4', { class: 'jh', text: oneLine.length <= 14 ? oneLine : titleish(oneLine) }));
+        return;
+      }
+      // numbered paragraph -> hanging number in the gutter
+      var nm = oneLine.match(/^(\d{1,4})\.?\s+(\S[\s\S]*)$/);
+      if (nm && parseInt(nm[1], 10) <= 2000) {
+        out.push(h('p', { class: 'jp jp-num' },
+          h('span', { class: 'jn', text: nm[1] }), h('span', { text: nm[2] })));
+        return;
+      }
+      out.push(h('p', { class: 'jp', text: oneLine }));
+    });
+    return out;
+  }
+
+  function titleish(s) {
+    return s.replace(/\w\S*/g, function (w) { return w.charAt(0) + w.slice(1).toLowerCase(); });
+  }
+
   function renderDetail(id) {
     var c = findCase(id);
     var backHref = '#/' + filtersToQuery();
@@ -605,7 +731,9 @@
           h('span', { html: sanitizeInline(c.verdict) }))
       ) : null,
 
-      links.length ? h('div', { class: 'links' }, links) : null
+      links.length ? h('div', { class: 'links' }, links) : null,
+
+      files.llm ? judgmentSection(c, files.llm) : null
     );
 
     app.innerHTML = '';
