@@ -48,6 +48,14 @@ def _cite_token_match(pat, citation):
     return re.search(re.escape(pat) + r"(?!\d)", norm, re.IGNORECASE) is not None
 
 
+def _is_wa(pat):
+    """The corpus carries ZERO Western Australian decisions, so a WA court code
+    (WASC/WASCA/WADC/...) skips the slow HF round-trip and returns a miss instantly.
+    Every Australian WA court code starts with 'WA'; no non-WA code does."""
+    parts = (pat or "").split()
+    return len(parts) >= 2 and parts[1].upper().startswith("WA")
+
+
 def fetch_judgment_text(citation, tries=4, timeout=30, min_chars=800):
     """Return verbatim judgment text from the corpus, or None.
 
@@ -57,7 +65,7 @@ def fetch_judgment_text(citation, tries=4, timeout=30, min_chars=800):
     - never fabricated.
     """
     pat = neutral_citation(citation)
-    if not pat:
+    if not pat or _is_wa(pat):
         return None
     qs = urllib.parse.urlencode({
         "dataset": DATASET, "config": "corpus", "split": "corpus",
@@ -86,7 +94,7 @@ def fetch_judgment_meta(citation, tries=4, timeout=30):
     """Like fetch_judgment_text but returns the whole corpus row (text + source url +
     corpus citation), or None. Used by backfill.py for provenance."""
     pat = neutral_citation(citation)
-    if not pat:
+    if not pat or _is_wa(pat):
         return None
     qs = urllib.parse.urlencode({
         "dataset": DATASET, "config": "corpus", "split": "corpus",
