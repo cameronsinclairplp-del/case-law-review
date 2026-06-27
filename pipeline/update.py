@@ -75,6 +75,10 @@ COURTS = {
     "TASCCA": {"juris": "tas", "name": "Supreme Court of Tasmania — Court of Criminal Appeal", "gated": True},
     "NTCCA":  {"juris": "nt",  "name": "Supreme Court of the NT — Court of Criminal Appeal", "gated": True},
     "NTSC":   {"juris": "nt",  "name": "Supreme Court of the Northern Territory", "gated": True},
+    # "scope": False -> usable for hand-picked library cases (ingest/attach) but NOT
+    # kept by the watchlist filter, so the national Jade alert doesn't flood the digest.
+    "NSWSC":  {"juris": "nsw", "name": "Supreme Court of New South Wales", "gated": True, "scope": False},
+    "NSWCCA": {"juris": "nsw", "name": "Supreme Court of NSW — Court of Criminal Appeal", "gated": True, "scope": False},
 }
 
 # Investigation / evidence topics a WA detective cares about (the Canon §8 watchlist
@@ -539,6 +543,8 @@ def in_scope(item):
     tag = item["courtTag"]
     if tag not in COURTS:
         return False, f"court {tag} not in scope"
+    if not COURTS[tag].get("scope", True):
+        return False, f"{tag}: library-only court (not in watchlist scope)"
     blob = f"{item.get('caseName','')} {item.get('blurb','')}"
     if DROP_KEYWORDS.search(blob):
         return False, "out-of-scope topic"

@@ -18,3 +18,8 @@ __pycache__/
 
 # local project notes — kept out of the public repo (contain operational detail)
 /HANDOFF.md
+
+# local secrets — never commit (API keys etc.)
+.env
+*.env
+pipeline/.env
