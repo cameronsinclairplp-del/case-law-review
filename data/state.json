@@ -265,5 +265,6 @@
       "notified": true
     }
   ],
-  "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 30 days). Written by pipeline/update.py."
+  "processed": [],
+  "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 30 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). Written by pipeline/update.py."
 }

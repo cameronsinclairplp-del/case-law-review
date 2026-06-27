@@ -57,6 +57,7 @@ JADE_FROM = "editors@jade.io"
 MODEL = os.environ.get("ANALYSIS_MODEL", "claude-opus-4-8")
 MAX_JUDGMENT_CHARS = 500_000      # ~125k tokens; truncate longer judgments (flagged)
 LOOKBACK_DAYS = 3                 # rolling IMAP window; dedupe-by-id makes overlap safe
+SUBMISSION_LOOKBACK_DAYS = 35     # emailed judgments re-fetchable past PENDING_MAX_DAYS (no silent loss)
 PENDING_MAX_DAYS = 30             # give up on an unresolvable case after this (logged)
 
 # Courts in scope. "gated": only kept when a TOPIC keyword matches (noise control).
@@ -107,6 +108,26 @@ DROP_KEYWORDS = re.compile(
     r"\b(migration|deportation|visa|tax|taxation|patent|trademark|copyright|"
     r"bankruptc|insolvenc|workers.?compensation|family law|parenting order|"
     r"defamation|planning|strata|residential tenanc|industrial relations)\b", re.I)
+
+# WASC/WASCA come name-only in the Jade alert (no catchwords), so the topic gate
+# can't fire on them and civil matters slip through (bank/authority disputes etc.).
+# Drop the obvious CIVIL ones - but ONLY when no criminal signal is present, so a
+# real criminal case is never dropped on a guess. WA criminal matters always name
+# the State / Crown / police / DPP, or use a pseudonym.
+WA_NAME_ONLY = {"WASC", "WASCA"}
+CRIMINAL_NAME = re.compile(
+    r"\bwestern australia\b|\bstate of w\.?a\b|\bthe (?:queen|king)\b|"
+    r"\bregina\b|\brex\b|\bR\s+v\b|\bv\.?\s+the (?:queen|king)\b|\bpolice\b|"
+    r"\bd\.?p\.?p\b|director of public prosecutions|commissioner of police|"
+    r"\bex parte\b|prosecut|inquest|coronial|death of|\(a pseudonym\)", re.I)
+CIVIL_NAME = re.compile(
+    r"\bpty\.?\s*ltd|\bp/l\b|\bltd\b|\bplc\b|\binc\.?\b|\bllc\b|\blimited\b|\bbank\b|"
+    r"westpac|\bnab\b|\banz\b|commonwealth bank|bankwest|insurance|assurance|"
+    r"\bnominees\b|holdings|investments|\bauthority\b|\bcouncil\b|\bshire\b|"
+    r"\bcity of\b|\btown of\b|body corporate|owners corporation|\bstrata\b|"
+    r"liquidat|in liquidation|administrator|receiver|\btrustee\b|executor|"
+    r"estate of|in the matter of|probate|superannuation|\bmortgage\b|"
+    r"developments|constructions|enterprises|corporation|\bpartners\b", re.I)
 
 SYSTEM_PROMPT = (
     "You are the case-law analyst for a detective in training with WA Police. "
@@ -181,18 +202,24 @@ def load_state():
     s.setdefault("pending", [])
     if not isinstance(s["pending"], list):
         s["pending"] = []
+    s.setdefault("processed", [])
+    if not isinstance(s["processed"], list):
+        s["processed"] = []
     return s
 
 
-def save_state(pending):
-    # Stable key order + only the durable queue -> byte-identical when unchanged,
+def save_state(pending, processed=None):
+    # Stable key order + only the durable queue/log -> byte-identical when unchanged,
     # so quiet runs produce no commit (no empty-commit churn).
     STATE_PATH.write_text(
         json.dumps({
             "pending": pending,
+            "processed": processed or [],
             "note": ("Durable retry queue: cases seen in a Jade alert whose judgment "
                      "wasn't yet published. Retried every run until resolved or aged out "
-                     f"(> {PENDING_MAX_DAYS} days). Written by pipeline/update.py."),
+                     f"(> {PENDING_MAX_DAYS} days). 'processed' = Message-IDs of judgment "
+                     "emails already ingested (see fetch_submissions). Written by "
+                     "pipeline/update.py."),
         }, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8")
 
@@ -201,8 +228,8 @@ def now_iso():
     return dt.datetime.now(dt.timezone.utc).isoformat()
 
 
-def imap_since_date():
-    return dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=LOOKBACK_DAYS)
+def imap_since_date(days=LOOKBACK_DAYS):
+    return dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)
 
 
 # ---------------------------------------------------------------------------
@@ -282,6 +309,148 @@ def extract_body(msg):
             text = ""
         (html, plain) = (text, None) if msg.get_content_type() == "text/html" else (None, text)
     return html or plain or ""
+
+
+# ---------------------------------------------------------------------------
+# Email-to-ingest — judgments you supply by emailing them to yourself
+#
+# The WA / Lexis path: WA judgments aren't in any free corpus, and Lexis is only
+# reachable from a locked-down police machine. So you email the judgment to your
+# own pipeline inbox and the next scheduled run analyses it into the app — no
+# special software needed where you read Lexis/eCourts, just the ability to send
+# an email. Format:
+#     To/From: yourself (the MAIL_USERNAME account)
+#     Subject: INGEST [2022] WASCA 5 Stefanski v Western Australia
+#     Body:    <the full verbatim judgment text, pasted>
+# The text is human-supplied (consistent with the no-fabricate rule — nothing is
+# scraped). Each email is ingested once, tracked by Message-ID in state.json.
+# ---------------------------------------------------------------------------
+INGEST_SUBJECT_RE = re.compile(r"^\s*ingest\b[:\s-]*", re.I)
+
+
+def submission_text(msg):
+    """Verbatim judgment text from a submission email, preferring the plain-text
+    part (cleanest for a pasted judgment) and falling back to stripped HTML."""
+    plain = html = None
+    if msg.is_multipart():
+        for part in msg.walk():
+            ctype = part.get_content_type()
+            if ctype not in ("text/plain", "text/html"):
+                continue
+            try:
+                payload = part.get_payload(decode=True)
+                if payload is None:
+                    continue
+                t = payload.decode(part.get_content_charset() or "utf-8", errors="replace")
+            except Exception:
+                continue
+            if ctype == "text/plain" and plain is None:
+                plain = t
+            elif ctype == "text/html" and html is None:
+                html = t
+    else:
+        try:
+            payload = msg.get_payload(decode=True)
+            t = payload.decode(msg.get_content_charset() or "utf-8", errors="replace") if payload else ""
+        except Exception:
+            t = ""
+        (html, plain) = (t, None) if msg.get_content_type() == "text/html" else (None, t)
+
+    if plain and len(plain.strip()) >= 200:
+        text = plain
+    elif html:
+        soup = BeautifulSoup(html, "html.parser")
+        for x in soup(["script", "style"]):
+            x.decompose()
+        text = soup.get_text("\n")
+    else:
+        text = plain or ""
+    lines = [ln.strip() for ln in text.splitlines()]
+    return "\n".join(ln for ln in lines if ln).strip()
+
+
+def fetch_submissions(user, password, since_dt, processed):
+    """Return work items for judgments you emailed to yourself (subject starts with
+    INGEST and contains a medium-neutral citation; body is the verbatim text). Each
+    item carries 'suppliedText' and '_msgid'. Only mail FROM yourself with the marker
+    is read; already-ingested Message-IDs are skipped. Best-effort: never raises."""
+    since_str = since_dt.strftime("%d-%b-%Y")
+    seen = set(processed or [])
+    token = os.environ.get("INGEST_TOKEN", "").strip()  # optional shared-secret gate
+    out = []
+    try:
+        M = imaplib.IMAP4_SSL("imap.gmail.com", 993)
+        M.login(user, password)
+    except Exception as e:
+        log(f"  submissions: IMAP login failed ({e})")
+        return out
+    try:
+        M.select("INBOX")
+        typ, data = M.search(None, f'(SINCE "{since_str}" FROM "{user}" SUBJECT "ingest")')
+        if typ != "OK":
+            return out
+        ids = ((data[0] if data else b"") or b"").split()
+        if ids:
+            log(f"  submissions: {len(ids)} candidate email(s)")
+        for mid in ids:
+            try:
+                typ, msgdata = M.fetch(mid, "(RFC822)")
+                if typ != "OK" or not msgdata:
+                    continue
+                payload = next(
+                    (p[1] for p in msgdata
+                     if isinstance(p, tuple) and len(p) >= 2
+                     and isinstance(p[1], (bytes, bytearray))),
+                    None)
+                if payload is None:
+                    continue
+                msg = email.message_from_bytes(payload)
+                msgid = (msg.get("Message-ID") or "").strip()
+                if not msgid or msgid in seen:
+                    continue
+                subject = " ".join((msg.get("Subject") or "").split())
+                if not INGEST_SUBJECT_RE.match(subject):   # marker must LEAD the subject
+                    continue
+                if token and token not in subject:         # optional shared-secret gate
+                    log("  submission skipped: INGEST_TOKEN not present in subject")
+                    continue
+                m = CITATION_RE.search(subject)
+                if not m:
+                    log(f"  submission skipped (no citation in subject): {subject!r}")
+                    continue
+                name = INGEST_SUBJECT_RE.sub("", subject)
+                if token:
+                    name = name.replace(token, "").strip()
+                item = _item_from_match(m, name, "", name)
+                if item["courtTag"] not in COURTS:
+                    log(f"  submission skipped ({item['citation']}): court {item['courtTag']} not in COURTS")
+                    continue
+                text = submission_text(msg)
+                if len(text) < 800:
+                    log(f"  submission skipped ({item['citation']}): body too short ({len(text)} chars)")
+                    continue
+                # The verbatim judgment MUST contain its own medium-neutral citation.
+                # Without this, a wrong paste / mistyped subject citation would attach a
+                # real citation to the WRONG text (and, via replace-by-id, could clobber a
+                # good existing case) - the exact mis-attribution the no-fabricate rule bars.
+                cite_pat = re.compile(
+                    rf"\[{item['year']}\]\s*{re.escape(item['courtTag'])}\s*{item['num']}(?!\d)", re.I)
+                if not cite_pat.search(re.sub(r"\s+", " ", text)):
+                    log(f"  submission skipped ({item['citation']}): citation not found in body — wrong paste?")
+                    continue
+                item["suppliedText"] = text
+                item["_msgid"] = msgid
+                out.append(item)
+                log(f"  submission accepted: {item['id']} ({item['citation']}) — {len(text)} chars")
+            except Exception as e:
+                log(f"  submission fetch/parse error {mid!r}: {e}")
+                continue
+    finally:
+        try:
+            M.logout()
+        except Exception:
+            pass
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -375,6 +544,10 @@ def in_scope(item):
         return False, "out-of-scope topic"
     if COURTS[tag]["gated"] and not TOPIC_KEYWORDS.search(blob):
         return False, f"{tag}: no investigation/evidence topic keyword"
+    # Name-only WA courts: drop a clear civil matter unless it carries a criminal
+    # signal (conservative - ambiguous names are kept, never dropped on a guess).
+    if tag in WA_NAME_ONLY and CIVIL_NAME.search(blob) and not CRIMINAL_NAME.search(blob):
+        return False, f"{tag}: civil party, no criminal signal"
     return True, "in scope"
 
 
@@ -560,7 +733,7 @@ def commit_and_push(label):
 # ---------------------------------------------------------------------------
 # Email
 # ---------------------------------------------------------------------------
-def send_email(user, password, new_cases):
+def send_email(user, password, new_cases, stats=None):
     n = len(new_cases)
     today = dt.datetime.now(dt.timezone.utc).strftime("%d/%m/%Y")
     subject = f"WA Case-Law Review — {n} new {'case' if n == 1 else 'cases'} ({today})"
@@ -576,12 +749,15 @@ def send_email(user, password, new_cases):
             f"<span style='color:#46423A'>{esc(c['oneLine'])}</span><br>"
             f"<a href='{esc(url)}'>{esc(url)}</a></li>")
     lines += ["Full analysis + downloads in the app."]
+    if stats:
+        lines += ["", _health_text(stats)]
     html = (f"<div style='font-family:Inter,Arial,sans-serif;color:#1A1813'>"
             f"<p>{n} new {'case' if n == 1 else 'cases'} added to "
             f"<strong>The Case-Law Review</strong>:</p>"
             f"<ul style='list-style:none;padding-left:0'>{''.join(html_items)}</ul>"
             f"<p style='color:#7C7563;font-size:13px'>Full analysis + downloads in the app: "
-            f"<a href='{esc(APP_BASE)}/'>{esc(APP_BASE)}/</a></p></div>")
+            f"<a href='{esc(APP_BASE)}/'>{esc(APP_BASE)}/</a></p>"
+            f"{_health_html(stats) if stats else ''}</div>")
 
     em = EmailMessage()
     em["Subject"] = subject
@@ -595,7 +771,7 @@ def send_email(user, password, new_cases):
     log(f"email sent: {subject}")
 
 
-def send_watchlist_email(user, password, items):
+def send_watchlist_email(user, password, items, stats=None):
     n = len(items)
     today = dt.datetime.now(dt.timezone.utc).strftime("%d/%m/%Y")
     subject = f"WA Case-Law Review — {n} new decision{'s' if n != 1 else ''} to read ({today})"
@@ -619,10 +795,13 @@ def send_watchlist_email(user, password, items):
             + (f"<span style='color:#46423A'>{esc(blurb)}</span><br>" if blurb else "")
             + f"<a href='{esc(au)}'>AustLII</a> · <a href='{esc(jd)}'>Jade</a></li>")
     lines += ["", "(The app library is unchanged until full analysis is available.)"]
+    if stats:
+        lines += ["", _health_text(stats)]
     html = (f"<div style='font-family:Inter,Arial,sans-serif;color:#1A1813'>"
             f"<p>{esc(intro)}</p><ul style='list-style:none;padding-left:0'>{''.join(html_items)}</ul>"
             f"<p style='color:#7C7563;font-size:13px'>The app library is unchanged until full "
-            f"analysis is available: <a href='{esc(APP_BASE)}/'>{esc(APP_BASE)}/</a></p></div>")
+            f"analysis is available: <a href='{esc(APP_BASE)}/'>{esc(APP_BASE)}/</a></p>"
+            f"{_health_html(stats) if stats else ''}</div>")
     em = EmailMessage()
     em["Subject"] = subject
     em["From"] = f"Case-Law Review <{user}>"
@@ -641,6 +820,64 @@ def esc(s):
 
 
 # ---------------------------------------------------------------------------
+# Health signal — a one-line run summary on every email, plus a notice on an
+# otherwise-silent run that hit errors or abandoned a case (so a quietly
+# degrading pipeline can't look identical to a genuinely quiet day).
+# ---------------------------------------------------------------------------
+def _health_text(stats):
+    return ("— run health: "
+            f"{stats['alerts']} alert(s) · {stats['inScope']} in scope · "
+            f"{stats['analysed']} analysed · {stats['watchlist']} to watchlist · "
+            f"{stats['pending']} pending · {stats['errors']} error(s) · "
+            f"{stats['gaveUp']} given up.")
+
+
+def _health_html(stats):
+    return ("<p style='color:#9a9488;font-size:12px;border-top:1px solid #e8e3d6;"
+            "padding-top:8px;margin-top:16px'>Pipeline health — "
+            f"{stats['alerts']} alert(s) · {stats['inScope']} in scope · "
+            f"{stats['analysed']} analysed · {stats['watchlist']} to watchlist · "
+            f"{stats['pending']} pending · <strong>{stats['errors']} error(s)</strong> · "
+            f"{stats['gaveUp']} given up.</p>")
+
+
+def send_health_email(user, password, stats, errors, gave_up):
+    today = dt.datetime.now(dt.timezone.utc).strftime("%d/%m/%Y")
+    subject = f"WA Case-Law Review — pipeline notice ({today})"
+    lines = ["The pipeline ran but added nothing and sent no digest — worth a look:", ""]
+    html_parts = ["<p>The pipeline ran but added nothing and sent no digest — worth a look:</p>"]
+    if errors:
+        lines.append(f"{len(errors)} processing error(s) this run:")
+        html_parts.append(f"<p><strong>{len(errors)} processing error(s):</strong></p><ul>")
+        for e in errors[:10]:
+            lines.append(f"  • {e['id']} ({e['citation']}): {e['err']}")
+            html_parts.append(f"<li>{esc(e['id'])} ({esc(e['citation'])}): {esc(e['err'])}</li>")
+        lines.append("")
+        html_parts.append("</ul>")
+    if gave_up:
+        lines.append(f"{len(gave_up)} case(s) given up after {PENDING_MAX_DAYS} days unresolved:")
+        html_parts.append(f"<p><strong>{len(gave_up)} given up after {PENDING_MAX_DAYS} days:</strong></p><ul>")
+        for g in gave_up[:10]:
+            lines.append(f"  • {g.get('caseName','')} {g['citation']} ({g['courtTag']})")
+            html_parts.append(f"<li>{esc(g.get('caseName',''))} {esc(g['citation'])} ({esc(g['courtTag'])})</li>")
+        lines.append("")
+        html_parts.append("</ul>")
+    lines += ["", _health_text(stats)]
+    html = ("<div style='font-family:Inter,Arial,sans-serif;color:#1A1813'>"
+            + "".join(html_parts) + _health_html(stats) + "</div>")
+    em = EmailMessage()
+    em["Subject"] = subject
+    em["From"] = f"Case-Law Review <{user}>"
+    em["To"] = user
+    em.set_content("\n".join(lines))
+    em.add_alternative(html, subtype="html")
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context()) as s:
+        s.login(user, password)
+        s.send_message(em)
+    log(f"health email sent: {subject}")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
@@ -651,6 +888,7 @@ def main():
 
     state = load_state()
     pending = state.get("pending", [])
+    processed = state.get("processed", [])
     existing = load_cases()
     existing_ids = {c.get("id") for c in existing}
 
@@ -691,8 +929,23 @@ def main():
         p.setdefault("firstSeen", now_iso())
     log(f"work items (new alerts + pending): {len(work)} (kept={len(kept)}, pending_in={len(pending)})")
 
+    # Human-supplied judgments emailed in (the WA / Lexis path): they carry their own
+    # verbatim text, bypass the corpus and the scope gate (you chose them), and win
+    # over any alert/pending item of the same id. Non-fatal if the fetch fails.
+    try:
+        submissions = fetch_submissions(user, password, imap_since_date(SUBMISSION_LOOKBACK_DAYS), processed)
+    except Exception as e:
+        submissions = []
+        log(f"submission fetch failed (non-fatal): {e}")
+    for it in submissions:
+        it.setdefault("firstSeen", now_iso())
+        it["notified"] = True            # being analysed now, not watchlisted
+        work[it["id"]] = it
+    if submissions:
+        log(f"email submissions accepted: {len(submissions)}")
+
     client = get_client() if work else None
-    new_cases, unresolved, gave_up = [], [], []
+    new_cases, unresolved, gave_up, errors, processed_now = [], [], [], [], []
     for it in work.values():
         try:
             # Full text comes ONLY from the openly-licensed Open Australian Legal
@@ -700,7 +953,9 @@ def main():
             # (AustLII's policy bars scraping AND AI/LLM use). The corpus carries
             # HCA/interstate judgments but NO WA cases, so WASC/WASCA fall through
             # to the watchlist + the human-in-the-loop ingest path (pipeline/ingest.py).
-            text = fetch_judgment_text(it["citation"])
+            # email-submitted judgments carry their own verbatim text; everything
+            # else resolves from the corpus (HCA/interstate; WA always returns None).
+            text = it.get("suppliedText") or fetch_judgment_text(it["citation"])
             if not text:
                 age = _age_days(it.get("firstSeen"))
                 if age > PENDING_MAX_DAYS:
@@ -718,10 +973,18 @@ def main():
             case = build_case(it, analysis)
             write_llm_file(case, text, analysis)
             new_cases.append(case)
+            if it.get("_msgid"):
+                processed_now.append(it["_msgid"])
             log(f"  built {it['id']} [{case['relevance']}] {case['caseName']}")
         except Exception as e:
-            unresolved.append(it)   # transient error -> retry next run
-            log(f"  ERROR on {it['id']} ({it['citation']}): {e} — kept pending")
+            errors.append({"id": it["id"], "citation": it["citation"], "err": str(e)[:200]})
+            if it.get("_msgid"):
+                # email submissions self-heal via re-fetch (long window) — don't queue a
+                # textless pending copy that could later be wrongly "given up".
+                log(f"  ERROR on {it['id']} ({it['citation']}): {e} — will retry from email")
+            else:
+                unresolved.append(it)   # transient error -> retry next run
+                log(f"  ERROR on {it['id']} ({it['citation']}): {e} — kept pending")
             continue
 
     # Watchlist: surface newly-detected in-scope cases we couldn't full-text yet,
@@ -729,28 +992,47 @@ def main():
     to_notify = [w for w in unresolved if not w.get("notified")]
 
     if new_cases:
-        merged = new_cases + existing
-        merged.sort(key=lambda c: str(c.get("date", "")), reverse=True)
+        # replace-by-id (an email submission can re-supply a case already in the
+        # library), otherwise add — then sort newest-first. Guarantees no dup ids.
+        by_id = {c["id"]: c for c in existing}
+        for c in new_cases:
+            by_id[c["id"]] = c
+        merged = sorted(by_id.values(), key=lambda c: str(c.get("date", "")), reverse=True)
         save_cases(merged)
         log(f"cases.json: {len(existing)} -> {len(merged)}")
 
     for w in to_notify:
         w["notified"] = True
-    save_state([_pending_record(w) for w in unresolved])
+    processed = (processed + processed_now)[-300:]   # bound growth; IMAP lookback is short
+    save_state([_pending_record(w) for w in unresolved], processed)
 
     label = (f"Pipeline: add {len(new_cases)} case(s)" if new_cases
              else "Pipeline: update watchlist/queue")
     pushed = commit_and_push(label)
 
+    stats = {
+        "alerts": len(bodies), "candidates": len(candidates), "inScope": len(kept),
+        "analysed": len(new_cases), "watchlist": len(to_notify),
+        "pending": len(unresolved), "errors": len(errors), "gaveUp": len(gave_up),
+    }
+
     if new_cases:
-        send_email(user, password, new_cases)
+        send_email(user, password, new_cases, stats)
     if to_notify:
-        send_watchlist_email(user, password, to_notify)
+        send_watchlist_email(user, password, to_notify, stats)
     if not new_cases and not to_notify:
-        log("nothing new — no email (no spam on quiet days)")
+        if errors or gave_up:
+            try:
+                send_health_email(user, password, stats, errors, gave_up)
+                log("health notice sent (errors / gave-up on an otherwise quiet run)")
+            except Exception as e:
+                log(f"health email failed (non-fatal): {e}")
+        else:
+            log("nothing new — no email (no spam on quiet days)")
 
     log(f"RUN SUMMARY: alerts={len(bodies)} candidates={len(candidates)} new={len(new_cases)} "
-        f"notified={len(to_notify)} pending={len(unresolved)} gave_up={len(gave_up)} pushed={pushed}")
+        f"notified={len(to_notify)} pending={len(unresolved)} gave_up={len(gave_up)} "
+        f"ingested={len(processed_now)} errors={len(errors)} pushed={pushed}")
 
 
 def _pending_record(it):
