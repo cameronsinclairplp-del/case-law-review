@@ -18,14 +18,16 @@
       "civil liability"
     ],
     "relevance": "AWARENESS",
-    "oneLine": "Police owe bystanders a duty of care when they move into a crowd to make an arrest — but a proportionate response to a real threat is not negligence, even when someone gets hurt.",
-    "whatHappened": "On 26 January 2017, an “Invasion Day” protest march of about 5,000 people moved through inner Sydney. Laura CULLEN was watching from the crowd. As officers of the Operational Support Group moved in — and while Leading Senior Constable Livermore was arresting a marcher — a melee erupted and CULLEN was knocked to the ground and seriously injured. At trial she was awarded $800,000; the NSW Court of Appeal reversed that. She appealed to the High Court.",
-    "whatHeld": "The appeal turned on three questions — duty, breach, and scope. <b>Duty — yes:</b> when intervening in the march, the officers owed a duty to avoid physical injury to a class of people that included bystanders foreseeably at risk from the operation. <b>Breach — no:</b> their actions were not unreasonable given the public-safety threat they were responding to at the time. With no breach, the scope question did not arise. <b>Appeal dismissed.</b>",
-    "whatItMeans": "Read it for the principle, not the charge — this is NSW civil negligence, not WA criminal law, so it changes no offence you lay. But the principle is High Court and it travels: when you intervene operationally (a crowd, a public-order job, an arrest in a tight space) you owe bystanders a duty of care, and you are judged on the reasonableness of your response to the threat <i>as it appeared at the time</i>, not with hindsight. What saved the officers was a documented, proportionate plan (their “Operational Orders” and “Actions On”) — so record your threat assessment and why the response was proportionate (running sheet, notes, BWC). The same duty/breach reasoning runs through the <i>Civil Liability Act 2002</i> (WA).",
+    "oneLine": "Police owe bystanders a duty of care when they move into a crowd to deal with a public-safety threat — but a proportionate response to a real threat is not negligence, even when someone gets hurt.",
+    "whatHappened": "On 26 January 2017, an “Invasion Day” protest march of about 5,000 people moved through inner Sydney. CULLEN was watching from the crowd. As officers of the Operational Services Group (OSG) moved in — and while Leading Senior Constable Livermore was arresting a marcher — a melee erupted and CULLEN was knocked to the ground and seriously injured. At trial she was awarded $800,000; the NSW Court of Appeal reversed that. She appealed to the High Court.",
+    "whatHeld": "The appeal turned on three questions — duty, breach, and scope. <b>Duty — yes:</b> when intervening in the march, the officers owed a duty to avoid physical injury to a class of people that included bystanders foreseeably at risk from the operation. <b>Breach — no:</b> their actions were not unreasonable given the public-safety threat they were responding to at the time. The six-judge joint reasons held that, with no breach, the scope question did not arise; Edelman J, agreeing there was no breach, would have decided scope and held the duty did extend to the appellant. <b>Appeal dismissed (unanimous on the result).</b>",
+    "whatItMeans": "Read it for the principle, not the charge — this is NSW civil negligence, not WA criminal law, so it changes no offence you lay. But the principle is High Court and it travels: when you intervene operationally (a crowd, a public-order job, an arrest in a tight space) you owe bystanders a duty of care, and you are judged on the reasonableness of your response to the threat <i>as it appeared at the time</i>, not with hindsight. What carried the day was that a decisive response to a real, urgent threat was within the range of reasonable responses — judged in the agony of the moment, not with hindsight. Still, record your threat assessment and why the response was proportionate (running sheet, notes, BWC). WA's <i>Civil Liability Act 2002</i> has broadly similar breach provisions, but this decision turns on the NSW Act — treat the principle as persuasive, not as authority on WA legislation.",
     "verdict": "Useful for use-of-force and civil-liability exposure. It does not change how you investigate, gather evidence, or lay a charge.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/19.html",
     "jadeUrl": "",
-    "files": {}
+    "files": {
+      "llm": "data/files/hca-2026-19/hca-2026-19.md"
+    }
   },
   {
     "id": "wasca-2022-5",
@@ -116,6 +118,77 @@
     "jadeUrl": "https://jade.io/summary/mnc/2016/HCA/35"
   },
   {
+    "id": "hca-2007-46",
+    "date": "2007-10-04",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Em v The Queen",
+    "citation": "[2007] HCA 46",
+    "decided": "04/10/2007",
+    "appealFrom": "Court of Criminal Appeal of New South Wales",
+    "outcome": "Appeal against conviction dismissed; convictions for the LOGOZZO offences upheld. The admissions made on 15/05/2002 were properly admitted.",
+    "weight": "High — unanimous result of the High Court of Australia (4:1 on reasoning, Kirby J dissenting), the apex court.",
+    "tags": [
+      "covert recording",
+      "listening devices",
+      "admissions",
+      "caution",
+      "right to silence",
+      "unfairness discretion",
+      "section 90",
+      "confessions",
+      "Evidence Act"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court holds covertly recorded admissions to police were not unfair to use under s 90 of the <i>Evidence Act 1995</i> (NSW), despite a deliberately incomplete caution and the suspect's mistaken belief his words could not be used.",
+    "whatHappened": "EM was convicted of the murder of Joseph LOGOZZO and related offences arising from a 2002 home invasion in Sydney. Police already had unrecorded admissions from him about a separate home invasion (the KRESS offences, to which he pleaded guilty). On 24/04/2002 EM had refused to be recorded and was released. Police then obtained warrants under the <i>Listening Devices Act 1984</i> (NSW) and, on 15/05/2002, took EM to a suburban park wearing covert recording devices. They told him he was not under arrest, was free not to talk, and repeatedly assured him they were not tricking him — but deliberately omitted the second part of the caution (that anything he said could be recorded and used in evidence). EM, who believed unrecorded conversations could not be used against him, made admissions about the LOGOZZO killing. The trial judge admitted the first part of the park conversation and excluded the part after a key statement by the detective. The Court of Criminal Appeal upheld that course.",
+    "whatHeld": "The High Court (Gleeson CJ and Heydon J; Gummow and Hayne JJ agreeing; Kirby J dissenting) dismissed the appeal. <b>It was not unfair under s 90 to use the admissions.</b> Gummow and Hayne JJ reasoned that s 90 operates as a <b>final \"safety net\"</b> engaged only after the more specific provisions of the Act (ss 84, 85, 137, 138, 139), so that reliability (s 85) and impropriety in obtaining the evidence (s 138) fall to be dealt with under those sections, not s 90. The lead judgment of Gleeson CJ and Heydon J did not adopt that quarantine — it treated reliability as a factor relevant to fairness under s 90, and accepted s 90 can succeed even where no other ground does. EM had in any event failed to invoke or abandoned every other ground. <b>Covert recording under a valid warrant is not made unfair merely because the suspect did not know he was being recorded</b>, and EM conceded as much. His belief that what he said could not be used was inextricably linked to his belief it was not being recorded, so the same concession defeated the broader argument. The detectives merely failed to correct, rather than created, his mistaken belief. <b>There was no legal obligation to caution him in these circumstances</b> (s 139 conditions were not met, as he was not under arrest). The trial judge was also not required to give a special unreliability warning to the jury. Kirby J dissented, holding the deliberately half-given caution, the trickery and the choice of park venue derogated from the right to silence and rendered use of the evidence unfair.",
+    "whatItMeans": "This case turns on the <b>NSW uniform Evidence Act, which does not apply in WA</b> — so treat it as guidance on principle, not as a rule you apply directly. The underlying message is about the common law unfairness discretion (the Lee/Swaffield line), which does operate in WA. The take-home for you: <b>lawfully authorised covert recording of a suspect, even where the suspect wrongly assumes the chat is \"off the record\", will not generally be excluded as unfair</b> — secret recording only works because the subject does not know. But note the warnings in this judgment. The majority required strict separation of issues: reliability, impropriety and proper cautioning are dealt with under specific rules, and a court can still exclude on those grounds. <b>Deliberately giving only half a caution drew a strong dissent and is risky.</b> Get and rely on proper authority for any listening device, keep the questioning fair (not hostile, overbearing or unduly persistent), and do not assume a covert operation cures a defective or absent caution where one is required. The safest practice remains a full and proper caution at the point one is legally required.",
+    "verdict": "AWARENESS — it concerns the NSW Evidence Act unfairness discretion, which does not govern WA, but it usefully shows how appellate courts treat covertly recorded admissions and incomplete cautions.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2007/46.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2007/HCA/46",
+    "files": {
+      "llm": "data/files/hca-2007-46/hca-2007-46.md"
+    }
+  },
+  {
+    "id": "hca-2007-39",
+    "date": "2007-08-30",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Tofilau v The Queen",
+    "citation": "[2007] HCA 39",
+    "decided": "30/08/2007",
+    "appealFrom": "Court of Appeal of the Supreme Court of Victoria",
+    "outcome": "All four appeals dismissed; convictions stand. CLARKE granted leave to amend his notice of appeal but the new discretionary ground rejected.",
+    "weight": "High Court of Australia, seven-judge bench, 6:1 majority (Kirby J dissenting). Binding and leading authority on the common law of confessions.",
+    "tags": [
+      "confessions",
+      "admissions",
+      "voluntariness",
+      "person in authority",
+      "basal voluntariness",
+      "scenario evidence",
+      "Mr Big technique",
+      "undercover police",
+      "covert operations",
+      "inducement rule",
+      "discretionary exclusion",
+      "right to silence"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "The High Court (6:1) held that confessions obtained by the undercover \"Mr Big\"/scenario technique are admissible at common law: gang-impersonating police are not \"persons in authority\" and the confessions were voluntary.",
+    "whatHappened": "Four men (TOFILAU, MARKS, HILL and CLARKE) were each suspected of murder in Victoria but there was insufficient evidence to charge. Victoria Police ran undercover \"scenario\" operations (the Canadian \"Mr Big\" model): officers posed as a criminal gang, drew each suspect into staged (fake) criminal activity, and offered gang membership, money and protection from prosecution through supposedly corrupt police — on condition the suspect told the gang \"boss\" the truth about the killing. Each man confessed to an undercover \"boss\". The confessions were admitted at trial and each was convicted. They appealed, arguing the confessions were involuntary because induced by persons in authority and/or lacked \"basal voluntariness\". CLARKE also argued discretionary exclusion.",
+    "whatHeld": "Appeals dismissed (Kirby J dissenting). <b>The undercover officers were not \"persons in authority\".</b> A person is only a person in authority if the suspect perceives, on reasonable grounds, that they hold the <b>lawful authority of the state</b> to investigate or prosecute. The appellants believed they were dealing with criminals who could <i>corruptly</i> influence police, not with anyone wielding the lawful authority of the state — so the inducement rule was not engaged. <b>The confessions were voluntary (\"basal voluntariness\" satisfied).</b> There was no duress, intimidation, persistent importunity or sustained/undue pressure of a kind that overbore the will; the men spoke because they hoped to profit and avoid prosecution. <b>Deception or trickery alone does not make a confession involuntary.</b> On the discretion (CLARKE only), the trial judge made no error in admitting the evidence; the seriousness of the crime and the absence of any unlawful conduct by police weighed in favour of admission.",
+    "whatItMeans": "This is the leading High Court authority validating the <b>\"Mr Big\"/scenario covert technique</b> for eliciting confessions in serious unsolved crimes. For your casework it means: <b>covert confessions to officers posing as criminals can be admissible</b>, because a suspect who thinks he is confessing to gangsters does not believe he is speaking to a person in authority and is not under state coercion. Two practical levers: avoid feeding the suspect facts only the offender would know (this protects <b>reliability</b>), and ensure the confession is <b>recorded and independently corroborated</b> (e.g. the suspect revealing where the murder weapon/scarf was). Be alert to the discretionary exclusion risk: courts will scrutinise <b>proportionality</b> (these techniques are justified by very serious crime), <b>reliability</b>, and <b>forensic prejudice</b> from showing the jury the suspect's willingness to join a criminal gang. Note this was decided on <b>Victorian common law</b> — confirm the current WA position and any controlled-operations/authorisation requirements before deploying such an operation.",
+    "verdict": "ACTION — it confirms that scenario/\"Mr Big\" covert confessions are admissible and tells you exactly why (no person in authority, no overborne will), shaping how you design and document such operations.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2007/39.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2007/HCA/39",
+    "files": {
+      "llm": "data/files/hca-2007-39/hca-2007-39.md"
+    }
+  },
+  {
     "id": "hca-2004-12",
     "date": "2004-03-10",
     "court": "High Court of Australia",
@@ -180,6 +253,40 @@
     "jadeUrl": "https://jade.io/summary/mnc/2002/NSWSC/194",
     "files": {
       "llm": "data/files/nswsc-2002-194/nswsc-2002-194.md"
+    }
+  },
+  {
+    "id": "hca-2000-28",
+    "date": "2000-05-25",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Zoneff v The Queen",
+    "citation": "[2000] HCA 28",
+    "decided": "25/05/2000",
+    "appealFrom": "Court of Criminal Appeal of the Supreme Court of South Australia",
+    "outcome": "Appeal allowed; orders of the Court of Criminal Appeal of South Australia set aside; convictions on counts 2 to 7 quashed; retrial ordered. KIRBY J dissenting (would have dismissed the appeal).",
+    "weight": "High Court of Australia, five-justice bench, majority of four (GLEESON CJ, GAUDRON, GUMMOW and CALLINAN JJ) with KIRBY J dissenting. Binding statement of principle on lies directions; refines the application of <i>Edwards v The Queen</i> (1993) 178 CLR 193.",
+    "tags": [
+      "lies",
+      "consciousness of guilt",
+      "Edwards direction",
+      "jury directions",
+      "false pretences",
+      "fraudulent conversion",
+      "credibility",
+      "proviso",
+      "miscarriage of justice"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court clarified when a jury must be given an <i>Edwards</i>-type \"consciousness of guilt\" direction about lies, holding such a direction was wrongly given in a false pretences trial where the prosecutor never relied on lies as proof of guilt.",
+    "whatHappened": "ZONEFF was tried in the District Court of South Australia on seven counts of false pretences and fraudulent conversion arising from his work as a furniture salesman at the Le Cornu Furniture Centre. The prosecution alleged he ingratiated himself with five customers (Ms SNEATH, Mr McKINNON, Mr and Mrs DIK, and Ms PHILLIPS), persuaded them to pay money to him directly on false promises of discounts, bonus points and a joint building venture, and then used the money to pay his own personal debts. The total involved was about $73,000. He represented himself, gave evidence, and denied any fraudulent intent. In cross-examination the prosecutor put to him that various answers and prior statements were lies, and he admitted some were. Because he was unrepresented, the prosecutor (per South Australian practice) did not address the jury. The jury acquitted on count 1 (an alternative) and convicted on counts 2 to 7. The trial judge, on his own initiative, gave a direction referring to lies told out of a \"consciousness of guilt\". The Court of Criminal Appeal dismissed the conviction appeal by majority (OLSSON J dissenting).",
+    "whatHeld": "The High Court allowed the appeal, quashed the convictions on counts 2 to 7 and ordered a retrial. <b>An <i>Edwards</i>-type \"consciousness of guilt\" direction should, as a general rule, only be given if the prosecution contends a lie is evidence of guilt (told because the accused knew the truth would implicate him) and the lie is in fact capable of bearing that character.</b> Here the prosecutor never put, expressly or by implication, that any answer was a lie told out of consciousness of guilt, so the direction was <b>unnecessary and undesirable</b>; it risked inviting the jury to infer guilt from lies on a basis the Crown never advanced. <b>If there is a risk of confusion about how the prosecution puts its case, the trial judge should ask the prosecutor whether lies are relied on as consciousness of guilt and, if so, require the lie and its basis to be identified.</b> Where lies go only to credit, a simple general warning suffices: the jury should not reason that because a person told a lie that is itself evidence of guilt, as people lie for many reasons. The majority was not satisfied the misdirection caused no substantial miscarriage in a false pretences case where dishonesty was readily misunderstood. KIRBY J dissented: he regarded the direction as a proper general (Broadhurst/Richens) warning that required nothing more — any imperfection was \"infelicity, not error\" — and held that, even if it were error, the proviso would apply given the overwhelming Crown case; he would have dismissed the appeal.",
+    "whatItMeans": "This case is about jury directions, not investigative method, so it changes little in how you gather evidence. The practical lesson for your casework is conceptual: <b>distinguish between lies that merely damage an accused's credibility and lies that positively indicate guilt (the \"consciousness of guilt\" category).</b> A lie only shows consciousness of guilt where the accused told it knowing the truth would implicate him in the offence — a demanding test that many lies will not meet. When you build a brief and flag an accused's lies or false statements, be precise about which category you think a lie falls into and why, because the prosecutor will need to decide whether to run it as proof of guilt or merely as credibility. <b>Do not assume that proving an accused lied equals proof of guilt</b> — there may be innocent reasons (panic, protecting someone, concealing other embarrassing conduct). Identify the specific lie, the surrounding circumstances, and any independent evidence showing the truth would implicate the accused, so the lie can properly be relied on.",
+    "verdict": "AWARENESS only — this governs jury directions on lies, not investigative practice, but it sharpens how you should characterise and document an accused's lies in a brief.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2000/28.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2000/HCA/28",
+    "files": {
+      "llm": "data/files/hca-2000-28/hca-2000-28.md"
     }
   },
   {
