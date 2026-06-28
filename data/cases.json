@@ -96,26 +96,33 @@
     "court": "High Court of Australia",
     "courtTag": "HCA",
     "caseName": "The Queen v Baden-Clay",
-    "citation": "[2016] HCA 35; (2016) 258 CLR 308",
+    "citation": "[2016] HCA 35",
     "decided": "31/08/2016",
-    "appealFrom": "Court of Appeal (Qld)",
-    "outcome": "Murder conviction restored.",
-    "weight": "High Court — binds all Australian courts",
+    "appealFrom": "Court of Appeal of the Supreme Court of Queensland",
+    "outcome": "Crown appeal allowed; orders of the Queensland Court of Appeal set aside; appeal to that Court dismissed; jury's murder conviction restored.",
+    "weight": "Unanimous decision of five Justices of the High Court of Australia; binding and authoritative nationally on circumstantial evidence, intent, post-offence conduct and the review of \"unreasonable verdict\" appeals.",
     "tags": [
-      "circumstantial",
-      "inference",
-      "appellate restraint",
-      "homicide",
-      "consciousness of guilt"
+      "murder",
+      "circumstantial evidence",
+      "intent",
+      "post-offence conduct",
+      "lies/consciousness of guilt",
+      "motive",
+      "unreasonable verdict",
+      "role of the jury",
+      "manslaughter"
     ],
     "relevance": "AWARENESS",
-    "oneLine": "The High Court restored BADEN-CLAY's murder conviction, holding the Court of Appeal wrongly substituted manslaughter on an 'unintended killing' theory never run at trial and not open on the evidence. The modern authority on appellate restraint and inference-drawing in a circumstantial case.",
-    "whatHappened": "Gerard BADEN-CLAY was convicted of murdering his wife, Allison. The case was circumstantial; his conduct and lies — including an affair and a claim that scratches on his neck were ‘from shaving’ — featured at trial. The Queensland Court of Appeal substituted manslaughter; the High Court restored the murder conviction, addressing how inferences may be drawn in a circumstantial case.",
-    "whatHeld": "In a wholly circumstantial case the appellate court must <b>respect the jury's function</b> in drawing the available inferences (<i>M v The Queen</i>), and <b>cannot quash a murder verdict and substitute manslaughter on a hypothesis</b> — here, an unintended killing in a physical confrontation — that was <b>not run at trial and not open on the evidence</b> (the defence case had been that the accused had nothing to do with the death). The murder conviction was restored. The Court indicated it was <b>unnecessary</b> to rely on the accused's lies as consciousness of guilt to support the verdict.",
-    "whatItMeans": "Read it for the <b>inference-drawing</b>, not as a 'lies' case. It is the leading modern statement that a properly directed jury's inferences in a circumstantial case are not lightly overturned — so build the circumstantial brief so the inferences you want the jury to draw are genuinely <b>open on the evidence</b>. (Still useful alongside <i>Edwards</i> on lies/conduct — but the High Court did not decide it on that ground.)",
-    "verdict": "AWARENESS — the High Court authority on appellate restraint and inference in circumstantial cases; know how it actually reasoned, not the 'lies worked example' shorthand.",
+    "oneLine": "The High Court restored Gerard BADEN-CLAY's murder conviction, holding that a hypothesis of unintentional killing not raised at trial and contradicted by his own evidence could not render the jury's verdict unreasonable.",
+    "whatHappened": "Allison BADEN-CLAY disappeared from her home overnight on 19/20 April 2012; her body was found on 30/04/2012 under a bridge at Kholo Creek, about 13km away. The respondent had been in a long-running affair with Ms McHugh, had promised to leave his wife by 1 July, and faced the prospect of both women attending the same conference the next day. He had fingernail-type scratches on his cheek (which he claimed were shaving cuts), gave false accounts to police about the affair, and told Ms McHugh to \"lie low.\" Leaves from his home were found on the body and the deceased's blood was in her car. He gave evidence at trial denying any involvement in her death. A Queensland jury convicted him of murder on 15/07/2014. The Queensland Court of Appeal substituted a manslaughter verdict, finding the prosecution had not excluded a hypothesis (raised for the first time on appeal) that he struck her in a struggle and she died from a fall without intent to kill or cause grievous bodily harm. The Crown appealed to the High Court.",
+    "whatHeld": "The appeal was allowed and the murder conviction restored. The Court held the hypothesis relied on by the Court of Appeal was <b>not open on the evidence</b> — it was mere speculation, contrary to the accused's own sworn evidence (which placed him absent from the death) and contrary to the deliberate tactical way the defence was run at trial. Where an accused gives evidence that excludes a scenario, that scenario cannot found a reasonable doubt; <b>disbelieving an accused does not let an appeal court treat his evidence as never given</b> and substitute its own conjecture. The Court reaffirmed that in a circumstantial case guilt must be the <b>only rational inference</b> on the whole of the evidence, which must be considered as a whole and not piecemeal. It held there is <b>no rule that post-offence concealment and lies are always \"intractably neutral\"</b> as between murder and manslaughter — the lengths of concealment may support an inference of intent to kill or cause grievous bodily harm. The Court of Appeal erred in dismissing the affair, financial stress and looming exposure as not capable of being relevant to motive and intent. Setting aside a jury verdict as unreasonable is a serious step given the jury's central constitutional role.",
+    "whatItMeans": "This is a leading authority on building and proving <b>circumstantial murder cases</b> and on the evidentiary value of consciousness-of-guilt evidence. For your casework it confirms that <b>lies, concealment of the body, and post-offence conduct are not automatically neutral on intent</b> — the scale and nature of concealment can support an inference of murderous intent, so gather and document that conduct thoroughly. <b>Motive evidence</b> (relationship strain, an affair, financial pressure, looming exposure) is relevant to proving intent even where there is no premeditation, so build out the surrounding relationship and circumstantial picture. Remember the prosecution must exclude all reasonable hypotheses consistent with innocence, but a \"bare possibility\" or speculation is not a reasonable hypothesis — and where facts lie solely within a suspect's knowledge, unsupported innocent explanations carry little weight (Weissensteiner). Present the evidence <b>as a whole</b>, not piecemeal.",
+    "verdict": "AWARENESS authority: it does not change investigative procedure, but it shapes how you assemble circumstantial proof of intent and treat post-offence conduct and lies as probative rather than neutral.",
     "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2016/35.html",
-    "jadeUrl": "https://jade.io/summary/mnc/2016/HCA/35"
+    "jadeUrl": "https://jade.io/summary/mnc/2016/HCA/35",
+    "files": {
+      "llm": "data/files/hca-2016-35/hca-2016-35.md"
+    }
   },
   {
     "id": "hca-2007-46",
@@ -253,6 +260,42 @@
     "jadeUrl": "https://jade.io/summary/mnc/2002/NSWSC/194",
     "files": {
       "llm": "data/files/nswsc-2002-194/nswsc-2002-194.md"
+    }
+  },
+  {
+    "id": "hca-2001-72",
+    "date": "2001-12-13",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Festa v The Queen",
+    "citation": "[2001] HCA 72",
+    "decided": "13/12/2001",
+    "appealFrom": "Court of Appeal of the Supreme Court of Queensland",
+    "outcome": "Appeal dismissed; convictions upheld. Although the trial judge erred in his identification directions (and, per the majority reasoning, in admitting the weapons evidence), the proviso applied because conviction was inevitable on the strength of the other evidence.",
+    "weight": "High Court of Australia, five-judge bench — binding and the leading authority on the admissibility of, and warnings for, weak and irregularly obtained identification evidence. Applies and explains <i>Domican v The Queen</i> and <i>Alexander v The Queen</i>.",
+    "tags": [
+      "identification evidence",
+      "identification parade",
+      "photoboard",
+      "voice identification",
+      "courthouse identification",
+      "Domican direction",
+      "propensity evidence",
+      "tools of trade",
+      "unfair prejudice",
+      "proviso",
+      "circumstantial evidence"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "FESTA confirms weak or irregularly obtained identification evidence is usually admissible (weight is for the jury), but sloppy identification procedures invite exclusion and demand specific jury warnings.",
+    "whatHappened": "FESTA was jointly tried with co-accused RENTON for armed robberies of two National Australia Bank branches (Biggera Waters on 27/05/1996 and Paradise Point on 13/06/1996) and related unlawful use of vehicles. A man and woman committed the robberies, both disguised; the female wore a wig. The central issue was whether FESTA was that woman. Three witnesses (FYFFE, OGILVIE, JAMES) saw a woman acting suspiciously near the Biggera Waters scene; a fourth (HILL) saw a woman in a getaway car at Paradise Point. None could pick FESTA from photoboards. Police later asked the three Biggera Waters witnesses, who sat together at the Southport courthouse for the committal, to 'keep an eye out' for the woman — FESTA was effectively the only female of matching age and description present, and she was identified there. JAMES also relied on voice (six words) and gait. HILL picked FESTA's photo as merely 'similar'. Police did not hold an identification parade, kept no record, and let witnesses remain together. Weapons and ammunition of the same type as those used in the robberies, plus disguise items bearing FESTA's fingerprints, were found in RENTON's unit — but the guns had been bought on 17/06/1996, after the robberies. FESTA absconded mid-trial and was convicted in her absence.",
+    "whatHeld": "The High Court dismissed the appeal. On admissibility, <b>weakness of identification evidence is not a ground for exclusion</b>; weak but relevant evidence is admissible unless its probative value is outweighed by the danger of unfair prejudice, and it then goes to weight for the jury (Gleeson CJ at [14], [23]; McHugh J at [51]). The trial judge's discretion to admit was open to him. <b>Evidence is only unfairly prejudicial where the jury may misuse it or give it more weight than it deserves — not merely because it inculpates the accused</b> ([22], [51]). Kirby J would have excluded the courthouse identification as 'virtually valueless' but prejudicial. The Court distinguished positive-identification evidence (which requires full <i>Domican</i> warnings) from circumstantial 'similarity' evidence. On the directions, a majority held the trial judge's directions on the <b>courthouse identification were inadequate</b> (Callinan J dissenting) for not sufficiently drawing out its specific weaknesses, and a majority (Gleeson CJ, Kirby and Hayne JJ) found the <b>voice-identification</b> direction inadequate too (McHugh and Callinan JJ holding it adequate). On the <b>weapons and ammunition</b>, a 3:2 majority (Gleeson CJ, Kirby and Callinan JJ) held they were <b>properly admitted</b> as relevant circumstantial evidence — the 'tools of trade' of bank robbers, not mere propensity; McHugh and Hayne JJ would have excluded them. Despite these errors, the case was so overwhelming that a properly directed jury would inevitably have convicted, so no substantial miscarriage of justice occurred under the proviso (<i>Criminal Code</i> (Q) s668E(1A)).",
+    "whatItMeans": "This case is a direct warning about how you run identifications. <b>Hold a proper identification parade where you can</b>, and if you cannot, record why and use a large group of similar-looking people — never let a witness pick a suspect as that suspect walks into court, and never let identifying witnesses sit together or discuss what they saw. The Court repeatedly condemned police for ignoring the Queensland Operational Procedures Manual, which mirrors sound WA practice. <b>Document the whole process</b> — record, film or photograph it; the absence of any record was treated as a serious failing. Be alert to the 'displacement effect', the 'rogues' gallery effect' (photoboards suggesting a criminal history), and voice identifications based on only a few words. The reassuring point: even weak or irregularly obtained identification evidence will usually still be admitted, with the defects going to weight — but <b>your sloppiness can still cost the conviction</b> where the rest of the case is not strong. FESTA was saved only by overwhelming circumstantial evidence; do not assume the proviso will rescue a weak case. On weapons, note the result cuts the other way from a simple propensity bar: even items not used in the charged offence (here guns bought after the robberies) can be <b>admissible as relevant circumstantial evidence</b> — the 'tools of trade' of the kind of crime charged — where they are of the same character as those used and connect to the offending. Here a 3:2 majority held them properly admitted (McHugh and Hayne JJ dissenting).",
+    "verdict": "AWARENESS-leaning but practically ACTION: it directly shapes how you conduct and record identifications and what 'tools of trade' evidence you can rely on, even though weak identification evidence remains admissible.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2001/72.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2001/HCA/72",
+    "files": {
+      "llm": "data/files/hca-2001-72/hca-2001-72.md"
     }
   },
   {
@@ -485,6 +528,41 @@
     }
   },
   {
+    "id": "hca-1990-61",
+    "date": "1990-12-20",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Stingel v The Queen",
+    "citation": "[1990] HCA 61",
+    "decided": "20/12/1990",
+    "appealFrom": "Court of Criminal Appeal of Tasmania (Nettlefold, Underwood and Wright JJ)",
+    "outcome": "Appeal dismissed; murder conviction upheld. Trial judge correct to withhold provocation from the jury.",
+    "weight": "High Court of Australia, unanimous seven-member bench — a leading and authoritative statement of principle on provocation.",
+    "tags": [
+      "provocation",
+      "homicide",
+      "murder",
+      "manslaughter",
+      "objective test",
+      "ordinary person",
+      "self-control",
+      "Criminal Code (Tas)",
+      "onus of proof",
+      "jury directions"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court sets out the objective test for provocation, holding personal characteristics may colour the gravity of the provocation but the standard of self-control stays that of an ordinary person (age aside).",
+    "whatHappened": "In the early hours of 05/06/1988 at Scottsdale (Tas), STINGEL, then 19, stabbed Jason Scott TAYLOR in the chest with a butcher's knife, killing him. STINGEL had a long history of obsessive harassment of his former girlfriend (\"A\"), including threats to kill her, threats against her associates, and a breached restraining order. On the night, STINGEL found A and TAYLOR engaged in sexual activity in a parked car; TAYLOR told him \"Piss off you cunt\". STINGEL returned to his own car, retrieved the knife, and fatally stabbed TAYLOR. He was convicted of murder. The trial judge refused to leave provocation under <i>s160 of the Criminal Code</i> (Tas) to the jury; the Court of Criminal Appeal (Tas) upheld that. STINGEL appealed to the High Court.",
+    "whatHeld": "The appeal was dismissed. In a unanimous joint judgment (Mason CJ, Brennan, Deane, Dawson, Toohey, Gaudron and McHugh JJ), the Court held that <i>s160(2)</i> imposes an <b>objective threshold test</b>: the wrongful act or insult must be capable of depriving an <b>ordinary person</b> of self-control to the degree, method and continuance of violence producing death. <b>Personal characteristics of the accused (age, sex, race, history, relationships, even mental condition) may be used to identify the content and assess the gravity of the provocation, but the power of self-control measured is that of a hypothetical ordinary person</b>, not the accused. The only attribute attributed to the ordinary person is <b>age</b> (where youthful immaturity is open). The Court also held \"wrongful\" qualifies \"act\" but not \"insult\", so an insult need not be wrongful; \"insult\" is given its ordinary, wide meaning and is not confined by old common-law limits. On the facts, <b>no reasonable jury could doubt that an ordinary 19-year-old would not have reacted as STINGEL did</b> — his infatuation and jealousy reduced his actual self-control but could not lower the objective standard.",
+    "whatItMeans": "This is a foundational authority on provocation and the objective \"ordinary person\" test. For your casework it clarifies how to assess a claimed provocation defence: <b>separate the gravity of the provocation (where the suspect's history, relationships and characteristics are relevant) from the standard of self-control (which stays objective and ordinary, only adjusted for age).</b> When investigating a homicide where provocation may arise, gather full evidence of the relationship history, prior conduct, threats, and the deceased's words and actions at the time — these all bear on gravity. Note the threshold is high: the response must be capable of being provoked in an ordinary person to the degree of violence causing death. A suspect's obsessive jealousy or abnormal temperament does <b>not</b> lower the bar. Be aware the Crown bears the onus of disproving provocation beyond reasonable doubt once it is raised on the evidence.",
+    "verdict": "AWARENESS — this is a leading statement of provocation principle that shapes how you understand and document a provocation issue, but it does not directly change WA investigative or charging procedure.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1990/61.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1990/HCA/61",
+    "files": {
+      "llm": "data/files/hca-1990-61/hca-1990-61.md"
+    }
+  },
+  {
     "id": "hca-1990-56",
     "date": "1990-12-19",
     "court": "High Court of Australia",
@@ -694,6 +772,40 @@
     }
   },
   {
+    "id": "hca-1981-17",
+    "date": "1981-04-08",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Alexander v The Queen",
+    "citation": "[1981] HCA 17",
+    "decided": "08/04/1981",
+    "appealFrom": "Court of Criminal Appeal of Victoria",
+    "outcome": "Special leave to appeal granted; appeal dismissed. Conviction upheld (3:2).",
+    "weight": "High Court of Australia — strong, foundational authority on identification evidence. Note the majority reasoning differed: Gibbs CJ and Mason J both upheld admissibility but Mason J was the more influential, treating out-of-court identification as inherently reliable original evidence. Stephen and Murphy JJ dissented, favouring exclusion of post-detection photo-identification. Decided in 1981 and predates uniform evidence legislation; treat as the common-law baseline and check it against current WA law and policy.",
+    "tags": [
+      "identification evidence",
+      "photo-identification",
+      "identification parade",
+      "rogues' gallery effect",
+      "displacement effect",
+      "hearsay",
+      "judicial discretion",
+      "prejudicial evidence",
+      "burglary"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "The High Court held that evidence of identification made from police photographs is legally admissible, but using photo-boards after a suspect is arrested or firmly suspected (instead of an identification parade) is improper and may be excluded as more prejudicial than probative.",
+    "whatHappened": "ALEXANDER was convicted in Victoria of entering a building as a trespasser with intent to steal (a National Bank burglary at Belgrave on 15/06/1977). The key issue was identification. Several witnesses first identified him by picking his photograph from a folder of about a dozen police photographs. Constable BEALE made his identification before ALEXANDER was arrested (during the investigation). Constable WILLIAMS, Mrs FEDELE and Mr CONNELL identified the photograph after ALEXANDER was already in custody. No identification parade was ever held and no valid reason was given for not holding one. CONNELL could not recall in court which photograph he had picked, but said he had identified one and recorded it in a statement; Detective Sergeant DUGGAN gave evidence that the photograph CONNELL picked was ALEXANDER's. The Victorian Court of Criminal Appeal dismissed his appeal. He sought special leave to the High Court.",
+    "whatHeld": "Special leave granted; appeal dismissed by majority (Gibbs CJ, Mason and Aickin JJ; Stephen and Murphy JJ dissenting). The Court held: <b>(1) evidence of an out-of-court identification made by means of police photographs is admissible as a matter of law</b> — it goes to weight, not admissibility. <b>(2) The trial judge always retains a discretion to exclude such evidence where its prejudicial effect outweighs its probative value</b>, particularly the 'rogues' gallery' risk that the jury will infer the accused has a police record. <b>(3) It is 'most undesirable' (Gibbs CJ) and deserving of 'strong censure' (Mason J) to use photo-identification once a person is arrested or firmly suspected and an identification parade could be held — the parade is the safer, fairer method because the accused can observe it.</b> A distinction was drawn between using photos in the detection process (acceptable) and after a suspect is known — though the sharper view that post-detection photo-ID should be <b>excluded</b> was the dissent's (Stephen and Murphy JJ); the majority censured the practice but upheld admission. <b>(4) On third-party proof of an earlier identification: where the identifying witness testifies that he made an earlier identification but cannot now recall the details, another person (e.g. a police officer) may give evidence of which photograph or person was picked — this is original evidence, not hearsay. But if the witness does not testify to having made the earlier identification, the third party's evidence of it is inadmissible hearsay</b> (applying Christie, Teper, Sparks). Despite criticising the police failure to hold a parade, the majority found the conviction safe on the whole of the evidence.",
+    "whatItMeans": "This is foundational authority on how you should gather identification evidence. <b>Once you have arrested or firmly suspect a person, you should hold a properly conducted identification parade wherever possible — not show witnesses a photo-board.</b> Photo-boards are for the detection stage, when you do not yet know who you are looking for. If you resort to photographs after you have a firm suspect with no good reason, you risk the identification evidence being excluded at trial as more prejudicial than probative, and you invite judicial censure. <b>If you must use photographs, take precautions: avoid prejudicial images (no prison clothing, handcuffs), use a fair spread of similar-looking people, and never show a single photo before a parade.</b> Be alert to the 'displacement' effect — once a witness sees a photo, that image can replace their original memory and taint any later parade or dock identification, so record exactly when and how each identification was made. On documenting identifications: <b>get the identifying witness to record their own identification at the time</b> (e.g. note on the photo or signed statement). Your evidence as the observing officer of what a witness picked is only useful if that witness later testifies they made the identification — if the witness cannot or will not say they made it, your account of it is hearsay and worthless in court. Note: this is a Victorian/HCA decision; check current WA procedure and policy for identification parades and photo-boards.",
+    "verdict": "ACTION — it sets out how identification evidence must be obtained: use parades once a suspect is firmly identified, reserve photo-boards for the detection stage, and document identifications correctly to avoid exclusion at trial.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1981/17.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1981/HCA/17",
+    "files": {
+      "llm": "data/files/hca-1981-17/hca-1981-17.md"
+    }
+  },
+  {
     "id": "hca-1978-22",
     "date": "1978-06-14",
     "court": "High Court of Australia",
@@ -885,6 +997,40 @@
     "jadeUrl": "https://jade.io/summary/mnc/1959/HCA/8",
     "files": {
       "llm": "data/files/hca-1959-8/hca-1959-8.md"
+    }
+  },
+  {
+    "id": "hca-1950-25",
+    "date": "1950-06-23",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "R v Lee",
+    "citation": "[1950] HCA 25",
+    "decided": "23/06/1950",
+    "appealFrom": "Full Court of the Supreme Court of Victoria",
+    "outcome": "Special leave to appeal granted to the Crown in each case; appeals allowed; order of the Full Court of the Supreme Court of Victoria discharged; convictions and death sentences of LEE, CLAYTON and ANDREWS restored.",
+    "weight": "High Court of Australia, five-member bench (LATHAM CJ, McTIERNAN, WEBB, FULLAGAR and KITTO JJ). A long-standing leading authority on the admissibility of confessions, frequently cited. Note that aspects rest on Victorian statute (s 141 of the <i>Evidence Act 1928</i> (Vict)) and Victorian Standing Orders, and that WA admissibility is now governed by its own statutory regime.",
+    "tags": [
+      "confessions",
+      "admissibility",
+      "voluntariness",
+      "police questioning",
+      "discretion to exclude",
+      "caution",
+      "fairness",
+      "interview practice",
+      "onus of proof"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court restated the common law test for admitting an accused's statement: it must be voluntary (free choice to speak), and even if voluntary may be excluded only in the court's discretion where it would be unfair to use it — with no onus on the Crown to justify admission.",
+    "whatHappened": "On the night of 07/11/1949 a man named Kent was killed in a house in Carlton, Melbourne — strangled after being tied up and battered. In the early hours of 08/11/1949 detectives intercepted Jean LEE, Robert CLAYTON and Norman ANDREWS at a Spencer St hotel, searched their rooms, took them to Russell St Police Headquarters at about 4 am, questioned them separately, and charged all three with murder at about 7 am. Each made incriminating statements: CLAYTON admitted being at the house then signed a written statement after caution; LEE, after being shown CLAYTON's statement and confronted with him, admitted attacking Kent and tying his hands; ANDREWS admitted holding Kent and receiving some of the stolen money. There was also strong independent evidence (descriptions, bloodstains, cuts on hands, a torn diary page linking LEE to Kent). All three were convicted before Gavan Duffy J and a jury on 20/03/1950 and sentenced to death. The Full Court of Victoria (majority, O'Bryan J dissenting) on 19/05/1950 quashed the convictions and ordered a new trial. In LEE's case it held her statement was inadmissible; in CLAYTON's and ANDREWS' cases it held their statements were voluntary and could be admitted, but quashed those convictions because the trial judge had miscarried in exercising his discretion. The Crown obtained special leave to appeal to the High Court.",
+    "whatHeld": "The High Court allowed the Crown appeal and restored all three convictions and sentences. <b>There is really one governing rule: a confessional statement is inadmissible unless the Crown proves it was voluntary — made in the exercise of a free choice to speak or stay silent, and not the product of duress, intimidation, persistent importunity, or sustained or undue pressure.</b> A threat or promise by a person in authority is just one of several things that can rob a statement of voluntariness. <b>Beyond voluntariness, a trial judge has a discretion to reject a voluntary statement where, having regard to the conduct of police and all the circumstances, it would be unfair to use the accused's own words against him.</b> The Court rejected the Full Court's three errors: (1) there is <b>no onus on the Crown</b> to justify exercising the discretion in favour of admission — the statement, once proved voluntary, is prima facie admissible and it is for the accused to bring himself within the exception; (2) <b>the likelihood that police impropriety might produce an untrue admission is a relevant consideration</b>, not an irrelevant one; (3) the test of whether the accused failed \"to do justice to his real position\" was rejected as dangerously ambiguous — unfairness must arise from the circumstances in which the statement was made, not from whether the statement is true or harmful to the defence run at trial. The Court held the better approach is to ask, as one question, whether it would be unfair to use the accused's statement against him, rather than asking separately whether police acted improperly and then whether rejection follows. The trial judge had correctly found each statement voluntary and had not erred in admitting them.",
+    "whatItMeans": "This is a foundational confessions authority and it shapes how you take and record statements. <b>The Crown must be able to prove every confessional statement was voluntary — made by genuine free choice — so your conduct and record of the interview must demonstrate that.</b> Voluntariness is broad: it is not just about threats or promises, but covers any wearing down of the will by intimidation, persistent importunity, or sustained or undue pressure. <b>Putting the matters that arouse your suspicion to a suspect and inviting an explanation is legitimate — that is not improper \"cross-examination\".</b> The case confirms that, in the investigative stage before arrest or charge, you may question persons whether suspected or not, but the moment a person is effectively not free to leave you should consider cautioning. Note this is a Victorian decision turning partly on Victorian legislation and the Chief Commissioner's Standing Orders; <b>in WA you must apply current WA law (the <i>Criminal Investigation Act 2006</i> (WA), including recording, caution and right-to-communicate requirements) which now sets stricter, codified obligations.</b> The enduring principle for your casework is that breaching internal rules does not automatically exclude a statement, but the safer course is full compliance and a frank, accurate record of exactly what occurred — because admissibility ultimately turns on voluntariness and fairness, both judged from the circumstances in which the statement was obtained.",
+    "verdict": "AWARENESS — a landmark statement of the voluntariness and fairness-discretion principles for confessions, but decided under Victorian legislation and superseded for WA practice by the codified regime in the <i>Criminal Investigation Act 2006</i> (WA).",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1950/25.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1950/HCA/25",
+    "files": {
+      "llm": "data/files/hca-1950-25/hca-1950-25.md"
     }
   },
   {
