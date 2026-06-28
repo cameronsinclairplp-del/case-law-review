@@ -16,7 +16,7 @@ tags: ["Browne v Dunn", "cross-examination", "procedural fairness", "giving evid
 If a party intends to contradict a witness, it must put that case to the witness in cross-examination and give them a chance to respond.
 
 ## What happened
-The classic statement of the rule of fair cross-examination. (Held at principle level here.)
+The classic statement of the rule of fair cross-examination. (Held at principle level here — on the facts the House of Lords dismissed the appeal, the rule operating against the appellant.)
 
 ## What the Court held
 A party who intends to contradict or impeach a witness must put that case to the witness in cross-examination, so the witness has an opportunity to explain — otherwise it is unfair to later invite the tribunal to disbelieve them.
