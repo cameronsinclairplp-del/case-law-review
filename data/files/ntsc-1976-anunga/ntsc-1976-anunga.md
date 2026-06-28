@@ -19,10 +19,10 @@ Guidelines for interviewing Aboriginal suspects — an interpreter where needed,
 The NT Supreme Court laid down practical guidelines (the ‘Anunga Rules’) for the fair interviewing of Aboriginal suspects. (Held at principle level here.)
 
 ## What the Court held
-When interviewing an Aboriginal suspect: use an interpreter where there is any doubt about language; have a prisoner’s friend present; explain the caution phrase by phrase and have the suspect say it back in their own words; take care over offers of food, drink and rest.
+When interviewing an Aboriginal suspect: use an interpreter where there is any doubt about language; have a prisoner's friend present where practicable; explain the caution phrase by phrase and have the suspect say it back in their own words; take care over offers of food, drink and rest.
 
 ## What it means for your casework
-Pilbara-critical for you. Build the Anunga Rules into every relevant interview in your patch — interpreter, prisoner’s friend, caution explained and confirmed — or the admissions are at real risk of exclusion.
+Pilbara-critical for you. Build the Anunga Rules into every relevant interview in your patch — interpreter, prisoner's friend, caution explained and confirmed — or the admissions are at real risk of exclusion. Anunga is a Northern Territory Supreme Court decision: persuasive, not binding, in WA (where admissibility runs on the Criminal Investigation Act 2006 (WA) and the common law) — but it carries strong weight and breach puts admissions at real risk.
 
 ## Verdict
 Directly changes interview practice in your region — Anunga compliance, every relevant job.
