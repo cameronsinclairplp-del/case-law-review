@@ -299,6 +299,40 @@
     }
   },
   {
+    "id": "hca-2001-25",
+    "date": "2001-05-03",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Azzopardi v The Queen",
+    "citation": "[2001] HCA 25",
+    "decided": "03/05/2001",
+    "appealFrom": "Court of Criminal Appeal of New South Wales",
+    "outcome": "AZZOPARDI: appeal allowed (5-2), conviction set aside, new trial ordered. DAVIS: special leave to appeal refused — the conviction stood, the case being overwhelming.",
+    "weight": "High Court of Australia, full bench of seven Justices; authoritative, though majority reasoning was contested (McHugh J dissenting) and is anchored in the NSW statute.",
+    "tags": [
+      "right to silence",
+      "failure to give evidence",
+      "judicial comment",
+      "Evidence Act 1995 (NSW) s20",
+      "Weissensteiner",
+      "RPS",
+      "onus of proof",
+      "proviso",
+      "circumstantial evidence"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court holds a trial judge may comment on an accused's failure to give evidence only in rare cases where additional facts are peculiarly within the accused's knowledge; mere failure to contradict the prosecution case will never justify such comment.",
+    "whatHappened": "Two NSW District Court trials were considered together. In AZZOPARDI, the accused was convicted of soliciting Daniel PAPALIA to murder Paul GAUCI; the Crown relied on direct evidence from PAPALIA and others, and AZZOPARDI did not give evidence. In DAVIS, the accused was convicted of three sexual offences against a nine-year-old girl; the Crown relied on the complainant's direct evidence supported by her mother and a doctor, and DAVIS did not give evidence. In both trials the judges told the jury they could take the accused's failure to give evidence into account when assessing the weight of the prosecution evidence. Both appealed, arguing the directions breached <i>s20(2) Evidence Act 1995 (NSW)</i> and earlier authority (RPS v The Queen).",
+    "whatHeld": "The Court reconciled Weissensteiner and RPS. <b>A judge may comment on an accused's failure to give evidence only in rare and exceptional cases — where the evidence is capable of explanation by additional facts known only to the accused.</b> <b>A comment is never warranted merely because the accused failed to contradict some part of the prosecution case</b>, because mere contradiction is not evidence of any additional fact and an accused cannot be expected to give evidence. Any permissible comment is a comment (which the jury may disregard), not a direction, and must not, even by subtle allusion, suggest the accused stayed silent because he was, or believed he was, guilty (the prohibition in <i>s20(2)</i> is given full, broad operation). In AZZOPARDI the directions misstated Weissensteiner, were contradictory and breached <i>s20(2)</i>; the proviso could not be applied. In DAVIS the directions were also wrong, but the case was overwhelming and special leave was refused (the conviction stood). The seven-judge Court split on Azzopardi: the plurality (Gaudron, Gummow, Kirby and Hayne JJ), with Callinan J, allowed the appeal; <b>Gleeson CJ and McHugh J dissented</b> (favouring the broad <i>Weissensteiner</i> reading and holding the comments lawful).",
+    "whatItMeans": "This is a trial-direction case rather than an investigation rule, but it reinforces something useful for your casework: <b>an accused's silence — whether at interview or at trial — cannot fill gaps in your brief.</b> The prosecution case must stand on its own feet. Where guilt depends on facts that only the accused could explain, silence may carry weight; but where you have direct evidence (such as a complainant's account), the absence of an answer from the accused adds nothing. <b>Build your brief so it proves the elements without relying on the accused having to respond.</b> Note this turns on the NSW Evidence Act; WA practice is governed by the <i>Evidence Act 1906</i> (WA), so confirm the local position before relying on the detail.",
+    "verdict": "AWARENESS — it shapes how trial judges treat silence and confirms silence cannot prop up a weak brief, but it does not change WA investigative or charging procedure.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2001/25.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2001/HCA/25",
+    "files": {
+      "llm": "data/files/hca-2001-25/hca-2001-25.md"
+    }
+  },
+  {
     "id": "hca-2000-28",
     "date": "2000-05-25",
     "court": "High Court of Australia",
