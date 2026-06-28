@@ -116,6 +116,38 @@
     "jadeUrl": "https://jade.io/summary/mnc/2016/HCA/35"
   },
   {
+    "id": "hca-2004-12",
+    "date": "2004-03-10",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Kelly v The Queen",
+    "citation": "[2004] HCA 12",
+    "decided": "10/03/2004",
+    "appealFrom": "Court of Criminal Appeal of Tasmania (Marlow and Kelly (2001) 129 A Crim R 51)",
+    "outcome": "Appeal dismissed; murder conviction upheld. Majority found the statement admissible; the minority would have excluded it but applied the proviso.",
+    "weight": "High Court of Australia decision — authoritative on the construction principles (purposive construction, use of definitions) and on the continuing relevance of the McKinney warning, but the specific holding is confined to s 8 of a now-repealed Tasmanian Act.",
+    "tags": [
+      "confessions and admissions",
+      "electronic recording of interviews",
+      "police verbals",
+      "statutory construction",
+      "proviso / no substantial miscarriage of justice",
+      "McKinney warning",
+      "admissibility"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court holds a suspect's unrecorded admission made after a video interview ended was not \"made in the course of official questioning\" under Tasmanian law and so was admissible; conviction upheld.",
+    "whatHappened": "Shane Leslie KELLY was convicted of murdering Tony George TANNER (killed on or about 23/11/1990) by a jury in the Supreme Court of Tasmania. During a video-recorded interview on 04/03/2000 KELLY denied involvement. After the interview was formally concluded at 9.17pm, and 30 to 60 minutes later, as he was about to be driven to hospital for blood and hair samples, KELLY said to police: \"Sorry about the interview – no hard feelings, I was just playing the game... I suppose you will make notes of that as well.\" It was not in response to any question, was not recorded, and police did not take him back to record it. The defence argued this \"impugned statement\" was a confession or admission inadmissible under s 8(2)(a) of the <i>Criminal Law (Detention and Interrogation) Act 1995</i> (Tas) because it was not video-taped. The trial judge admitted it; the Court of Criminal Appeal of Tasmania dismissed the appeal.",
+    "whatHeld": "The majority (Gleeson CJ, Hayne and Heydon JJ) held that <b>\"in the course of official questioning\" is a temporal expression marking the period from when questioning began to when it ceased</b>. Questioning ended at 9.17pm when the interview was concluded; no further question triggered the statement, so it was <b>not made in the course of official questioning and was admissible</b>. The Court rejected the defence's attempts to read in \"custody\" or \"within a reasonable time after\" or \"arising out of\" — those ideas have no foothold in the statutory language. McHugh J and Kirby J dissented on construction, holding the statement <b>should have been excluded</b>, but agreed the appeal failed because the case against KELLY was overwhelming and the proviso (s 402(2) <i>Criminal Code</i> (Tas)) applied — no substantial miscarriage of justice. In surveying the law, the Court restated the long-standing concern about fabricated and unreliable confessions (\"police verbals\"); the continuing operation of the <i>McKinney</i> warning to juries about uncorroborated police-custody confessions was affirmed by Kirby J in dissent.",
+    "whatItMeans": "This case is about how courts read recording-requirement statutes and the perennial danger of unrecorded \"verbals\". <b>The practical lesson is to capture spontaneous admissions on video promptly</b> — here police could easily have taken KELLY back to the interview room to put the statement to him on tape, and their failure to do so was criticised by every judge. <b>Note carefully that this turns on a Tasmanian provision that has since been repealed, and WA's regime is different</b>: under <i>Criminal Code</i> (WA) s 570D the admissibility of a confession does not turn on whether it was a response to questioning, so the \"temporal\" reasoning here does not transfer directly to your casework. Treat any post-interview, off-camera admission as fragile — record it or re-engage on camera, and expect the <i>McKinney</i> warning to apply to anything that is not reliably corroborated.",
+    "verdict": "AWARENESS, not ACTION for WA: the holding construes a repealed Tasmanian section and WA's recording law operates on a different test, so use it for the principles and the recording lesson, not as authority on your charging or admissibility decisions.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2004/12.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2004/HCA/12",
+    "files": {
+      "llm": "data/files/hca-2004-12/hca-2004-12.md"
+    }
+  },
+  {
     "id": "nswsc-2002-194",
     "date": "2002-01-25",
     "court": "Supreme Court of New South Wales",
