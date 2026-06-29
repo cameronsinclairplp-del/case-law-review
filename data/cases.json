@@ -401,6 +401,45 @@
     }
   },
   {
+    "id": "hca-1998-75",
+    "date": "1998-12-10",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Osland v The Queen",
+    "citation": "[1998] HCA 75",
+    "decided": "10/12/1998",
+    "appealFrom": "Court of Appeal of the Supreme Court of Victoria (R v Osland [1998] 2 VR 636)",
+    "outcome": "Appeal dismissed (3:2). Conviction for murder upheld. Gaudron and Gummow JJ would have allowed the appeal and ordered a new trial.",
+    "weight": "High Court of Australia, five-justice bench, majority of four. Binding and authoritative on acting in concert, inconsistency of verdicts, lies directions and battered wife syndrome. Note the concert principles are the majority view (McHugh, Kirby, Callinan JJ); Gaudron and Gummow JJ dissented on inconsistency.",
+    "tags": [
+      "joint enterprise",
+      "acting in concert",
+      "complicity",
+      "principal in first degree",
+      "inconsistent verdicts",
+      "lies",
+      "consciousness of guilt",
+      "Edwards direction",
+      "battered wife syndrome",
+      "expert evidence",
+      "self-defence",
+      "provocation",
+      "murder",
+      "causation"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "HIGH COURT (3:2) dismisses OSLAND's murder appeal: a person acting in concert and present at the scene is liable as a principal for the perpetrator's acts even if the perpetrator is acquitted, and a jury's failure to convict the co-accused does not necessarily render the conviction inconsistent.",
+    "whatHappened": "On 30/07/1991 Heather OSLAND and her son David ALBION killed Frank OSLAND, OSLAND's husband and ALBION's step-father. They dug a grave during the day, OSLAND mixed sedatives into the deceased's dinner, and after he fell asleep ALBION struck the fatal blows to the head with an iron pipe in OSLAND's presence. They buried the body and OSLAND engaged in extensive deceptions, reporting him as a missing person. Both raised self-defence and provocation against a background of years of alleged violent and tyrannical behaviour; expert evidence of \"battered wife syndrome\" was led. At the joint trial the jury convicted OSLAND of murder but could not agree on ALBION; at a later retrial ALBION was acquitted. OSLAND appealed to the High Court.",
+    "whatHeld": "The Court (McHugh, Kirby, Callinan JJ; Gaudron and Gummow JJ dissenting) dismissed the appeal. <b>Where two or more people reach an understanding to commit a crime and are present at the scene, each is liable as a principal in the first degree for the acts of the actual perpetrator, regardless of the part each played</b> (acting in concert). The liability is primary, not derivative: <b>the person acting in concert can be convicted even if the actual perpetrator is acquitted</b> (e.g. for self-defence, provocation, duress or insanity), because it is the perpetrator's acts, not their crime, that are attributed. The Court held there was <b>no inconsistency</b> between OSLAND's conviction and the failure to convict ALBION — the jury was entitled to find OSLAND did not act in self-defence or under provocation while remaining unable to decide whether the Crown had negatived ALBION's defences. ALBION's later acquittal at a separate trial provided no basis to acquit OSLAND. On the lies (a point analysed chiefly by Gaudron and Gummow JJ, whose reasoning on this the majority did not disturb), the Court held that <b>where there is a risk the jury might treat lies (or threatening intercepted conversations) as evidence of guilt, the trial judge should ascertain how the prosecution puts the evidence and, if relied on as consciousness of guilt, direct the jury per <i>Edwards v The Queen</i></b>; if not, direct that it goes only to credit. The Court accepted that <b>battered wife syndrome is a proper subject of expert evidence</b> where the accused's responses lie outside ordinary experience, but it must be related to the issues (self-defence, provocation) and is not a separate defence. Gaudron and Gummow JJ dissented, finding the conviction inconsistent because a perpetrator cannot act under provocation/self-defence and simultaneously pursuant to a prior agreement to kill.",
+    "whatItMeans": "What it means for your casework: when you investigate and charge a joint killing, remember that <b>a participant present at the scene who agreed to the crime can be charged and convicted as a principal even if the actual perpetrator is not convicted</b> — build your brief to prove the agreement/understanding, the accused's presence, and their intent independently. The understanding need not be express and may be inferred from all the circumstances. Note WA's equivalent provisions are <i>Criminal Code (WA)</i> ss 7-9 (referenced in the judgment), so the concert principle has direct local application. On evidence of <b>lies told by a suspect (false missing-person reports, cover stories) and threats made in intercepted calls</b>, anticipate that these will need careful judicial direction: identify precisely how the evidence proves guilt versus merely affecting credit, because there may be innocent explanations (e.g. family loyalty, panic). Gather and preserve material that shows the lie reveals knowledge of the offence. Where an accused will run <b>battered wife/abusive-relationship evidence</b>, expect expert evidence to be admissible and relevant to self-defence and provocation — collect a thorough history of the relationship, prior reports (or lack of them), and any evidence (like prior solicitation to kill, financial motive, premeditation such as a pre-dug grave, or intercepts showing violence had ceased) that bears on whether the response was genuinely defensive or premeditated.",
+    "verdict": "AWARENESS-leaning but practically ACTION: this changes how you frame charges and assemble evidence in joint-enterprise homicides and how you handle lies and consciousness-of-guilt material, so treat it as affecting your casework.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1998/75.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1998/HCA/75",
+    "files": {
+      "llm": "data/files/hca-1998-75/hca-1998-75.md"
+    }
+  },
+  {
     "id": "hca-1998-1",
     "date": "1998-01-20",
     "court": "High Court of Australia",
@@ -435,6 +474,74 @@
     "jadeUrl": "https://jade.io/summary/mnc/1998/HCA/1",
     "files": {
       "llm": "data/files/hca-1998-1/hca-1998-1.md"
+    }
+  },
+  {
+    "id": "hca-1996-22",
+    "date": "1996-08-14",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Crofts v The Queen",
+    "citation": "[1996] HCA 22",
+    "decided": "14/08/1996",
+    "appealFrom": "Court of Criminal Appeal of the Supreme Court of Victoria",
+    "outcome": "Appeal allowed; convictions quashed; order of the Victorian Court of Criminal Appeal set aside; new trial ordered (the High Court noting the decision whether to proceed was for the Crown given time already served).",
+    "weight": "High Court of Australia, five-judge bench, unanimous. Binding statement of principle on the relationship between statutory jury-warning provisions and the common law <i>Kilby</i> direction, and on appellate review of a refusal to discharge a jury.",
+    "tags": [
+      "sexual offences",
+      "delay in complaint",
+      "recent complaint",
+      "jury directions",
+      "Kilby direction",
+      "propensity evidence",
+      "uncharged acts",
+      "discharge of jury",
+      "complainant credibility",
+      "miscarriage of justice"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court quashed sexual-offence convictions and ordered a retrial because the trial judge wrongly directed the jury that delay in complaint could not be used at all, and should also have discharged the jury after apparently deliberate inadmissible propensity evidence.",
+    "whatHappened": "Ian CROFTS was convicted in the County Court of Victoria of one count of an indecent act with a child under 16 and four counts of sexual penetration of a child between 10 and 16, all involving the same complainant on a single night between September 1991 and May 1992. He was acquitted on the other counts. The complainant first complained in June 1993 — about six years after the earliest alleged incident and six months after the last. Two problems arose at trial. First, despite a ruling excluding evidence of other uncharged sexual misconduct, the prosecutor in re-examination led the complainant into describing acts that happened \"many times\", and the judge refused to discharge the jury, instead giving a general warning. Second, the judge directed the jury that, as a matter of law, they could not draw any inference from the delay in complaint, then gave the statutory <i>s 61(1)(b)</i> warning that delay does not necessarily mean the allegation is false — without telling the jury they were still entitled to take the delay into account when assessing the complainant's credibility. The Victorian Court of Criminal Appeal dismissed the appeal; CROFTS appealed to the High Court.",
+    "whatHeld": "The appeal was allowed unanimously. <b>On the delay direction:</b> <i>s 61</i> of the <i>Crimes Act 1958</i> (Vic) did not abolish the principle in <i>Kilby v The Queen</i> that absence of, or delay in, complaint is relevant to a complainant's credibility (though not to consent and not as proof of the facts). The statute was meant to <b>correct the balance, not remove it</b> — it stops judges treating complainants as an unreliable class, but does not stop a judge telling the jury that substantial, unexplained delay may be taken into account in assessing credibility. The judge erred by telling the jury, as a matter of law, that they could not use the delay, and then failed to give the balancing <i>Kilby</i> direction. <b>On the jury discharge:</b> although discharge is discretionary and judged by necessity, the appellate court must itself decide whether the refusal risked a substantial miscarriage. The inadmissible evidence was highly prejudicial, came from apparently deliberate questioning at the close of the complainant's evidence before a long adjournment, and could not be cured by a general direction. The majority (Toohey, Gaudron, Gummow and Kirby JJ) held the discretion miscarried and the jury should have been discharged; Dawson J dissented on this ground, holding the discretion did not miscarry. For the majority, either error alone required the convictions to be quashed (Dawson J would have quashed on the delay-direction ground alone).",
+    "whatItMeans": "This is mainly a trial-direction case, but it shapes how you should think about <b>delayed complaints in sexual matters</b>. Delay is not fatal and does not prove consent or fabrication — but it remains <b>legitimately relevant to a complainant's credibility</b>, and the longer and less explained the delay, the more weight it may carry at trial. When you take a statement involving a long gap before reporting, <b>capture and record the reasons for the delay</b> (fear, guilt, family pressure, age, confusion) — the prosecution can use those explanations, and your file should document them. Second, the case is a strong reminder about <b>propensity/uncharged-conduct evidence</b>: where a judge has ruled it inadmissible, eliciting it — even by a single broad question — can collapse the trial. <b>Brief witnesses carefully before they testify</b> so they keep to the charged acts, and make sure the prosecutor knows the boundaries of any exclusion ruling. Deliberate or careless questioning that opens up excluded material can wreck an otherwise sound case.",
+    "verdict": "AWARENESS-level authority: it does not change how you gather evidence, but it confirms that delay in complaint remains relevant to credibility and warns that breaching an exclusion ruling on uncharged conduct can cause a mistrial.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1996/22.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1996/HCA/22",
+    "files": {
+      "llm": "data/files/hca-1996-22/hca-1996-22.md"
+    }
+  },
+  {
+    "id": "hca-1995-7",
+    "date": "1995-02-17",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Pfennig v The Queen",
+    "citation": "[1995] HCA 7",
+    "decided": "17/02/1995",
+    "appealFrom": "Court of Criminal Appeal of South Australia",
+    "outcome": "Appeal against conviction dismissed; murder conviction upheld.",
+    "weight": "Very high — a unanimous High Court of Australia decision and the leading authority establishing the test for admissibility of propensity and similar fact evidence in Australia.",
+    "tags": [
+      "propensity evidence",
+      "similar fact evidence",
+      "circumstantial evidence",
+      "admissibility",
+      "modus operandi",
+      "identity",
+      "murder",
+      "High Court"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court upheld PFENNIG's murder conviction and set the test for admitting propensity/similar fact evidence: it is admissible only if there is no reasonable view of it consistent with the accused's innocence.",
+    "whatHappened": "PFENNIG was convicted of the murder of ten-year-old Michael BLACK, who disappeared from Sturt Reserve, Murray Bridge, South Australia on or about 18/01/1989. The boy's body was never found. The case was entirely circumstantial: PFENNIG was present at the reserve in his Kombi van, admitted speaking to Michael and lending him a knife, and was, on the evidence, among the last seen with the boy; the boy's bike and belongings were later found neatly stacked at Thiele Reserve, suggesting a false trail to imply drowning. About a year later (30/12/1989) PFENNIG abducted and sexually assaulted a 13-year-old boy, H., luring him into the same van, binding and gagging him, and disposing of H.'s bike to suggest an accident. He pleaded guilty to those offences. He also told his former wife he had been \"thinking of it on and off for the past twelve months\". The trial judge admitted the H. evidence on a voir dire. The Court of Criminal Appeal of SA dismissed his appeal, and he appealed to the High Court arguing the H. evidence was wrongly admitted.",
+    "whatHeld": "Appeal dismissed. The plurality (Mason CJ, Deane and Dawson JJ) held (the appeal was dismissed unanimously) that propensity or similar fact evidence is <b>admissible only where its probative force is so high that, viewed in the context of the prosecution case, there is no reasonable view of it consistent with the innocence of the accused</b>. Because such evidence is a special class of circumstantial evidence, the trial judge must apply <b>the same test a jury applies to circumstantial evidence</b>. \"Striking similarity\" or \"underlying unity\" is not an essential prerequisite, but the evidence will usually lack the required probative force without such features. Here, once drowning was excluded and abduction for a sexual purpose was the only rational explanation, the H. evidence (the same van, same modus operandi, the false trail, and his admissions) had sufficient cogency that its probative force outweighed its prejudicial effect. Toohey J and McHugh J agreed the evidence was admissible, McHugh J holding it went to proving the abduction and murder, not just identity.",
+    "whatItMeans": "This case gives you the governing standard — the <b>Pfennig test</b> — for whether evidence of an accused's other criminal conduct (prior offences, similar incidents, propensity) can be used. When you are building a case that relies on uncharged conduct or prior offending to support an inference of guilt, ask whether that evidence is <b>so cogent that there is no reasonable view of it consistent with innocence</b>. Mere bad character or a general disposition to offend will never get in — it is highly prejudicial and lacks cogency. What lifts such evidence to admissibility is a <b>distinctive pattern, modus operandi, or \"signature\"</b> tying the incidents together, combined with opportunity and other circumstantial links. Document the unusual or distinctive features (here: the van, luring a young boy, the false trail) and the surrounding circumstantial evidence carefully. Be alert that the more prejudicial the material, the higher the cogency required before a court will admit it.",
+    "verdict": "AWARENESS — this is the foundational High Court authority on propensity/similar fact evidence; it shapes how you assess and assemble such evidence rather than altering a specific investigative procedure.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1995/7.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1995/HCA/7",
+    "files": {
+      "llm": "data/files/hca-1995-7/hca-1995-7.md"
     }
   },
   {
@@ -701,6 +808,74 @@
     }
   },
   {
+    "id": "hca-1990-26",
+    "date": "1990-06-20",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "George v Rockett",
+    "citation": "[1990] HCA 26",
+    "decided": "20/06/1990",
+    "appealFrom": "Full Court of the Supreme Court of Queensland",
+    "outcome": "Appeal allowed with costs. Order of the Full Court set aside; order to review made absolute. Warrant held invalid. Appellant given liberty to apply for costs below within 14 days.",
+    "weight": "High Court of Australia, unanimous seven-judge bench. Binding and a leading authority on the meaning of \"reasonable grounds\" for suspicion and belief and on search warrant validity.",
+    "tags": [
+      "search warrant",
+      "reasonable grounds",
+      "suspicion and belief",
+      "sworn complaint",
+      "warrant validity",
+      "particularity of description",
+      "privacy and property",
+      "statutory construction"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "A search warrant is invalid unless the sworn complaint itself sets out facts establishing reasonable grounds for both the suspicion and the belief the statute requires.",
+    "whatHappened": "On 22/08/1989 Detective Sergeant ROCKETT of the Office of the Special Prosecutor applied to a stipendiary magistrate for a search warrant under s 679(b) of <i>The Criminal Code</i> (Qld). He sought a bundle of A4 pages in the handwriting of Sir Terence LEWIS (a former Police Commissioner facing two perjury charges) plus an annotated transcript of Commission of Inquiry evidence, said to have been sent to LEWIS's solicitors. ROCKETT put before the magistrate a sworn complaint, an unsworn statutory declaration and pro forma documents, and answered the magistrate's questions. The magistrate issued the warrant; documents were seized at the solicitor GEORGE's office and sealed unopened. GEORGE obtained an order to review under s 209 of the <i>Justices Act</i> (Qld). The Full Court discharged the order to review. GEORGE appealed to the High Court.",
+    "whatHeld": "The High Court unanimously allowed the appeal and held the warrant invalid. <b>Strict compliance with the statutory conditions for issuing a search warrant is required</b>, because such warrants authorise invasion of privacy and property that the common law has long protected. <b>\"Reasonable grounds\" requires actual facts sufficient to induce the relevant state of mind in a reasonable person — it must appear to the issuing justice, not merely the applicant, that those grounds exist.</b> The justice must give real attention and stand between police and citizen, not act as a rubber stamp. <b>Suspicion and belief are different states of mind</b>: suspicion is a positive feeling of actual apprehension or mistrust on slender material; belief requires grounds pointing more clearly to the subject matter. Critically, <b>the sworn complaint itself must contain sufficient facts to found the reasonable suspicion and belief</b> — unsworn material (the statutory declaration) and oral answers cannot supply the deficiency. Here the complaint established reasonable grounds for suspecting the documents were at the solicitor's office, but contained <b>no facts</b> showing reasonable grounds for believing they would afford evidence of the perjury offences — it contained only ROCKETT's bare assertion of his own belief. The Court also held the description of the object of a search delimits the scope of seizure: the wider the description, the harder to justify that it will afford evidence and the more the seizure power is unjustifiably broadened. The Court declined to adjourn to allow a fresh complaint.",
+    "whatItMeans": "This is a foundational authority on search warrants and applies directly in WA, where s 711 of <i>The Criminal Code</i> (WA) and s 10 of the <i>Crimes Act 1914</i> (Cth) are in substantially the same terms. <b>When you swear an application, every fact relied on must be in the sworn document itself.</b> Do not rely on a covering statutory declaration, briefing notes, or what you tell the issuing officer verbally — anything not sworn is immaterial and cannot save a defective application. <b>State the actual grounds, not just a conclusion that you hold a suspicion or belief.</b> A bare assertion that \"there are reasonable grounds for believing\" is fatal; you must set out the facts that make the belief reasonable to an outside reader. Distinguish clearly between what you <b>suspect</b> (e.g. that the thing exists or is at the location) and what you <b>believe</b> (that the thing will afford evidence of the offence) and supply facts for each. <b>Describe the thing sought as narrowly and specifically as the evidence allows</b> — link it to the particular offence. An over-broad description (e.g. \"all books and records\") will not be supported and exposes the warrant to challenge. Remember evidence can be inculpatory and exculpatory at once and still \"afford evidence\"; but material that only exculpates does not justify a warrant. A written, fact-rich sworn application is your best protection against later invalidity.",
+    "verdict": "ACTION — it governs how you draft and swear every search warrant application: facts must be in the sworn complaint, suspicion and belief separately grounded, and the thing precisely described.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1990/26.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1990/HCA/26",
+    "files": {
+      "llm": "data/files/hca-1990-26/hca-1990-26.md"
+    }
+  },
+  {
+    "id": "hca-1989-60",
+    "date": "1989-12-06",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Longman v The Queen",
+    "citation": "[1989] HCA 60",
+    "decided": "06/12/1989",
+    "appealFrom": "Court of Criminal Appeal of Western Australia",
+    "outcome": "Special leave to appeal granted; appeal allowed; order of the Court of Criminal Appeal of WA set aside; convictions quashed; new trial ordered.",
+    "weight": "High Court of Australia, unanimous five-judge bench — binding and a leading authority. Note that the specific statute considered (s 36BE) has been repealed and replaced.",
+    "tags": [
+      "sexual offences",
+      "delayed complaint",
+      "jury warning",
+      "Longman warning",
+      "uncorroborated evidence",
+      "child complainant",
+      "historical offences",
+      "unsafe and unsatisfactory",
+      "Evidence Act 1906 (WA)",
+      "miscarriage of justice"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "<i>Longman v The Queen</i> establishes that where there is a long delay before a sexual complaint, a jury must be warned that the accused has lost the means of testing the allegation, making it dangerous to convict on uncorroborated evidence without careful scrutiny.",
+    "whatHappened": "John Henry LONGMAN was charged in the District Court of WA with two counts of unlawfully and indecently dealing with his step-daughter (D.R.T.), a girl under 14, contrary to s 183 of the <i>Criminal Code</i> (WA). Count one alleged an offence between 22/02/1962 and 22/02/1963 when she was about six; count two between 22/02/1966 and 22/02/1967 when she was about ten. The complainant said she awoke on each occasion to find LONGMAN touching her genitalia, and pretended to remain asleep. She first complained to police in August 1987 — over 25 years after the first incident and over 21 years after the second. There was no corroborating evidence. LONGMAN denied the conduct and led good character evidence; police gave unchallenged evidence of an effective partial admission. He was convicted on 21/10/1988 and fined $2,000 on each count. The Court of Criminal Appeal of WA dismissed his appeal. Defence counsel had asked the trial judge for a warning under s 36BE of the <i>Evidence Act 1906</i> (WA), which the judge declined to give.",
+    "whatHeld": "The High Court (BRENNAN, DEANE, DAWSON, TOOHEY and McHUGH JJ) unanimously allowed the appeal. Section 36BE(1)(a) abolished the old rule of practice requiring a warning that complainants in sexual cases are a suspect class, and (b) prohibited that warning unless justified. But <b>the section did not remove the trial judge's general duty to warn the jury of any perceptible risk of miscarriage of justice arising from the particular circumstances of the case.</b> The joint judgment held that the long delay (more than twenty years) had necessarily impaired the fairness of the trial because LONGMAN had lost the means of testing the allegations that would have existed had complaint been made promptly. <b>The jury should have been told that, because the complainant's evidence could not be adequately tested after such a delay, it would be dangerous to convict on that evidence alone unless, after scrutinising it with great care, considering the circumstances relevant to its evaluation, and heeding the warning, they were satisfied of its truth and accuracy.</b> The absence of such a warning left the convictions unsafe and unsatisfactory. DEANE J emphasised the risk that the long passage of time could harden childhood fantasy or semi-fantasy into a conviction of reality; McHUGH J emphasised the fallibility of human recollection over time and the defence's lost opportunity to explore surrounding circumstances.",
+    "whatItMeans": "This is the source of the <b>\"Longman warning\"</b> — a direction you will frequently encounter in delayed-complaint sexual offence cases. For your casework it means that <b>delay between the alleged offence and the complaint is a serious evidentiary issue, not just a credibility point.</b> The longer the delay, the more the accused loses the ability to test the allegation and gather contradicting evidence. When you investigate historical or delayed sexual offences, you should work hard to (1) pin down dates, locations and surrounding circumstances as precisely as possible, and (2) actively seek any independent corroboration — contemporaneous complaints, witnesses, documents, physical evidence — because uncorroborated evidence given long after the event invites a strong judicial warning that it is dangerous to convict on it alone. Note that the legislative framework here (s 36BE) has since been repealed and replaced, and the law on warnings in sexual cases has been substantially modified by later statute; treat this case as the foundational authority on the principle rather than a current statement of the WA statutory regime. Confirm the present legislative provisions before relying on the section numbers discussed.",
+    "verdict": "AWARENESS — this is foundational appellate authority on jury warnings that shapes how delayed-complaint sexual cases are run; it does not directly change your investigative powers but should drive how you gather and preserve corroborating evidence.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1989/60.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1989/HCA/60",
+    "files": {
+      "llm": "data/files/hca-1989-60/hca-1989-60.md"
+    }
+  },
+  {
     "id": "hca-1987-26",
     "date": "1987-07-01",
     "court": "High Court of Australia",
@@ -800,6 +975,39 @@
     "jadeUrl": "https://jade.io/summary/mnc/1985/HCA/43",
     "files": {
       "llm": "data/files/hca-1985-43/hca-1985-43.md"
+    }
+  },
+  {
+    "id": "hca-1985-22",
+    "date": "1985-03-26",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "R v Crabbe",
+    "citation": "[1985] HCA 22",
+    "decided": "26/03/1985",
+    "appealFrom": "Full Court of the Federal Court of Australia (on appeal from the Supreme Court of the Northern Territory)",
+    "outcome": "Special leave to appeal granted; appeal dismissed with costs. The Full Court's order quashing the convictions and directing a new trial stood.",
+    "weight": "High Court of Australia, unanimous five-member Court — the leading authority on the mental element of common-law murder; binding and frequently applied.",
+    "tags": [
+      "murder",
+      "mental element",
+      "mens rea",
+      "recklessness",
+      "wilful blindness",
+      "probability vs possibility",
+      "foresight",
+      "common law homicide"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "For reckless murder at common law, the accused must know death or grievous bodily harm is <b>probable</b>, not merely possible — and wilful blindness has no role.",
+    "whatHappened": "In the early hours of 18/08/1983, after being ejected from a crowded motel bar near Ayers Rock, CRABBE returned at the controls of his prime mover and one trailer and drove the vehicle through the wall into the bar. Five people died and many were injured. He did nothing to help and left, and was apprehended the following day. He was tried before the Chief Justice of the Northern Territory and a jury and convicted on five counts of murder. The Criminal Code Act 1983 (NT) had not been passed at the material times, so common law governed the mental element. The trial judge gave two redirections referring to the accused foreseeing the <i>possibility</i> people were in the bar and to \"wilful blindness\". The Full Court of the Federal Court, by majority, quashed the conviction and ordered a new trial. The Crown sought special leave to appeal.",
+    "whatHeld": "The High Court (Gibbs CJ, Wilson, Brennan, Deane and Dawson JJ) held it is <b>settled law in Australia</b> that, absent an intention to kill or do grievous bodily harm, a person who does an act knowing it is <b>probable</b> (i.e. likely) that death or grievous bodily harm will result is guilty of murder if death follows; <b>knowledge of a mere possibility is not enough</b>. The relevant element is <b>knowledge that those consequences will probably occur</b>, not reckless indifference as such, though indifference does not save the accused. There is <b>no valid distinction</b> between foresight of consequences and foresight of circumstances — the test is simply whether the accused knew his actions would probably cause death or grievous bodily harm. On wilful blindness: <b>actual knowledge or foresight is required and imputed knowledge is not enough</b>; deliberate abstention from inquiry is at most evidence of actual knowledge. The doctrine had no part to play here, and the trial judge's references to mere possibility were a <b>material misdirection</b>, and the reference to wilful blindness was also erroneous.",
+    "whatItMeans": "What it means for your casework: this is the leading common-law statement of the fault element for murder, but in WA murder is governed by the <i>Criminal Code</i> (WA), so this decision does not directly control how you charge a WA homicide — treat it as background to the concepts of foresight and recklessness. The enduring lesson is the <b>sharp line between \"probable\" and \"possible\"</b>: where you are building a case that an accused foresaw death or serious harm, your evidence must point to the accused knowing the result was <b>likely</b>, not merely conceivable. Do not rely on \"wilful blindness\" as a shortcut to proving knowledge — <b>actual knowledge or foresight must be proved</b>, and an accused's deliberate failure to check (e.g. not looking before driving in) is only circumstantial evidence of what was actually in his mind, not a substitute for it. Gather and record what the suspect knew, saw and was told before acting.",
+    "verdict": "AWARENESS only — a foundational common-law murder authority, but WA homicide is charged under the <i>Criminal Code</i> (WA), so it does not change how you frame charges here.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1985/22.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1985/HCA/22",
+    "files": {
+      "llm": "data/files/hca-1985-22/hca-1985-22.md"
     }
   },
   {
