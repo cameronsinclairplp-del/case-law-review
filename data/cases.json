@@ -1,5 +1,39 @@
 [
   {
+    "id": "wasc-2026-263",
+    "date": "2026-06-29",
+    "court": "Supreme Court of Western Australia",
+    "courtTag": "WASC",
+    "caseName": "The State of Western Australia v Raven [No 2]",
+    "citation": "[2026] WASC 263",
+    "decided": "29/06/2026",
+    "appealFrom": "",
+    "outcome": "Respondent declared a high risk serious offender; supervision order made for 3 years from 29/06/2026; no continuing detention order. Curfew condition and associate-disclosure condition removed as unnecessary.",
+    "weight": "Single-judge first-instance decision of the Supreme Court applying settled HRSO principles; expressly turns on its own facts.",
+    "tags": [
+      "HRSO",
+      "high risk serious offender",
+      "supervision order",
+      "restriction order",
+      "fire-setting",
+      "arson",
+      "Bush Fires Act",
+      "risk assessment",
+      "electronic monitoring"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "WHITBY J declared serial fire-setter Victor RAVEN a high risk serious offender under the <i>High Risk Serious Offenders Act 2020</i> (WA) and made a 3-year supervision order rather than continuing detention.",
+    "whatHappened": "The State applied on 11/11/2025 for a restriction order against Victor Redvers RAVEN, then serving 3 years for wilfully lighting a fire likely to injure or damage (s 32(2)(a) <i>Bush Fires Act 1954</i> (WA)) - he tied a match to an incense stick and left it in dried undergrowth behind Albany Senior High School. RAVEN, 69, has a mild intellectual disability, paranoid personality disorder and autism spectrum disorder, and a fire-setting history stretching back to 1972, much of it linked to a long-standing grievance against Albany Senior High School. Two experts (Professor PYSZORA and Dr YEWERS) assessed him as a high risk of further fire-setting if not supervised. Both the State and RAVEN's counsel supported a supervision order over continuing detention.",
+    "whatHeld": "WHITBY J was satisfied to a high degree of probability that RAVEN is a high risk serious offender: he poses an <b>unacceptable risk</b> of committing a serious fire-setting offence, the potential harm being catastrophic. A <b>restriction order was necessary</b> because NDIS funding and stable accommodation with his brother were not enough to manage the risk. The court chose a <b>supervision order as the least invasive option</b> that still adequately protects the community, being satisfied RAVEN would substantially comply (he had complied with the interim order). A 3-year supervision order was imposed with conditions including electronic monitoring, exclusion from Albany and bushland (except his Kauring block), and prohibitions on possessing fire-starting implements.",
+    "whatItMeans": "This is an outcome under the post-sentence HRSO regime, not a guide to investigation, but it is useful background. It shows how a <b>persistent fire-setting offending pattern</b>, combined with cogent expert risk assessment, supports a finding of unacceptable risk even where an offender has complied with interim supervision. For your casework, note the practical conditions imposed - <b>electronic monitoring, police search of residence/vehicle/person (on request, to monitor compliance), exclusion zones, and bans on fire-starting implements and flammable substances</b> - which are the kind of conditions you may be enforcing if you encounter an HRSO subject. The judgment also stresses <b>information sharing between agencies and police</b> to detect new grievances before they escalate.",
+    "verdict": "AWARENESS only - this is a post-sentence civil restriction decision that does not change how you investigate, gather evidence or charge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2026/263.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/263",
+    "files": {
+      "llm": "data/files/wasc-2026-263/wasc-2026-263.md"
+    }
+  },
+  {
     "id": "hca-2026-19",
     "date": "2026-06-17",
     "court": "High Court of Australia",
