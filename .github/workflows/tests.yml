@@ -1,0 +1,34 @@
+name: Pipeline tests
+
+# Fast, offline unit tests for the pipeline's pure helpers (name cleaning + scope
+# heuristics). No secrets, no network — just guards against a regression in the
+# regexes that decide what a Jade alert contributes to the watchlist.
+
+on:
+  push:
+    paths:
+      - "pipeline/**"
+      - ".github/workflows/tests.yml"
+  pull_request:
+    paths:
+      - "pipeline/**"
+      - ".github/workflows/tests.yml"
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4
+
+      - name: Run pipeline unit tests
+        run: python pipeline/test_update.py

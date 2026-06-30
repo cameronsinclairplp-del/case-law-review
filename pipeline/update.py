@@ -119,9 +119,17 @@ DROP_KEYWORDS = re.compile(
 # real criminal case is never dropped on a guess. WA criminal matters always name
 # the State / Crown / police / DPP, or use a pseudonym.
 WA_NAME_ONLY = {"WASC", "WASCA"}
+# WA criminal matters name the State / Crown / police / DPP as a PARTY (positionally),
+# or carry a pseudonym/coronial marker. "Western Australia" is required in a party
+# position — "...of/for Western Australia" (the Sheriff, a Commission, a Minister)
+# is a civil government body, not the prosecuting State, so a bare mention is NOT a
+# criminal signal.
 CRIMINAL_NAME = re.compile(
-    r"\bwestern australia\b|\bstate of w\.?a\b|\bthe (?:queen|king)\b|"
-    r"\bregina\b|\brex\b|\bR\s+v\b|\bv\.?\s+the (?:queen|king)\b|\bpolice\b|"
+    r"\bthe state of western australia\b|\bstate of w\.?a\b|"
+    r"(?<!of )(?<!for )\bwestern australia\s+v\b|"
+    r"\bv\.?\s+(?:the state of\s+)?western australia\b|"
+    r"\bthe (?:queen|king)\b|\bregina\b|\brex\b|\bcrown\b|"
+    r"\bR\s+v\b|\bv\.?\s+the (?:queen|king)\b|\bpolice\b|"
     r"\bd\.?p\.?p\b|director of public prosecutions|commissioner of police|"
     r"\bex parte\b|prosecut|inquest|coronial|death of|\(a pseudonym\)", re.I)
 CIVIL_NAME = re.compile(
@@ -131,7 +139,12 @@ CIVIL_NAME = re.compile(
     r"\bcity of\b|\btown of\b|body corporate|owners corporation|\bstrata\b|"
     r"liquidat|in liquidation|administrator|receiver|\btrustee\b|executor|"
     r"estate of|in the matter of|probate|superannuation|\bmortgage\b|"
-    r"developments|constructions|enterprises|corporation|\bpartners\b", re.I)
+    r"developments|constructions|enterprises|corporation|\bpartners\b|"
+    # government / regulatory / disciplinary bodies and incorporated associations
+    # (civil unless a criminal party signal above is also present)
+    r"\bminister\b|\bsheriff\b|\btribunal\b|commissioner of (?:state revenue|taxation)|"
+    r"legal profession|complaints committee|director of housing|"
+    r"\bunion\b|\bassociation\b|\bco-?operative\b|\bsociety\b|\bclub\b|\bfund\b", re.I)
 
 SYSTEM_PROMPT = (
     "You are the case-law analyst for a detective in training with WA Police. "
@@ -178,7 +191,21 @@ CITATION_RE = re.compile(r"\[(\d{4})\]\s*([A-Za-z]{2,8})\s*(\d+)")
 # swallowed; defendant runs to the end.
 _PLAINTIFF = r"[A-Z][\w'.()&-]*(?:\s+[\w'.()&-]+){0,5}?"
 _DEFENDANT = r"[\w'.()&-]+(?:\s+[\w'.()&-]+){0,7}"
-CASE_NAME_RE = re.compile(rf"({_PLAINTIFF}\s+v\.?\s+{_DEFENDANT})\s*$")
+# Trailing hearing-number suffix ("[No 2]" / "(No 3)") is part of the name.
+_NO_SUFFIX = r"(?:\s+[\[(]\s*No\.?\s*\d+\s*[\])])?"
+# "A v B" party pair anchored to the END of the fragment (the name sits just before
+# the citation). clean_case_name tries the whole string and each point just after a
+# structural/sentence boundary as a plaintiff start, keeping the RIGHTMOST match —
+# so a leading "Court of Appeal." / "New decision:" preamble is stripped while a
+# multi-word plaintiff (and an abbreviation like "State of W.A.") survives.
+CASE_NAME_RE = re.compile(rf"{_PLAINTIFF}\s+v\.?\s+{_DEFENDANT}{_NO_SUFFIX}\s*$")
+_NAME_BOUNDARY_RE = re.compile(r"[|·•—–:]\s*|[.!?]\s+")
+# Parallel / report citations a name may carry before its medium-neutral citation,
+# e.g. "(2020) 270 CLR 1" or "; [2019] HCA 12" — peeled off before matching
+# (tolerating a trailing ; , . left by the wrapper).
+_PARALLEL_CITE_RE = re.compile(
+    r"\s*[;,]?\s*(?:\(\d{4}\)\s*\d+\s*[A-Z][A-Za-z]{1,8}\s*\d+"
+    r"|\[\d{4}\]\s*[A-Z][A-Za-z]{1,7}\s*\d+)\s*[;,.]?\s*$")
 
 
 def log(msg):
@@ -528,10 +555,23 @@ def _is_jade_url(url):
 
 
 def clean_case_name(raw, citation):
-    name = re.sub(r"\s+", " ", (raw or "").replace(citation, "")).strip(" .,-—|·•\t")
-    m = CASE_NAME_RE.search(name)
-    if m:
-        return m.group(1).strip(" .,-—|·•")
+    name = re.sub(r"\s+", " ", (raw or "").replace(citation, "")).strip(" .,-—|·•;\t")
+    # peel any trailing parallel/report citations (there may be more than one)
+    prev = None
+    while name and name != prev:
+        prev = name
+        name = _PARALLEL_CITE_RE.sub("", name).strip(" .,-—|·•;\t")
+    # try the whole string and each point just after a structural/sentence boundary
+    # as a plaintiff start; keep the rightmost "A v B" match (strips a leading
+    # preamble without truncating a long plaintiff or an abbreviation).
+    chosen = None
+    for s in [0] + [b.end() for b in _NAME_BOUNDARY_RE.finditer(name)]:
+        m = CASE_NAME_RE.match(name, s)
+        if m:
+            chosen = name[s:m.end()]
+    if chosen is not None:
+        return chosen.strip(" .,-—|·•")
+    # no "A v B" pair (e.g. "Re X; Ex parte Y"): take the last structural fragment
     frag = re.split(r"\s*[|·•—–]\s*|(?<=[.!?])\s+", name)[-1].strip()
     return frag[-80:].strip() or "(case name pending)"
 
