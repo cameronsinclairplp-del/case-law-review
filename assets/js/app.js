@@ -345,7 +345,7 @@
     var relGroup = chipGroup('Relevance', 'rel',
       [{ v: 'ALL', label: 'All' }, { v: 'ACTION', label: 'Action' }, { v: 'AWARENESS', label: 'Awareness' }]);
     var yearGroup = YEARS.length > 1 ? chipGroup('Year', 'year',
-      [{ v: 'ALL', label: 'All' }].concat(YEARS.map(function (y) { return { v: y, label: y }; }))) : null;
+      [{ v: 'ALL', label: 'All' }].concat(YEARS.map(function (y) { return { v: y, label: y }; })), true) : null;
 
     var filtersPanel = h('div',
       { class: 'filters' + (filtersOpen ? '' : ' is-collapsed'), id: 'filter-panel' },
@@ -396,8 +396,8 @@
     right.appendChild(h('span', { class: 'chev', html: ICON.chevD }));
   }
 
-  function chipGroup(label, dim, opts) {
-    var group = h('div', { class: 'filter-group', role: 'group', 'aria-label': label },
+  function chipGroup(label, dim, opts, scroll) {
+    var group = h('div', { class: 'filter-group' + (scroll ? ' filter-group--scroll' : ''), role: 'group', 'aria-label': label },
       h('span', { class: 'label' }, label));
     opts.forEach(function (o) {
       var active = state[dim] === o.v;
@@ -497,7 +497,7 @@
         c.court ? h('div', { class: 'label case-court', text: c.court }) : null,
         h('h2', { class: 'case-name' }, c.caseName || 'Untitled',
           c.citation ? [' ', h('span', { class: 'cite', text: c.citation })] : null),
-        c.oneLine ? h('p', { class: 'case-oneline', text: c.oneLine }) : null,
+        c.oneLine ? h('p', { class: 'case-oneline', html: sanitizeInline(c.oneLine) }) : null,
         h('div', { class: 'case-meta' }, badge(c.relevance), tagPills(c.tags))
       ),
       h('span', { class: 'case-go', html: ICON.chevR, 'aria-hidden': 'true' })
@@ -512,9 +512,11 @@
   }
 
   function fact(label, val) {
+    // metadata fields are plain text — strip any inline markup the pipeline may emit
+    var v = (val == null || val === '') ? '—' : stripTags(val).replace(/\s+/g, ' ').trim();
     return h('div', { class: 'fact' },
       h('div', { class: 'label' }, label),
-      h('div', { class: 'val', text: (val == null || val === '') ? '—' : val }));
+      h('div', { class: 'val', text: v || '—' }));
   }
 
   function section(title, richHtml) {
@@ -708,7 +710,7 @@
         h('div', { class: 'label case-court', text: c.court || '' }),
         h('h1', { class: 'detail-name', text: c.caseName || 'Untitled' }),
         c.citation ? h('div', { class: 'detail-cite', text: c.citation }) : null,
-        c.oneLine ? h('p', { class: 'detail-oneline', text: c.oneLine }) : null,
+        c.oneLine ? h('p', { class: 'detail-oneline', html: sanitizeInline(c.oneLine) }) : null,
         h('div', { class: 'detail-meta' }, badge(c.relevance), tagPills(c.tags))
       ),
 

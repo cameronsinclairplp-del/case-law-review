@@ -21,8 +21,9 @@
   --gold-bright: #D8B15A;
 
   /* ink at low opacities for hairlines */
-  --hair:      rgba(26, 24, 19, 0.14);
-  --hair-soft: rgba(26, 24, 19, 0.08);
+  --hair:        rgba(26, 24, 19, 0.14);
+  --hair-soft:   rgba(26, 24, 19, 0.08);
+  --hair-strong: rgba(26, 24, 19, 0.45);  /* hover/active borders on chips, toggles */
 
   --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
   --sans:  'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -202,6 +203,27 @@ button {
 .filter-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .filter-group > .label { flex: 0 0 auto; margin-right: 2px; }
 
+/* Year has ~30 options — keep it to a single scrollable row instead of 4 wrapped
+   rows, with the YEAR label pinned and a fade hint that there's more to the right. */
+.filter-group--scroll {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-left: 56px;
+  /* fade only the right (overflow) edge — the left holds the pinned label */
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
+          mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
+}
+.filter-group--scroll > .label {
+  position: sticky;
+  left: 0;
+  background: var(--paper);
+  padding-right: 10px;
+  z-index: 1;
+}
+.filter-group--scroll .chip { flex: 0 0 auto; }
+
 /* Filter toggle — shown on mobile only (see responsive block); hidden on desktop */
 .filter-toggle {
   display: none;
@@ -223,7 +245,7 @@ button {
   cursor: pointer;
   transition: border-color 0.18s var(--ease);
 }
-.filter-toggle:hover { border-color: rgba(26, 24, 19, 0.45); }
+.filter-toggle:hover { border-color: var(--hair-strong); }
 .filter-toggle .ft-right { display: inline-flex; align-items: center; gap: 8px; }
 .filter-toggle .chev { display: inline-flex; transition: transform 0.2s var(--ease); }
 .filter-toggle .chev svg { width: 16px; height: 16px; display: block; }
@@ -250,7 +272,7 @@ button {
   white-space: nowrap;
   transition: border-color 0.18s var(--ease), background 0.18s var(--ease), color 0.18s var(--ease);
 }
-.chip:hover { border-color: rgba(26, 24, 19, 0.45); }
+.chip:hover { border-color: var(--hair-strong); }
 .chip[aria-pressed="true"] {
   background: var(--ink);
   color: var(--paper);
@@ -558,7 +580,7 @@ button {
   padding: 11px 18px; font-family: var(--sans); font-size: 13px; font-weight: 600;
   transition: border-color 0.18s var(--ease), background 0.18s var(--ease);
 }
-.judgment-toggle:hover { border-color: rgba(26, 24, 19, 0.45); }
+.judgment-toggle:hover { border-color: var(--hair-strong); }
 .judgment-toggle > svg { width: 16px; height: 16px; }
 .judgment-toggle .chev { display: inline-flex; transition: transform 0.2s var(--ease); }
 .judgment-toggle .chev svg { width: 16px; height: 16px; display: block; }
