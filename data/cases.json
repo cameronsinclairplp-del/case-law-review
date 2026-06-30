@@ -512,6 +512,40 @@
     }
   },
   {
+    "id": "hca-1995-37",
+    "date": "1995-06-28",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "McAuliffe v The Queen",
+    "citation": "[1995] HCA 37",
+    "decided": "28/06/1995",
+    "appealFrom": "Supreme Court of New South Wales (Court of Criminal Appeal) — R v McAuliffe (1993) 70 A Crim R 303",
+    "outcome": "Both appeals dismissed; murder convictions affirmed.",
+    "weight": "High Court of Australia, five-judge unanimous (per curiam) bench. Leading authority on extended common purpose / joint criminal enterprise, though later considered and modified by subsequent High Court authority.",
+    "tags": [
+      "complicity",
+      "joint criminal enterprise",
+      "common purpose",
+      "extended common purpose",
+      "murder",
+      "accessorial liability",
+      "foresight",
+      "causation",
+      "group violence"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "McAULIFFE confirms that a party to a joint criminal enterprise is liable for a further crime he personally foresaw as a possible incident and continued to participate with that foresight, even if it fell outside the agreed common purpose.",
+    "whatHappened": "Late on 20/07/1990 the McAuliffe brothers (Sean, 17; David, 16) and Matthew DAVIS, after drinking and smoking marijuana, went to a clifftop park near Bondi Beach to rob or bash someone. Sean carried a hammer; Davis carried a stick. The brothers were experienced in Tae Kwon Do. They set upon two men. Sean robbed and assaulted SULLIVAN, while David and DAVIS attacked RATTANAJATURATHAPORN, punching, kicking and beating him with the stick. Sean then side-kicked the deceased in the chest \"to finish the fight\", knocking him from a footpath onto rocks 3-5m below, a short distance from the cliff edge. The men left. The deceased's body was later found in the sea at the bottom of the cliff; death was caused by injuries from the fall and drowning. DAVIS pleaded guilty to murder and did not give evidence. The brothers were convicted of murder and of separate offences against SULLIVAN. The Court of Criminal Appeal dismissed their appeals, and they appealed to the High Court by special leave.",
+    "whatHeld": "Appeals dismissed. The trial judge correctly directed the jury. The Court held that a party to a joint criminal enterprise is <b>guilty of any crime falling within the scope of the common purpose</b>, the scope being determined subjectively by what the parties contemplated. Beyond that, a party is <b>also guilty of a crime falling outside the scope of the common purpose if he contemplated as a possibility the commission of that offence by another party in carrying out the joint enterprise and continued to participate with that knowledge</b>. The Court rejected the appellants' argument that the intentional infliction of grievous bodily harm had to be agreed (expressly or tacitly) by all parties before one party could be liable for murder. <b>Individual foresight of the possible incident, coupled with continued participation, is sufficient</b> — the criminal culpability lies in participating in the venture with that foresight. Where the prosecution relies on this extended limb it <b>must prove the individual accused foresaw the incidental crime might be committed and cannot rely on the common purpose to establish that state of mind</b>. The Court also upheld the causation directions, applying <i>Royall v The Queen</i> on escape/self-preservation cases.",
+    "whatItMeans": "This is a foundational complicity case for any group-violence or joint-enterprise investigation. When you build a case against a secondary party, you have two routes: (1) the agreed common purpose, where everything within the understanding (express or tacit) makes all parties equally liable; and (2) the <b>extended common purpose</b>, where a party is liable for a further offence he personally <b>foresaw as a possible incident</b> and <b>kept participating</b> anyway. For the second route your evidence must go to the <b>individual's actual state of mind</b> — what he knew and foresaw — so gather material showing each suspect's knowledge (e.g. that another carried a weapon, comments made, prior conduct, awareness of others' fighting skills) and that he continued in the venture with that knowledge. You cannot simply infer foresight from the shared plan alone. Note this reflects the common law as it then stood; be aware the High Court later revisited extended joint enterprise in <i>Miller v The Queen</i> [2016], so check the current state of the law before relying on it.",
+    "verdict": "AWARENESS — this is settled appellate doctrine on complicity that shapes how you frame and evidence joint-enterprise cases rather than a new investigative procedure, so treat it as essential background knowledge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1995/37.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1995/HCA/37",
+    "files": {
+      "llm": "data/files/hca-1995-37/hca-1995-37.md"
+    }
+  },
+  {
     "id": "hca-1995-7",
     "date": "1995-02-17",
     "court": "High Court of Australia",
