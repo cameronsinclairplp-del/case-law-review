@@ -64,6 +64,41 @@
     }
   },
   {
+    "id": "hca-2022-30",
+    "date": "2022-09-07",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Garlett v The State of Western Australia",
+    "citation": "[2022] HCA 30",
+    "decided": "07/09/2022",
+    "appealFrom": "Court of Appeal of the Supreme Court of Western Australia (part removed into the High Court under s 40 of the <i>Judiciary Act 1903</i> (Cth))",
+    "outcome": "That part of the appeal removed into the High Court was dismissed. The <i>HRSO Act</i> was held valid in its application to robbery (item 34).",
+    "weight": "High Court of Australia, majority decision (5:2). Binding and authoritative nationally; the leading authority on the validity of WA's preventive detention regime for non-sexual, non-terrorism serious offences.",
+    "tags": [
+      "preventive detention",
+      "HRSO Act",
+      "Kable principle",
+      "Chapter III",
+      "robbery",
+      "restriction order",
+      "continuing detention order",
+      "supervision order",
+      "institutional integrity",
+      "constitutional law"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court upheld the validity of WA's <i>High Risk Serious Offenders Act 2020</i> as it applies to robbery, confirming post-sentence preventive detention/supervision orders do not breach Ch III of the Constitution.",
+    "whatHappened": "GARLETT, then 23, in company entered a home without consent on 19/11/2017, pretended to be armed with a handgun, threatened violence and stole a pendant and $20. He pleaded guilty to robbery and assault with intent to rob (ss 392 and 393 <i>Criminal Code</i> (WA)) and was sentenced (total effective three years six months, plus a further five months for criminal damage in custody). His release date was 19/10/2021. On 29/07/2021 the State applied for a restriction order under the <i>High Risk Serious Offenders Act 2020</i> (WA), treating robbery as a 'serious offence' under item 34 of Subdiv 3 of Div 1 of Sch 1. GARLETT challenged the validity of the Act in its application to robbery, arguing it breached the Kable principle in Ch III of the Constitution. The Kable ground was removed into the High Court.",
+    "whatHeld": "By majority (Kiefel CJ, Keane, Steward, Edelman and Gleeson JJ; Gageler and Gordon JJ dissenting), the High Court held the <i>HRSO Act</i> is <b>valid</b> in its application to robbery and does not infringe the Kable principle. The function conferred on the Supreme Court is <b>materially indistinguishable</b> from the Queensland scheme upheld in <i>Fardon</i>. The purpose of the scheme is <b>protective, not punitive</b>: any curtailment of liberty must be supported by the court's own risk evaluation under s 7, must be no greater than necessary to protect the community, and is subject to regular review. The court makes its <b>own evaluative judgment</b> and is <b>not acting under dictation</b> from the executive — the mandatory 'must' in s 48(1) only engages after the court is independently satisfied under s 7. The determination of which offences are 'serious' is <b>a matter for the legislature</b>, and including robbery (with maximum penalties up to life) is not inimical to the court's integrity. The scheme bears the <b>hallmarks of judicial process</b>: onus on the State, rules of evidence, right to be heard, public hearings, reasons, and a right of appeal.",
+    "whatItMeans": "This confirms the <i>HRSO Act</i> regime is constitutionally sound for robbery offenders, so applications for restriction orders against serious offenders convicted of robbery (and other Sch 1 offences) remain a <b>valid tool</b>. For your casework, note the scheme is <b>protective not punitive</b> — an order is justified only by a forward-looking risk assessment, not as further punishment. <b>Evidence quality matters</b>: the State carries the onus and must prove an unacceptable risk to a high degree of probability by acceptable and cogent evidence (s 7), so build a thorough package — psychiatric/psychological assessments, criminal history, patterns of offending, antecedents, and rehabilitation efforts. Note the majority's emphasis (especially Edelman J) that risk must relate to a <b>specified serious offence</b> the offender has a relevant propensity to commit; an unrelated criminal record may say little about the specified risk. Continuing detention is an <b>order of last resort</b> behind supervision orders. Be aware several judges flagged the breadth of the Act and the risk it could sweep up minor offending and Indigenous offenders disproportionately.",
+    "verdict": "AWARENESS — this is a constitutional validity ruling confirming an existing tool remains available; it does not change day-to-day investigative method but shapes how you build evidence for restriction order applications.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2022/30.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2022/HCA/30",
+    "files": {
+      "llm": "data/files/hca-2022-30/hca-2022-30.md"
+    }
+  },
+  {
     "id": "wasca-2022-5",
     "date": "2022-01-31",
     "court": "Supreme Court of WA — Court of Appeal",
