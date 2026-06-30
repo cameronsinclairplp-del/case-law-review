@@ -194,6 +194,43 @@
     }
   },
   {
+    "id": "hca-2007-47",
+    "date": "2007-10-23",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Carr v The State of Western Australia",
+    "citation": "[2007] HCA 47",
+    "decided": "23/10/2007",
+    "appealFrom": "Court of Appeal of the Supreme Court of Western Australia",
+    "outcome": "Appeal dismissed; conviction for aggravated armed robbery upheld. Gleeson CJ and the joint reasons (Gummow, Heydon and Crennan JJ) dismissed; Kirby J dissented and would have allowed the appeal and entered an acquittal.",
+    "weight": "High Court of Australia — binding. Five Justices, 4:1 majority. Authoritative interpretation of s 570D of the <i>Criminal Code</i> (WA), though that provision has since been replaced.",
+    "tags": [
+      "admissions",
+      "confessions",
+      "videotaped interview",
+      "s 570D Criminal Code WA",
+      "consent to recording",
+      "right to silence",
+      "caution",
+      "surveillance devices",
+      "unfairness discretion",
+      "public policy discretion",
+      "statutory interpretation",
+      "armed robbery"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Admissions a suspect made in a police lockup, captured by fixed surveillance cameras he didn't know about, were admissible under s 570D of the <i>Criminal Code</i> (WA) because there was a videotape of the admission — consent to recording is not required where a videotape exists.",
+    "whatHappened": "CARR was suspected of an aggravated armed robbery of the South Perth Commonwealth Bank (08/04/2003). On 30/07/2003 he was arrested, taken to Kensington police station and formally interviewed on videotape in the interview room. He was cautioned, made no real admissions, and repeatedly asked to speak to a lawyer. The recorded interview was then closed. After a cigarette break he was taken to the lockup for routine administrative processing (he was being returned to prison for a parole breach). The lockup had permanently fixed security cameras and microphones. CARR did not know he was being recorded; the officers did know, and realised he didn't. He initiated a wider conversation and boasted about the robbery; officers asked questions to elicit more. He was not re-cautioned. An edited recording (Ex 17) was played to the jury. He was convicted (25/11/2004) and sentenced to six years. The Court of Appeal refused an extension of time. He appealed to the High Court arguing the videotape was inadmissible under s 570D.",
+    "whatHeld": "Appeal dismissed (Kirby J dissenting). The majority held: (1) <b>'Interview' in s 570(1) is broad</b> — it means any conversation between a police officer and a suspect about an alleged offence, including an informal conversation initiated by the suspect. No element of formality, and no requirement that the suspect appreciate he is being recorded, is needed. (2) <b>Consent to videotaping is not a precondition to admissibility where a videotape exists.</b> Section 570D(4)(c) merely treats absence of consent as a 'reasonable excuse' for there being no videotape; that is an assumption, not an implication, and cannot be elevated into an extra ground of mandatory exclusion. Once s 570D(2)(a) is satisfied (a videotape of the admission exists), the statutory exclusion does not apply and the qualifications in (b) and (c) never arise. (3) The Court noted s 570D is a threshold/gateway, not an exhaustive admissibility test — <b>common law discretions to exclude for involuntariness, unfairness or public policy remain available</b>, but CARR did not run those arguments here and they had already been rejected below. The majority also observed there is <b>no common law rule requiring a caution</b>; failure to caution only enlivens a discretion to exclude. Kirby J dissented, holding 'interview' requires formality and mutuality and that consent is implied, and would have acquitted.",
+    "whatItMeans": "For your casework, the lesson is that under the old s 570D regime, <b>a recording of an admission is admissible even if the suspect did not consent to, or did not know about, the recording</b> — provided the conversation is one between police and a suspect about an offence. 'Interview' is read widely and covers informal, suspect-initiated chat. But note three important cautions. First, this case turns on <b>Ch LXA of the Criminal Code, which has been replaced by Pt 11 of the <i>Criminal Investigation Act 2006</i> (WA)</b> — that Act requires an 'audiovisual recording' of an 'admission' rather than a 'videotape' of an 'interview', so the precise statutory wording you work under today is different. Treat this case as guidance on principle, not on the current section numbers. Second, <b>clearing the statutory gateway does not guarantee admission</b>: a judge can still exclude on common law grounds of involuntariness, unfairness or public policy. Deliberately taking a suspect off-camera, or exploiting a belief that questioning has ended to bypass a request for a lawyer, invites a fairness/public-policy challenge — CARR survived only because those arguments were not pressed and the conduct was found not improper enough below. Third, watch the <i>Surveillance Devices Act 1998</i> (WA): the Court found the lockup recording lawful because it was not 'private activity/conversation' and was covered by law-enforcement exceptions, but you should not assume covert recording elsewhere is lawful. Best practice remains: caution, record properly, and where admissions are blurted out off-record, resume a recorded interview and put them to the suspect.",
+    "verdict": "AWARENESS — important authority on the scope of recorded-admission rules, but decided under the now-repealed Ch LXA; it confirms common law fairness discretions still apply, so it informs rather than directly changes day-to-day practice.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2007/47.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2007/HCA/47",
+    "files": {
+      "llm": "data/files/hca-2007-47/hca-2007-47.md"
+    }
+  },
+  {
     "id": "hca-2007-46",
     "date": "2007-10-04",
     "court": "High Court of Australia",
@@ -262,6 +299,41 @@
     "jadeUrl": "https://jade.io/summary/mnc/2007/HCA/39",
     "files": {
       "llm": "data/files/hca-2007-39/hca-2007-39.md"
+    }
+  },
+  {
+    "id": "hca-2005-1",
+    "date": "2005-02-03",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Nicholls v The Queen",
+    "citation": "[2005] HCA 1",
+    "decided": "03/02/2005",
+    "appealFrom": "Court of Criminal Appeal of the Supreme Court of Western Australia",
+    "outcome": "COATES's appeal allowed, conviction quashed, new trial ordered (off-camera admissions wrongly admitted; no substantial miscarriage of justice not established). NICHOLLS's appeal dismissed (only ground concerned ROSS's evidence, which failed for want of proper foundation).",
+    "weight": "High — unanimous High Court of Australia decision on appeal from the WA Supreme Court, authoritative on <i>s 570D</i> and the collateral evidence rule, though reasoning on the admissions issue was divided.",
+    "tags": [
+      "s570D",
+      "videotaped admissions",
+      "reasonable excuse",
+      "collateral evidence rule",
+      "corruption exception",
+      "prior inconsistent statement",
+      "s21 Evidence Act WA",
+      "McKinney warning",
+      "confessions",
+      "police interview"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Off-camera admissions during a 45-minute break in a videotaped police interview were inadmissible where there was no genuine \"reasonable excuse\" under <i>s 570D</i> Criminal Code (WA), and no notes were kept nor any attempt made to re-record on camera.",
+    "whatHappened": "COATES and NICHOLLS were convicted of the wilful murder of Clare GARABEDIAN, killed by heroin overdose to stop her giving evidence against COATES and HOY in pending proceedings. The case relied heavily on accomplice Adam DAVIS, who had pleaded guilty. During a videotaped interview, COATES allegedly made inculpatory admissions during a 45-minute \"toilet break\" when filming was suspended. The admissions were not re-recorded on camera; no contemporaneous notes were taken (notes made next day were lost). Police DSC HAWLEY admitted he encouraged COATES to speak off-camera and \"deliberately chose to continue this interview off-camera\". The appellants also sought to call witness Joseph ROSS to say DAVIS had told him COATES and NICHOLLS were not involved and that DAVIS intended to give false evidence to secure a police deal.",
+    "whatHeld": "On the admissions: the High Court held the off-camera admissions were <b>wrongly admitted</b> under <i>s 570D Criminal Code (WA)</i>. There was <b>no \"reasonable excuse\"</b> for the failure to videotape. The Court split <b>4:3</b> (Gleeson CJ, Hayne and Heydon JJ would have held them admissible and dismissed COATES's appeal; McHugh, Gummow, Kirby and Callinan JJ found them inadmissible and allowed it), the four-judge majority holding that mere police claims that an accused was \"anxious to speak off-tape\" or initiated a break cannot constitute reasonable excuse, especially where it was practicable to record, no notes were kept, and no attempt was made to have the admissions repeated on camera. McHugh J held \"interview\" covers the entire discussion, so refusing to record part did not fall within <i>s 570D(4)(c)</i>. On ROSS's evidence (the collateral evidence rule): the appeal was <b>unanimously dismissed</b> on this point. Though the evidence fell within the \"corruption\" exception to the collateral evidence (finality) rule, it was inadmissible because <b>no proper foundation was laid in cross-examination of DAVIS</b> — the time, place, person and substance of the alleged statements were never sufficiently put to him, breaching <i>s 21 Evidence Act 1906 (WA)</i> and the common law. The Court declined to recast the collateral evidence rule.",
+    "whatItMeans": "This case is a clear warning about <b>off-camera or unrecorded admissions</b>. Under <i>s 570D</i> (now reflected in current WA recording requirements), if recording equipment is available and working, you cannot rely on a suspect supposedly wanting to talk \"off the record\" as a reasonable excuse for not recording. <b>If a suspect makes admissions while recording is paused, get them back on camera and have the admissions repeated and adopted on the record.</b> Failing that, the admissions risk exclusion. <b>Always take and keep contemporaneous notes</b> — the loss of notes here was treated as a suspicious circumstance weighing toward exclusion. Encouraging a suspect to speak off-camera will be seen as an unfair attempt to evade the recording regime. On collateral evidence: if you have a witness who will say a key Crown witness admitted lying or intended to give false evidence, the defence (or prosecution) must put the <b>specific occasion — time, place, person and the words used —</b> to that witness in cross-examination before the rebuttal evidence can be called. Vague references to \"a conversation\" are not enough.",
+    "verdict": "AWARENESS — this is an appellate evidence-law ruling, but it directly shapes how you should handle interviews; treat it as a practical caution on recording admissions.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2005/1.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2005/HCA/1",
+    "files": {
+      "llm": "data/files/hca-2005-1/hca-2005-1.md"
     }
   },
   {
@@ -433,6 +505,42 @@
     "jadeUrl": "https://jade.io/summary/mnc/2000/HCA/28",
     "files": {
       "llm": "data/files/hca-2000-28/hca-2000-28.md"
+    }
+  },
+  {
+    "id": "hca-2000-3",
+    "date": "2000-02-03",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "RPS v The Queen",
+    "citation": "[2000] HCA 3",
+    "decided": "03/02/2000",
+    "appealFrom": "Court of Criminal Appeal of New South Wales",
+    "outcome": "Appeal allowed. Order of the NSW Court of Criminal Appeal of 13/08/1997 set aside. Convictions on counts 4, 6, 7 and 8 quashed; new trial ordered on those counts.",
+    "weight": "High Court of Australia, six-Justice bench, unanimous in result. A leading and frequently cited authority on the right to silence and jury directions about an accused not giving evidence. Binding.",
+    "tags": [
+      "right to silence",
+      "jury directions",
+      "Evidence Act 1995 (NSW) s 20",
+      "failure to give evidence",
+      "accusatorial trial",
+      "onus of proof",
+      "Weissensteiner",
+      "sexual offences",
+      "admissions",
+      "apprehended bias",
+      "s 11 Criminal Appeal Act report"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court held a trial judge breached <i>Evidence Act 1995</i> (NSW) s 20(2) by directing the jury they could infer from the accused's silence that his evidence \"would not have assisted him\" — convictions quashed, new trial ordered.",
+    "whatHappened": "RPS was charged with eight counts of sexual offences against his daughter, alleged over the period 06/02/1983 to 31/07/1993. The prosecution relied heavily on the complainant's evidence and on an alleged partial admission to the complainant's mother (\"I never had intercourse with her but everything else she said is true\"). RPS did not give evidence at trial. The trial judge directed the jury that, if it was reasonable to expect denial or contradiction, they were entitled to conclude from his silence that his evidence \"would not have assisted him in this trial\", and that his silence could make them more readily accept the Crown witnesses. The jury convicted on counts 4, 6, 7 and 8. The NSW Court of Criminal Appeal dismissed his appeal on 13/08/1997.",
+    "whatHeld": "The High Court unanimously allowed the appeal. The impugned directions <b>breached s 20(2)</b>: telling the jury his evidence \"would not have assisted him\" could only proceed from a belief he was guilty, which the section forbids suggesting. McHugh J decided the case on that narrow point alone, pinpointing the words \"would not have assisted him in this trial\" as the fatal phrase. The <b>joint judgment (Gaudron ACJ, Gummow, Kirby and Hayne JJ — 4 of the 6 judges)</b> went further: in an <b>accusatorial trial where the prosecution leads direct evidence (as in most sexual offence cases), it is seldom if ever reasonable to expect the accused to give evidence</b> (McHugh and Callinan JJ did not adopt this broader reasoning). The <i>Weissensteiner</i> reasoning (silence strengthening inferences) applies only to circumstantial cases where contradicting evidence could come only from the accused — not where guilt turns on accepting a witness's direct account. Where multiple counts are charged, the accused may rightly rest on the prosecution's burden of proof on each count. The Court warned trial judges generally that attempting to instruct juries on <b>how to reason towards guilt</b> (as distinct from warning against impermissible reasoning) leads to error; the safer course is to say only that the accused need not give evidence, the jury must not speculate why, and the Crown must prove guilt beyond reasonable doubt. <i>R v OGD</i> was disapproved to the extent it authorised such directions.",
+    "whatItMeans": "This case is about <b>judicial directions</b>, not investigative powers, but it reinforces a principle that shapes how you build and present a case. You <b>cannot rely on an accused's silence to plug evidentiary gaps</b>. Where your case rests on a complainant's or witness's direct account (as in most sexual assault matters), the accused's failure to respond carries little to no permissible weight — the Crown must prove each charge on the evidence it gathers. Treat an accused's silence as legally neutral: build each count to stand on its own admissible evidence. The <i>Weissensteiner</i> exception (silence assisting inferences) only arises in genuinely circumstantial cases where an innocent explanation, if it existed, could come only from the accused. Note also: there is <b>no rule that an accused must testify first</b> before calling other defence witnesses, and adverse comment suggesting guilt from silence is prohibited under s 20(2).",
+    "verdict": "AWARENESS — this is a directions/trial-conduct authority, but it should inform how you assemble evidence: do not treat or expect an accused's silence to strengthen your case.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2000/3.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2000/HCA/3",
+    "files": {
+      "llm": "data/files/hca-2000-3/hca-2000-3.md"
     }
   },
   {
