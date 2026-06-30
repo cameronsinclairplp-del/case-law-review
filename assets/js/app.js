@@ -608,6 +608,33 @@
     return { source: m ? m[0] : '', text: text };
   }
 
+  // Front-matter recognizers. The top of a judgment (court name, the bench, the
+  // parties and the "AND"/"v" connectors) was being mis-rendered as a run of teal
+  // section headings — these patterns peel those shapes into a quiet masthead
+  // instead. Kept tight so body headings (CATCHWORDS / ORDER / RESULT …) are
+  // untouched: the party rule needs a tab / multi-space column separator (which a
+  // heading never has), and the court/coram rules anchor on court-type words and
+  // judicial suffixes.
+  // whole-line court name (anchored, so prose like "Supreme Court rejected this" can't match)
+  var COURT_LINE = /^(?:the\s+|in\s+the\s+)?(?:(?:high|supreme|district|federal(?:\s+circuit)?|family|magistrates'?|children'?s|local|coroners'?|county)\s+court|(?:full\s+)?court\s+of\s+(?:criminal\s+)?appeal)(?:\s+of\s+[\w' .-]+?)?(?:\s+\([^)]*\))?(?:\s+at\s+[\w' .-]+?)?$/i;
+  var CORAM_PREFIX = /^(?:coram|before)\b\s*[:\-]\s*/i;
+  var CORAM_SUFFIX = /^(?:CJ|ACJ|JJA|JJ|JA|AJA)\.?$/;        // multi-letter (multi-judge) suffix
+  var JUDGE_SUFFIX = /^(?:CJ|ACJ|JJA|JJ|JA|AJA|AJ|J|P)\.?$/; // any judicial-suffix token
+  var ROLE = '(?:(?:first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth)\\s+)?(?:named\\s+)?(?:appellants?|respondents?|applicants?|plaintiffs?|defendants?|prosecutors?|petitioners?|claimants?|interve(?:nor|ner)s?|amici?(?:\\s+curiae)?|cross-(?:appellants?|respondents?)|accused)';
+  var PARTY_RE = new RegExp('^(.+?)(?:\\t+|\\u00a0+| {2,})(' + ROLE + ')\\s*$', 'i');
+  // a line that is WHOLLY a bench list (every token a name / "and" / judicial suffix,
+  // ending in a multi-judge suffix) — or a lone all-caps single judge ("WHITBY J").
+  // The all-tokens rule is what stops prose that merely ends "…and Gummow JJ".
+  function looksLikeCoram(s) {
+    if (/^[A-Z][A-Z'’.-]+\s+(?:J|AJ|CJ|ACJ|JA)\.?$/.test(s)) return true;
+    var toks = s.replace(/,/g, ' ').split(/\s+/).filter(Boolean);
+    if (toks.length < 2 || toks.length > 16) return false;
+    if (!CORAM_SUFFIX.test(toks[toks.length - 1])) return false;
+    return toks.every(function (t) {
+      return /^[A-Z][A-Za-z'’.-]*$/.test(t) || /^(?:and|&)$/i.test(t) || JUDGE_SUFFIX.test(t);
+    });
+  }
+
   // Format plain judgment text into readable nodes: stacked header blocks,
   // section headings, and hanging paragraph numbers. Heuristic but robust.
   function judgmentNodes(text) {
@@ -615,6 +642,12 @@
     var norm = String(text).replace(/\r/g, '').replace(/\n{3,}/g, '\n\n')
       .replace(/\n(?=\d{1,4}\.\s)/g, '\n\n');   // each numbered paragraph starts its own block
     var blocks = norm.split(/\n{2,}/);
+    // The masthead recognizers below apply only while we're still in the front
+    // matter (top of the document). Once the reasons begin (a numbered paragraph or
+    // a long prose block) this flips off, so a body per-judge reasons heading
+    // ("MAZZA JA", "Brennan and Toohey JJ.") stays a prominent section divider
+    // rather than being demoted to a quiet coram subtitle.
+    var inFrontMatter = true;
     blocks.forEach(function (raw) {
       var lines = raw.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
       if (!lines.length) return;
@@ -627,6 +660,41 @@
         if (!lines.length) return;
       }
       var oneLine = lines.join(' ').replace(/\s+/g, ' ').trim();
+
+      // ---- party rows & connectors -> masthead. Identified by a tab / multi-space
+      // column separator or a lone "AND"/"v" — shapes body prose never produces — so
+      // they're recognised anywhere (a joined appeal repeats a party block mid-document).
+      if (/^(?:and|v|-v-|&)$/i.test(oneLine)) {
+        out.push(h('div', { class: 'jconn', text: /^(?:v|-v-)$/i.test(oneLine) ? 'v' : 'and' }));
+        return;
+      }
+      var partyRows = lines.map(function (l) { return l.match(PARTY_RE); });
+      if (partyRows.length && partyRows.every(Boolean)) {
+        var pbox = h('div', { class: 'jparties' });
+        partyRows.forEach(function (pr) {
+          pbox.appendChild(h('div', { class: 'jparty' },
+            h('span', { class: 'jparty-name', text: pr[1].replace(/\s+/g, ' ').trim() }),
+            h('span', { class: 'jparty-role', text: pr[2].replace(/\s+/g, ' ').trim() })));
+        });
+        out.push(pbox);
+        return;
+      }
+      // ---- court & coram -> masthead. A court name or bench list is ambiguous with a
+      // body per-judge reasons heading ("MAZZA JA"), so only treat as masthead while
+      // still in the front matter; afterwards it falls through to the heading path.
+      if (inFrontMatter) {
+        // a single-line court identifier -> masthead title (verbatim, not a heading)
+        if (lines.length === 1 && oneLine.length <= 64 && COURT_LINE.test(oneLine)) {
+          out.push(h('div', { class: 'jcourt', text: oneLine }));
+          return;
+        }
+        // the bench. Skip when the block LEADS with the court name: that whole block
+        // is a clean stacked header, better left to the jhead path below.
+        if (!COURT_LINE.test(lines[0]) && (CORAM_PREFIX.test(oneLine) || looksLikeCoram(oneLine))) {
+          out.push(h('div', { class: 'jcoram', text: oneLine.replace(CORAM_PREFIX, '') }));
+          return;
+        }
+      }
 
       // short, multi-line, non-numbered block -> a stacked header (court/parties/coram)
       var isHeaderBlock = lines.length >= 2 && lines.length <= 8 &&
@@ -652,13 +720,15 @@
         out.push(h('h4', { class: 'jh', text: oneLine.length <= 14 ? oneLine : titleish(oneLine) }));
         return;
       }
-      // numbered paragraph -> hanging number in the gutter
+      // numbered paragraph -> hanging number in the gutter (reasons have begun)
       var nm = oneLine.match(/^(\d{1,4})\.?\s+(\S[\s\S]*)$/);
       if (nm && parseInt(nm[1], 10) <= 2000) {
+        inFrontMatter = false;
         out.push(h('p', { class: 'jp jp-num' },
           h('span', { class: 'jn', text: nm[1] }), h('span', { text: nm[2] })));
         return;
       }
+      if (oneLine.length > 140) inFrontMatter = false;   // a prose block: past the masthead
       out.push(h('p', { class: 'jp', text: oneLine }));
     });
     return out;

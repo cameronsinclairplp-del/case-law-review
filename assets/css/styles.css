@@ -621,6 +621,34 @@ button {
 }
 .judgment-text .jmeta-v { color: var(--inksoft); }
 
+/* front matter — a quiet masthead (court / bench / parties / connectors), so the
+   top of a judgment reads as a heading group rather than a run of teal headings */
+.judgment-text .jcourt {
+  font-family: var(--serif); font-weight: 600; font-size: 18px;
+  letter-spacing: 0.01em; color: var(--ink); margin: 1.8em 0 0.15em;
+}
+.judgment-text .jcourt:first-child { margin-top: 0; }
+.judgment-text .jcoram {
+  font-family: var(--sans); font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  margin: 0 0 1.1em;
+}
+.judgment-text .jparties { margin: 0.2em 0 1.2em; }
+.judgment-text .jparty {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 18px;
+  padding: 5px 0; border-bottom: 1px solid var(--hair-soft);
+}
+.judgment-text .jparty:first-child { border-top: 1px solid var(--hair-soft); }
+.judgment-text .jparty-name { color: var(--ink); font-weight: 500; }
+.judgment-text .jparty-role {
+  flex: 0 0 auto; font-family: var(--sans); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap;
+}
+.judgment-text .jconn {
+  font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--muted); margin: 0.1em 0 0.7em;
+}
+
 /* ---------- 11. Responsive ---------- */
 @media (max-width: 640px) {
   .case-row {
