@@ -263,6 +263,30 @@
       "blurb": "estigation and prosecution – release granted in part – consideration of Harman v Secretary of State for the Home Department [1983] 1 AC 280 and Hearne v Street [2008] HCA 36; 235 CLR 125 principles McGoogan v Mull",
       "firstSeen": "2026-06-26T20:29:09.702459+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-90",
+      "citation": "[2026] WASCA 90",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "90",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1234365&pid=108530338&h=1845564359",
+      "blurb": "Suppressed [2026] WASCA 90",
+      "firstSeen": "2026-07-01T20:46:08.371936+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2018-58",
+      "citation": "[2018] HCA 58",
+      "courtTag": "HCA",
+      "year": "2018",
+      "num": "58",
+      "caseName": "bel v The King [2024] VSC 725; Karam v The King [2022] VSC 808; AB v CD; EF v CD",
+      "jadeUrl": "https://jade.io/summary/mnc/2018/HCA/58",
+      "blurb": "karonis (1997) 188 CLR 449, applied. Arnautovic v The King [2024] VSCA 286; Mokbel v The King [2024] VSC 725; Karam v The King [2022] VSC 808; AB v CD; EF v CD [2018] HCA 58; AB v CD & EF [2017] VSCA 338; AB & EF ",
+      "firstSeen": "2026-07-01T20:46:08.371959+00:00",
+      "notified": true
     }
   ],
   "processed": [],
