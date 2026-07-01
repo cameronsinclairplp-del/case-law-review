@@ -1,5 +1,80 @@
 [
   {
+    "id": "wasca-2026-96",
+    "date": "2026-06-30",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Sym v The State of Western Australia",
+    "citation": "[2026] WASCA 96",
+    "decided": "30/06/2026",
+    "appealFrom": "Supreme Court of Western Australia (FORRESTER J), INS 5 of 2023",
+    "outcome": "Conviction appeal: leave granted, appeal dismissed (conviction stands). Sentence appeal: leave granted, appeal allowed; 9-year sentence set aside and replaced with 6 years 6 months' imprisonment, eligible for parole, backdated to commence 08/03/2024.",
+    "weight": "Court of Appeal (three judges: VAUGHAN JA, HALL JA, DAVID AJA) unanimous decision — strong persuasive and binding authority on the warning principle and manifest excess for attempted murder.",
+    "tags": [
+      "attempted murder",
+      "judicial warning",
+      "forensic disadvantage",
+      "circumstantial evidence",
+      "police investigation deficiencies",
+      "delayed witness statements",
+      "DNA evidence",
+      "insulin",
+      "manifestly excessive sentence",
+      "Criminal Code s 283",
+      "reduced moral culpability",
+      "carer burnout"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "Court of Appeal confirms no judicial warning about forensic disadvantage from a deficient police investigation was needed where the deficiencies were obvious to the jury and aired by defence counsel; conviction upheld but attempted-murder sentence reduced from 9 years to 6 years 6 months.",
+    "whatHappened": "SYM was convicted by a Supreme Court jury of attempting to unlawfully kill her husband Kenneth SYM at Joondalup on 15/01/2021, contrary to <i>Criminal Code</i> (WA) s 283. Mr SYM, who had vascular dementia and type 2 diabetes, was administered a non-therapeutic dose of exogenous insulin while admitted to Joondalup Health Campus. The only real issues at trial were identity and intent. The State ran a circumstantial case built on opportunity (a roughly 15-minute window between 1.25pm and 1.40pm when SYM was in the room), a vial of Actrapid insulin found in a nearby public bathroom bin bearing SYM's DNA (100 billion times more likely to be her than two unknowns), the fact that this expired 2018 insulin type was not used at JHC but was stocked at Princess Margaret Hospital where SYM worked as a nurse on the date the vial was opened, an orange-capped syringe in the sharps container, and text messages showing her stress and frustration as her husband's carer. SYM denied the offence. The police investigation had notable deficiencies: no statement was taken from carer Ms KAUR until the week before trial (March 2024), no statement from student nurse Ms JAMOLA until August 2021, and pharmaceutical records were never obtained. SYM appealed conviction (failure to warn the jury about forensic disadvantage) and sentence (manifest excess).",
+    "whatHeld": "On conviction: leave granted, appeal <b>dismissed</b>. The Court accepted SYM suffered <b>some</b> forensic disadvantage from the police delays and failure to obtain records, but held a judicial warning is only required to avoid a perceptible risk of a miscarriage of justice where a feature of the evidence may affect its reliability and that significance <b>may not be apparent to a lay jury</b> (applying <i>Carr</i>, <i>Longman</i>, <i>Eravelly</i>, <i>Tully</i>, <i>DWM</i>). Here the disadvantages were <b>limited</b> and were <b>within the common knowledge of the jury</b> — they were extensively explored in cross-examination and defence counsel's closing address and summarised by the primary judge. The evidence of opportunity was only one part of a broad circumstantial case, and SYM's own admission (that no observations were done while she was present) was the most damaging opportunity evidence. Experienced senior counsel did not request such a warning, supporting the conclusion no warning was needed. On sentence: leave granted, appeal <b>allowed</b>. The 9-year sentence <b>bespoke implied error and was manifestly excessive</b> given reduced moral culpability from the causal link between SYM's emotional fatigue/carer burnout and the offending, her good character, and low reoffending risk. Resentenced to 6 years 6 months.",
+    "whatItMeans": "When your investigation has gaps — delayed witness statements, records you never obtained, lost lines of inquiry — this case shows the courts will scrutinise them, but a defence argument that the trial judge should have specially warned the jury about resulting \"forensic disadvantage\" will usually fail <b>if those gaps are obvious and can be argued to the jury by defence counsel</b>. That is not comfort. The better lesson for your casework is preventative: <b>take statements from key witnesses promptly while memories are fresh</b>. Here, delays of seven months to years meant carer KAUR and nurse JAMOLA could only speak to \"usual practice,\" not what actually happened — a real evidential loss the Court expressly acknowledged. Also <b>chase down obvious records</b> (here the pharmacy stock records) to exclude alternative suspects; the detective conceded these were relevant lines of inquiry he missed. In a circumstantial case, a strong DNA link, motive evidence and the accused's own admissions can carry the case despite investigative failings — but you cannot rely on that. Do the easy things properly and early: show witnesses their contemporaneous notes when taking statements, and secure relevant registers before they become an appeal point.",
+    "verdict": "AWARENESS for the conviction principle; but ACTION-relevant lessons on timely statement-taking and obtaining records. Marked ACTION because it directly warns how investigative delay and unpursued lines of inquiry damage evidence quality.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/96.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/96",
+    "files": {
+      "llm": "data/files/wasca-2026-96/wasca-2026-96.md"
+    }
+  },
+  {
+    "id": "wasca-2026-93",
+    "date": "2026-06-30",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Donald Atkins (a pseudonym) v The State of Western Australia [No 3]",
+    "citation": "[2026] WASCA 93",
+    "decided": "30/06/2026",
+    "appealFrom": "District Court of Western Australia (LONSDALE DCJ), IND ALB 69 of 2022",
+    "outcome": "CACR 112 (conviction): extension of time refused, applications to adduce additional evidence refused, leave to appeal refused, appeal dismissed. CACR 113 (sentence): extension of time granted, leave to appeal granted, appeal dismissed. Total effective sentence of 19 years' imprisonment stands.",
+    "weight": "Court of Appeal (WA) — three judges (MITCHELL, HALL and SWEENEY JJA), unanimous joint judgment. Authoritative statement of the law in WA, though applying well-established principles.",
+    "tags": [
+      "child sex offences",
+      "intrafamilial abuse",
+      "fresh evidence",
+      "new evidence",
+      "credibility evidence",
+      "Apostilides",
+      "prosecutor discretion to call witnesses",
+      "propensity",
+      "cross-admissibility",
+      "delayed complaint",
+      "totality principle",
+      "sentencing",
+      "general deterrence"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Court of Appeal dismisses ATKINS's conviction and sentence appeals over 25 child sex offences against four stepdaughters, confirming the fresh-versus-new evidence test, the prosecutor's discretion on which witnesses to call, and totality principles.",
+    "whatHappened": "ATKINS (a pseudonym) was convicted after trial in the District Court (LONSDALE DCJ) of 25 child sexual offences committed over about 10 years against four of his stepdaughters (River, Rowan, Whitney and Margot), aged between 7 and 13. He received a total effective sentence of 19 years' imprisonment. Self-represented, he appealed conviction on two grounds: (1) that one complainant (River) gave false evidence and that additional material (text messages, Department of Communities and Independent Children's Lawyer letters, school reports, van photographs, audio-message transcripts) should be admitted; and (2) that a miscarriage arose because the prosecutor did not call his wife (Gertrude) and Ms ELDERSHAW. He also appealed the sentence as breaching totality. The offending came to light after ATKINS was caught trying to record Whitney in the shower in 2020 (offences he had pleaded guilty to), following which the children moved to their father and disclosed the abuse.",
+    "whatHeld": "Both appeals failed. On conviction ground 1, the additional material was <b>new evidence, not fresh evidence</b> — it existed and could have been obtained with reasonable diligence before trial. Evidence going <b>only to a complainant's credibility on collateral issues</b> generally cannot establish a miscarriage because it is not direct evidence of whether the acts occurred; here it was largely irrelevant, hearsay, opinion, or added nothing. On ground 2, the prosecutor <b>alone decides which witnesses to call</b>, and a decision not to call a witness only founds an appeal if, viewed against the whole trial, it produces a miscarriage. Neither Gertrude nor Ms ELDERSHAW was an eyewitness; both were available for the defence to call; and the defence made a reasonable forensic decision not to call Gertrude. On sentence, the total of 19 years was <b>high but not unreasonable or plainly unjust</b> given four child victims, offending over a decade, a gross breach of trust, multiple penetrative acts, conviction after trial and no remorse; comparable cases gave only limited guidance. The Court also confirmed <b>general deterrence does not depend on publicity</b>.",
+    "whatItMeans": "For your casework, the practical lessons are about how evidence is later tested on appeal. First, <b>gather and preserve everything before trial</b> — material that a defendant could have obtained with reasonable diligence will be treated as \"new\" and is very hard to run later, so completeness in the brief matters. Second, note the <b>cross-admissibility/propensity point</b>: the trial judge allowed each complainant's evidence to show sexual interest, but limited it to offences occurring <b>in the family home</b> — when investigating multi-complainant intrafamilial abuse, be precise about where each act occurred, as location can affect admissibility. Third, understand that <b>the DPP, not you, decides who is called</b>, and that a witness favourable to the accused (like a supportive spouse) need not be called by the State if unreliable or unsupportive of the complainants. Fourth, <b>delayed complaint and continuing family contact do not undermine a case</b> — the Court accepted children may not disclose to a non-supportive parent, so document the family dynamics and reasons for delay. This decision applies settled principles rather than changing investigative practice.",
+    "verdict": "AWARENESS — it confirms established appellate principles (fresh/new evidence, prosecutor's discretion to call witnesses, totality) rather than changing how you investigate or charge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/93.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/93",
+    "files": {
+      "llm": "data/files/wasca-2026-93/wasca-2026-93.md"
+    }
+  },
+  {
     "id": "wasc-2026-263",
     "date": "2026-06-29",
     "court": "Supreme Court of Western Australia",
@@ -31,6 +106,71 @@
     "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/263",
     "files": {
       "llm": "data/files/wasc-2026-263/wasc-2026-263.md"
+    }
+  },
+  {
+    "id": "wasc-2026-265",
+    "date": "2026-06-29",
+    "court": "Supreme Court of Western Australia",
+    "courtTag": "WASC",
+    "caseName": "The State of Western Australia v Hosie",
+    "citation": "[2026] WASC 265",
+    "decided": "29/06/2026",
+    "appealFrom": "",
+    "outcome": "Respondent's application to dismiss the restriction order application refused.",
+    "weight": "Single-judge Supreme Court decision, delivered extemporaneously and edited from transcript. Persuasive first-instance authority on s 35 timing; not binding appellate authority.",
+    "tags": [
+      "High Risk Serious Offenders",
+      "restriction order",
+      "statutory construction",
+      "HRSO Act s 35",
+      "serious offender",
+      "custodial sentence",
+      "family violence"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "An HRSO restriction order application under <i>High Risk Serious Offenders Act 2020</i> (WA) s 35 must be <b>filed</b> within one year of a possible release date; competency is judged at lodgement, not the final hearing.",
+    "whatHappened": "On 26/03/2026 the State filed a restriction order application against Shane Andrew HOSIE under s 35(1) of the <i>High Risk Serious Offenders Act 2020</i> (WA). At that time HOSIE was serving 18 months for two counts of persistent family violence (Index Offences), with a maximum sentence date of 05/06/2026. He had also been declared a serial family violence offender. He had pleaded guilty to further charges awaiting sentence (procuring/exposing a child via electronic communication and possessing child exploitation material), and faced other charges (aggravated sexual penetration without consent, impeding breathing, and threatening) that had produced a hung jury. HOSIE applied to dismiss the application as incompetent, arguing that once it became clear before the final hearing he could not be released within a year, the application failed s 35(3). After HOSIE was sentenced on 05/06/2026 to 2 years (removing any release possibility before 26/03/2027), he maintained the dismissal application.",
+    "whatHeld": "WHITBY J refused the dismissal application. The word 'application' in s 35 means the <b>originating process filed to commence the proceeding</b>, not the entire court process including the final hearing. Under s 35(3), an application by the State against an in-custody offender must be <b>formally lodged within one year before the date there is a possibility the offender might be released</b>. 'Possibility' and 'might' set a <b>low threshold</b> — only a low-level chance of release is required. Competency is assessed <b>at the date of lodgement</b>, on the knowledge the State then had. On 26/03/2026 there was clearly a possibility HOSIE might be released on 05/06/2026, so the application complied with s 35. Later events (the 2-year sentence removing release possibility) did not render it incompetent.",
+    "whatItMeans": "For your casework this confirms the timing rule for HRSO applications: the State must <b>file the application within one year of the offender's earliest possible release date</b>, and that release possibility need only be a <b>low-level chance</b> — not a certainty. Judge competency on the facts <b>known at the date of filing</b>. Where an offender has pending charges, an unknown sentence, or a possible bail/discontinuance outcome, that uncertainty can itself supply the 'possibility' of release. Later developments that push the release date beyond a year do not undo a validly filed application. This matters mainly for the State Solicitor's Office and case coordination; as an investigator, ensure custody/sentence timelines and possible release dates are captured accurately so applications are lodged in the correct window.",
+    "verdict": "AWARENESS — a statutory construction ruling on HRSO application timing; useful background but it does not change how you gather evidence or charge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2026/265.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/265",
+    "files": {
+      "llm": "data/files/wasc-2026-265/wasc-2026-265.md"
+    }
+  },
+  {
+    "id": "wasc-2026-264",
+    "date": "2026-06-26",
+    "court": "Supreme Court of Western Australia",
+    "courtTag": "WASC",
+    "caseName": "The State of Western Australia v Bunwarrie",
+    "citation": "[2026] WASC 264",
+    "decided": "26/06/2026",
+    "appealFrom": "",
+    "outcome": "Interim detention order made under s 46(2)(c)(i); respondent detained until further order; restriction order application listed for final hearing on 12/02/2027 with expert reports ordered.",
+    "weight": "Single judge decision of the Supreme Court on an interlocutory HRSO application; the court noted the governing law is settled and not in dispute. Turns on its own facts (Category B).",
+    "tags": [
+      "HRSO",
+      "high risk serious offender",
+      "interim detention order",
+      "preliminary hearing",
+      "sex offender",
+      "reporting obligations",
+      "child sex offences",
+      "restriction order"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Supreme Court made an interim detention order under the <i>High Risk Serious Offenders Act 2020</i> (WA) at a preliminary hearing, finding reasonable grounds that BUNWARRIE might be a high risk serious offender.",
+    "whatHappened": "BUNWARRIE was serving 3 years and 2 months for four counts of using electronic communication to expose a child under 16 to indecent matter (s 204B <i>Criminal Code</i>) and four counts of failing to comply with reporting obligations (s 63(1) <i>Community Protection (Offender Reporting) Act 2004</i>), with release due 19/09/2026. He had a history of serious sexual offending against children, including indecent dealing with a 12-year-old stranger in a train station toilet, masturbating in front of children in public parks, and indecent acts in public. He had a poor record of complying with court orders, breached a post-sentence supervision order, and had unmet treatment needs. He offended within about six weeks of an earlier release. On 07/04/2026 the State applied for a restriction order under the Act and sought an interim detention order under s 46(2)(c)(i). The matter came before WHITBY J at a preliminary hearing on 26/06/2026.",
+    "whatHeld": "WHITBY J was satisfied there were <b>reasonable grounds for believing the court might find</b> BUNWARRIE is a high risk serious offender under s 7 of the Act. At the preliminary hearing the threshold is <b>lower</b> than the final test — the court need not be satisfied a restriction order will be made, only that one 'might' be made (something possible), supported by sufficient facts to induce that belief in a reasonable person. Given his offending history, poor compliance with orders, lack of viable accommodation, unmet treatment needs and the high risk of serious sexual offending against a female child, the risk was an <b>unacceptable</b> one that could not be sufficiently minimised by supervision conditions. An <b>interim detention order</b> was appropriate to adequately protect the community pending final hearing.",
+    "whatItMeans": "This is a settled-law application of the HRSO preliminary hearing test — useful <b>background</b> rather than a change to your practice. It shows how the State builds a restriction order application: through the offender's full criminal history, statements of material facts, breach records, psychological/parole reports and evidence of accommodation and treatment needs. When you investigate and document reportable sex offenders, <b>thorough records of reporting breaches, PSSO breaches and pattern offending directly feed later HRSO applications</b>. Note the emphasis on offending while sober and against strangers, and reoffending soon after release, as markers of unacceptable risk.",
+    "verdict": "AWARENESS only — this applies settled HRSO principles to its own facts and does not change how you investigate or charge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2026/264.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/264",
+    "files": {
+      "llm": "data/files/wasc-2026-264/wasc-2026-264.md"
     }
   },
   {
