@@ -287,6 +287,30 @@
       "blurb": "karonis (1997) 188 CLR 449, applied. Arnautovic v The King [2024] VSCA 286; Mokbel v The King [2024] VSC 725; Karam v The King [2022] VSC 808; AB v CD; EF v CD [2018] HCA 58; AB v CD & EF [2017] VSCA 338; AB & EF ",
       "firstSeen": "2026-07-01T20:46:08.371959+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-269",
+      "citation": "[2026] WASC 269",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "269",
+      "caseName": "Penfold v Watson",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235098&pid=108606693&h=531172777",
+      "blurb": "Penfold v Watson [2026] WASC 269",
+      "firstSeen": "2026-07-02T20:15:08.232268+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-267",
+      "citation": "[2026] WASC 267",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "267",
+      "caseName": "Broadbent v Mews",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235000&pid=108606693&h=531172777",
+      "blurb": "Broadbent v Mews [2026] WASC 267",
+      "firstSeen": "2026-07-02T20:15:08.232272+00:00",
+      "notified": true
     }
   ],
   "processed": [],
