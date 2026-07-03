@@ -311,6 +311,42 @@
       "blurb": "Broadbent v Mews [2026] WASC 267",
       "firstSeen": "2026-07-02T20:15:08.232272+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-33",
+      "citation": "[2026] WASCA 33",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "33",
+      "caseName": "Pellew v The King",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235217&pid=108685010&h=39139682",
+      "blurb": "Pellew v The King [2026] WASCA 33",
+      "firstSeen": "2026-07-03T20:11:06.175613+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-272",
+      "citation": "[2026] WASC 272",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "272",
+      "caseName": "Saffari v State of Western Australia [No 3]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235199&pid=108685010&h=39139682",
+      "blurb": "Saffari v State of Western Australia [No 3] [2026] WASC 272",
+      "firstSeen": "2026-07-03T20:11:06.175614+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-271",
+      "citation": "[2026] WASC 271",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "271",
+      "caseName": "The State of Western Australia v Pendleton [No 3]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235234&pid=108685010&h=39139682",
+      "blurb": "The State of Western Australia v Pendleton [No 3] [2026] WASC 271",
+      "firstSeen": "2026-07-03T20:11:06.175616+00:00",
+      "notified": true
     }
   ],
   "processed": [],
