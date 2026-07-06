@@ -347,6 +347,18 @@
       "blurb": "The State of Western Australia v Pendleton [No 3] [2026] WASC 271",
       "firstSeen": "2026-07-03T20:11:06.175616+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-275",
+      "citation": "[2026] WASC 275",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "275",
+      "caseName": "Chulung v Hoar",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235441&pid=108776067&h=1195177279",
+      "blurb": "Chulung v Hoar [2026] WASC 275",
+      "firstSeen": "2026-07-06T20:49:00.457134+00:00",
+      "notified": true
     }
   ],
   "processed": [],
