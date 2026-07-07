@@ -359,6 +359,18 @@
       "blurb": "Chulung v Hoar [2026] WASC 275",
       "firstSeen": "2026-07-06T20:49:00.457134+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-266",
+      "citation": "[2026] WASC 266",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "266",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235399&pid=108855612&h=138007574",
+      "blurb": "Suppressed [2026] WASC 266",
+      "firstSeen": "2026-07-07T20:46:26.940050+00:00",
+      "notified": true
     }
   ],
   "processed": [],
