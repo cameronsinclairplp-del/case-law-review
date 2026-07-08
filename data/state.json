@@ -371,6 +371,30 @@
       "blurb": "Suppressed [2026] WASC 266",
       "firstSeen": "2026-07-07T20:46:26.940050+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-280",
+      "citation": "[2026] WASC 280",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "280",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235879&pid=108932018&h=1837739250",
+      "blurb": "Suppressed [2026] WASC 280",
+      "firstSeen": "2026-07-08T20:17:27.729832+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-279",
+      "citation": "[2026] WASC 279",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "279",
+      "caseName": "The State of Western Australia v Meehan [No 4]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235897&pid=108932018&h=1837739250",
+      "blurb": "The State of Western Australia v Meehan [No 4] [2026] WASC 279",
+      "firstSeen": "2026-07-08T20:17:27.729836+00:00",
+      "notified": true
     }
   ],
   "processed": [],
