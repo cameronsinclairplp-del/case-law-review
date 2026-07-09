@@ -395,6 +395,18 @@
       "blurb": "The State of Western Australia v Meehan [No 4] [2026] WASC 279",
       "firstSeen": "2026-07-08T20:17:27.729836+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-277",
+      "citation": "[2026] WASC 277",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "277",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235848&pid=108960333&h=2043099974",
+      "blurb": "Suppressed [2026] WASC 277",
+      "firstSeen": "2026-07-09T20:42:58.446859+00:00",
+      "notified": true
     }
   ],
   "processed": [],
