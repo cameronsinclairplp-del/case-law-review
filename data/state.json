@@ -407,6 +407,18 @@
       "blurb": "Suppressed [2026] WASC 277",
       "firstSeen": "2026-07-09T20:42:58.446859+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-285",
+      "citation": "[2026] WASC 285",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "285",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1236392&pid=109192500&h=8757048",
+      "blurb": "Suppressed [2026] WASC 285",
+      "firstSeen": "2026-07-14T20:05:55.930046+00:00",
+      "notified": true
     }
   ],
   "processed": [],
