@@ -419,6 +419,30 @@
       "blurb": "Suppressed [2026] WASC 285",
       "firstSeen": "2026-07-14T20:05:55.930046+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-98",
+      "citation": "[2026] WASCA 98",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "98",
+      "caseName": "Phoebe Buckley (a pseudonym) v Director of Public Prosecutions [No 2]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1236601&pid=109251140&h=2065845777",
+      "blurb": "Phoebe Buckley (a pseudonym) v Director of Public Prosecutions [No 2] [2026] WASCA 98",
+      "firstSeen": "2026-07-15T20:03:41.037546+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-287",
+      "citation": "[2026] WASC 287",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "287",
+      "caseName": "Ishmael Noah Harlock BY Next Friend John Noah Harlock v Hansen",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1236616&pid=109251140&h=2065845777",
+      "blurb": "Ishmael Noah Harlock BY Next Friend John Noah Harlock v Hansen [2026] WASC 287",
+      "firstSeen": "2026-07-15T20:03:41.037550+00:00",
+      "notified": true
     }
   ],
   "processed": [],
