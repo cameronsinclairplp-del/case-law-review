@@ -443,6 +443,30 @@
       "blurb": "Ishmael Noah Harlock BY Next Friend John Noah Harlock v Hansen [2026] WASC 287",
       "firstSeen": "2026-07-15T20:03:41.037550+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-97",
+      "citation": "[2026] WASCA 97",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "97",
+      "caseName": "GRM v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1236803&pid=109325086&h=750801605",
+      "blurb": "GRM v The State of Western Australia [2026] WASCA 97",
+      "firstSeen": "2026-07-16T19:57:25.269476+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2006-63",
+      "citation": "[2006] HCA 63",
+      "courtTag": "HCA",
+      "year": "2006",
+      "num": "63",
+      "caseName": "h) and SZBEL v Minister for Immigration and Multicultural and Indigenous Affairs",
+      "jadeUrl": "https://jade.io/summary/mnc/2006/HCA/63",
+      "blurb": "ion of content of s 55(1)(c) of the Administrative Review Tribunal Act 2024 (Cth) and SZBEL v Minister for Immigration and Multicultural and Indigenous Affairs [2006] HCA 63; (2006) 228 CLR 152 – where applicant a",
+      "firstSeen": "2026-07-16T19:57:25.269478+00:00",
+      "notified": true
     }
   ],
   "processed": [],
