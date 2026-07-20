@@ -479,6 +479,54 @@
       "blurb": "Kruger v The State of Western Australia [2026] WASCA 99",
       "firstSeen": "2026-07-17T20:00:10.645193+00:00",
       "notified": true
+    },
+    {
+      "id": "hcasj-2026-21",
+      "citation": "[2026] HCASJ 21",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "21",
+      "caseName": "Date of Judgment: 20 July 2026",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237120&pid=109524753&h=774090615",
+      "blurb": "Date of Judgment: 20 July 2026 [2026] HCASJ 21",
+      "firstSeen": "2026-07-20T20:16:10.058641+00:00",
+      "notified": true
+    },
+    {
+      "id": "hcasj-2026-20",
+      "citation": "[2026] HCASJ 20",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "20",
+      "caseName": "In the Matter Of An Application By Susan Williamson for Leave To Issue Or File",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237119&pid=109524753&h=774090615",
+      "blurb": "In the Matter Of An Application By Susan Williamson for Leave To Issue Or File [2026] HCASJ 20",
+      "firstSeen": "2026-07-20T20:16:10.058644+00:00",
+      "notified": true
+    },
+    {
+      "id": "hcasj-2026-19",
+      "citation": "[2026] HCASJ 19",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "19",
+      "caseName": "In the Matter Of An Application BY Desi Cochrane for Leave To Issue Or File",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237118&pid=109524753&h=774090615",
+      "blurb": "In the Matter Of An Application BY Desi Cochrane for Leave To Issue Or File [2026] HCASJ 19",
+      "firstSeen": "2026-07-20T20:16:10.058647+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-100",
+      "citation": "[2026] WASCA 100",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "100",
+      "caseName": "The State of Western Australia v Lukin (a pseudonym)",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237157&pid=109524753&h=774090615",
+      "blurb": "The State of Western Australia v Lukin (a pseudonym) [2026] WASCA 100",
+      "firstSeen": "2026-07-20T20:16:10.058649+00:00",
+      "notified": true
     }
   ],
   "processed": [],
