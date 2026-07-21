@@ -527,6 +527,54 @@
       "blurb": "The State of Western Australia v Lukin (a pseudonym) [2026] WASCA 100",
       "firstSeen": "2026-07-20T20:16:10.058649+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-104",
+      "citation": "[2026] WASCA 104",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "104",
+      "caseName": "Humble v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237293&pid=109608973&h=1931937830",
+      "blurb": "Humble v The State of Western Australia [2026] WASCA 104",
+      "firstSeen": "2026-07-21T20:15:45.075392+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-103",
+      "citation": "[2026] WASCA 103",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "103",
+      "caseName": "Marco v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237292&pid=109608973&h=1931937830",
+      "blurb": "Marco v The State of Western Australia [2026] WASCA 103",
+      "firstSeen": "2026-07-21T20:15:45.075394+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-101",
+      "citation": "[2026] WASCA 101",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "101",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237289&pid=109608973&h=1931937830",
+      "blurb": "Suppressed [2026] WASCA 101",
+      "firstSeen": "2026-07-21T20:15:45.075396+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-286",
+      "citation": "[2026] WASC 286",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "286",
+      "caseName": "Stratton-Kent v Kent",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237294&pid=109608973&h=1931937830",
+      "blurb": "Stratton-Kent v Kent [2026] WASC 286",
+      "firstSeen": "2026-07-21T20:15:45.075398+00:00",
+      "notified": true
     }
   ],
   "processed": [],
