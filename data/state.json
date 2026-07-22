@@ -575,6 +575,30 @@
       "blurb": "Stratton-Kent v Kent [2026] WASC 286",
       "firstSeen": "2026-07-21T20:15:45.075398+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-95",
+      "citation": "[2026] WASCA 95",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "95",
+      "caseName": "Aldaw v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237325&pid=109690308&h=299844723",
+      "blurb": "Aldaw v The State of Western Australia [2026] WASCA 95",
+      "firstSeen": "2026-07-22T20:08:41.825851+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-292",
+      "citation": "[2026] WASC 292",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "292",
+      "caseName": "Howard v WA Police",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237328&pid=109690308&h=299844723",
+      "blurb": "Howard v WA Police [2026] WASC 292",
+      "firstSeen": "2026-07-22T20:08:41.825853+00:00",
+      "notified": true
     }
   ],
   "processed": [],
