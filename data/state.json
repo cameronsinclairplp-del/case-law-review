@@ -599,6 +599,78 @@
       "blurb": "Howard v WA Police [2026] WASC 292",
       "firstSeen": "2026-07-22T20:08:41.825853+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-106",
+      "citation": "[2026] WASCA 106",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "106",
+      "caseName": "Roe v Hockton",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237516&pid=109818780&h=901806071",
+      "blurb": "Roe v Hockton [2026] WASCA 106",
+      "firstSeen": "2026-07-24T20:13:18.253125+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-295",
+      "citation": "[2026] WASC 295",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "295",
+      "caseName": "The State of Western Australia v Burt [No 2]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237666&pid=109818780&h=901806071",
+      "blurb": "The State of Western Australia v Burt [No 2] [2026] WASC 295",
+      "firstSeen": "2026-07-24T20:13:18.253128+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2019-7",
+      "citation": "[2019] HCA 7",
+      "courtTag": "HCA",
+      "year": "2019",
+      "num": "7",
+      "caseName": "tate as proxy, following the approach endorsed in Northern Territory v Griffiths",
+      "jadeUrl": "https://jade.io/summary/mnc/2019/HCA/7",
+      "blurb": "ly economic loss is to be assessed on the basis of the value of the freehold estate as proxy, following the approach endorsed in Northern Territory v Griffiths [2019] HCA 7; (2019) 269 CLR 1 (Griffiths) NATIVE TI",
+      "firstSeen": "2026-07-24T20:13:18.253132+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2005-7",
+      "citation": "[2005] HCA 7",
+      "courtTag": "HCA",
+      "year": "2005",
+      "num": "7",
+      "caseName": "consideration of Griffith University v Tang",
+      "jadeUrl": "https://jade.io/summary/mnc/2005/HCA/7",
+      "blurb": "storal use permits by the Pastoral Land Board (NT) were administrative acts within the meaning of the Project Act – consideration of Griffith University v Tang [2005] HCA 7; (2005) 221 CLR 99 in context of statut",
+      "firstSeen": "2026-07-24T20:13:18.253135+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2004-70",
+      "citation": "[2004] HCA 70",
+      "courtTag": "HCA",
+      "year": "2004",
+      "num": "70",
+      "caseName": "Re an appeal by Luck",
+      "jadeUrl": "https://jade.io/summary/mnc/2004/HCA/70",
+      "blurb": "eligious Tolerance Act 2001 (Vic) ss 7, 8, 13, 15, 16, 19, 20, 23, 23C — Equal Opportunity Act 2010 (Vic) ss 200, 201. Re an appeal by Luck (2003) 78 ALJR 177; [2004] HCA 70, applied; Spencer v the Commonwealth (2",
+      "firstSeen": "2026-07-24T20:13:18.253138+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2010-28",
+      "citation": "[2010] HCA 28",
+      "courtTag": "HCA",
+      "year": "2010",
+      "num": "28",
+      "caseName": "2003) 78 ALJR 177; [2004] HCA 70, applied; Spencer v the Commonwealth",
+      "jadeUrl": "https://jade.io/summary/mnc/2010/HCA/28",
+      "blurb": "— Equal Opportunity Act 2010 (Vic) ss 200, 201. Re an appeal by Luck (2003) 78 ALJR 177; [2004] HCA 70, applied; Spencer v the Commonwealth (2010) 241 CLR 118; [2010] HCA 28, considered; Chopra v Department of Edu",
+      "firstSeen": "2026-07-24T20:13:18.253141+00:00",
+      "notified": true
     }
   ],
   "processed": [],

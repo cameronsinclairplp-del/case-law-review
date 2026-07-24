@@ -723,6 +723,37 @@
     }
   },
   {
+    "id": "hca-1998-11",
+    "date": "1998-02-25",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Oshlack v Richmond River Council",
+    "citation": "[1998] HCA 11",
+    "decided": "25/02/1998",
+    "appealFrom": "New South Wales Court of Appeal",
+    "outcome": "Appeal allowed with costs; Court of Appeal orders set aside; the primary judge's order that there be no order as to costs restored, and the Council ordered to pay OSHLACK's costs of the appeal below.",
+    "weight": "High Court of Australia; binding. Majority of three (Gaudron, Gummow, Kirby JJ) with Brennan CJ and McHugh J dissenting. Concerns the exercise of a statutory costs discretion.",
+    "tags": [
+      "costs",
+      "public interest litigation",
+      "judicial discretion",
+      "environmental law",
+      "Latoudis v Casey",
+      "statutory interpretation"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court held that a court's broad statutory discretion as to costs can properly take account of the public interest character of litigation, so a successful party is not automatically entitled to costs.",
+    "whatHappened": "Mr OSHLACK brought proceedings in the NSW Land and Environment Court under s 123 of the <i>Environmental Planning and Assessment Act 1979</i> (NSW), challenging a development consent granted by Richmond River Council over land at Evans Head said to be koala habitat. Stein J dismissed his challenge but, exercising the costs discretion in s 69(2) of the <i>Land and Environment Court Act 1979</i> (NSW), made no order as to costs, finding 'special circumstances' — the litigation was public interest litigation raising serious and arguable issues about new endangered fauna provisions, and OSHLACK had nothing personal to gain. The NSW Court of Appeal reversed, holding that <i>Latoudis v Casey</i> made the public interest character an irrelevant consideration and that costs are compensatory, so the Council should have its costs. OSHLACK appealed to the High Court.",
+    "whatHeld": "By majority (Gaudron, Gummow and Kirby JJ; Brennan CJ and McHugh J dissenting), the appeal was allowed and Stein J's order restored. The Court held that s 69(2) confers a <b>broad, unconfined discretion</b> that must be exercised judicially but is not to be narrowly read. <b>There is no absolute rule that a successful party must be compensated absent disentitling conduct</b>; guiding principles must not harden into rigid rules that confine the discretion more narrowly than Parliament intended. <i>Latoudis v Casey</i> concerned costs in summary criminal proceedings against the historical rule that the Crown neither paid nor received costs, and was <b>not determinative</b> of the discretion under s 69(2). Given the 'open standing' conferred by s 123 (allowing any person to sue), Stein J's reasons were not 'definitely extraneous to any objects the legislature could have had in view', so there was no miscarriage. Brennan CJ and McHugh J dissented, holding the public interest character irrelevant and that costs are compensatory, not punitive.",
+    "whatItMeans": "This is a <b>civil costs decision, not a criminal investigation case</b>, so it does not change how you gather evidence or charge. Its relevance to you is <b>awareness of costs principles</b>. Note that <i>Latoudis v Casey</i> — cited heavily here — is the leading authority on costs in summary criminal proceedings: a <b>successful defendant will ordinarily get costs against a prosecutor, even where the prosecution was brought reasonably and in the public interest</b>, unless the defendant's own conduct disentitles them. That matters if you are the informant in a prosecution that fails. This case confirms the <b>compensatory (not punitive) nature</b> of costs orders while making clear the discretion is wide and context-dependent.",
+    "verdict": "AWARENESS only — a civil environmental costs dispute that does not alter investigative practice, but usefully reinforces the costs exposure a police informant faces when a prosecution fails (per <i>Latoudis</i>).",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1998/11.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1998/HCA/11",
+    "files": {
+      "llm": "data/files/hca-1998-11/hca-1998-11.md"
+    }
+  },
+  {
     "id": "hca-1998-1",
     "date": "1998-01-20",
     "court": "High Court of Australia",
