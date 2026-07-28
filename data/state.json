@@ -431,6 +431,42 @@
       "blurb": "Re AKW22; [No 2] [2026] WASC 298",
       "firstSeen": "2026-07-27T20:15:47.124431+00:00",
       "notified": true
+    },
+    {
+      "id": "hcasj-2026-22",
+      "citation": "[2026] HCASJ 22",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "22",
+      "caseName": "Date of Judgment: 28 July 2026",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238211&pid=109990695&h=1522857860",
+      "blurb": "Date of Judgment: 28 July 2026 [2026] HCASJ 22",
+      "firstSeen": "2026-07-28T20:11:35.428818+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-303",
+      "citation": "[2026] WASC 303",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "303",
+      "caseName": "Trpcevski v Dixon",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238268&pid=109990695&h=1522857860",
+      "blurb": "Trpcevski v Dixon [2026] WASC 303",
+      "firstSeen": "2026-07-28T20:11:35.428821+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-299",
+      "citation": "[2026] WASC 299",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "299",
+      "caseName": "Stanoevski v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238266&pid=109990695&h=1522857860",
+      "blurb": "Stanoevski v The State of Western Australia [2026] WASC 299",
+      "firstSeen": "2026-07-28T20:11:35.428823+00:00",
+      "notified": true
     }
   ],
   "processed": [],
