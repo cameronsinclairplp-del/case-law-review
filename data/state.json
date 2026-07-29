@@ -467,6 +467,54 @@
       "blurb": "Stanoevski v The State of Western Australia [2026] WASC 299",
       "firstSeen": "2026-07-28T20:11:35.428823+00:00",
       "notified": true
+    },
+    {
+      "id": "hcasj-2026-24",
+      "citation": "[2026] HCASJ 24",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "24",
+      "caseName": "In the Matter Of An Application BY Cindy Taylor for Leave To Issue Or File",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238332&pid=110071146&h=1158799512",
+      "blurb": "In the Matter Of An Application BY Cindy Taylor for Leave To Issue Or File [2026] HCASJ 24",
+      "firstSeen": "2026-07-29T20:08:18.359500+00:00",
+      "notified": true
+    },
+    {
+      "id": "hcasj-2026-23",
+      "citation": "[2026] HCASJ 23",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "23",
+      "caseName": "Date of Judgment: 29 July 2026",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238329&pid=110071146&h=1158799512",
+      "blurb": "Date of Judgment: 29 July 2026 [2026] HCASJ 23",
+      "firstSeen": "2026-07-29T20:08:18.359503+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-307",
+      "citation": "[2026] WASC 307",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "307",
+      "caseName": "WILLIAMS v Director of Public Prosecutions",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238347&pid=110071146&h=1158799512",
+      "blurb": "WILLIAMS v Director of Public Prosecutions [2026] WASC 307",
+      "firstSeen": "2026-07-29T20:08:18.359507+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-297",
+      "citation": "[2026] WASC 297",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "297",
+      "caseName": "The State of Western Australia v Quartermaine [No 7]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238389&pid=110071146&h=1158799512",
+      "blurb": "The State of Western Australia v Quartermaine [No 7] [2026] WASC 297",
+      "firstSeen": "2026-07-29T20:08:18.359511+00:00",
+      "notified": true
     }
   ],
   "processed": [],
