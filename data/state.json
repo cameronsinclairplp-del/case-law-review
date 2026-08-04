@@ -467,6 +467,18 @@
       "blurb": "Burness v WILLIAMS [2026] WASC 312",
       "firstSeen": "2026-07-31T20:17:18.695479+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-315",
+      "citation": "[2026] WASC 315",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "315",
+      "caseName": "Re Rules Of the Supreme Court 1971 (WA)",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1239034&pid=110372987&h=1193693450",
+      "blurb": "Re Rules Of the Supreme Court 1971 (WA) [2026] WASC 315",
+      "firstSeen": "2026-08-04T20:19:45.820074+00:00",
+      "notified": true
     }
   ],
   "processed": [],
