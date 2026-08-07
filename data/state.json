@@ -587,6 +587,42 @@
       "blurb": "Suppressed [2026] WASC 300",
       "firstSeen": "2026-08-07T00:36:41.636245+00:00",
       "notified": true
+    },
+    {
+      "id": "hcasj-2026-25",
+      "citation": "[2026] HCASJ 25",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "25",
+      "caseName": "Date of Judgment: 7 August 2026",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1240916&pid=110595653&h=1110959524",
+      "blurb": "Date of Judgment: 7 August 2026 [2026] HCASJ 25",
+      "firstSeen": "2026-08-07T19:46:01.413532+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-112",
+      "citation": "[2026] WASCA 112",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "112",
+      "caseName": "Fletcher v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1241023&pid=110595653&h=1110959524",
+      "blurb": "Fletcher v The State of Western Australia [2026] WASCA 112",
+      "firstSeen": "2026-08-07T19:46:01.413534+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-324",
+      "citation": "[2026] WASC 324",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "324",
+      "caseName": "Attorney General for Western Australia v JFE",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1241346&pid=110595653&h=1110959524",
+      "blurb": "Attorney General for Western Australia v JFE [2026] WASC 324",
+      "firstSeen": "2026-08-07T19:46:01.413536+00:00",
+      "notified": true
     }
   ],
   "processed": [],
