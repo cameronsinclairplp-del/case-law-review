@@ -1,18 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasc-2026-266",
-      "citation": "[2026] WASC 266",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "266",
-      "caseName": "Suppressed",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1235399&pid=108855612&h=138007574",
-      "blurb": "Suppressed [2026] WASC 266",
-      "firstSeen": "2026-07-07T20:46:26.940050+00:00",
-      "notified": true
-    },
-    {
       "id": "wasc-2026-280",
       "citation": "[2026] WASC 280",
       "courtTag": "WASC",
@@ -562,6 +550,42 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1239876&pid=110427172&h=1777417442",
       "blurb": "Marr v Scott [2026] WASC 301",
       "firstSeen": "2026-08-05T20:21:18.870807+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-109",
+      "citation": "[2026] WASCA 109",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "109",
+      "caseName": "Forth v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1240356&pid=110516087&h=757662855",
+      "blurb": "Forth v The State of Western Australia [2026] WASCA 109",
+      "firstSeen": "2026-08-07T00:36:41.636241+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-323",
+      "citation": "[2026] WASC 323",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "323",
+      "caseName": "Anderson v Stone",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1240620&pid=110516087&h=757662855",
+      "blurb": "Anderson v Stone [2026] WASC 323",
+      "firstSeen": "2026-08-07T00:36:41.636243+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-300",
+      "citation": "[2026] WASC 300",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "300",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1240418&pid=110516087&h=757662855",
+      "blurb": "Suppressed [2026] WASC 300",
+      "firstSeen": "2026-08-07T00:36:41.636245+00:00",
       "notified": true
     }
   ],
