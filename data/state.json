@@ -587,6 +587,42 @@
       "blurb": "Attorney General for Western Australia v JFE [2026] WASC 324",
       "firstSeen": "2026-08-07T19:46:01.413536+00:00",
       "notified": true
+    },
+    {
+      "id": "hcasj-2026-26",
+      "citation": "[2026] HCASJ 26",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "26",
+      "caseName": "In the Matter Of An Application BY Gerrard Tate for Leave To Issue Or File",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1241841&pid=110765140&h=1253676163",
+      "blurb": "In the Matter Of An Application BY Gerrard Tate for Leave To Issue Or File [2026] HCASJ 26",
+      "firstSeen": "2026-08-11T19:56:18.319089+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-111",
+      "citation": "[2026] WASCA 111",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "111",
+      "caseName": "Mehrabi v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1242104&pid=110765140&h=1253676163",
+      "blurb": "Mehrabi v The State of Western Australia [2026] WASCA 111",
+      "firstSeen": "2026-08-11T19:56:18.319092+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-329",
+      "citation": "[2026] WASC 329",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "329",
+      "caseName": "Palaloi v Western Australian Industrial Appeal Court",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1242169&pid=110765140&h=1253676163",
+      "blurb": "Palaloi v Western Australian Industrial Appeal Court [2026] WASC 329",
+      "firstSeen": "2026-08-11T19:56:18.319095+00:00",
+      "notified": true
     }
   ],
   "processed": [],
