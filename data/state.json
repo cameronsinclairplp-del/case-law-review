@@ -623,6 +623,30 @@
       "blurb": "Palaloi v Western Australian Industrial Appeal Court [2026] WASC 329",
       "firstSeen": "2026-08-11T19:56:18.319095+00:00",
       "notified": true
+    },
+    {
+      "id": "hca-2026-29",
+      "citation": "[2026] HCA 29",
+      "courtTag": "HCA",
+      "year": "2026",
+      "num": "29",
+      "caseName": "The King v Ko",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1242335&pid=110850147&h=177104928",
+      "blurb": "The King v Ko [2026] HCA 29",
+      "firstSeen": "2026-08-12T19:57:18.385456+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2026-28",
+      "citation": "[2026] HCA 28",
+      "courtTag": "HCA",
+      "year": "2026",
+      "num": "28",
+      "caseName": "Farrugia v The King",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1242334&pid=110850147&h=177104928",
+      "blurb": "Farrugia v The King [2026] HCA 28",
+      "firstSeen": "2026-08-12T19:57:18.385458+00:00",
+      "notified": true
     }
   ],
   "processed": [],
