@@ -1,18 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasca-2026-99",
-      "citation": "[2026] WASCA 99",
-      "courtTag": "WASCA",
-      "year": "2026",
-      "num": "99",
-      "caseName": "Kruger v The State of Western Australia",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237039&pid=109403995&h=1612341727",
-      "blurb": "Kruger v The State of Western Australia [2026] WASCA 99",
-      "firstSeen": "2026-07-17T20:00:10.645193+00:00",
-      "notified": true
-    },
-    {
       "id": "hcasj-2026-21",
       "citation": "[2026] HCASJ 21",
       "courtTag": "HCASJ",
