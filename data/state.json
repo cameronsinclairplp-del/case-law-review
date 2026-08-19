@@ -659,6 +659,66 @@
       "blurb": "The State of Western Australia v Hill [No 3] [2026] WASC 339",
       "firstSeen": "2026-08-17T19:21:16.034338+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-343",
+      "citation": "[2026] WASC 343",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "343",
+      "caseName": "KHUU",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1245107&pid=111172380&h=683027049",
+      "blurb": "KHUU [2026] WASC 343",
+      "firstSeen": "2026-08-19T04:38:06.048787+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-342",
+      "citation": "[2026] WASC 342",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "342",
+      "caseName": "Psaila v Psaila",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1245106&pid=111172380&h=683027049",
+      "blurb": "Psaila v Psaila [2026] WASC 342",
+      "firstSeen": "2026-08-19T04:38:06.048788+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-341",
+      "citation": "[2026] WASC 341",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "341",
+      "caseName": "The State of Western Australia v Van Beek [No 2]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1244974&pid=111172380&h=683027049",
+      "blurb": "The State of Western Australia v Van Beek [No 2] [2026] WASC 341",
+      "firstSeen": "2026-08-19T04:38:06.048790+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-340",
+      "citation": "[2026] WASC 340",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "340",
+      "caseName": "Muenkel v Muenkel",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1244908&pid=111172380&h=683027049",
+      "blurb": "Muenkel v Muenkel [2026] WASC 340",
+      "firstSeen": "2026-08-19T04:38:06.048791+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2000-64",
+      "citation": "[2000] HCA 64",
+      "courtTag": "HCA",
+      "year": "2000",
+      "num": "64",
+      "caseName": "Concut Pty Ltd v Worrell",
+      "jadeUrl": "https://jade.io/summary/mnc/2000/HCA/64",
+      "blurb": "ssive and threatening behaviour by Defendant constituted renunciation – Termination by Plaintiff therefore valid – Concut Pty Ltd v Worrell (2000) 75 ALJR 312; [2000] HCA 64, applied; Koompahtoo Local Aboriginal L",
+      "firstSeen": "2026-08-19T04:38:06.048792+00:00",
+      "notified": true
     }
   ],
   "processed": [],
