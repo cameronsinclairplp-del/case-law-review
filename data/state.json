@@ -1,54 +1,6 @@
 {
   "pending": [
     {
-      "id": "hcasj-2026-21",
-      "citation": "[2026] HCASJ 21",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "21",
-      "caseName": "Date of Judgment: 20 July 2026",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237120&pid=109524753&h=774090615",
-      "blurb": "Date of Judgment: 20 July 2026 [2026] HCASJ 21",
-      "firstSeen": "2026-07-20T20:16:10.058641+00:00",
-      "notified": true
-    },
-    {
-      "id": "hcasj-2026-20",
-      "citation": "[2026] HCASJ 20",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "20",
-      "caseName": "In the Matter Of An Application By Susan Williamson for Leave To Issue Or File",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237119&pid=109524753&h=774090615",
-      "blurb": "In the Matter Of An Application By Susan Williamson for Leave To Issue Or File [2026] HCASJ 20",
-      "firstSeen": "2026-07-20T20:16:10.058644+00:00",
-      "notified": true
-    },
-    {
-      "id": "hcasj-2026-19",
-      "citation": "[2026] HCASJ 19",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "19",
-      "caseName": "In the Matter Of An Application BY Desi Cochrane for Leave To Issue Or File",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237118&pid=109524753&h=774090615",
-      "blurb": "In the Matter Of An Application BY Desi Cochrane for Leave To Issue Or File [2026] HCASJ 19",
-      "firstSeen": "2026-07-20T20:16:10.058647+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasca-2026-100",
-      "citation": "[2026] WASCA 100",
-      "courtTag": "WASCA",
-      "year": "2026",
-      "num": "100",
-      "caseName": "The State of Western Australia v Lukin (a pseudonym)",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237157&pid=109524753&h=774090615",
-      "blurb": "The State of Western Australia v Lukin (a pseudonym) [2026] WASCA 100",
-      "firstSeen": "2026-07-20T20:16:10.058649+00:00",
-      "notified": true
-    },
-    {
       "id": "wasca-2026-104",
       "citation": "[2026] WASCA 104",
       "courtTag": "WASCA",
@@ -718,6 +670,30 @@
       "jadeUrl": "https://jade.io/summary/mnc/2000/HCA/64",
       "blurb": "ssive and threatening behaviour by Defendant constituted renunciation – Termination by Plaintiff therefore valid – Concut Pty Ltd v Worrell (2000) 75 ALJR 312; [2000] HCA 64, applied; Koompahtoo Local Aboriginal L",
       "firstSeen": "2026-08-19T04:38:06.048792+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-115",
+      "citation": "[2026] WASCA 115",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "115",
+      "caseName": "Nicoletti v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1245705&pid=111258960&h=583172634",
+      "blurb": "Nicoletti v The State of Western Australia [2026] WASCA 115",
+      "firstSeen": "2026-08-20T04:38:28.420247+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-345",
+      "citation": "[2026] WASC 345",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "345",
+      "caseName": "Lane v Briggs",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1245799&pid=111258960&h=583172634",
+      "blurb": "Lane v Briggs [2026] WASC 345",
+      "firstSeen": "2026-08-20T04:38:28.420249+00:00",
       "notified": true
     }
   ],
