@@ -695,6 +695,42 @@
       "blurb": "Lane v Briggs [2026] WASC 345",
       "firstSeen": "2026-08-20T04:38:28.420249+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-116",
+      "citation": "[2026] WASCA 116",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "116",
+      "caseName": "Downes v The State of Western Australia [No 3]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1246262&pid=111348101&h=287113464",
+      "blurb": "Downes v The State of Western Australia [No 3] [2026] WASCA 116",
+      "firstSeen": "2026-08-20T19:24:43.085476+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-114",
+      "citation": "[2026] WASCA 114",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "114",
+      "caseName": "Frigger v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1246164&pid=111348101&h=287113464",
+      "blurb": "Frigger v The State of Western Australia [2026] WASCA 114",
+      "firstSeen": "2026-08-20T19:24:43.085480+00:00",
+      "notified": true
+    },
+    {
+      "id": "hca-2010-45",
+      "citation": "[2010] HCA 45",
+      "courtTag": "HCA",
+      "year": "2010",
+      "num": "45",
+      "caseName": "rkson v The Queen (2011) 32 VR 361; [2011] VSCA 157; Hili v The Queen",
+      "jadeUrl": "https://jade.io/summary/mnc/2010/HCA/45",
+      "blurb": "1. Kellyway v The King [2003] VSCA 109; R v Mills [1998] 4 VR 235; Clarkson v The Queen (2011) 32 VR 361; [2011] VSCA 157; Hili v The Queen (2010) 242 CLR 520; [2010] HCA 45, applied. R v Kassir [2020] NSWCCA 88; ",
+      "firstSeen": "2026-08-20T19:24:43.085483+00:00",
+      "notified": true
     }
   ],
   "processed": [],
