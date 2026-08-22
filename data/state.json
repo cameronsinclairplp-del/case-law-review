@@ -1,30 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasca-2026-95",
-      "citation": "[2026] WASCA 95",
-      "courtTag": "WASCA",
-      "year": "2026",
-      "num": "95",
-      "caseName": "Aldaw v The State of Western Australia",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237325&pid=109690308&h=299844723",
-      "blurb": "Aldaw v The State of Western Australia [2026] WASCA 95",
-      "firstSeen": "2026-07-22T20:08:41.825851+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-292",
-      "citation": "[2026] WASC 292",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "292",
-      "caseName": "Howard v WA Police",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237328&pid=109690308&h=299844723",
-      "blurb": "Howard v WA Police [2026] WASC 292",
-      "firstSeen": "2026-07-22T20:08:41.825853+00:00",
-      "notified": true
-    },
-    {
       "id": "wasca-2026-106",
       "citation": "[2026] WASCA 106",
       "courtTag": "WASCA",
@@ -682,6 +658,30 @@
       "jadeUrl": "https://jade.io/summary/mnc/2010/HCA/45",
       "blurb": "1. Kellyway v The King [2003] VSCA 109; R v Mills [1998] 4 VR 235; Clarkson v The Queen (2011) 32 VR 361; [2011] VSCA 157; Hili v The Queen (2010) 242 CLR 520; [2010] HCA 45, applied. R v Kassir [2020] NSWCCA 88; ",
       "firstSeen": "2026-08-20T19:24:43.085483+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-113",
+      "citation": "[2026] WASCA 113",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "113",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1246670&pid=111435448&h=268746285",
+      "blurb": "Suppressed [2026] WASCA 113",
+      "firstSeen": "2026-08-22T04:33:53.192516+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-346",
+      "citation": "[2026] WASC 346",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "346",
+      "caseName": "The State of Western Australia v Hoskin [No 4]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1246827&pid=111435448&h=268746285",
+      "blurb": "The State of Western Australia v Hoskin [No 4] [2026] WASC 346",
+      "firstSeen": "2026-08-22T04:33:53.192518+00:00",
       "notified": true
     }
   ],
