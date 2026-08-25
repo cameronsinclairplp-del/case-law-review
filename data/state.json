@@ -659,6 +659,18 @@
       "blurb": "The State of Western Australia v KPB [No 5] [2026] WASC 351",
       "firstSeen": "2026-08-25T04:40:10.974147+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-355",
+      "citation": "[2026] WASC 355",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "355",
+      "caseName": "The State of Western Australia v Moussa [No 3]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1248375&pid=111615009&h=312802587",
+      "blurb": "The State of Western Australia v Moussa [No 3] [2026] WASC 355",
+      "firstSeen": "2026-08-25T19:24:49.032716+00:00",
+      "notified": true
     }
   ],
   "processed": [],
