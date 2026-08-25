@@ -611,6 +611,54 @@
       "blurb": "The State of Western Australia v Hoskin [No 4] [2026] WASC 346",
       "firstSeen": "2026-08-22T04:33:53.192518+00:00",
       "notified": true
+    },
+    {
+      "id": "hcasj-2026-28",
+      "citation": "[2026] HCASJ 28",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "28",
+      "caseName": "Date of Judgment: 24 August 2026",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1247323&pid=111529014&h=1000287052",
+      "blurb": "Date of Judgment: 24 August 2026 [2026] HCASJ 28",
+      "firstSeen": "2026-08-25T04:40:10.974139+00:00",
+      "notified": true
+    },
+    {
+      "id": "hcasj-2026-27",
+      "citation": "[2026] HCASJ 27",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "27",
+      "caseName": "In the Matter Of An Application By KLH For Leave To Issue Or File",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1247321&pid=111529014&h=1000287052",
+      "blurb": "In the Matter Of An Application By KLH For Leave To Issue Or File [2026] HCASJ 27",
+      "firstSeen": "2026-08-25T04:40:10.974142+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-352",
+      "citation": "[2026] WASC 352",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "352",
+      "caseName": "Bacha v Cordero Jimenez",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1247384&pid=111529014&h=1000287052",
+      "blurb": "Bacha v Cordero Jimenez [2026] WASC 352",
+      "firstSeen": "2026-08-25T04:40:10.974145+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-351",
+      "citation": "[2026] WASC 351",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "351",
+      "caseName": "The State of Western Australia v KPB [No 5]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1247383&pid=111529014&h=1000287052",
+      "blurb": "The State of Western Australia v KPB [No 5] [2026] WASC 351",
+      "firstSeen": "2026-08-25T04:40:10.974147+00:00",
+      "notified": true
     }
   ],
   "processed": [],
