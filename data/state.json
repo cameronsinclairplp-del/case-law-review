@@ -1,30 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasca-2026-107",
-      "citation": "[2026] WASCA 107",
-      "courtTag": "WASCA",
-      "year": "2026",
-      "num": "107",
-      "caseName": "Stewart Elliot Smythe (a Pseudonym) v The State of Western Australia",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237752&pid=109905143&h=1483256187",
-      "blurb": "Stewart Elliot Smythe (a Pseudonym) v The State of Western Australia [2026] WASCA 107",
-      "firstSeen": "2026-07-27T20:15:47.124429+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-298",
-      "citation": "[2026] WASC 298",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "298",
-      "caseName": "Re AKW22; [No 2]",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1237708&pid=109905143&h=1483256187",
-      "blurb": "Re AKW22; [No 2] [2026] WASC 298",
-      "firstSeen": "2026-07-27T20:15:47.124431+00:00",
-      "notified": true
-    },
-    {
       "id": "hcasj-2026-22",
       "citation": "[2026] HCASJ 22",
       "courtTag": "HCASJ",
@@ -670,6 +646,30 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1248375&pid=111615009&h=312802587",
       "blurb": "The State of Western Australia v Moussa [No 3] [2026] WASC 355",
       "firstSeen": "2026-08-25T19:24:49.032716+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-359",
+      "citation": "[2026] WASC 359",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "359",
+      "caseName": "Wood v WA Police",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1248737&pid=111701316&h=697824828",
+      "blurb": "Wood v WA Police [2026] WASC 359",
+      "firstSeen": "2026-08-26T21:31:28.376447+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-356",
+      "citation": "[2026] WASC 356",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "356",
+      "caseName": "DJF v Director of Public Prosecutions",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1249000&pid=111701316&h=697824828",
+      "blurb": "DJF v Director of Public Prosecutions [2026] WASC 356",
+      "firstSeen": "2026-08-26T21:31:28.376451+00:00",
       "notified": true
     }
   ],
