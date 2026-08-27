@@ -671,6 +671,66 @@
       "blurb": "DJF v Director of Public Prosecutions [2026] WASC 356",
       "firstSeen": "2026-08-26T21:31:28.376451+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-361",
+      "citation": "[2026] WASC 361",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "361",
+      "caseName": "Hayes v Hayes",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1249529&pid=111788806&h=722399262",
+      "blurb": "Hayes v Hayes [2026] WASC 361",
+      "firstSeen": "2026-08-27T20:08:05.636949+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-354",
+      "citation": "[2026] WASC 354",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "354",
+      "caseName": "The State of Western Australia v Paraha [No 2]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1249298&pid=111788806&h=722399262",
+      "blurb": "The State of Western Australia v Paraha [No 2] [2026] WASC 354",
+      "firstSeen": "2026-08-27T20:08:05.636953+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2016-123",
+      "citation": "[2016] WASCA 123",
+      "courtTag": "WASCA",
+      "year": "2016",
+      "num": "123",
+      "caseName": "King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen",
+      "jadeUrl": "https://jade.io/summary/mnc/2016/WASCA/123",
+      "blurb": "tion for leave to appeal refused. Criminal Code (Cth), s 302.3. Da Silva v The King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM",
+      "firstSeen": "2026-08-27T20:08:05.636957+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2025-9",
+      "citation": "[2025] WASCA 9",
+      "courtTag": "WASCA",
+      "year": "2025",
+      "num": "9",
+      "caseName": "v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King",
+      "jadeUrl": "https://jade.io/summary/mnc/2025/WASCA/9",
+      "blurb": " Criminal Code (Cth), s 302.3. Da Silva v The King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM [2023] WASCA 172; Rodgerson v ",
+      "firstSeen": "2026-08-27T20:08:05.636960+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2023-172",
+      "citation": "[2023] WASCA 172",
+      "courtTag": "WASCA",
+      "year": "2023",
+      "num": "172",
+      "caseName": "2; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM",
+      "jadeUrl": "https://jade.io/summary/mnc/2023/WASCA/172",
+      "blurb": "302.3. Da Silva v The King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM [2023] WASCA 172; Rodgerson v The Queen (No 2) [2022] VS",
+      "firstSeen": "2026-08-27T20:08:05.636963+00:00",
+      "notified": true
     }
   ],
   "processed": [],
