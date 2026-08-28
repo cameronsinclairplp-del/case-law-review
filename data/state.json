@@ -1,54 +1,6 @@
 {
   "pending": [
     {
-      "id": "hcasj-2026-24",
-      "citation": "[2026] HCASJ 24",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "24",
-      "caseName": "In the Matter Of An Application BY Cindy Taylor for Leave To Issue Or File",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238332&pid=110071146&h=1158799512",
-      "blurb": "In the Matter Of An Application BY Cindy Taylor for Leave To Issue Or File [2026] HCASJ 24",
-      "firstSeen": "2026-07-29T20:08:18.359500+00:00",
-      "notified": true
-    },
-    {
-      "id": "hcasj-2026-23",
-      "citation": "[2026] HCASJ 23",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "23",
-      "caseName": "Date of Judgment: 29 July 2026",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238329&pid=110071146&h=1158799512",
-      "blurb": "Date of Judgment: 29 July 2026 [2026] HCASJ 23",
-      "firstSeen": "2026-07-29T20:08:18.359503+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-307",
-      "citation": "[2026] WASC 307",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "307",
-      "caseName": "WILLIAMS v Director of Public Prosecutions",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238347&pid=110071146&h=1158799512",
-      "blurb": "WILLIAMS v Director of Public Prosecutions [2026] WASC 307",
-      "firstSeen": "2026-07-29T20:08:18.359507+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-297",
-      "citation": "[2026] WASC 297",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "297",
-      "caseName": "The State of Western Australia v Quartermaine [No 7]",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238389&pid=110071146&h=1158799512",
-      "blurb": "The State of Western Australia v Quartermaine [No 7] [2026] WASC 297",
-      "firstSeen": "2026-07-29T20:08:18.359511+00:00",
-      "notified": true
-    },
-    {
       "id": "hca-1940-43",
       "citation": "[1940] HCA 43",
       "courtTag": "HCA",
@@ -694,6 +646,90 @@
       "jadeUrl": "https://jade.io/summary/mnc/2023/WASCA/172",
       "blurb": "302.3. Da Silva v The King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM [2023] WASCA 172; Rodgerson v The Queen (No 2) [2022] VS",
       "firstSeen": "2026-08-27T20:08:05.636963+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-123",
+      "citation": "[2026] WASCA 123",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "123",
+      "caseName": "Rose v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250090&pid=111875186&h=1694066427",
+      "blurb": "Rose v The State of Western Australia [2026] WASCA 123",
+      "firstSeen": "2026-08-28T21:03:53.976371+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-120",
+      "citation": "[2026] WASCA 120",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "120",
+      "caseName": "Di Ciano v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1249835&pid=111875186&h=1694066427",
+      "blurb": "Di Ciano v The State of Western Australia [2026] WASCA 120",
+      "firstSeen": "2026-08-28T21:03:53.976372+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-117",
+      "citation": "[2026] WASCA 117",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "117",
+      "caseName": "Le v The King",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1249830&pid=111875186&h=1694066427",
+      "blurb": "Le v The King [2026] WASCA 117",
+      "firstSeen": "2026-08-28T21:03:53.976373+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-366",
+      "citation": "[2026] WASC 366",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "366",
+      "caseName": "Bin Saad v WA Police",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250026&pid=111875186&h=1694066427",
+      "blurb": "Bin Saad v WA Police [2026] WASC 366",
+      "firstSeen": "2026-08-28T21:03:53.976375+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-364",
+      "citation": "[2026] WASC 364",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "364",
+      "caseName": "Wilkinson v WA Police",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250122&pid=111875186&h=1694066427",
+      "blurb": "Wilkinson v WA Police [2026] WASC 364",
+      "firstSeen": "2026-08-28T21:03:53.976376+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-362",
+      "citation": "[2026] WASC 362",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "362",
+      "caseName": "Minchin v Director of Public Prosecutions",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250124&pid=111875186&h=1694066427",
+      "blurb": "Minchin v Director of Public Prosecutions [2026] WASC 362",
+      "firstSeen": "2026-08-28T21:03:53.976377+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2025-554",
+      "citation": "[2025] WASC 554",
+      "courtTag": "WASC",
+      "year": "2025",
+      "num": "554",
+      "caseName": "Varelis v Rispoli [No 2] (S)",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250125&pid=111875186&h=1694066427",
+      "blurb": "Varelis v Rispoli [No 2] [2025] WASC 554 (S)",
+      "firstSeen": "2026-08-28T21:03:53.976378+00:00",
       "notified": true
     }
   ],
