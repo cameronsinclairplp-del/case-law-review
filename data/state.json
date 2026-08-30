@@ -1,30 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasca-2026-108",
-      "citation": "[2026] WASCA 108",
-      "courtTag": "WASCA",
-      "year": "2026",
-      "num": "108",
-      "caseName": "Maitland (a pseudonym) v The State of Western Australia",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238603&pid=110237376&h=839195485",
-      "blurb": "Maitland (a pseudonym) v The State of Western Australia [2026] WASCA 108",
-      "firstSeen": "2026-07-31T20:17:18.695475+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-312",
-      "citation": "[2026] WASC 312",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "312",
-      "caseName": "Burness v WILLIAMS",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1238658&pid=110237376&h=839195485",
-      "blurb": "Burness v WILLIAMS [2026] WASC 312",
-      "firstSeen": "2026-07-31T20:17:18.695479+00:00",
-      "notified": true
-    },
-    {
       "id": "wasc-2026-315",
       "citation": "[2026] WASC 315",
       "courtTag": "WASC",
