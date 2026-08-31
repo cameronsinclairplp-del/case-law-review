@@ -695,6 +695,54 @@
       "blurb": "Varelis v Rispoli [No 2] [2025] WASC 554 (S)",
       "firstSeen": "2026-08-28T21:03:53.976378+00:00",
       "notified": true
+    },
+    {
+      "id": "wasca-2026-122",
+      "citation": "[2026] WASCA 122",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "122",
+      "caseName": "Lagdon v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250556&pid=111968912&h=1164120100",
+      "blurb": "Lagdon v The State of Western Australia [2026] WASCA 122",
+      "firstSeen": "2026-08-31T23:04:29.220882+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-121",
+      "citation": "[2026] WASCA 121",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "121",
+      "caseName": "The State of Western Australia v Matanga",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250519&pid=111968912&h=1164120100",
+      "blurb": "The State of Western Australia v Matanga [2026] WASCA 121",
+      "firstSeen": "2026-08-31T23:04:29.220884+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-119",
+      "citation": "[2026] WASCA 119",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "119",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250066&pid=111968912&h=1164120100",
+      "blurb": "Suppressed [2026] WASCA 119",
+      "firstSeen": "2026-08-31T23:04:29.220886+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-367",
+      "citation": "[2026] WASC 367",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "367",
+      "caseName": "Tallott v Stein",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250718&pid=111968912&h=1164120100",
+      "blurb": "Tallott v Stein [2026] WASC 367",
+      "firstSeen": "2026-08-31T23:04:29.220889+00:00",
+      "notified": true
     }
   ],
   "processed": [],
