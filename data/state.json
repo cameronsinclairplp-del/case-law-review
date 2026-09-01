@@ -306,9 +306,9 @@
       "courtTag": "HCA",
       "year": "2026",
       "num": "24",
-      "caseName": "The King v HCZ",
+      "caseName": "(2024) 282 CLR 460; Helensburgh Coal Pty Ltd v Bartley (2025) 424 ALR 1; R v HCZ",
       "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/24",
-      "blurb": " 208 A Crim R 325; R v Chase (a pseudonym) [2018] NSWCCA 71; Director of Public Prosecutions v Heritage Care Pty Ltd [2025] VSCA 19, considered. The King v HCZ [2026] HCA 24; Frazier (a pseudonym) v The Queen [201",
+      "blurb": " for the Diocese of Lismore (2023) 280 CLR 442; Moore (a pseudonym) v The King (2024) 282 CLR 460; Helensburgh Coal Pty Ltd v Bartley (2025) 424 ALR 1; R v HCZ [2026] HCA 24; Norbis v Norbis (1986) 161 CLR 513; Ho",
       "firstSeen": "2026-08-14T19:42:37.527176+00:00",
       "notified": true
     },
@@ -742,6 +742,18 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1250718&pid=111968912&h=1164120100",
       "blurb": "Tallott v Stein [2026] WASC 367",
       "firstSeen": "2026-08-31T23:04:29.220889+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-369",
+      "citation": "[2026] WASC 369",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "369",
+      "caseName": "NICHOLAS NI KOK CHIN",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1251446&pid=112055701&h=1330805862",
+      "blurb": "NICHOLAS NI KOK CHIN [2026] WASC 369",
+      "firstSeen": "2026-09-01T21:31:07.941419+00:00",
       "notified": true
     }
   ],
