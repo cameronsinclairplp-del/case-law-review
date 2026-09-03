@@ -1,18 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasc-2026-315",
-      "citation": "[2026] WASC 315",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "315",
-      "caseName": "Re Rules Of the Supreme Court 1971 (WA)",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1239034&pid=110372987&h=1193693450",
-      "blurb": "Re Rules Of the Supreme Court 1971 (WA) [2026] WASC 315",
-      "firstSeen": "2026-08-04T20:19:45.820074+00:00",
-      "notified": true
-    },
-    {
       "id": "hca-2026-27",
       "citation": "[2026] HCA 27",
       "courtTag": "HCA",
@@ -754,6 +742,42 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1251446&pid=112055701&h=1330805862",
       "blurb": "NICHOLAS NI KOK CHIN [2026] WASC 369",
       "firstSeen": "2026-09-01T21:31:07.941419+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasca-2026-126",
+      "citation": "[2026] WASCA 126",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "126",
+      "caseName": "Cooper v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1252203&pid=112222590&h=457018397",
+      "blurb": "Cooper v The State of Western Australia [2026] WASCA 126",
+      "firstSeen": "2026-09-03T21:31:55.353384+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-374",
+      "citation": "[2026] WASC 374",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "374",
+      "caseName": "C BY Next Friend XYZ v The Church of Jesus Christ of LATTER-DAY SAINTS AUSTRALIA",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1252333&pid=112222590&h=457018397",
+      "blurb": "ABC BY Next Friend XYZ v The Church of Jesus Christ of LATTER-DAY SAINTS AUSTRALIA [2026] WASC 374",
+      "firstSeen": "2026-09-03T21:31:55.353387+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2012-19",
+      "citation": "[2012] WASC 19",
+      "courtTag": "WASC",
+      "year": "2012",
+      "num": "19",
+      "caseName": "Anderson v McPherson (No 2)",
+      "jadeUrl": "https://jade.io/summary/mnc/2012/WASC/19",
+      "blurb": "d voluntary will established and no relationship of dominance and ascendancy proven – Thorne v Kennedy (2017) 263 CLR 85, applied – Anderson v McPherson (No 2) [2012] WASC 19, applied. EQUITY – Unconscionable Condu",
+      "firstSeen": "2026-09-03T21:31:55.353389+00:00",
       "notified": true
     }
   ],
