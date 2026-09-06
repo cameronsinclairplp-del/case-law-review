@@ -1,42 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasca-2026-109",
-      "citation": "[2026] WASCA 109",
-      "courtTag": "WASCA",
-      "year": "2026",
-      "num": "109",
-      "caseName": "Forth v The State of Western Australia",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1240356&pid=110516087&h=757662855",
-      "blurb": "Forth v The State of Western Australia [2026] WASCA 109",
-      "firstSeen": "2026-08-07T00:36:41.636241+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-323",
-      "citation": "[2026] WASC 323",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "323",
-      "caseName": "Anderson v Stone",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1240620&pid=110516087&h=757662855",
-      "blurb": "Anderson v Stone [2026] WASC 323",
-      "firstSeen": "2026-08-07T00:36:41.636243+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-300",
-      "citation": "[2026] WASC 300",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "300",
-      "caseName": "Suppressed",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1240418&pid=110516087&h=757662855",
-      "blurb": "Suppressed [2026] WASC 300",
-      "firstSeen": "2026-08-07T00:36:41.636245+00:00",
-      "notified": true
-    },
-    {
       "id": "hcasj-2026-25",
       "citation": "[2026] HCASJ 25",
       "courtTag": "HCASJ",
