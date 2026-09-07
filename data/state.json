@@ -683,6 +683,18 @@
       "blurb": "Suppressed [2026] WASCA 127",
       "firstSeen": "2026-09-04T21:09:55.685190+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-376",
+      "citation": "[2026] WASC 376",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "376",
+      "caseName": "Re Frigger",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1253488&pid=112410537&h=2054192204",
+      "blurb": "Re Frigger [2026] WASC 376",
+      "firstSeen": "2026-09-07T21:51:21.291209+00:00",
+      "notified": true
     }
   ],
   "processed": [],
