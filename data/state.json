@@ -695,6 +695,42 @@
       "blurb": "Re Frigger [2026] WASC 376",
       "firstSeen": "2026-09-07T21:51:21.291209+00:00",
       "notified": true
+    },
+    {
+      "id": "wasc-2026-380",
+      "citation": "[2026] WASC 380",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "380",
+      "caseName": "The State of Western Australia v Blurton",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1254349&pid=112497910&h=1719849805",
+      "blurb": "The State of Western Australia v Blurton [2026] WASC 380",
+      "firstSeen": "2026-09-08T21:31:30.840225+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-377",
+      "citation": "[2026] WASC 377",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "377",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1254148&pid=112497910&h=1719849805",
+      "blurb": "Suppressed [2026] WASC 377",
+      "firstSeen": "2026-09-08T21:31:30.840227+00:00",
+      "notified": true
+    },
+    {
+      "id": "wasc-2026-372",
+      "citation": "[2026] WASC 372",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "372",
+      "caseName": "Daniel v Gray",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1254316&pid=112497910&h=1719849805",
+      "blurb": "Daniel v Gray [2026] WASC 372",
+      "firstSeen": "2026-09-08T21:31:30.840229+00:00",
+      "notified": true
     }
   ],
   "processed": [],
