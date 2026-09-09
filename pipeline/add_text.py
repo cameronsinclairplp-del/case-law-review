@@ -67,7 +67,15 @@ _NOT_INITIALS = {"THE", "OF", "AND", "FOR", "IN", "ON", "TO", "BY", "RE", "EX", 
 
 
 def citation_from_filename(path):
-    m = FILENAME_CITE_RE.search(Path(path).stem)
+    """Citation from a file name, in either shape people actually save:
+      * the eCourts export name, "2026WASCA0033.doc"
+      * a readable name carrying the citation, "Pellew v The King - [2026] WASCA 33.pdf"
+    """
+    stem = Path(path).stem
+    m = P.CITATION_RE.search(stem)          # bracketed form wins — it is unambiguous
+    if m:
+        return f"[{m.group(1)}] {m.group(2).upper()} {int(m.group(3))}"
+    m = FILENAME_CITE_RE.search(stem)
     if not m:
         return None
     return f"[{m.group(1)}] {m.group(2).upper()} {int(m.group(3))}"
@@ -225,7 +233,7 @@ def add_one(path, citation, case_name, source):
 def main():
     ap = argparse.ArgumentParser(
         description="Add judgments to the library as full text only (no model analysis).")
-    ap.add_argument("--in", dest="src", help="a .doc/.docx/.txt judgment file")
+    ap.add_argument("--in", dest="src", help="a .doc/.docx/.rtf/.txt/.pdf judgment file")
     ap.add_argument("--citation", help='e.g. "[2026] WASCA 104" (defaults to the filename)')
     ap.add_argument("--case", default="", help="case name; defaults to the judgment's own header")
     ap.add_argument("--batch", help="a directory — add every judgment file in it")
@@ -238,7 +246,7 @@ def main():
         if not d.is_dir():
             P.die(f"--batch {d} is not a directory")
         for f in sorted(d.iterdir()):
-            if f.suffix.lower() not in (".doc", ".docx", ".rtf", ".txt"):
+            if f.suffix.lower() not in (".doc", ".docx", ".rtf", ".txt", ".pdf"):
                 continue
             cite = citation_from_filename(f)
             if not cite:

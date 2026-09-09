@@ -204,6 +204,31 @@
     }
   },
   {
+    "id": "wasca-2026-33",
+    "date": "2026-03-11",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Pellew v The King",
+    "citation": "[2026] WASCA 33",
+    "decided": "11/03/2026",
+    "appealFrom": "",
+    "outcome": "",
+    "weight": "",
+    "tags": [],
+    "relevance": "",
+    "oneLine": "",
+    "whatHappened": "",
+    "whatHeld": "",
+    "whatItMeans": "",
+    "verdict": "",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/33.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/33",
+    "files": {
+      "llm": "data/files/wasca-2026-33/wasca-2026-33.md"
+    },
+    "textOnly": true
+  },
+  {
     "id": "hca-2022-30",
     "date": "2022-09-07",
     "court": "High Court of Australia",
