@@ -8,10 +8,12 @@ on:
   push:
     paths:
       - "pipeline/**"
+      - "data/blocklist.json"
       - ".github/workflows/tests.yml"
   pull_request:
     paths:
       - "pipeline/**"
+      - "data/blocklist.json"
       - ".github/workflows/tests.yml"
   workflow_dispatch: {}
 

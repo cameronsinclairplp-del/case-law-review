@@ -1,0 +1,12 @@
+{
+  "note": "Case ids the pipeline must NEVER add. Read by pipeline/update.py (load_blocklist) and checked in main() next to existing_ids: a listed id is excluded from analysis, from data/cases.json and from the data/state.json pending watchlist. This is NOT the scope filter - in_scope() judges classes of case; this file names individual decisions a human has looked at and ruled out. Every entry needs id, citation, caseName and reason. The id must be the canonical lowercase '<court>-<year>-<number>' form and must agree with the citation: the loader derives the id from the citation and STOPS THE RUN if they differ, if a field is missing, or if the JSON is broken - blocking the wrong id would silently drop a real criminal decision, so this file must be right or the run must stop. Delete an entry to let the case back in. A judgment you email in yourself (INGEST) overrides this file.",
+  "blocked": [
+    {
+      "id": "hca-1998-11",
+      "citation": "[1998] HCA 11",
+      "caseName": "Oshlack v Richmond River Council",
+      "reason": "Civil public-interest costs case (NSW planning law) - nothing for a WA criminal investigator. It was never alerted on its own: a 2026 Jade alert merely CITED it, the parse_alert text scan turned that citation into a candidate (HANDOFF 7.2), HCA is ungated and the corpus carries 1998, so it was auto-analysed and shipped to the live library unreviewed on 24/07/2026. Removed from cases.json on 09/09/2026 (HANDOFF 7.1). Blocked so the next alert that cites it cannot re-add it.",
+      "blockedOn": "2026-09-09"
+    }
+  ]
+}

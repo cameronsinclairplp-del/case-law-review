@@ -1,18 +1,6 @@
 {
   "pending": [
     {
-      "id": "hcasj-2026-26",
-      "citation": "[2026] HCASJ 26",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "26",
-      "caseName": "In the Matter Of An Application BY Gerrard Tate for Leave To Issue Or File",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1241841&pid=110765140&h=1253676163",
-      "blurb": "In the Matter Of An Application BY Gerrard Tate for Leave To Issue Or File [2026] HCASJ 26",
-      "firstSeen": "2026-08-11T19:56:18.319089+00:00",
-      "notified": true
-    },
-    {
       "id": "wasca-2026-111",
       "citation": "[2026] WASCA 111",
       "courtTag": "WASCA",
@@ -22,18 +10,6 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1242104&pid=110765140&h=1253676163",
       "blurb": "Mehrabi v The State of Western Australia [2026] WASCA 111",
       "firstSeen": "2026-08-11T19:56:18.319092+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-329",
-      "citation": "[2026] WASC 329",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "329",
-      "caseName": "Palaloi v Western Australian Industrial Appeal Court",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1242169&pid=110765140&h=1253676163",
-      "blurb": "Palaloi v Western Australian Industrial Appeal Court [2026] WASC 329",
-      "firstSeen": "2026-08-11T19:56:18.319095+00:00",
       "notified": true
     },
     {
@@ -61,18 +37,6 @@
       "notified": true
     },
     {
-      "id": "wasc-2026-332",
-      "citation": "[2026] WASC 332",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "332",
-      "caseName": "Haskett v Jago",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1243228&pid=110939085&h=187281235",
-      "blurb": "Haskett v Jago [2026] WASC 332",
-      "firstSeen": "2026-08-13T19:52:42.514258+00:00",
-      "notified": true
-    },
-    {
       "id": "wasc-2026-331",
       "citation": "[2026] WASC 331",
       "courtTag": "WASC",
@@ -85,30 +49,6 @@
       "notified": true
     },
     {
-      "id": "hca-1936-40",
-      "citation": "[1936] HCA 40",
-      "courtTag": "HCA",
-      "year": "1936",
-      "num": "40",
-      "caseName": "appeal disclosed no arguable error of the kind described in House v R",
-      "jadeUrl": "https://jade.io/summary/mnc/1936/HCA/40",
-      "blurb": "rcuit and Family Court of Australia (Division 2) – proposed grounds of appeal disclosed no arguable error of the kind described in House v R (1936) 55 CLR 499; [1936] HCA 40 – application for extension of time dis",
-      "firstSeen": "2026-08-13T19:52:42.514265+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-334",
-      "citation": "[2026] WASC 334",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "334",
-      "caseName": "Allen v Milanova",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1243821&pid=111021010&h=835626332",
-      "blurb": "Allen v Milanova [2026] WASC 334",
-      "firstSeen": "2026-08-14T19:42:37.527171+00:00",
-      "notified": true
-    },
-    {
       "id": "wasc-2026-333",
       "citation": "[2026] WASC 333",
       "courtTag": "WASC",
@@ -118,18 +58,6 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1243754&pid=111021010&h=835626332",
       "blurb": "The State of Western Australia v TJD [No 2] [2026] WASC 333",
       "firstSeen": "2026-08-14T19:42:37.527174+00:00",
-      "notified": true
-    },
-    {
-      "id": "hca-2026-24",
-      "citation": "[2026] HCA 24",
-      "courtTag": "HCA",
-      "year": "2026",
-      "num": "24",
-      "caseName": "(2024) 282 CLR 460; Helensburgh Coal Pty Ltd v Bartley (2025) 424 ALR 1; R v HCZ",
-      "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/24",
-      "blurb": " for the Diocese of Lismore (2023) 280 CLR 442; Moore (a pseudonym) v The King (2024) 282 CLR 460; Helensburgh Coal Pty Ltd v Bartley (2025) 424 ALR 1; R v HCZ [2026] HCA 24; Norbis v Norbis (1986) 161 CLR 513; Ho",
-      "firstSeen": "2026-08-14T19:42:37.527176+00:00",
       "notified": true
     },
     {
@@ -157,18 +85,6 @@
       "notified": true
     },
     {
-      "id": "wasc-2026-342",
-      "citation": "[2026] WASC 342",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "342",
-      "caseName": "Psaila v Psaila",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1245106&pid=111172380&h=683027049",
-      "blurb": "Psaila v Psaila [2026] WASC 342",
-      "firstSeen": "2026-08-19T04:38:06.048788+00:00",
-      "notified": true
-    },
-    {
       "id": "wasc-2026-341",
       "citation": "[2026] WASC 341",
       "courtTag": "WASC",
@@ -181,30 +97,6 @@
       "notified": true
     },
     {
-      "id": "wasc-2026-340",
-      "citation": "[2026] WASC 340",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "340",
-      "caseName": "Muenkel v Muenkel",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1244908&pid=111172380&h=683027049",
-      "blurb": "Muenkel v Muenkel [2026] WASC 340",
-      "firstSeen": "2026-08-19T04:38:06.048791+00:00",
-      "notified": true
-    },
-    {
-      "id": "hca-2000-64",
-      "citation": "[2000] HCA 64",
-      "courtTag": "HCA",
-      "year": "2000",
-      "num": "64",
-      "caseName": "Concut Pty Ltd v Worrell",
-      "jadeUrl": "https://jade.io/summary/mnc/2000/HCA/64",
-      "blurb": "ssive and threatening behaviour by Defendant constituted renunciation – Termination by Plaintiff therefore valid – Concut Pty Ltd v Worrell (2000) 75 ALJR 312; [2000] HCA 64, applied; Koompahtoo Local Aboriginal L",
-      "firstSeen": "2026-08-19T04:38:06.048792+00:00",
-      "notified": true
-    },
-    {
       "id": "wasca-2026-115",
       "citation": "[2026] WASCA 115",
       "courtTag": "WASCA",
@@ -214,18 +106,6 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1245705&pid=111258960&h=583172634",
       "blurb": "Nicoletti v The State of Western Australia [2026] WASCA 115",
       "firstSeen": "2026-08-20T04:38:28.420247+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-345",
-      "citation": "[2026] WASC 345",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "345",
-      "caseName": "Lane v Briggs",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1245799&pid=111258960&h=583172634",
-      "blurb": "Lane v Briggs [2026] WASC 345",
-      "firstSeen": "2026-08-20T04:38:28.420249+00:00",
       "notified": true
     },
     {
@@ -250,18 +130,6 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1246164&pid=111348101&h=287113464",
       "blurb": "Frigger v The State of Western Australia [2026] WASCA 114",
       "firstSeen": "2026-08-20T19:24:43.085480+00:00",
-      "notified": true
-    },
-    {
-      "id": "hca-2010-45",
-      "citation": "[2010] HCA 45",
-      "courtTag": "HCA",
-      "year": "2010",
-      "num": "45",
-      "caseName": "rkson v The Queen (2011) 32 VR 361; [2011] VSCA 157; Hili v The Queen",
-      "jadeUrl": "https://jade.io/summary/mnc/2010/HCA/45",
-      "blurb": "1. Kellyway v The King [2003] VSCA 109; R v Mills [1998] 4 VR 235; Clarkson v The Queen (2011) 32 VR 361; [2011] VSCA 157; Hili v The Queen (2010) 242 CLR 520; [2010] HCA 45, applied. R v Kassir [2020] NSWCCA 88; ",
-      "firstSeen": "2026-08-20T19:24:43.085483+00:00",
       "notified": true
     },
     {
@@ -298,30 +166,6 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1247323&pid=111529014&h=1000287052",
       "blurb": "Date of Judgment: 24 August 2026 [2026] HCASJ 28",
       "firstSeen": "2026-08-25T04:40:10.974139+00:00",
-      "notified": true
-    },
-    {
-      "id": "hcasj-2026-27",
-      "citation": "[2026] HCASJ 27",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "27",
-      "caseName": "In the Matter Of An Application By KLH For Leave To Issue Or File",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1247321&pid=111529014&h=1000287052",
-      "blurb": "In the Matter Of An Application By KLH For Leave To Issue Or File [2026] HCASJ 27",
-      "firstSeen": "2026-08-25T04:40:10.974142+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-352",
-      "citation": "[2026] WASC 352",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "352",
-      "caseName": "Bacha v Cordero Jimenez",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1247384&pid=111529014&h=1000287052",
-      "blurb": "Bacha v Cordero Jimenez [2026] WASC 352",
-      "firstSeen": "2026-08-25T04:40:10.974145+00:00",
       "notified": true
     },
     {
@@ -373,18 +217,6 @@
       "notified": true
     },
     {
-      "id": "wasc-2026-361",
-      "citation": "[2026] WASC 361",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "361",
-      "caseName": "Hayes v Hayes",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1249529&pid=111788806&h=722399262",
-      "blurb": "Hayes v Hayes [2026] WASC 361",
-      "firstSeen": "2026-08-27T20:08:05.636949+00:00",
-      "notified": true
-    },
-    {
       "id": "wasc-2026-354",
       "citation": "[2026] WASC 354",
       "courtTag": "WASC",
@@ -394,42 +226,6 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1249298&pid=111788806&h=722399262",
       "blurb": "The State of Western Australia v Paraha [No 2] [2026] WASC 354",
       "firstSeen": "2026-08-27T20:08:05.636953+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasca-2016-123",
-      "citation": "[2016] WASCA 123",
-      "courtTag": "WASCA",
-      "year": "2016",
-      "num": "123",
-      "caseName": "King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen",
-      "jadeUrl": "https://jade.io/summary/mnc/2016/WASCA/123",
-      "blurb": "tion for leave to appeal refused. Criminal Code (Cth), s 302.3. Da Silva v The King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM",
-      "firstSeen": "2026-08-27T20:08:05.636957+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasca-2025-9",
-      "citation": "[2025] WASCA 9",
-      "courtTag": "WASCA",
-      "year": "2025",
-      "num": "9",
-      "caseName": "v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King",
-      "jadeUrl": "https://jade.io/summary/mnc/2025/WASCA/9",
-      "blurb": " Criminal Code (Cth), s 302.3. Da Silva v The King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM [2023] WASCA 172; Rodgerson v ",
-      "firstSeen": "2026-08-27T20:08:05.636960+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasca-2023-172",
-      "citation": "[2023] WASCA 172",
-      "courtTag": "WASCA",
-      "year": "2023",
-      "num": "172",
-      "caseName": "2; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM",
-      "jadeUrl": "https://jade.io/summary/mnc/2023/WASCA/172",
-      "blurb": "302.3. Da Silva v The King (2024) 391 FLR 101; DPP(Cth) v Merrill [2015] VSCA 52; Kleindyk v The Queen [2016] WASCA 123; Lam v The King [2025] WASCA 9; R v MHM [2023] WASCA 172; Rodgerson v The Queen (No 2) [2022] VS",
-      "firstSeen": "2026-08-27T20:08:05.636963+00:00",
       "notified": true
     },
     {
@@ -505,18 +301,6 @@
       "notified": true
     },
     {
-      "id": "wasc-2025-554",
-      "citation": "[2025] WASC 554",
-      "courtTag": "WASC",
-      "year": "2025",
-      "num": "554",
-      "caseName": "Varelis v Rispoli [No 2] (S)",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250125&pid=111875186&h=1694066427",
-      "blurb": "Varelis v Rispoli [No 2] [2025] WASC 554 (S)",
-      "firstSeen": "2026-08-28T21:03:53.976378+00:00",
-      "notified": true
-    },
-    {
       "id": "wasca-2026-122",
       "citation": "[2026] WASCA 122",
       "courtTag": "WASCA",
@@ -553,18 +337,6 @@
       "notified": true
     },
     {
-      "id": "wasc-2026-367",
-      "citation": "[2026] WASC 367",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "367",
-      "caseName": "Tallott v Stein",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250718&pid=111968912&h=1164120100",
-      "blurb": "Tallott v Stein [2026] WASC 367",
-      "firstSeen": "2026-08-31T23:04:29.220889+00:00",
-      "notified": true
-    },
-    {
       "id": "wasc-2026-369",
       "citation": "[2026] WASC 369",
       "courtTag": "WASC",
@@ -589,30 +361,6 @@
       "notified": true
     },
     {
-      "id": "wasc-2026-374",
-      "citation": "[2026] WASC 374",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "374",
-      "caseName": "C BY Next Friend XYZ v The Church of Jesus Christ of LATTER-DAY SAINTS AUSTRALIA",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1252333&pid=112222590&h=457018397",
-      "blurb": "ABC BY Next Friend XYZ v The Church of Jesus Christ of LATTER-DAY SAINTS AUSTRALIA [2026] WASC 374",
-      "firstSeen": "2026-09-03T21:31:55.353387+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2012-19",
-      "citation": "[2012] WASC 19",
-      "courtTag": "WASC",
-      "year": "2012",
-      "num": "19",
-      "caseName": "Anderson v McPherson (No 2)",
-      "jadeUrl": "https://jade.io/summary/mnc/2012/WASC/19",
-      "blurb": "d voluntary will established and no relationship of dominance and ascendancy proven – Thorne v Kennedy (2017) 263 CLR 85, applied – Anderson v McPherson (No 2) [2012] WASC 19, applied. EQUITY – Unconscionable Condu",
-      "firstSeen": "2026-09-03T21:31:55.353389+00:00",
-      "notified": true
-    },
-    {
       "id": "hcasj-2026-30",
       "citation": "[2026] HCASJ 30",
       "courtTag": "HCASJ",
@@ -622,30 +370,6 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1253028&pid=112313675&h=1447015744",
       "blurb": "Date of Judgment: 4 September 2026 [2026] HCASJ 30",
       "firstSeen": "2026-09-04T21:09:55.685181+00:00",
-      "notified": true
-    },
-    {
-      "id": "hcasj-2026-29",
-      "citation": "[2026] HCASJ 29",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "29",
-      "caseName": "In the Matter Of An Application BY Djuran Bunjileenee For Leave To Issue Or File",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1253030&pid=112313675&h=1447015744",
-      "blurb": "In the Matter Of An Application BY Djuran Bunjileenee For Leave To Issue Or File [2026] HCASJ 29",
-      "firstSeen": "2026-09-04T21:09:55.685183+00:00",
-      "notified": true
-    },
-    {
-      "id": "hcasj-2026-31",
-      "citation": "[2026] HCASJ 31",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "31",
-      "caseName": "ter Of An Application BY Thomas William Raymond Towle for Leave to Issue Or File",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1253026&pid=112313675&h=1447015744",
-      "blurb": "In the Matter Of An Application BY Thomas William Raymond Towle for Leave to Issue Or File [2026] HCASJ 31",
-      "firstSeen": "2026-09-04T21:09:55.685185+00:00",
       "notified": true
     },
     {
@@ -685,18 +409,6 @@
       "notified": true
     },
     {
-      "id": "wasc-2026-376",
-      "citation": "[2026] WASC 376",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "376",
-      "caseName": "Re Frigger",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1253488&pid=112410537&h=2054192204",
-      "blurb": "Re Frigger [2026] WASC 376",
-      "firstSeen": "2026-09-07T21:51:21.291209+00:00",
-      "notified": true
-    },
-    {
       "id": "wasc-2026-380",
       "citation": "[2026] WASC 380",
       "courtTag": "WASC",
@@ -718,18 +430,6 @@
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1254148&pid=112497910&h=1719849805",
       "blurb": "Suppressed [2026] WASC 377",
       "firstSeen": "2026-09-08T21:31:30.840227+00:00",
-      "notified": true
-    },
-    {
-      "id": "wasc-2026-372",
-      "citation": "[2026] WASC 372",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "372",
-      "caseName": "Daniel v Gray",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1254316&pid=112497910&h=1719849805",
-      "blurb": "Daniel v Gray [2026] WASC 372",
-      "firstSeen": "2026-09-08T21:31:30.840229+00:00",
       "notified": true
     }
   ],

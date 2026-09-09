@@ -50,6 +50,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 CASES_PATH = DATA / "cases.json"
 STATE_PATH = DATA / "state.json"
+BLOCKLIST_PATH = DATA / "blocklist.json"
 FILES_DIR = DATA / "files"
 
 APP_BASE = "https://cameronsinclairplp-del.github.io/case-law-review"
@@ -58,7 +59,12 @@ MODEL = os.environ.get("ANALYSIS_MODEL", "claude-opus-4-8")
 MAX_JUDGMENT_CHARS = 500_000      # ~125k tokens; truncate longer judgments (flagged)
 LOOKBACK_DAYS = 3                 # rolling IMAP window; dedupe-by-id makes overlap safe
 SUBMISSION_LOOKBACK_DAYS = 35     # emailed judgments re-fetchable past PENDING_MAX_DAYS (no silent loss)
-PENDING_MAX_DAYS = 30             # give up on an unresolvable case after this (logged)
+# Give up on an unresolvable case after this (logged + emailed; never silent).
+# Raised 30 -> 60 on 09/09/2026: WA judgments resolve only when a human exports the
+# Word file (HANDOFF 4), so the queue moves at Cameron's pace, not the pipeline's.
+# At 30 days the ~32 genuine WA decisions found while he was away would have started
+# ageing out of the watchlist on 10/09/2026 before he could ingest any of them.
+PENDING_MAX_DAYS = 60
 
 # Courts in scope. "gated": only kept when a TOPIC keyword matches (noise control).
 # HCA/WASCA/WASC = binding/WA primary. QCA/TASCCA/NTCCA/NTSC = persuasive Code
@@ -125,9 +131,9 @@ WA_NAME_ONLY = {"WASC", "WASCA"}
 # is a civil government body, not the prosecuting State, so a bare mention is NOT a
 # criminal signal.
 CRIMINAL_NAME = re.compile(
-    r"\bthe state of western australia\b|\bstate of w\.?a\b|"
+    r"\b(?:the\s+)?state of western australia\b|\bstate of w\.?a\b|"
     r"(?<!of )(?<!for )\bwestern australia\s+v\b|"
-    r"\bv\.?\s+(?:the state of\s+)?western australia\b|"
+    r"\bv\.?\s+(?:the\s+)?(?:state of\s+)?western australia\b|"
     r"\bthe (?:queen|king)\b|\bregina\b|\brex\b|\bcrown\b|"
     r"\bR\s+v\b|\bv\.?\s+the (?:queen|king)\b|\bpolice\b|"
     r"\bd\.?p\.?p\b|director of public prosecutions|commissioner of police|"
@@ -145,6 +151,59 @@ CIVIL_NAME = re.compile(
     r"\bminister\b|\bsheriff\b|\btribunal\b|commissioner of (?:state revenue|taxation)|"
     r"legal profession|complaints committee|director of housing|"
     r"\bunion\b|\bassociation\b|\bco-?operative\b|\bsociety\b|\bclub\b|\bfund\b", re.I)
+
+# WASC = FIRST INSTANCE, and it is the noisy one: private-party civil matters
+# ("Haskett v Jago", "Muenkel v Muenkel") carry neither a civil nor a criminal
+# keyword, so the rule above lets every one through (~12/month). A WA criminal
+# FIRST-INSTANCE matter essentially always names the State / WA Police / the DPP /
+# the King, is suppressed or pseudonymised, uses initials-only parties, is
+# ex parte / prerogative, or is coronial — so for WASC we require a POSITIVE
+# signal rather than merely the absence of a civil one. WASCA keeps the
+# conservative rule above: a WA criminal APPEAL always names the State or the
+# King, so the stricter test would buy nothing there and could only cost a case.
+WA_SIGNAL_REQUIRED = {"WASC"}
+
+# Rescue-only criminal signals for the WASC strict rule. DELIBERATELY SEPARATE
+# from CRIMINAL_NAME: CRIMINAL_NAME also gates the pre-existing CIVIL_NAME drop,
+# so widening it would weaken that filter in BOTH WA courts (e.g. "Smith v Bail
+# Bonds Pty Ltd" would stop being dropped). Used only by the strict branch, these
+# can KEEP a case and can never drop one — so a generous list costs nothing.
+WASC_RESCUE = re.compile(
+    r"\bsuppressed\b|\bbail\b|\bmagistrate|\bcriminal\b|\bconvict|\bsentenc|"
+    r"\bprison|\bcustod|\bindictment\b|\bhabeas\b|\bcontempt\b|"
+    r"restraining order|\bfvro\b|\bvro\b|mentally impaired|spent conviction|"
+    r"criminal injur|extradition|confiscation|\bforfeiture\b|"
+    r"chief executive officer.{0,60}(?:justice|corrective|fisheries|primary industries)",
+    re.I)
+
+# An initials-only party ("MRV v SNW", "DJF v DPP", "... v TJD [No 2]") is the WA
+# identity-protection convention and is effectively always a protected criminal or
+# child matter. CASE-SENSITIVE ON PURPOSE, and matched against the caseName only:
+#   * under re.I (CRIMINAL_NAME's flag) [A-Z]{2,5} degenerates to "any short word"
+#     and rescues "Lane v Briggs", "Daniel v Gray", "Haskett v Jago" — three of the
+#     names this change exists to drop. It CANNOT live inside CRIMINAL_NAME.
+#   * anchored to a party slot (start of name, or the defendant slot at the end) so
+#     a capitalised token mid-name is not read as a party: the live "C BY Next
+#     Friend XYZ v The Church of Jesus Christ of LATTER-DAY SAINTS" must NOT be
+#     rescued by its "XYZ".
+# Stops ("A.B.") and single letters ("H v J") are allowed; a trailing "[No 2]" or
+# "(S)" suffix on the defendant is tolerated.
+INITIALS_PARTY = re.compile(
+    r"^[A-Z](?:\.?[A-Z]){0,4}\.?(?:\s*\([^)]*\))?\s+v\.?(?:\s|$)"
+    r"|\sv\.?\s+[A-Z](?:\.?[A-Z]){0,4}\.?(?:\s*[\[(][^\])]*[\])])*\s*$")
+
+# HCASJ single-justice lists are dominated by vexatious-proceedings leave
+# applications — "In the Matter of an Application by <name> for Leave to Issue or
+# File". They decide whether a proposed proceeding may be commenced at all, never
+# a question of criminal law. Keyed on the TAIL of the formula because
+# clean_case_name's 80-char fallback clips the head (live [2026] HCASJ 31 is
+# stored as "ter Of An Application BY Thomas William Raymond Towle for Leave...").
+# Matched against the case NAME ONLY — a text-scan blurb is a +-160-char window,
+# so matching the blurb would let one vexatious entry drop its NEIGHBOURS, which
+# in an HCASJ list are genuine criminal single-justice decisions.
+VEXATIOUS_LEAVE = re.compile(
+    r"\bapplication\b.{0,160}?\bfor leave to\s+(?:issue|file)\s+or\s+(?:file|issue)\b", re.I)
+VEXATIOUS_LEAVE_COURTS = {"HCASJ"}
 
 SYSTEM_PROMPT = (
     "You are the case-law analyst for a detective in training with WA Police. "
@@ -257,6 +316,104 @@ def save_state(pending, processed=None):
 
 def now_iso():
     return dt.datetime.now(dt.timezone.utc).isoformat()
+
+
+# ---------------------------------------------------------------------------
+# Never-add blocklist (data/blocklist.json) — HANDOFF 7.1
+#
+# A standing human decision about ONE identified decision (Oshlack, a civil costs
+# case that the citation over-capture bug auto-added to the library). NOT the
+# scope filter: in_scope() judges CLASSES of case; this file names individual
+# decisions already looked at and ruled out.
+# ---------------------------------------------------------------------------
+def blocklist_id_for_citation(citation):
+    """Canonical id for a medium-neutral citation, using the SAME parse that mints
+    ids in _item_from_match, so an entry can never drift from the pipeline's id."""
+    c = str(citation or "").strip()
+    hits = CITATION_RE.findall(c)
+    if len(hits) != 1:            # 0 = not a citation; >1 = ambiguous, refuse to guess
+        return None
+    year, code, num = hits[0]
+    return f"{code.lower()}-{year}-{num}"
+
+
+def load_blocklist():
+    """{id: entry} from data/blocklist.json.
+
+    A MISSING file is fine (returns {}). A file that exists but is broken is an
+    infra fault and dies loudly, per the module rule "fail loudly on unreadable
+    data": once Oshlack is out of cases.json this file is the ONLY thing stopping
+    the next alert that cites it re-publishing it, so degrading to "block nothing"
+    would silently restore the bug it exists to prevent.
+
+    Every entry needs BOTH an id and a citation, and they must agree — the loader
+    derives the id from the citation and rejects the file if they differ. Blocking
+    the wrong id would silently drop a real criminal decision, so the file must be
+    right or the run must stop."""
+    try:
+        raw = BLOCKLIST_PATH.read_text(encoding="utf-8").strip()
+    except FileNotFoundError:
+        return {}
+    except Exception as e:
+        die(f"blocklist.json unreadable ({e})")
+    if not raw:
+        return {}
+    try:
+        doc = json.loads(raw)
+    except Exception as e:
+        die(f"blocklist.json is not valid JSON ({e})")
+    entries = doc.get("blocked") if isinstance(doc, dict) else doc
+    if not isinstance(entries, list):
+        die("blocklist.json: expected an object with a 'blocked' array")
+    out = {}
+    for e in entries:
+        if not isinstance(e, dict):
+            die(f"blocklist.json: entry is not an object ({e!r})")
+        cid = str(e.get("id") or "").strip().lower()
+        cite = str(e.get("citation") or "").strip()
+        if not cid or not cite:
+            die(f"blocklist.json: every entry needs an id AND a citation ({e!r})")
+        derived = blocklist_id_for_citation(cite)
+        if derived != cid:
+            die(f"blocklist.json: id {cid!r} does not match citation {cite!r} "
+                f"(which is {derived!r}) — fix one or the other")
+        if cid in out:
+            die(f"blocklist.json: duplicate entry for {cid!r}")
+        if not str(e.get("caseName") or "").strip() or not str(e.get("reason") or "").strip():
+            die(f"blocklist.json: {cid} needs a caseName and a reason "
+                f"(this file is read by a human months later)")
+        out[cid] = {"id": cid, "citation": cite,
+                    "caseName": str(e["caseName"]).strip(),
+                    "reason": str(e["reason"]).strip()}
+    if out:
+        log(f"blocklist: {len(out)} id(s) will never be added — {', '.join(sorted(out))}")
+    return out
+
+
+def blocked_line(entry, item=None):
+    why = " ".join(str(entry.get("reason", "")).split())[:200]
+    cite = (item or {}).get("citation") or entry.get("citation", "")
+    return (f"BLOCKED {entry['id']} ({cite}) {entry.get('caseName', '')} — on "
+            f"data/blocklist.json: {why} [delete that entry to allow it back in]")
+
+
+def drop_blocked(work, blocked):
+    """Remove blocklisted ids from `work` IN PLACE; return what was dropped.
+
+    `work` is the single choke point: analysis, cases.json AND the state.json
+    pending queue are all built from it, so dropping here excludes a blocked id
+    from all three — including a stale one re-loaded from state.json.
+
+    A judgment emailed in by hand is EXEMPT: a human forwarding a judgment now
+    outranks a note written earlier, and refusing it silently (submissions are
+    never watchlisted and never queued) would lose it outright."""
+    out = []
+    for cid in [k for k in work if k in blocked]:
+        if work[cid].get("_msgid") or work[cid].get("suppliedText"):
+            log(f"  blocklist OVERRIDDEN for {cid}: supplied by hand as an INGEST email")
+            continue
+        out.append(work.pop(cid))
+    return out
 
 
 def imap_since_date(days=LOOKBACK_DAYS):
@@ -452,7 +609,7 @@ def fetch_submissions(user, password, since_dt, processed):
                 name = INGEST_SUBJECT_RE.sub("", subject)
                 if token:
                     name = name.replace(token, "").strip()
-                item = _item_from_match(m, name, "", name)
+                item = _item_from_match(m, name, "", name, via="submission")
                 if item["courtTag"] not in COURTS:
                     log(f"  submission skipped ({item['citation']}): court {item['courtTag']} not in COURTS")
                     continue
@@ -502,7 +659,28 @@ def parse_alert(body):
                 m = CITATION_RE.search(blurb)
             if m:
                 items.append(_item_from_match(m, text or blurb, a["href"], blurb))
-        _scan_text_for_citations(" ".join(soup.get_text(" ").split()), items)
+        # HANDOFF 7.2. The link pass finds the alert's REAL entries. Scanning the
+        # whole body as well made every authority merely CITED inside a blurb its
+        # own candidate — that is how the civil costs case Oshlack [1998] HCA 11
+        # was auto-analysed into the library. The text scan is therefore a FALLBACK
+        # only: it runs when the link pass found nothing (entry links missing, or
+        # rewritten off the jade.io host by a mail link-wrapper). Every real entry
+        # in a working Jade alert is a link, so nothing is lost when links exist.
+        text_all = " ".join(soup.get_text(" ").split())
+        if items:
+            # A count of body citations far above the number of parsed entries is
+            # the ONLY cheap signal that a template change has broken the link
+            # pass while leaving some links intact. Log it; do not re-widen.
+            n_cites = len({f"{c.group(2).upper()}-{c.group(1)}-{c.group(3)}"
+                           for c in CITATION_RE.finditer(text_all)})
+            if n_cites > 2 * len(items):
+                log(f"  WARN alert looks degraded: {len(items)} entry link(s) but "
+                    f"{n_cites} distinct citation(s) in the body")
+            else:
+                log(f"  alert: {len(items)} entry link(s)")
+        else:
+            log("  alert: no jade.io entry links found — falling back to a text scan")
+            _scan_text_for_citations(text_all, items)
     else:
         _scan_text_for_citations(" ".join(body.split()), items)
 
@@ -523,18 +701,31 @@ def _scan_text_for_citations(text, items):
         # then let clean_case_name find the actual "A v B" pair.
         pre = re.split(r"\s*[|·•—–]\s*|(?<=[.!?])\s+", pre)[-1]
         name = pre[-90:].strip(" .,-—|·•\t")
-        items.append(_item_from_match(m, name, "", blurb))
+        items.append(_item_from_match(m, name, "", blurb, via="scan"))
 
 
-def _item_from_match(m, name, href, blurb):
+def _item_from_match(m, name, href, blurb, via="link"):
+    """`via` records HOW this candidate was found — provenance, not content:
+      "link"        an <a href="...jade.io..."> entry in the alert (the alert's own
+                    listing: name, citation and blurb all belong to this case);
+      "scan"        a bare citation found in running text. May be an authority
+                    merely CITED inside another case's blurb, in which case the
+                    name AND the blurb belong to somebody else;
+      "submission"  a judgment emailed in by hand (INGEST subject line).
+    `nameSuspect` records that clean_case_name could not produce a case-shaped
+    name. Neither field ever DROPS an item — they only stop it being analysed and
+    published with no human in the loop (see auto_analysis_ok)."""
     year, code, num = m.group(1), m.group(2).upper(), m.group(3)
+    cleaned = clean_case_name(name, f"[{year}] {code} {num}")
     return {
         "id": f"{code.lower()}-{year}-{num}",
         "citation": f"[{year}] {code} {num}",
         "courtTag": code,
         "year": year,
         "num": num,
-        "caseName": clean_case_name(name, f"[{year}] {code} {num}"),
+        "via": via,
+        "nameSuspect": not _looks_like_case_name(cleaned),
+        "caseName": cleaned,
         # trust the alert's href only if it's genuinely a jade.io host; otherwise
         # build the canonical Jade summary URL from the citation ourselves (safe).
         "jadeUrl": href if _is_jade_url(href) else jade_summary_url(code, year, num),
@@ -576,6 +767,35 @@ def clean_case_name(raw, citation):
     return frag[-80:].strip() or "(case name pending)"
 
 
+# --- name quality ----------------------------------------------------------
+# Another case's citation bled into the name ("... v Merrill [2015] VSCA 52; ...").
+_CITE_REMNANT_RE = re.compile(r"\[\d{4}\]|\(\d{4}\)\s*\d")
+
+
+def _looks_like_case_name(name):
+    """False when clean_case_name could not produce a case-shaped name — a PARSE
+    failure, not a finding about the case. Deliberately never used to drop an
+    item: it exempts an unparsed name from the WASC strict rule (an unreadable
+    name is ambiguous, and HANDOFF 5 says keep when ambiguous) and it stops an
+    unverified name being published unreviewed (build_case writes caseName
+    straight into cases.json and the .md front matter)."""
+    n = (name or "").strip()
+    if not n or n == "(case name pending)":
+        return False
+    if not (n[0].isalpha() and n[0].isupper()):   # "2; Kleindyk...", "(2024) 282 CLR..."
+        return False
+    if _CITE_REMNANT_RE.search(n):                # two cases run together
+        return False
+    return True
+
+
+def _judgeable_name(item):
+    """True when there is a real, parsed party name to judge. A parse failure must
+    never be read as "this is not criminal"."""
+    n = str(item.get("caseName") or "").strip()
+    return bool(n) and n != "(case name pending)" and not item.get("nameSuspect")
+
+
 # ---------------------------------------------------------------------------
 # Scope filter
 # ---------------------------------------------------------------------------
@@ -585,16 +805,88 @@ def in_scope(item):
         return False, f"court {tag} not in scope"
     if not COURTS[tag].get("scope", True):
         return False, f"{tag}: library-only court (not in watchlist scope)"
-    blob = f"{item.get('caseName','')} {item.get('blurb','')}"
+    name = str(item.get("caseName") or "")
+    blob = f"{name} {item.get('blurb','')}"
     if DROP_KEYWORDS.search(blob):
         return False, "out-of-scope topic"
     if COURTS[tag]["gated"] and not TOPIC_KEYWORDS.search(blob):
         return False, f"{tag}: no investigation/evidence topic keyword"
+    criminal = bool(CRIMINAL_NAME.search(blob))
     # Name-only WA courts: drop a clear civil matter unless it carries a criminal
     # signal (conservative - ambiguous names are kept, never dropped on a guess).
-    if tag in WA_NAME_ONLY and CIVIL_NAME.search(blob) and not CRIMINAL_NAME.search(blob):
+    # UNCHANGED: still keyed on CRIMINAL_NAME alone, so WASCA behaviour is identical
+    # to today's and the seven CIVIL_DROP regression names still drop for this
+    # reason. Do not fold the new signals below into this line.
+    if tag in WA_NAME_ONLY and CIVIL_NAME.search(blob) and not criminal:
         return False, f"{tag}: civil party, no criminal signal"
+    # HCASJ vexatious-proceedings leave applications. NAME only (never the blurb —
+    # see VEXATIOUS_LEAVE) and never over an explicit criminal party, so a genuine
+    # single-justice criminal matter listed beside one cannot be caught.
+    if tag in VEXATIOUS_LEAVE_COURTS and VEXATIOUS_LEAVE.search(name) and not criminal:
+        return False, f"{tag}: vexatious-proceedings leave application"
+    # WASC first instance only: NO criminal signal at all -> drop. Applied only to a
+    # name we actually parsed (_judgeable_name): an unreadable name is a parse
+    # failure and must never be read as "not criminal". Every drop here is listed
+    # in the run's email by main() (see _screened_out), so a wrong call is visible
+    # and recoverable the same day rather than silent.
+    if (tag in WA_SIGNAL_REQUIRED and _judgeable_name(item) and not criminal
+            and not INITIALS_PARTY.search(name)
+            and not WASC_RESCUE.search(blob)
+            and not TOPIC_KEYWORDS.search(blob)):
+        return False, f"{tag}: no criminal signal (name-only entry)"
     return True, "in scope"
+
+
+def _screened_out(why):
+    """True for a drop that is a JUDGEMENT CALL introduced by HANDOFF 7.3 — the
+    WASC positive-signal rule and the HCASJ vexatious-leave rule. main() lists
+    these in the run's email: the filter is allowed to be wrong, it is not allowed
+    to be silent. Deliberately excludes the pre-existing civil-party drop, which
+    has been silent since session 5 and would only dilute the list."""
+    return ("no criminal signal (name-only entry)" in why) or ("vexatious-proceedings" in why)
+
+
+# ---------------------------------------------------------------------------
+# Auto-analysis gate (HANDOFF 7.4) — the SECOND line of defence
+#
+# in_scope() decides what reaches the WATCHLIST and is deliberately conservative:
+# when in doubt, KEEP, because a genuine criminal decision missing from the
+# watchlist is the worst outcome there is. This gate decides something much
+# narrower: what may be analysed by the model and PUBLISHED to the library with
+# no human in the loop. Failing it costs almost nothing — the case still sits in
+# the pending queue, still goes out in the watchlist email with its reason, and
+# can still be pulled in by forwarding it as an INGEST email — so here the safe
+# default is the opposite: when in doubt, DON'T publish. That asymmetry is the
+# point of the gate; do not "harmonise" it with in_scope().
+# ---------------------------------------------------------------------------
+AUTO_ANALYSIS_SIGNAL_COURTS = {"HCA", "HCASJ"}
+
+
+def auto_analysis_ok(item):
+    """(ok, why_not) — may this be analysed and published with no human in the
+    loop? NEVER used to decide watchlist membership."""
+    if item.get("suppliedText") or item.get("via") == "submission":
+        return True, ""                       # you chose it and supplied the text
+    if item.get("nameSuspect"):
+        return False, ("the case name could not be parsed cleanly — it would be "
+                       "published under a name nobody has verified")
+    tag = item.get("courtTag", "")
+    if tag not in AUTO_ANALYSIS_SIGNAL_COURTS:
+        return True, ""                       # every other court is already gated
+    name = str(item.get("caseName") or "")
+    if (CRIMINAL_NAME.search(name) or INITIALS_PARTY.search(name)
+            or WASC_RESCUE.search(name)):
+        return True, ""
+    # The blurb is only trustworthy when it describes ONE case. A text-scan blurb
+    # is a window over running text, and a link blurb falls back to the anchor's
+    # whole parent, so a neighbouring entry's catchwords bleed in: the live
+    # "Concut Pty Ltd v Worrell" [2000] HCA 64 (civil employment) matches
+    # TOPIC_KEYWORDS on "Aborig" from the citation next to it.
+    blurb = str(item.get("blurb") or "")
+    if len(CITATION_RE.findall(blurb)) <= 1 and TOPIC_KEYWORDS.search(f"{name} {blurb}"):
+        return True, ""
+    return False, (f"{tag}: no criminal party in the case name and no "
+                   f"single-case investigation/evidence topic")
 
 
 def austlii_url(item):
@@ -831,14 +1123,21 @@ def send_watchlist_email(user, password, items, stats=None):
         au = austlii_url(it)
         jd = it.get("jadeUrl") or jade_summary_url(it["courtTag"], it["year"], it["num"])
         blurb = re.sub(r"\s+", " ", it.get("blurb", "")).strip()[:240]
+        hold = " ".join(str(it.get("holdReason", "")).split())
         lines += [f"• {it['caseName']} {it['citation']} — {it['courtTag']}"]
         if blurb:
             lines.append(f"  {blurb}")
+        if hold:
+            lines.append(f"  NOT auto-analysed — {hold}. The full text IS available; "
+                         f"forward it as an INGEST email if you want it in the library.")
         lines += [f"  AustLII: {au}", f"  Jade: {jd}", ""]
         html_items.append(
             f"<li style='margin-bottom:14px'><strong>{esc(it['caseName'])} {esc(it['citation'])}</strong> "
             f"— {esc(it['courtTag'])}<br>"
             + (f"<span style='color:#46423A'>{esc(blurb)}</span><br>" if blurb else "")
+            + (f"<span style='color:#8a5a2b'>Not auto-analysed — {esc(hold)}. The full text "
+               f"IS available; forward it as an INGEST email if you want it in the library."
+               f"</span><br>" if hold else "")
             + f"<a href='{esc(au)}'>AustLII</a> · <a href='{esc(jd)}'>Jade</a></li>")
     lines += ["", "(The app library is unchanged until full analysis is available.)"]
     if stats:
@@ -871,20 +1170,47 @@ def esc(s):
 # degrading pipeline can't look identical to a genuinely quiet day).
 # ---------------------------------------------------------------------------
 def _health_text(stats):
-    return ("— run health: "
+    line = ("— run health: "
             f"{stats['alerts']} alert(s) · {stats['inScope']} in scope · "
             f"{stats['analysed']} analysed · {stats['watchlist']} to watchlist · "
+            f"{stats.get('held', 0)} held from auto-analysis · "
+            f"{stats.get('screened', 0)} screened out · {stats.get('blocked', 0)} blocked · "
             f"{stats['pending']} pending · {stats['errors']} error(s) · "
             f"{stats['gaveUp']} given up.")
+    items = stats.get("screenedItems") or []
+    if not items:
+        return line
+    return "\n".join(
+        [line, "",
+         "Screened out of NEW watchlisting this run — the scope filter judged these "
+         "not criminal. Scan the names; if one really is a criminal matter, open it "
+         "on Jade and ingest it by hand:"]
+        + [f"  • {s['caseName']} {s['citation']} ({s['why']})" for s in items[:25]]
+        + ([f"  … and {len(items) - 25} more (see the Actions log)"] if len(items) > 25 else []))
 
 
 def _health_html(stats):
-    return ("<p style='color:#9a9488;font-size:12px;border-top:1px solid #e8e3d6;"
+    html = ("<p style='color:#9a9488;font-size:12px;border-top:1px solid #e8e3d6;"
             "padding-top:8px;margin-top:16px'>Pipeline health — "
             f"{stats['alerts']} alert(s) · {stats['inScope']} in scope · "
             f"{stats['analysed']} analysed · {stats['watchlist']} to watchlist · "
+            f"{stats.get('held', 0)} held · {stats.get('screened', 0)} screened out · "
+            f"{stats.get('blocked', 0)} blocked · "
             f"{stats['pending']} pending · <strong>{stats['errors']} error(s)</strong> · "
             f"{stats['gaveUp']} given up.</p>")
+    items = stats.get("screenedItems") or []
+    if items:
+        html += ("<p style='color:#9a9488;font-size:12px;margin-top:4px'>Screened out of "
+                 "<strong>new</strong> watchlisting this run. Scan the names; if one really "
+                 "is a criminal matter, open it on Jade and ingest it by hand:</p>"
+                 "<ul style='color:#9a9488;font-size:12px;margin-top:0'>"
+                 + "".join(f"<li>{esc(s['caseName'])} {esc(s['citation'])} "
+                           f"<span style='color:#b7b1a5'>({esc(s['why'])})</span></li>"
+                           for s in items[:25])
+                 + (f"<li>… and {len(items) - 25} more (see the Actions log)</li>"
+                    if len(items) > 25 else "")
+                 + "</ul>")
+    return html
 
 
 def send_health_email(user, password, stats, errors, gave_up):
@@ -904,8 +1230,10 @@ def send_health_email(user, password, stats, errors, gave_up):
         lines.append(f"{len(gave_up)} case(s) given up after {PENDING_MAX_DAYS} days unresolved:")
         html_parts.append(f"<p><strong>{len(gave_up)} given up after {PENDING_MAX_DAYS} days:</strong></p><ul>")
         for g in gave_up[:10]:
-            lines.append(f"  • {g.get('caseName','')} {g['citation']} ({g['courtTag']})")
-            html_parts.append(f"<li>{esc(g.get('caseName',''))} {esc(g['citation'])} ({esc(g['courtTag'])})</li>")
+            reason = f" — was held: {g['holdReason']}" if g.get("holdReason") else ""
+            lines.append(f"  • {g.get('caseName','')} {g['citation']} ({g['courtTag']}){reason}")
+            html_parts.append(f"<li>{esc(g.get('caseName',''))} {esc(g['citation'])} "
+                              f"({esc(g['courtTag'])}){esc(reason)}</li>")
         lines.append("")
         html_parts.append("</ul>")
     lines += ["", _health_text(stats)]
@@ -937,25 +1265,47 @@ def main():
     processed = state.get("processed", [])
     existing = load_cases()
     existing_ids = {c.get("id") for c in existing}
+    blocked = load_blocklist()          # data/blocklist.json — ids never to add
+    for cid in sorted(set(blocked) & existing_ids):
+        log(f"  NOTE {cid} is on the blocklist but is STILL IN cases.json — remove it "
+            f"by hand (HANDOFF 7.1); the blocklist only stops it being RE-added")
 
     bodies = fetch_alert_html(user, password, imap_since_date())
     log(f"alerts read: {len(bodies)}")
 
-    # parse + dedupe across alerts
-    candidates, seen = [], set()
+    # parse + dedupe across alerts. First sighting wins EXCEPT that a link-derived
+    # item upgrades a scan-derived one: alerts are read oldest-first, so an older
+    # email that merely CITES a case would otherwise shadow the newer alert that
+    # actually lists it — and the mangled scan name would stick.
+    by_cand = {}
     for body in bodies:
         for it in parse_alert(body):
-            if it["id"] not in seen:
-                seen.add(it["id"])
-                candidates.append(it)
+            prev = by_cand.get(it["id"])
+            if prev is None or (prev.get("via") != "link" and it.get("via") == "link"):
+                by_cand[it["id"]] = it
+    candidates = list(by_cand.values())
     log(f"candidates parsed: {len(candidates)}")
 
     # in-scope + new (not already in the library)
-    kept = []
+    pending_ids = {p.get("id") for p in pending if p.get("id")}
+    kept, screened, blocked_hits = [], [], []
     for it in candidates:
+        if it["id"] in blocked:
+            blocked_hits.append(it["id"])
+            log("  " + blocked_line(blocked[it["id"]], it))
+            continue
         ok, why = in_scope(it)
         if not ok:
             log(f"  skip {it['id']} ({it['citation']}): {why}")
+            # A judgement-call drop (HANDOFF 7.3) is collected so it can be LISTED
+            # in this run's email. The scope filter is allowed to be wrong; it is
+            # not allowed to be silent. Items already in the library or already on
+            # the watchlist are excluded — nothing was taken away from him.
+            if (_screened_out(why) and it["id"] not in existing_ids
+                    and it["id"] not in pending_ids):
+                screened.append({"caseName": it.get("caseName", ""),
+                                 "citation": it["citation"],
+                                 "courtTag": it["courtTag"], "why": why})
             continue
         if it["id"] in existing_ids:
             continue
@@ -970,6 +1320,13 @@ def main():
         prev = work.get(it["id"], {})
         it["firstSeen"] = prev.get("firstSeen", now_iso())
         it["notified"] = prev.get("notified", False)   # carry forward so we email each case ONCE
+        it["heldNotified"] = prev.get("heldNotified", False)
+        # provenance is monotonic: a later alert that merely CITES a case must not
+        # downgrade a record that arrived as a real entry link.
+        if prev.get("via") == "link" and it.get("via") != "link":
+            it["via"] = "link"
+            it["caseName"] = prev.get("caseName") or it["caseName"]
+            it["nameSuspect"] = bool(prev.get("nameSuspect"))
         work[it["id"]] = it
     for p in work.values():
         p.setdefault("firstSeen", now_iso())
@@ -990,8 +1347,16 @@ def main():
     if submissions:
         log(f"email submissions accepted: {len(submissions)}")
 
+    # Never-add blocklist at the choke point: whatever its source (fresh alert or a
+    # stale record re-loaded from state.json), a blocked id now reaches neither
+    # analyse(), nor cases.json, nor the pending queue — so it stops being retried
+    # forever. Judgments emailed in by hand are exempt (see drop_blocked).
+    for it in drop_blocked(work, blocked):
+        blocked_hits.append(it["id"])
+        log("  " + blocked_line(blocked[it["id"]], it))
+
     client = get_client() if work else None
-    new_cases, unresolved, gave_up, errors, processed_now = [], [], [], [], []
+    new_cases, unresolved, gave_up, errors, processed_now, held = [], [], [], [], [], []
     for it in work.values():
         try:
             # Full text comes ONLY from the openly-licensed Open Australian Legal
@@ -1011,6 +1376,23 @@ def main():
                     unresolved.append(it)
                     log(f"  pending {it['id']} ({it['citation']}): full text not retrievable yet ({age:.0f}d)")
                 continue
+            # HANDOFF 7.4 — the last checkpoint before unreviewed publication.
+            # Deliberately AFTER the text resolved and BEFORE any model spend, so
+            # it fires only on the genuinely dangerous case (a judgment we COULD
+            # have shipped) and stays silent on the hundreds of WA/recent items the
+            # corpus cannot resolve. A hold is NOT a drop: the item goes back on the
+            # durable queue and into the watchlist email carrying its reason, and it
+            # is never routed to gave_up — ageing out would ERASE it from state.json
+            # on a run that may send no email at all.
+            ok_auto, hold_why = auto_analysis_ok(it)
+            if not ok_auto:
+                it["holdReason"] = hold_why
+                held.append(it)
+                unresolved.append(it)
+                log(f"  HELD {it['id']} ({it['citation']}): {hold_why} "
+                    f"— watchlist only, not auto-analysed")
+                continue
+            it.pop("holdReason", None)
             truncated = len(text) > MAX_JUDGMENT_CHARS
             if truncated:
                 text = text[:MAX_JUDGMENT_CHARS]
@@ -1035,7 +1417,13 @@ def main():
 
     # Watchlist: surface newly-detected in-scope cases we couldn't full-text yet,
     # exactly once each (the "notified" flag prevents re-emailing on every run).
-    to_notify = [w for w in unresolved if not w.get("notified")]
+    # Two distinct events deserve one email each: DISCOVERY (this case exists) and
+    # HOLD (we have its full text and declined to publish it). A hold usually lands
+    # on a later run than the discovery, so keying only on `notified` would make it
+    # silent — and a hold is exactly the thing he may want to overrule.
+    to_notify = [w for w in unresolved
+                 if not w.get("notified")
+                 or (w.get("holdReason") and not w.get("heldNotified"))]
 
     if new_cases:
         # replace-by-id (an email submission can re-supply a case already in the
@@ -1049,6 +1437,8 @@ def main():
 
     for w in to_notify:
         w["notified"] = True
+        if w.get("holdReason"):
+            w["heldNotified"] = True
     processed = (processed + processed_now)[-300:]   # bound growth; IMAP lookback is short
     save_state([_pending_record(w) for w in unresolved], processed)
 
@@ -1060,6 +1450,8 @@ def main():
         "alerts": len(bodies), "candidates": len(candidates), "inScope": len(kept),
         "analysed": len(new_cases), "watchlist": len(to_notify),
         "pending": len(unresolved), "errors": len(errors), "gaveUp": len(gave_up),
+        "held": len(held), "blocked": len(set(blocked_hits)),
+        "screened": len(screened), "screenedItems": screened,
     }
 
     if new_cases:
@@ -1067,7 +1459,7 @@ def main():
     if to_notify:
         send_watchlist_email(user, password, to_notify, stats)
     if not new_cases and not to_notify:
-        if errors or gave_up:
+        if errors or gave_up or screened or blocked_hits:
             try:
                 send_health_email(user, password, stats, errors, gave_up)
                 log("health notice sent (errors / gave-up on an otherwise quiet run)")
@@ -1077,7 +1469,8 @@ def main():
             log("nothing new — no email (no spam on quiet days)")
 
     log(f"RUN SUMMARY: alerts={len(bodies)} candidates={len(candidates)} new={len(new_cases)} "
-        f"notified={len(to_notify)} pending={len(unresolved)} gave_up={len(gave_up)} "
+        f"notified={len(to_notify)} held={len(held)} screened={len(screened)} "
+        f"blocked={len(set(blocked_hits))} pending={len(unresolved)} gave_up={len(gave_up)} "
         f"ingested={len(processed_now)} errors={len(errors)} pushed={pushed}")
 
 
@@ -1086,8 +1479,11 @@ def _pending_record(it):
         "id": it["id"], "citation": it["citation"], "courtTag": it["courtTag"],
         "year": it["year"], "num": it["num"], "caseName": it.get("caseName", ""),
         "jadeUrl": it.get("jadeUrl", ""), "blurb": it.get("blurb", ""),
+        "via": it.get("via", ""), "nameSuspect": bool(it.get("nameSuspect", False)),
         "firstSeen": it.get("firstSeen", now_iso()),
         "notified": bool(it.get("notified", False)),
+        "holdReason": it.get("holdReason", ""),
+        "heldNotified": bool(it.get("heldNotified", False)),
     }
 
 
