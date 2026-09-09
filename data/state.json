@@ -9,8 +9,12 @@
       "caseName": "Mehrabi v The State of Western Australia",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1242104&pid=110765140&h=1253676163",
       "blurb": "Mehrabi v The State of Western Australia [2026] WASCA 111",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-11T19:56:18.319092+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "hca-2026-29",
@@ -21,8 +25,12 @@
       "caseName": "The King v Ko",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1242335&pid=110850147&h=177104928",
       "blurb": "The King v Ko [2026] HCA 29",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-12T19:57:18.385456+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "hca-2026-28",
@@ -33,8 +41,12 @@
       "caseName": "Farrugia v The King",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1242334&pid=110850147&h=177104928",
       "blurb": "Farrugia v The King [2026] HCA 28",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-12T19:57:18.385458+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-331",
@@ -45,8 +57,12 @@
       "caseName": "Stack v WA Police",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1243094&pid=110939085&h=187281235",
       "blurb": "Stack v WA Police [2026] WASC 331",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-13T19:52:42.514261+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-333",
@@ -57,8 +73,12 @@
       "caseName": "The State of Western Australia v TJD [No 2]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1243754&pid=111021010&h=835626332",
       "blurb": "The State of Western Australia v TJD [No 2] [2026] WASC 333",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-14T19:42:37.527174+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-339",
@@ -69,8 +89,12 @@
       "caseName": "The State of Western Australia v Hill [No 3]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1244516&pid=111104084&h=1780251964",
       "blurb": "The State of Western Australia v Hill [No 3] [2026] WASC 339",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-17T19:21:16.034338+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-343",
@@ -81,8 +105,12 @@
       "caseName": "KHUU",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1245107&pid=111172380&h=683027049",
       "blurb": "KHUU [2026] WASC 343",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-19T04:38:06.048787+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-341",
@@ -93,8 +121,12 @@
       "caseName": "The State of Western Australia v Van Beek [No 2]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1244974&pid=111172380&h=683027049",
       "blurb": "The State of Western Australia v Van Beek [No 2] [2026] WASC 341",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-19T04:38:06.048790+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-115",
@@ -105,8 +137,12 @@
       "caseName": "Nicoletti v The State of Western Australia",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1245705&pid=111258960&h=583172634",
       "blurb": "Nicoletti v The State of Western Australia [2026] WASCA 115",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-20T04:38:28.420247+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-116",
@@ -117,8 +153,12 @@
       "caseName": "Downes v The State of Western Australia [No 3]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1246262&pid=111348101&h=287113464",
       "blurb": "Downes v The State of Western Australia [No 3] [2026] WASCA 116",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-20T19:24:43.085476+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-114",
@@ -129,8 +169,12 @@
       "caseName": "Frigger v The State of Western Australia",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1246164&pid=111348101&h=287113464",
       "blurb": "Frigger v The State of Western Australia [2026] WASCA 114",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-20T19:24:43.085480+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-113",
@@ -141,8 +185,12 @@
       "caseName": "Suppressed",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1246670&pid=111435448&h=268746285",
       "blurb": "Suppressed [2026] WASCA 113",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-22T04:33:53.192516+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-346",
@@ -153,8 +201,12 @@
       "caseName": "The State of Western Australia v Hoskin [No 4]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1246827&pid=111435448&h=268746285",
       "blurb": "The State of Western Australia v Hoskin [No 4] [2026] WASC 346",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-22T04:33:53.192518+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "hcasj-2026-28",
@@ -165,8 +217,12 @@
       "caseName": "Date of Judgment: 24 August 2026",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1247323&pid=111529014&h=1000287052",
       "blurb": "Date of Judgment: 24 August 2026 [2026] HCASJ 28",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-25T04:40:10.974139+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-351",
@@ -177,8 +233,12 @@
       "caseName": "The State of Western Australia v KPB [No 5]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1247383&pid=111529014&h=1000287052",
       "blurb": "The State of Western Australia v KPB [No 5] [2026] WASC 351",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-25T04:40:10.974147+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-355",
@@ -189,8 +249,12 @@
       "caseName": "The State of Western Australia v Moussa [No 3]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1248375&pid=111615009&h=312802587",
       "blurb": "The State of Western Australia v Moussa [No 3] [2026] WASC 355",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-25T19:24:49.032716+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-359",
@@ -201,8 +265,12 @@
       "caseName": "Wood v WA Police",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1248737&pid=111701316&h=697824828",
       "blurb": "Wood v WA Police [2026] WASC 359",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-26T21:31:28.376447+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-356",
@@ -213,8 +281,12 @@
       "caseName": "DJF v Director of Public Prosecutions",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1249000&pid=111701316&h=697824828",
       "blurb": "DJF v Director of Public Prosecutions [2026] WASC 356",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-26T21:31:28.376451+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-354",
@@ -225,8 +297,12 @@
       "caseName": "The State of Western Australia v Paraha [No 2]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1249298&pid=111788806&h=722399262",
       "blurb": "The State of Western Australia v Paraha [No 2] [2026] WASC 354",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-27T20:08:05.636953+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-123",
@@ -237,8 +313,12 @@
       "caseName": "Rose v The State of Western Australia",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1250090&pid=111875186&h=1694066427",
       "blurb": "Rose v The State of Western Australia [2026] WASCA 123",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-28T21:03:53.976371+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-120",
@@ -249,8 +329,12 @@
       "caseName": "Di Ciano v The State of Western Australia",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1249835&pid=111875186&h=1694066427",
       "blurb": "Di Ciano v The State of Western Australia [2026] WASCA 120",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-28T21:03:53.976372+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-117",
@@ -261,8 +345,12 @@
       "caseName": "Le v The King",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1249830&pid=111875186&h=1694066427",
       "blurb": "Le v The King [2026] WASCA 117",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-28T21:03:53.976373+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-366",
@@ -273,8 +361,12 @@
       "caseName": "Bin Saad v WA Police",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1250026&pid=111875186&h=1694066427",
       "blurb": "Bin Saad v WA Police [2026] WASC 366",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-28T21:03:53.976375+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-364",
@@ -285,8 +377,12 @@
       "caseName": "Wilkinson v WA Police",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1250122&pid=111875186&h=1694066427",
       "blurb": "Wilkinson v WA Police [2026] WASC 364",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-28T21:03:53.976376+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-362",
@@ -297,8 +393,12 @@
       "caseName": "Minchin v Director of Public Prosecutions",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1250124&pid=111875186&h=1694066427",
       "blurb": "Minchin v Director of Public Prosecutions [2026] WASC 362",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-28T21:03:53.976377+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-122",
@@ -309,8 +409,12 @@
       "caseName": "Lagdon v The State of Western Australia",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1250556&pid=111968912&h=1164120100",
       "blurb": "Lagdon v The State of Western Australia [2026] WASCA 122",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-31T23:04:29.220882+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-121",
@@ -321,8 +425,12 @@
       "caseName": "The State of Western Australia v Matanga",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1250519&pid=111968912&h=1164120100",
       "blurb": "The State of Western Australia v Matanga [2026] WASCA 121",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-31T23:04:29.220884+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-119",
@@ -333,8 +441,12 @@
       "caseName": "Suppressed",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1250066&pid=111968912&h=1164120100",
       "blurb": "Suppressed [2026] WASCA 119",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-08-31T23:04:29.220886+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-369",
@@ -345,8 +457,12 @@
       "caseName": "NICHOLAS NI KOK CHIN",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1251446&pid=112055701&h=1330805862",
       "blurb": "NICHOLAS NI KOK CHIN [2026] WASC 369",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-09-01T21:31:07.941419+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-126",
@@ -357,8 +473,12 @@
       "caseName": "Cooper v The State of Western Australia",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1252203&pid=112222590&h=457018397",
       "blurb": "Cooper v The State of Western Australia [2026] WASCA 126",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-09-03T21:31:55.353384+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "hcasj-2026-30",
@@ -369,8 +489,12 @@
       "caseName": "Date of Judgment: 4 September 2026",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1253028&pid=112313675&h=1447015744",
       "blurb": "Date of Judgment: 4 September 2026 [2026] HCASJ 30",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-09-04T21:09:55.685181+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-129",
@@ -381,8 +505,12 @@
       "caseName": "MRV v SNW [No 2]",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1252995&pid=112313675&h=1447015744",
       "blurb": "MRV v SNW [No 2] [2026] WASCA 129",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-09-04T21:09:55.685187+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-128",
@@ -393,8 +521,12 @@
       "caseName": "Malone Darcy Fleming (a pseudonym) v The State of Western Australia",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1252997&pid=112313675&h=1447015744",
       "blurb": "Malone Darcy Fleming (a pseudonym) v The State of Western Australia [2026] WASCA 128",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-09-04T21:09:55.685188+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasca-2026-127",
@@ -405,8 +537,12 @@
       "caseName": "Suppressed",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1253140&pid=112313675&h=1447015744",
       "blurb": "Suppressed [2026] WASCA 127",
+      "via": "",
+      "nameSuspect": false,
       "firstSeen": "2026-09-04T21:09:55.685190+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-380",
@@ -417,8 +553,12 @@
       "caseName": "The State of Western Australia v Blurton",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1254349&pid=112497910&h=1719849805",
       "blurb": "The State of Western Australia v Blurton [2026] WASC 380",
+      "via": "link",
+      "nameSuspect": false,
       "firstSeen": "2026-09-08T21:31:30.840225+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     },
     {
       "id": "wasc-2026-377",
@@ -429,10 +569,18 @@
       "caseName": "Suppressed",
       "jadeUrl": "https://jade.io/viewArticle.html?aid=1254148&pid=112497910&h=1719849805",
       "blurb": "Suppressed [2026] WASC 377",
+      "via": "link",
+      "nameSuspect": false,
       "firstSeen": "2026-09-08T21:31:30.840227+00:00",
-      "notified": true
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     }
   ],
   "processed": [],
-  "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 30 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). Written by pipeline/update.py."
+  "screenedSeen": [
+    "wasc-2026-376",
+    "wasc-2026-372"
+  ],
+  "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
