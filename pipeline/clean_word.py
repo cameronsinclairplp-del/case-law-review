@@ -39,7 +39,14 @@ from pathlib import Path
 
 CITATION_RE = re.compile(r"\[(\d{4})\]\s*([A-Za-z]{2,8})\s*(\d+)")
 BIDI = "‎‏​﻿"
-TAG_LINE = re.compile(r"^</?[A-Z]{2,5}>$")                    # <CRJ> / </CRJ>
+TAG_LINE = re.compile(r"^</?[A-Z]{2,5}>$")                    # <CRJ> / </CRJ> on its own line
+# ...and the same pseudo-tags welded to the end (or start) of a text line, which
+# is how eCourts actually emits the closing one: [2019] WASC 84 arrived with
+# "... v Staniforth-Smith [2014] WASCA 170</CRJ>" as the last "cases referred to"
+# entry, and the line-only rule above sailed past it into the verbatim text (found
+# by the case audit, 09/09/2026). No judgment prose contains <XX>-shaped markup,
+# so stripping it anywhere on a line is safe.
+TAG_INLINE = re.compile(r"</?[A-Z]{2,5}>")
 PAGE_FIELD = re.compile(r"^PAGE \d+\.?$", re.I)               # HCA Word page fields
 FOOTNOTE_CONT = re.compile(r"^\(Footnote continues on next page\)$", re.I)
 DIGEST = re.compile(r"CaseBase|Catchwords\s*&\s*Digest", re.I)
@@ -72,6 +79,7 @@ def clean(text: str) -> str:
         s = ln.strip()
         if TAG_LINE.match(s) or PAGE_FIELD.match(s) or FOOTNOTE_CONT.match(s):
             continue
+        ln = TAG_INLINE.sub("", ln).rstrip()
         out.append(ln)
     s = "\n".join(out)
     s = re.sub(r"\n{3,}", "\n\n", s).strip() + "\n"

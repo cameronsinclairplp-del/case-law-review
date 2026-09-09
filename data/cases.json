@@ -269,6 +269,39 @@
     }
   },
   {
+    "id": "wasc-2019-84",
+    "date": "2019-03-05",
+    "court": "Supreme Court of Western Australia",
+    "courtTag": "WASC",
+    "caseName": "Johnson v Ramsden",
+    "citation": "[2019] WASC 84",
+    "decided": "05/03/2019",
+    "appealFrom": "Magistrates Court of Western Australia (Magistrate M RIDLEY), PH 137 of 2018",
+    "outcome": "Leave to appeal refused; appeal dismissed. The acquittal stands.",
+    "weight": "Single-judge Supreme Court decision on appeal from the Magistrates Court; persuasive and directly on point for indecent assault charges involving the buttocks, applying binding authority (Drago) and recent Court of Appeal authority (HTD).",
+    "tags": [
+      "indecent assault",
+      "s 323 Criminal Code",
+      "indecency",
+      "sexual connotation",
+      "motive and intent",
+      "community standards",
+      "buttocks",
+      "appeal from Magistrates Court"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "Whether an assault is indecent turns on the nature and location of the touch plus the actor's motive and context — buttocks are not inherently sexual, so a non-sexual pinch to provoke a photo reaction was not indecent.",
+    "whatHappened": "On 08/12/2017, at a charity wheelchair basketball event at Wanangkura Stadium, South Hedland, the respondent RAMSDEN — a police officer — ran into a group photo, then pinched the complainant on the side of her right buttock while saying words to the effect of 'I hope you take this the right way'. It was common ground the act was an unlawful assault; the only issue was whether it was <b>indecent</b> under <i>s 323 of the Criminal Code</i>. The prosecution accepted RAMSDEN had no sexual motive, intending only a misguided attempt at humour to provoke a startled reaction for the photo. On 29/03/2018 Magistrate RIDLEY acquitted him after a two-day trial, finding the touch (a pinch to the side of the buttock, not a full cupped grab) was capable of being indecent but was not inherently so, and on the facts was inappropriate but not indecent. The prosecution appealed.",
+    "whatHeld": "SMITH J refused leave to appeal and dismissed the appeal. <b>'Indecent' is not defined in the Code; whether an assault is indecent is a question of fact for the trier of fact, requiring a sexual character or connotation.</b> Some body parts (breasts, vagina, penis, testicles, anus) are inherently sexual so that touching them, without explanation, is indecent regardless of motive. <b>The buttocks are not such a part</b> — there is no authority that any touch of the buttocks carries a sexual connotation. Where an act is not inherently sexual, <b>the motive, purpose and surrounding circumstances (nature and location of the touch) are relevant to whether it is indecent</b> (following Drago, Harkin, Court, Gillespie, HTD). The magistrate correctly asked 'why did he do it?' and, with the prosecution not contesting the innocent explanation, was entitled to find the pinch inappropriate but not indecent. Appellate courts should be reluctant to interfere with a magistrate's assessment of community standards. There was no evidence the 'Me Too' movement had changed what the law deems indecent.",
+    "whatItMeans": "When you are assessing a possible indecent assault under <i>s 323</i>, <b>identify the body part touched</b>. Touching of genitals, anus, or a female breast is inherently sexual — you do not need to prove a sexual motive. For <b>other areas, including the buttocks, the touch is NOT automatically indecent</b>. You must build evidence of the <b>surrounding circumstances, the nature and location of the touch, and the suspect's motive or purpose</b> to establish a sexual connotation. Do not assume a grab or pinch of the buttocks is indecent on its own. <b>Gather and preserve context evidence</b> — CCTV, phone footage, witness accounts, and anything showing intent — because the physical exhibits may be treated as more reliable than memories, and the location of the touch (e.g. side of buttock vs full grab) can be decisive. If the person offers an innocent explanation, test it hard and gather material to rebut it, because an uncontested innocent explanation can defeat the indecency element. Note the buttocks are 'private parts' under the <i>Criminal Investigation (Identifying People) Act 2002</i>, but that definition does not make touching them indecent.",
+    "verdict": "ACTION — it changes what you gather before you charge: for the buttocks, or any other body part that is not inherently sexual, indecency under <i>s 323 of the Criminal Code</i> is not automatic, so you must evidence the nature and location of the touch, the surrounding circumstances and the suspect's motive or purpose, and test any innocent explanation hard, because an uncontested one defeats the element.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2019/84.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2019/WASC/84",
+    "files": {
+      "llm": "data/files/wasc-2019-84/wasc-2019-84.md"
+    }
+  },
+  {
     "id": "wasca-2017-141",
     "date": "2017-04-12",
     "court": "Supreme Court of WA — Court of Appeal",

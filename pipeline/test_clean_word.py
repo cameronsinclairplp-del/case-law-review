@@ -47,6 +47,30 @@ def test_strips_artifacts_keeps_prose():
     assert "WHITBY J: The respondent was sentenced in 2027 hypothetically." in out
 
 
+def test_strips_a_pseudo_tag_welded_to_a_text_line():
+    # Regression, [2019] WASC 84: eCourts closed the "cases referred to" block by
+    # appending </CRJ> to the LAST ENTRY rather than putting it on its own line, so
+    # the whole-line rule missed it and the tag reached the verbatim judgment.
+    out = cw.clean(
+        "<CRJ>\n"
+        "Drago v The Queen (1992) 8 WAR 488\n"
+        "The State of Western Australia v Staniforth-Smith [2014] WASCA 170</CRJ>\n"
+        "SMITH J: The appellant seeks leave to appeal.\n")
+    assert "CRJ" not in out                                     # no tag anywhere, welded or not
+    assert "The State of Western Australia v Staniforth-Smith [2014] WASCA 170\n" in out
+    assert "Drago v The Queen (1992) 8 WAR 488" in out          # the list itself survives
+    assert "SMITH J: The appellant seeks leave to appeal." in out
+
+
+def test_inline_tag_strip_leaves_prose_punctuation_alone():
+    # The inline rule must not eat ordinary angle brackets or lower-case markup-ish
+    # text that can legitimately appear in judgment prose.
+    out = cw.clean("The ratio was expressed as x < y > z in the expert report.\n"
+                   "An email header read <not a tag> and stays.\n")
+    assert "x < y > z" in out
+    assert "<not a tag>" in out
+
+
 def test_idempotent_on_clean_text():
     once = cw.clean(SYNTH)
     assert cw.clean(once) == once
