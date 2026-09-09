@@ -209,22 +209,6 @@
       "heldNotified": false
     },
     {
-      "id": "hcasj-2026-28",
-      "citation": "[2026] HCASJ 28",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "28",
-      "caseName": "Date of Judgment: 24 August 2026",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1247323&pid=111529014&h=1000287052",
-      "blurb": "Date of Judgment: 24 August 2026 [2026] HCASJ 28",
-      "via": "",
-      "nameSuspect": false,
-      "firstSeen": "2026-08-25T04:40:10.974139+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false
-    },
-    {
       "id": "wasc-2026-351",
       "citation": "[2026] WASC 351",
       "courtTag": "WASC",
@@ -476,22 +460,6 @@
       "via": "",
       "nameSuspect": false,
       "firstSeen": "2026-09-03T21:31:55.353384+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false
-    },
-    {
-      "id": "hcasj-2026-30",
-      "citation": "[2026] HCASJ 30",
-      "courtTag": "HCASJ",
-      "year": "2026",
-      "num": "30",
-      "caseName": "Date of Judgment: 4 September 2026",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1253028&pid=112313675&h=1447015744",
-      "blurb": "Date of Judgment: 4 September 2026 [2026] HCASJ 30",
-      "via": "",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-04T21:09:55.685181+00:00",
       "notified": true,
       "holdReason": "",
       "heldNotified": false
