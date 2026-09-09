@@ -233,9 +233,14 @@
   }
 
   /* ---------- shared bits ---------- */
+  // Three states, not two. A case added as full text only (pipeline/add_text.py)
+  // has no relevance yet — showing it as "Awareness" would assert a call nobody
+  // made, so it gets its own quiet badge until someone writes it up.
   function badge(rel) {
-    var action = String(rel || '').toUpperCase() === 'ACTION';
-    return h('span', { class: 'badge ' + (action ? 'badge--action' : 'badge--awareness') }, action ? 'Action' : 'Awareness');
+    var r = String(rel || '').toUpperCase();
+    if (r === 'ACTION') return h('span', { class: 'badge badge--action' }, 'Action');
+    if (r === 'AWARENESS') return h('span', { class: 'badge badge--awareness' }, 'Awareness');
+    return h('span', { class: 'badge badge--fulltext' }, 'Full text');
   }
   function tagPills(tags) {
     return (Array.isArray(tags) ? tags : []).map(function (t) { return h('span', { class: 'tag', text: t }); });

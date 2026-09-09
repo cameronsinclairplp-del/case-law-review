@@ -36,3 +36,4 @@ jobs:
         run: |
           python pipeline/test_update.py
           python pipeline/test_clean_word.py
+          python pipeline/test_add_text.py

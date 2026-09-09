@@ -378,6 +378,12 @@ button {
 .badge--awareness { border: 1px solid var(--sagedeep); color: var(--sagetext); }
 .badge--awareness::before { box-shadow: inset 0 0 0 1.5px var(--sagedeep); }
 
+/* Full text, not yet written up (pipeline/add_text.py). Deliberately the quietest
+   of the three — it is the absence of a call, not a third kind of call. --muted is
+   the AA-cleared secondary ink, so it stays legible without competing. */
+.badge--fulltext { border: 1px dashed var(--hair-strong); color: var(--muted); }
+.badge--fulltext::before { box-shadow: inset 0 0 0 1.5px var(--hair-strong); }
+
 .tag {
   display: inline-flex;
   align-items: center;
