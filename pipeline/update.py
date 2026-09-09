@@ -295,21 +295,27 @@ def load_state():
     s.setdefault("processed", [])
     if not isinstance(s["processed"], list):
         s["processed"] = []
+    s.setdefault("screenedSeen", [])
+    if not isinstance(s["screenedSeen"], list):
+        s["screenedSeen"] = []
     return s
 
 
-def save_state(pending, processed=None):
+def save_state(pending, processed=None, screened_seen=None):
     # Stable key order + only the durable queue/log -> byte-identical when unchanged,
     # so quiet runs produce no commit (no empty-commit churn).
     STATE_PATH.write_text(
         json.dumps({
             "pending": pending,
             "processed": processed or [],
+            "screenedSeen": screened_seen or [],
             "note": ("Durable retry queue: cases seen in a Jade alert whose judgment "
                      "wasn't yet published. Retried every run until resolved or aged out "
                      f"(> {PENDING_MAX_DAYS} days). 'processed' = Message-IDs of judgment "
-                     "emails already ingested (see fetch_submissions). Written by "
-                     "pipeline/update.py."),
+                     "emails already ingested (see fetch_submissions). 'screenedSeen' = "
+                     "ids already named in a 'screened out' email, so each is reported "
+                     "ONCE rather than on every run its alert stays in the IMAP window. "
+                     "Written by pipeline/update.py."),
         }, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8")
 
@@ -1263,6 +1269,7 @@ def main():
     state = load_state()
     pending = state.get("pending", [])
     processed = state.get("processed", [])
+    screened_seen = state.get("screenedSeen", [])
     existing = load_cases()
     existing_ids = {c.get("id") for c in existing}
     blocked = load_blocklist()          # data/blocklist.json — ids never to add
@@ -1301,9 +1308,14 @@ def main():
             # in this run's email. The scope filter is allowed to be wrong; it is
             # not allowed to be silent. Items already in the library or already on
             # the watchlist are excluded — nothing was taken away from him.
+            # Reported ONCE per id (screenedSeen): with LOOKBACK_DAYS = 3 and three
+            # runs a day the same alert is re-read up to nine times, and a list that
+            # reprints nine times is a list he stops reading — which would defeat the
+            # only safety net the WASC rule has.
             if (_screened_out(why) and it["id"] not in existing_ids
-                    and it["id"] not in pending_ids):
-                screened.append({"caseName": it.get("caseName", ""),
+                    and it["id"] not in pending_ids
+                    and it["id"] not in screened_seen):
+                screened.append({"id": it["id"], "caseName": it.get("caseName", ""),
                                  "citation": it["citation"],
                                  "courtTag": it["courtTag"], "why": why})
             continue
@@ -1440,7 +1452,8 @@ def main():
         if w.get("holdReason"):
             w["heldNotified"] = True
     processed = (processed + processed_now)[-300:]   # bound growth; IMAP lookback is short
-    save_state([_pending_record(w) for w in unresolved], processed)
+    screened_seen = (screened_seen + [s["id"] for s in screened])[-500:]
+    save_state([_pending_record(w) for w in unresolved], processed, screened_seen)
 
     label = (f"Pipeline: add {len(new_cases)} case(s)" if new_cases
              else "Pipeline: update watchlist/queue")

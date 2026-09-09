@@ -611,6 +611,33 @@ def test_shipped_blocklist_is_present_valid_and_blocks_no_real_case():
         assert cid not in loaded, f"blocklist wrongly blocks a genuine criminal case: {cid}"
 
 
+def test_screened_seen_round_trips_so_a_drop_is_reported_once():
+    """The 'screened out' email is the ONLY safety net for the WASC positive-signal
+    rule, so it must be read. With LOOKBACK_DAYS = 3 and three runs a day the same
+    alert is re-read up to nine times; without screenedSeen the same names reprint
+    in up to nine consecutive emails and become noise. Lock the round-trip."""
+    import tempfile, pathlib as _pl
+    with tempfile.TemporaryDirectory() as d:
+        orig = u.STATE_PATH
+        try:
+            u.STATE_PATH = _pl.Path(d) / "state.json"
+            # a fresh/absent state still exposes the key, defaulted
+            assert u.load_state()["screenedSeen"] == []
+            u.save_state([], ["<msg@id>"], ["wasc-2026-999", "hcasj-2026-99"])
+            back = u.load_state()
+            assert back["screenedSeen"] == ["wasc-2026-999", "hcasj-2026-99"]
+            assert back["processed"] == ["<msg@id>"]
+            # byte-stable when nothing changed -> quiet runs make no commit
+            first = u.STATE_PATH.read_bytes()
+            u.save_state([], ["<msg@id>"], ["wasc-2026-999", "hcasj-2026-99"])
+            assert u.STATE_PATH.read_bytes() == first
+            # a legacy state.json with no screenedSeen key must not crash
+            u.STATE_PATH.write_text('{"pending": [], "processed": []}', encoding="utf-8")
+            assert u.load_state()["screenedSeen"] == []
+        finally:
+            u.STATE_PATH = orig
+
+
 # ---------------------------------------------------------------------------
 # small regression locks for adjacent helpers
 # ---------------------------------------------------------------------------
