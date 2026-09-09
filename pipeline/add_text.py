@@ -55,6 +55,11 @@ FILENAME_CITE_RE = re.compile(r"(\d{4})\s*(WASCA|WASC|HCASJ|HCA|NTSC|NTCCA|QCA|T
 CITATION_LINE_RE = re.compile(r"^\s*CITATION\s*:\s*(.+?)\s*$", re.M)
 # "DELIVERED : 5 MARCH 2019"  (prefer DELIVERED over HEARD/PUBLISHED)
 DELIVERED_RE = re.compile(r"^\s*DELIVERED\s*:\s*(\d{1,2})\s+([A-Z]+)\s+(\d{4})\s*$", re.M | re.I)
+# The High Court's own template instead says "Date of Judgment: 12 August 2026"
+# (and "Date of Hearing:" above it, which must NOT be taken). Without this an HCA
+# case falls back to a year-only date and sorts to the wrong end of the library.
+HCA_JUDGMENT_DATE_RE = re.compile(
+    r"^\s*Date of Judgment\s*:\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})\s*$", re.M | re.I)
 MONTHS = {m: i for i, m in enumerate(
     ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY",
      "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"], 1)}
@@ -176,7 +181,7 @@ def decided_from_text(text):
     """DD/MM/YYYY from the header's DELIVERED line, or "" if it isn't there.
     The delivered date is what the library sorts on; a missing one falls back to
     the citation year rather than being invented."""
-    m = DELIVERED_RE.search(text[:4000])
+    m = DELIVERED_RE.search(text[:4000]) or HCA_JUDGMENT_DATE_RE.search(text[:4000])
     if not m:
         return ""
     mon = MONTHS.get(m.group(2).upper())

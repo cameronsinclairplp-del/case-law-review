@@ -137,6 +137,25 @@ def test_decided_reads_a_two_digit_day_and_every_month():
         assert got == f"17/{num}/2026", (mon, got)
 
 
+def test_decided_reads_the_high_courts_own_template():
+    """The HCA does not use the WA "DELIVERED :" line — it writes
+    "Date of Judgment: 12 August 2026", with "Date of Hearing:" ABOVE it. Taking
+    the hearing date would misdate the case and sort it wrongly in the library."""
+    hca = ("HIGH COURT OF AUSTRALIA\n"
+           "Farrugia v The King\n[2026] HCA 28\n"
+           "Date of Hearing: 11 February 2026\n"
+           "Date of Judgment: 12 August 2026\n"
+           "S139/2025\n")
+    assert A.decided_from_text(hca) == "12/08/2026"
+
+
+def test_wa_delivered_still_wins_over_the_hca_pattern():
+    both = ("CITATION\t:\tX -v- Y [2019] WASC 84\n"
+            "DELIVERED\t:\t5 MARCH 2019\n"
+            "Date of Judgment: 1 January 2020\n")
+    assert A.decided_from_text(both) == "05/03/2019"
+
+
 def test_decided_is_empty_rather_than_guessed():
     assert A.decided_from_text("DELIVERED\t:\tsome time in 2019\n") == ""
     assert A.decided_from_text("no delivered line\n") == ""
