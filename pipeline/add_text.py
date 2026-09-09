@@ -127,6 +127,27 @@ def titlecase_party(raw):
     return re.sub(r"\s+", " ", s).strip()
 
 
+def name_from_watchlist(cid):
+    """The case name the Jade ALERT already recorded for this id, out of
+    data/state.json's pending queue.
+
+    Preferred over anything derived from the judgment, because Jade's name is
+    properly cased by a publisher while an eCourts header shouts everything and
+    forces titlecase_party to guess whether "ROE" is a surname or initials (it is
+    a surname; it guessed initials). Not a guess either way — this is the name the
+    pipeline was already showing Cameron in his watchlist email."""
+    try:
+        state = json.loads((P.DATA / "state.json").read_text(encoding="utf-8"))
+    except Exception:
+        return ""
+    for row in state.get("pending", []):
+        if row.get("id") == cid:
+            n = str(row.get("caseName") or "").strip()
+            if n and n != "(case name pending)" and P._looks_like_case_name(n):
+                return n
+    return ""
+
+
 def name_from_filename(path, citation):
     """Last resort: the case name out of the FILE NAME Cameron saved, e.g.
     "Crowe v Graham [1968] HCA 6 - BarNet Jade - BarNet Jade.pdf" -> "Crowe v Graham".
@@ -250,7 +271,9 @@ def add_one(path, citation, case_name, source):
     if not m:
         raise ValueError(f"no medium-neutral citation in {citation!r}")
     text = load_clean_text(path, citation)
-    name = case_name or name_from_text(text, citation) or name_from_filename(path, citation)
+    cid = id_for_citation(citation)
+    name = (case_name or name_from_watchlist(cid)
+            or name_from_text(text, citation) or name_from_filename(path, citation))
     item = P._item_from_match(m, name or "", "", name or "", via="submission")
     if item["courtTag"] not in P.COURTS:
         raise ValueError(f"court {item['courtTag']} is not in COURTS")
@@ -283,6 +306,8 @@ def main():
         if not d.is_dir():
             P.die(f"--batch {d} is not a directory")
         for f in sorted(d.iterdir()):
+            if f.name.startswith("~$") or f.name.startswith("."):
+                continue          # Word lock/owner files (~$foo.docx) and dotfiles
             if f.suffix.lower() not in (".doc", ".docx", ".rtf", ".txt", ".pdf"):
                 continue
             cite = citation_from_filename(f)
