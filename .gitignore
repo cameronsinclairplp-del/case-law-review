@@ -26,3 +26,7 @@ pipeline/.env
 
 # Judgment source files (copyright — never publish; used locally for ingest)
 /Cases/
+
+# Personal study notes (kept out of the public repo)
+/MUST-KNOW-CASES.md
+/HANDOFF-COWORK.md
