@@ -65,8 +65,9 @@ JADE_TITLE = re.compile(r"^.{3,120}\s[-–]\s\[\d{4}\]\s*[A-Z]{2,8}\s*\d+$")
 # Attribution table, which pdftotext emits BETWEEN a header label and its value.
 JADE_ATTR_START = re.compile(r"^Attribution$")
 JADE_ATTR_LINE = re.compile(
-    r"^(?:Original court site URL:|Content received from|court:|Download/print date:"
-    r"|file:/\S+|[A-Z][a-z]+ \d{1,2}, \d{4})$")
+    r"^(?:Original court site URL:|Content receive[d]? from|Content retrieved:?"
+    r"|court:|Download/print date:|Source:|Citation:"
+    r"|file:/\S+|https?://\S+|[A-Z][a-z]+ \d{1,2}, \d{4})$", re.I)
 
 # WA header labels. In a Word export these are "LABEL\t:\tVALUE" on one line; a
 # PDF splits the label from its value across lines, so they are rejoined (see

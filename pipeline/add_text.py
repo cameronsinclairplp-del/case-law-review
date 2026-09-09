@@ -36,9 +36,11 @@ same rule clean_word.py enforces. Files that fail are reported and skipped; the
 rest still land.
 """
 import argparse
+import io
 import json
 import re
 import sys
+from contextlib import redirect_stdout
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -125,6 +127,20 @@ def titlecase_party(raw):
     return re.sub(r"\s+", " ", s).strip()
 
 
+def name_from_filename(path, citation):
+    """Last resort: the case name out of the FILE NAME Cameron saved, e.g.
+    "Crowe v Graham [1968] HCA 6 - BarNet Jade - BarNet Jade.pdf" -> "Crowe v Graham".
+
+    Only used when the judgment's own header has no readable CITATION line, which
+    is the normal case outside the WA template (an HCA report, for instance). It is
+    still not a guess: it is a name a human typed or a court/publisher supplied."""
+    stem = Path(path).stem
+    stem = re.sub(r"\s*-\s*BarNet Jade\s*", " ", stem, flags=re.I)
+    stem = re.sub(r"\s*[-–]\s*$", "", stem).strip()
+    cleaned = P.clean_case_name(stem, citation)
+    return "" if cleaned == "(case name pending)" else titlecase_party(cleaned)
+
+
 def name_from_text(text, citation):
     """Case name from the judgment's own CITATION line, with the citation removed.
     Returns "" when it cannot be read — never a guess."""
@@ -196,24 +212,45 @@ def write_text_only_md(case, text, source):
 
 
 def load_clean_text(path, citation):
-    """Word/txt -> clean verbatim text, refusing a file that does not contain its
-    own citation (the wrong-file guard from HANDOFF §5)."""
+    """Word/PDF/txt -> clean verbatim text, run through clean_word.py's FULL
+    integrity report and refused on anything it rates REFUSE.
+
+    The report is the guard that catches a citator-contaminated copy or a
+    LexisNexis digest. Doing our own lightweight citation check instead (as this
+    did until session 8) quietly bypassed it, so the bulk route had none of the
+    protection the single-case route has — the exact hole through which a digest
+    or an annotated Jade PDF would reach the library."""
     text = CW.clean(CW.to_text(Path(path).expanduser()))
-    m = P.CITATION_RE.search(citation)
-    pat = re.compile(rf"\[{m.group(1)}\]\s*{re.escape(m.group(2).upper())}\s*{m.group(3)}(?!\d)", re.I)
-    if not pat.search(re.sub(r"\s+", " ", text)):
-        raise ValueError(f"{citation} does not appear in the file — wrong file?")
+    buf = io.StringIO()
+    with redirect_stdout(buf):                 # the report prints; we want the verdict
+        rc = CW.report(text, citation)
+    if rc != 0:
+        why = " / ".join(ln.replace("REFUSE ", "").strip()
+                         for ln in buf.getvalue().splitlines() if ln.startswith("REFUSE"))
+        raise ValueError(why or "failed clean_word.py's integrity check")
+    for ln in buf.getvalue().splitlines():
+        if ln.startswith("WARN"):
+            P.log(f"    {ln.strip()}")
     if len(text) < 800:
         raise ValueError(f"only {len(text)} chars of text — not a full judgment")
     return text
 
 
+def id_for_citation(citation):
+    """The case id a citation will produce, WITHOUT reading or writing anything —
+    so a caller can refuse a file before any file is touched."""
+    m = P.CITATION_RE.search(citation)
+    if not m:
+        return None
+    return f"{m.group(2).lower()}-{m.group(1)}-{m.group(3)}"
+
+
 def add_one(path, citation, case_name, source):
-    text = load_clean_text(path, citation)
     m = P.CITATION_RE.search(citation)
     if not m:
         raise ValueError(f"no medium-neutral citation in {citation!r}")
-    name = case_name or name_from_text(text, citation)
+    text = load_clean_text(path, citation)
+    name = case_name or name_from_text(text, citation) or name_from_filename(path, citation)
     item = P._item_from_match(m, name or "", "", name or "", via="submission")
     if item["courtTag"] not in P.COURTS:
         raise ValueError(f"court {item['courtTag']} is not in COURTS")
@@ -269,18 +306,25 @@ def main():
     by_id = {c["id"]: c for c in existing}
     added, failed = [], []
     for path, cite, name in jobs:
+        # Refuse BEFORE anything is written. add_one() writes data/files/<id>/<id>.md,
+        # so checking afterwards protected cases.json but still clobbered an audited
+        # analysis file on disk — which is exactly what this guard exists to prevent.
+        cid = id_for_citation(cite)
+        was = by_id.get(cid) if cid else None
+        if was and not was.get("textOnly"):
+            failed.append((path.name, f"{cid} already has a full analysis — "
+                                      f"use attach_text.py to refresh its text"))
+            P.log(f"  SKIPPED {path.name}: {cid} is already analysed (nothing written)")
+            continue
+        if cid and any(c["id"] == cid for c in added):
+            failed.append((path.name, f"{cid} was already added from another file in this batch"))
+            P.log(f"  SKIPPED {path.name}: {cid} already added from another file this run")
+            continue
         try:
             case, n = add_one(path, cite, name, args.source)
         except Exception as e:                       # one bad file must not stop the batch
             failed.append((path.name, str(e)))
             P.log(f"  FAILED {path.name}: {e}")
-            continue
-        was = by_id.get(case["id"])
-        if was and not was.get("textOnly"):
-            # never silently replace a written-up case with a bare text-only one
-            failed.append((path.name, f"{case['id']} already has a full analysis — "
-                                      f"use attach_text.py to refresh its text"))
-            P.log(f"  SKIPPED {path.name}: {case['id']} is already analysed")
             continue
         by_id[case["id"]] = case
         added.append(case)
