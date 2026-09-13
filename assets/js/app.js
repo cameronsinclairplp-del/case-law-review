@@ -640,22 +640,72 @@
     });
   }
 
+  // A sentence ends in terminal punctuation; a heading or a table cell does not.
+  // That single difference is what separates a section heading from the rows of a
+  // sentencing table, so it is used in both places below.
+  var SENTENCE_END = /[.?!]["'’”)\]]?$/;
+  // Shapes that are never a section heading, however short: a statutory sub-clause
+  // ("(a) make a continuing detention order"), a wholly parenthetical aside
+  // ("(citation omitted)"), or a clause that runs on into the next ("… ; and").
+  var NOT_HEADING = /^\([^)]*\)$|[,;]\s*(?:and|or)$/i;
+  // The WA judgment template's front-matter labels, which are headings even though
+  // they are sentence case and only a word or two long.
+  var MASTHEAD_LABEL = new RegExp('^(?:jurisdiction|title of court|citation|coram|heard' +
+    '|delivered|published|file no(?:/s)?|catchwords?|legislation|result|category' +
+    '|representation|counsel|solicitors?|on appeal from|cases?(?:\\(s\\))? referred to[^:]*' +
+    '|case\\(s\\) referred to[^:]*)\\s*:$', 'i');
+
+  // Split the document into blocks, one per rendered element.
+  //
+  // Blank lines are the natural separator, but a Word export is not written that
+  // way: macOS `textutil` turns each Word paragraph into a single "\n", so an
+  // entire set of reasons arrives as ONE block and renders as a wall of text.
+  // (Every .doc-sourced case in the library is like this; AustLII-sourced ones
+  // carry real blank lines.) So after the blank-line split, any block whose lines
+  // read as PROSE — a long line, or most lines closing a sentence — is exploded
+  // into one block per line.
+  //
+  // The test is deliberately narrow. A masthead row ("JURISDICTION : SUPREME
+  // COURT" + "IN CRIMINAL"), a party block, a bench list and a stacked header are
+  // all short, unpunctuated lines that belong together, and they stay grouped.
+  function splitProseRuns(norm) {
+    var blocks = [];
+    norm.split(/\n{2,}/).forEach(function (block) {
+      var lines = block.split('\n').filter(function (l) { return l.trim(); });
+      if (lines.length < 2) { blocks.push(block); return; }
+      var longest = 0, closed = 0;
+      lines.forEach(function (l) {
+        var s = l.trim();
+        if (s.length > longest) longest = s.length;
+        if (SENTENCE_END.test(s)) closed++;
+      });
+      if (longest > 140 || closed >= Math.ceil(lines.length / 2)) {
+        lines.forEach(function (l) { blocks.push(l); });   // prose run -> one block per paragraph
+      } else {
+        blocks.push(block);                                // masthead / stacked rows -> keep together
+      }
+    });
+    return blocks;
+  }
+
   // Format plain judgment text into readable nodes: stacked header blocks,
   // section headings, and hanging paragraph numbers. Heuristic but robust.
   function judgmentNodes(text) {
     var out = [];
     var norm = String(text).replace(/\r/g, '').replace(/\n{3,}/g, '\n\n')
       .replace(/\n(?=\d{1,4}\.\s)/g, '\n\n');   // each numbered paragraph starts its own block
-    var blocks = norm.split(/\n{2,}/);
+    var blocks = splitProseRuns(norm);
     // The masthead recognizers below apply only while we're still in the front
     // matter (top of the document). Once the reasons begin (a numbered paragraph or
     // a long prose block) this flips off, so a body per-judge reasons heading
     // ("MAZZA JA", "Brennan and Toohey JJ.") stays a prominent section divider
     // rather than being demoted to a quiet coram subtitle.
     var inFrontMatter = true;
-    blocks.forEach(function (raw) {
+    var lastNum = 0;                    // the last paragraph number accepted, for the sequence test
+    blocks.forEach(function (raw, bi) {
       var lines = raw.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
       if (!lines.length) return;
+      var next = String(blocks[bi + 1] || '').replace(/\s+/g, ' ').trim();
       // peel a leading standalone label (ORDER / HELD / INTRODUCTION ...) into a heading
       var lead = lines[0];
       if (lines.length > 1 && lead.length <= 40 &&
@@ -721,17 +771,54 @@
       // section heading: short, ALL-CAPS or a known label, no trailing sentence punctuation
       var isCaps = /[A-Z]/.test(oneLine) && oneLine === oneLine.toUpperCase();
       var isHeadingWord = /^(orders?|introduction|background|conclusion|disposition|catchwords|result|the appeal|grounds? of appeal|reasons)\b/i.test(oneLine);
-      if (oneLine.length <= 80 && (isCaps || isHeadingWord) && !/[.,;]$/.test(oneLine)) {
-        out.push(h('h4', { class: 'jh', text: oneLine.length <= 14 ? oneLine : titleish(oneLine) }));
+      // A WA judgment sets its section headings in sentence case ("Resentence",
+      // "Appeal ground 1: material error of fact"), so the ALL-CAPS test above
+      // misses them and they render as body prose. A heading is a short line that
+      // does NOT close a sentence and is FOLLOWED BY one that does — which is what
+      // separates it from a run of sentencing-table cells, where neither does.
+      // a masthead label ("Catchwords:", "Result:") — not a lead-in sentence that
+      // happens to end in a colon ("Section 84 relevantly provides:")
+      var isLabel = /:$/.test(oneLine) &&
+        (MASTHEAD_LABEL.test(oneLine) || oneLine.split(/\s+/).length <= 2);
+      var isSentenceCaseHeading = lines.length === 1 && oneLine.length <= 80 &&
+        /^[A-Z]/.test(oneLine) && !SENTENCE_END.test(oneLine) && !/:$/.test(oneLine) &&
+        !NOT_HEADING.test(oneLine) && SENTENCE_END.test(next);
+      if (oneLine.length <= 80 && (isCaps || isHeadingWord || isLabel || isSentenceCaseHeading) &&
+          !/[.,;]$/.test(oneLine)) {
+        // A short label sits in the teal eyebrow the masthead uses; a section
+        // heading written as a sentence keeps its own case and sits heavier,
+        // because 60 characters of letterspaced capitals is not readable.
+        if (isSentenceCaseHeading && !isCaps) {
+          out.push(h('h4', { class: 'jh jh-section', text: oneLine }));
+        } else {
+          out.push(h('h4', { class: 'jh', text: oneLine.length <= 14 ? oneLine : titleish(oneLine) }));
+        }
         return;
       }
-      // numbered paragraph -> hanging number in the gutter (reasons have begun)
+      // numbered paragraph -> hanging number in the gutter (reasons have begun).
+      // A paragraph number CONTINUES THE DOCUMENT'S SEQUENCE and introduces a
+      // sentence. Both tests earn their keep once a Word export's rows stand as
+      // their own blocks: a sentencing table's "21 September 2025" would otherwise
+      // render as paragraph 21, and "4 months' imprisonment" as paragraph 4.
       var nm = oneLine.match(/^(\d{1,4})\.?\s+(\S[\s\S]*)$/);
-      if (nm && parseInt(nm[1], 10) <= 2000) {
-        inFrontMatter = false;
-        out.push(h('p', { class: 'jp jp-num' },
-          h('span', { class: 'jn', text: nm[1] }), h('span', { text: nm[2] })));
-        return;
+      if (nm) {
+        var n = parseInt(nm[1], 10);
+        var rest = nm[2];
+        var opensSentence = /^["'“‘(\[]?[A-Z]/.test(rest);
+        // Never counts backwards. That is what keeps a quoted numbered list
+        // ("1. As a suspect he should have been cautioned …") set inside the
+        // reasons from resetting the sequence and stripping the numbers off every
+        // real paragraph after it.
+        var inSequence = lastNum === 0
+          ? rest.length > 60                     // the first one: a real paragraph, not a table cell
+          : (n > lastNum && n <= lastNum + 3);   // sequential, tolerating a number lost in conversion
+        if (n <= 2000 && !/^0\d/.test(nm[1]) && opensSentence && inSequence) {
+          lastNum = n;
+          inFrontMatter = false;
+          out.push(h('p', { class: 'jp jp-num' },
+            h('span', { class: 'jn', text: nm[1] }), h('span', { text: rest })));
+          return;
+        }
       }
       if (oneLine.length > 140) inFrontMatter = false;   // a prose block: past the masthead
       out.push(h('p', { class: 'jp', text: oneLine }));

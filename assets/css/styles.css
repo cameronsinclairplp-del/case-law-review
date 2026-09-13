@@ -616,6 +616,15 @@ button {
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal);
   margin: 2em 0 0.9em;
 }
+/* A section heading inside the reasons. The teal eyebrow above is for the
+   masthead's short labels (CATCHWORDS / RESULT); a WA judgment writes its section
+   headings as sentences ("The facts and circumstances of the offending"), and
+   sixty characters of letterspaced capitals is not readable — so those keep their
+   own case and sit heavier instead. */
+.judgment-text .jh-section {
+  font-size: 15.5px; font-weight: 650; letter-spacing: 0;
+  text-transform: none; color: var(--ink); margin: 2.1em 0 0.7em;
+}
 .judgment-text .jhead { margin: 0 0 1.6em; line-height: 1.55; }
 .judgment-text .jhead-line { color: var(--inksoft); }
 .judgment-text .jhead-line:first-child { font-weight: 500; color: var(--ink); }
