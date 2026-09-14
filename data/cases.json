@@ -1,5 +1,138 @@
 [
   {
+    "id": "wasca-2026-128",
+    "date": "2026-09-04",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Malone Darcy Fleming (a pseudonym) v The State of Western Australia",
+    "citation": "[2026] WASCA 128",
+    "decided": "04/09/2026",
+    "appealFrom": "District Court of Western Australia (SHEPHERD DCJ)",
+    "outcome": "Extension of time refused; leave to appeal refused; appeal dismissed. Total effective sentence of 5 years 4 months' immediate imprisonment upheld.",
+    "weight": "Court of Appeal (three judges) decision, but expressly 'no point of principle' and 'turns on own facts' (Category B). Persuasive on the application of settled principles rather than establishing new law.",
+    "tags": [
+      "totality principle",
+      "drug trafficking",
+      "methylamphetamine",
+      "offending on bail",
+      "sentence appeal",
+      "Misuse of Drugs Act",
+      "possession with intent to sell or supply",
+      "unlawfully obtained property",
+      "commercial gain",
+      "cumulative sentencing"
+    ],
+    "relevance": "",
+    "oneLine": "Court of Appeal upholds a 5 year 4 month total effective sentence for a mid-level meth dealer, confirming that reoffending while on bail justifies cumulative sentencing and does not breach the totality principle.",
+    "whatHappened": "FLEMING (a pseudonym) pleaded guilty to three counts. Count 1: possession of a trafficable quantity of methylamphetamine (176.38g, 78-81% purity) with intent to sell or supply, found in a Perth hotel room safe during a search warrant, contrary to <i>Misuse of Drugs Act 1981</i> (WA) s 6(1)(a) read with s 34(1)(a). Count 2: possession of $17,200 reasonably suspected of being unlawfully obtained (found in a bedside drawer), contrary to <i>Criminal Code</i> (WA) s 417(1); the appellant admitted this was proceeds of meth sales. Count 3: possession of methylamphetamine (22.77g) with intent to sell or supply, contrary to <i>Misuse of Drugs Act 1981</i> (WA) s 6(1)(a) — this offending occurred about six months later while he was on bail, when police searched his vehicle at a regional police station and found the drug plus scales, clip seal bags and smoking implements. His seized phone contained sale/supply messages and a tick list. SHEPHERD DCJ characterised him as 'just under a mid-level dealer' and sentenced him to 4 years (count 1), 12 months concurrent (count 2) and 1 year 4 months cumulative (count 3, reduced from 2 years for totality) — a total effective sentence of 5 years 4 months. He appealed on a single ground: that the total effective sentence breached the first limb of the totality principle. The notice was lodged seven weeks late.",
+    "whatHeld": "The Court refused the extension of time, refused leave and dismissed the appeal. It held the total effective sentence of 5 years 4 months was <b>not unreasonable or plainly unjust</b> and did not infringe the first limb of the totality principle. The individual sentences were not challenged. The Court held it was <b>plainly correct to order partial cumulation</b> for count 3 because reoffending while on bail — with an offence of similar nature — is a significantly aggravating factor showing disregard for the law and enhancing the need for personal deterrence. The reduction of count 3 from 2 years to 1 year 4 months adequately reflected totality. The Court reiterated that for serious drug dealing the major considerations are <b>general and personal deterrence</b>, that quantity and purity matter as indicators of potential harm, and that <b>personal circumstances carry less weight</b> in this class of offence. It found the comparable cases advanced by both sides of limited utility, being either pre-dating the increase to a life maximum or involving couriers rather than dealers, but broadly consistent with the sentence imposed.",
+    "whatItMeans": "This is a sentencing appeal, so it does not change how you investigate, but it reinforces points worth knowing. The investigative work here — <b>search warrant on the hotel room, seizure and interrogation of the phone (sale/supply messages, tick list), and the vehicle search on bail reporting</b> — built a clear commercial-dealing case, and the admission that the $17,200 was drug proceeds supported both the s 417(1) count and the finding of an ongoing enterprise. Note how strongly the courts treat <b>reoffending while on bail</b>: it is significantly aggravating and justifies cumulative punishment, so flag any suspect who offends while on conditional release. The case confirms that <b>purity and quantity</b> evidence, and material showing commerciality (tick lists, scales, packaging, cash in mixed denominations), materially strengthen the seriousness of a drug charge.",
+    "verdict": "AWARENESS only — this is a sentencing/totality appeal that turns on its own facts and states no new point of principle; it does not alter investigative or charging practice.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/128.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/128",
+    "files": {
+      "llm": "data/files/wasca-2026-128/wasca-2026-128.md"
+    },
+    "flags": [
+      "The District Court file number and exact sentencing date are not specified in the judgment (stated only as 'last year'/'IND XXXX of 20XX').",
+      "Offending dates are given only as 'mid-2023' (counts 1 and 2) and 'a little over six months' later (count 3); no exact dates in the text.",
+      "The appellant's identity is suppressed by pseudonym; a confidential memorandum on 'other matters' was published only to the parties."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "AWARENESS",
+      "problems": 2,
+      "report": "Cases/audits/2026-09-14/wasca-2026-128.md"
+    }
+  },
+  {
+    "id": "wasca-2026-129",
+    "date": "2026-09-04",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "MRV v SNW [No 2]",
+    "citation": "[2026] WASCA 129",
+    "decided": "04/09/2026",
+    "appealFrom": "Family Court of Western Australia (COHEN J), [SNW] and [MRV] [2025] FCWA 70",
+    "outcome": "Appeal dismissed; stay of the primary orders discharged; parties to be heard on costs under s 237 of the Family Court Act.",
+    "weight": "Court of Appeal (three-member) decision and therefore strong authority on the review principles it applies, but expressly fact-specific ('turns on own facts', Category B) and confined to family law; minimal practical weight for criminal investigation.",
+    "tags": [
+      "family law",
+      "property settlement",
+      "parenting order",
+      "change of surname",
+      "presumption of advancement",
+      "balance of probabilities",
+      "Jones v Dunkel",
+      "Briginshaw",
+      "House v The King",
+      "discretionary appeal"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Court of Appeal dismisses a self-represented parent's challenge to family law property and change-of-surname orders, confirming the House v The King approach to reviewing discretionary decisions.",
+    "whatHappened": "Two women were in a same-sex de facto relationship for over 10 years (2011 to separation on 19/11/2021) and had two children. After a 5-day trial, COHEN J of the Family Court of WA made property adjustment orders (the appellant to pay the respondent $187,967 out of the parties' interests, chiefly the equity in a Joondalup property) and a parenting order hyphenating the children's surname. MRV, self-represented on appeal, ran 12 grounds (one abandoned) challenging: the characterisation of $118,636 paid by her mother into the parties' joint account towards the house; the refusal to use a 'two-pool' approach; the inclusion/exclusion of certain liabilities; a 12.5% adjustment for the respondent under s 205ZD factors; and the surname order. The bias ground (ground 7) was abandoned.",
+    "whatHeld": "The appeal was <b>dismissed</b>. The court held the primary judge made no material error in a <i>House v The King</i> sense. On the $118,636, the <b>presumption of advancement did not arise</b> (no resulting trust claim by the mother, and the payment was to both parties jointly with a 'gift-family' notation); where evidence of actual intention exists, the presumption/counter-presumption is of practical significance only in rare cases, and intention is an ordinary question of fact on the balance of probabilities (<i>Bosanac</i>). Reliance on the mother's contemporaneous letter, despite no oral evidence from her, was not impermissible use of hearsay. A single-pool approach was reasonably open; the appellant had to show a two-pool approach was <b>clearly appropriate</b>, and did not. Excluding the NZ student loan (uncertain, unlikely to be enforced) and offsetting post-separation liabilities was open (<i>Biltoft</i>, <i>Prince</i>). The 12.5% adjustment was well open given the significant income and earning-capacity disparity. The surname hyphenation was child-focused and in the children's best interests under s 66C, not a mere symbolic gesture.",
+    "whatItMeans": "This is a <b>family law property and parenting appeal with little direct bearing on your criminal casework</b>. Its value to you is <b>background awareness of appellate evidence and proof principles</b> you will meet across the courts: findings of fact are decided on the <b>balance of probabilities</b> in civil matters; <i>Briginshaw</i> calibrates the strength of evidence needed for serious allegations but does not raise the standard; a <b>Jones v Dunkel</b> adverse inference can flow from an unexplained failure to call an available witness; and <b>contemporaneous documents</b> are routinely used to infer intention as objective fact even where the author is not called. Note also that the primary judge found MRV <b>intended to misrepresent her financial circumstances to Services Australia</b> — a passing credibility finding, not a charge, but a reminder that adverse findings in civil proceedings can surface as intelligence.",
+    "verdict": "AWARENESS only — this is a discretionary family law decision that turns on its own facts and does not change how you investigate, gather evidence, or charge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/129.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/129",
+    "files": {
+      "llm": "data/files/wasca-2026-129/wasca-2026-129.md"
+    },
+    "flags": [
+      "Family law matter with no direct criminal-investigation application; classified AWARENESS.",
+      "Parties anonymised in the judgment (MRV, SNW); children given pseudonyms 'Sam' and 'Sarah'.",
+      "Primary orders were made by COHEN J on 02/04/2025 after a trial; the [2025] FCWA 70 reasons are the primary reasons — verify exact dates against the source if relied upon.",
+      "The reference to a finding that MRV intended to misrepresent finances to Services Australia is a civil credibility finding only, not a criminal charge or conviction.",
+      "Section numbers (s 205ZG, s 205ZD, s 66C, s 237) are as stated in the judgment; confirm currency before citing."
+    ]
+  },
+  {
+    "id": "wasca-2026-126",
+    "date": "2026-09-03",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Cooper v The State of Western Australia",
+    "citation": "[2026] WASCA 126",
+    "decided": "03/09/2026",
+    "appealFrom": "District Court of Western Australia (BURROWS DCJ)",
+    "outcome": "Leave to appeal refused; appeal against sentence dismissed. Total effective sentence of 6 years 8 months confirmed.",
+    "weight": "Court of Appeal (three judges) applying settled parity principles from Ngo, Green and House v King. Binding and authoritative, but applies well-established law to its own facts rather than creating new principle.",
+    "tags": [
+      "parity principle",
+      "co-offenders",
+      "common purpose",
+      "home burglary",
+      "aggravated home burglary",
+      "assault occasioning bodily harm",
+      "sentence appeal",
+      "equal culpability",
+      "youth mitigation",
+      "personal deterrence"
+    ],
+    "relevance": "",
+    "oneLine": "Court of Appeal upholds a co-offender's sentence, confirming that a 'mastermind' and a 'willing participant' can be equally culpable for what happened at the scene despite different roles beforehand.",
+    "whatHappened": "On 25/05/2018, five men — Paul BONNER (the 'mastermind'), the appellant James COOPER, Shannon BONNER, Waylon KELLS and Darryl PEARSON — carried out a premeditated vigilante home invasion in Kununurra as revenge for a perceived wrong against Paul BONNER's son. In the weeks before, Paul BONNER and KELLS phoned the victim Amanda QUARTERMAINE and threatened her and her partner Corbin CLYDEN. The offenders travelled from Victoria, the NT and Darwin, using stolen numberplates to avoid border detection, and staged the attack from PEARSON's Kununurra workshop. Shortly after 3.50am, masked and dressed in dark clothing, they kicked in the locked front door and bedroom door while the couple and four children slept. At least three men struck CLYDEN with poles to the head, body, arms and legs; QUARTERMAINE was struck on the arm. CLYDEN needed nine sutures to his scalp. After a nine-day trial, all five were convicted of aggravated home burglary with intent (s 401(1)(a)), assault occasioning bodily harm (s 317(1)), and doing an act likely to endanger life, health or safety (s 304(1)(b)). COOPER was sentenced to a total effective 6 years 8 months; Paul BONNER to 7 years 6 months. COOPER appealed on the sole ground that the 10-month gap was too small and breached the parity principle.",
+    "whatHeld": "The appeal was dismissed and leave refused. The Court held the <b>10-month difference between the sentences did not offend the parity principle</b> and would not engender a legitimate or justifiable sense of grievance in an objective observer. Although Paul BONNER was the mastermind who made the threats, had the motive, was the oldest and had a significant record for violent offending, the sentencing judge found <b>each co-offender equally culpable for the offending at the house</b> because each acted pursuant to a common purpose and the assaults were a probable consequence of that plan. The Court accepted the finding that COOPER was <b>not 'roped in' but a willing and enthusiastic participant</b> — travelling from Darwin with 48 hours to reconsider. The distinction in roles existed only before the offence; on the day itself there was no difference. The 10 months adequately reflected BONNER's mastermind role, his violent antecedents and COOPER's youth. The Court also stressed that <b>at age 25 youth carries only little weight</b> as a mitigating factor.",
+    "whatItMeans": "This is chiefly an awareness case, but it reinforces evidential themes useful to your casework. First, <b>common purpose (probable consequence) means every participant can be held equally culpable for the violence at the scene</b>, even where you cannot prove which individual struck the blows — the judge here could not identify who hit whom, yet all five were convicted. Build the case around the shared plan, not just who wielded the weapon. Second, <b>physical evidence tying a suspect to preparatory acts is powerful</b>: COOPER's fingerprint on the stolen numberplate helped defeat the 'I was just roped in' narrative. Preserve and forensically examine vehicles, plates and staging locations. Third, the pre-offence threats, cross-border travel, disguises and stolen plates all evidenced premeditation and consciousness of guilt — document the full timeline, not just the assault. Fourth, <b>an offender aged 25 or over will get little sentencing benefit from 'youth'</b>, so don't overstate that concern when assessing a suspect's likely outcome.",
+    "verdict": "AWARENESS only — this is a sentence-parity appeal that does not change investigative or charging rules, but it usefully reaffirms common-purpose culpability and the value of forensic links to preparatory acts.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/126.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/126",
+    "files": {
+      "llm": "data/files/wasca-2026-126/wasca-2026-126.md"
+    },
+    "flags": [
+      "Judgment notes the sentencing judge incorrectly referred to 18/05/2018 for a threat phone call; the correct date found was 12/05/2018.",
+      "Sentence figures and section numbers are taken directly from the judgment; the s 304(1)(b) and s 317(1) maxima are stated as 7 years each and s 401(1)(a) as 20 years."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "AWARENESS",
+      "problems": 1,
+      "report": "Cases/audits/2026-09-14/wasca-2026-126.md"
+    }
+  },
+  {
     "id": "wasca-2026-121",
     "date": "2026-08-31",
     "court": "Supreme Court of WA — Court of Appeal",
@@ -37,6 +170,47 @@
     "flags": [
       "Grounds 3, 4 and 5 were not determined by the Court, as ground 1 was sufficient to require resentencing.",
       "Section 87 of the Sentencing Act referenced in the judgment relates to remand time; note the respondent was remanded on a separate pending charge, not the indicted offences."
+    ]
+  },
+  {
+    "id": "wasca-2026-122",
+    "date": "2026-08-31",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Lagdon v The State of Western Australia",
+    "citation": "[2026] WASCA 122",
+    "decided": "31/08/2026",
+    "appealFrom": "District Court of Western Australia (CURWOOD DCJ), IND 329 of 2025",
+    "outcome": "Leave to appeal granted on grounds 2 and 3; appeal dismissed. Total effective sentence of 7 years 9 months' imprisonment upheld.",
+    "weight": "Court of Appeal (three judges) unanimous judgment of the court; authoritative but expressly turns on its own facts.",
+    "tags": [
+      "child sexual offences",
+      "teacher-student",
+      "breach of trust",
+      "grooming",
+      "online procurement",
+      "child exploitation material",
+      "manifestly excessive",
+      "totality principle",
+      "consent not an element",
+      "general deterrence",
+      "s 322 Criminal Code",
+      "s 204B Criminal Code"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Court of Appeal upholds a firm 7 years 9 months' sentence for a teacher who groomed and sexually abused a 15/16-year-old student and used online deception to procure and expose himself to three interstate 12-13 year olds.",
+    "whatHappened": "Harry Sing Wan LAGDON, a high school art teacher in a regional WA town, pleaded guilty to 25 counts of sexually motivated offending against four child victims. Counts 1-15 concerned Tanja (a pseudonym), his year 11 student aged 15-16, involving grooming (text messaging, a birthday pendant, escalating physical contact), indecent dealing, oral and unprotected penile-vaginal penetration on and off school grounds, and a large volume of explicit and degrading photos and videos (hundreds of images/videos). Counts 16-25 concerned online communications with three girls aged 12 or 13 living in Queensland (ERO, MO, LRMR), in which LAGDON posed as a 14, 15 or 16-year-old boy, sent explicit messages and videos of himself masturbating, possessed child exploitation material, and procured LRMR to send explicit images. He was 24-27 at the time, 9 years older than Tanja, with no prior record. He was sentenced in the District Court (CURWOOD DCJ) to a total effective sentence of 7 years 9 months' imprisonment, with count 9 (4 years) as the head sentence and cumulative components from counts 11, 19 and 24. He appealed, arguing count 9 was manifestly excessive and the total effective sentence breached the first limb of the totality principle.",
+    "whatHeld": "Leave to appeal was granted on grounds 2 and 3 but the appeal was <b>dismissed</b>. The court held that although the sentence for count 9 and the total effective sentence were <b>firm, they were not unreasonable or plainly unjust</b> and revealed no implied error. On the argument that offending occurred in a 'consensual relationship', the court held it is <b>not meaningful to describe a child under a teacher's care, supervision or authority as a willing participant</b>; absence of coercion rises no higher than the absence of an aggravating factor. The court noted the initial refusal in count 4 and the element of force in counts 6 and 8. The court reaffirmed that <b>consent is not an element</b> of s 322 offences, that <b>prior good character carries little weight</b> in child sexual offending, and that <b>general and personal deterrence are the primary considerations</b>. It stressed that <b>sentences for child sexual offending have progressively firmed up</b> and older authorities (pre-2010) should be treated with caution as they may not reflect current standards.",
+    "whatItMeans": "When you investigate and build a brief for sexual offending by a person in a position of trust (teacher, coach, carer), <b>frame the power imbalance and grooming as core aggravating features</b>, not background. Capture the full evidentiary picture: the grooming timeline, gifts, contrived opportunities to be alone, the volume and content of electronic material (here hundreds of explicit and degrading images/videos), and any degrading or threatening text. <b>Do not treat any apparent 'relationship' or willingness as diminishing criminality</b> — consent is not an element of these offences and, for a child under care/authority, it is at best neutral. Still, <b>record any evidence of actual refusal or force</b> (as in counts 4, 6 and 8 here) because that can be aggravating. Preserve and forensically download devices — the phone and laptop downloads quantifying messages, photos and videos were central to establishing seriousness. For online offending, evidence of <b>age deception</b> (posing as a younger boy) and successful procurement of images strengthens the seriousness of s 204B and s 220 charges. Victim impact evidence detailing lasting harm is important.",
+    "verdict": "AWARENESS — this confirms sentencing severity and the treatment of 'consent' and grooming in trust-based child sex cases, but does not change investigative or charging procedure.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/122.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/122",
+    "files": {
+      "llm": "data/files/wasca-2026-122/wasca-2026-122.md"
+    },
+    "flags": [
+      "Victim names (Tanja, ERO, MO, LRMR) are pseudonyms/initials used to protect identity.",
+      "The judgment references maximum penalties per count in the sentencing table; verify current section numbers and maxima in the <i>Criminal Code</i> (WA) before relying on them for charging."
     ]
   },
   {
@@ -191,6 +365,52 @@
       "The offence provision listed in the catchwords is Criminal Code (WA) s 325; the judgment text does not expressly state the section for each count — confirm charging section before relying on it.",
       "Sentencing Act reference in the judgment is to s 9AA of the Sentencing Act 1995 (WA) for the 10% plea discount on the indecent assault counts only."
     ]
+  },
+  {
+    "id": "wasca-2026-123",
+    "date": "2026-08-28",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Rose v The State of Western Australia",
+    "citation": "[2026] WASCA 123",
+    "decided": "28/08/2026",
+    "appealFrom": "Supreme Court of Western Australia (General Division), HOWARD J",
+    "outcome": "Application for interim orders dismissed; extension of time to file appellant's case granted to 4.00 pm on 11/09/2026.",
+    "weight": "Court of Appeal (two judges) reasons on an interlocutory application; persuasive on the limits of the court's power over prison authorities, but the power question was expressly left not fully resolved ('highly doubtful' rather than decided).",
+    "tags": [
+      "bail",
+      "bail appeal",
+      "serious offence",
+      "exceptional reasons",
+      "parole revocation",
+      "remand",
+      "prison management",
+      "self-represented litigant",
+      "disclosure",
+      "fair trial"
+    ],
+    "relevance": "",
+    "oneLine": "Court of Appeal confirms it has no power (or at least no proper basis) to direct prison authorities on how to manage a remand prisoner's custody to help him prepare a bail appeal.",
+    "whatHappened": "Andrew Bo ROSE was serving a 6 year 4 month sentence (backdated to 04/10/2019) for serious offences and was released on parole in July 2024. On 26/03/2025, still on parole, he was charged with two counts of aggravated burglary and two counts of possession of prohibited drugs with intent to sell or supply — all serious offences under sch 2 to the <i>Bail Act</i>. His parole was revoked and he was remanded at Bunbury Regional Prison, with trial listed in the Magistrates Court for 27/10/2026. His third bail application was refused by HOWARD J on 15/05/2026. ROSE appealed under s 15A of the <i>Bail Act</i> and, acting in person, applied for interim orders directing the prison to give him a cell computer, free copying/printing, facilitated calls to businesses to find witnesses, in-cell law books, careful handling of evidential mail, and placement in a prison with an open library. He had not filed a compliant appellant's case.",
+    "whatHeld": "The Application for interim orders was <b>dismissed</b> and an extension of time to file the appellant's case was granted. The Court held it is <b>highly doubtful the court has any power to direct prison authorities on how a prison or prisoner is managed</b> in order to preserve its appellate jurisdiction — the CEO of the Department of Justice is responsible for prison management under s 7 of the <i>Prisons Act 1981</i> (WA) and is not a party to the appeal. Adopting the NSW reasoning in <i>Liristis</i> and <i>Hamzy</i>, the Court held its role is to ensure a fair trial and at most an 'irreducible minimum' of resources, <b>not equality of arms</b>, with corrections authorities better placed to weigh security. Even if the power existed, this was not an appropriate case: ROSE was disadvantaged but not denied access to the appellate jurisdiction. The Court also stressed that under s 15B(2) the appeal is confined to the material before the primary judge, so seeking new evidence for the bail appeal had no utility, and that new facts should instead found a fresh s 14(2a) application.",
+    "whatItMeans": "This is a bail/procedural appeal and does not change how you investigate or charge. It is useful background on the custody framework: a person charged with a sch 2 serious offence while on parole faces the <b>exceptional reasons</b> test for bail (cl 3A, pt C, sch 1), and repeat bail applications require new facts or inadequate earlier presentation under s 14(2a). Practically, it confirms that a remand prisoner's complaints about difficulty preparing a defence in custody are managed by <b>corrections and the trial court</b>, not by orders against police or prisons via the appeal court. If a self-represented accused complains to you about disclosure or preparation, note that adequacy of disclosure is a matter for the trial court (here the Magistrates Court), and the prison controls access to computers, copying and legal resources.",
+    "verdict": "AWARENESS only — a procedural bail-appeal decision about the court's power over prison management; it does not affect investigative steps, evidence gathering or charging.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/123.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/123",
+    "files": {
+      "llm": "data/files/wasca-2026-123/wasca-2026-123.md"
+    },
+    "flags": [
+      "The verified citation and body of the judgment refer to the 'Bail Act 1982 (WA)', but the catchwords list 'Bail Act 1981 (WA)' — the correct short title is the Bail Act 1982 (WA); treat the 1981 reference as a typographical error.",
+      "Section numbers (s 14, s 14(2a), s 15A, s 15B(2)) and cl 3A of pt C sch 1 are taken directly from the judgment text.",
+      "Two-member Court (THOMSON P, MITCHELL JA); orders were made 28/08/2026 with written reasons published the same date."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "AWARENESS",
+      "problems": 1,
+      "report": "Cases/audits/2026-09-14/wasca-2026-123.md"
+    }
   },
   {
     "id": "wasc-2026-356",
