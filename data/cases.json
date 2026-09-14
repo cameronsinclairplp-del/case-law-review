@@ -705,7 +705,7 @@
       "self-represented",
       "appeal procedure"
     ],
-    "relevance": "",
+    "relevance": "AWARENESS",
     "oneLine": "Court of Appeal dismissed a self-represented appellant's application for document production and affidavits sought to support his conviction appeal over destroyed cannabis plants.",
     "whatHappened": "DOWNES pleaded guilty in the District Court to cultivating cannabis with intent to sell or supply (s 7(1)(a) <i>Misuse of Drugs Act 1981</i> (WA)) and fraudulently diverting electrical power from Western Power (s 390 <i>Criminal Code</i> (WA)). On 14/08/2022 Department of Fire and Emergency Services officers attended a house fire at Orelia; police were notified of suspicions the house was being used to cultivate cannabis and executed a search warrant on 15/08/2022, finding a hydroponic operation in the laundry and three bedrooms. DOWNES first pleaded guilty in the Magistrates Court on 15/09/2022, after which six plants were kept as samples and the rest were destroyed by police. The pleas did not admit the number of plants: that went to a trial of issues, and on 17/12/2025 GILLAN DCJ found 269 plants had been seized and that they were cannabis sativa. DOWNES was sentenced that day to a total effective 3 years 3 months' immediate imprisonment. He appealed his conviction, arguing the State never proved there were 269 cannabis sativa plants and that unlawful destruction of the plants deprived him of the chance to inspect and count them. In this application he sought orders (Categories C–K) compelling production of documents and affidavits — the unredacted Police Destruction List Report, an affidavit from the JP who witnessed the destruction, proof of the authenticity of a WA Police Manual extract, evidence from a detective and the prosecutor, disclosure of a 'Red Flag' on his police record, and whistle-blower protection under the <i>Public Interest Disclosure Act 2003</i> (WA).",
     "whatHeld": "The application was dismissed in full. The Court held the documents and orders sought had <b>no demonstrated relevance to the issues in the appeal</b>. It was already accepted that not all proper procedures were followed in destroying and storing the plants, so no affidavit or further proof on that point was needed. The refusal of a stay is <b>not directly appealable</b>; such grounds can only run as contentions that a ruling caused a miscarriage of justice. The whistle-blower relief was <b>not properly brought within a criminal appeal</b> and must go to a single judge of the General Division under s 15A of the <i>Public Interest Disclosure Act 2003</i>; in any event, no evidence showed detrimental reprisal action against the appellant.",
@@ -721,13 +721,7 @@
       "The appeal against conviction itself was not decided here; this is only the ruling on the production application.",
       "Category J is not addressed in the judgment text (categories jump from I to K) — do not assume its content.",
       "Section 41(1) Misuse of Drugs Act and s 30(3) Criminal Appeals Act 2004 (WA) are referenced only via the appellant's grounds and the Court's framing; verify before relying."
-    ],
-    "needsReview": {
-      "heldOn": "2026-09-14",
-      "call": "AWARENESS",
-      "problems": 2,
-      "report": "Cases/audits/2026-09-14/wasca-2026-116.md"
-    }
+    ]
   },
   {
     "id": "wasc-2026-341",
