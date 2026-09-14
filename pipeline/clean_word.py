@@ -39,6 +39,11 @@ import sys
 from pathlib import Path
 
 CITATION_RE = re.compile(r"\[(\d{4})\]\s*([A-Za-z]{2,8})\s*(\d+)")
+# A reported citation, for a judgment that predates medium-neutral citations and is
+# not in the corpus: "[1971] 2 NSWLR 207", "(1976) 11 ALR 412", "[1935] AC 462".
+# Groups: year, volume (optional), series, page.
+REPORTED_CITATION_RE = re.compile(
+    r"^\s*[\[(](\d{4})[\])]\s+(?:(\d{1,3})\s+)?([A-Z][A-Za-z.]*(?:\s[A-Z][A-Za-z.]*){0,3})\s+(\d{1,5})\s*$")
 BIDI = "‎‏​﻿"
 # eCourts pseudo-tags: <CRJ> / </CRJ> (Word exports), and in the RTF exports of older
 # decisions the whole template — <Jurisdiction>, </TitleOfCourt>, <Catchword>,
@@ -122,6 +127,49 @@ def pdf_to_text(path: Path) -> str:
         sys.exit(f"pdftotext produced no text for {path}: {r.stderr.strip() or 'empty output'}\n"
                  "(a scanned/image-only PDF has no text layer and cannot be used)")
     return r.stdout
+
+
+# --- a law report's page furniture ---------------------------------------------
+# The NSWLR's PDF (TopLeaf; Moloney v Mercer [1971] 2 NSWLR 207) comes through
+# pdftotext with its page furniture on lines of its own: the series abbreviation
+# "N.S.W.L.R.)", the margin letters A–G, the even page's "208" / "SUPREME COURT" /
+# "([1971] 2", the odd page's running case name "MOLONEY v. MERCER (Taylor J.)" and
+# page number. None of it is the judgment. Only a document that carries the series
+# line at least twice is treated as such a report, and only whole lines of exactly
+# these shapes go — a page number only beside its court line or running name.
+# Applied AFTER report(): those page heads are the evidence a reported citation
+# ("[1971] 2 NSWLR 207") is checked against, so add_text.clean_and_report() and
+# main() below strip them only once the check has passed.
+SERIES_LINE = re.compile(r"^[A-Z](?:\.[A-Z])+\.?\)$")
+MARGIN_LETTER = re.compile(r"^[A-G]$")
+PAGE_NO_LINE = re.compile(r"^\d{1,4}$")
+EVEN_HEAD_COURT = re.compile(r"^(?:SUPREME COURT|HIGH COURT|COURT OF APPEAL|COURT OF CRIMINAL APPEAL)$")
+EVEN_HEAD_CITE = re.compile(r"^\(\[\d{4}\] \d+$")
+RUNNING_NAME = re.compile(r"^[A-Z][A-Z .,'’&-]+ v\. [A-Z][A-Z .,'’&-]+(?: \([A-Za-z .,]+\))?$")
+
+
+def strip_law_report_furniture(text: str) -> str:
+    lines = text.split("\n")
+    if sum(1 for l in lines if SERIES_LINE.match(l.strip())) < 2:
+        return text
+    nonblank = [i for i, l in enumerate(lines) if l.strip()]
+
+    def nb(k):                                            # the k-th non-blank line, or ""
+        return lines[nonblank[k]].strip() if 0 <= k < len(nonblank) else ""
+
+    drop = set()
+    for k, i in enumerate(nonblank):
+        s = lines[i].strip()
+        if MARGIN_LETTER.match(s) or SERIES_LINE.match(s) or EVEN_HEAD_CITE.match(s):
+            drop.add(i)
+        elif EVEN_HEAD_COURT.match(s) and (PAGE_NO_LINE.match(nb(k - 1)) or EVEN_HEAD_CITE.match(nb(k + 1))):
+            drop.add(i)
+        elif PAGE_NO_LINE.match(s) and (EVEN_HEAD_COURT.match(nb(k + 1)) or RUNNING_NAME.match(nb(k - 1))):
+            drop.add(i)
+        elif RUNNING_NAME.match(s) and PAGE_NO_LINE.match(nb(k + 1)):
+            drop.add(i)
+    # whitespace only: the gaps the furniture leaves close up to a paragraph break
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(l for i, l in enumerate(lines) if i not in drop))
 
 
 # --- the older eCourts PDF's page footer ----------------------------------------
@@ -276,8 +324,13 @@ def to_text(path: Path) -> str:
     if not path.is_file():
         sys.exit(f"input not found: {path}")
     if path.suffix.lower() == ".pdf":
-        return rejoin_pdf_header(strip_jade_wrapper(strip_hca_page_headers(
-            repair_versus_split(strip_doc_name_footer(pdf_to_text(path))))))
+        text = pdf_to_text(path)
+        # (strip_law_report_furniture is applied by the caller AFTER report(): the page
+        # heads it removes are the evidence a reported citation is checked against)
+        for step in (strip_doc_name_footer, repair_versus_split,
+                     strip_hca_page_headers, strip_jade_wrapper, rejoin_pdf_header):
+            text = step(text)
+        return text
     if path.suffix.lower() in (".doc", ".docx", ".rtf"):
         r = subprocess.run(["textutil", "-convert", "txt", "-stdout", str(path)],
                            capture_output=True, text=True)
@@ -307,16 +360,56 @@ def clean(text: str) -> str:
     return s
 
 
+def reported_citation_in_text(norm: str, r, name: str):
+    """A reported citation cannot be searched for as one string — the report's own
+    running head splits it ("([1971] 2" / "N.S.W.L.R.)" / "207"). Match its parts in
+    the first pages: the year in its brackets, the series with or without its dots,
+    the volume right after the year, the page as a whole number — plus a party name
+    from the file name. Returns (ok, message)."""
+    year, vol, series, page = r.group(1), r.group(2), r.group(3), r.group(4)
+    head = norm[:12000]                                   # the first two pages or so
+    letters = re.sub(r"[^A-Za-z]", "", series)
+    series_pat = re.compile(r"(?<![A-Za-z])" + r"\.?\s?".join(re.escape(c) for c in letters) + r"\.?(?![A-Za-z])")
+    party = re.search(r"^\s*(?:the\s+)?([A-Za-z][A-Za-z'’-]{2,})", name or "")
+    missing = []
+    if not re.search(rf"[\[(]\s*{year}\s*[\])]", head):
+        missing.append(f"the year [{year}]")
+    if not series_pat.search(head):
+        missing.append(f"the series '{series}'")
+    if vol and not re.search(rf"{year}\s*[\])]\s*{vol}(?!\d)", head):
+        missing.append(f"volume {vol} after the year")
+    if not re.search(rf"(?<!\d){page}(?!\d)", head):
+        missing.append(f"page {page}")
+    if not party:
+        missing.append("a party name (none in the file name)")
+    elif party.group(1).lower() not in head.lower():
+        missing.append(f"the party '{party.group(1)}'")
+    if missing:
+        return False, (f"reported citation {r.group(0).strip()} NOT matched in the text — "
+                       f"missing {'; '.join(missing)} — wrong file or wrong citation")
+    return True, (f"reported citation {r.group(0).strip()} matched on its parts (year, series"
+                  f"{', volume' if vol else ''}, page) and the party '{party.group(1)}' — "
+                  f"check it is the right case")
+
+
 def report(text: str, citation: str, name: str = "") -> int:
     m = CITATION_RE.search(citation)
-    if not m:
-        sys.exit(f"--citation {citation!r} is not a medium-neutral citation like '[2026] WASC 265'")
-    year, court, num = int(m.group(1)), m.group(2).upper(), m.group(3)
+    r = None if m else REPORTED_CITATION_RE.match(citation)
+    if not m and not r:
+        sys.exit(f"--citation {citation!r} is neither a medium-neutral citation like '[2026] WASC 265' "
+                 f"nor a reported one like '[1971] 2 NSWLR 207'")
     norm = re.sub(r"\s+", " ", text)
-    cite_pat = re.compile(rf"\[{year}\]\s*{re.escape(court)}\s*{num}(?!\d)", re.I)
     problems, warnings = [], []
+    if r:
+        year = int(r.group(1))
+        ok, msg = reported_citation_in_text(norm, r, name)
+        (warnings if ok else problems).append(msg)
+        cite_pat = None
+    else:
+        year, court, num = int(m.group(1)), m.group(2).upper(), m.group(3)
+        cite_pat = re.compile(rf"\[{year}\]\s*{re.escape(court)}\s*{num}(?!\d)", re.I)
 
-    if not cite_pat.search(norm):
+    if cite_pat and not cite_pat.search(norm):
         # A pre-1998 High Court report carries no medium-neutral citation — Jade's copy
         # of Kilby v The Queen [1973] HCA 30 says "(1973) 129 CLR 460" and nothing else.
         # Accept it on the year's reported citation plus a party name from the file name;
@@ -376,9 +469,10 @@ def main():
     ap.add_argument("--out", required=True, help="where to write the cleaned .txt")
     a = ap.parse_args()
     text = clean(to_text(Path(a.src).expanduser()))
-    Path(a.out).expanduser().write_text(text, encoding="utf-8")
+    rc = report(text, a.citation)                          # on the page heads, if a law report
+    Path(a.out).expanduser().write_text(strip_law_report_furniture(text), encoding="utf-8")
     print(f"wrote {a.out}")
-    sys.exit(report(text, a.citation))
+    sys.exit(rc)
 
 
 if __name__ == "__main__":

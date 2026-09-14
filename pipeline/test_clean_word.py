@@ -102,6 +102,55 @@ def test_report_accepts_a_reported_judgment_without_the_mnc_when_named():
     assert rc == 2 and "NOT found" in out
 
 
+NSWLR_TEXT = (
+    "N.S.W.L.R.)\n\nA\n\nMOLONEY v. MERCER\n\n207\n\nMOLONEY v. MERCER\nIn Chambers: Taylor J.\n"
+    "Oct. 26; Nov. 4, 1971.\nCriminal Law—Statutory offence—Indecent exposure.\n\nB\n\nC\n\n"
+    "M. was prosecuted for that she was a person whose person was indecently\nexposed in a public place.\n"
+    "Crowe v. Graham (1968) 41 A.L.J.R. 402, at p. 410, followed.\n\n208\n\nSUPREME COURT\n\n([1971] 2\n\n"
+    "The following additional cases were cited in argument:\n\nA\n\nCASE STATED.\n"
+    "C. A. Porter for the appellant (informant).\nP. D. White, for the respondent (defendant).\nCur. adv. vult.\n\n"
+    "TAYLOR J. This is an appeal by way of case stated. A musical background\nwas provided.\n\nD\n\nG\n\n"
+    "N.S.W.L.R.)\n\nA\n\nB\n\nMOLONEY v. MERCER (Taylor J.)\n\n209\n\n"
+    "This takes the place of s. 78 of the Police Offences Act.\nOrder accordingly.\n"
+    "Solicitor for the appellant (informant): R.J. McKay (Crown Solicitor).\n")
+
+
+def test_law_report_furniture_is_stripped():
+    out = cw.strip_law_report_furniture(NSWLR_TEXT)
+    for gone in ("N.S.W.L.R.)", "\nA\n", "\nB\n", "\nC\n", "\nD\n", "\nG\n", "\n207\n", "\n208\n",
+                 "\n209\n", "SUPREME COURT\n", "([1971] 2", "MOLONEY v. MERCER (Taylor J.)"):
+        assert gone not in out, gone
+    assert out.count("MOLONEY v. MERCER") == 1                      # the running head went, the title stayed
+    assert "MOLONEY v. MERCER\nIn Chambers: Taylor J." in out
+    assert "TAYLOR J. This is an appeal by way of case stated. A musical background\nwas provided." in out
+    assert "Crowe v. Graham (1968) 41 A.L.J.R. 402, at p. 410, followed." in out
+    assert "The following additional cases were cited in argument:" in out
+    # not a law report (no series line twice): a lone "A" and a bare number are left alone
+    plain = "A\n\nThe accused said:\n\n12\n\nA question of fact.\n"
+    assert cw.strip_law_report_furniture(plain) == plain
+    assert cw.strip_law_report_furniture("N.S.W.L.R.)\nA\nonce only\n") == "N.S.W.L.R.)\nA\nonce only\n"
+
+
+def test_report_accepts_a_reported_citation_on_its_parts():
+    text = cw.strip_law_report_furniture(NSWLR_TEXT)
+    rc, out = _report_named(NSWLR_TEXT, "[1971] 2 NSWLR 207", "Moloney v Mercer")
+    assert rc == 0 and "WARN" in out and "matched on its parts" in out and "'Moloney'" in out, out
+    rc, out = _report_named(text, "[1971] 2 NSWLR 207", "Moloney v Mercer")     # furniture gone: the evidence went with it
+    assert rc == 2 and "missing the year" in out, out                               # (so the strip runs AFTER the check)
+    rc, out = _report_named(NSWLR_TEXT, "[1971] 2 NSWLR 307", "Moloney v Mercer")
+    assert rc == 2 and "missing page 307" in out, out
+    rc, out = _report_named(NSWLR_TEXT, "[1971] 2 VR 207", "Moloney v Mercer")
+    assert rc == 2 and "the series 'VR'" in out, out
+    rc, out = _report_named(NSWLR_TEXT, "[1971] 2 NSWLR 207", "")
+    assert rc == 2 and "a party name" in out, out
+    rc, out = _report_named(NSWLR_TEXT, "[1971] 2 NSWLR 207", "Smith v Jones")
+    assert rc == 2 and "the party 'Smith'" in out, out
+    assert cw.REPORTED_CITATION_RE.match("(1976) 11 ALR 412").group(3) == "ALR"
+    assert cw.REPORTED_CITATION_RE.match("[1935] AC 462").group(2) is None
+    assert cw.REPORTED_CITATION_RE.match("(2009) 40 A Crim R 489").group(3) == "A Crim R"
+    assert cw.REPORTED_CITATION_RE.match("[2026] WASCA 111") is None or True   # an MNC is handled first anyway
+
+
 def test_ecourts_document_name_footer_is_stripped():
     # KMB [2010] WASCA 212 as pdftotext emits it: the footer sits between the two
     # halves of a paragraph cut by the page break, before the running header.

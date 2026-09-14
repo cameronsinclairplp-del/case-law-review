@@ -816,7 +816,22 @@
       }
       blocks.push(lines.join('\n'));                       // masthead / stacked rows -> keep together
     });
-    return blocks;
+    // A page break that cut a paragraph, with the page's furniture already gone (a law
+    // report through the cleaner): "… that the" / blank / "respondent was a person …".
+    // The halves rejoin when the first ends mid-sentence on a wrapped line and the
+    // second opens lower-case. Whitespace only; nothing else moves.
+    var joined = [];
+    blocks.forEach(function (b) {
+      var prev = joined.length ? joined[joined.length - 1] : '';
+      var tail = prev.slice(prev.lastIndexOf('\n') + 1);
+      if (prev && tail.length >= 40 && /[a-z,;]$/.test(tail) && /^[a-z]/.test(b) &&
+          !LABEL_LINE.test(tail) && !BARE_NUM.test(tail)) {
+        joined[joined.length - 1] = prev + '\n' + b;
+      } else {
+        joined.push(b);
+      }
+    });
+    return joined;
   }
 
   // Format plain judgment text into readable nodes: stacked header blocks,

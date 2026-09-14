@@ -252,6 +252,7 @@ def clean_and_report(path, citation):
     buf = io.StringIO()
     with redirect_stdout(buf):                 # the report prints; we want the verdict
         rc = CW.report(text, citation, name=name_from_filename(path, citation))
+    text = CW.strip_law_report_furniture(text)  # a law report's page heads: checked above, not stored
     lines = buf.getvalue().splitlines()
     if rc != 0:
         why = " / ".join(ln.replace("REFUSE ", "").strip()

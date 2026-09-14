@@ -653,6 +653,11 @@ def test_jade_url_validation():
     assert not u._is_jade_url("")
 
 
+def test_austlii_url_is_empty_for_a_reported_citation():
+    assert u.austlii_url({"courtTag": "NSWSC", "year": "1971", "num": ""}) == ""
+    assert u.austlii_url({"courtTag": "WASCA", "year": "2026", "num": "111"}).endswith("/wa/WASCA/2026/111.html")
+
+
 def test_dmy_to_iso():
     assert u.dmy_to_iso("07/09/2022") == "2022-09-07"
     assert u.dmy_to_iso("7/9/2022") == "2022-09-07"

@@ -896,6 +896,8 @@ def auto_analysis_ok(item):
 
 
 def austlii_url(item):
+    if not item.get("num"):                 # a reported citation: no AustLII page to point at
+        return ""
     juris = COURTS[item["courtTag"]]["juris"]
     return (f"https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/"
             f"{juris}/{item['courtTag']}/{item['year']}/{item['num']}.html")

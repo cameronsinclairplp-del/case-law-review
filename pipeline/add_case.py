@@ -69,6 +69,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import update as P          # noqa: E402  (sibling module; reuse its functions wholesale)
 import add_text as A        # noqa: E402  (filename citation, names, dates, the cleaner gate)
+import clean_word as CW     # noqa: E402  (the reported-citation shape)
 
 JUDGMENT_SUFFIXES = (".doc", ".docx", ".rtf", ".txt", ".pdf")
 SUPPRESSED_NAME = re.compile(r"\bsuppressed\b", re.I)
@@ -206,7 +207,37 @@ def source_label(path):
 # ---------------------------------------------------------------------------
 # 2–4. Clean, analyse, fidelity
 # ---------------------------------------------------------------------------
+def reported_id(court_tag, year, case_name):
+    """<court>-<year>-<slug>: the shape the hand-made reported-citation entries already
+    use (ntsc-1976-anunga, ukhl-1935-woolmington)."""
+    slug = re.sub(r"[^a-z0-9]+", "-", case_name.lower()).strip("-")
+    return f"{court_tag.lower()}-{year}-{slug}"
+
+
+def reported_job(path, citation, court_tag, case_name):
+    """A job for a judgment that has only a reported citation. The court must be named
+    (nothing in "[1971] 2 NSWLR 207" says which court) and so must the case name (the
+    id is built from it)."""
+    r = CW.REPORTED_CITATION_RE.match(citation)
+    if not r:
+        raise ValueError(f"{citation!r} is neither a medium-neutral citation ('[2026] WASCA 111') "
+                         f"nor a reported one ('[1971] 2 NSWLR 207')")
+    tag = (court_tag or "").upper()
+    if tag not in P.COURTS:
+        raise ValueError(f"a reported citation needs --court <TAG>, one of: {', '.join(P.COURTS)}")
+    if not (case_name or "").strip():
+        raise ValueError("a reported citation needs --case 'Name v Name' — the id is built from it")
+    return {"kind": "add", "path": Path(path), "citation": citation.strip(),
+            "id": reported_id(tag, r.group(1), case_name), "name": case_name.strip(),
+            "reported": {"courtTag": tag, "year": r.group(1)}}
+
+
 def make_item(job, text):
+    if job.get("reported"):
+        rep = job["reported"]
+        return {"id": job["id"], "citation": job["citation"], "courtTag": rep["courtTag"],
+                "year": rep["year"], "num": "", "via": "submission", "nameSuspect": False,
+                "caseName": job["name"], "jadeUrl": "", "blurb": ""}
     m = P.CITATION_RE.search(job["citation"])
     if not m:
         raise ValueError(f"no medium-neutral citation in {job['citation']!r}")
@@ -543,6 +574,10 @@ def main():
     ap.add_argument("--in", dest="src", help="one judgment file")
     ap.add_argument("--citation", help='with --in: e.g. "[2026] WASCA 111" (default: the filename)')
     ap.add_argument("--case", default="", help="case name override (with --in / --from-corpus)")
+    ap.add_argument("--court", default="", metavar="TAG",
+                    help="with --in and a REPORTED --citation ('[1971] 2 NSWLR 207'): the court, as a "
+                         "tag from update.py's COURTS (NSWSC, NTSC, ...); the id becomes "
+                         "<tag>-<year>-<case-name-slug>")
     ap.add_argument("--from-corpus", dest="corpus", metavar="CITATION",
                     help='pre-1998 High Court text from the Open Australian Legal Corpus')
     ap.add_argument("--reattach", action="store_true",
@@ -595,6 +630,13 @@ def main():
         if not cite:
             P.die("no --citation given and none found in the filename")
         cid = A.id_for_citation(cite)
+        job = None
+        if not cid:                                      # a reported citation
+            try:
+                job = reported_job(f, cite, args.court, args.case)
+            except ValueError as e:
+                P.die(str(e))
+            cid = job["id"]
         by_id = {c["id"]: c for c in existing}
         if cid in blocked:
             P.die(P.blocked_line(blocked[cid]))
@@ -602,7 +644,11 @@ def main():
             P.die(f"{cid} is already in the library (--reattach replaces its verbatim text)")
         kind = "reattach" if (cid in by_id and not by_id[cid].get("textOnly")) else \
                ("upgrade" if cid in by_id else "add")
-        jobs.append({"kind": kind, "path": f, "citation": cite, "id": cid, "name": args.case})
+        if job is None:
+            job = {"kind": kind, "path": f, "citation": cite, "id": cid, "name": args.case}
+        else:
+            job["kind"] = kind
+        jobs.append(job)
     else:
         P.die("give --batch <dir>, --in <file>, --from-corpus <citation> or --recheck <id>")
 

@@ -178,6 +178,31 @@ def test_refuse_stops_the_file_and_the_batch_continues():
         assert completed[0]["date"] == "2026-09-03"
 
 
+def test_reported_citation_job_builds_a_slug_id_and_invents_no_url():
+    job = C.reported_job("Cases/x.pdf", "[1971] 2 NSWLR 207", "nswsc", "Moloney v Mercer")
+    assert job["id"] == "nswsc-1971-moloney-v-mercer" and job["reported"] == {"courtTag": "NSWSC", "year": "1971"}
+    for bad in (("[1971] 2 NSWLR 207", "", "Moloney v Mercer"),        # no court
+                ("[1971] 2 NSWLR 207", "XXSC", "Moloney v Mercer"),    # unknown court
+                ("[1971] 2 NSWLR 207", "NSWSC", ""),                   # no name
+                ("Moloney v Mercer", "NSWSC", "Moloney v Mercer")):    # not a citation
+        try:
+            C.reported_job("Cases/x.pdf", *bad)
+            assert False, bad
+        except ValueError:
+            pass
+    text = "N.S.W.L.R.) MOLONEY v. MERCER 207 ([1971] 2 In Chambers: Taylor J. " * 40
+    with sandbox(clean=lambda path, cite: (text, ["reported citation matched on its parts"])) as (d, _):
+        completed, results = C.run([job], [], audit_dir=d / "audits")
+        assert results[0][1] == "added", results
+        case = completed[0]
+        assert case["id"] == "nswsc-1971-moloney-v-mercer" and case["citation"] == "[1971] 2 NSWLR 207"
+        assert case["courtTag"] == "NSWSC" and case["court"] == "Supreme Court of New South Wales"
+        assert case["caseName"] == "Moloney v Mercer"
+        assert case["austliiUrl"] == "" and case["jadeUrl"] == ""      # nothing invented
+        md = (u.FILES_DIR / case["id"] / f"{case['id']}.md").read_text(encoding="utf-8")
+        assert "citation: \"[1971] 2 NSWLR 207\"" in md and "cleaner: reported citation" in md
+
+
 def test_header_date_beats_the_model():
     wrong = dict(ANALYSIS, decided="30/09/2026")
     with sandbox(analyse=lambda *a: json.loads(json.dumps(wrong))) as (d, _):
