@@ -681,9 +681,31 @@
       });
       if (longest > 140 || closed >= Math.ceil(lines.length / 2)) {
         lines.forEach(function (l) { blocks.push(l); });   // prose run -> one block per paragraph
-      } else {
-        blocks.push(block);                                // masthead / stacked rows -> keep together
+        return;
       }
+      // Hard-wrapped text — the pre-1998 High Court corpus is set at ~80 columns
+      // with several paragraphs per blank-line block. Inside a paragraph every
+      // line runs to the margin; only its LAST line stops short. So a line that
+      // closes a sentence AND is well short of the wrap width, followed by a line
+      // that opens one, is where a paragraph ends. Whitespace only — no word moves.
+      if (lines.length >= 6) {
+        var lens = lines.map(function (l) { return l.trim().length; }).sort(function (a, b) { return a - b; });
+        var width = lens[Math.floor(lens.length / 2)];
+        var cur = [];
+        lines.forEach(function (l, i) {
+          var s = l.trim();
+          cur.push(s);
+          var next = i + 1 < lines.length ? lines[i + 1].trim() : '';
+          if (SENTENCE_END.test(s) && s.length < 0.7 * width && next &&
+              /^(?:\[\d+\]\s|\d+\.\s|["'“(]?[A-Z])/.test(next)) {
+            blocks.push(cur.join('\n'));
+            cur = [];
+          }
+        });
+        if (cur.length) blocks.push(cur.join('\n'));
+        return;
+      }
+      blocks.push(block);                                  // masthead / stacked rows -> keep together
     });
     return blocks;
   }
@@ -693,7 +715,9 @@
   function judgmentNodes(text) {
     var out = [];
     var norm = String(text).replace(/\r/g, '').replace(/\n{3,}/g, '\n\n')
-      .replace(/\n(?=\d{1,4}\.\s)/g, '\n\n');   // each numbered paragraph starts its own block
+      .replace(/\n(?=\d{1,4}\.\s)/g, '\n\n')    // each numbered paragraph starts its own block …
+      .replace(/\n(?=\[\d{1,4}\]\s)/g, '\n\n'); // … including the High Court's "[42]" form, which
+                                                  // hard-wrapped HCA text otherwise runs together
     var blocks = splitProseRuns(norm);
     // The masthead recognizers below apply only while we're still in the front
     // matter (top of the document). Once the reasons begin (a numbered paragraph or
@@ -800,10 +824,12 @@
       // sentence. Both tests earn their keep once a Word export's rows stand as
       // their own blocks: a sentencing table's "21 September 2025" would otherwise
       // render as paragraph 21, and "4 months' imprisonment" as paragraph 4.
-      var nm = oneLine.match(/^(\d{1,4})\.?\s+(\S[\s\S]*)$/);
+      // "12. Text", "12 Text" (Word) or "[12] Text" (High Court)
+      var nm = oneLine.match(/^(?:\[(\d{1,4})\]|(\d{1,4})\.?)\s+(\S[\s\S]*)$/);
       if (nm) {
-        var n = parseInt(nm[1], 10);
-        var rest = nm[2];
+        var num = nm[1] || nm[2];
+        var n = parseInt(num, 10);
+        var rest = nm[3];
         var opensSentence = /^["'“‘(\[]?[A-Z]/.test(rest);
         // Never counts backwards. That is what keeps a quoted numbered list
         // ("1. As a suspect he should have been cautioned …") set inside the
@@ -812,11 +838,11 @@
         var inSequence = lastNum === 0
           ? rest.length > 60                     // the first one: a real paragraph, not a table cell
           : (n > lastNum && n <= lastNum + 3);   // sequential, tolerating a number lost in conversion
-        if (n <= 2000 && !/^0\d/.test(nm[1]) && opensSentence && inSequence) {
+        if (n <= 2000 && !/^0\d/.test(num) && opensSentence && inSequence) {
           lastNum = n;
           inFrontMatter = false;
           out.push(h('p', { class: 'jp jp-num' },
-            h('span', { class: 'jn', text: nm[1] }), h('span', { text: rest })));
+            h('span', { class: 'jn', text: num }), h('span', { text: rest })));
           return;
         }
       }
