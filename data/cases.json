@@ -1723,6 +1723,47 @@
     }
   },
   {
+    "id": "hca-2020-12",
+    "date": "2020-04-07",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Pell v The Queen",
+    "citation": "[2020] HCA 12",
+    "decided": "07/04/2020",
+    "appealFrom": "Court of Appeal of the Supreme Court of Victoria",
+    "outcome": "Special leave granted; appeal treated as instituted, heard instanter and allowed. Order 2 of the Court of Appeal set aside; appeal to that Court allowed; convictions quashed and judgments of acquittal entered.",
+    "weight": "High Court of Australia, unanimous seven-member bench — the highest authority in Australia and binding nationally on the unreasonable-verdict test and the appellate treatment of recorded evidence.",
+    "tags": [
+      "sexual offences",
+      "child complainant",
+      "single witness",
+      "unreasonable verdict",
+      "beyond reasonable doubt",
+      "corroboration",
+      "opportunity witnesses",
+      "delayed complaint",
+      "forensic disadvantage",
+      "appellate review",
+      "video-recorded evidence"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court quashed PELL's child sexual abuse convictions, holding that unchallenged 'opportunity witness' evidence meant the jury, acting rationally, must have had a reasonable doubt.",
+    "whatHappened": "George PELL was convicted by a County Court of Victoria jury on 11/12/2018 of one charge of sexual penetration of a child under 16 (<i>Crimes Act 1958</i> (Vic) s 45(1)) and four charges of an act of indecency with or in the presence of a child under 16 (<i>Crimes Act 1958</i> (Vic) s 47(1)). The offences were alleged against two 13-year-old choirboys (A and B) at St Patrick's Cathedral, East Melbourne, following Sunday solemn Mass in late 1996 and early 1997, shortly after PELL's installation as Archbishop of Melbourne. B had died before any complaint; A first complained in June 2015. The prosecution case rested wholly on A's evidence. This was a retrial after the first jury could not agree. The Victorian Court of Appeal (majority Ferguson CJ and Maxwell P; Weinberg JA dissenting) dismissed PELL's appeal on 21/08/2019. PELL sought special leave to the High Court on the ground the verdicts were unreasonable and unsupported by the evidence.",
+    "whatHeld": "The High Court unanimously (seven judges) allowed the appeal. It held there was <b>a significant possibility that an innocent person had been convicted because the evidence did not establish guilt to the requisite standard</b>. On the unreasonableness ground, the correct question is whether the jury, acting rationally, <b>must</b> have entertained a reasonable doubt (applying <i>M v The Queen</i> and <i>Libke v The Queen</i>). Assuming the jury found A credible and reliable, the <b>unchallenged evidence of the 'opportunity witnesses'</b> — placing PELL on the Cathedral steps greeting congregants for at least ten minutes, accompanied by Portelli when he returned to disrobe, and describing constant traffic in and out of the priests' sacristy — created compounding improbabilities that required a reasonable doubt. The Court of Appeal majority erred by asking whether it was <b>possible</b> A's account was true, rather than whether the prosecution had <b>negatived the reasonable possibility that PELL did not commit the offences</b>. The Court also held that A's detailed knowledge of the sacristy interior was <b>not corroboration</b> of the assaults. On appellate use of video-recorded evidence, the Court affirmed <i>SKA v The Queen</i>: the mere availability of a recording does not require an appeal court to view it, and demeanour assessment remains the province of the jury.",
+    "whatItMeans": "This is primarily an evidence-quality lesson for your casework. Where a case <b>depends wholly on one complainant's account</b>, a finding that the complainant is credible does <b>not</b> end the matter — the whole body of evidence must still be capable of excluding a reasonable doubt. <b>Unchallenged evidence of routine, practice and ritual can carry significant probative weight</b> and can defeat a conviction if it is inconsistent with the alleged offending. Build your brief to anticipate 'opportunity' evidence: identify every witness to movements, timings, locks, and practices, and test whether the offending had a realistic opportunity to occur. Remember the correct standard — the prosecution must <b>negative the reasonable possibility that the accused did not do it</b>, not merely show it was possible he did. In historical/delayed-complaint matters, expect the <b>forensic disadvantage</b> from long delay (lost witnesses, memory decay, no chance to make contemporaneous inquiries) to weigh heavily, so preserve and lock down corroborating evidence early. Note too that a complainant's accurate knowledge of a location proves presence, not the offence — it is not corroboration.",
+    "verdict": "AWARENESS-level but important: it does not change WA charging law, yet it sets the benchmark for how single-witness sexual offence cases are assessed for reasonableness on the whole of the evidence — build your briefs accordingly.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2020/12.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2020/HCA/12",
+    "files": {
+      "llm": "data/files/hca-2020-12/hca-2020-12.md"
+    },
+    "flags": [
+      "Offences charged under Victorian legislation (Crimes Act 1958 (Vic) ss 45(1), 47(1)); confirm equivalent WA provisions before applying to charging.",
+      "Procedural and evidentiary references are to Victorian statutes (Criminal Procedure Act 2009 (Vic), Jury Directions Act 2015 (Vic), Evidence Act 2008 (Vic)) — WA has different legislation.",
+      "Judgment noted it was subject to formal revision prior to publication in the Commonwealth Law Reports."
+    ]
+  },
+  {
     "id": "wasc-2019-84",
     "date": "2019-03-05",
     "court": "Supreme Court of Western Australia",
@@ -1819,6 +1860,46 @@
     "files": {
       "llm": "data/files/hca-2016-35/hca-2016-35.md"
     }
+  },
+  {
+    "id": "hca-2011-7",
+    "date": "2011-03-30",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Stubley v The State of Western Australia",
+    "citation": "[2011] HCA 7",
+    "decided": "30/03/2011",
+    "appealFrom": "Court of Appeal of the Supreme Court of Western Australia ([2010] WASCA 36)",
+    "outcome": "Appeal allowed; Court of Appeal order set aside; convictions quashed and a new trial ordered.",
+    "weight": "High Court of Australia — binding and the leading authority on s 31A 'significant probative value'. Caution: the consent analysis is applied to the pre-1992 rape provision (s 325) as it then stood; the statutory definition of consent (now s 319(2)) was not in force for these historical offences.",
+    "tags": [
+      "propensity evidence",
+      "s 31A Evidence Act 1906 (WA)",
+      "significant probative value",
+      "consent",
+      "sexual offences",
+      "similar fact evidence",
+      "uncharged acts",
+      "formal admissions s 32",
+      "historical offences"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "Propensity evidence of uncharged sexual misconduct against three other patients lacked significant probative value where the only live issue was consent, not whether the sex occurred.",
+    "whatHappened": "Alan John STUBLEY, a consultant psychiatrist, was convicted after a Supreme Court trial of six counts of rape, one of attempted rape and three of unlawful and indecent assault against two former patients, JG and CL, committed in his consulting rooms in the mid-to-late 1970s. The prosecution also called three other former patients — LB, MM and AW — to give evidence of uncharged sexual misconduct against them. No offences involving those three were charged. Through counsel, STUBLEY admitted he had been sexually intimate with JG and CL but asserted the acts were consensual, so the trial ran on consent (and honest and reasonable mistaken belief in consent). The admissibility of the three witnesses' evidence was decided under s 31A of the <i>Evidence Act 1906</i> (WA). The Court of Appeal (majority) upheld the convictions; STUBLEY appealed to the High Court.",
+    "whatHeld": "The High Court majority held the evidence of LB, MM and AW did <b>not have significant probative value under s 31A(2)(a)</b> and should not have been admitted. Its value as tendency evidence — showing STUBLEY had sex with patients during consultations — <b>ceased to be significant once the fact that sex occurred with JG and CL was not disputed</b>; only consent was live. Following <i>Phillips v The Queen</i>, whether one complainant consented does not bear on whether another did. None of the three witnesses described threats or intimidation inducing their consent, so their evidence could not rationally affect whether JG's or CL's consent was obtained by threats or intimidation. The Court stressed that <b>proof of psychological dominance or manipulation is not proof of absence of consent</b>: JG and CL were adults not shown to be incapable of consenting. The evidence also could not rationally explain delay in complaint or continued treatment, nor negate honest and reasonable belief in consent. Counsel's opening statement was <b>not a formal admission under s 32</b>, but the fact that sexual activity was undisputed was still material to admissibility. Appeal allowed; convictions set aside; new trial ordered. Heydon J dissented, holding the occurrence of the acts remained a live issue (no valid s 32 admission) and the evidence was admissible.",
+    "whatItMeans": "When you assemble a brief that relies on tendency, propensity or relationship evidence, <b>first pin down exactly what fact is genuinely in dispute</b>. Propensity evidence only clears the s 31A bar if it can rationally affect a live issue to a significant extent — mere relevance is not enough. If the accused concedes the act happened and only contests consent, evidence going to whether the act happened adds little and risks exclusion. Critically, evidence that other victims felt dominated, manipulated or unable to resist does <b>not</b>, of itself, prove the charged victim did not consent — you need evidence tied to the actual complainant's absence of consent or to a recognised vitiating factor (force, threats, intimidation, fraud). If you want other-victim evidence to carry weight on consent, look for a common method of <b>procuring or overbearing consent</b> (e.g. specific threats), not just a pattern of exploiting vulnerable patients. Also note the practical warning about admissions: loose defence concessions in openings may not formally remove an issue, so keep proving your case fully.",
+    "verdict": "ACTION — it reshapes how you identify the live issue and how you justify tendering propensity/other-victim evidence under s 31A.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2011/7.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2011/HCA/7",
+    "files": {
+      "llm": "data/files/hca-2011-7/hca-2011-7.md"
+    },
+    "flags": [
+      "Orders were made on 20/10/2010; reasons for judgment were published on 30/03/2011 — 'decided' uses the reasons date.",
+      "The Court analysed consent under the Criminal Code (WA) s 325 as it stood at the material time (pre-1992); the current statutory consent definition (s 319(2), inserted 1992) did not apply — confirm the applicable consent law for any current matter.",
+      "Heydon J dissented; the holdings above are those of the majority (Gummow, Crennan, Kiefel and Bell JJ).",
+      "Offences were historical (alleged 1975–1978, tried 30+ years later)."
+    ]
   },
   {
     "id": "hca-2007-47",
@@ -1927,6 +2008,87 @@
     "files": {
       "llm": "data/files/hca-2007-39/hca-2007-39.md"
     }
+  },
+  {
+    "id": "hca-2005-68",
+    "date": "2005-11-15",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Mallard v The Queen",
+    "citation": "[2005] HCA 68",
+    "decided": "15/11/2005",
+    "appealFrom": "Court of Criminal Appeal of the Supreme Court of Western Australia",
+    "outcome": "Appeal allowed. Orders of the Court of Criminal Appeal dated 03/12/2003 set aside; conviction quashed; retrial ordered.",
+    "weight": "High. Unanimous High Court of Australia decision (joint judgment of four Justices plus Kirby J concurring); leading authority on the whole-case reference power and prosecution disclosure obligations.",
+    "tags": [
+      "disclosure",
+      "prosecution duty",
+      "miscarriage of justice",
+      "confessions",
+      "unrecorded interview",
+      "exculpatory evidence",
+      "witness statements",
+      "expert evidence",
+      "royal prerogative of mercy",
+      "proviso",
+      "fair trial"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "Prosecution failure to disclose material, potentially exculpatory evidence to the defence produced a miscarriage of justice, quashing MALLARD's murder conviction and ordering a retrial.",
+    "whatHappened": "Andrew Mark MALLARD was convicted in the Supreme Court of Western Australia of the murder of Mrs Pamela Lawrence, a jewellery shop proprietor at Perth on 23/05/1994. After serving eight years, he petitioned for clemency. The Attorney-General referred the petition to the Court of Criminal Appeal under s 140(1)(a) of the <i>Sentencing Act 1995</i> (WA), which dismissed it. On appeal to the High Court, it emerged that a significant body of evidence had been in police possession before and during the trial but was not disclosed to the defence — and in some instances actively removed or altered in witness statements. This included a pig's head experiment showing a wrench (the alleged murder weapon per MALLARD's 'confession') could not have caused the wounds; a salt-water clothing experiment contradicting his account of washing clothes in the river; a suppressed witness statement about the whereabouts of his cap; undisclosed eyewitness sketches inconsistent with his appearance; deletion of the 'locked eyes' phrase; and statements about another man wearing a bandanna near the scene. The confessional evidence was largely unrecorded and peculiar in character.",
+    "whatHeld": "The Court held the Court of Criminal Appeal <b>erred in law</b> by taking too narrow a view of its jurisdiction on an Attorney-General's reference: the words 'the whole case' in s 140(1)(a) require consideration of <b>the whole of the properly admissible evidence — new, fresh or previously adduced</b>, and the words 'as if it were an appeal' only confine the Court to appellate orders, procedures and the s 689(1) proviso. On the facts, the <b>non-disclosure (and in some cases suppression) of material, potentially exculpatory evidence occasioned a miscarriage of justice</b>. The undisclosed evidence was capable of refuting a central plank of the prosecution case (the wrench) and of seriously undermining the reliability of the confessions on which the case heavily depended. The respondent conceded the concessions alone would require quashing unless the proviso applied; the Court held the <b>proviso could not save the conviction</b>. The conviction was quashed and a retrial ordered. Kirby J, agreeing, reviewed extensive domestic and international authority affirming that the prosecution must disclose all material evidence for or against the accused, the touchstone being the accused's right to a fair trial.",
+    "whatItMeans": "This case is a cornerstone on the <b>prosecution's duty of disclosure</b>. For your casework it means <b>everything relevant in the investigation file must be disclosed</b> — including material that undermines the prosecution theory or helps the defence. You cannot decide unilaterally that inconvenient evidence is irrelevant and leave it out. The judgment specifically condemns the <b>editing or deletion of material from witness statements</b> to remove discrepancies (the cap, the sketches, the 'locked eyes' phrase). Preserve and disclose original handwritten statements, all drafts, and the results of experiments — even failed or unhelpful ones (the pig's head and salt-water tests). Note the strong criticism of <b>unrecorded 'confessions'</b>: most interviews here were not recorded despite the ability to do so, which fatally weakened their reliability. Record admissions on videotape — this is now mandatory for serious offences under s 570D of the <i>Criminal Code</i> (WA), which the Court noted was not in force at the original trial but now is. Non-disclosure of exculpatory material can collapse an otherwise sustainable conviction years later.",
+    "verdict": "ACTION — it directly changes how you must gather, preserve and disclose evidence; treat full disclosure of all relevant material (including unhelpful and original documents) as mandatory.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2005/68.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2005/HCA/68",
+    "files": {
+      "llm": "data/files/hca-2005-68/hca-2005-68.md"
+    },
+    "flags": [
+      "The original trial date and sentence date are not stated in the judgment text; only the murder date (23/05/1994) and the CCA order date (03/12/2003) are given.",
+      "Whether any of the undisclosed material was in the possession of the Director of Public Prosecutions (as opposed to police) was expressly left unresolved by the Court."
+    ]
+  },
+  {
+    "id": "wasca-2005-196",
+    "date": "2005-10-17",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Donaldson v The State of Western Australia",
+    "citation": "[2005] WASCA 196",
+    "decided": "17/10/2005",
+    "appealFrom": "District Court of Western Australia (Mazza DCJ)",
+    "outcome": "Appeal dismissed; refusal to order separate trials confirmed under <i>s 26(7) Criminal Appeals Act 2004</i>. Notice of contention also upheld.",
+    "weight": "Strong. Unanimous Court of Appeal decision on the merits (three judges agreeing on the <i>s 31A</i>/<i>s 133</i> construction) and one of the first appellate considerations of the new legislation. A leading authority on propensity/relationship evidence and joinder in WA.",
+    "tags": [
+      "propensity evidence",
+      "relationship evidence",
+      "similar fact evidence",
+      "joinder",
+      "separate trials",
+      "sexual offences",
+      "child complainants",
+      "concoction and collusion",
+      "s 31A Evidence Act 1906",
+      "s 133 Criminal Procedure Act 2004",
+      "grooming",
+      "position of trust"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "Court of Appeal upholds refusal to sever an 18-count sexual offence indictment involving four young complainants, confirming <i>s 31A Evidence Act 1906</i> propensity/relationship evidence rules override the old <i>Hoch</i>/<i>De Jesus</i>/<i>Pfennig</i> restrictions.",
+    "whatHappened": "DONALDSON, a swimming/fitness coach, was indicted on 18 sexual offences against four young female complainants (KML, RKL, NDP, CAM) who trained under him between about 1992 and 1999. Each was a female squad member of similar age, offended against while alone with him, after he ingratiated himself with gifts and outings, and while he maintained an atmosphere of normality. Before Mazza DCJ, DONALDSON applied under <i>s 133(3) Criminal Procedure Act 2004</i> for four separate trials (one per complainant). His Honour refused, holding the evidence of each complainant was mutually admissible as propensity evidence under <i>s 31A Evidence Act 1906</i>. DONALDSON brought a preliminary appeal under <i>s 26 Criminal Appeals Act 2004</i>.",
+    "whatHeld": "Appeal dismissed. <b>The <i>s 31A</i> and <i>s 133</i> reforms deliberately overrode the old restrictive authorities</b> (<i>Hoch</i>, <i>De Jesus</i>, <i>Pfennig</i>), so reliance on those cases is misplaced. <b>Propensity and relationship evidence is admissible where it has significant probative value and where, weighed against the risk of an unfair trial, fair-minded people would think the public interest in adducing all relevant evidence of guilt must have priority</b> (<i>s 31A(2)</i>). <b>The possibility of collusion, concoction or suggestion cannot be taken into account by the judge at the admissibility stage — it is a matter for the jury</b> (<i>s 31A(3)</i>, <i>s 133(6)</i>). Striking similarity is not required; here an underlying unity, system or pattern in the offending sufficed. <b>Once evidence is mutually admissible there will rarely be prejudice from joinder</b>, and the accused could not point to any other source of prejudice. The evidence was also relationship evidence (widely defined) and admissible to rebut potential innocent-explanation defences, since the prosecution must prove its whole case and cannot split it. On timing, the majority (Wheeler JA, Roberts-Smith JA) held the trial 'starts' for <i>s 26(6)</i> when the jury is sworn and the accused is in its charge, so the appeal was competent; Miller AJA dissented, holding the trial had started on arraignment.",
+    "whatItMeans": "When you have multiple complainants alleging similar offending by the same suspect — especially child sexual abuse in a position of trust — <b>build the brief so the evidence of each complainant supports the others</b>. You no longer need 'striking similarity': <b>an underlying pattern or system (same type of victim, same grooming, same opportunity, same modus) can carry significant probative value</b>. <b>Do not assume that a possibility the complainants talked to each other will sink joinder</b> — collusion or concoction is now a jury question, not a bar to admissibility, so gather and disclose that material but don't treat it as fatal. Identify and record the likely innocent-explanation defences (e.g. 'my hands were cold', 'I was massaging a muscle', 'helping try on bathers') because the pattern evidence is admissible to rebut them and the prosecution must lead it in its own case. Charge and present multiple complainants together where the material supports it, and make any severance-related issues known early — appeals against joinder rulings must be run before the jury is sworn.",
+    "verdict": "AWARENESS-plus-ACTION: it changes how you build multi-complainant sexual offence briefs — join and cross-support the evidence, treat concoction as a jury issue — because the Court confirmed <i>s 31A</i> was designed to widen admissibility of propensity and relationship evidence.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2005/196.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2005/WASCA/196",
+    "files": {
+      "llm": "data/files/wasca-2005-196/wasca-2005-196.md"
+    },
+    "flags": [
+      "The judges divided on when a trial 'starts' for s 26(6) Criminal Appeals Act 2004: the majority (Wheeler JA, Roberts-Smith JA) held it is when the jury is sworn; Miller AJA held it is on arraignment. This point is a matter of appeal procedure/timing rather than investigative practice.",
+      "Judgment text at [25] refers to 's 137(7)' of the Criminal Procedure Act while the substantive joinder provision discussed throughout is s 133 — treat the s 133 references as the operative ones."
+    ]
   },
   {
     "id": "hca-2005-1",
@@ -2169,6 +2331,44 @@
     "files": {
       "llm": "data/files/hca-2000-3/hca-2000-3.md"
     }
+  },
+  {
+    "id": "hca-1999-42",
+    "date": "1999-06-22",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Robinson v The Queen",
+    "citation": "[1999] HCA 42",
+    "decided": "22/06/1999",
+    "appealFrom": "Court of Appeal of the Supreme Court of Queensland",
+    "outcome": "Appeal allowed. Convictions and sentences quashed. New trial ordered.",
+    "weight": "High persuasive authority — unanimous five-member High Court of Australia decision. Directly interprets a Queensland provision, but the underlying principle (drawn from Longman on a WA provision) applies generally.",
+    "tags": [
+      "sexual offences",
+      "child complainant",
+      "uncorroborated evidence",
+      "jury warning",
+      "delayed complaint",
+      "reliability",
+      "Criminal Code",
+      "miscarriage of justice"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "ROBINSON established that despite statutory abolition of mandatory corroboration warnings, a judge must still warn a jury to scrutinise a complainant's evidence with care where circumstances create a perceptible risk of miscarriage of justice.",
+    "whatHappened": "ROBINSON, a 19-year-old Joey Scout leader, was convicted of two counts of unlawful anal intercourse with an 8-year-old boy, alleged to have occurred in the garage of the complainant's home in late October or early November 1993 at Willowbank. The complainant did not disclose the abuse for about three years, telling his mother in November 1996 during a discussion about another child's abuse. The matter was reported to police immediately. The complainant's videotaped police interview (30/11/1996) was tendered without objection as his evidence in chief. His evidence was substantially the only evidence against ROBINSON. A medical examination found no abnormality, which was unsurprising given the elapsed time. ROBINSON admitted the circumstances of the night but denied any indecent conduct. The trial judge gave no warning about the nature of the complainant's evidence. The Queensland Court of Appeal dismissed the appeal by majority; the High Court allowed the appeal.",
+    "whatHeld": "The High Court held that <i>s 632</i> of the <i>Criminal Code</i> (Qld) abolishes the old mandatory common-law warning that it is unsafe to convict on uncorroborated testimony of certain classes of witness (accomplices, sexual offence victims, sworn evidence of children), and prohibits warning a jury that any class of complainant is unreliable. <b>However, s 632 does NOT abrogate the general common-law requirement to give a warning whenever it is necessary to avoid a perceptible risk of miscarriage of justice arising from the circumstances of the particular case.</b> The Court held that particular features here — the age of the complainant at the time, the three-year delay before complaint (which made medical verification impossible), inconsistency in the evidence about penetration, the complainant being asleep when the first act allegedly occurred, and signs of suggestibility — combined with the absence of corroboration, <b>created a perceptible risk of miscarriage requiring a warning that brought home to the jury the need to scrutinise the complainant's evidence with great care</b>. A warning could have been framed without breaching the s 632(3) prohibition. The failure to give it warranted a new trial.",
+    "whatItMeans": "This is a Queensland provision, but the reasoning applies to the equivalent Western Australian rule (the Court referred to <i>Longman</i> on a similar WA provision). It tells you that <b>the abolition of automatic corroboration warnings does not mean a complainant's account gets a free pass</b> — where the circumstances of your case carry recognised reliability risks, courts still expect the evidence to be scrutinised carefully. For your casework this means: <b>identify and document the reliability risk factors early</b>. Long delays in reporting, the age of a child complainant, inconsistencies about key elements (here, whether penetration actually occurred), a complainant being asleep at the time, and any signs of suggestibility all matter. Where those features exist, <b>build corroboration wherever possible</b> — timely forensic/medical examination, witnesses who could confirm or contradict, and careful, non-leading interviewing to reduce suggestibility. The three-year delay here destroyed the chance of medical verification; act promptly. Also note the tactical point: tendering a videotaped interview by consent can put before the jury both helpful and unhelpful material.",
+    "verdict": "AWARENESS — this shapes how you assess and shore up the reliability of a single complainant's account, but it is a Queensland-code case about jury directions rather than a rule that changes WA charging or evidence-gathering practice.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1999/42.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1999/HCA/42",
+    "files": {
+      "llm": "data/files/hca-1999-42/hca-1999-42.md"
+    },
+    "flags": [
+      "The provision interpreted is s 632 Criminal Code (Qld), not WA legislation — the WA equivalent is referenced only via Longman and is not identified by section number in the judgment.",
+      "Date of order 22/06/1999; reasons published 02/09/1999 — cite dates carefully.",
+      "This is a jury-direction case; its practical relevance to a WA detective is inferential (via the general common-law principle), not a direct WA rule."
+    ]
   },
   {
     "id": "hca-1998-75",
@@ -3022,6 +3222,47 @@
     "files": {
       "llm": "data/files/ntsc-1976-anunga/ntsc-1976-anunga.md"
     }
+  },
+  {
+    "id": "hca-1973-30",
+    "date": "1973-08-29",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Kilby v The Queen",
+    "citation": "[1973] HCA 30",
+    "decided": "29/08/1973",
+    "appealFrom": "Court of Criminal Appeal of New South Wales",
+    "outcome": "Application for special leave to appeal refused; conviction stands.",
+    "weight": "High — unanimous High Court of Australia decision; a leading authority on recent-complaint evidence in sexual offences and the admissibility of signed records of interview.",
+    "tags": [
+      "sexual offences",
+      "rape",
+      "consent",
+      "recent complaint",
+      "credibility",
+      "record of interview",
+      "admissions",
+      "voluntariness",
+      "jury directions",
+      "evidence"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Absence of a recent complaint by a rape complainant is <b>not</b> evidence of consent; recent complaint goes only to the complainant's credibility, and a signed record of interview is admissible as evidence of admissions.",
+    "whatHappened": "KILBY was convicted by a jury at the Central Criminal Court, Sydney on 25/02/1970 of the rape on 25/01/1969 of a 15-year-old girl at Old Bar Beach on the NSW North Coast. He was tried with two other young men; one co-accused was also convicted and the jury could not agree on the third. The prosecutrix's evidence was that she was carried off, held down by a group of youths while her clothes were removed, and forced to have intercourse with several of them, screaming while a hand was held over her mouth. A signed record of interview containing KILBY's admissions (that he helped remove her clothing, that there was an arrangement about who would go first, and that hands were held over her mouth because campers were passing) was admitted over objection. The prosecutrix made no complaint until she later told her mother. KILBY sought special leave to appeal on two grounds: (1) the trial judge should have directed the jury that the absence of a fresh complaint was evidence of consent; and (2) the signed record of interview was inadmissible except to refresh the interviewing officer's recollection.",
+    "whatHeld": "Special leave refused. On the first ground, the High Court held that evidence of a recent complaint is admitted <b>only exceptionally, to show consistency in the complainant's account and thereby support her credibility</b> — it is not probative of any fact, is not corroboration, and (per <i>Sparks v The Queen</i>) is inadmissible if the complainant does not give evidence. It followed that the <b>absence</b> of complaint is <b>not evidence of consent</b>. A trial judge is <b>not only not bound but not entitled</b> to direct a jury that failure to complain at the earliest opportunity is evidence of consent; a judge may (and generally should) tell the jury that absence of complaint is a matter to weigh when assessing the complainant's credibility, but nothing more. On the second ground, a signed, voluntary record of interview is <b>clearly admissible</b> to the extent it contains relevant admissions; it is not confined to refreshing memory. Irrelevant or otherwise inadmissible material should be excised, and the trial judge retains a discretion to exclude for unfairness or where voluntariness is in doubt.",
+    "whatItMeans": "When a sexual-assault complainant did not complain promptly, do not assume this points to consent — <b>the law says absence of complaint is not evidence of consent</b>. It may bear only on the complainant's credibility, and there are often innocent reasons for delayed complaint. Record the reasons for any delay so the account can be properly assessed. This case confirms that a <b>signed, voluntary record of interview is admissible as evidence of the admissions it contains</b>, not merely as a memory aid — so a properly obtained, signed ROI carries evidential weight in its own right. Keep interviews demonstrably voluntary and free of any inducement (KILBY claimed police said 'they would fix everything'), because voluntariness and fairness are what allow the document in. Excise anything irrelevant or prejudicial (e.g. bad character, prior convictions) before the document is used.",
+    "verdict": "AWARENESS — this is foundational High Court authority on the treatment of recent-complaint evidence and admissibility of signed records of interview that frames how such evidence is understood, rather than changing a specific investigative step.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1973/30.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1973/HCA/30",
+    "files": {
+      "llm": "data/files/hca-1973-30/hca-1973-30.md"
+    },
+    "flags": [
+      "Decided in 1973 under the common law of the time; sexual assault complaint law has since been substantially modified by statute in WA and other jurisdictions — check current legislation and directions before relying on the doctrine operationally.",
+      "The special leave application was formally refused on 12/04 (year not stated in the text); written reasons delivered 29/08/1973.",
+      "No specific statutory provision is cited in the judgment; the case turns on common law principles.",
+      "cleaner: medium-neutral citation [1973] HCA 30 not in the text (a reported judgment); matched on '(1973) 129 CLR 460' and the party 'Kilby' — check it is the right case"
+    ]
   },
   {
     "id": "hca-1971-20",
