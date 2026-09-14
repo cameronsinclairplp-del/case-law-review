@@ -68,7 +68,7 @@
       "youth mitigation",
       "personal deterrence"
     ],
-    "relevance": "",
+    "relevance": "AWARENESS",
     "oneLine": "Court of Appeal upholds a co-offender's sentence, confirming that a 'mastermind' and a 'willing participant' can be equally culpable for what happened at the scene despite different roles beforehand.",
     "whatHappened": "On 25/05/2018, five men — Paul BONNER (the 'mastermind'), the appellant James COOPER, Shannon BONNER, Waylon KELLS and Darryl PEARSON — carried out a premeditated vigilante home invasion in Kununurra as revenge for a perceived wrong against Paul BONNER's son. In the weeks before, Paul BONNER and KELLS phoned the victim Amanda QUARTERMAINE and threatened her and her partner Corbin CLYDEN. Paul BONNER and KELLS travelled to Kununurra from Shepparton, Victoria; Shannon BONNER recruited COOPER and the two travelled together from Darwin, each using stolen numberplates on their vehicles to avoid detection at state borders; the attack was staged from PEARSON's Kununurra workshop. Shortly after 3.50am, masked and dressed in dark clothing, they kicked in the locked front door and bedroom door while the couple and four children slept. At least three men struck CLYDEN with poles to the head, body, arms and legs; QUARTERMAINE was struck on the arm. CLYDEN needed nine sutures to his scalp. After a nine-day trial, all five were convicted of aggravated home burglary with intent (s 401(1)(a)), assault occasioning bodily harm (s 317(1)), and doing an act likely to endanger life, health or safety (s 304(1)(b)). COOPER was sentenced to a total effective 6 years 8 months; Paul BONNER to 7 years 6 months. COOPER appealed on the sole ground that the 10-month gap was too small and breached the parity principle.",
     "whatHeld": "The appeal was dismissed and leave refused. The Court held the <b>10-month difference between the sentences did not offend the parity principle</b> and would not engender a legitimate or justifiable sense of grievance in an objective observer. Although Paul BONNER was the mastermind who made the threats, had the motive, was the oldest and had a significant record for violent offending, the sentencing judge found <b>each co-offender equally culpable for the offending at the house</b> because each acted pursuant to a common purpose and the assaults were a probable consequence of that plan. The Court accepted the finding that COOPER was <b>not 'roped in' but a willing and enthusiastic participant</b> — travelling from Darwin with 48 hours to reconsider. The distinction in roles existed only before the offence; on the day itself there was no difference. The 10 months adequately reflected BONNER's mastermind role, his violent antecedents and COOPER's youth. The Court also stressed that <b>at age 25 youth carries only little weight</b> as a mitigating factor.",
@@ -82,13 +82,7 @@
     "flags": [
       "Judgment notes the sentencing judge incorrectly referred to 18/05/2018 for a threat phone call; the correct date found was 12/05/2018.",
       "Sentence figures and section numbers are taken directly from the judgment; the s 304(1)(b) and s 317(1) maxima are stated as 7 years each and s 401(1)(a) as 20 years."
-    ],
-    "needsReview": {
-      "heldOn": "2026-09-14",
-      "call": "AWARENESS",
-      "problems": 1,
-      "report": "Cases/audits/2026-09-14/wasca-2026-126.md"
-    }
+    ]
   },
   {
     "id": "wasca-2026-121",
