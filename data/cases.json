@@ -1,5 +1,45 @@
 [
   {
+    "id": "wasca-2026-121",
+    "date": "2026-08-31",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "The State of Western Australia v Matanga",
+    "citation": "[2026] WASCA 121",
+    "decided": "31/08/2026",
+    "appealFrom": "District Court of Western Australia (BLACK DCJ)",
+    "outcome": "Leave to appeal granted on grounds 1-5; appeal allowed; original conditionally suspended sentence set aside; respondent resentenced to a total effective 3 years 6 months' immediate imprisonment, backdated to 20/10/2025, with parole eligibility.",
+    "weight": "Court of Appeal (three judges) unanimous judgment of the Court; a considered restatement of established authority on prison-conditions mitigation and Bugmy principles. Persuasive and binding as an appellate authority, though grounds 3-5 were not decided.",
+    "tags": [
+      "sentencing",
+      "child sexual offence",
+      "s 321(2) Criminal Code",
+      "prison conditions",
+      "Hakea",
+      "remand",
+      "Bugmy principles",
+      "moral culpability",
+      "suspended sentence",
+      "State appeal",
+      "manifest inadequacy"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Harsh conditions generally experienced by remand prisoners at Hakea are not a mitigating factor without evidence of hardship personal to the offender, and childhood deprivation only reduces moral culpability if it impairs capacity to behave lawfully.",
+    "whatHappened": "MATANGA, aged 25, pleaded guilty to five counts of sexual penetration of a child aged 13-16 (contrary to <i>Criminal Code (WA)</i> s 321(2)) involving a 14-year-old complainant on three occasions in late 2024/early 2025 in a country town. The pair met at a party, exchanged Snapchat messages, and engaged in sexual activity in his car at a secluded farming property. He knew her true age at the time of counts 2-5. Three occasions involved unprotected penile-vaginal penetration. He was arrested 07/02/2025, bailed, then remanded from 20/10/2025 on a separate pending charge. The District Court (BLACK DCJ) imposed a total effective 3 years 6 months, conditionally suspended for 2 years, treating his remand conditions at Hakea and 'Bugmy principles' as mitigating. The State appealed.",
+    "whatHeld": "Grounds 1 and 2 established. The sentencing judge <b>erred in fact and law by treating the respondent's remand conditions as a mitigating factor</b>. There was no evidence his conditions were materially more arduous than those of the general prison population; indeed he spent most of his remand (137 days) at Albany, not Hakea (91 days), contrary to the judge's assumption. The Court held that <b>harsh conditions generally experienced by remand prisoners at Hakea are not a mitigating factor</b> — those conditions reflect the general prison population, and concern about them is a matter for the executive (<i>Prisons Act 1981 (WA)</i> s 7) and administrative law remedies, not sentencing. For prison hardship to mitigate, an offender must adduce evidence of hardship <b>personal to them</b> that is more onerous than for the ordinary prisoner. On Bugmy (grounds 3-4, not decided), the Court observed a deprived childhood <b>only reduces moral culpability where it impairs the capacity to behave lawfully</b>; here it merely influenced poor choices and did not impair that capacity. The Court resentenced to the same terms but as immediate imprisonment, backdated to 20/10/2025, with parole eligibility.",
+    "whatItMeans": "This decision is <b>awareness-level for your casework</b> but useful context on sentencing. When a court considers prison conditions in sentencing, the point of principle is that <b>generalised Hakea conditions are not mitigating</b> — only evidence of hardship personal to the offender counts. For serious child sexual offending under s 321(2), <b>immediate imprisonment remains the usual and expected disposition</b>, even where the child instigated the activity, there was no coercion, and the offender genuinely believed there was a relationship. Note the practical points relevant to your briefs: a good, thorough interview capturing admissions (here the offender admitted knowing her age) and evidence of the offender's knowledge of age (text messages about waiting until she was 18) can be decisive. The '<b>element of abuse</b>' — harm, exploitation or mistreatment — is the key touchstone; document the age gap, lack of protection, and victim impact fully.",
+    "verdict": "AWARENESS — a sentencing appeal clarifying that generalised Hakea remand conditions do not mitigate; it does not change how you investigate or charge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/121.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/121",
+    "files": {
+      "llm": "data/files/wasca-2026-121/wasca-2026-121.md"
+    },
+    "flags": [
+      "Grounds 3, 4 and 5 were not determined by the Court, as ground 1 was sufficient to require resentencing.",
+      "Section 87 of the Sentencing Act referenced in the judgment relates to remand time; note the respondent was remanded on a separate pending charge, not the indicted offences."
+    ]
+  },
+  {
     "id": "wasc-2026-362",
     "date": "2026-08-28",
     "court": "Supreme Court of Western Australia",
@@ -62,6 +102,96 @@
     "files": {
       "llm": "data/files/wasc-2026-380/wasc-2026-380.md"
     }
+  },
+  {
+    "id": "wasca-2026-117",
+    "date": "2026-08-28",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Le v The King",
+    "citation": "[2026] WASCA 117",
+    "decided": "28/08/2026",
+    "appealFrom": "District Court of Western Australia (Sweeney DCJ), IND 507 of 2021",
+    "outcome": "Hung: leave to appeal refused, appeal dismissed. Sang Le: application to adduce additional evidence and application to extend time both dismissed; appeal remains dismissed under the earlier self-executing (springing) order. Additional-evidence applications refused in both.",
+    "weight": "Court of Appeal (three judges) applying well-established principles from <i>M v The Queen</i> and <i>Pell</i>; a considered but largely restating decision (Category B). Binding as WA Court of Appeal authority though it breaks no new ground.",
+    "tags": [
+      "drug importation",
+      "methamphetamine",
+      "commercial quantity",
+      "covert recordings",
+      "co-conspirator exception",
+      "accomplice evidence",
+      "data access order",
+      "controlled delivery",
+      "IP tracking",
+      "interpreter evidence",
+      "unreasonable verdict",
+      "onus of proof"
+    ],
+    "relevance": "",
+    "oneLine": "Court of Appeal upholds meth importation convictions, confirming covert recordings, IP tracking and corroborated accomplice evidence together proved a commercial-quantity import agreement.",
+    "whatHappened": "About 20.9 kg (16.8 kg pure) of methamphetamine was concealed in an industrial oven consigned by FedEx from Toronto on 22/12/2018, addressed to \"Minh\" of a fake kitchen-equipment business (HKM) at a Maddington premises. Federal police intercepted the parcel in Sydney on 03/01/2019, replaced the drug with an inert substance and ran a controlled delivery on 10/01/2019 (no one attended). Minh and the two appellants, Phuoc Sang LE and Thanh Hung NGUYEN (Hung), were arrested on 15/01/2019 and charged under s 307.1(1) of the <i>Criminal Code</i> (Cth). Minh pleaded guilty and testified for a substantial sentence reduction. Both appellants were convicted after a near three-month trial; Hung was also convicted of failing to comply with a data access order (s 3LA(5) <i>Crimes Act 1914</i> (Cth)). The prosecution case rested on Minh's accomplice evidence, translated telecommunications intercepts and a listening/tracking device in Hung's car (obtained under TI and surveillance device warrants), FedEx tracking traced to LE's home router/IP address, and items found on search. Both appellants gave evidence denying knowledge — Hung claimed the venture was tobacco/gemstones, LE claimed an ordinary commercial lease and a Ghana gold business.",
+    "whatHeld": "The appeals were dismissed. On the record it was <b>open to the jury to convict beyond reasonable doubt</b>, and the court, on its own assessment, held there was only one reasonable inference — a commercial-quantity import agreement. <b>Accomplice evidence alone may not have sufficed</b>, but Minh's account was corroborated by the covert recordings, car movements, seized items and the FedEx tracking. The covert recordings were admissible against <b>both</b> appellants — as circumstantial evidence of the agreement and, where the requirements were met, under the <b>co-conspirator exception to the hearsay rule</b>. The interpreter was <b>qualified by study and experience</b> to translate Vietnamese and a childhood rhyming slang; limitations went to weight, not admissibility. The prosecutor's cross-examination of LE suggesting he had to call corroborating witnesses <b>should not have occurred</b>, but the trial judge's repeated, clear directions that the accused bears no onus <b>cured any prejudice</b>; refusal to discharge the jury was correct. The expert-evidence direction (jury not bound to accept even uncontradicted expert opinion) was orthodox. The additional evidence application was refused — it was new (not fresh) evidence and raised no significant possibility of acquittal.",
+    "whatItMeans": "For your casework this confirms several practical points. <b>Corroborate accomplice/informer evidence</b> — a co-offender who has bargained for a sentence reduction is treated with great caution and rarely stands alone, so build independent support (intercepts, surveillance, financial and search material). <b>Covert product from properly warranted TI and surveillance devices can run against every party to an agreement</b>, not just the speaker, via the co-conspirator exception — capture the whole picture, because forensic force comes from the totality, not one disputed phrase. Get <b>properly accredited interpreters</b> for covert recordings; capability by study and experience covers dialect/slang, and disputes over a few words go to weight. <b>Digital tracing matters</b> — IP/router attribution (here FedEx web-tracking tied to LE's home router) is strong circumstantial evidence; corroborate with device location and surveillance timing. For <b>data access orders (s 3LA)</b>, the live issue is proving the suspect was <b>capable of complying</b> (knew the PIN/password) — gather evidence linking the person to actual use of the device. Finally, never let questioning imply the accused must call evidence or prove anything — the onus stays on the prosecution.",
+    "verdict": "AWARENESS-plus-practice: it changes little in law but reinforces how you should gather and corroborate covert, accomplice and digital evidence and how you prove a s 3LA breach.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/117.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/117",
+    "files": {
+      "llm": "data/files/wasca-2026-117/wasca-2026-117.md"
+    },
+    "flags": [
+      "Verified case name is \"Le v The King\" but the substantive appeal decided was Hung's (Thanh Hung NGUYEN); Sang Le's appeal remained dismissed under a springing order.",
+      "Relevance marked ACTION for the investigative/charging practice points (corroboration, co-conspirator recordings, s 3LA capability); the decision itself is an appellate application of settled principles, so treat the prose conservatively.",
+      "Quantity stated as ~20.9 kg (16.8 kg pure); Minh's evidence referred variously to ~24 kg and 1–2 kg — figures in the judgment are inconsistent as recorded.",
+      "cleaner: years LATER than the citation year (decide: legitimate future date, or citator bleed?): 2095: Trial ts 2095 - 2097. 2097: Trial ts 2095 - 2097."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "ACTION",
+      "problems": 2,
+      "report": "Cases/audits/2026-09-14/wasca-2026-117.md"
+    }
+  },
+  {
+    "id": "wasca-2026-120",
+    "date": "2026-08-28",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Di Ciano v The State of Western Australia",
+    "citation": "[2026] WASCA 120",
+    "decided": "28/08/2026",
+    "appealFrom": "District Court of Western Australia (MASSEY DCJ), IND 1887 of 2021",
+    "outcome": "Both appeals dismissed. Conviction appeal: leave granted on ground 1 but ground not established; leave refused on ground 2. Sentence appeal: leave granted, appeal dismissed. Total effective sentence of 7 years 6 months' imprisonment upheld.",
+    "weight": "Considered, unanimous Court of Appeal judgment (three judges) reviewing directions on implied admissions and prosecutorial conduct — persuasive and useful guidance, though largely applying settled principle to its facts.",
+    "tags": [
+      "sexual penetration without consent",
+      "pretext call",
+      "implied admissions",
+      "Edwards direction",
+      "consent",
+      "honest and reasonable mistake",
+      "prosecutor's closing address",
+      "jury directions",
+      "totality principle",
+      "employer-employee",
+      "breach of trust",
+      "sentencing"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Court of Appeal upholds convictions and 7½-year sentence for sexual penetration of a young employee, confirming how pretext-call apologies can be run as implied admissions and how prosecutors may fairly test a consent defence.",
+    "whatHappened": "DI CIANO, a 47-year-old restaurant owner in Highgate, was convicted after a jury trial of three counts of sexual penetration without consent (counts 2, 3 and 4) against a 22-year-old employee working her second shift on 19/12/2020. The offending occurred in a locked storeroom (forced fellatio and penile-vaginal penetration) and later in a function room (digital penetration). He was acquitted of an indecent assault (count 1) and fined for indecent assaults on two other employees. After the complainant reported to police, she made a recorded pretext call to the appellant from the station, in which he repeatedly apologised (\"I'm so sorry... I get it\") and said he was \"probably too aggressive\", without ever expressly admitting non-consent. He later denied forcing her by text (\"I never forced anyone and never will\"). The defence ran consent, and honest and reasonable mistaken belief. He did not give evidence. He appealed conviction (directions on implied admissions; prosecutor's closing) and sentence (totality).",
+    "whatHeld": "The appeal was dismissed on all grounds. On the directions: the trial judge's direction was <b>sufficient to avoid any perceptible risk of a miscarriage of justice</b>. The court held that a full <i>Edwards</i>-type lie direction was <b>inapposite</b> because the State did not allege the appellant's statements were untrue — it alleged they truthfully acknowledged non-consent. Nor was this a 'silence' case like <i>MMJ</i>, because the appellant responded and was \"anything but silent\". Where there is <b>no plausible innocent explanation</b> for the admission, a direction listing implausible alternatives could only emphasise its incriminating force. On the prosecutor's closing: it was <b>not improper</b> for the prosecutor to hypothesise what an innocent person might have said, drawing on propositions defence counsel had put to the complainant. The prosecutor was not treating those propositions as evidence, and standard directions (that questions and counsel's statements are not evidence) removed any realistic risk of misuse. On sentence: the 7 years 6 months total effective sentence did <b>not infringe the first limb of totality</b>; 5 years on count 3 was moderate and some accumulation for the separate count 4 was justified.",
+    "whatItMeans": "For your casework, this confirms that a <b>pretext call is a powerful tool even where the suspect never expressly admits the offence</b>. An apology or a failure to deny, in a context where an innocent person would be expected to protest, can be run as an implied admission supporting the complainant's account. Two practical takeaways: <b>(1) let the suspect talk</b> — the value here came from an apologetic, non-denying response to being told the complainant felt scared; and <b>(2) get specifics on record where you can</b>, because the defence exploited the fact that no direct allegation of rape/non-consent was ever put during the call, and that the appellant denied force once a specific written allegation came. A well-run pretext call ideally captures the suspect responding to a concrete, non-consensual allegation. Note also the court's approach: because these were <b>truthful-acknowledgement</b> admissions, not lies, the usual lie/consciousness-of-guilt directions did not apply. The case also reinforces that <b>sexual offending by an employer against an employee is a serious aggravating breach of trust and power imbalance</b>, especially against young, culturally vulnerable, or ESL victims.",
+    "verdict": "AWARENESS with practical value: it does not change the law but confirms best practice for pretext calls and how apologetic, non-denying responses can be used as implied admissions.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/120.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/120",
+    "files": {
+      "llm": "data/files/wasca-2026-120/wasca-2026-120.md"
+    },
+    "flags": [
+      "The offence provision listed in the catchwords is Criminal Code (WA) s 325; the judgment text does not expressly state the section for each count — confirm charging section before relying on it.",
+      "Sentencing Act reference in the judgment is to s 9AA of the Sentencing Act 1995 (WA) for the 10% plea discount on the indecent assault counts only."
+    ]
   },
   {
     "id": "wasc-2026-356",
@@ -301,6 +431,128 @@
     }
   },
   {
+    "id": "wasca-2026-114",
+    "date": "2026-08-19",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Frigger v The State of Western Australia",
+    "citation": "[2026] WASCA 114",
+    "decided": "19/08/2026",
+    "appealFrom": "District Court of Western Australia (GETHING DCJ), IND 1112 of 2019",
+    "outcome": "Application to issue a witness summons dismissed; leave to appeal refused; appeal dismissed.",
+    "weight": "Court of Appeal (three judges) — persuasive and authoritative on WA law, though the decision expressly turns on its own facts.",
+    "tags": [
+      "perjury",
+      "section 169 Criminal Code",
+      "false statement under oath",
+      "material particular",
+      "second appeal",
+      "fresh and compelling evidence",
+      "new and compelling evidence",
+      "Criminal Appeals Act 2004 pt 3A",
+      "disclosure obligations",
+      "witness summons"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "A second appeal against a s 169 perjury conviction failed where the proposed 'fresh/new and compelling evidence' was neither fresh nor compelling and had no reasonable prospect of establishing innocence.",
+    "whatHappened": "On 04/06/2024 FRIGGER was convicted after a jury trial of one count of knowingly making a false statement under oath in a material particular, contrary to s 169 of the <i>Criminal Code</i> (WA). The charge arose from two irreconcilable affidavits she swore (in 2008 and 2010) in civil proceedings involving PSA, Mr BANNING, CAT and Mr KITAY — one of the two statements had to be false. Her first appeal was dismissed on 14/01/2025. On 02/06/2026 she brought a second appeal under pt 3A of the <i>Criminal Appeals Act 2004</i> (WA), relying on an affidavit and seeking a witness summons to Mr KITAY to produce a 2010 'reconstructed Directors' Loan Account'. She argued (1) the civil proceedings were a nullity because PSA lacked corporate authority to bring them, so no statement could be 'material', and (2) new evidence contradicted the prosecution case about directors' fees.",
+    "whatHeld": "Leave to appeal was refused, the witness-summons application dismissed and the appeal dismissed. The court held the ground identified <b>no fresh and compelling or new and compelling evidence</b> and, in any event, had <b>no reasonable prospect of succeeding</b>. On particular 1, the 'nullity' argument was <b>not new</b> — it had been run in related litigation before trial and could have been raised with reasonable diligence; deemed civil admissions did not bind the State in the criminal case; superior court orders are valid until set aside so the proceedings were not nullities; and the affidavits were in fact relied on and so were capable of affecting the outcome, making them false in a material particular. On particular 2, evidence of a 2010 reconciliation showing FRIGGER a debtor rather than creditor was <b>not compelling</b> — the prosecution never sought to prove which of the two affidavits was false, only that they were irreconcilable so one must be — and evidence of the Freehills advice was in her possession before trial and remained subject to privilege/confidentiality orders. The court confirmed the prosecutor's <b>disclosure duty is to disclose material in the possession of the investigators, not an obligation to go out and obtain material</b>.",
+    "whatItMeans": "This is mainly background awareness, but note two practical points. First, on <b>s 169 perjury</b>: a statement is false 'in a material particular' if it is <b>reasonably capable of affecting the outcome of the purpose for which it was made</b> — you do not need to prove the proceedings would have turned out differently, only that the statement could have affected them. Where a person swears two irreconcilable sworn statements, the prosecution can succeed by proving both cannot be true (so one must be false) without pinning down which one. Second, on <b>disclosure</b>: your duty runs to evidentiary material <b>in the possession of the investigating agency</b>. A defence complaint that the DPP failed to go and obtain some external document does not create a disclosure breach — but you should make sure everything the investigation actually holds is captured and passed on.",
+    "verdict": "AWARENESS — it confirms how materiality under s 169 works and the scope of the disclosure duty, but does not change day-to-day investigative practice.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/114.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/114",
+    "files": {
+      "llm": "data/files/wasca-2026-114/wasca-2026-114.md"
+    },
+    "flags": [
+      "Conviction date (04/06/2024) and other dates are drawn from the judgment text; confirm against the primary record if relied on.",
+      "Detailed factual background is in the First Appeal Decision (<i>Frigger v The State of Western Australia [No 2]</i> [2025] WASCA 7), which was not supplied in full.",
+      "cleaner: years LATER than the citation year (decide: legitimate future date, or citator bleed?): 2052: Trial ts 2052 - 2053, 2061. 2053: Trial ts 2052 - 2053, 2061. 2059: Trial ts 2059. 2061: Trial ts 2052 - 2053, 2061."
+    ]
+  },
+  {
+    "id": "wasca-2026-115",
+    "date": "2026-08-19",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Nicoletti v The State of Western Australia",
+    "citation": "[2026] WASCA 115",
+    "decided": "19/08/2026",
+    "appealFrom": "District Court of Western Australia (MASSEY DCJ), IND 1017 of 2022",
+    "outcome": "Leave to appeal refused; appeal dismissed. Orders made 19/08/2026, reasons published the same day.",
+    "weight": "Court of Appeal (three judges: THOMSON P, MITCHELL JA, SWEENEY JA) decision applying High Court authority; authoritative but expressly fact-specific (\"Turns on own facts\", Category B).",
+    "tags": [
+      "sexual penetration without consent",
+      "s 325 Criminal Code",
+      "jury directions",
+      "apprehension of bias",
+      "miscarriage of justice",
+      "transcript",
+      "HCF v The Queen",
+      "conviction appeal"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Non-consecutive transcript page numbers given to the jury did not create a reasonable apprehension of bias or a miscarriage of justice.",
+    "whatHappened": "NICOLETTI was convicted on 26/08/2025 in the District Court (MASSEY DCJ) of one count of sexual penetration without consent contrary to <i>s 325 Criminal Code</i> (WA). The count was one of several on a larger indictment; an earlier trial hung on various counts and a later trial of this count was aborted after the jury retired. At the trial that convicted him, the jury got a 'dummy' indictment with only this count and no mention of the earlier proceedings. The complainant's edited recorded evidence (given 19/02/2024) was played, and the jury received a transcript of witness evidence. The transcript pages were not consecutive — witness evidence ran pages 4121–4195 and the complainant's ran 1076–1113 — reflecting editing and the broader proceedings. The trial judge told the jury the numbering would be out and there would be gaps due to editing. NICOLETTI appealed, arguing the page numbers signalled he had been involved in extensive criminal proceedings, raising a reasonable apprehension of bias amplified by media coverage.",
+    "whatHeld": "The Court of Appeal refused leave and dismissed the appeal, finding the ground had <b>no reasonable prospect of succeeding</b>. Three reasons: (1) the practice of numbering transcript pages consecutively across all proceedings under one indictment is <b>not known to an ordinary juror or fair-minded member of the public</b>, so the numbers communicated nothing about other charges; (2) the reasoning the appellant attributed to the fair-minded lay observer was <b>mere speculation with no objective basis in fact</b>; and (3) it would require the jury to disregard the trial judge's clear directions (not to speculate, decide only on the evidence, transcript is not evidence) and their oaths. Applying <i>HCF v The Queen</i> [2023] HCA 35, an apprehension must have an objective basis in fact, and violation of the juror's oath is <b>not lightly to be inferred</b>; jurors are assumed to understand and conform to directions.",
+    "whatItMeans": "This is a conviction-appeal ruling with little direct operational impact, but it reinforces useful points. <b>Courts strongly presume juries follow directions and honour their oaths</b>, so claims of prejudice from incidental material need a concrete factual foundation, not speculation. Where a matter involves multiple counts, aborted or hung trials, and media coverage, prosecutors use tools like a 'dummy' indictment and editing to keep extraneous material from the jury — be alert to keeping your brief clean of prior-proceeding references. Incidental artefacts like <b>non-consecutive transcript page numbers were held not to convey prejudicial information</b> to lay jurors. The test for post-verdict apprehension of bias from jury issues comes from <i>HCF</i>: whether a fair-minded, informed member of the public might reasonably apprehend the jury did not decide according to law, on the evidence, and per directions.",
+    "verdict": "AWARENESS only — this turns on its own facts and changes nothing in how you investigate or charge; it confirms the strong presumption that juries follow directions.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/115.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/115",
+    "files": {
+      "llm": "data/files/wasca-2026-115/wasca-2026-115.md"
+    }
+  },
+  {
+    "id": "wasca-2026-116",
+    "date": "2026-08-19",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Downes v The State of Western Australia [No 3]",
+    "citation": "[2026] WASCA 116",
+    "decided": "19/08/2026",
+    "appealFrom": "District Court of Western Australia (Bowden DCJ; related rulings by Sweeney DCJ, Petrusa DCJ and Gillan DCJ)",
+    "outcome": "Application dismissed in its entirety.",
+    "weight": "Court of Appeal decision, but only an interlocutory ruling on an application for production of documents; persuasive on procedure, not a substantive precedent on the merits.",
+    "tags": [
+      "drug cultivation",
+      "cannabis",
+      "Misuse of Drugs Act",
+      "destruction of evidence",
+      "sampling procedure",
+      "MD 14 certificate",
+      "guilty plea",
+      "stay application",
+      "disclosure",
+      "Public Interest Disclosure Act",
+      "self-represented",
+      "appeal procedure"
+    ],
+    "relevance": "",
+    "oneLine": "Court of Appeal dismissed a self-represented appellant's application for document production and affidavits sought to support his conviction appeal over destroyed cannabis plants.",
+    "whatHappened": "DOWNES pleaded guilty in the District Court to cultivating 269 cannabis plants with intent to sell or supply (s 7(1)(a) <i>Misuse of Drugs Act 1981</i> (WA)) and fraudulently diverting electrical power from Western Power (s 390 <i>Criminal Code</i> (WA)). Police attended an Orelia house after a fire on 14/08/2022, executed a search warrant on 15/08/2022, and found a hydroponic operation across a laundry and three bedrooms totalling 269 plants. After his guilty plea in the Magistrates Court on 15/09/2022, six samples (one per bag) were retained and the rest destroyed by police. DOWNES was ultimately sentenced on 17/12/2025 to a total effective term of 3 years and 3 months. He appealed his conviction, arguing the State never proved there were 269 cannabis sativa plants and that unlawful destruction of the plants deprived him of the chance to inspect and count them. In this application he sought orders (Categories C–K) compelling production of documents and affidavits — including the unredacted Police Destruction List Report, an affidavit from the JP who witnessed destruction, proof of authenticity of a WA Police Manual extract, evidence from officers and the prosecutor, disclosure of a 'Red Flag' on his record, and whistle-blower protection under the <i>Public Interest Disclosure Act 2003</i> (WA).",
+    "whatHeld": "The application was dismissed in full. The Court held the documents and orders sought had <b>no demonstrated relevance to the issues in the appeal</b>. It was already accepted that not all proper procedures were followed in destroying and storing the plants, so no affidavit or further proof on that point was needed. The refusal of a stay is <b>not directly appealable</b>; such grounds can only run as contentions that a ruling caused a miscarriage of justice. The whistle-blower relief was <b>not properly brought within a criminal appeal</b> and must go to a single judge of the General Division under s 15A of the <i>Public Interest Disclosure Act 2003</i>; in any event, no evidence showed detrimental reprisal action against the appellant.",
+    "whatItMeans": "This decision is about interlocutory procedure in an appeal, not investigative practice, so its direct effect on your casework is limited. But note the practical warning underneath it: in a drug cultivation case, <b>how you count, sample, store and destroy plant material matters</b>. Here the Court and lower courts accepted that not all proper procedures under the <i>Misuse of Drugs Act 1981</i> and regulations were followed in destroying the plants — that concession, while it did not save the appellant, became the engine for repeated challenges. Retain sufficient representative samples (here six, one per bag), ensure the Commissioner's delegate properly decides it is not reasonably practicable to detain the material, have destruction overseen by an officer of appropriate seniority, and <b>complete the prescribed forms correctly</b> (including MD 14 certificates). Where plants are counted, corroborate the count with <b>video evidence</b> and officers who can give direct evidence of counting — that is what sustained the finding of 269 plants at the trial of issues.",
+    "verdict": "AWARENESS only — this is a procedural ruling on document production in an appeal and does not change how you investigate or charge, but it flags the importance of proper counting, sampling and destruction procedures.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/116.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/116",
+    "files": {
+      "llm": "data/files/wasca-2026-116/wasca-2026-116.md"
+    },
+    "flags": [
+      "Conviction date given as 19/07/2024 in the summary but pleas of guilty were entered on multiple dates (15/09/2022, 02/02/2024, 19/07/2024) — check the operative conviction date.",
+      "The appeal against conviction itself was not decided here; this is only the ruling on the production application.",
+      "Category J is not addressed in the judgment text (categories jump from I to K) — do not assume its content.",
+      "Section 41(1) Misuse of Drugs Act and s 30(3) Criminal Appeals Act 2004 (WA) are referenced only via the appellant's grounds and the Court's framing; verify before relying."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "AWARENESS",
+      "problems": 2,
+      "report": "Cases/audits/2026-09-14/wasca-2026-116.md"
+    }
+  },
+  {
     "id": "wasc-2026-341",
     "date": "2026-08-18",
     "court": "Supreme Court of Western Australia",
@@ -499,6 +751,55 @@
     "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/29",
     "files": {
       "llm": "data/files/hca-2026-29/hca-2026-29.md"
+    }
+  },
+  {
+    "id": "wasca-2026-111",
+    "date": "2026-08-11",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "Mehrabi v The State of Western Australia",
+    "citation": "[2026] WASCA 111",
+    "decided": "11/08/2026",
+    "appealFrom": "District Court of Western Australia (Sweeney DCJ), IND 123 of 2023",
+    "outcome": "Leave to appeal granted on grounds 1 and 3; leave refused on ground 2; appeal dismissed. Convictions on all 21 counts upheld.",
+    "weight": "Strong. A considered, unanimous-in-result Court of Appeal decision (three judges) directly interpreting s 319(2)(a) causation and the availability of s 24 in drug-facilitated cases. Note the Court expressly declined to finally decide whether s 24 can ever apply to fraud-vitiated consent, and clarified that the counterfactual test in HES is obiter and confined to representation cases.",
+    "tags": [
+      "sexual offences",
+      "consent",
+      "s 319(2)(a)",
+      "stupefying drug",
+      "MDMA",
+      "drug-facilitated sexual assault",
+      "tendency reasoning",
+      "honest and reasonable mistake",
+      "s 24",
+      "causation",
+      "expert evidence",
+      "forensic toxicology"
+    ],
+    "relevance": "",
+    "oneLine": "WA Court of Appeal upholds MEHRABI's 21 convictions, confirming that where a complainant's apparent consent is obtained by covertly drugging her, the State need only prove the drug played a 'material role' in her decision — not a counterfactual — and that honest/reasonable mistake was not available.",
+    "whatHappened": "Following a jury trial in the District Court before Sweeney DCJ, Farzam MEHRABI was convicted of 21 offences against six young women he met on Tinder and Bumble between February and March 2022. The convictions included four counts of administering a stupefying drug (MDMA) with intent to facilitate an indictable offence, 12 counts of sexual penetration without consent, two counts of unlawful and indecent assault, and three counts of unlawfully impeding breathing (choking Ms POTTER and Ms TURNER). MEHRABI covertly gave several women MDMA (confirmed by blood and hair follicle testing), then engaged in sexual activity. Some complainants said they consciously refused; two (Ms CAMPBELL and Ms TURNER) could not remember or described being 'sluggish' and 'half-aware'. MEHRABI gave evidence claiming consent or honest and reasonable belief in consent. The trial judge directed the jury on three ways the State could prove absence of consent: conscious non-consent, incapacity through intoxication, and consent obtained by deceit or fraudulent means (secret drugging) under <i>Criminal Code</i> (WA) s 319(2)(a). MEHRABI appealed on three grounds concerning these directions.",
+    "whatHeld": "The Court granted leave on grounds 1 and 3 but <b>dismissed the appeal</b>; Thomson P would have refused leave on all grounds but agreed the appeal failed. Ground 1 (tendency): <b>all three 'pathways' were probative of the same tendency</b> — a tendency to engage in sexual acts with a woman without her free and voluntary consent — and covert drugging was 'particularly probative' given the premeditation. Ground 3 (causation): the direction that the drug must have played a <b>'material role' in the complainant's decision to consent was correct and sufficient</b>. Where deceit distorts the decision-making capacity itself (rather than distorting information), it is <b>neither necessary nor appropriate to pose the counterfactual</b> of whether the complainant would have consented absent the drug. The Court held the counterfactual approach in <i>HES v The State of Western Australia</i> was obiter and confined to cases involving a representation of fact. Ground 2 (mistake): where consent was obtained by deceitfully drugging the complainant, there was <b>no evidentiary basis for a s 24 honest and reasonable mistake defence</b> — given MEHRABI's knowledge of MDMA's effects, no such belief could be honest or reasonable. The Court declined to decide whether s 24 could ever apply to fraud-vitiated consent.",
+    "whatItMeans": "For your casework on drug-facilitated sexual assault, this decision <b>strengthens how you build and frame the consent element</b>. You do not need to establish what a victim 'would have done' if she had not been drugged — that counterfactual is incoherent where the drug itself distorted her decision-making. Focus your evidence on proving the covert administration and that the drug played a <b>material role</b> in any apparent consent. This makes <b>expert pharmacology evidence and forensic testing critical</b>: here, blood and hair follicle results confirming MDMA, plus expert evidence (Professor Drummer) that MDMA increases sexual desire and reduces the ability to resist, did the heavy lifting. Secure toxicology samples promptly and note that hair testing can confirm exposure months later. Where a suspect knows the effects of the drug he secretly administered, expect the honest-and-reasonable-mistake defence to fall away. Also note the value of <b>establishing intent to facilitate an offence</b> (the s 322-type stupefying charges) as premeditation evidence that supports tendency reasoning across multiple complainants.",
+    "verdict": "AWARENESS-plus-ACTION call: treat as ACTION — it directly shapes how you evidence and charge drug-facilitated sexual offences, especially the material-role test and forensic/expert requirements.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2026/111.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/111",
+    "files": {
+      "llm": "data/files/wasca-2026-111/wasca-2026-111.md"
+    },
+    "flags": [
+      "The Court expressly did NOT decide whether s 24 (honest and reasonable mistake) can ever apply where consent is obtained by deceit or fraudulent means — it held only that s 24 had no application on these facts.",
+      "Thomson P dissented on whether leave should be granted (he would refuse leave on all grounds) but agreed the appeal should be dismissed.",
+      "Section numbers for the substantive charges (s 325 sexual penetration, s 323 indecent assault) appear only in Thomson P's reasons; the catchwords cite s 24 and s 319(2)(a). Confirm exact charging sections against the indictment.",
+      "MEHRABI was acquitted of count 15 (administering a drug to Ms VARGAS) and pleaded guilty to the three 'offer to supply' counts (1, 5, 14), which were not tried."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "ACTION",
+      "problems": 2,
+      "report": "Cases/audits/2026-09-14/wasca-2026-111.md"
     }
   },
   {
