@@ -1723,6 +1723,98 @@
     }
   },
   {
+    "id": "wasca-2021-112",
+    "date": "2021-06-29",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "ISN v The State of Western Australia",
+    "citation": "[2021] WASCA 112",
+    "decided": "29/06/2021",
+    "appealFrom": "District Court of Western Australia (BIRMINGHAM DCJ), BUN IND 12 of 2019",
+    "outcome": "Leave to appeal granted on ground 4; leave refused on grounds 1, 2 and 3; appeal dismissed. Convictions and 4 years 6 months' total effective sentence stand.",
+    "weight": "Court of Appeal (three judges) unanimous judgment of the Court; binding on WA courts below and a clear statement of recognition/identification and circumstantial identity principles.",
+    "tags": [
+      "child sex offences",
+      "identity",
+      "recognition evidence",
+      "identification evidence",
+      "Domican warning",
+      "circumstantial evidence",
+      "unreasonable verdict",
+      "Longman direction",
+      "section 320 Criminal Code",
+      "delayed complaint"
+    ],
+    "relevance": "",
+    "oneLine": "Recognition evidence from a child complainant who knew the accused well, combined with a strong circumstantial case on identity, upheld a conviction for child sex offences despite a pitch-dark room and no facial recognition.",
+    "whatHappened": "ISN was tried in the District Court before BIRMINGHAM DCJ on an indictment alleging four sexual offences against a girl under 13, called T. Counts 1 and 3 (indecent dealing by kissing) were contrary to <i>Criminal Code</i> (WA) s 320(4); counts 2 and 4 (digital penetration of the vagina) were contrary to s 320(2). The offending occurred at a country town between late 2011 and mid-2013, when T was about 8-10 years old. The accused was a close friend of T's father A and an uncle figure to T, visiting the family home very frequently and often sleeping over, along with his young daughter C, who slept in the same room as T. He was a self-described alcoholic who often drank to excess. T did not complain until 2018. At trial the only real issue was identity: the defence did not dispute that the acts occurred, but argued the accused was not the offender and that other men also visited and drank at the house. The accused denied the offences in a video record of interview (VROI, 25/10/2018) and did not testify; his daughter C gave defence evidence. On 31/10/2019 the jury convicted on all four counts. He was sentenced to a total effective 4 years 6 months' immediate imprisonment. He appealed conviction on four grounds relating to identity directions and the reasonableness of the verdicts.",
+    "whatHeld": "The Court of Appeal (BUSS P, MAZZA JA, VAUGHAN JA) refused leave on grounds 1-3, granted leave on ground 4, and dismissed the appeal. On ground 1, T's testimony was properly characterised as <b>recognition evidence</b> (not merely inferential) given her lifelong familiarity with the accused, her very close face-to-face physical contact with the offender, and her evidence of seeing him enter the room and lie next to C; it stood alongside the circumstantial case. On ground 2, a <b>Domican warning is mandated only for identification cases, not ordinarily for recognition cases</b>, because recognition evidence is generally more reliable; the judge properly reminded the jury that honest mistakes in recognition can occur even with close relatives and friends. Although it would have been <b>preferable to specifically isolate the weaknesses</b> in T's recognition evidence, no miscarriage arose given the short trial, the recent closing addresses, and the full Longman direction. On ground 3, the summing up was balanced. On ground 4, the Court held the <b>circumstantial case on identity was the stronger and most compelling category</b>: the only reasonable inference was that the accused was the offender. Evidence based on pure assumption was technically inadmissible but unobjected to and used for the defence's advantage; recognition partly by intuition was admissible (per <i>AK v Western Australia</i>) though of limited weight alone.",
+    "whatItMeans": "This case shows how <b>identity can be proved without any facial recognition</b> where the complainant knew the offender well and a strong circumstantial case exists. When you build a child sex case turning on identity, focus on assembling the <b>combination of circumstances</b> — opportunity, frequency of access, trusted-family-friend status, prior non-sexual touching, and conduct consistent with the offender's behaviour (here, the accused being found in the child's bed, and being the by-far most frequent overnight visitor). The Court found the circumstantial case more compelling than the complainant's recognition evidence itself. Note the distinction between <b>recognition evidence</b> (offender previously known to the witness) and <b>identification evidence</b> (first seen at the crime scene): the full Domican warning is mandated for identification but not ordinarily for recognition. Be aware some of T's evidence about how she 'knew' it was the accused was <b>assumption-based and technically inadmissible</b> — the defence chose not to object because it helped them. To strengthen future cases, gather evidence that rules out alternative male visitors (attendance patterns, who slept over, who had any contact with the child) so the innocence hypothesis is closed off. Delay to complaint (here from ~2011-13 to 2018) triggered a full Longman direction.",
+    "verdict": "AWARENESS: This is an appellate application of settled recognition/identification and unreasonable-verdict principles; it reinforces how to build a circumstantial identity case but does not change investigative procedure.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2021/112.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2021/WASCA/112",
+    "files": {
+      "llm": "data/files/wasca-2021-112/wasca-2021-112.md"
+    },
+    "flags": [
+      "Complainant, accused and family members anonymised in judgment (T, C, A, P, ISN) — use initials/pseudonyms, do not attempt to identify.",
+      "Offence dates are ranges pleaded on the indictment (between 31/12/2011 and 01/07/2013), not precise dates.",
+      "The case name in the citation is 'ISN v The State of Western Australia' while the judgment header shows 'ISN v The State of Western Australia [No 2]' — noted for accuracy."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "AWARENESS",
+      "problems": 4,
+      "report": "Cases/audits/2026-09-14/wasca-2021-112.md"
+    }
+  },
+  {
+    "id": "wasca-2021-39",
+    "date": "2021-03-08",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "LNN v The State of Western Australia",
+    "citation": "[2021] WASCA 39",
+    "decided": "08/03/2021",
+    "appealFrom": "District Court of Western Australia (STONE DCJ)",
+    "outcome": "Appeal against conviction allowed; convictions on counts 2, 3, 5 and 6 set aside and new trial ordered. Extension of time granted. Appeal against sentence dismissed as redundant.",
+    "weight": "Court of Appeal (three judges), Category A, delivered 08/03/2021. Binding and applies established principles (Hill, Dann, LNV, Bauer) on uncharged-acts directions. Strong authority on the need for propensity-reasoning directions.",
+    "tags": [
+      "child sexual offences",
+      "uncharged acts",
+      "propensity evidence",
+      "s 31A Evidence Act",
+      "jury directions",
+      "miscarriage of justice",
+      "inconsistent verdicts",
+      "unreasonable verdict",
+      "recent complaint",
+      "child witness interview"
+    ],
+    "relevance": "",
+    "oneLine": "Convictions for child sexual offences quashed and a retrial ordered because the jury was never clearly told it could not use evidence of uncharged sexual acts as propensity reasoning.",
+    "whatHappened": "LNN was tried in the District Court (STONE DCJ) on six counts of sexual offences against two girls, T (born January 2010) and H (born April 2011), both under 13, allegedly committed on one unknown day between 01/01/2015 and 12/05/2017. On 01/04/2019 he was convicted on counts 2, 3, 5 and 6 (penetration of T's mouth, masturbating in T's presence, rubbing his penis on H's genitals, and encouraging H to perform fellatio) and acquitted on counts 1 and 4. He received a total effective sentence of 8 years. Both complainants gave evidence of further sexual acts by LNN that were not charged. The prosecutor invited the jury to treat these as showing an 'unnatural relationship' and 'unhealthy sexual interest' and told them evidence of uncharged acts against one girl could be used across all six counts. He appealed conviction on four grounds and sentence on one.",
+    "whatHeld": "Grounds 1-3 failed: the recent complaint direction was adequate, the mixed verdicts were reconcilable (count 1 acquittal explained by lack of specificity on penetration; count 4 acquittal by H's later evidence limiting the conduct to the lounge room), and the guilty verdicts were not unreasonable. Ground 4 succeeded. It was common ground the uncharged-acts evidence was <b>not</b> admitted or available as propensity evidence under <i>s 31A Evidence Act 1906 (WA)</i> or at common law. Because the prosecutor's address and the trial judge's directions left the permissible use unclear and invited cross-count reasoning, there was a <b>real and not remote possibility the jury would reason by propensity</b>. The absence of a clear direction that propensity reasoning was impermissible was a miscarriage of justice. Following <i>Hill</i>, a specific direction on the uses to which such evidence must not be put was required. The State did not seek to apply the proviso. Appeal allowed, convictions on counts 2, 3, 5 and 6 set aside, new trial ordered; sentence appeal dismissed as redundant.",
+    "whatItMeans": "When a complainant volunteers accounts of <b>additional sexual acts that are not charged</b>, flag them clearly in your brief and be explicit about why they matter. If the conduct is serious and provable, <b>consider charging it</b> rather than leaving it as uncharged 'context'. If uncharged acts are to be used to show sexual interest or propensity, that pathway runs through <i>s 31A Evidence Act 1906 (WA)</i> and must be properly identified and pursued from the outset — it cannot be smuggled in as vague 'background'. Do not let the case theory rest on inviting a jury to think the accused is 'the kind of person' who would offend. Be careful with evidence of one complainant being used to prove charges against a different complainant: that requires a linking feature and proper admission. Record dates, places and specifics of each incident as precisely as possible — the count 1 acquittal here turned on the child being unable to specify where penetration occurred.",
+    "verdict": "AWARENESS-plus-action: it does not change lawful investigative powers, but it should change how you charge and frame uncharged sexual conduct so the prosecution's use of that evidence is put on a sound, s 31A footing.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2021/39.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2021/WASCA/39",
+    "files": {
+      "llm": "data/files/wasca-2021-39/wasca-2021-39.md"
+    },
+    "flags": [
+      "District Court indictment number redacted in judgment as 'IND XX of 2018'",
+      "Offence dates are a range (01/01/2015 to 12/05/2017) on an unknown single day, per the prosecution case",
+      "Complainants and other parties anonymised (T, H, C, P, M) in the judgment"
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "ACTION",
+      "problems": 1,
+      "report": "Cases/audits/2026-09-14/wasca-2021-39.md"
+    }
+  },
+  {
     "id": "hca-2020-12",
     "date": "2020-04-07",
     "court": "High Court of Australia",
@@ -1762,6 +1854,77 @@
       "Procedural and evidentiary references are to Victorian statutes (Criminal Procedure Act 2009 (Vic), Jury Directions Act 2015 (Vic), Evidence Act 2008 (Vic)) — WA has different legislation.",
       "Judgment noted it was subject to formal revision prior to publication in the Commonwealth Law Reports."
     ]
+  },
+  {
+    "id": "hca-2019-48",
+    "date": "2019-12-13",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "De Silva v The Queen",
+    "citation": "[2019] HCA 48",
+    "decided": "13/12/2019",
+    "appealFrom": "Court of Appeal of the Supreme Court of Queensland",
+    "outcome": "Leave to amend the notice of appeal granted; special leave granted on ground 2; appeal dismissed. Conviction on count 2 stands.",
+    "weight": "High Court of Australia, five-judge bench, majority of four (Nettle J dissenting). Binding and authoritative on the availability and preferred form of Liberato directions.",
+    "tags": [
+      "jury directions",
+      "Liberato direction",
+      "record of interview",
+      "exculpatory statements",
+      "onus and standard of proof",
+      "beyond reasonable doubt",
+      "rape",
+      "sexual offences",
+      "accused not giving evidence",
+      "miscarriage of justice"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court confirms a Liberato direction is not required as a matter of law where the accused does not give sworn evidence, but may be needed where exculpatory answers in a police interview create a real risk the jury will reason wrongly about proof.",
+    "whatHappened": "DE SILVA was tried in the District Court of Queensland on two counts of rape (digital penetration without consent) against the same complainant on the same occasion, under <i>Criminal Code</i> (Qld) s 349. The prosecution case depended on the complainant's evidence. DE SILVA did not give or call evidence, but his recorded police interview — in which he denied any digital penetration — was in evidence. The trial judge gave conventional onus and standard of proof directions but no Liberato direction (none was requested). The jury acquitted on count 1 and convicted on count 2. The Queensland Court of Appeal dismissed his appeal. He appealed to the High Court.",
+    "whatHeld": "The appeal was <b>dismissed</b> (Kiefel CJ, Bell, Gageler and Gordon JJ; Nettle J dissenting). A Liberato direction is <b>not required as a matter of law</b> simply because the accused fails to give sworn evidence. However, where the accused's conflicting version is before the jury — including as exculpatory answers in a record of interview — a Liberato direction <b>should be given if the trial judge perceives a real risk</b> the jury might reason that the accused's account can only raise a reasonable doubt if they believe it, or that a preference for the complainant's evidence suffices to establish guilt. The Court endorsed a three-limbed form: (i) if you believe the accused's account, acquit; (ii) if you do not accept it but think it might be true, acquit; (iii) if you do not believe it, put it aside and ask whether the prosecution has proved guilt beyond reasonable doubt on the evidence you do accept. On the facts, the summing-up read as a whole made clear the jury could not convict if the exculpatory answers left them with a reasonable doubt, so no miscarriage occurred. Nettle J dissented, finding the directions likely left the jury thinking they could disregard the exculpatory answers unless satisfied they were \"accurate and true\".",
+    "whatItMeans": "This is a trial-directions case, not an investigation rule, so it mainly shapes how the case is run at trial rather than how you gather evidence. The practical point for your casework: <b>a suspect's exculpatory answers in a recorded interview are evidence that can raise a reasonable doubt even if the accused never testifies</b>. Do not treat denials in a record of interview as easily brushed aside — they carry forensic weight. When you build a case that turns on the complainant's account against a denial in interview, expect the defence to rely heavily on that interview, and understand that a jury cannot simply prefer the complainant and convict; the Crown must still prove guilt beyond reasonable doubt. Conduct thorough interviews and record them accurately, because those answers remain live at trial.",
+    "verdict": "AWARENESS only — this changes trial directions, not how you investigate or charge, but reinforces that a suspect's recorded exculpatory denials are substantive evidence capable of raising reasonable doubt.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2019/48.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2019/HCA/48",
+    "files": {
+      "llm": "data/files/hca-2019-48/hca-2019-48.md"
+    }
+  },
+  {
+    "id": "wasca-2019-118",
+    "date": "2019-08-14",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "The State of Western Australia -vJACKSON",
+    "citation": "[2019] WASCA 118",
+    "decided": "14/08/2019",
+    "appealFrom": "District Court of Western Australia (BOWDEN DCJ) — The State of Western Australia v Jackson [2019] WADC 91",
+    "outcome": "Appeal allowed; the primary judge's order for separate trials of counts 3 and 4 set aside; all four counts to be tried together.",
+    "weight": "Strong. Unanimous judgment of a three-member Court of Appeal (BUSS P, MITCHELL and BEECH JJA), applying High Court authority (McPhillamy, Bauer, Hughes) and settled WA authority on s 31A.",
+    "tags": [
+      "s 31A Evidence Act",
+      "propensity evidence",
+      "significant probative value",
+      "cross-admissibility",
+      "child exploitation material",
+      "indecent dealing",
+      "sexual motivation",
+      "severance",
+      "Criminal Procedure Act s 133",
+      "McPhillamy",
+      "Bauer"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Child exploitation material can be cross-admissible propensity evidence proving a touching was deliberate and sexually motivated (indecent) — but not that the touching occurred.",
+    "whatHappened": "JACKSON faced a four-count indictment. Counts 1 and 2 alleged that on 18/04/2018 he indecently dealt with two 12-year-old girls (triplets) by touching them on the buttocks with the back of his hand as he passed them in a supermarket aisle; he denied any physical contact. Five days later, on 23/04/2018, police searched his home and seized an iPhone and iPad. Count 3 alleged possession of one category 1 child exploitation image (a girl aged about 10–12 in a bikini) and count 4 alleged using a carriage service to access eight category 1 images of girls aged 8–13 in underwear/bikinis in posing photographs — four of which were open in his Safari browser. He admitted accessing images of young girls in bikinis in 'provocative poses', said he found them intriguing, but denied a sexual interest in children. The District Court judge (BOWDEN DCJ) ordered counts 3 and 4 severed and tried separately, finding the images lacked significant probative value for counts 1 and 2. The State appealed the severance.",
+    "whatHeld": "The Court of Appeal (BUSS P, MITCHELL and BEECH JJA) allowed the appeal and set aside the order for separate trials. The evidence on counts 3 and 4 was <b>cross-admissible propensity evidence under <i>s 31A of the Evidence Act 1906 (WA)</i></b>, but only for a specific purpose. It had <b>significant probative value in proving that any independently established touching was deliberate and sexually motivated, and thus indecent</b>. The images were cogent evidence that, at a time closely proximate to the alleged offences, JACKSON had a sexual interest in pre-adolescent girls. Because jurors would ordinarily assume the vast majority of adult men are not sexually attracted to 12-year-old girls, evidence rebutting that assumption significantly bears on whether the touching was sexually motivated. The Court distinguished <i>McPhillamy</i>: there, tendency-to-act evidence was used to prove conduct occurred; here the propensity evidence is used only <b>after the jury independently finds the touching occurred</b>, to determine state of mind. Critically, the Court held the images did <b>not</b> have significant probative value in proving that the touching in fact occurred — the mere fact an accused has a sexual interest in a class the complainant belongs to is not significantly probative of whether the contact happened, and there was no linking or common feature between viewing images and physically touching children (applying <i>Bauer</i> and <i>McPhillamy</i>). The temporal proximity (five days) and the unusual nature of the sexual interest were key. The Court set out the required jury directions: the images must be disregarded in deciding whether the touching occurred, but may be used to assess deliberateness and sexual motivation once touching is established.",
+    "whatItMeans": "When you investigate indecent dealing where the physical act is capable of an innocent explanation (like a brush of the hand in a crowded aisle), <b>evidence of a suspect's sexual interest in children — including possession of or access to child exploitation material — can be admissible to prove the touching was deliberate and sexually motivated</b>, which is what makes it indecent. Gather and preserve that CEM evidence: seize and forensically examine devices, capture what was open in browsers, and record admissions about accessing images. <b>Temporal proximity matters</b> — here the images were accessed only five days after the alleged offending, which was central. But be clear about the limits: this kind of evidence will <b>not</b> help prove the touching actually happened — for that you still need the complainants' accounts and other independent evidence, and you would need a genuine linking or common feature between the CEM and the charged conduct. Note the case also confirms the key elements of indecent dealing here: the State must prove the contact was <b>deliberate</b> (not accidental) and <b>sexually motivated</b>. The distinction the Court drew is that the unusual nature of a sexual interest in pre-adolescent girls is what gives it force — the same reasoning would not apply to, say, images of adult women where a defendant is charged with assaulting an adult.",
+    "verdict": "AWARENESS — this refines when child exploitation material is cross-admissible in contact offending, but does not itself change how you gather evidence; the practical takeaway is to secure device and CEM evidence and note its limited permissible use.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2019/118.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2019/WASCA/118",
+    "files": {
+      "llm": "data/files/wasca-2019-118/wasca-2019-118.md"
+    }
   },
   {
     "id": "wasc-2019-84",
@@ -1862,6 +2025,54 @@
     }
   },
   {
+    "id": "wasc-2014-240",
+    "date": "2014-07-04",
+    "court": "Supreme Court of Western Australia",
+    "courtTag": "WASC",
+    "caseName": "The State of Western Australia -vGIBSON",
+    "citation": "[2014] WASC 240",
+    "decided": "04/07/2014",
+    "appealFrom": "Not an appeal — pre-trial admissibility ruling by a single judge (HALL J) of the Supreme Court of Western Australia before trial.",
+    "outcome": "All police interviews of 16 and 17 August 2012 ruled inadmissible — not voluntary, obtained in breach of the CIA, and unfair to admit.",
+    "weight": "Considered, detailed single-judge Supreme Court ruling applying settled High Court authority (McDermott, Lee, Swaffield) and the Anunga guidelines; persuasive and practically instructive, though a first-instance admissibility decision rather than an appellate precedent.",
+    "tags": [
+      "confessions",
+      "voluntariness",
+      "interpreter",
+      "Aboriginal suspect",
+      "caution",
+      "interview friend",
+      "right to silence",
+      "audiovisual recording",
+      "CIA",
+      "admissibility",
+      "suspect status",
+      "gratuitous concurrence"
+    ],
+    "relevance": "",
+    "oneLine": "Confessions by an Aboriginal partial-English speaker were ruled inadmissible: he was a suspect who should have been recorded and cautioned from the outset, no interpreter was used, and his interview friend pressured him to talk.",
+    "whatHappened": "GIBSON, a Pintupi man from the remote Kiwirrkurra community, was charged with the murder of Joshua WARNEKE (deceased 26/02/2010). In 2012 multiple witnesses named him as the driver of a stolen car that struck a white man. The senior officer, Detective Sergeant WESTERN, decided GIBSON would be approached as a witness only, despite the interview plans of Detectives GAZZONE, SHANNON and JOHNSTON contemplating arrest on suspicion of murder. On 16/08/2012 police travelled to Kiwirrkurra, conducted an unrecorded interview without caution or interpreter, and only after GIBSON said 'Mistake. Hit him with car' did they arrest and start a video interview. An interview friend, Mr BUTLER (a senior kin relative), spoke to GIBSON in Pintupi throughout, repeatedly directing him to talk and tell the truth. GIBSON asked to speak to a lawyer; the ALS lawyer (Ms KILBY) told police he did not wish to answer questions, but police continued. He was then held overnight at Kintore and flown to Broome for a further recorded interview the next day, again with no interpreter or interview friend.",
+    "whatHeld": "Hall J ruled all interviews <b>inadmissible</b> on three independent bases. (1) <b>Not voluntary</b>: as a suspect GIBSON should have been cautioned from the outset but was not; he did not understand the caution when later given; and his will was overborne because Mr BUTLER, an older kin relative, effectively commanded him to answer. (2) <b>Breaches of the</b> <i>Criminal Investigation Act 2006 (WA)</i>: the initial admissions were not recorded contrary to s 118 with no reasonable excuse, and once arrested he was not given a qualified interpreter as required by s 137(3)(d) and s 138(2)(d); the s 155 discretion to admit was refused. (3) <b>Unfairness discretion</b>: it would be unfair to admit the interviews given his severely limited English, no independent interpreter, no interview friend of his choosing, the pressure applied, and the continuation of questioning after his lawyer said he did not wish to answer. The Court held whether a person is a suspect is <b>a question of fact, not a matter of formal police decision</b> — the available information objectively supported a reasonable suspicion of murder, and the interviewing officers in fact held that suspicion before travelling.",
+    "whatItMeans": "When you decide how to treat a person, remember the court will judge suspect status <b>objectively on the facts</b>, not on the label you attach. If the information before you would support a reasonable suspicion, treat the person as a suspect: <b>caution them and record from the outset</b>. You cannot avoid recording obligations by calling someone a witness — the ready availability of recording gear here meant there was no reasonable excuse under s 118. With any Aboriginal person, and especially remote-community speakers, <b>do not assume English fluency</b>. Casual conversation ability is not the test; ask whether they can understand their rights and complex questions and give their own account. Make proper inquiries, use the COPs manual English-language test, and get a <b>qualified independent interpreter</b> — not a relative. Choose an interview friend who is independent, speaks the person's language and will not push them to answer; a kin relative who directs the suspect to talk can destroy voluntariness. Administer the caution in simple terms and have the person explain it back <b>in their own words</b> — a 'yes' or a nod is not proof of understanding (risk of gratuitous concurrence). When a lawyer tells you clearly the client does not wish to answer, <b>stop</b>; you may seek limited clarification, but pressing on where the client's first language is not English will look coercive.",
+    "verdict": "ACTION — this pre-trial ruling directly changes how you assess suspect status, record admissions, use interpreters and interview friends, and respond to a suspect's request for silence.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2014/240.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2014/WASC/240",
+    "files": {
+      "llm": "data/files/wasc-2014-240/wasc-2014-240.md"
+    },
+    "flags": [
+      "Section references (s 10, s 118, s 137, s 138, s 139, s 140, s 154, s 155, s 28) are taken directly from the judgment text.",
+      "This is a pre-trial voir dire ruling; it does not determine guilt and the trial was still to proceed.",
+      "The judgment notes the deceased's cause of death was head injury and the pathologist thought injuries unlikely to have come from a motor vehicle — relevant background but not central to the admissibility holding."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-14",
+      "call": "ACTION",
+      "problems": 1,
+      "report": "Cases/audits/2026-09-14/wasc-2014-240.md"
+    }
+  },
+  {
     "id": "hca-2011-7",
     "date": "2011-03-30",
     "court": "High Court of Australia",
@@ -1899,6 +2110,46 @@
       "The Court analysed consent under the Criminal Code (WA) s 325 as it stood at the material time (pre-1992); the current statutory consent definition (s 319(2), inserted 1992) did not apply — confirm the applicable consent law for any current matter.",
       "Heydon J dissented; the holdings above are those of the majority (Gummow, Crennan, Kiefel and Bell JJ).",
       "Offences were historical (alleged 1975–1978, tried 30+ years later)."
+    ]
+  },
+  {
+    "id": "wasca-2010-212",
+    "date": "2010-10-29",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "KMB v The State of Western Australia",
+    "citation": "[2010] WASCA 212",
+    "decided": "29/10/2010",
+    "appealFrom": "District Court of Western Australia (GROVES DCJ), IND 1264 of 2008",
+    "outcome": "Appeal against conviction dismissed; appeal against sentence dismissed.",
+    "weight": "Court of Appeal (three judges) decision applying and citing established authority (<i>HML</i>, <i>Shepherd</i>, <i>PIM</i>, <i>Noto</i>); persuasive and authoritative on <i>s 31A</i> and uncharged-act directions. Sentence aspect expressly turns on its own facts.",
+    "tags": [
+      "sexual offences",
+      "child sexual abuse",
+      "uncharged acts",
+      "propensity evidence",
+      "relationship evidence",
+      "section 31A Evidence Act",
+      "covert recording",
+      "jury directions",
+      "standard of proof",
+      "totality principle",
+      "sentencing"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Court of Appeal confirms uncharged sexual acts were admissible as both propensity and relationship evidence under <i>s 31A Evidence Act 1906</i> (WA), and that no beyond-reasonable-doubt direction was needed where the complainant gave direct evidence of the charged counts.",
+    "whatHappened": "KMB was convicted after a District Court trial (before GROVES DCJ) on 23/04/2009 of seven sexual offences against his step-daughter: one count of having a sexual relationship with a child under 16 (<i>Criminal Code</i> (WA) s 321A), three counts of sexual penetration of a child he knew to be his de facto child, and three counts of sexual penetration without consent. The offending ran from when the complainant was about 8 until she was 18, on an almost daily basis. Police arranged a covert pretext meeting on 14/12/2007 in which the complainant wore a recording device and KMB made numerous admissions. He was sentenced on 21/05/2009 to a total effective term of 14 years 6 months. He appealed against both conviction and sentence, arguing the trial judge failed to adequately direct the jury on the evidence of uncharged sexual acts, and that the sentence was manifestly excessive and breached totality.",
+    "whatHeld": "The appeals against conviction and sentence were both dismissed. On conviction: the evidence of uncharged acts was <b>admissible under <i>s 31A</i> as both 'relationship evidence' and 'propensity evidence'</b> — it showed KMB's ongoing sexual interest in the complainant and the manner and extent to which he acted on it. <b>No direction that the uncharged acts had to be proved beyond reasonable doubt was required</b> because the complainant gave direct evidence of the charged counts, so the uncharged acts were not an indispensable link in a chain of reasoning to guilt (applying <i>Shepherd</i>). The trial judge's directions confined the uncharged-act evidence to background/relationship context and even included a propensity warning — directions the Court described as <b>very favourable to the appellant</b>. Where evidence is admitted generally as propensity evidence under <i>s 31A</i>, no propensity warning is required, though some warning may still be needed to avoid a miscarriage. Experienced trial counsel's decision not to object or seek redirections was a legitimate forensic choice. On sentence: the head sentence and total effective sentence were not manifestly excessive and totality was properly applied; the offending was near the worst category.",
+    "whatItMeans": "This case is a useful reference on how evidence of uncharged sexual acts is treated in child sexual abuse prosecutions. <b>Build the full picture</b>: evidence of a pattern of uncharged sexual conduct against the same complainant can be admissible under <i>s 31A</i> as relationship and/or propensity evidence, so record and preserve complainant accounts of the wider course of offending, not just the specific charged incidents. Note the effective use of a <b>covert pretext call/meeting</b> — the complainant wearing a recording device produced numerous admissions that strengthened the case; consider this investigative tool where appropriate. The standard-of-proof and jury-direction points are trial-level matters for the DPP, not your casework, but understanding why direct complainant evidence carries the counts (and uncharged acts are supporting circumstantial evidence) helps you focus your brief on solid, specific evidence for each charged count.",
+    "verdict": "AWARENESS — the core holdings concern admissibility of uncharged acts and jury directions at trial, but it usefully confirms the value of gathering pattern evidence and covert admissions.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2010/212.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2010/WASCA/212",
+    "files": {
+      "llm": "data/files/wasca-2010-212/wasca-2010-212.md"
+    },
+    "flags": [
+      "Section references (s 321A, s 325, s 329(2) Criminal Code; s 31A Evidence Act) taken from the judgment as reported; verify current wording as s 321A has since been amended.",
+      "Individual sentence and count details summarised from the judgment table; confirm against the sentencing remarks if precise figures are needed."
     ]
   },
   {
@@ -2008,6 +2259,46 @@
     "files": {
       "llm": "data/files/hca-2007-39/hca-2007-39.md"
     }
+  },
+  {
+    "id": "wasca-2006-75",
+    "date": "2006-05-11",
+    "court": "Supreme Court of WA — Court of Appeal",
+    "courtTag": "WASCA",
+    "caseName": "The State of Western Australia v GBT",
+    "citation": "[2006] WASCA 75",
+    "decided": "11/05/2006",
+    "appealFrom": "District Court of Western Australia (WAGER DCJ), STATE OF WESTERN AUSTRALIA v GBT [2006] WADC 10",
+    "outcome": "Appeal allowed. Severance order quashed; only count 78 (MLN) severed. All other counts to be tried together.",
+    "weight": "Court of Appeal (three judges, unanimous). Binding appellate authority on joinder and mutual admissibility in WA.",
+    "tags": [
+      "sexual offences",
+      "joinder of charges",
+      "severance of indictment",
+      "mutual admissibility",
+      "propensity evidence",
+      "multiple complainants",
+      "uncharged acts",
+      "child complainants",
+      "s 133 Criminal Procedure Act",
+      "delay in complaint"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Court of Appeal restores joinder of 77 sexual offence counts across eight complainants, holding the evidence was mutually admissible and severance was wrongly ordered.",
+    "whatHappened": "GBT was charged on an indictment with 78 counts of sexual misconduct — ranging from unlawful and indecent dealing to sexual penetration — against eight complainants. Twenty-nine counts related to his natural daughter, LKH; most other complainants were friends of LKH who visited and stayed overnight, and one was a friend of LKH's sister. The offending centred on \"games\" the respondent introduced (\"chasey\", \"squashes\", the \"typewriter\") over many years, involving genital contact, exposure, showing a pornographic video, and, in KMB's case, sexual penetration. On 03/02/2006 WAGER DCJ ordered the indictment severed into separate trials, accepting a defence submission that directing a jury on the admissibility of evidence across so many counts was an unwieldy, insurmountable task that risked compromise verdicts. The State appealed.",
+    "whatHeld": "The Court of Appeal (WHEELER JA, STEYTLER P and BUSS JA agreeing) allowed the appeal and held severance was wrongly ordered. Much of the evidence on one count was <b>mutually admissible</b> on other counts. LKH's role was critical: her earlier acceptance of the conduct explained why she and other girls did not complain, why she acted protectively of the respondent, and why he believed he could offend with impunity. Evidence of repeated near-identical conduct and identical terminology across complainants <b>rebutted suggestions of fantasy, imagination or innocent/accidental contact</b>. The Court accepted that s 133 prejudice can arise from something other than inadmissible evidence — for example directions of such complexity no reasonable jury could follow them — but held the task here was <b>not of insurmountable difficulty</b>, and that severance would not cure it anyway because the same evidence would be admissible as uncharged acts in any severed trial. Only count 78 (MLN) was to be severed, as that evidence did not currently appear admissible on other counts and risked prejudicial speculation.",
+    "whatItMeans": "When you build a multi-complainant sexual offence brief, the <b>key question for joinder is mutual admissibility</b> — whether the evidence on one count would be admissible on the others. Map this out carefully before charging and set it out clearly in your brief, because failure to analyse admissibility leaves gaps that drive severance applications. Look for the threads that make evidence cross-admissible: <b>identical terminology, repeated near-identical conduct, patterns explaining delay in complaint, and evidence explaining why an accused believed he could offend undetected</b>. Frequency and similarity of conduct across multiple complainants is powerful in rebutting defences of fantasy, mistaken recollection, or innocent/accidental contact. Be alert that an outlier count — one different in character, complainant, or reaction (as with MLN here) — may need to be treated separately if it isn't cross-admissible and could invite prejudicial speculation. A large number of counts alone does not justify severance.",
+    "verdict": "AWARENESS-level guidance: this shapes how you assemble and justify multi-complainant briefs, but it is a joinder/admissibility ruling rather than a rule changing your investigative powers.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2006/75.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2006/WASCA/75",
+    "files": {
+      "llm": "data/files/wasca-2006-75/wasca-2006-75.md"
+    },
+    "flags": [
+      "Judgment refers to s 31A Evidence Act 1906 (WA) in the catchwords and s 133 Criminal Procedure Act 2004 (WA) in the reasons; confirm exact provisions before relying on them.",
+      "The indictment had 78 counts; the Court severed count 78, leaving 77 to be tried together.",
+      "Admissibility of the MLN count (count 78) was left open and may change depending on the evidence led at trial, particularly from the respondent's former wife."
+    ]
   },
   {
     "id": "hca-2005-68",
@@ -2227,6 +2518,45 @@
     "files": {
       "llm": "data/files/hca-2001-72/hca-2001-72.md"
     }
+  },
+  {
+    "id": "hca-2001-65",
+    "date": "2001-11-15",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Grey v The Queen",
+    "citation": "[2001] HCA 65",
+    "decided": "15/11/2001",
+    "appealFrom": "Court of Criminal Appeal of New South Wales",
+    "outcome": "Appeal allowed. Convictions quashed and a new trial ordered on each count. Order of the NSW Court of Criminal Appeal set aside.",
+    "weight": "High Court of Australia, unanimous — binding and authoritative on prosecution/police disclosure duties and the application of the proviso. Decided on NSW legislation but the disclosure principle is stated to be of general application.",
+    "tags": [
+      "disclosure",
+      "informer",
+      "witness credibility",
+      "letter of comfort",
+      "miscarriage of justice",
+      "proviso",
+      "fresh evidence",
+      "unreliable evidence warning",
+      "re-birthing",
+      "motor vehicle theft"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "Failure by police to disclose that a key Crown witness was an informer who received a 'letter of comfort' and sentence leniency for his assistance caused a miscarriage of justice and quashed the convictions.",
+    "whatHappened": "GREY was convicted in the NSW District Court on five counts of stealing motor vehicles and four counts of dishonestly disposing of them. The Crown case was that GREY stole Ford vehicles around Dubbo, 're-birthed' them using identification numbers from wreck/source vehicles supplied by a key witness, Leon REYNOLDS, then sold them. REYNOLDS was a critical Crown witness who denied any involvement in the re-numbering. The defence attacked his credit, arguing he was the person responsible. Unknown to the defence and to the trial prosecutor, the officer in charge, Detective Bandouvakis (who was also the informant against GREY), had provided a 'letter of comfort' to the court at REYNOLDS' own 1993 sentencing, outlining REYNOLDS' assistance to police over widespread Ford theft/conversion. But for that letter REYNOLDS would have received full-time custody; instead he got periodic detention. The letter also stated there was 'no evidence to indicate that the prisoner is an active participant in this current inquiry'. The letter was never disclosed to the defence until after trial. The NSW Court of Criminal Appeal, by majority, treated the letter as 'fresh evidence' and dismissed the appeal; Simpson J dissented. GREY appealed to the High Court.",
+    "whatHeld": "The High Court unanimously allowed the appeal, quashed the convictions and ordered a retrial. The Crown conceded the majority below wrongly applied the 'fresh evidence' rule; the correct approach was <b>the prosecution's duty to disclose relevant material to the defence</b>. The Court held it was <b>not the accused's job to 'fossick' for information it was entitled to</b>, and reasonable diligence would not have unearthed the letter. REYNOLDS was presented as a reliable, innocent witness on a 'disingenuous' basis; the letter opened a fertile line of cross-examination and would likely have required a warning under <i>Evidence Act 1995</i> (NSW) s 165(1)(d) and (2). Applying the proviso in s 6(1) of the <i>Criminal Appeal Act 1912</i> (NSW), the Court could not say the jury would <b>inevitably</b> have convicted; GREY had lost a fair chance of acquittal, so there was a substantial miscarriage of justice. Kirby J noted police guidelines issued under the <i>Director of Public Prosecutions Act 1986</i> (NSW) required police to disclose to the DPP any information about a witness relevant to the prosecution or defence.",
+    "whatItMeans": "What it means for your casework: <b>if a witness has received any benefit, deal, leniency, or has informer status connected to their evidence, you must disclose it up the chain to the prosecutor</b> — even where you believe the case is otherwise overwhelming. The failure here was inadvertent, but it still sank the convictions. The investigating officer knew of the letter and did not pass it on; that gap in disclosure is what caused the retrial. Treat anything touching a witness's credibility — prior deals, sentence discounts, assistance to police, informer arrangements, letters of comfort — as material that <b>must</b> go to the DPP so the defence can be told. Do not assume the defence can dig it out for itself; the duty sits with the prosecution/police, not the accused. Where a witness may have been criminally concerned in the very events, expect a jury warning about unreliability, so full disclosure of their motivation is essential to a safe conviction. Note this turns on NSW legislation, but the disclosure duty is described as universal.",
+    "verdict": "ACTION — it directly changes how you handle and disclose witness benefits, deals and informer status; non-disclosure of a witness's advantage can void an otherwise strong conviction.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2001/65.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2001/HCA/65",
+    "files": {
+      "llm": "data/files/hca-2001-65/hca-2001-65.md"
+    },
+    "flags": [
+      "Case decided under NSW legislation (Evidence Act 1995 (NSW) s 165; Criminal Appeal Act 1912 (NSW) s 6(1)); confirm the equivalent WA provisions and disclosure obligations apply to your matter.",
+      "The judgment notes the trial prosecutor was unaware of the letter; the non-disclosure originated with the investigating officer — verify local WA/DPP disclosure guidelines for the precise obligation on police."
+    ]
   },
   {
     "id": "hca-2001-25",
