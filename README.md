@@ -121,12 +121,34 @@ python3 -m http.server 8000
 ## Deploy (GitHub Pages)
 Pages is served from `main` (root). Any push that updates `cases.json` publishes within a minute.
 
+## Adding a judgment yourself — one command
+
+WA judgments never arrive automatically (no free source carries them), so the human step is
+to download the court's Word export — eCourts for WASC/WASCA, the High Court's own site for
+HCA — and drop it in `Cases/` (gitignored: judgment files are copyright and never reach this
+repo). Then:
+
+```bash
+python pipeline/add_case.py --batch Cases/ --audit --push
+```
+
+For every file whose citation is not already in the library it cleans the export
+(`clean_word.py`, which refuses a wrong file, a LexisNexis digest or a Jade citator view),
+writes the analysis with the same model call the pipeline uses, checks the stored verbatim
+text against the source, **fact-checks the entry with a second, independent model call**, and
+pushes. An entry that fails its fact-check is not dropped and not published as a call: it stays
+in the library as **"Held for review"** (no Action/Awareness badge) with the report in
+`Cases/audits/<date>/<id>.md`, until it is corrected and `--recheck <id>` comes back clean.
+Re-running is safe — everything already in the library is skipped — so
+[`pipeline/watch/`](pipeline/watch/README.md) can fire it from a launchd folder watcher.
+Pre-1998 High Court cases need no file at all: `--from-corpus "[1989] HCA 66" --case "S v The Queen"`.
+
 ## The automatic pipeline
 `pipeline/update.py`, run by [`.github/workflows/case-law-pipeline.yml`](.github/workflows/case-law-pipeline.yml) **three times a day** (03:00 / 12:00 / 18:00 AWST) and on demand via *Actions → Run workflow*. Each run:
 
 1. reads BarNet Jade alert emails from Gmail (IMAP),
 2. keeps in-scope matters — **HCA / WASCA / WASC** (binding/WA), **WADC** and the persuasive Code jurisdictions **QCA / TASCCA / NTCCA / NTSC** when an investigation/evidence topic matches — dedupes by `id`,
-3. fetches the judgment from AustLII (a case whose judgment isn't published yet is held in `data/state.json`'s durable **`pending`** queue and retried every run until it resolves or ages out at 30 days),
+3. fetches the judgment's verbatim text from the openly licensed [Open Australian Legal Corpus](https://huggingface.co/datasets/isaacus/open-australian-legal-corpus) — High Court and interstate decisions only; it carries no WA judgments, so WASC/WASCA matters go on the watchlist email instead (nothing is scraped from AustLII, Jade or eCourts — their terms forbid it). A case whose text isn't available yet is held in `data/state.json`'s durable **`pending`** queue and retried every run until it resolves or ages out at 60 days,
 4. writes the analysis with the Anthropic API (`claude-opus-4-8`, strict JSON, detective house style),
 5. saves `data/files/<id>/<id>.md`, prepends the case to `cases.json`, commits, and emails a digest **only if there's something new** (no spam on quiet days).
 

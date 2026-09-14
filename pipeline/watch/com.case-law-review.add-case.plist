@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- launchd agent: run pipeline/watch/run_add_case.sh whenever Cases/ changes.
+     Install (once), from the repo root:
+       cp pipeline/watch/com.case-law-review.add-case.plist ~/Library/LaunchAgents/
+       launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.case-law-review.add-case.plist
+     Remove:
+       launchctl bootout gui/$(id -u)/com.case-law-review.add-case
+     The two absolute paths below are this Mac's repo location — edit if it moves. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.case-law-review.add-case</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/Users/cameronsinclair/Library/CloudStorage/OneDrive-Personal/06 Tech and AI/Projects/case-law-review/pipeline/watch/run_add_case.sh</string>
+  </array>
+  <key>WatchPaths</key>
+  <array>
+    <string>/Users/cameronsinclair/Library/CloudStorage/OneDrive-Personal/06 Tech and AI/Projects/case-law-review/Cases</string>
+  </array>
+  <key>ThrottleInterval</key>
+  <integer>60</integer>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

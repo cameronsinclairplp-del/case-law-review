@@ -497,6 +497,22 @@ button {
 .prose b, .prose strong { font-weight: 600; color: var(--ink); }
 .prose i, .prose em { font-style: italic; }
 
+/* held for review (pipeline/add_case.py --audit): the write-up is on the page so it
+   can be corrected, but nothing about it is verified. Quiet, dashed, muted — the
+   same register as the "Full text" badge, because it is the absence of a call. */
+.hold-notice {
+  max-width: var(--measure);
+  border: 1px dashed var(--hair-strong);
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 12px 16px;
+  margin: 18px 0 6px;
+}
+.hold-notice b { color: var(--ink); font-weight: 600; }
+
 /* verdict panel */
 .verdict {
   max-width: var(--measure);

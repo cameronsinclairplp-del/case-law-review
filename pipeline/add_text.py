@@ -237,9 +237,11 @@ def write_text_only_md(case, text, source):
     (out_dir / f"{case['id']}.md").write_text("\n".join(parts), encoding="utf-8")
 
 
-def load_clean_text(path, citation):
-    """Word/PDF/txt -> clean verbatim text, run through clean_word.py's FULL
-    integrity report and refused on anything it rates REFUSE.
+def clean_and_report(path, citation):
+    """Word/PDF/txt -> (clean verbatim text, [WARN lines]) after clean_word.py's FULL
+    integrity report. Raises ValueError on anything the report rates REFUSE, and on
+    a text too short to be a judgment. Shared by add_text.py and add_case.py so
+    every bulk route has exactly the guard the single-case route has.
 
     The report is the guard that catches a citator-contaminated copy or a
     LexisNexis digest. Doing our own lightweight citation check instead (as this
@@ -250,15 +252,30 @@ def load_clean_text(path, citation):
     buf = io.StringIO()
     with redirect_stdout(buf):                 # the report prints; we want the verdict
         rc = CW.report(text, citation)
+    lines = buf.getvalue().splitlines()
     if rc != 0:
         why = " / ".join(ln.replace("REFUSE ", "").strip()
-                         for ln in buf.getvalue().splitlines() if ln.startswith("REFUSE"))
+                         for ln in lines if ln.startswith("REFUSE"))
         raise ValueError(why or "failed clean_word.py's integrity check")
-    for ln in buf.getvalue().splitlines():
-        if ln.startswith("WARN"):
-            P.log(f"    {ln.strip()}")
+    warns = []
+    for ln in lines:
+        if not ln.startswith("WARN"):
+            continue
+        raw = ln[len("WARN"):]
+        if raw.startswith("      ") and warns:      # an indented context line ("    2027: ...")
+            warns[-1] += " " + raw.strip()          # belongs to the warning above it
+        else:
+            warns.append(raw.strip())
     if len(text) < 800:
         raise ValueError(f"only {len(text)} chars of text — not a full judgment")
+    return text, warns
+
+
+def load_clean_text(path, citation):
+    """clean_and_report(), with the WARN lines logged (the add_text.py behaviour)."""
+    text, warns = clean_and_report(path, citation)
+    for w in warns:
+        P.log(f"    WARN  {w}")
     return text
 
 

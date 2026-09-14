@@ -236,7 +236,10 @@
   // Three states, not two. A case added as full text only (pipeline/add_text.py)
   // has no relevance yet — showing it as "Awareness" would assert a call nobody
   // made, so it gets its own quiet badge until someone writes it up.
-  function badge(rel) {
+  // A fourth state (pipeline/add_case.py --audit): the write-up exists but its
+  // fact-check found problems, so it is HELD — same quiet styling, and never a call.
+  function badge(rel, held) {
+    if (held) return h('span', { class: 'badge badge--fulltext' }, 'Held for review');
     var r = String(rel || '').toUpperCase();
     if (r === 'ACTION') return h('span', { class: 'badge badge--action' }, 'Action');
     if (r === 'AWARENESS') return h('span', { class: 'badge badge--awareness' }, 'Awareness');
@@ -503,7 +506,7 @@
         h('h2', { class: 'case-name' }, c.caseName || 'Untitled',
           c.citation ? [' ', h('span', { class: 'cite', text: c.citation })] : null),
         c.oneLine ? h('p', { class: 'case-oneline', html: sanitizeInline(c.oneLine) }) : null,
-        h('div', { class: 'case-meta' }, badge(c.relevance), tagPills(c.tags))
+        h('div', { class: 'case-meta' }, badge(c.relevance, c.needsReview), tagPills(c.tags))
       ),
       h('span', { class: 'case-go', html: ICON.chevR, 'aria-hidden': 'true' })
     );
@@ -889,7 +892,8 @@
     ].filter(Boolean);
     var links = downloads.concat(sourceLinks);
 
-    var tier = String(c.relevance || '').toUpperCase() === 'ACTION' ? 'Action.' : 'Awareness.';
+    var held = !!c.needsReview;
+    var tier = held ? '' : (String(c.relevance || '').toUpperCase() === 'ACTION' ? 'Action.' : 'Awareness.');
 
     var view = h('div', { class: 'view wrap detail' },
       h('a', { class: 'back', href: backHref }, h('span', { html: ICON.arrowL, 'aria-hidden': 'true' }), 'Back to index'),
@@ -899,8 +903,12 @@
         h('h1', { class: 'detail-name', text: c.caseName || 'Untitled' }),
         c.citation ? h('div', { class: 'detail-cite', text: c.citation }) : null,
         c.oneLine ? h('p', { class: 'detail-oneline', html: sanitizeInline(c.oneLine) }) : null,
-        h('div', { class: 'detail-meta' }, badge(c.relevance), tagPills(c.tags))
+        h('div', { class: 'detail-meta' }, badge(c.relevance, c.needsReview), tagPills(c.tags))
       ),
+
+      held ? h('div', { class: 'hold-notice', role: 'note' },
+        h('b', {}, 'Held for review. '),
+        'This write-up did not pass its fact-check against the judgment, so it carries no Action/Awareness call. Treat every statement below as unverified until the hold is cleared.') : null,
 
       h('div', { class: 'facts' },
         fact('Citation', c.citation),
@@ -916,7 +924,7 @@
       section('What it means for your casework', c.whatItMeans),
 
       c.verdict ? h('div', { class: 'verdict' },
-        h('div', { class: 'vlabel' }, 'Does this apply to you?'),
+        h('div', { class: 'vlabel' }, held ? 'Draft call — held for review' : 'Does this apply to you?'),
         h('div', { class: 'vbody' }, h('span', { class: 'tier serif' }, tier), ' ',
           h('span', { html: sanitizeInline(c.verdict) }))
       ) : null,

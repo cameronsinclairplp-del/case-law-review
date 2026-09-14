@@ -30,3 +30,8 @@ pipeline/.env
 # Personal study notes (kept out of the public repo)
 /MUST-KNOW-CASES.md
 /HANDOFF-COWORK.md
+
+# add_case.py run lock + a local venv for the folder watcher
+pipeline/.add_case.lock
+pipeline/.venv/
+pipeline/watch/*.log
