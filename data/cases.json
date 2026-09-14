@@ -3577,6 +3577,46 @@
     ]
   },
   {
+    "id": "nswsc-1971-moloney-v-mercer",
+    "date": "1971-11-04",
+    "court": "Supreme Court of New South Wales",
+    "courtTag": "NSWSC",
+    "caseName": "Moloney v Mercer",
+    "citation": "[1971] 2 NSWLR 207",
+    "decided": "04/11/1971",
+    "appealFrom": "Decision of a magistrate (appeal by way of case stated)",
+    "outcome": "Appeal allowed; magistrate's dismissal held erroneous in law; case remitted to the magistrate to be dealt with according to law; respondent to pay costs.",
+    "weight": "Single-judge decision of the Supreme Court of NSW on NSW legislation. Persuasive only in WA. Applies High Court authority (<i>Crowe v Graham</i>; <i>Transport Publishing Co</i>) on the tests for indecency and the exclusion of expert evidence.",
+    "tags": [
+      "indecent exposure",
+      "indecency",
+      "obscenity",
+      "public place",
+      "no case to answer",
+      "expert evidence",
+      "summary offences",
+      "community standards"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "Naked exposure in a public place is not automatically indecent under s 11 — the test is whether the conduct offends the ordinary modesty of the average man, judged in context.",
+    "whatHappened": "MERCER performed alone on stage at the Coconut Jungle Strip Palais in Kings Cross before a paying audience of about 60 people, predominantly male. She removed a G-string and stood completely naked for one to one and a half minutes. She was charged under s 11 of the <i>Summary Offences Act 1970</i> (NSW) with being a person whose person was indecently exposed in a public place (a conceded public place). At the close of the prosecution case the magistrate found no case to answer and dismissed the information, reasoning that indecency required some improper or unwarranted display of, or drawing attention to, sexual organs. The informant (a police sergeant from the Special Licences Duty Section) appealed by way of case stated.",
+    "whatHeld": "TAYLOR J held the magistrate erred in point of law. <b>It is not enough merely to prove a woman was naked in a public place</b>, but nor is it necessary to prove any display of or drawing attention to sexual organs — that reasoning belongs to the separate obscenity offence (s 12). The correct test for indecency under s 11 is <b>whether the conduct transgresses the generally accepted bounds of decency, i.e. whether it would offend the ordinary modesty of the average man</b> (applying <i>Crowe v Graham</i>). Whether exposure crosses the line of decency is a question of fact for the tribunal and <b>is not to be determined by expert evidence</b>. The <b>nature of the public place and the circumstances of the exposure are relevant factors</b> — what offends on a crowded beach may differ from a theatre. There was evidence on which the magistrate could convict, so there was a case to answer; the case was remitted.",
+    "whatItMeans": "This tells you how to think about indecent exposure evidence. <b>Nakedness alone in a public place is not automatically an offence</b> — you need to be able to show the exposure would offend ordinary community standards of modesty in the circumstances. <b>Build your brief around the context</b>: the nature of the place, who was present, the manner and duration of the exposure, and any surrounding circumstances that make it sordid or offensive. <b>Do not gather expert opinion evidence</b> to prove the exposure was indecent — the tribunal decides that itself from the facts. Note the distinction between indecent exposure and the more serious obscene exposure: obscenity involves a deliberate lewd or sexual dimension (drawing attention to genitals), whereas mere indecency sits lower on the scale. Note this is a NSW decision on NSW legislation — check the current WA offence provisions and their wording before relying on it.",
+    "verdict": "AWARENESS — it clarifies the legal test for indecency but is a 1971 NSW authority on NSW legislation, so treat it as persuasive background rather than direct authority for WA charging.",
+    "austliiUrl": "",
+    "jadeUrl": "",
+    "files": {
+      "llm": "data/files/nswsc-1971-moloney-v-mercer/nswsc-1971-moloney-v-mercer.md"
+    },
+    "flags": [
+      "Decision under s 11 of the <i>Summary Offences Act 1970</i> (NSW) — confirm the equivalent current WA offence and its wording before applying",
+      "NSW single-judge Supreme Court authority — persuasive only in WA",
+      "Judgment text cites Transport Publishing Co as (1956) 99 CLR 111 in the headnote but (1958) 99 CLR 111 in the body — year inconsistent in the source",
+      "cleaner: reported citation [1971] 2 NSWLR 207 matched on its parts (year, series, volume, page) and the party 'Moloney' — check it is the right case",
+      "cleaner: no coram / judicial suffix found — is this the full judgment?"
+    ]
+  },
+  {
     "id": "hca-1971-20",
     "date": "1971-05-25",
     "court": "High Court of Australia",
