@@ -627,6 +627,20 @@ button {
   display: inline-block; width: 3em; margin-left: -3em;
   color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums;
 }
+/* A footnote number a PDF export left on its own line, in the flow where the
+   footnote text follows. Kept (verbatim text) but quiet. */
+.judgment-text .jp-fn {
+  margin: 0 0 0.25em; font-family: var(--sans); font-size: 11px;
+  color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.judgment-text .jp-fn + .jp { margin-top: 0; }
+.judgment-text .jp-fntext { font-size: 13.5px; line-height: 1.55; color: var(--inksoft); margin: 0 0 0.6em; }
+/* a PDF page's running header, repeated every page */
+.judgment-text .jhead.jrun { margin: 1.4em 0 1.2em; }
+.judgment-text .jhead.jrun .jhead-line {
+  font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); line-height: 1.5;
+}
 .judgment-text .jh {
   font-family: var(--sans); font-size: 12px; font-weight: 600;
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal);
