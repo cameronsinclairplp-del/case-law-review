@@ -657,6 +657,55 @@ def test_dmy_to_iso():
 
 
 # ---------------------------------------------------------------------------
+# write_llm_file — the .md writer; `source` is optional provenance (session 11)
+# ---------------------------------------------------------------------------
+def _sample_case():
+    return {"id": "wasc-2099-1", "caseName": "Test v Case", "citation": "[2099] WASC 1",
+            "court": "Supreme Court of Western Australia", "decided": "01/01/2099",
+            "relevance": "AWARENESS", "austliiUrl": "https://example.invalid/1",
+            "tags": ["one", "two"], "oneLine": "One <i>line</i>.", "whatHappened": "A <b>b</b>.",
+            "whatHeld": "C.", "whatItMeans": "D.", "verdict": "AWARENESS — e.", "files": {}}
+
+
+def test_write_llm_file_default_shape_is_unchanged(tmp_files_dir=None):
+    import tempfile
+    from pathlib import Path
+    with tempfile.TemporaryDirectory() as d:
+        old = u.FILES_DIR
+        try:
+            u.FILES_DIR = Path(d)
+            case = _sample_case()
+            u.write_llm_file(case, "JUDGMENT BODY", {})
+            md = (Path(d) / "wasc-2099-1" / "wasc-2099-1.md").read_text(encoding="utf-8")
+        finally:
+            u.FILES_DIR = old
+    assert "source:" not in md
+    assert "## Full judgment (source text)\n\nJUDGMENT BODY\n" in md
+    assert 'tags: ["one", "two"]' in md
+    assert "## What happened\nA b.\n" in md              # tags stripped in the .md
+    assert "## One line\nOne <i>line</i>.\n" in md        # oneLine keeps its markup
+    assert case["files"] == {"llm": "data/files/wasc-2099-1/wasc-2099-1.md"}
+
+
+def test_write_llm_file_records_source_when_given():
+    import tempfile
+    from pathlib import Path
+    with tempfile.TemporaryDirectory() as d:
+        old = u.FILES_DIR
+        try:
+            u.FILES_DIR = Path(d)
+            u.write_llm_file(_sample_case(), "BODY", {"flags": ["check s 1"]},
+                             source='Cases/Test v Case - [2099] WASC 1.doc')
+            md = (Path(d) / "wasc-2099-1" / "wasc-2099-1.md").read_text(encoding="utf-8")
+        finally:
+            u.FILES_DIR = old
+    fm = md.split("---")[1]
+    assert 'source: "Cases/Test v Case - [2099] WASC 1.doc"' in fm
+    assert fm.index("austliiUrl:") < fm.index("source:") < fm.index("tags:")   # attach_text.py order
+    assert "## Full judgment (source text - Cases/Test v Case - [2099] WASC 1.doc)\n\nBODY\n" in md
+    assert "## Flags (verify before relying)\n- check s 1\n" in md
+
+# ---------------------------------------------------------------------------
 # zero-dependency runner
 # ---------------------------------------------------------------------------
 def _main():

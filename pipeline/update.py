@@ -983,7 +983,13 @@ def build_case(item, a):
     }
 
 
-def write_llm_file(case, judgment_text, analysis):
+def write_llm_file(case, judgment_text, analysis, source=None):
+    """Write data/files/<id>/<id>.md: frontmatter + the analysis + the verbatim judgment.
+
+    `source` is an optional provenance label (a file name or URL). When given it is
+    recorded as a `source:` frontmatter line and in the "## Full judgment" heading,
+    the shape add_text.py / attach_text.py already write; when omitted the file is
+    exactly what the scheduled pipeline has always written."""
     cid = case["id"]
     out_dir = FILES_DIR / cid
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -997,6 +1003,7 @@ def write_llm_file(case, judgment_text, analysis):
         f"decided: {yaml_str(case['decided'])}",
         f"relevance: {case['relevance']}",
         f"austliiUrl: {yaml_str(case['austliiUrl'])}",
+        *([f"source: {yaml_str(source)}"] if source else []),
         f"tags: [{', '.join(yaml_str(t) for t in case['tags'])}]",
         "---", "",
         f"# {case['caseName']} {case['citation']}", "",
@@ -1008,7 +1015,8 @@ def write_llm_file(case, judgment_text, analysis):
     ]
     if flags:
         parts += ["## Flags (verify before relying)", *[f"- {f}" for f in flags], ""]
-    parts += ["---", "", "## Full judgment (source text)", "", judgment_text, ""]
+    heading = "## Full judgment (source text" + (f" - {source})" if source else ")")
+    parts += ["---", "", heading, "", judgment_text, ""]
     (out_dir / f"{cid}.md").write_text("\n".join(parts), encoding="utf-8")
     case["files"] = {"llm": f"data/files/{cid}/{cid}.md"}
     log(f"  wrote data/files/{cid}/{cid}.md")
