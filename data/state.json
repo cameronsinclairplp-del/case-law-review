@@ -175,6 +175,22 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false
+    },
+    {
+      "id": "wasc-2026-384",
+      "citation": "[2026] WASC 384",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "384",
+      "caseName": "Penfold v Magistrate Ruth Dineen",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1256987&pid=112869362&h=1279943169",
+      "blurb": "Penfold v Magistrate Ruth Dineen [2026] WASC 384",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-14T22:13:17.470405+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     }
   ],
   "processed": [],
