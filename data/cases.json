@@ -955,7 +955,7 @@
       "expert evidence",
       "forensic pharmacology"
     ],
-    "relevance": "",
+    "relevance": "ACTION",
     "oneLine": "WA Court of Appeal upholds MEHRABI's 21 convictions, confirming that where a complainant's apparent consent is obtained by covertly drugging her, the State need only prove the drug played a 'material role' in her decision — not a counterfactual — and that honest/reasonable mistake was not available.",
     "whatHappened": "Following a jury trial in the District Court before Sweeney DCJ, Farzam MEHRABI was convicted of 21 offences against six young women he met on Tinder and Bumble between February and March 2022. The convictions included four counts of administering a stupefying drug (MDMA) with intent to facilitate an indictable offence, 12 counts of sexual penetration without consent, two counts of unlawful and indecent assault, and three counts of unlawfully impeding breathing (choking Ms POTTER and Ms TURNER). MEHRABI covertly gave several women MDMA (confirmed by blood and hair follicle testing), then engaged in sexual activity. Some complainants said they consciously refused; two (Ms CAMPBELL and Ms TURNER) could not remember or described being 'sluggish' and 'half-aware'. MEHRABI gave evidence claiming consent or honest and reasonable belief in consent. The trial judge directed the jury on three ways the State could prove absence of consent: conscious non-consent, incapacity through intoxication, and consent obtained by deceit or fraudulent means (secret drugging) under <i>Criminal Code</i> (WA) s 319(2)(a). MEHRABI appealed on three grounds concerning these directions.",
     "whatHeld": "The Court granted leave on grounds 1 and 3 but <b>dismissed the appeal</b>; Thomson P would have refused leave on all grounds but agreed the appeal failed. Ground 1 (tendency): <b>all three 'pathways' were probative of the same tendency</b> — a tendency to engage in sexual acts with a woman without her free and voluntary consent — and covert drugging was 'particularly probative' given the premeditation. Ground 3 (causation): the direction that the drug must have played a <b>'material role' in the complainant's decision to consent was correct and sufficient</b>. Where deceit distorts the decision-making capacity itself (rather than distorting information), it is <b>neither necessary nor appropriate to pose the counterfactual</b> of whether the complainant would have consented absent the drug. The Court held the counterfactual approach in <i>HES v The State of Western Australia</i> was obiter and confined to cases involving a representation of fact. Ground 2 (mistake): where consent was obtained by deceitfully drugging the complainant, there was <b>no evidentiary basis for a s 24 honest and reasonable mistake defence</b> — given MEHRABI's knowledge of MDMA's effects, no such belief could be honest or reasonable. The Court declined to decide whether s 24 could ever apply to fraud-vitiated consent.",
@@ -971,13 +971,7 @@
       "Thomson P dissented on whether leave should be granted (he would refuse leave on all grounds) but agreed the appeal should be dismissed.",
       "Section numbers for the substantive charges (s 325 sexual penetration, s 323 indecent assault) appear only in Thomson P's reasons; the catchwords cite s 24 and s 319(2)(a). Confirm exact charging sections against the indictment.",
       "MEHRABI was acquitted of count 15 (administering a drug to Ms VARGAS) and pleaded guilty to the three 'offer to supply' counts (1, 5, 14), which were not tried."
-    ],
-    "needsReview": {
-      "heldOn": "2026-09-14",
-      "call": "ACTION",
-      "problems": 2,
-      "report": "Cases/audits/2026-09-14/wasca-2026-111.md"
-    }
+    ]
   },
   {
     "id": "wasca-2026-112",
