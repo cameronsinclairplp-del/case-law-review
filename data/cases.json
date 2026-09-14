@@ -341,7 +341,7 @@
       "disclosure",
       "fair trial"
     ],
-    "relevance": "",
+    "relevance": "AWARENESS",
     "oneLine": "Court of Appeal refuses a remand prisoner's application for orders directing the prison on how to manage his custody so he can prepare a bail appeal: its power to give such directions is 'highly doubtful' and, even if it existed, this was not a case for it.",
     "whatHappened": "Andrew Bo ROSE was serving a 6 year 4 month sentence (backdated to 04/10/2019) for serious offences and was released on parole in July 2024. On 26/03/2025, still on parole, he was charged with two counts of aggravated burglary and two counts of possession of prohibited drugs with intent to sell or supply — all serious offences under sch 2 to the <i>Bail Act</i>. His parole was revoked and he was remanded at Bunbury Regional Prison, with trial listed in the Magistrates Court for 27/10/2026. His third bail application was refused by HOWARD J on 15/05/2026. ROSE appealed under s 15A of the <i>Bail Act</i> and, acting in person, applied for interim orders directing the prison to give him a cell computer, free copying/printing, facilitated calls to businesses to find witnesses, in-cell law books, careful handling of evidential mail, and placement in a prison with an open library. He had not filed a compliant appellant's case.",
     "whatHeld": "The Application for interim orders was <b>dismissed</b> and an extension of time to file the appellant's case was granted. The Court held it is <b>highly doubtful the court has any power to direct prison authorities on how a prison or prisoner is managed</b> in order to preserve its appellate jurisdiction — the CEO of the Department of Justice is responsible for prison management under s 7 of the <i>Prisons Act 1981</i> (WA) and is not a party to the appeal. Adopting the NSW reasoning in <i>Liristis</i> and <i>Hamzy</i>, the Court held its role is to ensure a fair trial and at most an 'irreducible minimum' of resources, <b>not equality of arms</b>, with corrections authorities better placed to weigh security. Even if the power existed, this was not an appropriate case: ROSE was disadvantaged but not denied access to the appellate jurisdiction. The Court also stressed that under s 15B(2) the appeal is confined to the material before the primary judge, so seeking new evidence for the bail appeal had no utility, and that new facts should instead found a fresh s 14(2a) application.",
@@ -356,13 +356,7 @@
       "The verified citation and body of the judgment refer to the 'Bail Act 1982 (WA)', but the catchwords list 'Bail Act 1981 (WA)' — the correct short title is the Bail Act 1982 (WA); treat the 1981 reference as a typographical error.",
       "Section numbers (s 14, s 14(2a), s 15A, s 15B(2)) and cl 3A of pt C sch 1 are taken directly from the judgment text.",
       "Two-member Court (THOMSON P, MITCHELL JA); orders were made 28/08/2026 with written reasons published the same date."
-    ],
-    "needsReview": {
-      "heldOn": "2026-09-14",
-      "call": "AWARENESS",
-      "problems": 1,
-      "report": "Cases/audits/2026-09-14/wasca-2026-123.md"
-    }
+    ]
   },
   {
     "id": "wasc-2026-356",
