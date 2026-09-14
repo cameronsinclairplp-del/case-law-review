@@ -604,11 +604,15 @@ def test_shipped_blocklist_is_present_valid_and_blocks_no_real_case():
     for cid in loaded:
         assert cid not in {p.get("id") for p in pending}, \
             f"{cid} is blocked but still queued in state.json — prune it (HANDOFF 7.6)"
+    # wasca-2026-129 (MRV v SNW [No 2]) was on this list from its watchlist name alone;
+    # the judgment turned out to be a Family Court property/parenting appeal (CACV 32 of
+    # 2025) and is blocklisted on purpose (14/09/2026).
     for cid in ("wasca-2026-111", "wasca-2026-113", "wasca-2026-114", "wasca-2026-123",
-                "wasca-2026-128", "wasca-2026-129", "wasc-2026-331", "wasc-2026-356",
+                "wasca-2026-128", "wasc-2026-331", "wasc-2026-356",
                 "wasc-2026-359", "wasc-2026-377", "wasc-2026-380", "hca-2026-28",
                 "hca-2026-29"):
         assert cid not in loaded, f"blocklist wrongly blocks a genuine criminal case: {cid}"
+    assert "wasca-2026-129" in loaded, "MRV v SNW [No 2] is civil and must stay blocked"
 
 
 def test_screened_seen_round_trips_so_a_drop_is_reported_once():
