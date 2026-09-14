@@ -260,7 +260,7 @@
       "unreasonable verdict",
       "onus of proof"
     ],
-    "relevance": "",
+    "relevance": "AWARENESS",
     "oneLine": "Court of Appeal upholds meth importation convictions, confirming covert recordings, IP tracking and corroborated accomplice evidence together proved a commercial-quantity import agreement.",
     "whatHappened": "About 20.9 kg (16.8 kg pure) of methamphetamine was concealed in an industrial oven consigned by FedEx from Toronto on 22/12/2018, addressed to \"Minh\" of a fake kitchen-equipment business (HKM) at a Maddington premises. Federal police intercepted the parcel in Sydney on 03/01/2019, replaced the drug with an inert substance and ran a controlled delivery on 10/01/2019 (no one attended). Minh and the two appellants, Phuoc Sang LE and Thanh Hung NGUYEN (Hung), were arrested on 15/01/2019 and charged under s 307.1(1) of the <i>Criminal Code</i> (Cth). Minh pleaded guilty and testified for a substantial sentence reduction. Both appellants were convicted after a trial that ran from 06/03/2024 to 24/05/2024; Hung was also convicted of failing to comply with a data access order (s 3LA(5) <i>Crimes Act 1914</i> (Cth)). The prosecution case rested on Minh's accomplice evidence, translated telecommunications intercepts and a listening/tracking device in Hung's car (obtained under TI and surveillance device warrants), FedEx tracking traced to LE's home router/IP address, and items found on search. Both appellants gave evidence denying knowledge — Hung claimed the venture was tobacco/gemstones, LE claimed an ordinary commercial lease and a Ghana gold business.",
     "whatHeld": "Hung's appeal was <b>dismissed</b> (leave refused) and Sang Le's application for an extension of time was refused, so his appeal stayed dismissed under the springing order. On its own review of the record the Court found <b>only one reasonable inference</b> open on the evidence as a whole — an agreement to import a commercial quantity of methamphetamine — and called the prosecution case strong and compelling. It may not have been open to convict on Minh's evidence <b>alone</b>, but his account was corroborated by the covert recordings, Hung's movements, the seized items and the FedEx tracking. The covert recordings were admissible against both appellants — as circumstantial evidence of the agreement and, where its requirements were met, as acts or declarations in furtherance under the <b>co-conspirator exception to the hearsay rule</b>. The interpreter was qualified by a combination of study and experience to translate Vietnamese and a childhood rhyming slang; the concession that his evidence was admissible was correctly made. The Court <b>did not decide</b> whether the prosecutor's questions implying the accused should have called corroborating witnesses were improper: the respondent conceded they should not have been asked, and on that assumption the trial judge's clear, repeated no-onus directions meant no miscarriage of justice, so refusing to discharge the jury was plainly correct. The expert-evidence direction was orthodox. Leave to adduce additional evidence was refused: for Hung it was new, not fresh, evidence; for Sang Le the Court left open whether it was fresh, because either way there was no significant possibility of an acquittal.",
@@ -275,13 +275,7 @@
       "Verified case name is \"Le v The King\" but the substantive appeal decided was Hung's (Thanh Hung NGUYEN); Sang Le's appeal remained dismissed under a springing order.",
       "Quantity stated as ~20.9 kg (16.8 kg pure); Minh's evidence referred variously to ~24 kg and 1–2 kg — figures in the judgment are inconsistent as recorded.",
       "Relevance set at AWARENESS on review (14/09/2026): the decision applies settled principles; its practice points reinforce existing method rather than change it."
-    ],
-    "needsReview": {
-      "heldOn": "2026-09-14",
-      "call": "AWARENESS",
-      "problems": 2,
-      "report": "Cases/audits/2026-09-14/wasca-2026-117.md"
-    }
+    ]
   },
   {
     "id": "wasca-2026-120",
