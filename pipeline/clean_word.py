@@ -81,9 +81,15 @@ WA_HEADER_LABEL = re.compile(
 # citator view, which interleaves EXCERPTS FROM LATER CASES after most paragraphs
 # and would inject another case's words into a "verbatim" judgment. Judge the file
 # by its CONTENT, not by where it came from.
+# "Litigation History" and "Annotations:" are Jade's OWN section headings, so they
+# only count when they stand on a line by themselves in Jade's casing. As prose they
+# are ordinary judgment language — "In light of the above litigation history, evidence
+# relied on …" is a sentence in the Court's own PDF of Frigger [2026] WASCA 114, which
+# the earlier anywhere-in-the-text rule refused as citator bleed (found 14/09/2026).
+# The "cited by" markers stay anywhere: no judgment prose is shaped like them.
 CITATOR = re.compile(
     r"Following paragraph cited by|Paragraphs? cited by|\bCited by:|\bCases Citing\b"
-    r"|\bLitigation History\b|\bAnnotations?\b\s*:", re.I)
+    r"|(?m:^[ \t]*Litigation History[ \t]*$)|(?m:^[ \t]*Annotations?[ \t]*:[ \t]*$)", re.I)
 FOOTNOTE_CONT = re.compile(r"^\(Footnote continues on next page\)$", re.I)
 DIGEST = re.compile(r"CaseBase|Catchwords\s*&\s*Digest", re.I)
 CORAM = re.compile(r"\bCORAM\b|\b(?:CJ|JJ|JA|JJA|AJA|ACJ)\b", re.I)

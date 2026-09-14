@@ -148,6 +148,21 @@ def test_citator_contamination_is_refused():
     assert "citator contamination" in out
 
 
+def test_litigation_history_as_prose_is_not_citator_bleed():
+    # Frigger [2026] WASCA 114 (the Court's own eCourts PDF) says "In light of the above
+    # litigation history, evidence relied on …" in its reasons. That is a sentence, not
+    # Jade's "Litigation History" heading, and must not be refused.
+    prose = SYNTH + "In light of the above litigation history, evidence relied on to support the appellant's contention could have been tendered at trial.\n"
+    rc, out = _report(cw.clean(prose), "[2026] WASC 1")
+    assert rc == 0, out
+    assert "citator contamination" not in out
+    # …whereas the heading on its own line, in Jade's casing, still is
+    jade = SYNTH + "Litigation History\nJones v The King [2027] WASCA 12\n"
+    rc, out = _report(cw.clean(jade), "[2026] WASC 1")
+    assert rc == 2, out
+    assert "citator contamination" in out
+
+
 def test_clean_jade_pdf_text_is_not_refused():
     # the whole point of making the check content-based: a clean copy passes
     rc, out = _report(cw.clean(cw.rejoin_pdf_header(cw.strip_jade_wrapper(

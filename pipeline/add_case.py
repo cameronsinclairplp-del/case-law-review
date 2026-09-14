@@ -361,9 +361,14 @@ def publish(label):
         return False
     git("commit", "-m", label)
     try:
-        git("pull", "--rebase", "origin", "main")
+        # --autostash: an unrelated uncommitted edit elsewhere in the tree (someone mid-way
+        # through a pipeline change) must not turn "publish" into a LOCAL commit. Without it
+        # git refuses to rebase a dirty tree and the run ends with the data committed but
+        # never pushed (14/09/2026: seven cases sat local behind an edit to clean_word.py).
+        git("pull", "--rebase", "--autostash", "origin", "main")
     except subprocess.CalledProcessError as e:
-        subprocess.run(["git", "rebase", "--abort"], cwd=P.ROOT)
+        subprocess.run(["git", "rebase", "--abort"], cwd=P.ROOT,
+                       capture_output=True, text=True)
         P.die(f"publish: rebase onto origin/main failed — the commit is LOCAL; resolve and push "
               f"by hand ({(e.stderr or '').strip()[-300:]})")
     try:
