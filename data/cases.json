@@ -2203,6 +2203,50 @@
     }
   },
   {
+    "id": "hca-1989-66",
+    "date": "1989-12-21",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "S v The Queen",
+    "citation": "[1989] HCA 66",
+    "decided": "21/12/1989",
+    "appealFrom": "Court of Criminal Appeal of the Supreme Court of Western Australia",
+    "outcome": "Special leave granted; appeal allowed; Court of Criminal Appeal orders set aside; convictions quashed; new trial ordered.",
+    "weight": "High Court of Australia, five-Justice bench, majority of four. A leading and binding authority on latent ambiguity/duplicity and particularisation in multiple-offence cases.",
+    "tags": [
+      "incest",
+      "child sexual abuse",
+      "particulars",
+      "latent duplicity",
+      "latent ambiguity",
+      "indictment",
+      "election by prosecution",
+      "similar fact evidence",
+      "propensity",
+      "jury unanimity",
+      "proviso",
+      "substantial miscarriage of justice",
+      "Criminal Code WA",
+      "Johnson v Miller"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "S v THE QUEEN establishes that where the evidence discloses more than one act any of which could be the offence charged in a count, the prosecution must identify the occasion it relies on for that count, or the trial miscarries.",
+    "whatHappened": "S was convicted in the District Court of Western Australia on three counts of incest with his daughter, one count for each of three specified twelve-month periods (1 January to 31 December 1980; 1 January to 31 December 1981; and 8 November 1981 to 8 November 1982, the third overlapping the second by nearly two months), each charging a single act of carnal knowledge on a date unknown. The daughter's evidence described two specific acts but could not tie either to a particular count, and otherwise spoke generally of intercourse occurring \"every couple of months for a year\" over about two years. Before arraignment, defence counsel sought particulars and an adjournment; the Crown declined to particularise, saying it could not, and the trial judge refused. The prosecution was not put to its election. The trial judge directed the jury they need only be satisfied that at least one act of penetration occurred in each period. The Court of Criminal Appeal (Brinsden and Smith JJ, Kennedy J dissenting) dismissed the appeal. S sought special leave to the High Court.",
+    "whatHeld": "The High Court (Dawson, Toohey, Gaudron and McHugh JJ; Brennan J dissenting on the outcome) granted special leave, allowed the appeal, quashed the convictions and ordered a new trial. Where a count charges one offence but the evidence discloses <b>multiple acts each answering the description of the offence charged</b>, there is a <b>latent ambiguity (or latent duplicity)</b> that must be cured. As soon as it appears a count is equally capable of referring to a number of occurrences, the prosecution <b>must identify the transaction it relies on</b> — by particulars, amendment, or being put to its election (applying <i>Johnson v Miller</i>). An accused is entitled to know not only the legal nature of the charge but <b>the particular act alleged as its foundation</b>. Leaving the case to the jury on the basis that they could convict so long as satisfied any act occurred within a period was fundamentally flawed: it risked different jurors relying on different acts (no unanimity), or convicting merely on propensity/frequency reasoning, and made proper rulings on similar fact evidence impossible. The majority held this was a <b>substantial miscarriage of justice</b>, so the proviso in s 689 of the <i>Criminal Code</i> (WA) could not be applied. Brennan J agreed the point was good in law but would have applied the proviso, finding no substantial miscarriage on these facts.",
+    "whatItMeans": "When you are building a case involving <b>repeated or ongoing offending</b> (commonly historic child sexual abuse, or any course of conduct), you cannot simply lead generalised evidence of many similar acts and invite a conviction on \"at least one occasion\" per period. <b>Each count must be tied to a specific, identifiable act.</b> Your job at the investigation stage is to help the prosecution particularise: pin each charged act to something distinguishing — a location, an event, a first/last occasion, a change of circumstances, a season, a house they lived in, an age or grade — even where an exact date is unknown. If a complainant can only speak in general terms about frequency and nothing identifies the occasion relied on for each count, those counts cannot properly be left to the jury — the Court ordered a retrial on the footing that the difficulty might yet be overcome. Where you genuinely cannot separate the acts, consider whether a course-of-conduct style charge (if available) is more appropriate, but be aware this decision predates and does not address such modern provisions. Get statements that draw out distinguishing detail for each incident you intend to charge. A failure here is not a mere technicality — it can quash convictions outright.",
+    "verdict": "ACTION — this changes how you gather evidence and frame charges: every count in a multiple-offence case must be anchored to a specific, identifiable act, so build particularising detail into your statements from the outset.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/1989/66.html",
+    "jadeUrl": "https://jade.io/summary/mnc/1989/HCA/66",
+    "files": {
+      "llm": "data/files/hca-1989-66/hca-1989-66.md"
+    },
+    "flags": [
+      "Section 689 of the Criminal Code (WA) is referred to as s 689(1) at points; confirm the exact subsection applicable.",
+      "This decision predates modern \"persistent/course of conduct\" sexual offence provisions; check current WA legislation for how repeated offending may now be charged.",
+      "Brennan J dissented on outcome (would have applied the proviso); the binding position is that of the four-Justice majority."
+    ]
+  },
+  {
     "id": "hca-1989-60",
     "date": "1989-12-06",
     "court": "High Court of Australia",
