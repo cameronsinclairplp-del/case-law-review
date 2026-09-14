@@ -102,6 +102,35 @@ def test_report_accepts_a_reported_judgment_without_the_mnc_when_named():
     assert rc == 2 and "NOT found" in out
 
 
+def test_ecourts_document_name_footer_is_stripped():
+    # KMB [2010] WASCA 212 as pdftotext emits it: the footer sits between the two
+    # halves of a paragraph cut by the page break, before the running header.
+    raw = ("seriously. It\n\nDocument Name: WASCA\\CACR\\2010WASCA0212.doc (MS)\n\n[2010] WASCA 212\nBUSS JA\n\n"
+           "should also be noted, in this context, that older examples\n"
+           "Document Name: WASC\\INS\\2014WASC0240.doc (JP)\nnext line\n"
+           "Document Name: WASCA\\CACR\\2006WASCA0075 (CC)\nafter the 2006 form\n"
+           "The exhibit was headed Document Name: report.doc (MS) in evidence.\n")
+    out = cw.strip_doc_name_footer(raw)
+    assert out.count("Document Name") == 1                        # only the mid-line mention survives
+    assert "The exhibit was headed Document Name: report.doc (MS) in evidence." in out
+    assert "[2010] WASCA 212\nBUSS JA\n\nshould also be noted" in out
+    assert "older examples\n\nnext line" in out                 # the footer line itself is gone, nothing else
+    assert "next line\n\nafter the 2006 form" in out
+
+
+def test_pdftotext_versus_split_is_repaired():
+    # Jackson [2019] WASCA 118 as pdftotext emits it: the header's "-v-" sat at a line
+    # end and was joined to the next line as a hyphenated word.
+    raw = ("CITATION\n: THE STATE OF WESTERN AUSTRALIA -vJACKSON [2019] WASCA 118\n\n"
+           "MALONE DARCY FLEMING (A PSEUDONYM) -vTHE STATE OF WESTERN AUSTRALIA [2026]\n"
+           "A real -v- SMITH stays; an x-value stays; a -vitamin stays; end-v stays\n")
+    out = cw.repair_versus_split(raw)
+    assert ": THE STATE OF WESTERN AUSTRALIA -v- JACKSON [2019] WASCA 118" in out
+    assert "(A PSEUDONYM) -v- THE STATE OF WESTERN AUSTRALIA [2026]" in out
+    assert "A real -v- SMITH stays; an x-value stays; a -vitamin stays; end-v stays" in out
+    assert out.count("-v-") == 3
+
+
 def test_hca_pdf_running_headers_are_stripped_per_page():
     # The Court's own PDF of Tofilau [2007] HCA 39: every page opens with the judge(s)
     # of that page's reasons, one word per line, and the page number.

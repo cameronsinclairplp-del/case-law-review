@@ -683,7 +683,19 @@
   // ("Catchwords:" / "Legislation:" / "Result:" run together in a PDF export).
   var LABEL_LINE = /^[A-Z][A-Za-z()\/ .]{0,30}:$/;
   var CITATION = /\[\d{4}\]\s+[A-Z][A-Za-z]*\s+\d+/;
+  // A reported citation — "(1988) 164 CLR 365", "(2009) 40 WAR 489", "(1987) 44 SASR 591" —
+  // the shape an older High Court judgment's footnotes are made of.
+  var REPORTED = /\(\d{4}\)\s+\d{1,3}\s+[A-Z][A-Za-z]{0,7}(?:\s[A-Z][A-Za-z]{0,7}){0,3}\s+\d+/;
   var OPENS_SENTENCE = /^(?:\[\d+\]\s|\d+\.\s|["'“(]?[A-Z])/;
+  // A paragraph's last line closes a sentence — allowing a footnote marker after the
+  // full stop ("… in about November 2017.36") and a colon that introduces a quotation.
+  var CLOSES = /[.?!:;]["'’”)\]]?\d{0,3}$/;
+  // A transcript's speaker marker on its own line, as an older High Court PDF sets
+  // it: "Q" / "Well now how many vehicles …" / "A" / "There were eight vehicles."
+  var QA_MARKER = /^[QA]\.?$/;
+  // A judge's reasons opening in the WA form — "BUSS JA: On 23 April 2009, …" — which
+  // otherwise has the shape of a transcript speaker line.
+  var JUDGE_OPENER = /^[A-Z][A-Z'’-]+(?: [A-Z][A-Z'’-]+)* (?:CJ|ACJ|P|JA|JJA|J|JJ|AJA|DCJ):\s\S/;
 
   // Is this block one or more paragraphs hard-wrapped at a column (a PDF export,
   // the pre-1998 corpus), as opposed to a stack of whole rows (masthead, bench list,
@@ -732,7 +744,8 @@
       // count" / "20." is a paragraph's last word, not a marker
       var prevLine = i > 0 ? lines[i - 1] : '';
       var markerAlone = LIST_MARKER.test(s) && (next || SENTENCE_END.test(prevLine) || /:$/.test(prevLine));
-      if (BARE_NUM.test(s) || markerAlone || LABEL_LINE.test(s) || MASTHEAD_LABEL.test(s)) {
+      var qaAlone = QA_MARKER.test(s) && !!next;
+      if (BARE_NUM.test(s) || markerAlone || qaAlone || LABEL_LINE.test(s) || MASTHEAD_LABEL.test(s)) {
         if (cur.length) blocks.push(cur.join('\n'));
         blocks.push(s);
         cur = [];
@@ -754,8 +767,12 @@
     norm.split(/\n{2,}/).forEach(function (block) {
       var lines = block.split('\n').map(function (l) { return l.trim(); }).filter(Boolean);
       if (!lines.length) return;
-      // a paragraph number glued to the end of the previous block stands alone
-      if (lines.length >= 2 && BARE_NUM.test(lines[lines.length - 1])) {
+      // a paragraph number glued to the end of the previous block stands alone; so does
+      // a bracketed list marker after a lead-in ("… as follows:" / "(1)") — but not a
+      // "12." that is the paragraph's last word ("… the basis for count" / "12.")
+      var tailLine = lines[lines.length - 1];
+      if (lines.length >= 2 && (BARE_NUM.test(tailLine) ||
+          (LIST_MARKER.test(tailLine) && tailLine.charAt(0) === '(' && /:$/.test(lines[lines.length - 2])))) {
         var tail = lines.pop();
         splitProseRuns(lines.join('\n')).forEach(function (b) { blocks.push(b); });
         blocks.push(tail);
@@ -850,9 +867,11 @@
     var sincePending = 0;               // nodes emitted since the last number was held
     var lastNode = null;                // the node emitted last, for the retro-assignment
     // A footnote's first words, as the WA template sets them — never a paragraph's.
-    var FOOTNOTE_START = /^(?:trial ts|ts \d|appeal ts|see |cf |ibid|exhibits?\b|annexures?\b|pars?\b|paragraphs?\s+\[?\d|appellant['’]s|respondent['’]s|state['’]s|applicant['’]s)/i;
+    var FOOTNOTE_START = /^(?:trial ts|ts,? \d|[a-z]{2,6} ts,? \d|appeal ts|see,? |cf,? |ibid|exhibits?\b|annexures?\b|pars?\b|paragraphs?\s+\[?\d|appellant['’]s|respondent['’]s|state['’]s|applicant['’]s)/i;
     var INTRODUCES = /:\s*\d{0,3}$/;    // "… as follows:" or "… but:32" (a footnote number)
-    var FOOTNOTE_REF = /\b(?:trial ts|appeal ts|ts \d{2,}|exhibit \d|WAB \d|\(ts \d)|\[\d+\]\s*[-–]\s*\[\d+\]|\[\d+\]\.$/i;
+    var FOOTNOTE_REF = /\b(?:trial ts|appeal ts|ts \d{2,}|ts, \d|exhibit \d|WAB \d|\(ts \d)|\[\d+\]\s*[-–]\s*\[\d+\]|\[\d+\]\.$/i;
+    var FOOTNOTE_REF_TS = /\b(?:trial ts|appeal ts|ts \d{2,}|ts, \d|exhibit \d|WAB \d)/i;    // the transcript, wherever it sits
+    var FOOTNOTE_REF_XREF = /\[\d+\]\s*[-–]\s*\[\d+\]|\[\d+\]\.$/;                    // "[12] - [14]": a note, unless a paragraph ends "See [92] - [93] above." 
     var SPEAKER_LABEL = /^[A-Z][A-Za-z'’]+(?: [A-Z][A-Za-z'’]+)?(?:,\s*M[RS]S?)?:$/;     // "Nguyet:" / "BEVILACQUA, MR:"
     var SPEAKER_LINE = /^[A-Z][A-Za-z'’]+(?: [A-Z][A-Za-z'’]+)?(?:,\s*M[RS]S?)?:\s\S/;  // "Complainant: I'm just …"
     function numOf(tok) { return parseInt(tok.replace(/[\[\]]/g, ''), 10); }
@@ -860,7 +879,7 @@
       if (!node) return true;
       var t = node.textContent || '';
       if (node.tagName !== 'P') return true;                       // a heading
-      if (/\bjp-item\b/.test(node.className)) return true;        // a list item
+      if (/\bjp-item\b|\bjp-qa\b/.test(node.className)) return true;   // a list item, a transcript line
       return t.length >= 80 && SENTENCE_END.test(t);
     }
     function introducesQuote(node) {       // a paragraph (not a heading) ending "… as follows:"
@@ -886,21 +905,46 @@
     // Text that can carry a paragraph number: opens a sentence, is not a footnote or
     // a page header, and is either a full paragraph or a complete short sentence.
     function claimable(text, nLines) {
-      return text.length >= 30 && OPENS_SENTENCE.test(text) && !SPEAKER_LINE.test(text) &&
+      // "(ts 20)" at the end of a paragraph is an inline transcript cite; a footnote's
+      // "see trial ts 3659" is not bracketed
+      var unbracketed = text.replace(/\(ts[^)]{0,40}\)/gi, '');
+      return text.length >= 20 && OPENS_SENTENCE.test(text) && (!SPEAKER_LINE.test(text) || JUDGE_OPENER.test(text)) &&
         (nLines >= 2 || text.length >= 80 || SENTENCE_END.test(text) || INTRODUCES.test(text)) &&
-        !FOOTNOTE_START.test(text) && !CITATION.test(text.slice(0, 60)) &&
-        !(text.length < 250 && FOOTNOTE_REF.test(text));   // a short note citing the transcript
+        // a short block that does not close a sentence is a table cell ("Indecently
+        // dealt with T by … (s 320(4))"), not a paragraph
+        (text.length >= 120 || CLOSES.test(text)) &&
+        !FOOTNOTE_START.test(text) &&
+        // a note is a citation; a paragraph that OPENS with one runs on well past it —
+        // but until the count is established a long block opening with a citation is
+        // the "cases referred to" list, not paragraph 1
+        !((text.length < 300 || lastNum === 0) && (CITATION.test(text.slice(0, 60)) || REPORTED.test(text.slice(0, 90)))) &&
+        // a short note citing the transcript — as against a paragraph that cites it in
+        // passing at the end ("… 'did it happen?' (ts 20).")
+        !(text.length < 250 && FOOTNOTE_REF_TS.test(unbracketed)) &&
+        // a short note that is a cross-reference — as against a paragraph that closes
+        // with one ("… in Schaper. See [92] - [93] above.")
+        !(FOOTNOTE_REF_XREF.test(text) && (text.length < 100 || FOOTNOTE_REF_XREF.test(text.slice(0, 40))));
     }
     // The PDF text layer sets a SHORT paragraph's number after its text. Give the
     // number to the unnumbered paragraph emitted just before it, when that reads as
     // one (complete, in sequence, not a quotation the paragraph before introduced).
     function retroAssign(tok) {
       var n = numOf(tok), node = lastNode, t = node ? (node.textContent || '') : '';
-      if (!node || out[out.length - 1] !== node || node.tagName !== 'P' || node.className !== 'jp') return false;
+      if (!node || out[out.length - 1] !== node) return false;
+      // "In particular:" / "75" / "(a) …" — a paragraph that is only a label introducing
+      // the list below it, rendered as a heading a moment ago: the number is its own
+      if (node.tagName === 'H4' && LABEL_LINE.test(t) && !MASTHEAD_LABEL.test(t) && labelCount[t] === 1 &&
+          continuesCount(n, t) && !(out.length > 1 && introducesQuote(out[out.length - 2]))) {
+        out[out.length - 1] = lastNode = numberedNode(tok, t);
+        lastNum = n;
+        return true;
+      }
+      if (node.tagName !== 'P' || node.className !== 'jp') return false;
       // a short, complete sentence — not the tail of a paragraph a page break cut
       if (t.length < 30 || t.length > 160 || !OPENS_SENTENCE.test(t)) return false;
       if (!(SENTENCE_END.test(t) || INTRODUCES.test(t)) || !continuesCount(n, t)) return false;
-      if (FOOTNOTE_START.test(t) || CITATION.test(t.slice(0, 60)) || FOOTNOTE_REF.test(t) || SPEAKER_LINE.test(t)) return false;
+      if (FOOTNOTE_START.test(t) || CITATION.test(t.slice(0, 60)) || REPORTED.test(t.slice(0, 90)) ||
+          FOOTNOTE_REF.test(t) || SPEAKER_LINE.test(t)) return false;
       if (out.length > 1 && introducesQuote(out[out.length - 2])) return false;
       if (out.length > 1 && /\bjp-fn\b/.test(out[out.length - 2].className || '')) return false;   // footnote text
       out[out.length - 1] = lastNode = numberedNode(tok, t);
@@ -908,18 +952,23 @@
       return true;
     }
     function continuesCount(n, text) {
-      return n <= 2000 && (lastNum === 0 ? text.length > 60 : (n > lastNum && n <= lastNum + 3));
+      // the first number needs a real paragraph behind it (not a table cell) — or a
+      // judge's opening line, however short ("PULLIN JA: I agree with Buss JA.")
+      return n <= 2000 && (lastNum === 0 ? (text.length > 60 || (n === 1 && JUDGE_OPENER.test(text)))
+                                         : (n > lastNum && n <= lastNum + 3));
     }
     function fitsCount(n) { return lastNum > 0 && n > lastNum && n <= lastNum + 3; }
-    var marker = null;
+    var marker = null, markerIsQA = false, qaSeen = false;
+    var labelCount = {};                // how often each label line ("Hung:", "First:") has appeared
     function flushMarker() {
       if (!marker) return;
       emit(h('p', { class: 'jp', text: marker }));
-      marker = null;
+      marker = null; markerIsQA = false;
     }
     blocks.forEach(function (raw, bi) {
       var lines = raw.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
       if (!lines.length) return;
+      if (lines.length === 1 && LABEL_LINE.test(lines[0])) labelCount[lines[0]] = (labelCount[lines[0]] || 0) + 1;
       var next = String(blocks[bi + 1] || '').replace(/\s+/g, ' ').trim();
       // for the heading tests, look past a bare margin number (or two) to the paragraph
       for (var skip = 1; skip <= 2 && BARE_NUM.test(next); skip++) {
@@ -935,7 +984,13 @@
         if (pending.length && sincePending > 0) flushPending();
         if (pending.length && tn !== numOf(pending[pending.length - 1]) + 1) {
           var fitsNew = fitsCount(tn), fitsOld = fitsCount(numOf(pending[0]));
-          if (fitsOld && !fitsNew) { footnoteNum(tok); return; }
+          if (fitsOld && !fitsNew) {
+            // "… well established:64" / "92" / "64": before the stray is set down, the
+            // number waiting may be the short paragraph's just before it
+            if (pending.length === 1 && retroAssign(pending[0])) pending = [];
+            footnoteNum(tok);
+            return;
+          }
           flushPending();
         }
         pending.push(tok);
@@ -954,8 +1009,22 @@
         if (pending.length === 1 && retroAssign(pending[0])) pending = [];
         return;
       }
+      // ---- a transcript's "Q" / "A" on its own line (an older High Court PDF) joins the
+      // question or answer that follows. A lone "A" counts only once a "Q" has been seen,
+      // so a lettered section heading is never taken for an answer.
+      if (lines.length === 1 && QA_MARKER.test(lines[0]) && (lines[0].charAt(0) === 'Q' || qaSeen)) {
+        flushMarker();
+        marker = lines[0]; markerIsQA = true; qaSeen = true;
+        if (pending.length === 1 && retroAssign(pending[0])) pending = [];
+        return;
+      }
       if (marker) {
         var mtext = lines.join(' ').replace(/\s+/g, ' ').trim();
+        if (markerIsQA) {                    // never claims a paragraph number
+          emit(h('p', { class: 'jp jp-qa', text: marker + ' ' + mtext }));
+          marker = null; markerIsQA = false;
+          return;
+        }
         if (mtext.length >= 12 && !CITATION.test(mtext.slice(0, 40))) {
           emit(h('p', { class: 'jp jp-item', text: marker + ' ' + mtext }));
           marker = null;
@@ -976,6 +1045,19 @@
         var carried = sincePending > 0;
         if (claimable(ptext, lines.length) && continuesCount(pn, ptext) && !introduced &&
             (!carried || afterParagraphEnd(lastNode))) {
+          lastNum = pn;
+          inFrontMatter = false;
+          emit(numberedNode(pending.shift(), ptext));
+          return;
+        }
+        // "109" / "First:" / the quotation — a paragraph that is only a label
+        // introducing the quotation below it takes its number on the label. Not a
+        // transcript's speaker ("Hung:"): that label recurs, and another follows the
+        // text after it.
+        var after2 = String(blocks[bi + 2] || '').trim();
+        if (lines.length === 1 && LABEL_LINE.test(ptext) && !MASTHEAD_LABEL.test(ptext) &&
+            labelCount[ptext] === 1 && !LABEL_LINE.test(after2) &&
+            continuesCount(pn, ptext) && !introduced && (!carried || afterParagraphEnd(lastNode))) {
           lastNum = pn;
           inFrontMatter = false;
           emit(numberedNode(pending.shift(), ptext));
@@ -1090,7 +1172,7 @@
       var isLabel = /:$/.test(oneLine) &&
         (MASTHEAD_LABEL.test(oneLine) || oneLine.split(/\s+/).length <= 2);
       var isSentenceCaseHeading = lines.length === 1 && oneLine.length <= 80 &&
-        /^[A-Z]/.test(oneLine) && !SENTENCE_END.test(oneLine) && !/:$/.test(oneLine) &&
+        /^[A-Z]/.test(oneLine) && !SENTENCE_END.test(oneLine) && !/:\d{0,3}$/.test(oneLine) &&   // "… as follows:64" is a lead-in, not a heading
         !/[a-z]{2}[.?!]["'’”)\]]?\s+[A-Z]/.test(oneLine) &&   // a sentence ends inside it: wrapped prose
         !NOT_HEADING.test(oneLine) && SENTENCE_END.test(next);
       if (oneLine.length <= 80 && (isCaps || isHeadingWord || isLabel || isSentenceCaseHeading) &&
@@ -1136,7 +1218,7 @@
       // the text of a footnote, following its number — set small like the number
       var afterNote = lastNode && /\bjp-fn\b|\bjp-fntext\b/.test(lastNode.className || '');
       var noteLike = oneLine.length < 300 && (FOOTNOTE_START.test(oneLine) || FOOTNOTE_REF.test(oneLine) ||
-        CITATION.test(oneLine) || oneLine.length < 120);
+        CITATION.test(oneLine) || REPORTED.test(oneLine) || oneLine.length < 120);
       emit(h('p', { class: afterNote && noteLike ? 'jp jp-fntext' : 'jp', text: oneLine }));
     });
     flushMarker();

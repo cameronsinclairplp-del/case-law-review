@@ -124,6 +124,31 @@ def pdf_to_text(path: Path) -> str:
     return r.stdout
 
 
+# --- the older eCourts PDF's page footer ----------------------------------------
+# To about 2014 the Court's PDFs carry a document-management footer on every page,
+# "Document Name: WASCA\\CACR\\2010WASCA0212.doc (MS)", on a line of its own. It is
+# not the judgment. Only a whole line of exactly that shape goes.
+# (2006 files name the document without its extension: "…\\2006WASCA0075 (CC)".)
+DOC_NAME_FOOTER = re.compile(r"^[ \t]*Document Name:[ \t]*\S+[ \t]*(?:\([A-Z]{1,4}\))?[ \t]*$", re.M)
+
+
+def strip_doc_name_footer(text: str) -> str:
+    return DOC_NAME_FOOTER.sub("", text)
+
+
+# --- pdftotext's de-hyphenation of the eCourts "-v-" ----------------------------
+# pdftotext joins a word hyphenated across a line break. The eCourts header puts the
+# party separator "-v-" at the end of a line when the parties are long, so
+# "THE STATE OF WESTERN AUSTRALIA -v-" / "JACKSON" arrives as "-vJACKSON". Only "-v"
+# straight after whitespace and straight before a capital: no prose word has that
+# shape ("x-value", "-vitamin" and a real "-v-" are untouched — tests).
+VERSUS_SPLIT = re.compile(r"(?<=\s)-v(?=[A-Z])")
+
+
+def repair_versus_split(text: str) -> str:
+    return VERSUS_SPLIT.sub("-v- ", text)
+
+
 # --- the High Court's own PDF (hcourt.gov.au) --------------------------------
 HCA_FIRST_LINE = re.compile(r"^\s*HIGH COURT OF AUSTRALIA\s*$")
 HCA_SUFFIX = re.compile(r"^(?:CJ|ACJ|J|JJ)$")
@@ -251,7 +276,8 @@ def to_text(path: Path) -> str:
     if not path.is_file():
         sys.exit(f"input not found: {path}")
     if path.suffix.lower() == ".pdf":
-        return rejoin_pdf_header(strip_jade_wrapper(strip_hca_page_headers(pdf_to_text(path))))
+        return rejoin_pdf_header(strip_jade_wrapper(strip_hca_page_headers(
+            repair_versus_split(strip_doc_name_footer(pdf_to_text(path))))))
     if path.suffix.lower() in (".doc", ".docx", ".rtf"):
         r = subprocess.run(["textutil", "-convert", "txt", "-stdout", str(path)],
                            capture_output=True, text=True)
