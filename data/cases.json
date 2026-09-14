@@ -22,7 +22,7 @@
       "commercial gain",
       "cumulative sentencing"
     ],
-    "relevance": "",
+    "relevance": "AWARENESS",
     "oneLine": "Court of Appeal upholds a 5 year 4 month total effective sentence for a meth dealer sentenced as 'just under' mid-level, confirming that reoffending while on bail justifies cumulative sentencing and does not breach the totality principle.",
     "whatHappened": "FLEMING (a pseudonym) pleaded guilty to three counts. Count 1: possession of a trafficable quantity of methylamphetamine (176.38g, 78-81% purity) with intent to sell or supply, found in a Perth hotel room safe during a search warrant, contrary to <i>Misuse of Drugs Act 1981</i> (WA) s 6(1)(a) read with s 34(1)(a). Count 2: possession of $17,200 reasonably suspected of being unlawfully obtained (found in a bedside drawer), contrary to <i>Criminal Code</i> (WA) s 417(1); the appellant admitted this was proceeds of meth sales. His phone, seized and interrogated in that search, contained messages about the sale and supply of prohibited drugs and paperwork consistent with a tick list. Count 3: possession of methylamphetamine (22.77g) with intent to sell or supply, contrary to <i>Misuse of Drugs Act 1981</i> (WA) s 6(1)(a) — this offending occurred about six months later while he was on bail, when police searched his vehicle at a regional police station and found the drug plus digital scales, empty clip seal bags, glass smoking implements and two metal spoons. SHEPHERD DCJ characterised him as 'just under a mid-level dealer' and sentenced him to 4 years (count 1), 12 months concurrent (count 2) and 1 year 4 months cumulative (count 3, reduced from 2 years for totality) — a total effective sentence of 5 years 4 months. He appealed on a single ground: that the total effective sentence breached the first limb of the totality principle. The notice was lodged seven weeks late.",
     "whatHeld": "The Court refused the extension of time, refused leave and dismissed the appeal. It held the total effective sentence of 5 years 4 months was <b>not unreasonable or plainly unjust</b> and did not infringe the first limb of the totality principle. The individual sentences were not challenged. The Court held it was <b>plainly correct to order partial cumulation</b> for count 3 because reoffending while on bail — with an offence of similar nature — is a significantly aggravating factor showing disregard for the law and enhancing the need for personal deterrence. The reduction of count 3 from 2 years to 1 year 4 months adequately reflected totality. The Court reiterated that for serious drug dealing the major considerations are <b>general and personal deterrence</b>, that quantity and purity matter as indicators of potential harm, and that <b>personal circumstances carry less weight</b> in this class of offence. It found the comparable cases advanced by both sides of limited utility, being either pre-dating the increase to a life maximum or involving couriers rather than dealers, but broadly consistent with the sentence imposed.",
@@ -37,13 +37,7 @@
       "The District Court file number and exact sentencing date are not specified in the judgment (stated only as 'last year'/'IND XXXX of 20XX').",
       "Offending dates are given only as 'mid-2023' (counts 1 and 2) and 'a little over six months' later (count 3); no exact dates in the text.",
       "The appellant's identity is suppressed by pseudonym; a confidential memorandum on 'other matters' was published only to the parties."
-    ],
-    "needsReview": {
-      "heldOn": "2026-09-14",
-      "call": "AWARENESS",
-      "problems": 2,
-      "report": "Cases/audits/2026-09-14/wasca-2026-128.md"
-    }
+    ]
   },
   {
     "id": "wasca-2026-126",
