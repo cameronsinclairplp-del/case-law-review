@@ -40,14 +40,20 @@ from pathlib import Path
 
 CITATION_RE = re.compile(r"\[(\d{4})\]\s*([A-Za-z]{2,8})\s*(\d+)")
 BIDI = "‎‏​﻿"
-TAG_LINE = re.compile(r"^</?[A-Z]{2,5}>$")                    # <CRJ> / </CRJ> on its own line
+# eCourts pseudo-tags: <CRJ> / </CRJ> (Word exports), and in the RTF exports of older
+# decisions the whole template — <Jurisdiction>, </TitleOfCourt>, <Catchword>,
+# <Party Name1="…", Type1="Appellant", …,>, <p>12</p> round every paragraph number,
+# <Judge>WHEELER JA</Judge>. A capitalised tag name, optional attributes; plus the
+# lower-case <p>. "<not a tag>" and "x < y > z" in prose are untouched (tests).
+TAG_SHAPE = r"</?(?:p|[A-Z][A-Za-z0-9]{1,24})(?:\s[^<>]*)?>"
+TAG_LINE = re.compile(rf"^(?:{TAG_SHAPE}\s*)+$")                 # a line that is only tags
 # ...and the same pseudo-tags welded to the end (or start) of a text line, which
 # is how eCourts actually emits the closing one: [2019] WASC 84 arrived with
 # "... v Staniforth-Smith [2014] WASCA 170</CRJ>" as the last "cases referred to"
 # entry, and the line-only rule above sailed past it into the verbatim text (found
 # by the case audit, 09/09/2026). No judgment prose contains <XX>-shaped markup,
 # so stripping it anywhere on a line is safe.
-TAG_INLINE = re.compile(r"</?[A-Z]{2,5}>")
+TAG_INLINE = re.compile(TAG_SHAPE)
 PAGE_FIELD = re.compile(r"^PAGE \d+\.?$", re.I)               # HCA Word page fields
 
 # --- BarNet Jade PDF wrapper --------------------------------------------------
@@ -118,6 +124,69 @@ def pdf_to_text(path: Path) -> str:
     return r.stdout
 
 
+# --- the High Court's own PDF (hcourt.gov.au) --------------------------------
+HCA_FIRST_LINE = re.compile(r"^\s*HIGH COURT OF AUSTRALIA\s*$")
+HCA_SUFFIX = re.compile(r"^(?:CJ|ACJ|J|JJ)$")
+HCA_PAGE_NO = re.compile(r"^\d{1,3}\.$")
+
+
+def hca_coram_names(first_page: str) -> set:
+    """Surnames from the coram block under "HIGH COURT OF AUSTRALIA":
+    "GLEESON CJ" / "GUMMOW, KIRBY, HAYNE, CALLINAN, HEYDON AND CRENNAN JJ"."""
+    names = set()
+    for ln in first_page.split("\n")[:8]:
+        s = ln.strip()
+        if not s or HCA_FIRST_LINE.match(s):
+            continue
+        toks = [t for t in re.split(r"[\s,]+", s) if t]
+        if not toks or not HCA_SUFFIX.match(toks[-1]):
+            continue
+        for t in toks[:-1]:
+            if t.isupper() and t not in ("AND", "&"):
+                names.add(t.lower())
+    return names
+
+
+def strip_hca_page_headers(text: str) -> str:
+    """Drop the per-page running header of a High Court PDF — the judge name(s), the
+    bare judicial suffix and the page number that pdftotext emits at the top of every
+    page — and nothing else. Only applies to a document whose first page opens with
+    "HIGH COURT OF AUSTRALIA" and only to lines BEFORE the first body line of each
+    page, and a name is only a header line if it is in the first page's coram."""
+    pages = text.split("\x0c")
+    if len(pages) < 2 or not HCA_FIRST_LINE.match(pages[0].lstrip("\n").split("\n", 1)[0]):
+        return text
+    names = hca_coram_names(pages[0])
+    if not names:
+        return text
+
+    def is_header(s):
+        if not s or HCA_SUFFIX.match(s) or HCA_PAGE_NO.match(s):
+            return True
+        toks = s.split()
+        if len(toks) == 1:
+            return toks[0].lower() in names
+        if len(toks) == 2:
+            return toks[0].lower() in names and HCA_SUFFIX.match(toks[1]) is not None
+        return False
+
+    out = [pages[0]]
+    for pg in pages[1:]:
+        lines = pg.split("\n")
+        i = 0
+        while i < len(lines) and i < 12 and is_header(lines[i].strip()):
+            i += 1
+        lines = lines[i:]
+        # the page number sometimes trails the page's footnotes instead — drop it there too
+        j = len(lines)
+        while j > 0 and not lines[j - 1].strip():
+            j -= 1
+        if j > 0 and HCA_PAGE_NO.match(lines[j - 1].strip()):
+            lines = lines[:j - 1] + lines[j:]
+        out.append("\n".join(lines))
+    return "\x0c".join(out)
+
+
 def strip_jade_wrapper(text: str) -> str:
     """Remove the BarNet Jade PDF wrapper, leaving the court's own document.
 
@@ -182,7 +251,7 @@ def to_text(path: Path) -> str:
     if not path.is_file():
         sys.exit(f"input not found: {path}")
     if path.suffix.lower() == ".pdf":
-        return rejoin_pdf_header(strip_jade_wrapper(pdf_to_text(path)))
+        return rejoin_pdf_header(strip_jade_wrapper(strip_hca_page_headers(pdf_to_text(path))))
     if path.suffix.lower() in (".doc", ".docx", ".rtf"):
         r = subprocess.run(["textutil", "-convert", "txt", "-stdout", str(path)],
                            capture_output=True, text=True)
@@ -212,7 +281,7 @@ def clean(text: str) -> str:
     return s
 
 
-def report(text: str, citation: str) -> int:
+def report(text: str, citation: str, name: str = "") -> int:
     m = CITATION_RE.search(citation)
     if not m:
         sys.exit(f"--citation {citation!r} is not a medium-neutral citation like '[2026] WASC 265'")
@@ -222,7 +291,19 @@ def report(text: str, citation: str) -> int:
     problems, warnings = [], []
 
     if not cite_pat.search(norm):
-        problems.append(f"citation {citation} NOT found in the text — wrong file or wrong citation")
+        # A pre-1998 High Court report carries no medium-neutral citation — Jade's copy
+        # of Kilby v The Queen [1973] HCA 30 says "(1973) 129 CLR 460" and nothing else.
+        # Accept it on the year's reported citation plus a party name from the file name;
+        # without both it is still "wrong file".
+        reported = re.search(rf"\(\s*{year}\s*\)\s*\d{{1,3}}\s*(?:CLR|ALR|ALJR|A Crim R)\s*\d+", norm)
+        party = re.search(r"^\s*(?:the\s+)?([A-Za-z][A-Za-z'’-]{2,})", name or "")
+        head = norm[:6000].lower()
+        if reported and party and party.group(1).lower() in head:
+            warnings.append(f"medium-neutral citation {citation} not in the text (a reported "
+                            f"judgment); matched on '{reported.group(0)}' and the party "
+                            f"'{party.group(1)}' — check it is the right case")
+        else:
+            problems.append(f"citation {citation} NOT found in the text — wrong file or wrong citation")
     if DIGEST.search(text):
         problems.append("digest markers (CaseBase / Catchwords & Digest) — this is an editorial "
                         "summary, not the judgment; export the full-text 'Unreported Judgments' version")

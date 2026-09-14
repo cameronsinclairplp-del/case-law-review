@@ -35,6 +35,13 @@ def _report(text, cite):
     return rc, buf.getvalue()
 
 
+def _report_named(text, cite, name):
+    buf = io.StringIO()
+    with redirect_stdout(buf):
+        rc = cw.report(text, cite, name=name)
+    return rc, buf.getvalue()
+
+
 def test_strips_artifacts_keeps_prose():
     out = cw.clean(SYNTH)
     assert "\u200f" not in out                       # bidi mark gone
@@ -60,6 +67,60 @@ def test_strips_a_pseudo_tag_welded_to_a_text_line():
     assert "The State of Western Australia v Staniforth-Smith [2014] WASCA 170\n" in out
     assert "Drago v The Queen (1992) 8 WAR 488" in out          # the list itself survives
     assert "SMITH J: The appellant seeks leave to appeal." in out
+
+
+def test_ecourts_rtf_template_tags_are_stripped():
+    # [2005] WASCA 196 arrived as an eCourts RTF: every template field is wrapped in a
+    # mixed-case pseudo-tag, some with attributes, and each paragraph number sits in <p>.
+    out = cw.clean(
+        "CITATION\t:\t<Citation>DONALDSON -v- THE STATE OF WESTERN AUSTRALIA [2005] WASCA 196</Citation> \n"
+        "<Party Name1=\"WAYNE KIRWAN DONALDSON\", Type1=\"Appellant\", Name2=\"THE STATE\", Type2=\"Respondent\",>\n"
+        "<LCdetails>\nCoram\t:\t<LCCoram>MAZZA DCJ</LCCoram> \n</LCdetails>\n"
+        "<p>1</p>\t<Judge>WHEELER JA</Judge>:  I have had the advantage of reading the reasons.\n"
+        "<p>2</p>\t\tTurning to the question of when the trial started, I agree.\n")
+    assert "<" not in out and ">" not in out
+    assert "CITATION\t:\tDONALDSON -v- THE STATE OF WESTERN AUSTRALIA [2005] WASCA 196" in out
+    assert "Coram\t:\tMAZZA DCJ" in out
+    assert "1\tWHEELER JA:  I have had the advantage of reading the reasons." in out
+    assert "2\t\tTurning to the question of when the trial started, I agree." in out
+    assert "Type1=" not in out                                   # the attribute tag went whole
+
+
+def test_report_accepts_a_reported_judgment_without_the_mnc_when_named():
+    # Jade's copy of Kilby v The Queen [1973] HCA 30 has no medium-neutral citation —
+    # only "(1973) 129 CLR 460". With the party name from the file name it passes with
+    # a WARN; without a name, or with the wrong year, it is still refused.
+    old = ("KILBY v. THE QUEEN\n(1973) 129 CLR 460\n29 August 1973\n"
+           "BARWICK C.J. The appellant was convicted of rape.\nCounsel: A B for the appellant\n")
+    rc, out = _report_named(old, "[1973] HCA 30", "Kilby v The Queen")
+    assert rc == 0 and "WARN" in out and "129 CLR 460" in out, out
+    rc, out = _report_named(old, "[1973] HCA 30", "")
+    assert rc == 2 and "NOT found" in out
+    rc, out = _report_named(old, "[1974] HCA 30", "Kilby v The Queen")
+    assert rc == 2 and "NOT found" in out
+    rc, out = _report_named(old, "[1973] HCA 30", "Smith v The Queen")
+    assert rc == 2 and "NOT found" in out
+
+
+def test_hca_pdf_running_headers_are_stripped_per_page():
+    # The Court's own PDF of Tofilau [2007] HCA 39: every page opens with the judge(s)
+    # of that page's reasons, one word per line, and the page number.
+    raw = ("HIGH COURT OF AUSTRALIA\nGLEESON CJ\nGUMMOW, KIRBY, HAYNE, CALLINAN, HEYDON AND CRENNAN JJ\n\n"
+           "Matter No M144/2006\n"
+           "\x0cGummow J\nHayne\nJ\n25.\n\nnot made to a person whom the speaker knew.\nThe discretion\n65\n\nIn only one case.\n"
+           "\x0cCallinan\nHeydon\nCrennan\n\nJ\nJ\nJ\n\n95.\n\nHistory of the requirement\n283\n\nThe person in authority.\n"
+           "\x0cKirby\n\nJ\n\n55.\n\nKirby J said this page starts with a name in prose.\n"
+           "\x0cHeydon\nJ\n\nA page whose number trails its footnotes.\n160 R v Hughes [1986] 2 NZLR 129.\n42.\n\n")
+    out = cw.strip_hca_page_headers(raw)
+    assert "Gummow J\nHayne\nJ\n25." not in out and "\n95.\n" not in out and "\n55.\n" not in out
+    assert "not made to a person whom the speaker knew." in out
+    assert "History of the requirement\n283" in out               # a heading and a paragraph number survive
+    assert "Kirby J said this page starts with a name in prose." in out
+    assert out.count("\x0c") == 4                                 # page breaks kept for the Jade pass
+    assert "\n42.\n" not in out and "160 R v Hughes [1986] 2 NZLR 129." in out   # trailing page number gone, footnote kept
+    # a WA PDF (no HIGH COURT first line) is untouched
+    wa = "[2026] WASCA 114\n\nJURISDICTION : SUPREME COURT\n\x0cThomson P\n2.\n\nbody\n"
+    assert cw.strip_hca_page_headers(wa) == wa
 
 
 def test_inline_tag_strip_leaves_prose_punctuation_alone():

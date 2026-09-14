@@ -251,7 +251,7 @@ def clean_and_report(path, citation):
     text = CW.clean(CW.to_text(Path(path).expanduser()))
     buf = io.StringIO()
     with redirect_stdout(buf):                 # the report prints; we want the verdict
-        rc = CW.report(text, citation)
+        rc = CW.report(text, citation, name=name_from_filename(path, citation))
     lines = buf.getvalue().splitlines()
     if rc != 0:
         why = " / ".join(ln.replace("REFUSE ", "").strip()
