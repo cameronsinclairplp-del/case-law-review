@@ -191,6 +191,22 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false
+    },
+    {
+      "id": "wasca-2026-130",
+      "citation": "[2026] WASCA 130",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "130",
+      "caseName": "The State of Western Australia v Barber",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1257350&pid=112957840&h=788163698",
+      "blurb": "The State of Western Australia v Barber [2026] WASCA 130",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-15T21:51:51.921786+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     }
   ],
   "processed": [],
@@ -199,7 +215,8 @@
     "wasc-2026-372",
     "wasc-2026-373",
     "wasc-2026-382",
-    "wasc-2026-301"
+    "wasc-2026-301",
+    "wasc-2026-385"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
