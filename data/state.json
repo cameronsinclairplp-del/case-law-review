@@ -255,6 +255,70 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false
+    },
+    {
+      "id": "wasc-2026-400",
+      "citation": "[2026] WASC 400",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "400",
+      "caseName": "Baker v WA Police",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1259715&pid=113228649&h=43727436",
+      "blurb": "Baker v WA Police [2026] WASC 400",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-18T21:22:05.144726+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
+    },
+    {
+      "id": "wasc-2026-392",
+      "citation": "[2026] WASC 392",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "392",
+      "caseName": "The State of Western Australia v ACW [No 7]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1259659&pid=113228649&h=43727436",
+      "blurb": "The State of Western Australia v ACW [No 7] [2026] WASC 392",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-18T21:22:05.144729+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
+    },
+    {
+      "id": "wasc-2026-390",
+      "citation": "[2026] WASC 390",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "390",
+      "caseName": "The State of Western Australia v Lewandowski",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1259759&pid=113228649&h=43727436",
+      "blurb": "The State of Western Australia v Lewandowski [2026] WASC 390",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-18T21:22:05.144734+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
+    },
+    {
+      "id": "wasc-2026-388",
+      "citation": "[2026] WASC 388",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "388",
+      "caseName": "Chief Executive Officer of the Department of Justice v SD [No 2]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1259703&pid=113228649&h=43727436",
+      "blurb": "Chief Executive Officer of the Department of Justice v SD [No 2] [2026] WASC 388",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-18T21:22:05.144737+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false
     }
   ],
   "processed": [],
@@ -266,7 +330,8 @@
     "wasc-2026-301",
     "wasc-2026-385",
     "wasc-2026-387",
-    "wasc-2026-389"
+    "wasc-2026-389",
+    "wasc-2026-332"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
