@@ -1698,6 +1698,51 @@
     }
   },
   {
+    "id": "hca-2026-10",
+    "date": "2026-04-08",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "The King v AR",
+    "citation": "[2026] HCA 10",
+    "decided": "08/04/2026",
+    "appealFrom": "Supreme Court of New South Wales (Court of Criminal Appeal)",
+    "outcome": "Crown appeal allowed; NSW CCA orders (6,7,8,9 of 03/03/2025) set aside; AR's appeal to the CCA dismissed; convictions on counts 3, 5 and 7 restored.",
+    "weight": "High Court of Australia decision and binding, applying and reinforcing <i>DPP (Vic) v Roder</i>. Note it was a narrow 4:3 split, so the boundaries in borderline cases remain contestable.",
+    "tags": [
+      "tendency evidence",
+      "child sexual offences",
+      "jury directions",
+      "standard of proof",
+      "single complainant",
+      "circumstantial evidence",
+      "Evidence Act 1995 (NSW)",
+      "significant probative value"
+    ],
+    "relevance": "",
+    "oneLine": "HCA (4:3) holds that using evidence of charged acts to prove a tendency is not inconsistent with tendency evidence, and a tendency direction is judged by whether the summing up as a whole created a real risk of undermining proof beyond reasonable doubt.",
+    "whatHappened": "AR was tried in the NSW District Court on seven child sexual offence counts against a single complainant, GC, aged 10, arising from three separate occasions in 2020. The Crown relied on a tendency that AR had a sexual interest in GC and acted on it by penetrating/touching her when she fell asleep beside him watching a movie. The evidence relied on to prove that tendency was the very same evidence of the charged acts — there were no uncharged acts, and all of it came from GC. AR was convicted on counts 3, 5 and 7 (the two Narara incidents) and acquitted on counts 1 and 2 (the weaker West Gosford incident). The NSW Court of Criminal Appeal set aside the convictions and ordered a retrial, holding the tendency direction risked deflecting the jury from the required standard of proof. The Crown appealed to the High Court, which allowed the appeal and restored the convictions.",
+    "whatHeld": "By a 4:3 majority (GAGELER CJ, GLEESON, BEECH-JONES JJ and JAGOT J; GORDON, STEWARD and EDELMAN JJ dissenting) the appeal was allowed. The majority held: <b>tendency evidence is a form of circumstantial evidence, and the tendency is an intermediate fact proved to a lesser (civil) standard unless it is an indispensable link to guilt.</b> Relying on the evidence of charged acts to establish a tendency, and then deploying that tendency in deciding whether the charges are proved beyond reasonable doubt, is <b>not circular reasoning and not inconsistent with the nature of tendency evidence.</b> Framing the tendency with specificity that mirrors the charged conduct is permissible and is often what gives it significant probative value, especially in a single-complainant case (with the s 97A presumption applying to child sexual offences). Following <i>DPP (Vic) v Roder</i>, the guidance that a judge <b>should</b> avoid inviting the jury to make findings on charged conduct is a recommendation, not a rule; a direction that does so is not automatically a miscarriage. The test is whether, <b>considering the summing up as a whole, there was a real or practical risk of undermining the jury's understanding of proof beyond reasonable doubt.</b> Here the summing up was saturated with correct standard-of-proof directions, so no such risk arose.",
+    "whatItMeans": "This is mainly about trial directions, but it confirms how tendency evidence works in ways that matter to how you build a brief. <b>Evidence of multiple charged incidents from a single complainant can support a tendency</b> — you do not need separate uncharged acts or an external corroborating witness for the tendency to be legitimate circumstantial evidence going beyond mere credibility. <b>Document the common features across incidents carefully</b> (here: victim asleep, beside the accused, watching a movie), because specificity and repeated common features are what give tendency evidence its significant probative value. For child sexual offences, remember the s 97A presumption that such tendency evidence has significant probative value. The dissent shows the live risk where a tendency is narrow, based on very few incidents, from one complainant, and framed in the same terms as the charges — so give prosecutors a clear picture of every distinguishing detail of each incident to support both the charges and any tendency reasoning.",
+    "verdict": "AWARENESS — it clarifies tendency-evidence principles and jury directions rather than changing your investigative or charging steps, but it informs how you capture and present evidence of repeated offending.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/10.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/10",
+    "files": {
+      "llm": "data/files/hca-2026-10/hca-2026-10.md"
+    },
+    "flags": [
+      "Narrow 4:3 majority — Gordon, Steward and Edelman JJ would have dismissed the appeal on the basis the specific, single-complainant tendency created a real risk of undermining the standard of proof.",
+      "Complainant and accused anonymised (AR, GC, JW); accused was an adult in a relationship with the complainant's mother.",
+      "Section references (Crimes Act ss 66C(1), 66DB(a); Criminal Appeal Act s 6(1); Criminal Procedure Act s 161A; Evidence Act ss 97, 97A, 101(2)) are drawn from the judgment text and catchwords.",
+      "Case concerns trial process/jury directions; direct application to frontline investigation is indirect."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-20",
+      "call": "AWARENESS",
+      "problems": 1,
+      "report": "data/audits/2026-09-20/hca-2026-10.md"
+    }
+  },
+  {
     "id": "wasca-2026-33",
     "date": "2026-03-11",
     "court": "Supreme Court of WA — Court of Appeal",
@@ -1733,6 +1778,169 @@
     "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/33",
     "files": {
       "llm": "data/files/wasca-2026-33/wasca-2026-33.md"
+    }
+  },
+  {
+    "id": "hca-2026-3",
+    "date": "2026-03-11",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "The King v McGregor",
+    "citation": "[2026] HCA 3",
+    "decided": "11/03/2026",
+    "appealFrom": "Supreme Court of New South Wales (Court of Criminal Appeal)",
+    "outcome": "Appeal dismissed. The Crown (appellant) ordered to pay the respondent's costs of the special leave application and the appeal.",
+    "weight": "High Court of Australia — binding and authoritative on the interaction of s 53A of the <i>Crimes (Sentencing Procedure) Act 1999</i> (NSW), s 16AAA of the <i>Crimes Act 1914</i> (Cth) and s 68 of the <i>Judiciary Act 1903</i> (Cth). Decided 6:1 on the mandatory-minimum point (Jagot J dissenting).",
+    "tags": [
+      "sentencing",
+      "aggregate sentence",
+      "mandatory minimum",
+      "Commonwealth offences",
+      "child sex offences",
+      "federal jurisdiction",
+      "Judiciary Act s 68",
+      "guilty plea discount",
+      "cooperation"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court confirmed NSW courts can impose aggregate sentences under s 53A of the <i>Crimes (Sentencing Procedure) Act 1999</i> (NSW) for multiple Commonwealth offences, even where one carries a mandatory minimum under s 16AAA of the <i>Crimes Act 1914</i> (Cth).",
+    "whatHappened": "Andrew Stuart McGREGOR pleaded guilty to four Commonwealth child sex offences (with a fifth taken into account) arising from interactions over about two months via social media with a 15-year-old child in the Philippines while he was in Australia, plus possession of child abuse material relating to other children. One offence — persistent sexual abuse of a child outside Australia contrary to s 272.11(1)(c) of the <i>Criminal Code</i> (Cth) — carried a mandatory minimum of 7 years under s 16AAA. The District Court imposed an aggregate sentence of 11 years 6 months (non-parole 8 years). The NSW Court of Criminal Appeal found a conceded error in applying the guilty-plea/cooperation discount under s 16AAC(3), resentenced to an aggregate 10 years 9 months (non-parole 7 years 6 months), and rejected the Crown's arguments against aggregate sentencing. The Crown appealed to the High Court.",
+    "whatHeld": "The Court dismissed the appeal. It held that <b>s 53A aggregate sentencing is picked up and applied to Commonwealth offences by s 68(1) of the <i>Judiciary Act 1903</i> (Cth)</b>, and is <b>not inconsistent with the general sentencing scheme in Pt IB of the <i>Crimes Act 1914</i> (Cth)</b> (the 'wider' contention). It also held that aggregate sentencing is <b>not inconsistent with the s 16AAA mandatory minimum</b> (the 'narrower' contention): the word 'for' in s 16AAA does not mean 'exclusively for' that offence, so a mandatory minimum can be satisfied within an aggregate sentence provided the sentence is not less than the minimum required. The parenthetical words in s 53A(2)(b) were held to be merely descriptive of the sentencing process, not a source of inconsistency. Jagot J agreed on the wider point but would have allowed the appeal on the narrower ground, holding that s 16AAA requires the minimum term to be imposed for each such offence.",
+    "whatItMeans": "This is a sentencing-law decision and has <b>no direct effect on how you investigate, gather evidence or charge</b>. Its value is background awareness. Note that Commonwealth child sex offences prosecuted in NSW carry <b>mandatory minimum terms</b> (for example 7 years for s 272.11 offences under s 16AAA), which can be reduced only for a guilty plea and/or cooperation with law enforcement (up to 25% each, 50% combined, under s 16AAC) — a practical point if you are assessing the value of an offender's cooperation. Understand that where you brief multiple Commonwealth offences, a NSW court may impose a single aggregate sentence rather than separate sentences, and that state sentencing procedure applies to federal offenders through s 68 of the <i>Judiciary Act</i>.",
+    "verdict": "AWARENESS — a sentencing-procedure ruling that confirms how courts sentence federal offenders; it does not change your investigative, evidential or charging steps.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/3.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/3",
+    "files": {
+      "llm": "data/files/hca-2026-3/hca-2026-3.md"
+    },
+    "flags": [
+      "Jagot J dissented on ground one (the mandatory-minimum point), holding s 16AAA requires the minimum term to be imposed for each such offence and would have remitted for resentencing.",
+      "The precise operation of the s 16AAC(3) discount (whether the floor is set by the actual or maximum permissible percentage) was noted by Jagot J as unresolved and not before the Court.",
+      "Decision concerns sentencing procedure only; verify current legislation before relying on section numbers or minimum-term figures."
+    ]
+  },
+  {
+    "id": "hca-2026-1",
+    "date": "2026-02-04",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Obeid v The King Obeid v The King Macdonald v The King",
+    "citation": "[2026] HCA 1",
+    "decided": "04/02/2026",
+    "appealFrom": "Court of Criminal Appeal of the Supreme Court of New South Wales",
+    "outcome": "Appeals dismissed in all three matters; convictions upheld.",
+    "weight": "High — unanimous seven-member High Court decision on the elements of conspiracy and misconduct in public office, binding nationally.",
+    "tags": [
+      "conspiracy",
+      "misconduct in public office",
+      "public official",
+      "corruption",
+      "circumstantial evidence",
+      "overt acts",
+      "improper purpose",
+      "particulars"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court confirms a conspiracy to commit misconduct in public office is complete without the conspirators agreeing on the particular acts the public official would perform, provided the agreed conduct necessarily satisfies the elements of the predicate offence.",
+    "whatHappened": "Edward OBEID, Moses OBEID and Ian MACDONALD were charged on a single count of conspiring that MACDONALD, as NSW Minister for Mineral Resources, would wilfully misconduct himself in public office in connection with the granting of an exploration licence at Mount Penny, favouring the financial interests of the Obeid family who owned nearby property (Cherrydale Park). The Crown did not allege agreement to do specified particular acts, but relied on eight overt acts of misconduct (seeking coal reserve information, providing confidential maps, communicating EOI process details) from which the unlawful agreement was to be inferred. Fullerton J, sitting without a jury in the Supreme Court of NSW, convicted all three. The Court of Criminal Appeal dismissed their conviction appeals. The High Court granted leave on a single ground: whether the Crown put a case capable at law of amounting to conspiracy to commit misconduct in public office where no agreement to do particular acts was alleged.",
+    "whatHeld": "The appeals were dismissed unanimously. <b>There is no general principle that the object of a conspiracy must be reduced to particular specified acts</b> — courts allow conspiracy to be alleged in fairly general terms. A conspiracy is complete upon agreement being made, even where the precise means or methods are unknown or not agreed. The agreement here was of a conditional kind: that MACDONALD would exercise his ministerial powers over Mount Penny to favour the Obeids' financial interests if and when the occasion arose, whatever the particular acts turned out to be. <b>Because the agreed conduct necessarily fell within cumulative descriptive conditions that satisfied every element of the predicate offence of misconduct in public office, the agreement necessarily entailed that Macdonald would commit that offence.</b> The fifth element (misconduct serious and meriting criminal punishment) is a matter for the tribunal of fact, not something the conspirators must agree upon; given the high office of a Minister, there were no realistic circumstances where acts answering those characteristics would not satisfy it. The prosecution remains constrained by three requirements: an agreement, to do an act that necessarily amounts to a crime, particularised as fully as the subject matter will bear.",
+    "whatItMeans": "When investigating conspiracy to commit misconduct in public office (or conspiracy generally), <b>you do not need to prove the conspirators agreed on the exact acts the offender would carry out</b>. It is enough to establish an agreement that the official would use their office for an improper purpose in a way that necessarily breaches their duties. The unlawful agreement can be <b>inferred from overt acts done in furtherance of it</b> — so build your brief around documented conduct (requests for confidential information, disclosures, directions) that shows a common goal, even if the plan was open-ended. Focus on establishing: the identity of the public official and their office/powers, the duties owed (here impartiality and confidentiality, sourced from codes of conduct), the improper purpose, and a causal 'but for' link between the conduct and the improper purpose. Remember the more general the alleged agreement, the harder it may be to prove a genuine meeting of minds and that the agreement necessarily involved a crime — so particularise as tightly as the evidence allows. The seriousness element is for the court to assess, not something the conspirators need to have contemplated.",
+    "verdict": "AWARENESS — this confirms established conspiracy principles and clarifies charging scope for misconduct-in-office conspiracies; it shapes how you frame such briefs rather than changing day-to-day investigative practice.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/1.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/1",
+    "files": {
+      "llm": "data/files/hca-2026-1/hca-2026-1.md"
+    },
+    "flags": [
+      "Conspiracy to commit misconduct in public office is a common law offence; the predicate offence has five elements as stated in Sin Kam Wah and developed by Australian appellate courts",
+      "The Court expressly left unresolved whether the 'but for' element from Maitland is a true element of misconduct in public office or merely describes a circumstance",
+      "Conduct dates span 2007-2009; judgment relates to a Minister's exercise of powers under the Mining Act 1992 (NSW), Pt 5",
+      "cleaner: years LATER than the citation year (decide: legitimate future date, or citator bleed?): 2041: R v Macdonald [No 17] [2021] NSWSC 858 at [2041]."
+    ]
+  },
+  {
+    "id": "hca-2025-51",
+    "date": "2025-12-10",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "WHS v The King",
+    "citation": "[2025] HCA 51",
+    "decided": "10/12/2025",
+    "appealFrom": "Supreme Court of New South Wales (Court of Criminal Appeal) — WHS No 2 [2024] NSWCCA 242",
+    "outcome": "Appeal dismissed; convictions on Counts 2 and 5 stand (matter had been remitted to the District Court for resentencing).",
+    "weight": "High. A unanimous five-judge High Court decision authoritatively construing s 293 (now s 294CB) of the <i>Criminal Procedure Act 1986</i> (NSW), building on <i>Cook (a pseudonym) v The King</i> and <i>HG v The Queen</i>.",
+    "tags": [
+      "sexual offences",
+      "child complainant",
+      "s 293 Criminal Procedure Act",
+      "s 294CB",
+      "prior sexual experience",
+      "cross-examination",
+      "admissibility",
+      "disclosure",
+      "FACS records",
+      "miscarriage of justice"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The prosecution merely leading a child complainant's age and not adducing evidence of prior sexual experience does not \"disclose or imply\" a lack of sexual experience so as to unlock cross-examination under s 293(6) of the <i>Criminal Procedure Act 1986</i> (NSW).",
+    "whatHappened": "WHS was convicted at a 2023 retrial (the second trial) of four sexual offences against MW, a child under ten. The offending was alleged between 27/01/2010 and 10/11/2012; MW first described the abuse to police on 13-14/11/2012 when aged nine. Before trial, WHS applied to adduce FACS records and a 2017 police interview suggesting MW had displayed sexualised behaviour and been exposed to sexual matters by others (including a young male, AT), and to cross-examine MW about viewing pornographic movies with cousins. This material was said to explain how a nine-year-old could describe the abuse in detail. The trial judge ruled it inadmissible under s 293(3). The Court of Criminal Appeal quashed two convictions (Counts 1 and 4) as unreasonable but upheld Counts 2 and 5, and rejected the s 293 argument and a complaint about the Crown's closing address. WHS appealed to the High Court.",
+    "whatHeld": "The appeal was dismissed. The \"case for the prosecution\" in s 293(6) is <b>not confined to the prosecutor's opening or closing address</b> — it embraces the entirety of how the case is presented, including implicit steps in the reasoning towards guilt. However, there is a <b>critical distinction</b>: a prosecution case that discloses or implies a lack of sexual experience is different from the prosecution merely adducing evidence of a complainant whose age alone creates a risk the jury will assume or infer a lack of sexual experience. The latter <b>does not engage s 293(6)</b>. The prosecution has no free-standing power to adduce sexual-experience evidence; s 293(3) binds it, so the required \"disclosure or implication\" ordinarily arises only where the prosecution has obtained a ruling and led such evidence under a s 293(4) exception. A mere risk that the jury might assume or infer a lack of prior sexual experience from the complainant's age and the absence of such evidence is <b>not sufficient</b>. Accepting WHS's argument would engage s 293(6) in effectively every case involving a complainant aged nine or under, gutting the statutory protection for a vulnerable class. On Ground 2, the four excluded FACS documents did not contradict or weaken the Crown's closing submission explaining MW's delay in complaining, so no unfairness or miscarriage was established.",
+    "whatItMeans": "When you are building a child sexual assault brief in NSW, understand that <b>s 293 (now s 294CB) strongly restricts any evidence of a complainant's prior sexual experience or activity</b>, and this protection is at its strongest for young children. The prosecution cannot freely lead such evidence to bolster the case — it must fit a s 293(4) exception and obtain a court ruling. For your investigative approach, do not assume that material suggesting a child had prior sexual exposure (which might \"explain\" their knowledge) will ever reach the jury: the defence cannot cross-examine on it just because the child's young age might lead jurors to infer sexual naivety. The pathway to cross-examination only opens where the prosecution actually <b>discloses or implies</b> a lack of experience through evidence led or submissions made — not from age alone or from what evidence was left out. Practically, be careful in your dealings and disclosure obligations: this case grew from earlier convictions being quashed because <b>potentially exculpatory FACS material was not disclosed in answer to a subpoena</b>. Ensure all relevant records are identified and disclosed even where admissibility is contested. Also note a prosecutor's closing that explains delayed complaint must fairly reflect the evidence.",
+    "verdict": "AWARENESS-level authority: it clarifies the law on admissibility and cross-examination limits rather than changing your day-to-day evidence-gathering, but the disclosure lesson underneath it is directly relevant to how you build a brief.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/51.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/51",
+    "files": {
+      "llm": "data/files/hca-2025-51/hca-2025-51.md"
+    },
+    "flags": [
+      "This is a NSW appeal construing NSW legislation; the sexual assault communications/history provisions differ in WA, so treat the statutory detail as jurisdiction-specific and confirm the WA equivalents before applying.",
+      "Section 293 of the <i>Criminal Procedure Act 1986</i> (NSW) was renumbered as s 294CB from 01/06/2022; the judgment uses the old numbering.",
+      "The victim and accused are pseudonymised/de-identified (WHS, MW, DB, JW, AT); reporting restrictions apply."
+    ]
+  },
+  {
+    "id": "hca-2025-49",
+    "date": "2025-12-03",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "The King v Tsalkos",
+    "citation": "[2025] HCA 49",
+    "decided": "03/12/2025",
+    "appealFrom": "Court of Appeal of the Supreme Court of Victoria",
+    "outcome": "Crown appeal allowed; Court of Appeal orders set aside; convictions restored; sentence leave application remitted to the Victorian Court of Appeal.",
+    "weight": "High persuasive authority — a unanimous seven-judge High Court decision applying and reinforcing its recent ruling in R v Churchill.",
+    "tags": [
+      "distress evidence",
+      "sexual offences",
+      "jury directions",
+      "circumstantial evidence",
+      "corroboration",
+      "complaint evidence",
+      "relevance",
+      "probative value",
+      "section 137"
+    ],
+    "relevance": "",
+    "oneLine": "Distress evidence given by a complainant's mother at the time the complaint was made is admissible circumstantial evidence that the sexual offending occurred, and juries need no special \"unreliable\" warning about it.",
+    "whatHappened": "TSALKOS was convicted in the County Court of Victoria of two kidnappings, two aggravated rapes and four counts of procuring acts of gross indecency against two teenage complainants, AB and JJ, over events in 1987. AB's mother gave evidence, without objection, that she found AB \"very very distressed\" at the hospital at the time AB told her she had been raped. The trial judge directed the jury it could use the distress as indirect/circumstantial evidence supporting AB's account, but only if satisfied the distress was caused by the offending and not another reason (such as AB concealing sex work or lying to police). The Victorian Court of Appeal majority allowed TSALKOS's appeal, holding the distress was \"intractably neutral\" and could not support the account, and ordered a retrial. The King appealed to the High Court.",
+    "whatHeld": "The appeal was <b>allowed</b> and the convictions restored. Applying <i>R v Churchill</i>, the High Court held that <b>evidence a complainant was distressed at the time of making a pre-trial complaint is ordinarily relevant under s 55 of the</b> <i>Evidence Act 2008</i> (Vic) <b>and admissible under s 56 to prove the offending occurred</b>, on the basis the jury may find a causal connection between the distress and the alleged offending. The Court of Appeal erred by <b>separating the distress from the content of the complaint</b>, by treating \"independent\", \"indirect\" and \"circumstantial\" evidence as interchangeable, and by applying an <b>abolished common law corroboration rule</b>. The fact there could be another explanation for the distress does not make it irrelevant; that goes to weight for the jury. The distress had <b>substantial probative value</b> and s 137 was not engaged. The prosecutor's description of the evidence as \"independent\" was not a miscarriage — it meant only that it came from a source other than AB, not that it was independent corroboration.",
+    "whatItMeans": "This is a Victorian decision on Victorian statutes, so it is <b>awareness only</b> for WA work, but the reasoning is instructive. It confirms that <b>a complainant's observable distress at the time of complaint is not \"neutral\" filler</b> — where witnessed by another person it can be evidence that the offence occurred, not just a boost to credit. When you take statements from a person present when a complaint was first made (a parent, friend, first responder), <b>record their observations of the complainant's emotional and physical state carefully and precisely</b>, and note the timing relative to the complaint. Do not assume such evidence is worthless because innocent explanations exist — that is a jury question. Check how WA's <i>Evidence Act 1906</i> and <i>Criminal Procedure Act 2004</i> treat this before relying on the specific holdings.",
+    "verdict": "AWARENESS: it sharpens how you gather and value distress/first-complaint evidence, but it turns on Victorian legislation, so confirm the WA position before applying it operationally.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/49.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/49",
+    "files": {
+      "llm": "data/files/hca-2025-49/hca-2025-49.md"
+    },
+    "flags": [
+      "Decision turns on Victorian legislation (Evidence Act 2008 (Vic); Jury Directions Act 2015 (Vic)) — confirm the equivalent WA position before applying operationally",
+      "Offending dates from 1987; rape charged as a common law offence at the time",
+      "Key holdings rely on and apply R v Churchill (2025) 99 ALJR 719 — read alongside that decision"
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-20",
+      "call": "AWARENESS",
+      "problems": 1,
+      "report": "data/audits/2026-09-20/hca-2025-49.md"
     }
   },
   {
