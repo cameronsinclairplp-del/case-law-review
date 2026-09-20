@@ -1049,6 +1049,90 @@
     }
   },
   {
+    "id": "hca-2026-25",
+    "date": "2026-08-05",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Potter (A Pseudonym) v The King",
+    "citation": "[2026] HCA 25",
+    "decided": "05/08/2026",
+    "appealFrom": "Supreme Court of South Australia (Court of Appeal)",
+    "outcome": "Appeal dismissed; convictions on counts 2 and 4 upheld. The covert recording was lawfully made and properly admitted.",
+    "weight": "High Court of Australia, unanimous five-Justice bench — highest authority, but interpreting South Australian legislation, so persuasive rather than binding on WA provisions.",
+    "tags": [
+      "covert recording",
+      "listening device",
+      "surveillance devices",
+      "admissibility",
+      "lawful interests",
+      "sexual offences",
+      "bodily autonomy",
+      "consent",
+      "reasonably necessary"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court held a wife's covert recording of her husband admitting to raping her while she slept was <b>reasonably necessary to protect her lawful interests</b> and so was lawfully made and admissible.",
+    "whatHappened": "POTTER (a pseudonym) stood trial in the District Court of SA on four counts of rape against his wife, the allegation being that he had sex with her without consent while she was asleep. He was convicted on counts 2 and 4. Before count 4 occurred, on 14/12/2019 the complainant used her mobile phone to covertly record a conversation in which POTTER admitted \"I sexually assaulted you\" and \"I started having sex with you when you were asleep\". Her stated reason was to remind herself never to return to him. The trial judge admitted the recording; the SA Court of Appeal split, with the majority (S Doyle and David JJA) holding the statutory exception was not met but wrongly admitting it as a discretion to admit unlawfully obtained evidence, while Kourakis CJ held the exception was met. POTTER appealed to the High Court.",
+    "whatHeld": "The High Court (five Justices, unanimous) dismissed the appeal, upholding the Crown's notice of contention. It held the making of the recording was <b>reasonably necessary for the protection of the complainant's lawful interests</b> under s 4(2)(a)(ii) of the <i>Surveillance Devices Act 2016</i> (SA), so it was not prohibited by s 4(1) and was properly admitted. Key points: <b>\"lawful interests\" is wider than legal rights, title, duty or liability</b> and is akin to legitimate interests, applied case-by-case. <b>\"Reasonably necessary\" does not mean \"essential\"</b> — it is enough that the use was appropriate to protect the interest; a proportionality/\"reasonably appropriate and adapted\" test was rejected. The assessment is <b>objective but judged on the circumstances the recording party faced at the time</b>, with the person's reasons informing but not determining the analysis. The relevant lawful interest was correctly characterised as the complainant's <b>right to bodily autonomy and integrity</b> and not being raped — an interest deserving \"the very strongest protection\" — not merely her interest in ending the relationship. Given she was vulnerable, still living with POTTER, had been raped repeatedly, the recording was an appropriate powerful reminder of the peril she faced. The Court also confirmed that once the exception is not met, there is <b>no discretion to admit</b> such evidence — the SDA excludes it (s 12(1)).",
+    "whatItMeans": "This is a South Australian statute, so it does not bind you directly — WA is governed by the <i>Surveillance Devices Act 1998</i> (WA), which has its own s 5(3)(d) \"protection of lawful interests\" exception (and, unlike SA, generally requires a principal party's consent). Treat this as <b>strong persuasive authority</b> on how courts read the \"reasonably necessary for the protection of lawful interests\" exception. For your casework it means a complainant's covert recording of an offender's admissions may be <b>lawfully made and admissible</b> where it protects a serious interest such as bodily integrity or safety from further offending — even if the complainant made it only as a \"note to herself\" and not for a prosecution. The test is <b>appropriate, not essential</b>: the fact the complainant could have gone to police, or made a written note instead, does not defeat it. When you receive a victim's covert recording, gather evidence of <b>why and when</b> it was made and the circumstances they faced, because that drives admissibility. Remember the mirror risk: recordings made to trap, pressure or gain leverage (rather than to protect an interest) will not qualify. Also note that if the exception is not satisfied there is <b>no discretion to save the recording</b> — confirm the WA equivalent before relying on any covert recording.",
+    "verdict": "AWARENESS-level: this interprets SA legislation, not WA law, but gives authoritative High Court guidance on the \"reasonably necessary for protection of lawful interests\" test that WA courts will find persuasive when assessing covert recordings.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/25.html",
+    "jadeUrl": "",
+    "files": {
+      "llm": "data/files/hca-2026-25/hca-2026-25.md"
+    },
+    "flags": [
+      "Case interprets the SA <i>Surveillance Devices Act 2016</i>; the WA equivalent is the <i>Surveillance Devices Act 1998</i> (WA) and differs (e.g. WA generally requires a principal party's consent) — check WA provisions before relying on this.",
+      "Party anonymised by pseudonym (POTTER); complainant not named.",
+      "The precise standard of proof point: prosecution bears the onus on the balance of probabilities to establish the facts satisfying the exception."
+    ]
+  },
+  {
+    "id": "hca-2026-24",
+    "date": "2026-08-05",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "The King v HCZ",
+    "citation": "[2026] HCA 24",
+    "decided": "05/08/2026",
+    "appealFrom": "Court of Appeal of the Supreme Court of Queensland",
+    "outcome": "Appeal allowed. Orders 2 and 3 of the Queensland Court of Appeal (15/08/2025) set aside; in their place, the appeal to the Court of Appeal dismissed, restoring the sentencing judge's decision that no special circumstances existed.",
+    "weight": "High authority — unanimous five-member High Court decision (Gageler CJ, Edelman, Gleeson, Jagot and Beech-Jones JJ), binding nationally on the standard of appellate review, though the specific provisions are Queensland youth-justice law.",
+    "tags": [
+      "sentencing",
+      "appellate review",
+      "House v The King",
+      "judicial restraint",
+      "special circumstances",
+      "youth justice",
+      "murder",
+      "statutory interpretation",
+      "child offender",
+      "standard of review"
+    ],
+    "relevance": "",
+    "oneLine": "The High Court held an appellate court cannot overturn a sentencing judge's finding that no \"special circumstances\" existed under s 227(2) of the <i>Youth Justice Act 1992</i> (Qld) unless the House v The King standard of judicial restraint is met.",
+    "whatHappened": "On 26/12/2022, HCZ (aged 17 years and eight months) and companions decided to commit theft and entered the Lovells' unlocked home in North Lakes, Queensland. HCZ, armed with a knife, was confronted and pushed outside. In the ensuing struggle he struck out with the knife, stabbed Mrs Lovell in the chest (a 13cm wound penetrating her heart) and stabbed Mr Lovell in the back, then kicked Mr Lovell in the face. Mrs Lovell died. HCZ lied to police, had blood splatter on his shorts, and the knife handle and blade were linked to him by DNA and fingerprints. He pleaded guilty to burglary, murder, unlawful wounding with intent, and assault causing bodily harm in company. The sentencing judge found the murder \"particularly heinous\" under s 176(3)(b)(ii), imposed 14 years' detention, and concluded no \"special circumstances\" existed under s 227(2) to reduce the default 70% period before release. The Court of Appeal majority reduced the pre-release period to 60%, finding the judge let the seriousness of offending overwhelm mitigating factors. The Crown appealed to the High Court.",
+    "whatHeld": "The High Court unanimously allowed the appeal. It held the applicable standard of appellate review of a decision under s 227(2) is the <b>standard involving judicial restraint</b>, restricting intervention to the five <i>House v The King</i> grounds, not a correctness standard. Determining the standard is a question of statutory interpretation; because s 227(2) turns on what the court \"considers\" special having regard to all the circumstances, using <b>open-ended evaluative criteria that tolerate a range of outcomes</b>, judicial restraint applies. The only available basis for the Court of Appeal to interfere was that the finding was unreasonable or plainly unjust (the fifth House ground). It was <b>not</b>. There was nothing about HCZ's early guilty pleas, deprived upbringing, or rehabilitation prospects that made it plainly unjust for the judge to find no special circumstances, particularly given the seriousness of the murder. The weighing of mitigating factors was a matter for the sentencing judge, and the decision tolerated a range of outcomes.",
+    "whatItMeans": "This is a sentencing and appellate-review decision, so it does not change how you investigate or gather evidence. Its relevance is <b>awareness</b>: it confirms that where a discretionary sentencing determination turns on open-ended evaluative criteria (like \"special circumstances\"), a sentencing judge's conclusion is <b>hard to disturb on appeal</b> and will stand unless it is unreasonable or plainly unjust. For your casework, note the strength of the evidence brief mattered: the guilty pleas carried less mitigating weight because they were made against an \"overwhelmingly strong Crown case\" built on CCTV, DNA, fingerprints, and the recovered knife. Thorough forensic linking of an offender to the scene and weapon supports both conviction and the Crown's position at sentence.",
+    "verdict": "AWARENESS only — this clarifies the appellate standard for reviewing discretionary sentencing findings and does not alter investigative or charging practice.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/24.html",
+    "jadeUrl": "",
+    "files": {
+      "llm": "data/files/hca-2026-24/hca-2026-24.md"
+    },
+    "flags": [
+      "Provisions applied are Queensland law (<i>Youth Justice Act 1992</i> (Qld), <i>Criminal Code</i> (Qld)); confirm equivalent WA provisions before relying on the substantive scheme.",
+      "This is a sentencing/appellate-standard judgment with no direct bearing on WA investigative procedure."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-20",
+      "call": "AWARENESS",
+      "problems": 1,
+      "report": "data/audits/2026-09-20/hca-2026-24.md"
+    }
+  },
+  {
     "id": "wasca-2026-108",
     "date": "2026-07-31",
     "court": "Supreme Court of WA — Court of Appeal",

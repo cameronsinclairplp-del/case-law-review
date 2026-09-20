@@ -15,7 +15,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasca-2026-113",
@@ -32,7 +33,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasca-2026-119",
@@ -49,7 +51,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasc-2026-369",
@@ -66,7 +69,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasca-2026-127",
@@ -83,7 +87,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasc-2026-377",
@@ -100,7 +105,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "hca-2026-33",
@@ -117,7 +123,8 @@
       "notified": true,
       "holdReason": "HCA: the Court's catchwords are not criminal — area: Administrative law — 'Administrative law – Judicial review − Where plaintiff's Protection (Class XA) (Subclass 866) visa cancelled on character grounds (\"Cancella'",
       "heldNotified": true,
-      "catchwords": "Administrative law – Judicial review − Where plaintiff's Protection (Class XA) (Subclass 866) visa cancelled on character grounds (\"Cancellation Decision\") − Where plaintiff made representations to Minister seeking revocation of Cancellation Decision referring to material already held by Department − Where no real prospect of plaintiff being removed from Australia in reasonably foreseeable future − Where delegate decided not to revoke Cancellation Decision (\"Non-revocation Decision\") − Where plaintiff granted Bridging R (Subclass 070) visa (\"BVR\") − Whether Non-revocation Decision affected by jurisdictional error − Whether failure to have regard to information provided by plaintiff in connection with previous decision-making – Whether cancellation of protection visa would remove risk posed by plaintiff to Australian community in circumstances where plaintiff would be released on BVR. Words and phrase s – \"cancellation decision\", \"character grounds\", \"constitutional writ\", \"extension of time\", \"illogically\", \"irrationally\", \"judicial review\", \"jurisdictional error\", \"legal consequences\", \"non-revocation decision\", \"no real prospect of removing\", \"protection visa\", \"reasonably foreseeable future\", \"risk to the Australian community\", \"unlawful non‑citizen\", \"unreasonably\". Migration Act 1958 (Cth) , ss 189, 196, 197C(3), 198, 486A, 501(1), 501(3A), 501CA(4)."
+      "catchwords": "Administrative law – Judicial review − Where plaintiff's Protection (Class XA) (Subclass 866) visa cancelled on character grounds (\"Cancellation Decision\") − Where plaintiff made representations to Minister seeking revocation of Cancellation Decision referring to material already held by Department − Where no real prospect of plaintiff being removed from Australia in reasonably foreseeable future − Where delegate decided not to revoke Cancellation Decision (\"Non-revocation Decision\") − Where plaintiff granted Bridging R (Subclass 070) visa (\"BVR\") − Whether Non-revocation Decision affected by jurisdictional error − Whether failure to have regard to information provided by plaintiff in connection with previous decision-making – Whether cancellation of protection visa would remove risk posed by plaintiff to Australian community in circumstances where plaintiff would be released on BVR. Words and phrase s – \"cancellation decision\", \"character grounds\", \"constitutional writ\", \"extension of time\", \"illogically\", \"irrationally\", \"judicial review\", \"jurisdictional error\", \"legal consequences\", \"non-revocation decision\", \"no real prospect of removing\", \"protection visa\", \"reasonably foreseeable future\", \"risk to the Australian community\", \"unlawful non‑citizen\", \"unreasonably\". Migration Act 1958 (Cth) , ss 189, 196, 197C(3), 198, 486A, 501(1), 501(3A), 501CA(4).",
+      "hcaMeta": {}
     },
     {
       "id": "hca-2026-31",
@@ -134,7 +141,14 @@
       "notified": true,
       "holdReason": "HCA: no criminal party in the case name and no single-case investigation/evidence topic",
       "heldNotified": true,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {
+        "decided": "09/09/2026",
+        "coram": "Gageler CJ, Gordon, Edelman, Jagot, Beech-Jones JJ",
+        "caseNumber": "A8/2025",
+        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/r-lawyers-v-mr-daily-no-2",
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-09-09/HCA/R%20Lawyers%20v%20Mr%20Daily%20%5BNo%202%5D%20%28A8-2025%29%20%5B2026%5D%20HCA%2031.pdf"
+      }
     },
     {
       "id": "wasc-2026-384",
@@ -151,7 +165,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasca-2026-130",
@@ -168,7 +183,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasca-2026-131",
@@ -185,7 +201,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasc-2026-386",
@@ -202,7 +219,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasc-2026-397",
@@ -219,7 +237,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasc-2026-400",
@@ -236,7 +255,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasc-2026-392",
@@ -253,7 +273,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasc-2026-390",
@@ -270,7 +291,8 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": ""
+      "catchwords": "",
+      "hcaMeta": {}
     },
     {
       "id": "wasc-2026-388",
@@ -284,41 +306,6 @@
       "via": "link",
       "nameSuspect": false,
       "firstSeen": "2026-09-18T21:22:05.144737+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": ""
-    },
-    {
-      "id": "hca-2026-25",
-      "citation": "[2026] HCA 25",
-      "courtTag": "HCA",
-      "year": "2026",
-      "num": "25",
-      "caseName": "Potter (A Pseudonym) v The King",
-      "jadeUrl": "",
-      "blurb": "Potter (A Pseudonym) v The King [2026] HCA 25 — queued by hand from the Court's own listing on 20/09/2026 (never surfaced by a Jade alert)",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T05:25:06+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {}
-    },
-    {
-      "id": "hca-2026-24",
-      "citation": "[2026] HCA 24",
-      "courtTag": "HCA",
-      "year": "2026",
-      "num": "24",
-      "caseName": "The King v HCZ",
-      "jadeUrl": "",
-      "blurb": "The King v HCZ [2026] HCA 24 — queued by hand from the Court's own listing on 20/09/2026 (never surfaced by a Jade alert)",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T05:25:06+00:00",
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
