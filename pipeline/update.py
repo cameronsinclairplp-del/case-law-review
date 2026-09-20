@@ -42,6 +42,7 @@ from bs4 import BeautifulSoup
 
 # Sibling module (pipeline/ is sys.path[0] when run as `python pipeline/update.py`).
 from corpus import fetch_judgment_text  # legitimate full-text source (Open Australian Legal Corpus)
+import hca                               # the High Court's own site (terms expressly permit reproduction)
 
 # ---------------------------------------------------------------------------
 # Config
@@ -866,6 +867,10 @@ def _screened_out(why):
 # point of the gate; do not "harmonise" it with in_scope().
 # ---------------------------------------------------------------------------
 AUTO_ANALYSIS_SIGNAL_COURTS = {"HCA", "HCASJ"}
+# The Court's own catchwords, when we have them (hca.lookup), are the best signal
+# there is: "Criminal practice – Trial – …" is in; "Migration – Visa cancellation –
+# …" is out, whatever the party names look like ("R Lawyers v Mr Daily").
+CRIMINAL_CATCHWORDS = re.compile(r"\bcriminal\b|\bevidence\b|\bsentenc|\bconfession|\bpolice\b", re.I)
 
 
 def auto_analysis_ok(item):
@@ -873,6 +878,12 @@ def auto_analysis_ok(item):
     loop? NEVER used to decide watchlist membership."""
     if item.get("suppliedText") or item.get("via") == "submission":
         return True, ""                       # you chose it and supplied the text
+    catch = " ".join(str(item.get("catchwords") or "").split())
+    if catch:                                 # the Court's own one-line description
+        if CRIMINAL_CATCHWORDS.search(catch) or TOPIC_KEYWORDS.search(catch):
+            return True, ""
+        return False, (f"{item.get('courtTag', '')}: the Court's catchwords are not criminal or "
+                       f"investigative — '{catch[:140]}'")
     if item.get("nameSuspect"):
         return False, ("the case name could not be parsed cleanly — it would be "
                        "published under a name nobody has verified")
@@ -1142,7 +1153,7 @@ def send_watchlist_email(user, password, items, stats=None):
     for it in items:
         au = austlii_url(it)
         jd = it.get("jadeUrl") or jade_summary_url(it["courtTag"], it["year"], it["num"])
-        blurb = re.sub(r"\s+", " ", it.get("blurb", "")).strip()[:240]
+        blurb = re.sub(r"\s+", " ", it.get("catchwords") or it.get("blurb", "")).strip()[:240]
         hold = " ".join(str(it.get("holdReason", "")).split())
         lines += [f"• {it['caseName']} {it['citation']} — {it['courtTag']}"]
         if blurb:
@@ -1393,6 +1404,30 @@ def main():
             # email-submitted judgments carry their own verbatim text; everything
             # else resolves from the corpus (HCA/interstate; WA always returns None).
             text = it.get("suppliedText") or fetch_judgment_text(it["citation"])
+            source, warns = None, []
+            if not text and it["courtTag"] in hca.COURTS:
+                # The Court's own site: read the judgment page first (name, date,
+                # catchwords), gate on the catchwords, and only then download.
+                meta = None
+                try:
+                    meta = hca.lookup(it["citation"], it.get("caseName", ""))
+                except Exception as e:                # the Court's site down: pending, retried next run
+                    log(f"  hcourt lookup failed for {it['id']} (non-fatal): {e}")
+                if meta:
+                    if meta.get("name"):
+                        it["caseName"] = meta["name"]
+                        it["nameSuspect"] = False
+                    it["catchwords"] = meta.get("catchwords", "")
+                    it["hcaMeta"] = {k: meta.get(k, "") for k in ("decided", "coram", "caseNumber", "url", "pdf")}
+                    ok_auto, hold_why = auto_analysis_ok(it)
+                    if not ok_auto:
+                        it["holdReason"] = hold_why
+                        held.append(it)
+                        unresolved.append(it)
+                        log(f"  HELD {it['id']} ({it['citation']}): {hold_why} — watchlist only, no download")
+                        continue
+                    text, warns, source = hca.fetch_text(meta)      # ValueError from the gate -> error path
+                    log(f"  hcourt: {it['id']} fetched from the Court ({len(text):,} chars)")
             if not text:
                 age = _age_days(it.get("firstSeen"))
                 if age > PENDING_MAX_DAYS:
@@ -1424,8 +1459,19 @@ def main():
                 text = text[:MAX_JUDGMENT_CHARS]
             log(f"  analysing {it['id']} ({it['citation']}) — {len(text)} chars")
             analysis = analyse(client, it, text, truncated)
+            flags = [str(f) for f in (analysis.get("flags") or [])] + [f"cleaner: {w}" for w in warns]
+            if flags:
+                analysis["flags"] = flags
             case = build_case(it, analysis)
-            write_llm_file(case, text, analysis)
+            court_date = (it.get("hcaMeta") or {}).get("decided", "")
+            if court_date and dmy_to_iso(court_date):     # the Court's own judgment date beats the model's
+                if case["decided"] != court_date:
+                    log(f"  date {it['id']}: the Court says {court_date}, model said {case['decided']!r} — using the Court")
+                case["decided"] = court_date
+                case["date"] = dmy_to_iso(court_date)
+            if flags:
+                case["flags"] = flags
+            write_llm_file(case, text, analysis, source=source)
             new_cases.append(case)
             if it.get("_msgid"):
                 processed_now.append(it["_msgid"])
@@ -1511,6 +1557,7 @@ def _pending_record(it):
         "notified": bool(it.get("notified", False)),
         "holdReason": it.get("holdReason", ""),
         "heldNotified": bool(it.get("heldNotified", False)),
+        "catchwords": it.get("catchwords", ""),
     }
 
 

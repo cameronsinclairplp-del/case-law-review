@@ -454,6 +454,37 @@ def test_topic_alone_would_hold_the_genuine_hca_cases():
             f"TOPIC_KEYWORDS now matches {blurb!r} — do NOT simplify away the party pass"
 
 
+def test_auto_analysis_trusts_the_courts_catchwords_when_present():
+    # hca.lookup() puts the Court's own catchwords on the item: they decide, whatever
+    # the party names look like. "R Lawyers v Mr Daily" has a criminal-looking name
+    # and a civil subject; "EGH19 v Minister" is migration; "The King v Ko" is criminal.
+    it = _hca("R Lawyers v Mr Daily [No 2]", "R Lawyers v Mr Daily [No 2] [2026] HCA 31")
+    it["catchwords"] = "Legal practitioners – Costs – Solicitor's lien – Whether lien survives termination of retainer."
+    ok, why = u.auto_analysis_ok(it)
+    assert not ok and "catchwords are not criminal" in why and "Solicitor's lien" in why
+    it = _hca("EGH19 v Minister for Immigration & Citizenship", "EGH19 v Minister [2026] HCA 33")
+    it["catchwords"] = "Migration – Visa cancellation – Whether decision affected by jurisdictional error."
+    assert not u.auto_analysis_ok(it)[0]
+    it = _hca("Ko v The King", "Ko v The King [2026] HCA 29")
+    it["catchwords"] = "Criminal practice – Trial – Adequacy of jury directions – Attempted importation of a border controlled drug."
+    assert u.auto_analysis_ok(it)[0]
+    it = _hca("Smith v Jones", "Smith v Jones [2026] HCA 40")            # a civil name, an evidence subject
+    it["catchwords"] = "Evidence – Admissibility – Tendency evidence – Whether probative value substantially outweighs prejudice."
+    assert u.auto_analysis_ok(it)[0]
+    it = _hca("Smith v Jones", "Smith v Jones [2026] HCA 40")            # no catchwords: the old rules apply
+    assert not u.auto_analysis_ok(it)[0]
+    it["catchwords"] = ""
+    assert not u.auto_analysis_ok(it)[0]
+
+
+def test_pending_record_carries_the_catchwords():
+    rec = u._pending_record({"id": "hca-2026-31", "citation": "[2026] HCA 31", "courtTag": "HCA", "year": "2026",
+                             "num": "31", "catchwords": "Legal practitioners – Costs"})
+    assert rec["catchwords"] == "Legal practitioners – Costs"
+    assert u._pending_record({"id": "x", "citation": "[2026] HCA 1", "courtTag": "HCA", "year": "2026",
+                              "num": "1"})["catchwords"] == ""
+
+
 def test_auto_analysis_holds_civil_hca():
     # the case that actually shipped unreviewed (hca-1998-11), framed as
     # generously as possible — as a clean, single-case alert link
