@@ -1645,39 +1645,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326100+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Competition and consumer law — 'Competition and consumer law – Competition and Consumer Act 2010 (Cth) – Restrictive trade practices – Prohibition of contracts, arrangement'",
+      "heldNotified": true,
+      "catchwords": "Competition and consumer law – Competition and Consumer Act 2010 (Cth) – Restrictive trade practices – Prohibition of contracts, arrangements, or understandings affecting the supply or acquisition of goods – Where head contractor succumbed to threat from union and terminated subcontract without any verbal (or written) assent being communicated to union – Whether sufficient to give rise to \"understanding\" in context of ss 45E(3) and 45EA of Competition and Consumer Act that head contractor succumbed to union's threat of industrial action by doing what was demanded under sanction of that threat. Words and phrases – \"acceptance\", \"acquisition situation\", \"arrangement\", \"arrangement or understanding\", \"arriving at an understanding\", \"assent\", \"communication\", \"communication of acceptance\", \"communication of assent\", \"consensus\", \"contract, arrangement or understanding\", \"express or tacit communication\", \"giving effect to an understanding\", \"implied promise\", \"implied request\", \"inducement\", \"making a contract\", \"making an arrangement\", \"manifestations of mutual consent\", \"meeting of minds\", \"offer\", \"performance\", \"proscribed purpose\", \"reciprocity\", \"secondary boycott\", \"threat\", \"threat of industrial action\", \"unilateral contracts\". Competition and Consumer Act 2010 (Cth) – ss 45E, 45EA, 76.",
       "hcaMeta": {
         "decided": "02/04/2025",
         "coram": "Gageler CJ, Edelman, Steward, Gleeson, Beech-Jones JJ",
-        "caseNumber": "B41/2024, B42/2024",
+        "caseNumber": "B41/2024 B42/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/australian-competition-and-consumer-commission-v-j-hutchinson-pty-ltd",
-        "pdf": ""
-      }
-    },
-    {
-      "id": "hca-2025-9",
-      "citation": "[2025] HCA 9",
-      "courtTag": "HCA",
-      "year": "2025",
-      "num": "9",
-      "caseName": "The King v ZT",
-      "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/9",
-      "blurb": "The King v ZT [2025] HCA 9 — 02/04/2025 — from the Court's own listing",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T07:20:17.326101+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {
-        "decided": "02/04/2025",
-        "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "S38/2024",
-        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/king-v-zt",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-03-30/HCA/Australian%20Competition%20and%20Consumer%20Commission%20v%20J%20Hutchinson%20Pty%20Ltd%20%28B41%20%26%20B42-2024%29%20%5B2025%5D%20HCA%2010.pdf"
       }
     },
     {
@@ -1693,15 +1669,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326103+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth); Immigration — 'Constitutional law (Cth) – Judicial power of Commonwealth – Immigration detention – Detention without judicial order – Where following relea'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Judicial power of Commonwealth – Immigration detention – Detention without judicial order – Where following release from custody claimants taken into immigration detention under s 189(1) of Migration Act 1958 (Cth) (\"Act\") – Where s 196(1) of Act required claimants to be kept in immigration detention until removed from Australia, deported, or granted visa – Where claimants had pending application for protection visa – Where ss 198(1) and 198(6) of Act imposed duty upon officers to remove unlawful non-citizen from Australia as soon as reasonably practicable where request made in writing or visa application finally determined – Where Administrative Appeals Tribunal (\"Tribunal\") found claimants satisfied criterion for protection visa in s 36(2)(aa) of Act and were owed protection obligations – Where claimants were granted visa and released from immigration detention following Tribunal finding – Where claimants sought declaration that detention from time of Tribunal finding to release from immigration detention unlawful on basis that detention exceeded constitutional limitation identified in NZYQ v Minister for Immigration, Citizenship and Multicultural Affairs (2023) 97 ALJR 1005; 415 ALR 254 – Whether continuing detention of claimants exceeded constitutional limitation identified in NZYQ – Whether question of real prospect of removal from Australia becoming practicable in reasonably foreseeable future arose where each claimant had pending application for protection visa – Whether constitutional writ of mandamus available to compel performance of duty to consider claimants' visa applications. Immigration – Unlawful non-citizens – Where claimants detained as unlawful non-citizens under ss 189(1) and 196(1) of Act – Whether continuing detention of claimants authorised by ss 189(1) and 196(1) of Act. Words and phrases – \"alien\", \"constitutional limitation expressed in NZYQ \", \"constitutional writ\", \"continuing detention\", \"damages\", \"depriving a person of their liberty\", \"disproportionality\", \"executive detention\", \"habeas corpus\", \"judicial power of the Commonwealth\", \"legitimate and non-punitive purpose\", \" Lim principle\", \"mandamus\", \"penal\", \"power or duty\", \"practicable\", \"protection finding\", \"punishment\", \"punitive\", \"real prospect\", \"reasonably capable of being seen as necessary\", \"reasonably foreseeable future\", \"removal from Australia\", \"statutory purpose\", \"unlawful non-citizen\", \"visa processing\". Constitution , s 51(xix), Ch III. Migration Act 1958 (Cth) , ss 5, 13, 36, 36A, 45, 47, 65, 189, 196, 197C, 198.",
       "hcaMeta": {
         "decided": "02/04/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "M66/2024, P34/2024",
+        "caseNumber": "M66/2024 P34/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/cza19-v-commonwealth-australia-anor",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-01/HCA/CZA19%20v%20Commonwealth%20of%20Australia%20%28M66%20%26%20P34-2024%29%20%5B2025%5D%20HCA%208.pdf"
       }
     },
     {
@@ -1717,15 +1693,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326105+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Courts — 'Courts – State courts invested with federal jurisdiction – Powers – Exercise of powers – Where Supreme Court of Victoria uniquely empowered '",
+      "heldNotified": true,
+      "catchwords": "Courts – State courts invested with federal jurisdiction – Powers – Exercise of powers – Where Supreme Court of Victoria uniquely empowered to make group costs order (\"GCO\") – Where s 1337H(2) of Corporations Act 2001 (Cth) allows transferor court to transfer proceeding to another court if, having regard to interests of justice, it is more appropriate – Where s 1337P(2) of Corporations Act provides that if proceeding transferred then transferee court must deal with proceeding as if, subject to any order of transferee court, steps that had been taken for purposes of proceeding in transferor court, or similar steps, had been taken in transferee court – Where group proceeding commenced in Supreme Court of Victoria – Where plaintiffs applied for GCO – Where fifth defendant applied for transfer of group proceeding to Supreme Court of New South Wales – Where primary judge ordered transfer application be determined after GCO application – Where GCO made – Where considerable risk that group proceeding would not be able to continue without GCO – Whether fact of Supreme Court of Victoria having made GCO relevant to exercise of discretion under s 1337H(2) of Corporations Act to transfer proceeding – Whether GCO will remain in force and be capable of being enforced by Supreme Court of New South Wales if proceeding transferred to Supreme Court of New South Wales – Whether Supreme Court of New South Wales has power to revoke or vary GCO if it remains in force – Whether group proceeding should be transferred to Supreme Court of New South Wales pursuant to s 1337H of Corporations Act. Words and phrases – \"access to justice\", \"appropriate forum\", \"class action\", \"connecting factors\", \"contingency fee\", \"discretion\", \"federal jurisdiction\", \"group costs order\", \"group proceeding\", \"interests of justice\", \"jurisdiction\", \"removal\", \"similar steps\", \"statutory fiction\", \"steps\", \"stultification\", \"transfer\", \"transfer application\", \"transferee court\", \"transferor court\". Corporations Act 2001 (Cth) – Pt 9.6A, Div 1. Judiciary Act 1903 (Cth) – s 79. Civil Procedure Act 2005 (NSW) – Pt 10. Legal Profession Uniform Law (NSW) – Pt 4.3, Div 4. Legal Profession Uniform Law (Vic) – Pt 4.3, Div 4. Supreme Court Act 1986 (Vic) – s 33ZDA.",
       "hcaMeta": {
         "decided": "12/03/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "M21/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/bogan-v-estate-peter-john-smedley-deceased",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025/HCA/7.pdf"
       }
     },
     {
@@ -1741,15 +1717,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326107+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Legislative power – Acquisition of property on just terms – Where Gumatj Clan or Estate Group of Yolngu People cl'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Legislative power – Acquisition of property on just terms – Where Gumatj Clan or Estate Group of Yolngu People claim entitlement to compensation under Native Title Act 1993 (Cth) for \"past acts\" \"attributable\" to appellant – Where Gumatj Clan claim past acts attributable to appellant are specified appropriations to appellant and grants to third parties of interests in land in Gove Peninsula in Northern Territory – Where appropriations and grants occurred between 1939 and 1969 by or under ordinances made by Governor-General under Northern Territory (Administration) Act 1910 (Cth) – Where Gumatj Clan claim each appropriation or grant invalid at time it occurred to extent inconsistent with native title rights and interests in relation to land then recognised at common law – Whether power conferred on Commonwealth Parliament by s 122 of Constitution to make laws for government of territory extends to making law with respect to acquisition of property otherwise than on just terms within meaning of s 51(xxxi) of Constitution – Whether extinguishment by or under law of Commonwealth of native title recognised at common law before commencement of Native Title Act constituted acquisition of property within meaning of s 51(xxxi) – Whether grant of pastoral lease in 1903 by Governor of South Australia under Northern Territory Land Act 1899 (SA) had effect of extinguishing non-exclusive native title rights over minerals on or under subject land. Words and phrases – \"abstracts\", \"accession\", \"acquisition of property\", \"authorised and legally effective\", \"common law rule of recognition\", \"disjoined\", \"equality before the law\", \"erosion\", \"exception\", \"exception or reservation\", \"exclusive possession\", \"exclusive rights\", \"extinguishment\", \"for the government of a territory\", \"information of intrusion\", \"inherently defeasible\", \"inherently fragile\", \"land\", \"liberty of access\", \"minerals\", \"native title\", \"native title norms\", \"native title rights and interests\", \"non-derogation from grant\", \"on just terms\", \"pastoral lease\", \"plenary power\", \"precedent\", \"radical title\", \"recognition\", \"reservation\", \"sever\", \"skeletal principle\", \"taking\", \"title\", \"traditional laws and customs\", \"valid exercise of sovereign power\", \"with respect to\", \"withdrawal of recognition\". Constitution – ss 51(xxix), 51(xxxi), 96, 122. Native Title Act 1993 (Cth) – ss 14, 18, 223, 226, 228, 238, 239. Northern Territory (Administration) Act 1910 (Cth). Northern Territory Land Act 1899 (SA) – ss 24, 25, Sch A, item (l).",
       "hcaMeta": {
         "decided": "12/03/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "D5/2023",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/commonwealth-australia-v-yunupingu",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-08-27/HCA/Commonwealth%20of%20Australia%20v%20Yunupingu%20%28D5-2023%29%20%5B2025%5D%20HCA%206.pdf"
       }
     },
     {
@@ -1765,39 +1741,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326109+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Immigration — 'Immigration – Unlawful non-citizens – Where proceeding for declaration that departmental officer exceeded executive power of Commonwealth – '",
+      "heldNotified": true,
+      "catchwords": "Immigration – Unlawful non-citizens – Where proceeding for declaration that departmental officer exceeded executive power of Commonwealth – Where departmental officer declined to refer to Minister request for exercise of power under s 195A of Migration Act 1958 (Cth) – Where s 198(6) of Migration Act imposed duty on officers to remove unlawful non-citizen as soon as reasonably practicable – Where proceeding did not challenge valid application of s 198(6) to unlawful non-citizen – Whether Federal Court could make interlocutory order restraining officers from removing unlawful non-citizen notwithstanding duty imposed by s 198(6) – Meaning of \"reasonably practicable\" – Relevance of Tait v The Queen (1962) 108 CLR 620. Words and phrases – \"balance of convenience\", \"effective exercise of jurisdiction\", \"executive power\", \"incidental power\", \"integrity of court processes\", \"interlocutory injunction\", \"interpretative accommodation\", \"liberty to consider\", \"non-compellable power\", \"personal power\", \"preserve subject matter\", \"preserve utility of final relief\", \"prima facie case\", \"principle of legality\", \"procedural decision\", \"reasonably practicable\", \"remove unlawful non citizen\", \"statutory duty\", \"statutory power\", \"statutory process\". Migration Act 1958 (Cth) – ss 195A, 198(6).",
       "hcaMeta": {
         "decided": "05/03/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "P21/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/minister-immigration-and-multicultural-affairs-v-mzapc",
-        "pdf": ""
-      }
-    },
-    {
-      "id": "hca-2025-4",
-      "citation": "[2025] HCA 4",
-      "courtTag": "HCA",
-      "year": "2025",
-      "num": "4",
-      "caseName": "KMD v CEO (Department of Health NT)",
-      "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/4",
-      "blurb": "KMD v CEO (Department of Health NT) [2025] HCA 4 — 27/02/2025 — from the Court's own listing",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T07:20:17.326110+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {
-        "decided": "27/02/2025",
-        "coram": "Gordon, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "D2/2024",
-        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/kmd-v-ceo-department-health-nt",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025/HCA/5.pdf"
       }
     },
     {
@@ -1813,15 +1765,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326112+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Chapter III court – Judicial immunity – Status of orders of Federal Circuit Court of Australia – Where judge of F'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Chapter III court – Judicial immunity – Status of orders of Federal Circuit Court of Australia – Where judge of Federal Circuit Court of Australia (\"Judge Vasta\") declared Mr Stradford in contempt of disclosure orders (\"contempt declaration\") and sentenced Mr Stradford to imprisonment (\"imprisonment order\") – Where Mr Stradford was imprisoned by various agents, employees or contractors of the Commonwealth and Queensland acting in reliance upon imprisonment order – Where Full Court of Family Court of Australia set aside contempt declaration and imprisonment order due to lack of power to make the declaration and order and for failure to afford procedural fairness to Mr Stradford – Where primary judge in Federal Court of Australia found Judge Vasta liable to Mr Stradford for false imprisonment and Commonwealth and Queensland vicariously liable – Where primary judge held that imprisonment order and warrant of commitment were affected by jurisdictional error, invalid and of no legal effect – Where primary judge found Judge Vasta lost protection of judicial immunity from civil suit – Where primary judge did not accept that persons acting in reliance upon the imprisonment order and warrant of commitment were protected from liability for their actions in imprisoning Mr Stradford – Whether effect of s 17 of Federal Circuit Court of Australia Act 1999 (Cth) was that contempt declaration and imprisonment order of Federal Circuit Court were valid unless and until set aside – Scope of common law immunity from civil suit arising out of acts done in exercise or purported exercise of judicial function or capacity – Whether persons acting in reliance upon imprisonment order and warrant of commitment liable to Mr Stradford despite acting pursuant to, or in accordance with, warrant of commitment which appeared regular on its face – Whether s 249 of Criminal Code (Qld) applied to warrant issued by Federal Circuit Court. Words and phrases – \"collateral challenge\", \"constables\", \"contempt\", \"correctional officers\", \"defence of justification\", \"gaolers\", \"inferior court\", \"judicial function\", \"judicial immunity\", \"judicial officer\", \"jurisdictional error\", \"justification\", \"ministerial officer\", \"officer of the court\", \"order\", \"police officers\", \"sheriff\", \"subject matter jurisdiction\", \"superior court\", \"superior court of record\", \"warrant\". Family Law Act 1975 (Cth) – Pts XIIIA, XIIIB. Federal Circuit Court of Australia Act 1999 (Cth) – s 17. Criminal Code (Qld) – s 249.",
       "hcaMeta": {
         "decided": "12/02/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "S24/2024, C3/2024, C4/2024",
+        "caseNumber": "S24/2024 C3/2024 C4/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/queensland-v-mr-stradford-pseudonym",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-02-09/HCA/Queensland%20v%20Mr%20Stradford%20%28a%20pseudonym%29%20%28S24%2C%20C3%20%26%20C4-2024%29%20%5B2025%5D%20HCA%203.pdf"
       }
     },
     {
@@ -1837,15 +1789,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326113+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Practice and procedure — 'Practice and procedure – Costs – Work performed by employed solicitor – Where first and second respondents are remaining partners of unincor'",
+      "heldNotified": true,
+      "catchwords": "Practice and procedure – Costs – Work performed by employed solicitor – Where first and second respondents are remaining partners of unincorporated law firm which obtained costs order against appellants – Where costs were sought for work undertaken by employed solicitors of unincorporated law firm – Whether order for costs in favour of an unincorporated law firm entitles firm to obtain recompense for legal work performed by employed solicitors of firm. Words and phrases – \"assessment of costs\", \"Chorley exception\", \"employed solicitor\", \"general common law principle\", \"general rule\", \"in-house lawyer rule\", \"in-house solicitor rule\", \"indemnity\", \"lawyer-client relationship\", \"legal services\", \"order for costs\", \"partner\", \"professional detachment\", \"professional fees\", \"quantification\", \"remuneration\", \"self-represented litigant\", \"unincorporated law firm\". Civil Procedure Act 2005 (NSW) – ss 3, 98. Legal Profession Uniform Law Application Act 2014 (NSW) – Pt 7, Div 3. Supreme Court Act 1986 (Vic) – s 3.",
       "hcaMeta": {
         "decided": "05/02/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "S52/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/birketu-pty-ltd-v-atanaskovic",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025/HCA/2.pdf"
       }
     },
     {
@@ -1861,15 +1813,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326114+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Equity — 'Equity – Fiduciary obligation – Successor trustee and former trustee – Where former trustee has entitlement in equity to be indemnified out '",
+      "heldNotified": true,
+      "catchwords": "Equity – Fiduciary obligation – Successor trustee and former trustee – Where former trustee has entitlement in equity to be indemnified out of trust assets for expenses and liabilities properly incurred – Where trustee has beneficial interest in trust assets commensurate with that entitlement to indemnification – Where appellant is judgment creditor of former trustee and subrogated to former trustee's entitlement to indemnification – Where successor trustee transferred trust assets to third parties leaving insufficient trust assets to satisfy former trustee's entitlement to indemnification – Whether successor trustee owes fiduciary obligation to former trustee – Whether fiduciary obligation owed in respect of entitlement of former trustee to indemnification out of trust assets or commensurate beneficial interest in trust assets retained by former trustee following replacement by successor trustee. Words and phrases – \"beneficial interest\", \"cestui que trust\", \"dishonest and fraudulent design\", \"equitable proprietary interest\", \"exoneration\", \"fiduciary obligation\", \"fiduciary relationship\", \"former trustee\", \"incoherence\", \"indemnification\", \"knowing assistance\", \"priority\", \"security interest\", \"successor trustee\", \"vulnerability\". Trustee Act 1925 (NSW) – ss 6, 59.",
       "hcaMeta": {
         "decided": "05/02/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "S26/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/naaman-v-jaken-properties-australia-pty-limited",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-12-05/HCA/Naaman%20v%20Jaken%20Properties%20Australia%20Pty%20Limited%20%28S26-2024%29%20%5B2025%5D%20HCA%201.pdf"
       }
     }
   ],

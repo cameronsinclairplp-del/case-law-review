@@ -2132,6 +2132,90 @@
     ]
   },
   {
+    "id": "hca-2025-9",
+    "date": "2025-04-02",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "The King v ZT",
+    "citation": "[2025] HCA 9",
+    "decided": "02/04/2025",
+    "appealFrom": "Court of Criminal Appeal of the Supreme Court of New South Wales",
+    "outcome": "Appeal allowed. CCA orders of 29/09/2023 set aside; matter remitted to the CCA for redetermination according to law. Effect is to restore ZT's conviction and sentence pending that redetermination.",
+    "weight": "Unanimous High Court of Australia decision (seven judges; two sets of reasons reaching the same result). Binding and authoritative on the appellate function under common-form criminal appeal provisions, including WA's equivalent.",
+    "tags": [
+      "admissions",
+      "intercepted telephone calls",
+      "police interviews",
+      "recorded evidence",
+      "joint criminal enterprise",
+      "extended joint criminal enterprise",
+      "unreasonable verdict",
+      "consciousness of guilt",
+      "M v The Queen",
+      "appellate review"
+    ],
+    "relevance": "",
+    "oneLine": "The High Court held that a Court of Criminal Appeal cannot find a murder verdict unreasonable on the basis that recorded admissions were unreliable while refusing to listen to or watch the very recordings that were the principal evidence.",
+    "whatHappened": "ZT (a pseudonym; he was 16 at the time of the offence) was convicted in the Supreme Court of NSW of the murder of William Chaplin and sentenced to a substantial term. It was not disputed that PW killed the deceased and that ZT was present and helped dispose of and burn the body. The prosecution ran murder on joint criminal enterprise / extended joint criminal enterprise bases. The principal evidence implicating ZT was his admissions in intercepted telephone calls with family and associates (made 15/08/2019–03/09/2019) and in police interviews (05–06/09/2019). The recordings were tendered as exhibits and played to the jury; transcripts were provided as a guide only. A majority of the CCA (KIRK JA and SWEENEY J, FAGAN J dissenting) held the conviction unreasonable, quashed it and entered an acquittal — without listening to any of the calls or watching any of the interviews. The Crown appealed to the High Court.",
+    "whatHeld": "Appeal allowed unanimously; CCA orders set aside and the matter remitted. Applying <i>M v The Queen</i> (1994) 181 CLR 487, an appellate court must give <b>full allowance</b> to the jury's advantages in seeing and hearing all the evidence, not just live witness testimony. <b>Nothing in <i>Pell v The Queen</i> prevents an appellate court listening to or watching recorded exhibits</b> (intercept calls, police interviews) where there is a <b>real forensic purpose</b> — such as discerning something apparent only visually or by sound, or assessing the existence, nature and scope of the jury's advantage. What it must not do is make its own credibility assessment of recorded statements by reference to the manner they were made; that is the jury's constitutional function. Where, as here, the doubt held concerned the <b>plausibility and credibility of the admissions in the recordings</b>, the majority had <b>no rational basis</b> to conclude the jury enjoyed no relevant advantage without listening to and watching enough of the material to identify whether such advantage existed. The jury was best placed to weigh contested contextual meaning (e.g. \"missing\", \"I did, kind of\", \"making a person disappear\", \"I witnessed the lot\") and tone of voice. The Court also confirmed that urging acceptance of an admission while rejecting exculpatory or false parts of a mixed statement is not consciousness-of-guilt reasoning requiring an <i>Edwards v The Queen</i> direction, and that elements of an offence — not each piece of supporting evidence — must be proved beyond reasonable doubt (subject to indispensable intermediate facts).",
+    "whatItMeans": "This is chiefly about how appeal courts review verdicts, but there are practical points for your casework. Admissions captured in <b>lawful telephone intercepts and recorded interviews are potent evidence</b>, and their <b>truth and weight are matters for the jury, not for you or the courts to pre-judge</b>. The <b>manner, tone and context</b> of how a suspect speaks — to family versus to police — can carry real evidential value, so ensure recordings are complete, high quality and properly preserved as exhibits, and that accurate transcripts are prepared as a guide. Where a suspect gives a mixed statement (part admission, part denial or lie), the Crown can rely on the admission and reject the false parts without it becoming consciousness-of-guilt reasoning; but flag potentially false exculpatory statements so an <i>Edwards</i> direction can be considered. Be alert that mere presence and helping dispose of a body do not, without more, prove murder — build evidence going to the agreement/understanding underpinning joint or extended joint criminal enterprise.",
+    "verdict": "AWARENESS-level authority: it governs appellate review of unreasonable-verdict grounds rather than your day-to-day investigative steps, but it reinforces the evidential value and proper handling of recorded admissions.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/9.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/9",
+    "files": {
+      "llm": "data/files/hca-2025-9/hca-2025-9.md"
+    },
+    "flags": [
+      "\"ZT\" is a pseudonym; a non-publication order applies because he was a child at the time of the offence (Children (Criminal Proceedings) Act 1987 (NSW), s 15A(1)(a))",
+      "NSW decision applying the Criminal Appeal Act 1912 (NSW), s 6; the judgment notes the WA equivalent is the Criminal Appeals Act 2004 (WA), s 30(3)(a)",
+      "Two separate sets of reasons (Gageler CJ, Gleeson, Jagot and Beech-Jones JJ; and Gordon, Edelman and Steward JJ) reaching the same orders — check final CLR version for precise reasoning before citing",
+      "The High Court did not decide whether the conviction was in fact unreasonable; that question was remitted"
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-20",
+      "call": "AWARENESS",
+      "problems": 1,
+      "report": "data/audits/2026-09-20/hca-2025-9.md"
+    }
+  },
+  {
+    "id": "hca-2025-4",
+    "date": "2025-02-27",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "KMD v CEO (Department of Health NT)",
+    "citation": "[2025] HCA 4",
+    "decided": "27/02/2025",
+    "appealFrom": "Court of Criminal Appeal of the Supreme Court of the Northern Territory",
+    "outcome": "Appeal allowed. Orders 1, 2 and 4 of the NTCCA made on 23/07/2024 set aside. Matter remitted to a differently constituted NTCCA for reconsideration of the CEO's supplementary notice of appeal dated 16/02/2024. The primary judge's orders of 05/07/2023 stayed for 14 days.",
+    "weight": "High Court of Australia, five-justice bench (joint judgment of Gordon, Steward, Gleeson and Beech-Jones JJ; Jagot J concurring). Binding, but decided on NT-specific legislation.",
+    "tags": [
+      "mental impairment",
+      "supervision orders",
+      "custodial supervision order",
+      "non-custodial supervision order",
+      "periodic review",
+      "standard of appellate review",
+      "Criminal Code (NT)",
+      "High Court"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court confirms a person under a mental-impairment supervision order has no legal duty to cooperate with medical experts, and refusal cannot make a review 'miscarry'.",
+    "whatHappened": "KMD had been in custody since 07/05/2013, found not guilty of various offences by reason of mental impairment after a special hearing, and was declared liable to supervision under Pt IIA, Div 5 of Sch I to the <i>Criminal Code Act 1983</i> (NT). A custodial supervision order (CSO) was made in 2015. On a third periodic review, the primary judge (BROWNHILL J) was not satisfied the safety of KMD or the public would be seriously at risk if she were released, and on 05/07/2023 varied the CSO to a non-custodial supervision order (NCSO); KMD was released on 12/07/2023. The CEO (Health) appealed to the NT Court of Criminal Appeal, which (Blokland J dissenting) set aside the NCSO and confirmed the CSO, returning KMD to custody after roughly 12 months in the community. KMD, appearing in person, appealed to the High Court by special leave.",
+    "whatHeld": "The Court allowed the appeal. It held the NTCCA majority erred in concluding the review had 'miscarried' because KMD refused to engage with the medical experts. <b>KMD was under no statutory obligation to cooperate with the experts whose reports were provided under ss 43ZK and 43ZN(2)(a)</b>; cooperation is not a prerequisite to the reports or to the review under s 43ZH. The judge had to decide, on the evidence available (which included the evidence of non-cooperation), whether she was satisfied the safety of KMD or the public would be seriously at risk — and non-cooperation did not preclude that evaluation. The Court also held that where the NTCCA substitutes a supervision order under s 43ZB(3), it must comply with ss 43ZH(2), 43ZM and 43ZN, and act on the <b>most recent and accurate information reasonably available</b> — here, the 12 months KMD had spent in the community, which the NTCCA ignored. The correctness standard is the correct standard of appellate review for the s 43ZH(2) satisfaction question. Jagot J added that a court cannot keep a person in custody unless it can form the positive satisfaction that safety will be seriously at risk. The matter was remitted to a differently constituted NTCCA.",
+    "whatItMeans": "This is an NT mental-impairment supervision regime, so it will rarely bear directly on WA casework. The practical point worth carrying is that <b>a supervised person's refusal to cooperate with court-appointed medical or psychiatric assessors is not, by itself, a reason to keep them detained</b> — the decision-maker must still evaluate the evidence actually available. If you deal with mentally impaired accused or contribute material to supervision/review proceedings, <b>ensure the evidence you provide is current</b>: courts must decide on the most recent, accurate information, not stale assessments. Do not treat non-cooperation as filling an evidentiary gap.",
+    "verdict": "AWARENESS only — this concerns the NT supervision-order review scheme and appellate standards, not WA investigative practice.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/4.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/4",
+    "files": {
+      "llm": "data/files/hca-2025-4/hca-2025-4.md"
+    },
+    "flags": [
+      "Case decided under the NT statutory scheme (<i>Criminal Code Act 1983</i> (NT), Sch I, Pt IIA); no equivalent WA provisions identified in the judgment.",
+      "Primary judge's 2015 CSO nominal term stated as 16 years from 07/05/2013; the 'previous' CSO is referred to variously as made 03/06/2015 and (per Jagot J) by Hiley J on 10/03/2021 — the procedural history spans multiple orders, so check the exact order sequence before relying on specific dates."
+    ]
+  },
+  {
     "id": "hca-2022-30",
     "date": "2022-09-07",
     "court": "High Court of Australia",
