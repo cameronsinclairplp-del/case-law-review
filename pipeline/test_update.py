@@ -831,15 +831,18 @@ BOT_DIRTY = {"verdict": "PROBLEMS", "unconfirmed": [],
 
 
 @contextlib.contextmanager
-def _bot_sandbox(pending, metas, texts, analysis=None, audit=None):
+def _bot_sandbox(pending, metas, texts, analysis=None, audit=None, discovered=None):
     """Temp data dir; stubs for IMAP/corpus/Court/model/git/mail. Yields a dict that
-    collects what the bot did (emails, pushes, downloads)."""
+    collects what the bot did (emails, pushes, downloads). `discovered` = listing rows
+    hca.discover would return (it drops the ids the bot says it already knows)."""
     import hca
     import audit as AU
     saved = (u.DATA, u.CASES_PATH, u.STATE_PATH, u.BLOCKLIST_PATH, u.FILES_DIR, u.fetch_alert_html,
              u.fetch_submissions, u.fetch_judgment_text, hca.lookup, hca.fetch_text, u.analyse, u.get_client,
-             AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email)
-    seen = {"emails": [], "watchlist": [], "health": [], "pushed": [], "downloads": [], "analysed": []}
+             AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email,
+             hca.discover, u.MAX_NEW_PER_RUN)
+    seen = {"emails": [], "watchlist": [], "health": [], "pushed": [], "downloads": [], "analysed": [],
+            "lookups": [], "discover_known": None}
     with tempfile.TemporaryDirectory() as d:
         u.DATA = pathlib.Path(d)
         u.CASES_PATH = u.DATA / "cases.json"
@@ -851,7 +854,15 @@ def _bot_sandbox(pending, metas, texts, analysis=None, audit=None):
         u.fetch_alert_html = lambda user, pw, since: []
         u.fetch_submissions = lambda user, pw, since, processed: []
         u.fetch_judgment_text = lambda citation: None
-        hca.lookup = lambda citation, name="", **kw: metas.get(citation)
+        def lookup(citation, name="", **kw):
+            seen["lookups"].append((citation, kw.get("url", "")))
+            return metas.get(citation)
+        hca.lookup = lookup
+
+        def discover(known, **kw):
+            seen["discover_known"] = set(known)
+            return [dict(r) for r in (discovered or []) if hca.case_id(r["citation"]) not in known]
+        hca.discover = discover
 
         def fetch_text(meta):
             seen["downloads"].append(meta["citation"])
@@ -875,7 +886,8 @@ def _bot_sandbox(pending, metas, texts, analysis=None, audit=None):
         finally:
             (u.DATA, u.CASES_PATH, u.STATE_PATH, u.BLOCKLIST_PATH, u.FILES_DIR, u.fetch_alert_html,
              u.fetch_submissions, u.fetch_judgment_text, hca.lookup, hca.fetch_text, u.analyse, u.get_client,
-             AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email) = saved
+             AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email,
+             hca.discover, u.MAX_NEW_PER_RUN) = saved
 
 
 def _pending_hca(num, name, first_seen="2026-09-09T00:00:00+00:00"):
@@ -954,6 +966,78 @@ def test_bot_does_not_ask_the_court_again_for_a_case_its_page_already_held():
     with _bot_sandbox([ko], {"[2026] HCA 29": KO_META}, {"[2026] HCA 29": KO_TEXT}) as seen:
         u.main()
         assert seen["downloads"] == ["[2026] HCA 29"] and seen["analysed"] == ["hca-2026-29"]
+
+
+KO_ROW = {"citation": "[2026] HCA 29", "name": "The King v Ko", "url": "https://www.hcourt.gov.au/x/king-v-ko",
+          "date": "12/08/2026", "coram": "Gageler CJ", "caseNumber": "S172/2025"}
+FARRUGIA_ROW = {"citation": "[2026] HCA 28", "name": "Farrugia v The King", "url": "https://www.hcourt.gov.au/x/farrugia-v-king",
+                "date": "06/08/2026", "coram": "Gageler CJ", "caseNumber": "M12/2026"}
+FARRUGIA_META = dict(KO_META, name="Farrugia v The King", citation="[2026] HCA 28",
+                     url=FARRUGIA_ROW["url"], pdf="https://www.hcourt.gov.au/x/28.pdf")
+FARRUGIA_TEXT = KO_TEXT.replace("The King v Ko [2026] HCA 29", "Farrugia v The King [2026] HCA 28")
+BENDEL_ROW = {"citation": "[2026] HCA 18", "name": "Commissioner of Taxation v Bendel", "url": "https://www.hcourt.gov.au/x/bendel",
+              "date": "10/06/2026", "coram": "Gageler CJ", "caseNumber": "S9/2026"}
+
+
+def test_bot_discovers_from_the_courts_listing_and_takes_it_through_the_chain():
+    # Nothing alerted, nothing queued: the Court's listing alone puts Ko in the library.
+    # The lookup goes straight to the page discover() found (url=), no listing walk.
+    with _bot_sandbox([], {"[2026] HCA 29": KO_META}, {"[2026] HCA 29": KO_TEXT},
+                      discovered=[KO_ROW, BENDEL_ROW]) as seen:
+        u.main()
+        cases = json.loads(u.CASES_PATH.read_text(encoding="utf-8"))
+        state = json.loads(u.STATE_PATH.read_text(encoding="utf-8"))
+    assert [c["id"] for c in cases] == ["hca-2026-29"] and cases[0]["relevance"] == "AWARENESS"
+    assert seen["lookups"] == [("[2026] HCA 29", KO_ROW["url"])]
+    assert seen["downloads"] == ["[2026] HCA 29"] and seen["analysed"] == ["hca-2026-29"]
+    # a taxation appeal is screened by the scope filter before any request to the Court
+    assert not any(p["id"] == "hca-2026-18" for p in state["pending"])
+    assert seen["emails"] and seen["emails"][0][0][0]["id"] == "hca-2026-29"
+
+
+def test_bot_tells_discovery_what_it_already_has_and_keeps_court_fields_over_a_repeated_alert():
+    # queued (with what an earlier run learned from the Court) + blocklisted + in the library
+    egh = _pending_hca(33, "EGH19 v Minister for Immigration & Citizenship")
+    egh["catchwords"] = EGH_META["catchwords"]
+    egh["hcaMeta"] = {"decided": "09/09/2026", "url": "https://www.hcourt.gov.au/x/33", "pdf": "https://www.hcourt.gov.au/x/33.pdf"}
+    egh["holdReason"] = "HCA: the Court's catchwords are not criminal — area: Migration"
+    egh["heldNotified"] = True
+    with _bot_sandbox([egh], {"[2026] HCA 33": EGH_META}, {}, discovered=[]) as seen:
+        u.CASES_PATH.write_text(json.dumps([{"id": "hca-2026-29", "citation": "[2026] HCA 29", "date": "2026-08-12"}]),
+                                encoding="utf-8")
+        u.BLOCKLIST_PATH.write_text(json.dumps({"blocked": [{"id": "hca-2026-30", "citation": "[2026] HCA 30",
+                                                             "caseName": "Orica", "reason": "civil"}]}), encoding="utf-8")
+        # the same alert re-read: an item for 33 with none of the Court's fields
+        u.fetch_alert_html = lambda user, pw, since: [
+            '<a href="https://jade.io/article/1">EGH19 v Minister for Immigration & Citizenship [2026] HCA 33</a>']
+        u.main()
+        state = json.loads(u.STATE_PATH.read_text(encoding="utf-8"))
+    assert {"hca-2026-29", "hca-2026-30", "hca-2026-33"} <= seen["discover_known"]
+    assert seen["lookups"] == []                                            # held from stored catchwords, not asked again
+    rec = next(p for p in state["pending"] if p["id"] == "hca-2026-33")
+    assert rec["catchwords"].startswith("Migration") and rec["hcaMeta"]["pdf"].endswith("/33.pdf")
+    assert "area: Migration" in rec["holdReason"]
+
+
+def test_bot_spends_to_the_run_budget_and_never_defers_an_emailed_judgment():
+    sub = {"id": "hca-2020-1", "citation": "[2020] HCA 1", "courtTag": "HCA", "year": "2020", "num": "1",
+           "caseName": "Smith v The Queen", "via": "submission", "jadeUrl": "", "blurb": "", "_msgid": "<m1>",
+           "suppliedText": KO_TEXT.replace("The King v Ko [2026] HCA 29", "Smith v The Queen [2020] HCA 1")}
+    with _bot_sandbox([], {"[2026] HCA 29": KO_META, "[2026] HCA 28": FARRUGIA_META},
+                      {"[2026] HCA 29": KO_TEXT, "[2026] HCA 28": FARRUGIA_TEXT},
+                      discovered=[KO_ROW, FARRUGIA_ROW]) as seen:
+        u.MAX_NEW_PER_RUN = 1
+        u.fetch_submissions = lambda user, pw, since, processed: [dict(sub)]
+        u.main()
+        cases = json.loads(u.CASES_PATH.read_text(encoding="utf-8"))
+        state = json.loads(u.STATE_PATH.read_text(encoding="utf-8"))
+    assert sorted(c["id"] for c in cases) == ["hca-2020-1", "hca-2026-29"]   # one from the Court, the emailed one regardless
+    assert seen["downloads"] == ["[2026] HCA 29"]                            # Farrugia: no lookup, no download
+    assert seen["lookups"] == [("[2026] HCA 29", KO_ROW["url"])]
+    rec = next(p for p in state["pending"] if p["id"] == "hca-2026-28")     # waits on the queue, page url kept
+    assert rec["via"] == "court" and rec["hcaMeta"]["url"] == FARRUGIA_ROW["url"]
+    assert seen["emails"][0][1]["deferred"] == 1
+    assert rec["notified"] is True and seen["watchlist"] == []                 # not "a new decision to read"
 
 
 def test_bot_holds_a_case_the_audit_fails_and_reports_it():

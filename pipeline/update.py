@@ -868,6 +868,16 @@ def _screened_out(why):
 # point of the gate; do not "harmonise" it with in_scope().
 # ---------------------------------------------------------------------------
 AUTO_ANALYSIS_SIGNAL_COURTS = {"HCA", "HCASJ"}
+# The Court's own listing is a discovery source beside the Jade alerts (HANDOFF 7.8):
+# on 20/09/2026 two criminal HCA judgments of 05/08 had never been alerted at all.
+# DISCOVER_HCA=0 in the environment switches it off.
+DISCOVER_HCA = os.environ.get("DISCOVER_HCA", "1") != "0"
+DISCOVER_YEARS_BACK = 1               # this year and last; page 0 (100 rows) covers about that
+# The spend ceiling (Cameron, 19/09/2026: "10-20 relevant cases a day"): analyses per
+# run, three runs a day, two Opus calls each (analysis + fact-check). Whatever is over
+# the budget stays on the queue for the next run. A judgment emailed in by hand is
+# never deferred — a human chose it.
+MAX_NEW_PER_RUN = int(os.environ.get("MAX_NEW_PER_RUN", "5"))
 # The Court's own catchwords, when we have them (hca.lookup), are the best signal
 # there is — but ONLY their area headings. HCA catchwords are one sentence per area
 # of law, each a chain of " – " segments whose first segment is the Court's own
@@ -938,6 +948,36 @@ def auto_analysis_ok(item):
         return True, ""
     return False, (f"{tag}: no criminal party in the case name and no "
                    f"single-case investigation/evidence topic")
+
+
+def court_candidates(known_ids):
+    """Candidates from the Court's own listing (hca.discover): HCA judgments of the
+    last DISCOVER_YEARS_BACK + 1 years that are in neither the library, the blocklist,
+    the queue nor this run's alerts. Shaped like an alert item (`via: "court"`); the
+    listing's metadata goes into hcaMeta so the later lookup can open the judgment
+    page directly. A listing outage is logged and ignored — the alerts still run."""
+    if not DISCOVER_HCA:
+        return []
+    try:
+        rows = hca.discover(known_ids, min_year=dt.date.today().year - DISCOVER_YEARS_BACK)
+    except Exception as e:                                    # noqa: BLE001
+        log(f"hcourt listing unavailable (non-fatal): {e}")
+        return []
+    out = []
+    for r in rows:
+        y, series, n = hca._parts(r["citation"])
+        out.append({
+            "id": hca.case_id(r["citation"]), "citation": r["citation"], "courtTag": series,
+            "year": str(y), "num": str(n), "via": "court", "nameSuspect": False,   # the Court's own title
+            "caseName": r["name"], "jadeUrl": jade_summary_url(series, y, n),
+            "blurb": f"{r['name']} {r['citation']} — {r['date']} — from the Court's own listing",
+            "hcaMeta": {"decided": r.get("date", ""), "coram": r.get("coram", ""),
+                        "caseNumber": r.get("caseNumber", ""), "url": r["url"], "pdf": ""},
+        })
+    if out:
+        log(f"hcourt listing: {len(out)} judgment(s) the library does not have — "
+            + ", ".join(o["id"] for o in out))
+    return out
 
 
 def austlii_url(item):
@@ -1257,6 +1297,7 @@ def _health_text(stats):
             f"{stats['analysed']} analysed · {stats['watchlist']} to watchlist · "
             f"{stats.get('held', 0)} held from auto-analysis · {stats.get('auditHeld', 0)} held by the fact-check · "
             f"{stats.get('screened', 0)} screened out · {stats.get('blocked', 0)} blocked · "
+            f"{stats.get('deferred', 0)} over the run budget (next run) · "
             f"{stats['pending']} pending · {stats['errors']} error(s) · "
             f"{stats['gaveUp']} given up.")
     items = stats.get("screenedItems") or []
@@ -1366,11 +1407,15 @@ def main():
             prev = by_cand.get(it["id"])
             if prev is None or (prev.get("via") != "link" and it.get("via") == "link"):
                 by_cand[it["id"]] = it
+    log(f"candidates parsed: {len(by_cand)}")
+    pending_ids = {p.get("id") for p in pending if p.get("id")}
+    # The Court's own listing, beside the alerts (HANDOFF 7.8) — only ids nobody has
+    # yet: not the library, the blocklist, the queue, nor this run's alerts.
+    for it in court_candidates(existing_ids | set(blocked) | pending_ids | set(by_cand)):
+        by_cand[it["id"]] = it
     candidates = list(by_cand.values())
-    log(f"candidates parsed: {len(candidates)}")
 
     # in-scope + new (not already in the library)
-    pending_ids = {p.get("id") for p in pending if p.get("id")}
     kept, screened, blocked_hits = [], [], []
     for it in candidates:
         if it["id"] in blocked:
@@ -1407,7 +1452,10 @@ def main():
     for it in kept:
         prev = work.get(it["id"], {})
         it["firstSeen"] = prev.get("firstSeen", now_iso())
-        it["notified"] = prev.get("notified", False)   # carry forward so we email each case ONCE
+        # carry forward so we email each case ONCE. A judgment found on the Court's own
+        # listing is never "a new decision to read": it fetches itself (or is held,
+        # and a hold is emailed once in its own right) — the watchlist is for WA.
+        it["notified"] = prev.get("notified", it.get("via") == "court")
         it["heldNotified"] = prev.get("heldNotified", False)
         # provenance is monotonic: a later alert that merely CITES a case must not
         # downgrade a record that arrived as a real entry link.
@@ -1415,6 +1463,11 @@ def main():
             it["via"] = "link"
             it["caseName"] = prev.get("caseName") or it["caseName"]
             it["nameSuspect"] = bool(prev.get("nameSuspect"))
+        # what an earlier run learned from the Court (catchwords, the page and file
+        # links, the hold) survives the same alert being re-read for LOOKBACK_DAYS
+        for k in ("catchwords", "hcaMeta", "holdReason"):
+            if not it.get(k) and prev.get(k):
+                it[k] = prev[k]
         work[it["id"]] = it
     for p in work.values():
         p.setdefault("firstSeen", now_iso())
@@ -1447,6 +1500,7 @@ def main():
     audit_dir = DATA / "audits" / dt.date.today().isoformat()   # committed with data/: the report stays readable
     audited_held = []                                              # (case, report_text) for the email
     new_cases, unresolved, gave_up, errors, processed_now, held = [], [], [], [], [], []
+    analysed, deferred = 0, []                                     # the run budget (MAX_NEW_PER_RUN)
     for it in work.values():
         try:
             # Full text comes ONLY from the openly-licensed Open Australian Legal
@@ -1466,7 +1520,10 @@ def main():
                 # if still held, is NOT looked up again: 3 runs a day x ~5 requests
                 # would otherwise go to hcourt.gov.au for nothing. A gate change
                 # still applies here; a pass goes on to a fresh lookup and the download.
-                consulted = bool(it.get("catchwords") or it.get("hcaMeta"))
+                # ("consulted" = the judgment PAGE was read: catchwords, or the file link.
+                # A discovered item carries only the listing row and its page URL, and
+                # must never be held on its name before its catchwords have been read.)
+                consulted = bool(it.get("catchwords") or (it.get("hcaMeta") or {}).get("pdf"))
                 ok_auto, hold_why = auto_analysis_ok(it) if consulted else (True, "")
                 if not ok_auto:
                     it["holdReason"] = hold_why
@@ -1475,9 +1532,16 @@ def main():
                     log(f"  HELD {it['id']} ({it['citation']}): {hold_why} — on what the Court's "
                         f"page said on an earlier run; not asked again")
                     continue
+                if analysed >= MAX_NEW_PER_RUN:                 # the budget: no lookup, no download
+                    deferred.append(it)
+                    unresolved.append(it)
+                    log(f"  deferred {it['id']} ({it['citation']}): this run's budget of "
+                        f"{MAX_NEW_PER_RUN} analyses is spent — next run")
+                    continue
                 meta = None
                 try:
-                    meta = hca.lookup(it["citation"], it.get("caseName", ""))
+                    meta = hca.lookup(it["citation"], it.get("caseName", ""),
+                                      url=(it.get("hcaMeta") or {}).get("url", ""))
                 except Exception as e:                # the Court's site down: pending, retried next run
                     log(f"  hcourt lookup failed for {it['id']} (non-fatal): {e}")
                 if meta:
@@ -1521,11 +1585,18 @@ def main():
                     f"— watchlist only, not auto-analysed")
                 continue
             it.pop("holdReason", None)
+            if analysed >= MAX_NEW_PER_RUN and not it.get("suppliedText"):
+                deferred.append(it)
+                unresolved.append(it)
+                log(f"  deferred {it['id']} ({it['citation']}): this run's budget of "
+                    f"{MAX_NEW_PER_RUN} analyses is spent — next run")
+                continue
             truncated = len(text) > MAX_JUDGMENT_CHARS
             if truncated:
                 text = text[:MAX_JUDGMENT_CHARS]
             log(f"  analysing {it['id']} ({it['citation']}) — {len(text)} chars")
             analysis = analyse(client, it, text, truncated)
+            analysed += 1
             flags = [str(f) for f in (analysis.get("flags") or [])] + [f"cleaner: {w}" for w in warns]
             if flags:
                 analysis["flags"] = flags
@@ -1610,7 +1681,7 @@ def main():
         "analysed": len(new_cases), "watchlist": len(to_notify),
         "pending": len(unresolved), "errors": len(errors), "gaveUp": len(gave_up),
         "held": len(held), "blocked": len(set(blocked_hits)),
-        "auditHeld": len(audited_held),
+        "auditHeld": len(audited_held), "deferred": len(deferred),
         "screened": len(screened), "screenedItems": screened,
     }
 
@@ -1630,8 +1701,8 @@ def main():
 
     log(f"RUN SUMMARY: alerts={len(bodies)} candidates={len(candidates)} new={len(new_cases)} "
         f"notified={len(to_notify)} held={len(held)} screened={len(screened)} "
-        f"blocked={len(set(blocked_hits))} pending={len(unresolved)} gave_up={len(gave_up)} "
-        f"ingested={len(processed_now)} errors={len(errors)} pushed={pushed}")
+        f"blocked={len(set(blocked_hits))} deferred={len(deferred)} pending={len(unresolved)} "
+        f"gave_up={len(gave_up)} ingested={len(processed_now)} errors={len(errors)} pushed={pushed}")
 
 
 def _pending_record(it):

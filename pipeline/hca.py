@@ -13,11 +13,18 @@ CAPTCHA. The Court is the one publisher that has said yes in writing.
 
 What it does, for one medium-neutral citation ("[2026] HCA 29"):
 
+  discover(known_ids)      page 0 of the listing (the newest 100 judgments): every
+                           HCA judgment of the last two years whose id is not in
+                           known_ids (library + blocklist + queue). Rows only — no
+                           judgment page is read here. Since 20/09/2026 the daily bot
+                           calls this beside the Jade alerts, which missed Potter
+                           [2026] HCA 25 and HCZ [2026] HCA 24 altogether.
   lookup(citation, name)   the Court's judgment listing, newest first, 100 rows a
                            page, until the citation is found (or the listing's own
                            keyword search for the party name) -> the judgment page:
                            name, judgment date, case number, coram, catchwords, the
-                           PDF and DOCX links. No file is downloaded.
+                           PDF and DOCX links. No file is downloaded. With url= (a
+                           judgment page discover() found) the listing walk is skipped.
   fetch_text(meta)         downloads the PDF into a temp folder under a name that
                            carries the case name and citation, and runs it through
                            the SAME gate every other route uses (clean_word via
@@ -195,6 +202,39 @@ def _parts(cite):
     return int(y), series, int(n)
 
 
+def case_id(cite):
+    """'[2026] HCA 25' -> 'hca-2026-25' — the pipeline's own id shape."""
+    y, series, n = _parts(cite)
+    return f"{series.lower()}-{y}-{n}"
+
+
+def discover(known_ids, get=None, min_year=None, pages=1, series="HCA"):
+    """Rows from the newest listing page(s) for judgments the library does not have:
+    [{citation, name, url, date, coram, caseNumber}], newest first. Only the HCA
+    series (HCASJ single-justice matters stay with the alerts, which carry the
+    vexatious-leave rule) and only years >= min_year (default: last year). One
+    request per page; nothing else is fetched."""
+    get = get or _get
+    if min_year is None:
+        min_year = dt.date.today().year - 1
+    known = set(known_ids or ())
+    out = []
+    for page in range(pages):
+        rows = parse_listing(get(listing_url(page)).decode("utf-8", "replace"))
+        if not rows:
+            break
+        for r in rows:
+            y, s, n = _parts(r["citation"])
+            if s != series or y < min_year:
+                continue
+            cid = case_id(r["citation"])
+            if cid in known:
+                continue
+            known.add(cid)
+            out.append(dict(r))
+    return out
+
+
 def _past(rows, cite):
     """The listing is newest-first, so once a page shows an OLDER judgment of the
     same series (an earlier year, or the same year with a lower number) the one we
@@ -207,13 +247,17 @@ def _past(rows, cite):
     return False
 
 
-def lookup(citation, name="", max_pages=MAX_PAGES, get=None):
+def lookup(citation, name="", max_pages=MAX_PAGES, get=None, url=""):
     """The judgment page's metadata for a citation, or None when the Court does not
-    list it. Walks the newest pages first, then the listing's keyword search."""
+    list it. Walks the newest pages first, then the listing's keyword search. With
+    `url` (the judgment page discover() found) it reads that page directly."""
     get = get or _get
     cite = norm_citation(citation)
     if not cite:
         return None
+    if url:
+        meta = parse_judgment_page(get(url).decode("utf-8", "replace"), url)
+        return meta if meta["citation"] == cite else None     # the page must say what we were told
     entry = None
     for page in range(max_pages):
         rows = parse_listing(get(listing_url(page)).decode("utf-8", "replace"))

@@ -125,6 +125,31 @@ def test_lookup_falls_back_to_the_keyword_search_with_a_distinctive_party():
     assert hca._first_party("Dale Haines by his litigation guardian Barbara Ramjan v Attorney General (NSW)") == "Haines"
 
 
+def test_discover_lists_new_hca_judgments_newest_first_and_skips_known_hcasj_and_old():
+    rows = listing([
+        dict(slug="dale-haines-v-attorney-general-nsw", name="Dale Haines by his litigation guardian Barbara Ramjan v Attorney General (NSW)",
+             cite="[2026] HCA 34", coram="Edelman J", date="09 Sep 2026", num="S57/2026"),
+        dict(slug="x-v-y-hcasj", name="X v Y", cite="[2026] HCASJ 40", coram="Gordon J", date="01 Sep 2026", num="M1/2026"),
+        dict(slug="king-v-ko", name="The King v Ko", cite="[2026] HCA 29", coram="Gageler CJ", date="12 Aug 2026", num="S172/2025"),
+        dict(slug="old-v-older", name="Old v Older", cite="[2024] HCA 3", coram="Gageler CJ", date="01 Feb 2024", num="S1/2024"),
+    ])
+    get = fake_get({"page0": rows})
+    found = hca.discover({"hca-2026-29"}, get=get, min_year=2025)
+    assert [r["citation"] for r in found] == ["[2026] HCA 34"]           # 29 known, HCASJ and 2024 skipped
+    assert found[0]["url"].endswith("/dale-haines-v-attorney-general-nsw") and found[0]["date"] == "09/09/2026"
+    assert len(get.calls) == 1 and "keywords" not in get.calls[0]          # one listing request, nothing else
+    assert hca.discover({"hca-2026-29", "hca-2026-34"}, get=fake_get({"page0": rows}), min_year=2025) == []
+    assert hca.case_id("[2026] HCA 25") == "hca-2026-25" and hca.case_id("[2025] HCASJ 7") == "hcasj-2025-7"
+
+
+def test_lookup_with_a_known_page_url_reads_that_page_and_skips_the_listing():
+    get = fake_get({"king-v-ko": KO_PAGE})                                  # no listing page on offer at all
+    m = hca.lookup("[2026] HCA 29", url=hca.BASE + "/x/king-v-ko", get=get)
+    assert m and m["citation"] == "[2026] HCA 29" and m["pdf"].endswith("HCA%2029.pdf")
+    assert get.calls == [hca.BASE + "/x/king-v-ko"]
+    assert hca.lookup("[2026] HCA 30", url=hca.BASE + "/x/king-v-ko", get=get) is None   # the page says 29
+
+
 def test_lookup_refuses_a_page_whose_citation_differs_from_the_listing():
     get = fake_get({"king-v-ko": KO_PAGE.replace("[2026] HCA 29", "[2026] HCA 30"), "page0": PAGE0})
     assert hca.lookup("[2026] HCA 29", get=get) is None
