@@ -877,15 +877,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326035+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Practice and Procedure — 'Practice and Procedure – Jurisdiction – Jurisdiction of the Full Court of the Supreme Court of the Northern Territory on referral under ss 1'",
+      "heldNotified": true,
+      "catchwords": "Practice and Procedure – Jurisdiction – Jurisdiction of the Full Court of the Supreme Court of the Northern Territory on referral under ss 15 and 21 of Supreme Court Act 1979 (NT) – Where application for declaration referred for determination by the Full Court – Where the Full Court declined to accept the referral – Where parties subsequently made no submissions to the Full Court regarding application for declaration – Where the Full Court subsequently purported to order that application for declaration be dismissed – Whether the Full Court had jurisdiction to order dismissal of application – Whether regard may be had to extrinsic material in interpreting the Court's order. Words and phrases – \"decline to accept referral\", \"determination\", \"extrinsic material\", \"jurisdiction\", \"order\", \"public housing\", \"referral\", \"remote communities\", \"rent\", \"special leave to appeal\", \"tenant\". Housing Act 1982 (NT) , s 23. Housing Regulations 1983 (NT) . Residential Tenancies Act 1999 (NT) , s 41. Residential Tenancies Regulations 2000 (NT) , Sch 2 cl 2. Supreme Court Act 1979 (NT) , ss 15, 18, 21.",
       "hcaMeta": {
         "decided": "03/12/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson JJ",
         "caseNumber": "D1/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/badari-v-minister-housing-and-homelands",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-12-03/HCA/Badari%20v%20Minister%20for%20Housing%20and%20Homelands%20%28D1-2025%29%20%5B2025%5D%20HCA%2048.pdf"
       }
     },
     {
@@ -901,39 +901,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326038+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Statutes — 'Statutes – Construction – Housing Act 1982 (NT), s 23 – Power of Minister to make determinations regarding rent to be paid for dwelling or c'",
+      "heldNotified": true,
+      "catchwords": "Statutes – Construction – Housing Act 1982 (NT), s 23 – Power of Minister to make determinations regarding rent to be paid for dwelling or class of dwelling – Where rent determined by Minister is to be paid despite anything to the contrary in existing tenancy agreement – Where Minister made determinations without giving notice to any tenant or inviting any tenant to make submissions on the proposed change in rent – Whether Minister owed duty to afford procedural fairness – Whether content of duty to afford procedural fairness included obligation to give hearing – Whether failure to afford procedural fairness was material – Whether determinations were legally unreasonable. Words and phrases – \"content\", \"determination\", \"duty of procedural fairness\", \"eligible person\", \"fair rent\", \"general policy\", \"individual rights and interests\", \"judicial review\", \"landlord\", \"lease\", \"legal unreasonableness\", \"let a dwelling\", \"materiality\", \"natural justice\", \"not adequately housed\", \"prior notice\", \"procedural fairness\", \"public housing\", \"rebate\", \"remote communities\", \"rent\", \"residential accommodation\", \"safety net\", \"statutory power\", \"submissions\", \"tenancy agreement\", \"tenant\". Housing Act 1982 (NT) , ss 6, 14, 15, 16, 17, 23, 34, 37. Housing Regulations 1983 (NT) , regs 3, 4, 5. Residential Tenancies Act 1999 (NT) , ss 3, 41, 42, 46.",
       "hcaMeta": {
         "decided": "03/12/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson JJ",
         "caseNumber": "D7/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/badari-v-minister-territory-families-and-urban-housing",
-        "pdf": ""
-      }
-    },
-    {
-      "id": "hca-2025-46",
-      "citation": "[2025] HCA 46",
-      "courtTag": "HCA",
-      "year": "2025",
-      "num": "46",
-      "caseName": "Farshchi v The King",
-      "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/46",
-      "blurb": "Farshchi v The King [2025] HCA 46 — 03/12/2025 — from the Court's own listing",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T07:20:17.326040+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {
-        "decided": "03/12/2025",
-        "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "M20/2025",
-        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/farshchi-v-king",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-12-03/HCA/Badari%20v%20Minister%20for%20Territory%20Families%20and%20Urban%20Housing%20%28D7-2025%29%20%5B2025%5D%20HCA%2047.pdf"
       }
     },
     {
@@ -949,15 +925,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326042+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: High Court — 'High Court – Original jurisdiction – Application for constitutional or other writ – Application for stay – Where orders made by Federal Circ'",
+      "heldNotified": true,
+      "catchwords": "High Court – Original jurisdiction – Application for constitutional or other writ – Application for stay – Where orders made by Federal Circuit and Family Court of Australia (Division 1) (\"Division 1 Court\") – Where plaintiffs sought writs of certiorari quashing orders of Division 1 Court – Where plaintiffs sought writs of prohibition, mandamus and declarations – Whether extension of time should be granted to seek constitutional or other writ – Whether application for stay should be granted. Words and phrases – \"certiorari\", \"constitutional or other writ\", \"declarations\", \"exceptional cases\", \"extension of time\", \"interests of justice\", \"joinder orders\", \"mandamus\", \"orders by consent\", \"prohibition\", \"property settlement\", \"stay\". Constitution , s 51(xxii). Family Law Act 1975 (Cth) , ss 4, 39, 78, 79, 90AF, 114. Federal Circuit and Family Court of Australia Act 2021 (Cth) , s 26. Judiciary Act 1903 (Cth) , s 44.",
       "hcaMeta": {
         "decided": "03/12/2025",
         "coram": "Gageler CJ, Steward, Jagot JJ",
         "caseNumber": "M58/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/genesalio-v-justice-johns-and-other-judges-federal-circuit-and-family-court-australia-division-1",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-12-03/HCA/Genesalio%20v%20Justice%20Johns%20and%20other%20Judges%20of%20the%20Federal%20Circuit%20and%20Family%20Court%20of%20Australia%20%28Division%201%29%20%28M58-2025%29%20%5B2025%5D%20HCA%2045.pdf"
       }
     },
     {
@@ -973,15 +949,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326044+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Legislative power – Acquisition of property on just terms – Where Government of Russian Federation granted lease '",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Legislative power – Acquisition of property on just terms – Where Government of Russian Federation granted lease in 2008 by Commonwealth of Australia for land in Australian Capital Territory – Where land to be used for diplomatic, consular or official purposes by Russian Federation – Where land was 300 metres from Parliament House – Where lease terminated by operation of Home Affairs Act 2023 (Cth) – Whether Home Affairs Act supported by s 122 of the Constitution – Whether termination of lease constituted acquisition of property within meaning and scope of s 51(xxxi) of Constitution – Whether s 51(xxxi) of Constitution limited to empowering acquisition of property for purpose related to need for or proposed use or application of property to be acquired – Whether provision of just terms for termination of lease incongruous notion. Words and phrases – \"abstract\", \"acquisition\", \"acquisition of property\", \"acquisition power\", \"carved out\", \"compensation\", \"discretion as to costs\", \"fair dealing\", \"for the government of any territory\", \"foreign state\", \"head of power\", \"incidental power\", \"incongruous\", \"just terms\", \"land\", \"lease\", \"national security\", \"nexus\", \"Parliament House\", \"peace, order and good government\", \"power to make laws\", \"property\", \"proposed use\", \"protect\", \"purpose\", \"qualifies\", \"reversionary interest\", \"risk\", \"scope\", \"source of legislative power\", \"Takings Clause\", \"territories power\". Constitution , ss 51(xxxi), 96, 111, 122. Home Affairs Act 2023 (Cth) , ss 4, 5, 6, 7.",
       "hcaMeta": {
         "decided": "12/11/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "C9/2023",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/government-russian-federation-v-commonwealth-australia-0",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-11-12/HCA/Government%20of%20the%20Russian%20Federation%20v%20Commonwealth%20of%20Australia%20%28C9-2023%29%20%5B2025%5D%20HCA%2044.pdf"
       }
     },
     {
@@ -997,15 +973,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326046+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Contract — 'Contract – Breach – Loan note – Where term of contract between borrower and two lenders required repayment of loan into account nominated by'",
+      "heldNotified": true,
+      "catchwords": "Contract – Breach – Loan note – Where term of contract between borrower and two lenders required repayment of loan into account nominated by both lenders – Where borrower repaid money into account of one lender without obtaining nomination from both lenders – Whether term requiring nomination of account by both lenders operated only as a condition precedent to discharge of debt – Whether other lender waived breach of contract term by prosecuting earlier proceedings against recipient lender – Whether abuse of process for lender subsequently to proceed against borrower and guarantor for breach of contract. Words and phrases – \"abuse of process\", \"account nominated\", \"affirmation\", \"borrower\", \"breach of contract\", \"breach of duty\", \"condition precedent\", \"consequential loss\", \"creditor\", \"debtor\", \"defective performance\", \"direction\", \"discharge of a debt\", \"double operation\", \"guarantor\", \"joint account\", \"jointly and severally\", \"lender\", \"liability for breach\", \"loan contract\", \"loan note\", \"mitigation of loss\", \"negative duty\", \"note certificate\", \"obligation as to the manner of discharging the debt\", \"obligation to repay the debt\", \"ratification\", \"redemption notice\", \"remedies which were cumulative\", \"separate obligations\", \"waiver\".",
       "hcaMeta": {
         "decided": "05/11/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson JJ",
         "caseNumber": "S46/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/shao-v-crown-global-capital-pty-ltd-prov-liq",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-11-06/HCA/Shao%20v%20Crown%20Global%20Capital%20Pty%20Ltd%20%28in%20prov%20liq%29%20%28S46-2025%29%20%5B2025%5D%20HCA%2043.pdf"
       }
     },
     {
@@ -1021,15 +997,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326048+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Restitution — 'Restitution – Unjust enrichment – Failure of basis or condition – Interest – Where client engaged law firm under retainer agreements – Where'",
+      "heldNotified": true,
+      "catchwords": "Restitution – Unjust enrichment – Failure of basis or condition – Interest – Where client engaged law firm under retainer agreements – Where retainer agreements imposed binding obligations on client to pay legal costs – Where law firm had no right to retain payment under Legal Practice Act 2003 (WA) if, and to extent that, payment was found on taxation to exceed amount authorised by certificate from taxing officer – Where, prior to taxation, client and law firm reached settlement – Where settlement deed required repayment of sum as \"amount that would have been ordered to be refunded\" if there had been taxation – Where settlement deed left open option of litigating further claim for interest on settlement sum – Whether interest available on settlement sum – Whether there had been failure of basis or condition for client's payments of invoices issued under retainer agreements – Whether Legal Practice Act formed comprehensive regime for recovery of principal sum paid for legal costs over amount certified by taxing officer, and interest on that sum, to the exclusion of any common law restitutionary claim. Words and phrases – \"basis or condition\", \"bill of costs\", \"compound interest\", \"condition subsequent\", \"conditional obligation\", \"deemed taxation\", \"failure of basis or condition\", \"fair and reasonable\", \"interest\", \"legal costs\", \"no juristic reason\", \"no justification\", \"principal\", \"restitution\", \"retainer agreement\", \"simple interest\", \"statutory interest\", \"taxation certificate\", \"unjust enrichment\". Legal Practice Act 2003 (WA) , ss 221, 222, 229(a), 231, 232, 235, 240, 242, 243. Legal Profession Act 2008 (WA) , ss 2(b), 598, 616(1). Legal Profession Uniform Law Application Act 2022 (WA) , s 260. Supreme Court Act 1935 (WA) , s 32.",
       "hcaMeta": {
         "decided": "05/11/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Jagot, Beech-Jones JJ",
         "caseNumber": "P7/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/gray-v-lavan-firm",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-11-05/HCA/Gray%20v%20Lavan%20%28A%20Firm%29%20%28P7-2025%29%20%5B2025%5D%20HCA%2042.pdf"
       }
     },
     {
@@ -1045,15 +1021,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326050+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Negligence — 'Negligence – Proof of loss and damage – Negligence by solicitor – Financial agreement under Family Law Act 1975 (Cth) Pt VIIIA entered befor'",
+      "heldNotified": true,
+      "catchwords": "Negligence – Proof of loss and damage – Negligence by solicitor – Financial agreement under Family Law Act 1975 (Cth) Pt VIIIA entered before marriage – Financial agreement provided how property and financial resources dealt with on breakdown of marriage – Where financial agreement prepared by solicitor void for uncertainty – Where financial agreement prepared by solicitor set aside on hardship grounds – Where solicitor breached duty of care to take reasonable care in giving advice – Whether client failed to adduce evidence establishing loss – Whether negligence claim statute barred – When loss first suffered. Words and phrases – \"binding financial agreement\", \"cause of action accrued\", \"character of the alleged loss\", \"compensable loss\", \"compensatory damages\", \"consequential losses\", \"damages\", \"date of separation\", \"did not get what he should have got\", \"failed to prove any further loss or damage\", \"financial agreement before marriage\", \"financial agreement prepared with reasonable care and skill\", \"in the event of the breakdown of the marriage\", \"lack of any evidence\", \"loss of chance\", \"loss or damage in tort\", \"lost opportunity\", \"no force or effect until a separation declaration is made\", \"properly characterising the claimed loss\", \"provision for the birth of a child or children\", \"provision of advice\", \"recovery of damages for the legal costs\", \"set aside for uncertainty\", \"spouse parties\", \"statute barred\", \"substantial prospect of a beneficial outcome\", \"terms or scope of a financial agreement drafted with reasonable care and skill\", \"unless and until the marriage breaks down\", \"void, voidable or unenforceable\", \"wasted legal fees\", \"would not have entered into the marriage\". Limitation of Actions Act 1936 (SA) , s 35(c). Family Law Act 1975 (Cth) , ss 71A, 79, 90B, 90C, 90D, 90DA, 90DB, 90G, 90K, 90KA.",
       "hcaMeta": {
         "decided": "05/11/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Jagot, Beech-Jones JJ",
         "caseNumber": "A8/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/r-lawyers-v-mr-daily",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-11-05/HCA/R%20Lawyers%20v%20Mr%20Daily%20%28A8-2025%29%20%5B2025%5D%20HCA%2041.pdf"
       }
     },
     {
@@ -1069,15 +1045,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326052+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Immigration — 'Immigration – Visas – Where plaintiff applied for protection (subclass 866) visa – Where document in application for visa included English t'",
+      "heldNotified": true,
+      "catchwords": "Immigration – Visas – Where plaintiff applied for protection (subclass 866) visa – Where document in application for visa included English text and images with Mandarin characters – Where Minister's delegate requested further information under s 56 of Migration Act 1958 (Cth) – Where plaintiff did not provide translation of document relied on – Where delegate refused application for protection visa – Where delegate stated documents not translated not included as part of assessment – Whether delegate failed to comply with ss 54 and 56 of Migration Act – Whether delegate's decision legally unreasonable – Whether necessary in interests of administration of justice to grant extension of time to make application for constitutional or other writ. Words and phrases – \"certiorari\", \"constitutional or other writ\", \"extension of time\", \"have regard to all of the information\", \"invitation for additional information\", \"jurisdictional error\", \"mandamus\", \"materiality\", \"must have regard to that information\", \"necessary in the interests of the administration of justice\", \"protection obligations\", \"protection visa\", \"realistic possibility\", \"specify all particulars of his or her claim\", \"unreasonableness\". Migration Act 1958 (Cth) , ss 5AAA, 54, 56, 58, 62, 65, 476, 476A, 476B, 486A. High Court Rules 2004 (Cth) , rr 4.02, 25.02.1, 25.02.2, 25.09.3.",
       "hcaMeta": {
         "decided": "15/10/2025",
         "coram": "Gageler CJ, Gordon, Beech-Jones JJ",
         "caseNumber": "M27/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/plaintiff-m272025-v-minister-immigration-and-multicultural-affairs",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-10-15/HCA/Plaintiff%20M27-2025%20v%20Minister%20for%20Immigration%20and%20Multicultural%20Affairs%20%28M27-2025%29%20%5B2025%5D%20HCA%2040.pdf"
       }
     },
     {
@@ -1093,15 +1069,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326054+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Legislative power – Inconsistency between Commonwealth and State laws – External affairs – Acquisition of propert'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Legislative power – Inconsistency between Commonwealth and State laws – External affairs – Acquisition of property on just terms – Where rate of land tax imposed by State law on non-residents and foreign-owned or controlled entities higher than rate of land tax imposed on other residents and entities – Where Commonwealth law gave force of law to international agreements prohibiting discriminatory land tax on non‑residents and foreign-owned or controlled entities – Where Commonwealth Parliament subsequently passed law excluding State taxes from scope of prohibition in Commonwealth law on imposition of discriminatory land tax on non‑residents and foreign-owned or controlled entities – Whether State law inconsistent with Commonwealth law for purposes of s 109 of Constitution – Whether subsequent Commonwealth law supported by external affairs power – Whether subsequent Commonwealth law had retroactive or retrospective effect – Whether subsequent Commonwealth law effective in removing retroactively inconsistency between Commonwealth law and State law –Whether University of Wollongong v Metwally (1984) 158 CLR 447 should be reopened and overruled – Whether Commonwealth law reviving operation of State law imposing \"genuine taxation\" characterised as a law with respect to acquisition of property. Words and phrases – \"acquisition of property\", \"agreement between Australia and Germany\", \"agreement between Australia and New Zealand\", \"alter, impair or detract\", \"assessments of land tax\", \"bilateral agreements and treaties between Australia and other countries concerning taxation\", \"character of a law\", \"choses in action\", \"Commonwealth law\", \"Commonwealth Parliament\", \"declaratory relief\", \"differences in the reasoning of the members of this Court\", \"direct collision between an obligation imposed by a Commonwealth law and an obligation imposed by a State law\", \"direct inconsistency\", \"discriminatory land taxes\", \"external affairs power\", \"factors identified in John v Federal Commissioner of Taxation (1989) 166 CLR 417\", \"force of law\", \"foreign company\", \"genuine taxation\", \"indirect inconsistency\", \"inoperative\", \"just terms\", \"leave to reopen\", \"legislative power\", \"manifestly wrong\", \"obligation to pay additional land tax\", \"paramountcy of Commonwealth laws over State laws\", \"partial implementation\", \"principles carefully worked out in a succession of cases\", \"property\", \"purported land tax\", \"reopened and overruled\", \"representative proceedings\", \"restitution\", \"retroactive operation\", \"retrospective operation\", \"revival of inoperative taxes\", \"rights of recovery\", \"special case\", \"State law\", \"statements of legislative intention\", \"surcharge rate\", \"taxes imposed by State legislation\", \"temporal application\", \"validity of a law cannot be decided by agreement of the parties\". Constitution , ss 51(ii), 51(xxix), 51(xxxi), 109. High Court Rules 2004 (Cth) , r 27.08.1. International Tax Agreements Act 1953 (Cth) , ss 3(1), 3AAA, 5(1), 5(3), 6B. Judiciary Act 1903 (Cth) , s 40(1). Land Tax Act 2005 (Vic) , ss 3(1), 7, 8, 10, 35, 36, 104B, 106A, Sch 1, cll 4.1‑4.5. Land Tax Act 2010 (Qld) , ss 7, 8, 18B, 18C, 18D, 32, 104, 105, Sch 2, Pts 1, 2. State Taxation Further Amendment Act 2024 (Vic) , ss 42, 54. Taxation Administration Act 1997 (Vic) , ss 8, 135A. Taxation Administration Act 2001 (Qld) , ss 63, 69, 70, 189. Treasury Laws Amendment (Foreign Investment) Act 2024 (Cth) , Sch 1, cll 1, 2.",
       "hcaMeta": {
         "decided": "15/10/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "B48/2024, B49/2024, B50/2024, M60/2024",
+        "caseNumber": "B48/2024 B49/2024 B50/2024 M60/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/g-global-120e-t2-pty-ltd-v-commissioner-state-revenue",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-10-15/HCA/G%20Global%20120E%20T2%20Pty%20Ltd%20v%20Commissioner%20of%20State%20Revenue%20%28B48%2C%20B49%20%26%20B50-2024%3B%20M60-2024%29%20%5B2025%5D%20HCA%2039.pdf"
       }
     },
     {
@@ -1117,15 +1093,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326056+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Implied freedom of communication about government or political matters – Where s 501(6)(d)(iv) of the Migration A'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Implied freedom of communication about government or political matters – Where s 501(6)(d)(iv) of the Migration Act 1958 (Cth) provides that person does not pass character test if risk they would, if allowed to enter Australia, \"incite discord in the Australian community or in a segment of that community\" – Where Minister for Home Affairs (\"Minister\") refused visa to controversial political commentator on basis of s 501(6)(d)(iv) – Whether there need be risk of harm to Australian community or segment of that community in order to satisfy s 501(6)(d)(iv) – Whether s 501(6)(d)(iv) invalid for infringing implied freedom of communication about government or political matters – Whether Minister misconstrued s 501(6)(d)(iv) in decision to refuse visa. Words and phrases – \"aliens power\", \"character test\", \"controversial views\", \"danger\", \"definitional\", \"discord\", \"dissension or strife\", \"effectively burdens\", \"extremist views\", \"free flow of political communication\", \"harm\", \"implicature\", \"implied freedom of political communication\", \"in the Australian community or a segment of that community\", \"incite discord\", \"national interest\", \"no liberty to enter\", \"non-citizens\", \"personal right\", \"political communication\", \"practical burden\", \"right-wing extremism\", \"visa\". Constitution , ss 7, 24, 51(xix), (xxvii). Migration Act 1958 (Cth) , ss 65, 501(3), 501(6)(d)(iv), 501(6)(d)(v).",
       "hcaMeta": {
         "decided": "15/10/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "S160/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/farmer-v-minister-home-affairs",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-10-15/HCA/Farmer%20v%20Minister%20for%20Home%20Affairs%20%28S160-2024%29%20%5B2025%5D%20HCA%2038.pdf"
       }
     },
     {
@@ -1141,15 +1117,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326057+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Judicial power of Commonwealth – Admissibility of evidence – Where information and records obtained pursuant to w'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Judicial power of Commonwealth – Admissibility of evidence – Where information and records obtained pursuant to warrants – Where Surveillance Legislation (Confirmation of Application) Act 2024 (Cth) (\"Confirmation of Application Act\") deems information and records obtained under specified warrants to have been lawfully obtained – Whether Confirmation of Application Act invalid – Whether Confirmation of Application Act impermissible exercise by Parliament of judicial power of Commonwealth – Whether Confirmation of Application Act impermissibly interferes with and undermines institutional integrity of courts vested with federal jurisdiction. Words and phrases – \"admissible\", \"communication\", \"criminal proceedings\", \"evidence\", \"exercise of judicial power\", \"illegally obtained\", \"inadmissible\", \"intercepting a communication\", \"interfere with the integrity of courts\", \"judicial power\", \"legislative power\", \"statutory concept\", \"telecommunications system\", \"undue impairment of judicial power\", \"unlawfully intercepted\", \"usurpation of judicial power\", \"warrant\". Constitution , Ch III. Surveillance Legislation (Confirmation of Application) Act 2024 (Cth) , ss 4, 5, 6, 7. Telecommunications (Interception and Access) Act 1979 (Cth) , ss 7, 63, 77.",
       "hcaMeta": {
         "decided": "08/10/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "A2/2025 , A24/2024",
+        "caseNumber": "A2/2025 A24/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/cd-v-commonwealth-australia",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-10-16/HCA/CD%20v%20The%20Commonwealth%20of%20Australia%20%28A2-2025%20%26%20A24-2024%29%20%5B2025%5D%20HCA%2037.pdf"
       }
     },
     {
@@ -1165,15 +1141,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326059+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Immigration — 'Immigration – Visas – Cancellation of visa – Where plaintiff held Temporary Protection (Class XD) (subclass 785) visa (\"TPV\") – Where plaint'",
+      "heldNotified": true,
+      "catchwords": "Immigration – Visas – Cancellation of visa – Where plaintiff held Temporary Protection (Class XD) (subclass 785) visa (\"TPV\") – Where plaintiff's TPV mandatorily cancelled under s 501(3A) of the Migration Act 1958 (Cth) (\"Act\") following conviction and imprisonment for offence – Where plaintiff made representations about reasons why mandatory cancellation of TPV should be revoked under s 501CA(4) of Act but Minister's delegate decided not to revoke cancellation – Where plaintiff released from immigration detention – Where plaintiff incorrectly believed cancellation of TPV revoked when plaintiff released under Bridging R (Class WR) (subclass 070) (Bridging (Removal Pending)) visa (\"BVR\") – Where BVR ceased pursuant to s 76AAA of Act when Republic of Nauru granted plaintiff permission to enter and remain – Where documents plaintiff gave Department of Home Affairs in support of representations included legal advice subject to legal professional privilege – Where delegate read and quoted from legal advice in delegate's reasons – Whether necessary in interests of administration of justice to grant extension of time under s 486A(2) of Act – Whether non-revocation decision void for jurisdictional error – Whether delegate did not properly confront legal consequences of non-revocation decision as required by Ministerial Direction 110 – Whether delegate misapplied para 8.5 of Ministerial Direction 110 – Whether use of legal advice by delegate without notice to plaintiff denied plaintiff procedural fairness or legally unreasonable. Words and phrases – \"certiorari\", \"constitutional writs\", \"expectations of the Australian community\", \"extension of time\", \"immigration detention\", \"irrational or unreasonable\", \"jurisdictional error\", \"legal advice\", \"legal consequences of decision\", \"legal professional privilege\", \"mandamus\", \"mandatory cancellation\", \"necessary in the interests of the administration of justice\", \"no real prospect of removal\", \"non-refoulement\", \"non-revocation\", \"practical injustice\", \"procedural fairness\", \"protection finding\", \"protection visa\", \"refugee\", \"relevant adverse material\". Judiciary Act 1903 (Cth) , s 44. Migration Act 1958 (Cth) , ss 36(2)(a), 76AAA, 189, 195A, 197C(5)(a), 476(2), 476A, 486A, 499(2A), 501(3A), 501CA(4). Migration Regulations 1994 (Cth) , regs 2.08F, 2.20(18), 2.25AA(2), 2.25AB, Sch 2, cll 070.612(1), 070.612A(1).",
       "hcaMeta": {
         "decided": "03/09/2025",
         "coram": "Gageler CJ, Edelman, Jagot JJ",
         "caseNumber": "S22/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/plaintiff-s222025-v-minister-immigration-and-multicultural-affairs",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-09-03/HCA/Plaintiff%20S22-2025%20v%20Minister%20for%20Immigration%20and%20Multicultural%20Affairs%20%28S22-2025%29%20%5B2025%5D%20HCA%2036.pdf"
       }
     },
     {
@@ -1189,15 +1165,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326061+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Statutes — 'Statutes – Construction – Temporal operation of statute – Where in June 2020 archaeological artefact imported into Australia – Where artefac'",
+      "heldNotified": true,
+      "catchwords": "Statutes – Construction – Temporal operation of statute – Where in June 2020 archaeological artefact imported into Australia – Where artefact seized by inspector under Protection of Movable Cultural Heritage Act 1986 (Cth) (\"Act\") upon request for return of artefact from Government of Bolivia – Where artefact unlawfully exported from Bolivia before commencement of Act – Where appellant purchaser commenced action for recovery of artefact under s 37 of Act – Where Act enacted to bring Australia into conformity with obligations of State Party to UNESCO Convention on the Means of Prohibiting and Preventing the Illicit Import, Export and Transfer of Ownership of Cultural Property (1970) prior to Australia acceding to Convention – Where s 14(1) of Act provides that \"protected object of a foreign country\" may be liable to forfeiture – Whether s 14(1) renders liable to forfeiture protected object of a foreign country unlawfully exported from that country before commencement of Act. Words and phrases – \"archaeological artefact\", \"context\", \"cultural property\", \"exportation of cultural property\", \"extrinsic material\", \"forfeiture\", \"has been exported\", \"import of cultural property\", \"modern approach to statutory interpretation\", \"movable cultural heritage\", \"obligations of a State Party\", \"ordinary language\", \"presumption against redundant words\", \"presumption against surplusage\", \"protected object of a foreign country\", \"redundant words\", \"statutory construction\", \"statutory purpose\", \"syntax\", \"temporal operation\", \"unlawful exportation\". Protection of Movable Cultural Heritage Act 1986 (Cth) , Pts II, V, ss 3, 7, 8, 9, 10, 12, 14, 27, 28, 34, 37, 38, 41. Acts Interpretation Act 1901 (Cth) , ss 15AA, 15AB. Convention on the Means of Prohibiting and Preventing the Illicit Import, Export and Transfer of Ownership of Cultural Property (1970) , Arts 1, 2, 5, 6, 7, 15.",
       "hcaMeta": {
         "decided": "03/09/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Jagot, Beech-Jones JJ",
         "caseNumber": "S147/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/palmanova-pty-ltd-v-commonwealth-australia",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-09-03/HCA/Palmanova%20Pty%20Ltd%20v%20Commonwealth%20of%20Australia%20%28S147-2024%29%20%5B2025%5D%20HCA%2035.pdf"
       }
     },
     {
@@ -1213,15 +1189,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326063+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Damages — 'Damages – Assessment – Tort – Personal injury – Where appellant suffered personal injuries arising from his treatment as patient at hospital'",
+      "heldNotified": true,
+      "catchwords": "Damages – Assessment – Tort – Personal injury – Where appellant suffered personal injuries arising from his treatment as patient at hospital operated by respondent – Where prior to injury appellant lived in his own home with his brother where his son and dogs could stay – Where after injury appellant transferred to nursing home – Where appellant's physical condition deteriorated because of lack of therapy and exercise – Whether reasonable for damages awarded to appellant to include component for medical and nursing care and treatment in own home – Whether assessment of reasonableness confined to balancing only health benefits against cost. Words and phrases – \"assessment of damages\", \"assessment of reasonableness\", \"care at home\", \"compensation\", \"compensatory principle\", \"cost of home care\", \"cost of nursing and medical care\", \"costs of future care\", \"extreme brain injury\", \"general damages\", \"health benefits\", \"home care\", \"home or in a home setting\", \"injury scale\", \"institution or in an institutional setting\", \"institutional care\", \"matters of amenities\", \"mitigation of loss\", \"nursing and medical expenses\", \"onus\", \"other matters\", \"pain, suffering and loss of amenities of life\", \"proof of loss\", \"quantum\", \"reasonable\", \"reasonableness\", \"reasonably incurred\", \"repair the consequences of the tort\", \"unreasonably refused\". Civil Liability Act 2003 (Qld) , ss 61, 62. Civil Liability Regulation 2014 (Qld) , Sch 3, Pt 2, Sch 4.",
       "hcaMeta": {
         "decided": "03/09/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Jagot, Beech-Jones JJ",
         "caseNumber": "B10/2025",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/stewart-v-metro-north-hospital-and-health-service",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-09-03/HCA/Stewart%20v%20Metro%20North%20Hospital%20and%20Health%20Service%20%28B10-2025%29%20%5B2025%5D%20HCA%2034.pdf"
       }
     },
     {
@@ -1237,15 +1213,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326064+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Immigration — 'Immigration – Visas – Ministerial directions under s 499(1) of Migration Act 1958 (Cth) – Where delegate of Minister refused to grant appell'",
+      "heldNotified": true,
+      "catchwords": "Immigration – Visas – Ministerial directions under s 499(1) of Migration Act 1958 (Cth) – Where delegate of Minister refused to grant appellant partner visa on character grounds – Where ministerial direction in force at time of refusal was Direction 65 – Where Direction 65 subsequently revoked – Where appellant applied to then Administrative Appeals Tribunal (\"Tribunal\") for review of delegate's decision – Where Direction 90 in force at time of Tribunal's decision – Where Tribunal applied Direction 90 and not Direction 65 – Whether Tribunal was required to comply with direction in force at time of its decision – Whether appellant had accrued right to have Tribunal determine his review in accordance with direction in force at time of delegate's decision. Words and phrases – \"accrued right\", \"affected Act\", \"character grounds\", \"family violence\", \"laws governing the exercise of powers and discretions\", \"legislative instrument\", \"merits review\", \"ministerial direction\", \"repeal or amendment\", \"time of the decision under review\", \"time of the exercise of the relevant function or power\". Acts Interpretation Act 1901 (Cth) , ss 7(2), 46(1)(a). Administrative Appeals Tribunal Act 1975 (Cth) , ss 25, 43(1). Legislation Act 2003 (Cth) , s 13(1)(a). Migration Act 1958 (Cth) , ss 496, 499, 500(1), 501(1).",
       "hcaMeta": {
         "decided": "03/09/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "M112/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/khalil-v-minister-immigration-citizenship-migrant-services-and-multicultural-affairs",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-09-03/HCA/Khalil%20v%20Minister%20for%20Immigration%2C%20Citizenship%2C%20Migrant%20Services%20and%20Multicultural%20Affairs%20%28M112-2024%29%20%5B2025%5D%20HCA%2033.pdf"
       }
     },
     {
@@ -1261,15 +1237,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326067+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Aboriginal and Torres Strait Islander peoples — 'Aboriginal and Torres Strait Islander peoples – Land rights – Claimable Crown lands – Where land claimed under s 36(2) of Aboriginal Land Ri'",
+      "heldNotified": true,
+      "catchwords": "Aboriginal and Torres Strait Islander peoples – Land rights – Claimable Crown lands – Where land claimed under s 36(2) of Aboriginal Land Rights Act 1983 (NSW) (\"Act\") subject to lease granted by Crown – Where lessee had not undertaken purposeful activity on land – Where \"claimable Crown lands\" in s 36(1) of Act means lands vested in Crown that are \"not lawfully used\" – Whether land \"lawfully used\" for purpose of s 36(1)(b) of Act merely because land subject to existing lease from Crown. Words and phrases – \"actual use\", \"claimable Crown lands\", \"constructive use\", \"Crown lands\", \"doctrine of concurrent leases\", \"estate or interest in land\", \"exploitation of rights to land\", \"land\", \"land claim\", \"land vested\", \"lands\", \"lands vested\", \"lawfully used or occupied\", \"lease\", \"occupation\", \"occupied\", \"physical area\", \"possession\", \"purposeful interaction\", \"remedial or beneficial legislation\", \"reversionary interest\", \"rights to land\", \"rights to the physical area\", \"used\", \"vested\". Aboriginal Land Rights Act 1983 (NSW) , Pt 2, ss 4(1), 36, Sch 4, cl 8. Conveyancing Act 1919 (NSW) , ss 7(1), 117, 118, 119. Crown Land Management Act 2016 (NSW) , ss 1.5(1), 1.7(a), 1.10, 1.12, 3.3, 3.13(1). Crown Lands Act 1989 (NSW) , ss 3(1), 80(1), 87(1), Sch 7. Crown Lands Consolidation Act 1913 (NSW) , s 5(1). Interpretation Act 1987 (NSW) , ss 3(3), 5, 6, 8(c), 13, 68(3), Sch 4. Native Title Act 1993 (Cth) , ss 10, 184, 186(1)(e), 223(1), 225, 253. Real Property Act 1900 (NSW) , ss 3(1)(a), 13(2), 13D, 13J, 40(3), 42(1), 46C.",
       "hcaMeta": {
         "decided": "03/09/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Jagot JJ",
         "caseNumber": "S121/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/la-perouse-local-aboriginal-land-council-v-quarry-street-pty-ltd",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-09-03/HCA/La%20Perouse%20Local%20Aboriginal%20Land%20Council%20v%20Quarry%20Street%20Pty%20Ltd%20%28S121-2024%29%20%5B2025%5D%20HCA%2032.pdf"
       }
     },
     {
@@ -1285,15 +1261,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326068+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Parliamentary elections (Cth) — 'Parliamentary elections (Cth) – Communication of electoral matter – Where s 321D(5) of Commonwealth Electoral Act 1918 (Cth) requires \"notif'",
+      "heldNotified": true,
+      "catchwords": "Parliamentary elections (Cth) – Communication of electoral matter – Where s 321D(5) of Commonwealth Electoral Act 1918 (Cth) requires \"notifying entity\" to ensure certain \"particulars\" notified – Where s 321D applies in relation to electoral matter that is \"communicated to a person\" – Where \"electoral matter\" posted on Facebook page on three occasions – Where failure on each occasion to ensure required \"particulars\" included in post – Where each post seen by several people who viewed Facebook page – Whether s 321D(5) contravened on each occasion person viewed post or on each occasion post made available for viewing. Words and phrases – \"authorisation\", \"civil penalty provision\", \"communicated\", \"communication\", \"conduct\", \"contravention\", \"deterrence\", \"digital\", \"disclosure entity\", \"dominant purpose\", \"electoral advertisement\", \"electoral matter\", \"federal election\", \"free and informed voting\", \"impressions\", \"notifying entity\", \"particulars\", \"political communication\", \"political entity\", \"proportionality\", \"reach\", \"statutory construction\", \"text, context and purpose\". Acts Interpretation Act 1901 (Cth) , ss 15AA, 23(b), 33(3A). Commonwealth Electoral Act 1918 (Cth) , Pt XXA, ss 4AA, 321B, 321C, 321D, 321E.",
       "hcaMeta": {
         "decided": "13/08/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Gleeson, Jagot JJ",
         "caseNumber": "B75/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/laming-v-electoral-commissioner-australian-electoral-commission",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-08-13/HCA/Laming%20v%20Electoral%20Commissioner%20of%20the%20Australian%20Electoral%20Commission%20%28B75-2024%29%20%5B2025%5D%20HCA%2031_0.pdf"
       }
     },
     {
@@ -1309,15 +1285,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326070+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Industrial law (Cth); Appeals — 'Industrial law (Cth) – Unfair dismissal – Genuine redundancy – Where employer dismissed employees because of changes in operational requirem'",
+      "heldNotified": true,
+      "catchwords": "Industrial law (Cth) – Unfair dismissal – Genuine redundancy – Where employer dismissed employees because of changes in operational requirements of employer's enterprise – Where employer continued to deploy contractors to perform work in employer's enterprise – Where s 389(2) of Fair Work Act 2009 (Cth) provides dismissal not genuine redundancy if it would have been reasonable in all circumstances for person to be redeployed within employer's enterprise – Whether Fair Work Commission, in undertaking s 389(2) inquiry, permitted to inquire into whether employer could have made changes to its enterprise to create or make available position for otherwise redundant employee. Appeals – Standard of appellate review – Where Full Bench of Fair Work Commission applied House v The King standard of appellate review to review of decision that dismissals were not cases of genuine redundancy under s 389 of Fair Work Act – Whether House v The King appropriate standard of appellate review – Whether application of wrong standard of appellate review would constitute jurisdictional error. Words and phrases – \"affording latitude\", \"all the circumstances\", \"appeal by way of rehearing\", \"appellate restraint\", \"business, activity, project or undertaking\", \"case of genuine redundancy\", \"contractors\", \"correctness standard\", \"counter-factual\", \"discretionary decision\", \"employer's enterprise\", \"employment\", \"enterprise\", \"error within jurisdiction\", \"Fair Work Commission\", \"genuine redundancy\", \" House v The King \", \"hypothetical\", \"insourcing\", \"job\", \"judicial review\", \"jurisdictional error\", \"nature of the employer's enterprise\", \"operational requirements\", \"position\", \"reasonable in all the circumstances\", \"redeploy\", \"reinstatement\", \"restructure\", \"standard of appellate review\", \"termination\", \"unfair dismissal\", \"work\", \"would have been reasonable\". Fair Work Act 2009 (Cth) , ss 385, 389.",
       "hcaMeta": {
         "decided": "06/08/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Beech-Jones JJ",
         "caseNumber": "S119/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/helensburgh-coal-pty-ltd-v-bartley",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-08-06/HCA/Helensburgh%20Coal%20Pty%20Ltd%20v%20Bartley%20%28S119-2024%29%20%5B2025%5D%20HCA%2029.pdf"
       }
     },
     {
@@ -1333,15 +1309,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326072+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Practice and procedure — 'Practice and procedure – Representative action – Orders – Where s 33V(2) of Federal Court of Australia Act 1976 (Cth) provides that in repre'",
+      "heldNotified": true,
+      "catchwords": "Practice and procedure – Representative action – Orders – Where s 33V(2) of Federal Court of Australia Act 1976 (Cth) provides that in representative proceedings Federal Court may make such orders as are just with respect to distribution of any money paid under settlement or paid into Court – Where s 33Z(1)(g) of Federal Court of Australia Act provides Court may in determining matter in representative proceeding make such other order as Court thinks just – Where s 183 of Legal Profession Uniform Law (NSW) provides law practice must not enter into costs agreement under which amount payable is calculated by reference to amount of any award or settlement – Where applicants in representative proceeding proposed to provide notice of intention to seek common fund order in favour of law practice at settlement or judgment – Where costs agreements to be amended to provide for common fund order in favour of law practice if notice approved – Whether s 33V or s 33Z of Federal Court of Australia Act empowers Federal Court to make common fund order at settlement or judgment in favour of law practice. Words and phrases – \"commencement CFO\", \"common fund order\", \"concept of justice\", \"contingency fee\", \"costs agreement\", \"distribution\", \"federal jurisdiction\", \"funding commission\", \"funding equalisation order\", \"group costs order\", \"just\", \"legal costs\", \"litigation funding\", \"new legal rights\", \"payment for costs and disbursements\", \"regulation of the legal profession\", \"remuneration for risk\", \"representative proceeding\", \"requirements of State law\", \"settlement CFO\", \"solicitors' CFO\", \"solicitors' common fund order\". Federal Court of Australia Act 1976 (Cth) , Pt IVA, ss 33J, 33V, 33Z, 33ZF, 33ZJ. Legal Profession Uniform Law (NSW) , ss 3, 6, 169, 172, 179, 180, 181, 182, 183, 185.",
       "hcaMeta": {
         "decided": "06/08/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "S146/2024, S144/2024 , S143/2024",
+        "caseNumber": "S146/2024 S144/2024 S143/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/kain-v-rb-investments-pty-ltd",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-08-06/HCA/Kain%20v%20R%26B%20Investments%20Pty%20Ltd%20%28S146%20%26%20144%20%26%20143-2024%29%20%5B2025%5D%20HCA%2028.pdf"
       }
     },
     {
@@ -1357,15 +1333,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326074+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth); between a State and a resident of another State\" — 'Constitutional law (Cth) – Judicial power of Commonwealth – Where resident of Tasmania sought administrative review of decisions made on beh'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Judicial power of Commonwealth – Where resident of Tasmania sought administrative review of decisions made on behalf of Commissioner of New South Wales Police Force – Where New South Wales Civil and Administrative Tribunal (\"Tribunal\") made order under s 55(2)(a) of Privacy and Personal Information Protection Act 1998 (NSW) – Where order that public sector agency pay applicant damages by way of compensation for any loss or damage suffered as a result of conduct in contravention of information protection principle – Where Tribunal not \"court of a State\" within meaning of ss 77(ii) and (iii) of Constitution – Where State Parliament lacks legislative capacity to confer on State tribunal that is not court of a State judicial power with respect to any matter in s 75 or s 76 of Constitution – Where s 75(iv) of Constitution refers to \"matters ... between a State and a resident of another State\" – Whether Tribunal exercised judicial power – Whether Brandy v Human Rights and Equal Opportunity Commission (1995) 183 CLR 245 distinguishable. Words and phrases – \"administrative power\", \"administrative review\", \"administrative standards\", \"administratively reviewable decision\", \"certificate\", \"compensation\", \"correct and preferable\", \"court\", \"damages\", \"distinguishable\", \"information protection principles\", \"internal review\", \"judgment\", \"judicial decision\", \"judicial power\", \"jurisdiction\", \"legislative capacity\", \"loss or damage\", \"matter\", \"non-judicial\", \"norm of conduct\", \"order\", \"privacy codes of practice\", \"public sector agency\", \"resident of another State\", \"tribunal\". Constitution , ss 75, 76, 77(ii), 77(iii). Administrative Decisions Review Act 1997 (NSW) , ss 6, 7, 8, 9, 53, 63, 64, 66. Civil and Administrative Tribunal Act 2013 (NSW) , ss 13, 27(1)(a), 38, 72, 78. Privacy and Personal Information Protection Act 1998 (NSW) , ss 3(1), 8-19, 21, 29, 30, 32, 52, 53, 55(1), 55(2)(a), 55(3), 55(4A), 69.",
       "hcaMeta": {
         "decided": "06/08/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "S39/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/new-south-wales-v-wojciechowska",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-08-06/HCA/New%20South%20Wales%20v%20Wojciechowska%20%28S39-2024%29%20%5B2025%5D%20HCA%2027.pdf"
       }
     },
     {
@@ -1381,15 +1357,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326076+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Judicial power of Commonwealth – Where s 44(1) of Administrative Appeals Tribunal Act 1975 (Cth) (\"Act\") provided'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Judicial power of Commonwealth – Where s 44(1) of Administrative Appeals Tribunal Act 1975 (Cth) (\"Act\") provided party to certain proceedings before Administrative Appeals Tribunal (\"Tribunal\") may appeal to Federal Court of Australia on question of law from decision of Tribunal – Where s 46(2) of Act provided that if certificate in force certifying disclosure of matter contained in document would be contrary to public interest Federal Court must do all things necessary to ensure matter not disclosed to any person other than member of court as constituted for purposes of proceeding – Where in accordance with s 39B of Act such certificate included certificate issued by \"ASIO Minister\" certifying disclosure of matter would be contrary to public interest because it would prejudice security or defence or international relations of Australia – Where plaintiff sought declaration that s 46(2) of Act invalid on ground it infringes Ch III of the Constitution – Where earlier decision of High Court in SDCV v Director-General of Security (2022) 277 CLR 241 held s 46(2) of Act valid – Whether s 46(2) invalid because it required Federal Court to depart from \"general rule\" of procedural fairness more than reasonably necessary to protect compelling and legitimate public interest – Whether SDCV authority to contrary – Whether leave to re-open and overrule SDCV should be granted. Words and phrases – \"adverse evidence\", \"ASIO\", \"certificate\", \"certified matter\", \"defence\", \"disclosure\", \"essential characteristic of a court\", \"forensic advantage\", \"heavy persuasive burden\", \"international relations\", \"practical injustice\", \"procedural fairness\", \"proportionality\", \"public interest immunity\", \"ratio decidendi\", \"reasonably necessary to protect a compelling and legitimate public interest\", \"security assessment\", \"special advocate\". Constitution , Ch III. Administrative Appeals Tribunal Act 1975 (Cth) , ss 39A, 39B, 44, 46.",
       "hcaMeta": {
         "decided": "06/08/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "S142/2023",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/mjzp-v-director-general-security",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-08-06/HCA/MJZP%20v%20Director-General%20of%20Security%20%28S142-2023%29%20%5B2025%5D%20HCA%2026_0.pdf"
       }
     },
     {
@@ -1405,39 +1381,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326078+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Legislative power – Implied freedom of political communication – Judicial power of Commonwealth – Acquisition of '",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Legislative power – Implied freedom of political communication – Judicial power of Commonwealth – Acquisition of property on just terms – Where Construction and General Division (\"C&G Division\") of Construction, Forestry and Maritime Employees Union (\"CFMEU\") is organisation of employees registered under Fair Work (Registered Organisations) Act 2009 (Cth) (\"FWRO Act\") – Where Fair Work (Registered Organisations) Amendment (Administration) Act 2024 (Cth) inserted Pt 2A of Ch 11 into FWRO Act and s 177A into Fair Work Act 2009 (Cth) – Where C&G Division of CFMEU and each of its branches placed under administration in accordance with Pt 2A of Ch 11 of FWRO Act – Where Attorney-General of Commonwealth determined Fair Work (Registered Organisations) (CFMEU Construction and General Division Administration) Determination 2024 (\"Scheme\") – Where Administrator of Scheme appointed – Where during ongoing administration of C&G Division of CFMEU and its branches under Pt 2A of Ch 11 of FWRO Act, Administrator has and will continue to have powers of control, management and disposition of property of CFMEU previously used solely or predominantly for purposes of C&G Division or any of its branches – Where plaintiffs had been office holders in C&G Division of CFMEU until removed from offices as a result of Scheme – Whether impugned legislative provisions unsupported by head of Commonwealth legislative power – Whether impugned legislative provisions and/or Scheme infringed implied freedom of political communication – Whether impugned legislative provisions infringed Ch III of Constitution – Whether impugned legislative provisions effected \"acquisition of property\" within meaning of s 51(xxxi) of Constitution otherwise than on just terms. Words and phrases – \"acquisition of property\", \"administration\", \"best interests\", \"bill of pains and penalties\", \"collective will\", \"compensation\", \"constitutional corporations\", \"constitutionally prescribed system of representative government\", \"control\", \"detriments\", \"dysfunction\", \"effective burden\", \"efficient and democratic conduct\", \"extrinsic material\", \"foreseeable effects\", \"forfeiture\", \"head of power\", \"illegitimate purpose\", \"implied freedom of political communication\", \"intention\", \"invalidity\", \"judicial power\", \"legislative intent\", \"legislative purpose\", \"level of generality\", \"motive\", \"party-political donations\", \"prima facie punitive\", \"private correspondence\", \"property\", \"protective purpose\", \"public interest\", \"punishment\", \"reasonably appropriate and adapted\", \"reasonably capable of being seen as necessary\", \"shipwrecks clause\", \"single question of characterisation\", \"structured proportionality\", \"trade unions\". Constitution – ss 7, 24, 51(xx), 51(xxxi), Ch III. Acts Interpretation Act 1901 (Cth) – s 15A. Fair Work Act 2009 (Cth) – s 177A. Fair Work (Registered Organisations) Act 2009 (Cth) – Ch 11, Pt 2A. Fair Work (Registered Organisations) (CFMEU Construction and General Division Administration) Determination 2024 (Cth) .",
       "hcaMeta": {
         "decided": "18/06/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "S113/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/ravbar-v-commonwealth-australia",
-        "pdf": ""
-      }
-    },
-    {
-      "id": "hca-2025-24",
-      "citation": "[2025] HCA 24",
-      "courtTag": "HCA",
-      "year": "2025",
-      "num": "24",
-      "caseName": "MDP v The King",
-      "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/24",
-      "blurb": "MDP v The King [2025] HCA 24 — 18/06/2025 — from the Court's own listing",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T07:20:17.326079+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {
-        "decided": "18/06/2025",
-        "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "B72/2023",
-        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/mdp-v-king",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/Ravbar%20v%20Commonwealth%20of%20Australia%20%28S113-2024%29%20%5B2025%5D%20HCA%2025.pdf"
       }
     },
     {
@@ -1453,15 +1405,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326081+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Statutes — 'Statutes – Interpretation – Valuation of land – Where land with heritage residence subject to site-specific heritage overlay – Where definit'",
+      "heldNotified": true,
+      "catchwords": "Statutes – Interpretation – Valuation of land – Where land with heritage residence subject to site-specific heritage overlay – Where definition of \"site value\" in s 2(1) of Valuation of Land Act 1960 (Vic) means value of land assuming improvements not made – Where definition of \"improvements\" in s 2(1) of Valuation of Land Act means work done or material used that increases value of land and has unexhausted benefit – Whether question whether work done or material used increases value of land determined at time of valuation or at time work was done or material was used – Whether Court of Appeal's erroneous construction of \"improvements\" was material to its decision to dismiss appeal. Words and phrases – \"benefit is unexhausted\", \"development potential\", \"financially feasible\", \"heritage overlay\", \"highest and best use\", \"hypothetical prudent buyer\", \"hypothetical prudent seller\", \"improvements\", \"increases the value\", \"land value\", \"legally permissible\", \"market value\", \"materiality\", \"physically possible\", \"site value\", \"time of the valuation\", \"unimproved value\", \"valuation for rating and taxing purposes\", \"work done or material used\". Valuation of Land Act 1960 (Vic) – ss 2, 5A.",
       "hcaMeta": {
         "decided": "11/06/2025",
         "coram": "Gageler CJ, Gordon, Steward, Gleeson, Jagot JJ",
         "caseNumber": "M96/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/valuer-general-victoria-v-wsti-properties-490-skr-pty-ltd",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/Valuer-General%20Victoria%20v%20WSTI%20Properties%20490%20SKR%20Pty%20Ltd%20%28M96-2024%29%20%5B2025%5D%20HCA%2023.pdf"
       }
     },
     {
@@ -1477,15 +1429,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326083+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Aviation — 'Aviation – Carriage of passengers by air – Contract of carriage – Where Air Canada's International Passenger Rules and Fares Tariff (\"Air Ca'",
+      "heldNotified": true,
+      "catchwords": "Aviation – Carriage of passengers by air – Contract of carriage – Where Air Canada's International Passenger Rules and Fares Tariff (\"Air Canada Tariff\") formed part of contract of carriage with passengers – Where defences to liability recognised by Convention for the Unification of Certain Rules for International Carriage by Air (1999) (\"Montreal Convention\") – Where treaty provisions given effect in domestic law – Where liability rules of Montreal Convention expressly incorporated into Air Canada Tariff – Where partial defence in Art 21(2) of Montreal Convention raised – Whether open to Air Canada to waive partial defence limiting extent of passengers' recovery of damages for bodily injury allegedly caused by turbulence experienced on flight – Whether any waiver of partial defence in Air Canada Tariff. Words and phrases – \"aviation\", \"bodily injury\", \"context\", \"contract of carriage\", \"damages\", \"defence\", \"financial limit\", \"liability cap\", \"liability rules\", \"partial defence\", \"purpose\", \"tiers of liability\", \"travaux préparatoires\", \"treaty\", \"treaty interpretation\", \"unlimited liability\", \"waiver\". Civil Aviation (Carriers' Liability) Act 1959 (Cth) – ss 9B, 11. Convention for the Unification of Certain Rules for International Carriage by Air (1999) – Arts 17, 21, 25. Vienna Convention on the Law of Treaties (1969) – Arts 31, 32.",
       "hcaMeta": {
         "decided": "14/05/2025",
         "coram": "Gageler CJ, Edelman, Steward, Gleeson, Beech-Jones JJ",
         "caseNumber": "S138/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/evans-v-air-canada",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/Evans%20v%20Air%20Canada%20%28S138-2024%29%20%5B2025%5D%20HCA%2022.pdf"
       }
     },
     {
@@ -1501,39 +1453,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326085+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law (Cth) — 'Constitutional law (Cth) – Free and informed choice – Implied freedom of political communication – Where United Australia Party (\"UAP\") was '",
+      "heldNotified": true,
+      "catchwords": "Constitutional law (Cth) – Free and informed choice – Implied freedom of political communication – Where United Australia Party (\"UAP\") was formerly registered under Pt XI of Commonwealth Electoral Act 1918 (Cth) (\"Act\") and had been voluntarily deregistered under s 135(1) of Act – Where s 135(3) of Act precluded reregistration of UAP from occurring before next general election following voluntary deregistration – Whether s 135(3) invalid on ground that it impairs direct choice by people of Senators and members of House of Representatives – Whether s 135(3) invalid on ground that it impermissibly discriminates against candidates of political party or Parliamentary party that has deregistered voluntarily – Whether s 135(3) invalid on ground that it infringes implied freedom of political communication. Words and phrases – \"annual disclosure obligations\", \"anti-avoidance purpose\", \"anti-phoenixing purpose\", \"anti-rollover purpose\", \"burden or impairment\", \"deregistration\", \"effective burden\", \"electoral choice\", \"electoral expenditure\", \"explicature\", \"free and informed choice\", \"implicature\", \"implied freedom of political communication\", \"Parliamentary party\", \"rational connection\", \"reasonably appropriate and adapted\", \"registered political party\", \"reregistration\", \"structured proportionality\", \"transparency purpose\", \"voluntary deregistration\". Constitution, ss 7, 24. Commonwealth Electoral Act 1918 (Cth), Pts XI, XX.",
       "hcaMeta": {
         "decided": "14/05/2025",
         "coram": "",
-        "caseNumber": "B73/2024, B74/2024",
+        "caseNumber": "B73/2024 B74/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/babet-v-commonwealth-australia",
-        "pdf": ""
-      }
-    },
-    {
-      "id": "hca-2025-20",
-      "citation": "[2025] HCA 20",
-      "courtTag": "HCA",
-      "year": "2025",
-      "num": "20",
-      "caseName": "Brawn v The King",
-      "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/20",
-      "blurb": "Brawn v The King [2025] HCA 20 — 07/05/2025 — from the Court's own listing",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T07:20:17.326087+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {
-        "decided": "07/05/2025",
-        "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "A20/2024",
-        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/brawn-v-king",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-05-15/HCA/Judgment%20-%202025%20HCA%2021.pdf"
       }
     },
     {
@@ -1549,39 +1477,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326088+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Representative actions — 'Representative actions – Practice and procedure – Orders – Notices to group members – Where representative proceeding under Pt 10 of Civil P'",
+      "heldNotified": true,
+      "catchwords": "Representative actions – Practice and procedure – Orders – Notices to group members – Where representative proceeding under Pt 10 of Civil Procedure Act 2005 (NSW) (\"CPA\") – Where defendant proposed to provide notice (\"proposed notice\") setting out its intention to seek certain order if proceeding settled – Where proposed notice indicated defendant's intention to seek orders that a group member who had neither opted out nor registered to participate in the proceeding would remain a group member, but shall not, without leave of the Court, be permitted to seek any benefit pursuant to any settlement of the proceeding that occurs before final judgment – Where unregistered group member's claims against defendant would therefore be extinguished by settlement – Where intermediate appellate court authority in conflict – Whether Supreme Court of New South Wales could make an order under s 175(5) of CPA that proposed notice be given to group members. Words and phrases – \"appellate jurisdiction\", \"compelling reason\", \"conflict of interest\", \"forensic advantage\", \"fundamental precept\", \"group member\", \"inconsistency of interest\", \"intention to seek an order\", \"intermediate appellate court\", \"notice\", \"opt in\", \"opt out\", \"plainly wrong\", \"power to order\", \"precedent\", \"ratio decidendi\", \"registration\", \"representative proceeding\", \"separate question\", \"seriously considered obiter dicta\", \"settlement\", \"settlement approval\", \"settlement negotiations\", \"statutory context\". Civil Procedure Act 2005 (NSW) – Pt 10, ss 159(1), 161, 162, 166(1)(d), 171(1), 173, 175(1), 175(5), 175(6), 176, 177, 179(b), 183.",
       "hcaMeta": {
         "decided": "07/05/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "S108/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/lendlease-corporation-limited-v-pallas",
-        "pdf": ""
-      }
-    },
-    {
-      "id": "hca-2025-18",
-      "citation": "[2025] HCA 18",
-      "courtTag": "HCA",
-      "year": "2025",
-      "num": "18",
-      "caseName": "The King v Batak",
-      "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/18",
-      "blurb": "The King v Batak [2025] HCA 18 — 07/05/2025 — from the Court's own listing",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T07:20:17.326090+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {
-        "decided": "07/05/2025",
-        "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "S148/2024",
-        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/king-v-batak",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/Lendlease%20Corporation%20Ltd%20v%20Pallas%20%28S108-2024%29%20%5B2025%5D%20HCA%2019.pdf"
       }
     },
     {
@@ -1597,15 +1501,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326091+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: High Court — 'High Court – Appellate jurisdiction – Practice – Reasons for judgment – Where first appellant sent Notice of Intention to Consider Cancellat'",
+      "heldNotified": true,
+      "catchwords": "High Court – Appellate jurisdiction – Practice – Reasons for judgment – Where first appellant sent Notice of Intention to Consider Cancellation (\"NOICC\") of visa – Where first appellant did not respond to NOICC – Where first appellant did not have legal obligation to respond to NOICC – Where delegate of respondent gave weight to first appellant not responding to NOICC – Where appellants sought to raise in amended notice of appeal for first time contention that delegate of respondent committed jurisdictional error by giving weight to first appellant's non-response to NOICC – Where respondent conceded that jurisdictional error before hearing of appeal – Where parties provided to Court agreed document explaining circumstances – Whether reasons for decision required when orders sought by consent – Whether appropriate to make orders by consent – Whether decision of delegate affected by jurisdictional error. Words and phrases – \"appellate jurisdiction\", \"concession\", \"consent orders\", \"institutional responsibility\", \"jurisdictional error\", \"legal obligation\", \"original jurisdiction\", \"reasons\". Constitution – ss 73, 75. Judiciary Act 1903 (Cth) – s 37. Migration Act 1958 (Cth) – ss 116, 119, 140.",
       "hcaMeta": {
         "decided": "10/04/2025",
         "coram": "Gageler CJ, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "M92/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/plaintiff-m19a2024-v-minister-immigration-and-multicultural-affairs",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/Plaintiff%20M19A-2024%20v%20Minister%20for%20Immigration%20and%20Multicultural%20Affairs%20%28M92-2024%29%20%5B2025%5D%20HCA%2017.pdf"
       }
     },
     {
@@ -1621,15 +1525,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326092+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Statutes — 'Statutes – Construction – Where s 27QE of Limitation of Actions Act 1958 (Vic) provides court can set aside settlement agreement for persona'",
+      "heldNotified": true,
+      "catchwords": "Statutes – Construction – Where s 27QE of Limitation of Actions Act 1958 (Vic) provides court can set aside settlement agreement for personal injury resulting from child abuse if satisfied \"just and reasonable\" to do so – Where appellant entered into settlement agreements for personal injury allegedly resulting from child abuse – Where settlement agreements renounced claim for economic loss – Where reasons for settlement included Ellis defence and limitation period – Whether s 27QE requires Ellis defence or limitation period to have materially influenced decision to settle in order to be \"just and reasonable\" to set aside settlement agreement – Whether evidence allowed court to be satisfied \"just and reasonable\" to set aside renouncement of economic loss claim. Words and phrases – \"Centrelink benefits\", \"Centrelink repayment\", \"child abuse\", \"correctness standard\", \"decision to settle\", \"economic loss\", \"Ellis defence\", \"general damages\", \"just and reasonable\", \"legal barriers\", \"limitation defence\", \"limitation period\", \"material factors\", \"materially influenced\", \"non-economic loss\", \"personal injury\", \"personal injury resulting from child abuse\", \"positive finding\", \"prerequisites to the exercise of the power\", \"quasi-prerequisites to the exercise of the power\", \"set aside\", \"set aside a settlement agreement\", \"settlement agreement\", \"settlement deed\". Limitation of Actions Act 1958 (Vic) – ss 27QD, 27QE.",
       "hcaMeta": {
         "decided": "09/04/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson JJ",
         "caseNumber": "M81/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/dzy-pseudonym-v-trustees-christian-brothers",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/DZY%20%28a%20pseudonym%29%20v%20Trustees%20of%20the%20Christian%20Brothers%20%28M81-2024%29%20%5B2025%5D%20HCA%2016.pdf"
       }
     },
     {
@@ -1645,15 +1549,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326093+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Practice and procedure — 'Practice and procedure – Standing – Where appellant conducts forestry operations pursuant to integrated forestry operations approval (\"IFOA\"'",
+      "heldNotified": true,
+      "catchwords": "Practice and procedure – Standing – Where appellant conducts forestry operations pursuant to integrated forestry operations approval (\"IFOA\") – Where respondent brought civil enforcement proceedings seeking injunctive and declaratory relief – Where primary judge found respondent lacked standing because no \"special interest\" in subject matter of proceedings – Where Court of Appeal of Supreme Court of New South Wales set aside primary judge's finding that respondent had no special interest – Where s 69ZA of Forestry Act 2012 (NSW) limited certain actions in respect of provisions of Act that give any person a right to institute proceedings to remedy or restrain a breach, whether or not any right of the person has been or may be infringed by or as a consequence of that breach – Whether Court of Appeal erred in concluding on proper construction of Pt 5B of Forestry Act and cognate provisions of Biodiversity Conservation Act 2016 (NSW) private persons or entities with special interest in subject matter of proceedings have standing to bring proceedings to enforce duties and obligations imposed by IFOA. Words and phrases – \"any person\", \"auxiliary jurisdiction\", \"Class 4 jurisdiction\", \"clear and unmistakeable intention\", \"commence and maintain proceedings\", \"common law standing\", \"declaratory or injunctive relief\", \"duties and obligations\", \"equitable jurisdiction\", \"injunction\", \"integrated forestry operations approval\", \"liberty of access\", \"matter\", \"private rights affected or interfered with\", \"public rights, duties or obligations\", \"special interest\", \"standing\", \"subject matter\", \"third-parties\". Biodiversity Conservation Act 2016 (NSW) – ss 13. 3, 13. 14, 13. 14A, 13. 15. Forestry Act 2012 (NSW) – Pt 5B. Land and Environment Court Act 1979 (NSW) – s 20.",
       "hcaMeta": {
         "decided": "09/04/2025",
         "coram": "Gageler CJ, Edelman, Steward, Jagot, Beech-Jones JJ",
         "caseNumber": "S120/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/forestry-corporation-new-south-wales-v-south-east-forest-rescue-incorporated",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/Forestry%20Corporation%20of%20New%20South%20Wales%20v%20South%20East%20Forest%20Rescue%20Inc%20%28S120-2024%29%20%5B2025%5D%20HCA%2015.pdf"
       }
     },
     {
@@ -1669,15 +1573,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326095+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Constitutional law — 'Constitutional law – Separation of powers – Judicial power – Principle established in Kable v Director of Public Prosecutions (NSW) (1996) 1'",
+      "heldNotified": true,
+      "catchwords": "Constitutional law – Separation of powers – Judicial power – Principle established in Kable v Director of Public Prosecutions (NSW) (1996) 189 CLR 51 (\"Kable\") – Where plaintiff convicted of two counts of murder and sentenced to life imprisonment with a non-parole period of 20 years – Where body of one of murder victims never located – Where parole board of Queensland may make \"no cooperation declaration\" under s 175L of Corrective Services Act 2006 (Qld) (\"CS Act\") about \"no body-no parole prisoner\" where remains of victim not found and where not satisfied prisoner has given \"satisfactory cooperation\" – Where effect of \"no cooperation declaration\" is that prisoner may not apply for parole notwithstanding expiration of non-parole period – Where president of parole board may make \"restricted prisoner declaration\" about \"restricted prisoner\" under s 175E of CS Act – Where effect of \"restricted prisoner declaration\" is that prisoner may not apply for parole other than \"exceptional circumstances parole\" – Where \"no cooperation declaration\" was made about plaintiff and \"restricted prisoner declaration\" may be made if \"no cooperation declaration\" invalid – Whether ss 175L and 175E of CS Act invalid as enabling Queensland executive to impermissibly interfere with exercise of judicial power by State courts contrary to principle in Kable. Words and phrases – \"adjudgment of criminal guilt\", \"body or remains\", \"conditions for the grant of parole\", \"defining characteristics of a State Supreme Court\", \"eligibility for parole\", \"eligible person\", \"exceptional circumstances parole\", \"executive power\", \"judicial power\", \"minimum period of imprisonment\", \"no body-no parole prisoner\", \"no cooperation declaration\", \"non-parole period\", \"parole\", \"parole board\", \"power to grant parole\", \"prisoner\", \"public interest\", \"punishment\", \"punitive purpose\", \"restricted prisoner\", \"restricted prisoner declaration\", \"retribution\", \"satisfactory cooperation\", \"sentence imposed by the sentencing judge\". Corrective Services Act 2006 (Qld) – ss 175B, 175C, 175D, 175E, 175F, 175G, 175H, 175I, 175K, 175L, 175N, 175O, 175P, 175Q, 175R, 175S, 175T, 175U, 176, 176A, 176B, 176C, 180, 193A, 193AA, 221, 222. Corrective Services (No Body – No Parole) Amendment Act 2017 (Qld). Police Powers and Responsibilities and Other Legislation Amendment Act 2021 (Qld). Crimes (Administration of Sentences) Act 1999 (NSW) – s 154A. Corrections Act 1986 (Vic) – ss 74AA, 74AAA, 74AB.",
       "hcaMeta": {
         "decided": "09/04/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "B11/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/cherry-v-queensland",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/Cherry%20v%20Queensland%20%28B11-2024%29%20%5B2025%5D%20HCA%2014.pdf"
       }
     },
     {
@@ -1693,15 +1597,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326096+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Immigration — 'Immigration – Protection visas – Invalid application – Where appellant applied for protection visa and was refused by delegate of Minister –'",
+      "heldNotified": true,
+      "catchwords": "Immigration – Protection visas – Invalid application – Where appellant applied for protection visa and was refused by delegate of Minister – Where Administrative Appeals Tribunal affirmed delegate's decision – Where Assistant Minister exercised power under s 417(1) of Migration Act 1958 (Cth) to substitute more \"favourable\" decision and granted appellant three-month visitor visa with no further stay condition – Where appellant made second application for protection visa – Where delegate found second application invalid under s 48A – Whether majority of Full Court of Federal Court of Australia erred in finding second application invalid and barred by s 48A – Whether act of refusal in s 48A is reference to historical fact of refusal, or reference to act of refusal which remains legally valid – Whether exercise of substitution power under s 417(1) had effect of setting aside original refusal decision. Words and phrases – \"barred\", \"continuing legal effect\", \"continuing legal operation\", \"decision\", \"extinguished\", \"fast track reviewable decision\", \"finally determined\", \"grant\", \"historical fact\", \"legal effect\", \"migration zone\", \"more favourable\", \"non-citizen\", \"power to set aside\", \"power to substitute\", \"protection visa\", \"public interest\", \"refuse\", \"reviewable decision\", \"set aside\", \"substitute\", \"vary\", \"Visitor (Subclass 600) visa\". Migration Act 1958 (Cth) – ss 5, 48, 48A, 48B, 64U, 65, 119, 121, 137, 166BC, 166BE, 351, 411, 415, 417, 501A, 501J. Migration Legislation Amendment Act 1989 (Cth) – s 26. Migration Reform Act 1992 (Cth) – ss 23, 32. Migration Legislation Amendment Act 1994 (Cth) – s 83. Migration Legislation Amendment Act (No 6) 1995 (Cth) .",
       "hcaMeta": {
         "decided": "09/04/2025",
         "coram": "Gageler CJ, Gordon, Steward, Gleeson, Jagot JJ",
         "caseNumber": "S107/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/fel17-v-minister-immigration-and-multicultural-affairs",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/FEL17%20v%20Minister%20for%20Immigration%20and%20Multicultural%20Affairs%20%28S107-2024%29%20%5B2025%5D%20HCA%2013.pdf"
       }
     },
     {
@@ -1717,39 +1621,15 @@
       "nameSuspect": false,
       "firstSeen": "2026-09-20T07:20:17.326098+00:00",
       "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Native title rights — 'Native title rights – Where Arabana people applied for determination of native title under Native Title Act 1993 (Cth) – Where Arabana peopl'",
+      "heldNotified": true,
+      "catchwords": "Native title rights – Where Arabana people applied for determination of native title under Native Title Act 1993 (Cth) – Where Arabana people held native title over area of land abutting claim area – Whether primary judge correctly construed and applied definition of \"native title\" in s 223(1) – Whether \"connection\" with land or waters for purposes of s 223(1)(b) must be established by physical acts of acknowledgment or observance – Relevance of native title determination in respect of land abutting claim area. Words and phrases – \"acknowledgment or observance\", \"by those laws and customs\", \"connection\", \"continuity\", \"cultural connection\", \"effective sovereignty\", \"land or waters\", \"native title\", \"native title rights and interests\", \"physical acts\", \"physical connection\", \"religious connection\", \"sovereignty\", \"spiritual connection\", \"traditional laws and customs\". Native Title Act 1993 (Cth) – ss 13, 82, 86, 94A, 223, 225.",
       "hcaMeta": {
         "decided": "09/04/2025",
         "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
         "caseNumber": "A1/2024",
         "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/stuart-v-south-australia",
-        "pdf": ""
-      }
-    },
-    {
-      "id": "hca-2025-11",
-      "citation": "[2025] HCA 11",
-      "courtTag": "HCA",
-      "year": "2025",
-      "num": "11",
-      "caseName": "The King v Ryan Churchill (a pseudonym)",
-      "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/11",
-      "blurb": "The King v Ryan Churchill (a pseudonym) [2025] HCA 11 — 02/04/2025 — from the Court's own listing",
-      "via": "court",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-20T07:20:17.326099+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {
-        "decided": "02/04/2025",
-        "coram": "Gageler CJ, Gordon, Gleeson, Jagot, Beech-Jones JJ",
-        "caseNumber": "M94/2024",
-        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/king-v-ryan-churchill-pseudonym",
-        "pdf": ""
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2025-07-03/HCA/Stuart%20v%20South%20Australia%20%28A1-2024%29%20%5B2025%5D%20HCA%2012.pdf"
       }
     },
     {

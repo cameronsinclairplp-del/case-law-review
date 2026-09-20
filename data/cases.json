@@ -1932,6 +1932,212 @@
     ]
   },
   {
+    "id": "hca-2025-46",
+    "date": "2025-12-03",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Farshchi v The King",
+    "citation": "[2025] HCA 46",
+    "decided": "03/12/2025",
+    "appealFrom": "Court of Appeal of the Supreme Court of Victoria",
+    "outcome": "Appeal dismissed; convictions and sentence stand.",
+    "weight": "High \"unanimous seven-judge High Court decision; binding statement on the standard of proof and on the operation of s 68 of the Judiciary Act for Commonwealth offences tried in state courts.",
+    "tags": [
+      "forced labour",
+      "Criminal Code (Cth)",
+      "standard of proof",
+      "beyond reasonable doubt",
+      "jury directions",
+      "federal jurisdiction",
+      "s 270.6A",
+      "s 80 Constitution",
+      "Judiciary Act s 68"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court held that directing a jury that a reasonable doubt is \"not an imaginary or fanciful doubt or an unrealistic possibility\" does not lower the criminal standard of proof.",
+    "whatHappened": "FARSHCHI was tried on a joint indictment with his wife in the County Court of Victoria (exercising federal jurisdiction) on two forced labour offences under <i>Criminal Code</i> (Cth) s 270.6A(1) and (2). He was convicted on both counts and sentenced to a total of three years and six months' imprisonment with an 18-month non-parole period. At his second trial, the trial judge (Chief Judge Kidd) explained \"proof beyond reasonable doubt\" using s 64(1)(e) of the <i>Jury Directions Act 2015</i> (Vic), telling the jury that \"a reasonable doubt is not an imaginary or fanciful doubt or an unrealistic possibility.\" The Victorian Court of Appeal refused leave to appeal. On special leave, FARSHCHI argued the words \"unrealistic possibility\" diminished the standard of proof and were inconsistent with s 13.2 of the <i>Criminal Code</i> (Cth) (ground one) and s 80 of the <i>Constitution</i> (ground two).",
+    "whatHeld": "The appeal was dismissed. Section 64(1)(e) <b>explains the standard of proof beyond reasonable doubt; it does not define, alter or diminish it</b>. Read as a composite phrase, \"unrealistic possibility\" takes its colour from \"imaginary or fanciful doubt\" and simply carves out matters that could not raise a reasonable doubt \"unreal\" possibilities, as in <i>Green v The Queen</i>. The provision is therefore not inconsistent with s 13.2(1) of the <i>Criminal Code</i> (Cth) and is picked up and applied in federal jurisdiction by s 68(1)(c) of the <i>Judiciary Act 1903</i> (Cth). The plurality (Gageler CJ, Gordon, Gleeson and Beech-Jones JJ) declined to decide the s 80 constitutional question because the shared premise (that the standard was diminished) failed. Edelman and Steward JJ held that proof beyond reasonable doubt is an essential feature of a \"trial on indictment by jury\" under s 80 but that s 64(1)(e) does not offend it. Jagot J agreed there was no inconsistency.",
+    "whatItMeans": "This is a jury-directions and standard-of-proof case, so it does <b>not change how you investigate, gather evidence or charge</b>. Its practical value is background: it confirms that Commonwealth offences prosecuted in state courts are tried under state trial procedure (picked up by s 68 of the <i>Judiciary Act</i>), and that the criminal standard remains proof beyond reasonable doubt. It is also a useful marker that forced labour offences under s 270.6A of the <i>Criminal Code</i> (Cth) are indictable Commonwealth offences turning on coercion, threat or deception that would leave a reasonable person feeling not free to leave. Build your briefs to that standard; nothing here alters your obligations.",
+    "verdict": "AWARENESS only \"this decides how juries may be directed on reasonable doubt, not how you run an investigation.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/46.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/46",
+    "files": {
+      "llm": "data/files/hca-2025-46/hca-2025-46.md"
+    },
+    "flags": [
+      "Constitutional s 80 question was not decided by the plurality; Edelman and Steward JJ addressed it in separate reasons but reached the same result.",
+      "Sentence and non-parole details are drawn from the judgment text as stated.",
+      "cleaner: years LATER than the citation year (decide: legitimate future date, or citator bleed?): 2055: 122 R v Perry [2025] 1 WLR 2055 at 2065 [29]. 2065: 122 R v Perry [2025] 1 WLR 2055 at 2065 [29]."
+    ]
+  },
+  {
+    "id": "hca-2025-24",
+    "date": "2025-06-18",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "MDP v The King",
+    "citation": "[2025] HCA 24",
+    "decided": "18/06/2025",
+    "appealFrom": "Court of Appeal of the Supreme Court of Queensland",
+    "outcome": "Special leave granted to raise grounds 2 to 4; appeal allowed (by majority). Court of Appeal order of 27/06/2023 set aside; MDP's appeal to the Court of Appeal allowed, convictions set aside, and a new trial ordered.",
+    "weight": "High — unanimous seven-judge High Court statement of principle on the second limb (wrong decision on a question of law), materiality and the conduct of counsel, read with the companion decision in <i>Brawn v The King</i> [2025] HCA 20. Binding and significant; the equivalent WA provision is <i>Criminal Appeals Act 2004</i> (WA) s 30(3) and (4).",
+    "tags": [
+      "propensity evidence",
+      "Pfennig test",
+      "sexual interest evidence",
+      "child sexual offences",
+      "jury directions",
+      "common form appeal",
+      "materiality",
+      "proviso",
+      "relationship evidence"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court set aside MDP's child sexual offence convictions and ordered a new trial because the trial judge wrongly directed the jury it could treat innocuous \"bottom slapping\" evidence as proof of sexual interest, contrary to the rule in <i>Pfennig</i>.",
+    "whatHappened": "MDP was convicted in the District Court of Queensland of 16 counts of sexual offences against his stepdaughter, allegedly committed between 2014 and 2019 when she was aged 7 to 12. The complainant gave direct evidence of the offending. The Crown also led evidence from the complainant's sister, \"K\", that MDP smacked the complainant on the backside \"randomly\" when they \"weren't doing anything wrong\". That evidence was admitted without objection and was relied on by the Crown as showing MDP had a sexual interest in the complainant and was prepared to act on it. The trial judge gave the jury a propensity direction permitting that use, and defence counsel did not object (indeed sought tactical advantage from it). The Court of Appeal dismissed MDP's appeal. He appealed to the High Court.",
+    "whatHeld": "The Court was unanimous on principle. <b>Admitting K's evidence without objection was not a \"decision on a question of law\"</b> under the second limb of the common form appeal provision, so ground 4 failed. However, <b>the trial judge did make a wrong decision on a question of law by directing the jury it could use K's evidence as propensity evidence</b>, because that evidence could never pass the <i>Pfennig</i> test — there were obvious innocent (non-sexual) explanations for the smacking, so a rational view consistent with innocence remained. The Crown properly conceded this. <b>The conduct of counsel — including failure to object or seeking forensic advantage — is irrelevant to whether a wrong decision was made</b>; the trial judge alone is responsible for a correct summing up. The Court confirmed a <b>materiality threshold applies to the second limb</b>: unless the error is fundamental, the appellant must show it could realistically have affected the jury's reasoning to guilt. The majority (Gageler CJ, Gordon, Steward and Edelman JJ) held the direction was material and the proviso could not be applied because contested credit issues and an incomplete record meant guilt was not shown to be inevitable. The minority (Gleeson, Jagot and Beech-Jones JJ) would have dismissed, finding the direction's protective elements meant it was not material.",
+    "whatItMeans": "When you build a sexual offence case, be careful about relying on <b>equivocal conduct as \"evidence of sexual interest\"</b>. Evidence like non-sexual physical contact (smacking a child's bottom) that has an obvious innocent explanation <b>will not pass the <i>Pfennig</i> test</b> and cannot properly be used for propensity reasoning — leading it as propensity evidence risks quashing an otherwise strong conviction. Identify and record whether uncharged-act or \"relationship\" evidence has a genuinely probative, exclusively-sexual character before it is characterised as showing sexual interest. Do not assume weak \"context\" material strengthens a case; here it produced a retrial. Note also that <b>a defence failure to object does not cure a wrongful use of such evidence</b> — the risk sits with the prosecution and the trial, not just defence tactics.",
+    "verdict": "AWARENESS — this is mainly appellate law on the common form appeal provision, but it carries a practical warning about how \"sexual interest\" / propensity evidence must be assessed against <i>Pfennig</i> before it is relied on.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/24.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/24",
+    "files": {
+      "llm": "data/files/hca-2025-24/hca-2025-24.md"
+    },
+    "flags": [
+      "The judgment applies the Queensland provision, <i>Criminal Code</i> (Qld) s 668E; the analogous WA provision is <i>Criminal Appeals Act 2004</i> (WA) s 30(3) and (4) — confirm exact wording before relying on it in a WA matter.",
+      "Copy noted as subject to formal revision prior to publication in the Commonwealth Law Reports.",
+      "The Court divided 4:3 on whether the error was material; the statements of principle are unanimous, but application is contested.",
+      "Case name anonymised (MDP) and complainant/witness identified only as initials, reflecting suppression of identifying details in a child sexual offence matter."
+    ]
+  },
+  {
+    "id": "hca-2025-20",
+    "date": "2025-05-07",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Brawn v The King",
+    "citation": "[2025] HCA 20",
+    "decided": "07/05/2025",
+    "appealFrom": "Court of Appeal of the Supreme Court of South Australia",
+    "outcome": "Appeal allowed. Court of Appeal order of 15/09/2022 set aside; the appeal to the Court of Appeal allowed, conviction set aside, and a new trial ordered.",
+    "weight": "High. Unanimous seven-member High Court decision (in a single joint judgment) settling and harmonising the test for materiality and miscarriage of justice under common form criminal appeal provisions.",
+    "tags": [
+      "disclosure",
+      "prosecution duty of disclosure",
+      "miscarriage of justice",
+      "materiality",
+      "identity",
+      "sexual offences",
+      "child complainant",
+      "police knowledge",
+      "appeal",
+      "common form appeal provision",
+      "proviso",
+      "forensic utility"
+    ],
+    "relevance": "",
+    "oneLine": "High Court sets the test for when a trial error or irregularity — here a breach of the prosecution's disclosure duty — amounts to a miscarriage of justice: it must be material, meaning it could realistically have affected the jury's reasoning to guilt.",
+    "whatHappened": "BRAWN was convicted after a District Court of South Australia jury trial of maintaining an unlawful sexual relationship with a child under 17 (<i>Criminal Law Consolidation Act 1935</i> (SA), s 50(1)). The complainant, a girl aged between 5 and 8 during the offence period (indictment period 01/04/2016 to 01/01/2019), had been abused. The principal issue at trial was identity — whether BRAWN or another adult male in the complainant's Sudanese community was the perpetrator. The complainant, like other children, referred to elder males, including BRAWN's father 'X', as 'uncle', and she had told a school support worker her 'uncle' abused her. The defence case suggested 'some other uncle' was the real perpetrator but did not nominate X specifically. After BRAWN was sentenced on 04/08/2021, the prosecution disclosed that X had himself been charged in July 2019 with six sexual offences against a teenage niece ('Y') committed November 2018 to May 2019 — a period overlapping the indictment. Those charges were discontinued in August 2020 before arraignment. This had not been disclosed to the defence before or during trial.",
+    "whatHeld": "The Court of Appeal found the prosecution breached its common law duty of disclosure but held there was no miscarriage of justice because BRAWN had not shown his defence 'would' or 'might' have been conducted differently. The High Court held that was the <b>wrong test</b>. Where there is a non-fundamental error or irregularity in a trial, to establish a miscarriage of justice under the third limb of the common form appeal provision it must be shown the error was <b>material — that it could realistically have affected the reasoning of the jury to a verdict of guilty</b>. 'Could' means 'having the capacity to'; 'realistically' distinguishes a real possibility from one that is fanciful or improbable. The appellant bears this burden, but it is <b>not onerous</b>, and it is <b>not</b> a counterfactual inquiry into what defence counsel would have done or whether the accused would have been convicted anyway. The materiality inquiry looks at the possible effect on the trial that was actually had, and does <b>not collapse into the proviso</b>. A fundamental error automatically establishes a substantial miscarriage. The proviso is a separate step, the burden of which rests on the prosecution. Here the non-disclosure denied BRAWN the opportunity, or at least an enhanced opportunity, to point to X as a possible perpetrator, and that could realistically have affected the jury's reasoning. Miscarriage of justice established.",
+    "whatItMeans": "This confirms and clarifies what it means for your casework around the prosecution's duty of disclosure. The prosecution — treated as including the <b>police</b>, not just the ODPP — must disclose all relevant evidence, and the duty extends to material of <b>forensic utility</b> even if only usable indirectly, such as material informing a line of inquiry, identifying witnesses, or assisting cross-examination. Here the knowledge sat with police and that was enough to fix the prosecution with the duty; the individual prosecutor's ignorance did not excuse the breach. <b>If you become aware of charges or allegations against a third party who could be an alternative suspect, that is disclosable</b>, and failure to disclose can quash a conviction and force a retrial. Do not assume material is irrelevant just because the accused already knew of it or the defence did not specifically pursue it. Practically: keep disclosure obligations live throughout a matter, flag any third-party suspect material to the ODPP early, and document your disclosure decisions. The materiality test is a low bar for defendants — a lost forensic opportunity that could realistically have shifted the jury's reasoning is enough.",
+    "verdict": "AWARENESS-plus for disclosure practice — it reshapes appellate doctrine but its practical bite for you is the reminder that police-held third-party suspect material is disclosable and that non-disclosure can sink a conviction.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/20.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/20",
+    "files": {
+      "llm": "data/files/hca-2025-20/hca-2025-20.md"
+    },
+    "flags": [
+      "The offence provision (s 50(1)) is from the <i>Criminal Law Consolidation Act 1935</i> (SA); the appeal provision (s 158) is from the <i>Criminal Procedure Act 1921</i> (SA) — both South Australian, not WA. The judgment notes the WA equivalent common form provision is <i>Criminal Appeals Act 2004</i> (WA), s 30(3).",
+      "The judgment is a South Australian matter; the disclosure and materiality principles are High Court doctrine of general application, but the specific statutory framework differs in WA.",
+      "Ground 2 (the alleged concession) was not decided because the appeal succeeded on Ground 1; the Court expressly declined to confirm the scope of disclosure was fully discharged."
+    ],
+    "needsReview": {
+      "heldOn": "2026-09-20",
+      "call": "ACTION",
+      "problems": 1,
+      "report": "data/audits/2026-09-20/hca-2025-20.md"
+    }
+  },
+  {
+    "id": "hca-2025-18",
+    "date": "2025-05-07",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "The King v Batak",
+    "citation": "[2025] HCA 18",
+    "decided": "07/05/2025",
+    "appealFrom": "Supreme Court of New South Wales (Court of Criminal Appeal)",
+    "outcome": "Leave to file the amended notice of appeal refused; special leave to appeal revoked. The NSW Court of Criminal Appeal orders stand, meaning BATAK's murder conviction remains quashed with a retrial on Count 1.",
+    "weight": "High Court of Australia, but a procedural/vehicle ruling only. The substantive question of law was expressly left undecided. The operative NSW law is the Court of Criminal Appeal decision, which was not overturned but also not endorsed.",
+    "tags": [
+      "accessory before the fact",
+      "constructive murder",
+      "joint criminal enterprise",
+      "armed robbery",
+      "special leave revoked",
+      "offence known to law",
+      "mental element",
+      "NSW Crimes Act"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court revoked special leave in the Crown's appeal, leaving intact the NSW Court of Criminal Appeal ruling that accessory before the fact to constructive murder is not an offence known to law — but the High Court did not itself decide that question.",
+    "whatHappened": "Cem BATAK supplied one of two intruders with a loaded gun and a high-visibility shirt for an armed robbery of an apartment (drugs and money) at about 3.45am on 02/04/2019. BATAK was not present. During the robbery an inhabitant was shot and killed. BATAK was charged under the <i>Crimes Act 1900</i> (NSW) with attempted armed robbery (Count 2, s 97(2)) and murder (Count 1, s 18(1)(a) constructive murder), both relying on the accessory before the fact provision, s 346. At trial the Crown dropped joint criminal enterprise and ran murder solely on the basis that BATAK was an accessory before the fact to constructive murder. A jury convicted on both counts. The NSW Court of Criminal Appeal held it was an error of law to leave constructive murder to the jury on an accessorial basis (that this is not an offence known to law), quashed the murder conviction and ordered a retrial. The Crown obtained special leave to appeal to the High Court. In this Court the Crown reformulated the mental element differently from what it had argued in the CCA, and conceded a retrial would be needed even if it won.",
+    "whatHeld": "The High Court, by majority, <b>refused leave to amend the notice of appeal and revoked special leave to appeal</b>. Because the Crown accepted a retrial was needed regardless of outcome, and because it argued the mental element on a <b>significantly different basis</b> than it had put to the CCA, the case had ceased to be an appropriate vehicle for the important question of law. In substance the Crown was only seeking <b>guidance as to the scope of the retrial</b>, disconnected from how the case was run at trial and in the CCA. The Court <b>did not decide</b> whether accessory before the fact to constructive murder is an offence known to law. EDELMAN and JAGOT JJ dissented, holding the appeal was competent and special leave should not have been revoked.",
+    "whatItMeans": "What it means for your casework: this is a NSW decision under the <i>Crimes Act 1900</i> (NSW) and the High Court did <b>not settle the substantive law</b>, so treat it as background only. The practical takeaway is that the substantive question — whether someone who supplies a weapon but is absent from the scene can be liable for a death as an accessory before the fact to constructive murder — <b>remains unresolved at the highest level</b>, and in NSW the CCA answer is currently <b>no</b>. If you deal with a suppler-of-weapon scenario where the alternative pathway of joint criminal enterprise exists, be aware that pathway may be more secure than accessorial constructive murder. Do not treat this as authority on WA's <i>Criminal Code</i>, which uses a different framework. A key lesson from the case is the importance of the prosecution's theory and the exact mental-element formulation being <b>consistent from trial through appeal</b> — shifting the basis can derail a matter.",
+    "verdict": "AWARENESS — the High Court did not decide the substantive charging question and the case turns on NSW legislation, so it does not directly change WA investigative or charging practice.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/18.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/18",
+    "files": {
+      "llm": "data/files/hca-2025-18/hca-2025-18.md"
+    },
+    "flags": [
+      "Decided under NSW legislation (<i>Crimes Act 1900</i> (NSW) ss 18, 346, 97(2)) — not WA's Criminal Code; direct application to WA casework is limited",
+      "The High Court did not decide whether accessory before the fact to constructive murder is an offence known to law — the substantive question remains open",
+      "Ruling is on revocation of special leave / appropriate vehicle, not on the merits",
+      "EDELMAN J and JAGOT J dissented on whether special leave should have been revoked"
+    ]
+  },
+  {
+    "id": "hca-2025-11",
+    "date": "2025-04-02",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "The King v Ryan Churchill (a pseudonym)",
+    "citation": "[2025] HCA 11",
+    "decided": "02/04/2025",
+    "appealFrom": "Court of Appeal of the Supreme Court of Victoria (Beach, Taylor and Orr JJA), Ryan Churchill (a pseudonym) v The King [2024] VSCA 151",
+    "outcome": "Crown appeal allowed. Orders of the Victorian Court of Appeal of 28/06/2024 set aside; respondent's appeal to the Court of Appeal dismissed. Convictions restored.",
+    "weight": "High. Unanimous five-member High Court decision (Gageler CJ, Gordon, Gleeson, Jagot and Beech-Jones JJ) settling the correct statutory approach to distress evidence and directions.",
+    "tags": [
+      "sexual offences",
+      "distress evidence",
+      "jury directions",
+      "circumstantial evidence",
+      "complainant credibility",
+      "corroboration abolished",
+      "pre-trial complaint",
+      "Evidence Act",
+      "Jury Directions Act",
+      "hearsay exception"
+    ],
+    "relevance": "ACTION",
+    "oneLine": "Distress evidence from a complainant is ordinary circumstantial evidence — no special jury warning about causal link or \"little weight\" is required under the Victorian statutory scheme.",
+    "whatHappened": "The respondent, RYAN CHURCHILL (a pseudonym), was convicted in the County Court of Victoria in September 2022 of two counts of incest against his stepdaughter, alleged to have occurred in 2005 when she was 13 or 14. Both the complainant and her mother gave evidence that the complainant was extremely distressed (described as a \"meltdown\") when she first complained of being raped by the respondent at the Children's Court in 2006 or 2007. The prosecution relied on this pre-trial distress to support the complainant's account. The trial judge gave a general circumstantial evidence direction using the distress as a worked example, but did not warn the jury about needing to find a causal link between the distress and the offending, nor that distress evidence generally carries little weight. The Court of Appeal quashed the convictions, holding those directions were required and their absence caused a substantial miscarriage of justice. The Crown appealed to the High Court.",
+    "whatHeld": "The High Court unanimously allowed the appeal and restored the convictions. Evidence of a complainant's pre-trial distress is <b>ordinarily relevant and admissible</b> under ss 55 and 56 of the <i>Evidence Act 2008</i> (Vic), on either or both bases: supporting the complainant's credit (if the jury finds a causal link between distress and the making of the complaint) and supporting that the offending occurred (if the jury finds a causal link between distress and the offending). Weight and acceptance are <b>matters for the jury</b>. Pre-trial distress is <b>not \"evidence of a kind that may be unreliable\"</b> under s 31 of the <i>Jury Directions Act 2015</i> (Vic), so no unreliability warning can be requested for it as a class. A trial judge is <b>not required</b> to warn the jury that (1) it must find a causal link before using the evidence, or (2) that distress evidence generally carries little weight. A <b>general direction on direct/indirect (circumstantial) evidence suffices</b>. The Court of Appeal (and the earlier decisions in <i>Paull</i>, <i>Seccull</i> and <i>Nimely</i>) erred by importing abolished common law rules — corroboration (swept away by s 164 <i>Evidence Act</i>), intermediate-fact requirements (ss 61-62 <i>Jury Directions Act</i>), and unreliability cautions — into the statutory scheme. Only case-specific circumstances (not the mere class of evidence) could ever amount to \"substantial and compelling reasons\" under s 16 for a further direction.",
+    "whatItMeans": "When you build a sexual offence case in Victoria (and note the same statutory logic applies to the equivalent <i>Evidence Act</i> and jury directions framework), <b>evidence that a complainant was distressed when first complaining is legitimate, admissible support for the prosecution case</b> — both for credibility and as circumstantial evidence that the offence occurred. Gather and document it: witness accounts of the complainant's demeanour, emotional state and words at the time of first complaint are worth capturing in statements. You do <b>not</b> need to worry that the law treats such distress as inherently weak or requiring a special warning; the High Court has expressly rejected that. The jury decides what weight to give it. Be aware the defence may still argue the distress had another cause (as here, the complainant's other difficulties), so record surrounding context so a causal link to the offending remains open on the evidence. The strength of any distress evidence still depends on the usual factors — the complainant's age, timing relative to the alleged offence, and surrounding circumstances.",
+    "verdict": "AWARENESS-level for most detectives, but treat as ACTION where distress at first complaint is part of your evidence: capture and document it fully because it is admissible, credibility-enhancing and probative of the offending.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2025/11.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2025/HCA/11",
+    "files": {
+      "llm": "data/files/hca-2025-11/hca-2025-11.md"
+    },
+    "flags": [
+      "This is a Victorian decision applying the Victorian <i>Evidence Act 2008</i> and <i>Jury Directions Act 2015</i>; WA has its own <i>Evidence Act 1906</i> and different jury directions regime, so confirm the WA position before relying on the specific statutory holdings.",
+      "The exact date the offences occurred (2005) and the year of the Children's Court hearing (2006 or 2007) are stated approximately in the judgment.",
+      "The complainant's precise age at the time of the offences is given as \"13 or 14\"."
+    ]
+  },
+  {
     "id": "hca-2022-30",
     "date": "2022-09-07",
     "court": "High Court of Australia",
