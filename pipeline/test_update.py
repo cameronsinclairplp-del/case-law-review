@@ -840,9 +840,9 @@ def _bot_sandbox(pending, metas, texts, analysis=None, audit=None, discovered=No
     saved = (u.DATA, u.CASES_PATH, u.STATE_PATH, u.BLOCKLIST_PATH, u.FILES_DIR, u.fetch_alert_html,
              u.fetch_submissions, u.fetch_judgment_text, hca.lookup, hca.fetch_text, u.analyse, u.get_client,
              AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email,
-             hca.discover, u.MAX_NEW_PER_RUN)
+             hca.discover, u.MAX_NEW_PER_RUN, u.RUN_SECONDS_BUDGET)
     seen = {"emails": [], "watchlist": [], "health": [], "pushed": [], "downloads": [], "analysed": [],
-            "lookups": [], "discover_known": None}
+            "lookups": [], "discover_known": None, "corpus": []}
     with tempfile.TemporaryDirectory() as d:
         u.DATA = pathlib.Path(d)
         u.CASES_PATH = u.DATA / "cases.json"
@@ -853,7 +853,10 @@ def _bot_sandbox(pending, metas, texts, analysis=None, audit=None, discovered=No
         u.STATE_PATH.write_text(json.dumps({"pending": pending, "processed": [], "screenedSeen": []}), encoding="utf-8")
         u.fetch_alert_html = lambda user, pw, since: []
         u.fetch_submissions = lambda user, pw, since, processed: []
-        u.fetch_judgment_text = lambda citation: None
+        def corpus(citation):
+            seen["corpus"].append(citation)
+            return None
+        u.fetch_judgment_text = corpus
         def lookup(citation, name="", **kw):
             seen["lookups"].append((citation, kw.get("url", "")))
             return metas.get(citation)
@@ -887,7 +890,7 @@ def _bot_sandbox(pending, metas, texts, analysis=None, audit=None, discovered=No
             (u.DATA, u.CASES_PATH, u.STATE_PATH, u.BLOCKLIST_PATH, u.FILES_DIR, u.fetch_alert_html,
              u.fetch_submissions, u.fetch_judgment_text, hca.lookup, hca.fetch_text, u.analyse, u.get_client,
              AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email,
-             hca.discover, u.MAX_NEW_PER_RUN) = saved
+             hca.discover, u.MAX_NEW_PER_RUN, u.RUN_SECONDS_BUDGET) = saved
 
 
 def _pending_hca(num, name, first_seen="2026-09-09T00:00:00+00:00"):
@@ -1038,6 +1041,40 @@ def test_bot_spends_to_the_run_budget_and_never_defers_an_emailed_judgment():
     assert rec["via"] == "court" and rec["hcaMeta"]["url"] == FARRUGIA_ROW["url"]
     assert seen["emails"][0][1]["deferred"] == 1
     assert rec["notified"] is True and seen["watchlist"] == []                 # not "a new decision to read"
+    assert seen["corpus"] == []                     # recent High Court citations never touch the corpus
+
+
+def test_bot_stops_making_requests_when_the_clock_budget_is_spent():
+    # 20/09/2026: a slow corpus endpoint x 75 discovered items = a run of hours. Once
+    # the wall-clock budget is gone, nothing is asked of anyone — except that a
+    # judgment emailed in by hand still goes through.
+    sub = {"id": "hca-2020-1", "citation": "[2020] HCA 1", "courtTag": "HCA", "year": "2020", "num": "1",
+           "caseName": "Smith v The Queen", "via": "submission", "jadeUrl": "", "blurb": "", "_msgid": "<m1>",
+           "suppliedText": KO_TEXT.replace("The King v Ko [2026] HCA 29", "Smith v The Queen [2020] HCA 1")}
+    old = _pending_hca(19, "Cullen v New South Wales", first_seen="2026-09-01T00:00:00+00:00")
+    old["year"], old["citation"], old["id"] = "2019", "[2019] HCA 19", "hca-2019-19"   # old enough for the corpus
+    with _bot_sandbox([old], {"[2026] HCA 29": KO_META}, {"[2026] HCA 29": KO_TEXT},
+                      discovered=[KO_ROW]) as seen:
+        u.RUN_SECONDS_BUDGET = -1                                   # spent before the first item
+        u.fetch_submissions = lambda user, pw, since, processed: [dict(sub)]
+        u.main()
+        cases = json.loads(u.CASES_PATH.read_text(encoding="utf-8"))
+        state = json.loads(u.STATE_PATH.read_text(encoding="utf-8"))
+    assert [c["id"] for c in cases] == ["hca-2020-1"]
+    assert seen["corpus"] == [] and seen["lookups"] == [] and seen["downloads"] == []
+    assert {p["id"] for p in state["pending"]} == {"hca-2019-19", "hca-2026-29"}   # both wait, nothing lost
+    assert seen["emails"][0][1]["deferred"] == 2
+
+
+def test_bot_uses_the_corpus_for_older_high_court_citations_only():
+    old = _pending_hca(19, "Cullen v New South Wales")
+    old["year"], old["citation"], old["id"] = "2019", "[2019] HCA 19", "hca-2019-19"
+    recent = _pending_hca(29, "The King v Ko")
+    with _bot_sandbox([old, recent], {"[2026] HCA 29": KO_META}, {"[2026] HCA 29": KO_TEXT}) as seen:
+        u.main()
+    assert seen["corpus"] == ["[2019] HCA 19"]                     # 2026: the Court first, no corpus round-trip
+    assert [c for c, _ in seen["lookups"]] == ["[2019] HCA 19", "[2026] HCA 29"]   # a corpus miss still asks the Court
+    assert seen["analysed"] == ["hca-2026-29"]
 
 
 def test_bot_holds_a_case_the_audit_fails_and_reports_it():

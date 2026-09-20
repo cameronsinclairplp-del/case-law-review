@@ -34,6 +34,7 @@ import smtplib
 import ssl
 import subprocess
 import sys
+import time
 from email.message import EmailMessage
 from pathlib import Path
 from urllib.parse import urlparse
@@ -878,6 +879,15 @@ DISCOVER_YEARS_BACK = 1               # this year and last; page 0 (100 rows) co
 # the budget stays on the queue for the next run. A judgment emailed in by hand is
 # never deferred — a human chose it.
 MAX_NEW_PER_RUN = int(os.environ.get("MAX_NEW_PER_RUN", "5"))
+# A wall-clock budget beside it: once spent, the rest of the queue waits for the next
+# run with no request of any kind. The first discovery run (20/09/2026) ran for hours
+# because a slow upstream (the corpus endpoint at 60-140 s a query) was consulted
+# for every one of 75 items before any budget applied.
+RUN_SECONDS_BUDGET = int(os.environ.get("RUN_SECONDS_BUDGET", str(40 * 60)))
+# A High Court citation of this year or last goes to the Court's own site FIRST: the
+# corpus lags months on the High Court, and the Court is one request with catchwords.
+# Older High Court and interstate citations still resolve from the corpus.
+COURT_FIRST_YEARS_BACK = 1
 # The Court's own catchwords, when we have them (hca.lookup), are the best signal
 # there is — but ONLY their area headings. HCA catchwords are one sentence per area
 # of law, each a chain of " – " segments whose first segment is the Court's own
@@ -1500,17 +1510,32 @@ def main():
     audit_dir = DATA / "audits" / dt.date.today().isoformat()   # committed with data/: the report stays readable
     audited_held = []                                              # (case, report_text) for the email
     new_cases, unresolved, gave_up, errors, processed_now, held = [], [], [], [], [], []
-    analysed, deferred = 0, []                                     # the run budget (MAX_NEW_PER_RUN)
+    analysed, deferred, t0 = 0, [], time.time()                    # the run budget
+    this_year = dt.date.today().year
     for it in work.values():
         try:
-            # Full text comes ONLY from the openly-licensed Open Australian Legal
-            # Corpus. AustLII/JADE scraping was removed - their terms forbid it
-            # (AustLII's policy bars scraping AND AI/LLM use). The corpus carries
-            # HCA/interstate judgments but NO WA cases, so WASC/WASCA fall through
-            # to the watchlist + the human-in-the-loop ingest path (pipeline/ingest.py).
-            # email-submitted judgments carry their own verbatim text; everything
-            # else resolves from the corpus (HCA/interstate; WA always returns None).
-            text = it.get("suppliedText") or fetch_judgment_text(it["citation"])
+            # The run budget comes FIRST: once it is spent (MAX_NEW_PER_RUN analyses,
+            # or RUN_SECONDS_BUDGET on the clock) an item makes no request of any
+            # kind — not the corpus, not the Court, no download — and waits on the
+            # queue for the next run. A judgment emailed in by hand is never deferred.
+            if not it.get("suppliedText") and (analysed >= MAX_NEW_PER_RUN
+                                               or time.time() - t0 > RUN_SECONDS_BUDGET):
+                deferred.append(it)
+                unresolved.append(it)
+                log(f"  deferred {it['id']} ({it['citation']}): this run's budget is spent "
+                    f"({analysed} analyses, {(time.time() - t0) / 60:.0f} min) — next run, no request made")
+                continue
+            # Full text comes from the openly-licensed Open Australian Legal Corpus
+            # or, for the High Court, the Court's own site (hca.py). AustLII/JADE
+            # scraping was removed - their terms forbid it (AustLII's policy bars
+            # scraping AND AI/LLM use). The corpus carries HCA/interstate judgments
+            # but NO WA cases, so WASC/WASCA fall through to the watchlist + the
+            # human-in-the-loop ingest path (pipeline/ingest.py). Email-submitted
+            # judgments carry their own verbatim text. A recent High Court citation
+            # skips the corpus (it lags months there) and goes straight to the Court.
+            court_first = (it["courtTag"] in hca.COURTS and str(it.get("year", "")).isdigit()
+                           and int(it["year"]) >= this_year - COURT_FIRST_YEARS_BACK)
+            text = it.get("suppliedText") or (None if court_first else fetch_judgment_text(it["citation"]))
             source, warns = None, []
             if not text and it["courtTag"] in hca.COURTS:
                 # The Court's own site: read the judgment page first (name, date,
@@ -1531,12 +1556,6 @@ def main():
                     unresolved.append(it)
                     log(f"  HELD {it['id']} ({it['citation']}): {hold_why} — on what the Court's "
                         f"page said on an earlier run; not asked again")
-                    continue
-                if analysed >= MAX_NEW_PER_RUN:                 # the budget: no lookup, no download
-                    deferred.append(it)
-                    unresolved.append(it)
-                    log(f"  deferred {it['id']} ({it['citation']}): this run's budget of "
-                        f"{MAX_NEW_PER_RUN} analyses is spent — next run")
                     continue
                 meta = None
                 try:
@@ -1585,12 +1604,6 @@ def main():
                     f"— watchlist only, not auto-analysed")
                 continue
             it.pop("holdReason", None)
-            if analysed >= MAX_NEW_PER_RUN and not it.get("suppliedText"):
-                deferred.append(it)
-                unresolved.append(it)
-                log(f"  deferred {it['id']} ({it['citation']}): this run's budget of "
-                    f"{MAX_NEW_PER_RUN} analyses is spent — next run")
-                continue
             truncated = len(text) > MAX_JUDGMENT_CHARS
             if truncated:
                 text = text[:MAX_JUDGMENT_CHARS]
