@@ -6,8 +6,10 @@
 # What it does before the real work:
 #   * waits until nothing in Cases/ has been modified for a minute — WatchPaths fires
 #     on the first byte of a download, and half a Word file would fail the citation check;
-#   * creates pipeline/.venv on first use (bs4 + anthropic) so nothing depends on
-#     the system python;
+#   * creates ~/.venvs/case-law-review on first use (bs4 + anthropic) so nothing
+#     depends on the system python — OUTSIDE OneDrive on purpose: a venv inside the
+#     synced folder gets evicted by Files On-Demand and `import anthropic` then
+#     blocks for minutes while OneDrive rehydrates it one file at a time (20/09/2026);
 #   * loads pipeline/.env (ANTHROPIC_API_KEY) into the environment;
 #   * appends everything to pipeline/watch/add_case.log (gitignored).
 # add_case.py itself refuses to run twice at once (pipeline/.add_case.lock), skips
@@ -31,10 +33,10 @@ while true; do
   if (( waited >= 900 )); then echo "still changing after 15 min — giving up this round"; exit 0; fi
 done
 
-VENV="$ROOT/pipeline/.venv"
+VENV="${VENV:-$HOME/.venvs/case-law-review}"   # never inside OneDrive (see above)
 if [[ ! -x "$VENV/bin/python" ]]; then
   echo "creating $VENV"
-  python3 -m venv "$VENV" && "$VENV/bin/pip" -q install -r "$ROOT/pipeline/requirements.txt" || exit 1
+  mkdir -p "${VENV:h}" && python3 -m venv "$VENV" && "$VENV/bin/pip" -q install -r "$ROOT/pipeline/requirements.txt" || exit 1
 fi
 if [[ -f "$ROOT/pipeline/.env" ]]; then
   set -a; source "$ROOT/pipeline/.env"; set +a

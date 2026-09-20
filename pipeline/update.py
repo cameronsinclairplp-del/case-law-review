@@ -1056,8 +1056,9 @@ def write_llm_file(case, judgment_text, analysis, source=None):
         "---", "",
         f"# {case['caseName']} {case['citation']}", "",
         *(["_Held for review — the fact-check found problems with this write-up "
-           "(pipeline/add_case.py --audit); treat every statement below as unverified "
-           "until the hold is cleared._", ""] if case.get("needsReview") else []),
+           "(pipeline/audit.py, run by the daily bot and by add_case.py --audit); treat "
+           "every statement below as unverified until the hold is cleared._", ""]
+          if case.get("needsReview") else []),
         "## One line", case["oneLine"], "",
         "## What happened", strip_tags(case["whatHappened"]), "",
         "## What the Court held", strip_tags(case["whatHeld"]), "",

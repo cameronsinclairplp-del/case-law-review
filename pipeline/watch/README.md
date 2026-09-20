@@ -5,7 +5,7 @@
     python pipeline/add_case.py --batch Cases/ --audit --push
 
 so that a launchd agent can fire it every time `Cases/` changes. It waits for the
-folder to go quiet (a download in progress is not a judgment yet), makes a venv on
+folder to go quiet (a download in progress is not a judgment yet), makes a venv at `~/.venvs/case-law-review` (outside OneDrive — a venv inside the synced folder gets evicted and imports hang) on
 first use, loads `pipeline/.env`, and logs to `add_case.log` here (gitignored).
 
 Install once (the plist carries this Mac's absolute repo path — edit it if the repo moves):
