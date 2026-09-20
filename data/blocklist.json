@@ -14,6 +14,27 @@
       "caseName": "MRV v SNW [No 2]",
       "reason": "Family Court of WA appeal (CACV 32 of 2025; property adjustment and children's surname orders; Family Court Act 1997 (WA) s 205ZG) - not criminal law. It was in the eCourts 'recent decisions' list Cameron downloaded on 14/09/2026 and add_case.py trusts a human-supplied file, so it was analysed and published for about an hour. Removed from cases.json the same day; the PDF moved to Cases/_not-criminal/. Blocked so a re-run of the batch or a future alert cannot re-add it.",
       "blockedOn": "2026-09-14"
+    },
+    {
+      "id": "hca-2026-34",
+      "citation": "[2026] HCA 34",
+      "caseName": "Dale Haines by his litigation guardian Barbara Ramjan v Attorney General of NSW",
+      "reason": "NSW forensic-patient extension order (Mental Health and Cognitive Impairment Forensic Provisions Act 2020 (NSW) s 122(1)); the appeal was allowed on a concession and the construction point was not decided - nothing for a WA criminal investigator. The Court's own catchword area is 'Mental health'. Auto-published by the High Court fetcher's first run on 20/09/2026 because the old catchwords gate keyword-matched 'forensic' anywhere in the text (HANDOFF 7.8); the gate now reads only the Court's area headings. Removed from cases.json the same day; the .md moved to Cases/_not-criminal/. Blocked so a re-run cannot re-add it - delete this entry and forward the citation (INGEST) if it is wanted.",
+      "blockedOn": "2026-09-20"
+    },
+    {
+      "id": "hca-2026-32",
+      "citation": "[2026] HCA 32",
+      "caseName": "GXT25 v Minister for Immigration and Citizenship",
+      "reason": "Migration judicial review (protection visa refusal; procedural fairness; Migration Act 1958 (Cth) ss 57, 486A) - not criminal. The Court's own catchword area is 'Administrative law'. Auto-published by the High Court fetcher's first run on 20/09/2026 because the old catchwords gate keyword-matched 'sexual' and 'fabricat' anywhere in the text (HANDOFF 7.8); the gate now reads only the Court's area headings. Removed from cases.json the same day; the .md moved to Cases/_not-criminal/. Blocked so a re-run cannot re-add it.",
+      "blockedOn": "2026-09-20"
+    },
+    {
+      "id": "hca-2026-30",
+      "citation": "[2026] HCA 30",
+      "caseName": "Coal Mining Industry (Long Service Leave Funding) Corporation v Orica Australia Pty Ltd",
+      "reason": "Civil industrial-law construction case (portable long service leave; Black Coal Mining Industry Award 2010 cl 4.3(g)) - nothing for a WA criminal investigator. The Court's own catchword area is 'Industrial law (Cth)'. Auto-published by the High Court fetcher's first run on 20/09/2026 because the old catchwords gate keyword-matched 'exclud' anywhere in the text (HANDOFF 7.8); the gate now reads only the Court's area headings. Removed from cases.json the same day; the .md moved to Cases/_not-criminal/. Blocked so a re-run cannot re-add it.",
+      "blockedOn": "2026-09-20"
     }
   ]
 }
