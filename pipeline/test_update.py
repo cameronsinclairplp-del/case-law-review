@@ -534,8 +534,12 @@ def test_auto_analysis_trusts_the_courts_catchwords_when_present():
 
 def test_pending_record_carries_the_catchwords():
     rec = u._pending_record({"id": "hca-2026-31", "citation": "[2026] HCA 31", "courtTag": "HCA", "year": "2026",
-                             "num": "31", "catchwords": "Legal practitioners – Costs"})
+                             "num": "31", "catchwords": "Legal practitioners – Costs",
+                             "hcaMeta": {"decided": "09/09/2026", "pdf": "https://www.hcourt.gov.au/x/31.pdf"}})
     assert rec["catchwords"] == "Legal practitioners – Costs"
+    assert rec["hcaMeta"] == {"decided": "09/09/2026", "pdf": "https://www.hcourt.gov.au/x/31.pdf"}
+    assert u._pending_record({"id": "x", "citation": "[2026] HCA 1", "courtTag": "HCA", "year": "2026",
+                              "num": "1"})["hcaMeta"] == {}
     assert u._pending_record({"id": "x", "citation": "[2026] HCA 1", "courtTag": "HCA", "year": "2026",
                               "num": "1"})["catchwords"] == ""
 
@@ -916,6 +920,40 @@ def test_bot_resolves_hca_from_the_court_gates_on_catchwords_and_audits():
     assert len(seen["emails"]) == 1 and seen["emails"][0][2] == [] and seen["emails"][0][1]["auditHeld"] == 0
     assert len(seen["watchlist"]) == 1 and [w["id"] for w in seen["watchlist"][0][0]] == ["hca-2026-33"]
     assert seen["pushed"] and seen["pushed"][0].startswith("Pipeline: add 1 case")
+
+
+def test_bot_does_not_ask_the_court_again_for_a_case_its_page_already_held():
+    import hca
+    # 33: held last run on the Court's catchwords; 31: the Court's page had no
+    # catchwords and the name rule held it (hcaMeta stored, caseName from the Court)
+    egh = _pending_hca(33, "EGH19 v Minister for Immigration & Citizenship")
+    egh["catchwords"] = EGH_META["catchwords"]
+    egh["holdReason"] = "HCA: the Court's catchwords are not criminal — area: Migration — 'Migration – Visa'"
+    egh["heldNotified"] = True
+    daily = _pending_hca(31, "R Lawyers v Mr Daily [No 2]")
+    daily["hcaMeta"] = {"decided": "09/09/2026", "coram": "Gageler CJ", "caseNumber": "A8/2025",
+                        "url": "https://www.hcourt.gov.au/x/31", "pdf": "https://www.hcourt.gov.au/x/31.pdf"}
+    daily["holdReason"] = "HCA: no criminal party in the case name and no single-case investigation/evidence topic"
+    daily["heldNotified"] = True
+    calls = []
+    with _bot_sandbox([egh, daily], {"[2026] HCA 33": EGH_META}, {}) as seen:
+        inner = hca.lookup
+        hca.lookup = lambda citation, name="", **kw: (calls.append(citation), inner(citation, name, **kw))[1]
+        u.main()
+        assert calls == [], f"the Court was asked again for a case its own page already held: {calls}"
+        assert seen["downloads"] == [] and seen["analysed"] == []
+        state = json.loads(u.STATE_PATH.read_text(encoding="utf-8"))
+        by_id = {p["id"]: p for p in state["pending"]}
+        assert "area: Migration" in by_id["hca-2026-33"]["holdReason"]
+        assert by_id["hca-2026-33"]["catchwords"].startswith("Migration")
+        assert "no criminal party" in by_id["hca-2026-31"]["holdReason"]
+        assert by_id["hca-2026-31"]["hcaMeta"]["pdf"].endswith("/31.pdf")      # survives the round trip
+    # a stored gate verdict is re-read every run: catchwords that PASS go to the Court and the download
+    ko = _pending_hca(29, "The King v Ko")
+    ko["catchwords"] = KO_META["catchwords"]
+    with _bot_sandbox([ko], {"[2026] HCA 29": KO_META}, {"[2026] HCA 29": KO_TEXT}) as seen:
+        u.main()
+        assert seen["downloads"] == ["[2026] HCA 29"] and seen["analysed"] == ["hca-2026-29"]
 
 
 def test_bot_holds_a_case_the_audit_fails_and_reports_it():

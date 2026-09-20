@@ -1460,6 +1460,20 @@ def main():
             if not text and it["courtTag"] in hca.COURTS:
                 # The Court's own site: read the judgment page first (name, date,
                 # catchwords), gate on the catchwords, and only then download.
+                # An item an earlier run already took to the Court (catchwords /
+                # hcaMeta in its pending record) is re-gated on what is stored and,
+                # if still held, is NOT looked up again: 3 runs a day x ~5 requests
+                # would otherwise go to hcourt.gov.au for nothing. A gate change
+                # still applies here; a pass goes on to a fresh lookup and the download.
+                consulted = bool(it.get("catchwords") or it.get("hcaMeta"))
+                ok_auto, hold_why = auto_analysis_ok(it) if consulted else (True, "")
+                if not ok_auto:
+                    it["holdReason"] = hold_why
+                    held.append(it)
+                    unresolved.append(it)
+                    log(f"  HELD {it['id']} ({it['citation']}): {hold_why} — on what the Court's "
+                        f"page said on an earlier run; not asked again")
+                    continue
                 meta = None
                 try:
                     meta = hca.lookup(it["citation"], it.get("caseName", ""))
@@ -1630,6 +1644,7 @@ def _pending_record(it):
         "holdReason": it.get("holdReason", ""),
         "heldNotified": bool(it.get("heldNotified", False)),
         "catchwords": it.get("catchwords", ""),
+        "hcaMeta": dict(it.get("hcaMeta") or {}),
     }
 
 
