@@ -454,17 +454,72 @@ def test_topic_alone_would_hold_the_genuine_hca_cases():
             f"TOPIC_KEYWORDS now matches {blurb!r} — do NOT simplify away the party pass"
 
 
+# The three the fetcher's first run published (20/09/2026) — each carries a keyword
+# the old gate matched anywhere in the text ('forensic', 'sexual'/'fabricat', 'exclud').
+# Abridged from the Court's pages; the shape (area – segment – … . Words and
+# phrases – … . Act …) is the Court's.
+HAINES_CATCH = ('Mental health – Forensic patient – Extension of status as forensic patient – Where making '
+                'of extension order subject to Mental Health and Cognitive Impairment Forensic Provisions '
+                'Act 2020 (NSW), s 122(1) – Whether to accept concession. Words and phrases – "extension '
+                'order", "forensic patient", "unfit to be tried". Mental Health and Cognitive Impairment '
+                'Forensic Provisions Act 2020 (NSW) , s 122(1).')
+GXT25_CATCH = ('Administrative law – Judicial review – Where delegate refused application for Protection '
+               '(Subclass 866) visa – Where plaintiff claimed protection on basis of fear of harm by reason '
+               'of religion –Where plaintiff subsequently raised fear of harm by reason of sexual orientation '
+               '– Where delegate found sexual orientation claim fabricated – Whether denial of procedural '
+               'fairness. Words and phrases – "adverse inference", "fabricated claim". Migration Act 1958 '
+               '(Cth) , ss 57, 486A.')
+ORICA_CATCH = ('Industrial law (Cth) – Coal industry – Statutory interpretation – Where cl 4.3(g) of Award '
+               'excluded "supply of shotfiring or other explosive services by an employer not otherwise '
+               'engaged in the black coal mining industry" – Whether cl 4.3(g) of Award applied to location '
+               'limb. Words and phrases – "eligible employee", "shotfirer". Coal Mining Industry (Long '
+               'Service Leave) Administration Act 1992 (Cth) , ss 3, 4(1), 39A(1).')
+
+
+def test_catchword_areas_reads_the_courts_area_headings():
+    assert u.catchword_areas(HAINES_CATCH) == ["Mental health"]
+    assert u.catchword_areas(GXT25_CATCH) == ["Administrative law"]
+    assert u.catchword_areas(ORICA_CATCH) == ["Industrial law (Cth)"]
+    # several areas, in the Court's order, stopping at Words and phrases (a typo'd
+    # "Words and phrase s" is on the live EGH19 page); a minus sign or an unspaced
+    # dash (both on live pages) is a segment break; a hyphen inside a word is not
+    two = ("Constitutional law (Cth) − Judicial power of Commonwealth – Chapter III. Criminal law –Sentencing "
+           "– Non-parole period – ss 10-11. Words and phrase s – \"non-parole\". Crimes Act 1914 (Cth), s 19AB.")
+    assert u.catchword_areas(two) == ["Constitutional law (Cth)", "Criminal law"]
+    assert u.catchword_areas("Bail – Application for bail pending special leave.") == ["Bail"]
+    assert u.catchword_areas("") == [] and u.catchword_areas(None) == []
+    assert u.criminal_catchwords(two) and u.criminal_catchwords("Evidence – Admissibility.")
+    assert u.criminal_catchwords("Proceeds of crime – Forfeiture order.") and u.criminal_catchwords("Police – Powers.")
+    for c in (HAINES_CATCH, GXT25_CATCH, ORICA_CATCH):
+        assert not u.criminal_catchwords(c), c[:40]
+    # the keyword the old gate fell for is still in the text: the heading is what decides
+    assert u.TOPIC_KEYWORDS.search(HAINES_CATCH) and u.TOPIC_KEYWORDS.search(GXT25_CATCH) and u.TOPIC_KEYWORDS.search(ORICA_CATCH)
+    # a keyword in a LATER segment of a non-criminal area does not rescue it
+    assert not u.criminal_catchwords("Torts – Police – False imprisonment – Whether arrest lawful.")
+    assert not u.criminal_catchwords("Migration – Character test – Where criminal record – Sentence of 12 months.")
+
+
 def test_auto_analysis_trusts_the_courts_catchwords_when_present():
-    # hca.lookup() puts the Court's own catchwords on the item: they decide, whatever
-    # the party names look like. "R Lawyers v Mr Daily" has a criminal-looking name
-    # and a civil subject; "EGH19 v Minister" is migration; "The King v Ko" is criminal.
+    # hca.lookup() puts the Court's own catchwords on the item: their AREA HEADINGS
+    # decide, whatever the party names or the rest of the text look like. "R Lawyers
+    # v Mr Daily" has a criminal-looking name and a civil subject; "EGH19 v Minister"
+    # is migration; "The King v Ko" is criminal.
     it = _hca("R Lawyers v Mr Daily [No 2]", "R Lawyers v Mr Daily [No 2] [2026] HCA 31")
     it["catchwords"] = "Legal practitioners – Costs – Solicitor's lien – Whether lien survives termination of retainer."
     ok, why = u.auto_analysis_ok(it)
     assert not ok and "catchwords are not criminal" in why and "Solicitor's lien" in why
+    assert "area: Legal practitioners" in why
     it = _hca("EGH19 v Minister for Immigration & Citizenship", "EGH19 v Minister [2026] HCA 33")
     it["catchwords"] = "Migration – Visa cancellation – Whether decision affected by jurisdictional error."
     assert not u.auto_analysis_ok(it)[0]
+    # the three the first run published: held now, with the Court's area in the reason
+    for name, catch, area in (("Dale Haines by his litigation guardian Barbara Ramjan v Attorney General of NSW", HAINES_CATCH, "Mental health"),
+                              ("GXT25 v Minister for Immigration and Citizenship", GXT25_CATCH, "Administrative law"),
+                              ("Coal Mining Industry (Long Service Leave Funding) Corporation v Orica Australia Pty Ltd", ORICA_CATCH, "Industrial law (Cth)")):
+        it = _hca(name, f"{name} [2026] HCA 30")
+        it["catchwords"] = catch
+        ok, why = u.auto_analysis_ok(it)
+        assert not ok and f"area: {area}" in why, (name, why)
     it = _hca("Ko v The King", "Ko v The King [2026] HCA 29")
     it["catchwords"] = "Criminal practice – Trial – Adequacy of jury directions – Attempted importation of a border controlled drug."
     assert u.auto_analysis_ok(it)[0]
@@ -748,6 +803,151 @@ def test_write_llm_file_records_source_when_given():
 # ---------------------------------------------------------------------------
 # zero-dependency runner
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# The daily bot end to end — the Court route and the fact-check (20/09/2026).
+# Everything external is stubbed: IMAP, the corpus, the Court's site, the two
+# model calls, git, SMTP. What is pinned:
+#   * a pending HCA item the corpus cannot supply is resolved from the Court's own
+#     site, gated on the Court's catchwords BEFORE any download, and published with
+#     the Court's judgment date and the licence attribution in the .md;
+#   * a Court item whose catchwords are not criminal is HELD on the watchlist with
+#     no download and no model call;
+#   * every built case is audited; a PROBLEMS verdict holds it (no call, report on
+#     disk under data/audits/, report text in the email); a CLEAN one keeps its call.
+# ---------------------------------------------------------------------------
+BOT_ANALYSIS = {
+    "oneLine": "A jury-direction appeal.", "whatHappened": "KO was tried.", "whatHeld": "Appeal <b>dismissed</b>.",
+    "whatItMeans": "Direct the jury properly.", "verdict": "AWARENESS — a directions case.",
+    "outcome": "Appeal dismissed", "weight": "Full court", "tags": ["jury directions"], "relevance": "AWARENESS",
+    "decided": "01/01/2026", "appealFrom": "NSWCCA", "flags": [],
+}
+BOT_CLEAN = {"verdict": "CLEAN", "problems": [], "unconfirmed": []}
+BOT_DIRTY = {"verdict": "PROBLEMS", "unconfirmed": [],
+             "problems": [{"field": "whatHeld", "claim": "dismissed", "why": "it was allowed", "judgmentSays": "Appeal allowed."}]}
+
+
+@contextlib.contextmanager
+def _bot_sandbox(pending, metas, texts, analysis=None, audit=None):
+    """Temp data dir; stubs for IMAP/corpus/Court/model/git/mail. Yields a dict that
+    collects what the bot did (emails, pushes, downloads)."""
+    import hca
+    import audit as AU
+    saved = (u.DATA, u.CASES_PATH, u.STATE_PATH, u.BLOCKLIST_PATH, u.FILES_DIR, u.fetch_alert_html,
+             u.fetch_submissions, u.fetch_judgment_text, hca.lookup, hca.fetch_text, u.analyse, u.get_client,
+             AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email)
+    seen = {"emails": [], "watchlist": [], "health": [], "pushed": [], "downloads": [], "analysed": []}
+    with tempfile.TemporaryDirectory() as d:
+        u.DATA = pathlib.Path(d)
+        u.CASES_PATH = u.DATA / "cases.json"
+        u.STATE_PATH = u.DATA / "state.json"
+        u.BLOCKLIST_PATH = u.DATA / "blocklist.json"
+        u.FILES_DIR = u.DATA / "files"
+        u.CASES_PATH.write_text("[]", encoding="utf-8")
+        u.STATE_PATH.write_text(json.dumps({"pending": pending, "processed": [], "screenedSeen": []}), encoding="utf-8")
+        u.fetch_alert_html = lambda user, pw, since: []
+        u.fetch_submissions = lambda user, pw, since, processed: []
+        u.fetch_judgment_text = lambda citation: None
+        hca.lookup = lambda citation, name="", **kw: metas.get(citation)
+
+        def fetch_text(meta):
+            seen["downloads"].append(meta["citation"])
+            return texts[meta["citation"]], ["no counsel / solicitors block found"], hca.source_label(meta)
+        hca.fetch_text = fetch_text
+
+        def analyse(client, item, text, truncated):
+            seen["analysed"].append(item["id"])
+            return json.loads(json.dumps(analysis or BOT_ANALYSIS))
+        u.analyse = analyse
+        u.get_client = lambda: object()
+        AU.audit_case = audit or (lambda client, case, text: json.loads(json.dumps(BOT_CLEAN)))
+        u.commit_and_push = lambda label: (seen["pushed"].append(label), True)[1]
+        u.send_email = lambda user, pw, cases, stats=None, held=None: seen["emails"].append((cases, stats, held))
+        u.send_watchlist_email = lambda user, pw, items, stats=None: seen["watchlist"].append((items, stats))
+        u.send_health_email = lambda user, pw, stats, errors, gave_up: seen["health"].append(stats)
+        os.environ.setdefault("MAIL_USERNAME", "bot@example.invalid")
+        os.environ.setdefault("MAIL_PASSWORD", "x")
+        try:
+            yield seen
+        finally:
+            (u.DATA, u.CASES_PATH, u.STATE_PATH, u.BLOCKLIST_PATH, u.FILES_DIR, u.fetch_alert_html,
+             u.fetch_submissions, u.fetch_judgment_text, hca.lookup, hca.fetch_text, u.analyse, u.get_client,
+             AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email) = saved
+
+
+def _pending_hca(num, name, first_seen="2026-09-09T00:00:00+00:00"):
+    return {"id": f"hca-2026-{num}", "citation": f"[2026] HCA {num}", "courtTag": "HCA", "year": "2026",
+            "num": str(num), "caseName": name, "jadeUrl": "", "blurb": name, "via": "link",
+            "nameSuspect": False, "firstSeen": first_seen, "notified": True, "holdReason": "", "heldNotified": False}
+
+
+KO_META = {"name": "The King v Ko", "citation": "[2026] HCA 29", "decided": "12/08/2026", "caseNumber": "S172/2025",
+           "coram": "Gageler CJ", "catchwords": "Criminal practice – Trial – Adequacy of jury directions.",
+           "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-08-12/HCA/Ko.pdf", "docx": "",
+           "url": "https://www.hcourt.gov.au/x/king-v-ko"}
+EGH_META = dict(KO_META, name="EGH19 v Minister for Immigration & Citizenship", citation="[2026] HCA 33",
+                catchwords="Migration – Visa cancellation – Jurisdictional error.", pdf="https://www.hcourt.gov.au/x/33.pdf")
+KO_TEXT = "HIGH COURT OF AUSTRALIA\nGAGELER CJ\n\nThe King v Ko [2026] HCA 29\n\n" + ("The appeal is dismissed. " * 80)
+
+
+def test_bot_resolves_hca_from_the_court_gates_on_catchwords_and_audits():
+    pending = [_pending_hca(29, "The King v Ko"), _pending_hca(33, "EGH19 v Minister for Immigration & Citizenship")]
+    with _bot_sandbox(pending, {"[2026] HCA 29": KO_META, "[2026] HCA 33": EGH_META}, {"[2026] HCA 29": KO_TEXT}) as seen:
+        u.main()
+        cases = json.loads(u.CASES_PATH.read_text(encoding="utf-8"))
+        state = json.loads(u.STATE_PATH.read_text(encoding="utf-8"))
+        md = (u.FILES_DIR / "hca-2026-29" / "hca-2026-29.md").read_text(encoding="utf-8")
+        reports = sorted(p.name for p in (u.DATA / "audits").rglob("*.md"))
+    # Ko: fetched from the Court, published with a call, the Court's date, the attribution
+    assert seen["downloads"] == ["[2026] HCA 29"] and seen["analysed"] == ["hca-2026-29"]
+    assert [c["id"] for c in cases] == ["hca-2026-29"]
+    ko = cases[0]
+    assert ko["relevance"] == "AWARENESS" and "needsReview" not in ko
+    assert ko["decided"] == "12/08/2026" and ko["date"] == "2026-08-12"      # the Court's date beat the model's 01/01/2026
+    assert ko["caseName"] == "The King v Ko"
+    assert "cleaner: no counsel / solicitors block found" in ko["flags"]
+    assert 'source: "High Court of Australia (copy of the version at https://www.hcourt.gov.au/sites/default/files/eresources/2026-08-12/HCA/Ko.pdf)"' in md
+    assert reports == ["hca-2026-29.md"]                                      # audited, CLEAN, report kept
+    # EGH19: the Court's catchwords say migration -> held on the watchlist, no download, no model call
+    held = [p for p in state["pending"] if p["id"] == "hca-2026-33"]
+    assert held and "catchwords are not criminal" in held[0]["holdReason"] and "Migration" in held[0]["holdReason"]
+    assert held[0]["catchwords"].startswith("Migration") and held[0]["caseName"].startswith("EGH19")
+    assert not any(p["id"] == "hca-2026-29" for p in state["pending"])
+    # one new-cases email (nothing held by the audit), one watchlist email carrying the hold, one push
+    assert len(seen["emails"]) == 1 and seen["emails"][0][2] == [] and seen["emails"][0][1]["auditHeld"] == 0
+    assert len(seen["watchlist"]) == 1 and [w["id"] for w in seen["watchlist"][0][0]] == ["hca-2026-33"]
+    assert seen["pushed"] and seen["pushed"][0].startswith("Pipeline: add 1 case")
+
+
+def test_bot_holds_a_case_the_audit_fails_and_reports_it():
+    pending = [_pending_hca(29, "The King v Ko")]
+    with _bot_sandbox(pending, {"[2026] HCA 29": KO_META}, {"[2026] HCA 29": KO_TEXT},
+                      audit=lambda client, case, text: json.loads(json.dumps(BOT_DIRTY))) as seen:
+        u.main()
+        cases = json.loads(u.CASES_PATH.read_text(encoding="utf-8"))
+        md = (u.FILES_DIR / "hca-2026-29" / "hca-2026-29.md").read_text(encoding="utf-8")
+        report_files = list((u.DATA / "audits").rglob("hca-2026-29.md"))
+        report_text = report_files[0].read_text(encoding="utf-8") if report_files else ""
+    ko = cases[0]
+    assert ko["relevance"] == "" and ko["needsReview"]["problems"] == 1 and ko["needsReview"]["call"] == "AWARENESS"
+    assert ko["needsReview"]["report"].startswith("data/audits/") and ko["needsReview"]["report"].endswith("hca-2026-29.md")
+    assert "VERDICT: PROBLEMS" in report_text and "it was allowed" in report_text and "daily bot" in report_text
+    assert "needsReview: true" in md
+    cases_sent, stats, held = seen["emails"][0]
+    assert stats["auditHeld"] == 1 and len(held) == 1 and held[0][0]["id"] == "hca-2026-29"
+    assert "it was allowed" in held[0][1]
+
+
+def test_bot_holds_when_the_audit_call_itself_fails():
+    def broken(client, case, text):
+        raise RuntimeError("audit refused by safety classifier")
+    with _bot_sandbox([_pending_hca(29, "The King v Ko")], {"[2026] HCA 29": KO_META},
+                      {"[2026] HCA 29": KO_TEXT}, audit=broken) as seen:
+        u.main()
+        cases = json.loads(u.CASES_PATH.read_text(encoding="utf-8"))
+    assert cases[0]["relevance"] == "" and cases[0]["needsReview"]["problems"] == 1
+    assert "audit call failed" in seen["emails"][0][2][0][1]
+
+
 def _main():
     tests = [(n, f) for n, f in sorted(globals().items())
              if n.startswith("test_") and callable(f)]

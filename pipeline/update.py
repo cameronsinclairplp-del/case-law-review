@@ -43,6 +43,7 @@ from bs4 import BeautifulSoup
 # Sibling module (pipeline/ is sys.path[0] when run as `python pipeline/update.py`).
 from corpus import fetch_judgment_text  # legitimate full-text source (Open Australian Legal Corpus)
 import hca                               # the High Court's own site (terms expressly permit reproduction)
+import audit                             # the fact-check every entry passes before it carries a call
 
 # ---------------------------------------------------------------------------
 # Config
@@ -868,9 +869,41 @@ def _screened_out(why):
 # ---------------------------------------------------------------------------
 AUTO_ANALYSIS_SIGNAL_COURTS = {"HCA", "HCASJ"}
 # The Court's own catchwords, when we have them (hca.lookup), are the best signal
-# there is: "Criminal practice – Trial – …" is in; "Migration – Visa cancellation –
-# …" is out, whatever the party names look like ("R Lawyers v Mr Daily").
-CRIMINAL_CATCHWORDS = re.compile(r"\bcriminal\b|\bevidence\b|\bsentenc|\bconfession|\bpolice\b", re.I)
+# there is — but ONLY their area headings. HCA catchwords are one sentence per area
+# of law, each a chain of " – " segments whose first segment is the Court's own
+# classification ("Criminal practice – Trial – Adequacy of jury directions – …"),
+# then a "Words and phrases – …" sentence, then the legislation cited. Matching
+# keywords anywhere in them is how the fetcher's first run (20/09/2026) published
+# a NSW forensic-patient order ("Mental health – Forensic patient …" -> 'forensic'),
+# a migration appeal ("Administrative law – … sexual orientation claim fabricated"
+# -> 'sexual', 'fabricat') and a coal-industry award case ("Industrial law (Cth) –
+# … Award excluded …" -> 'exclud'). All three were removed and blocklisted the same
+# day. The heading is the Court's classification: use it and nothing else. Anything
+# held here still reaches the watchlist email with the area named, and an INGEST
+# email overrides the gate — the cost of a wrong hold is one forwarded email.
+CATCHWORD_AREAS = re.compile(r"^(?:criminal|evidence|sentenc|police|bail|proceeds of crime|confiscat)", re.I)
+CATCHWORD_SEGMENT = re.compile(r"\s+[–−—]\s*|\s*[–−—]\s+|\s+-\s+")   # en dash / minus / em dash; a hyphen only when spaced
+
+
+def catchword_areas(catchwords):
+    """The area heading of every sentence of the Court's catchwords, in order, up to
+    the "Words and phrases" sentence: 'Mental health – Forensic patient – … . Words
+    and phrases – "…". Mental Health … Act 2020 (NSW), s 122(1).' -> ['Mental health'];
+    'Constitutional law (Cth) – … . Criminal law – Sentencing – … .' -> both."""
+    text = " ".join(str(catchwords or "").split())
+    out = []
+    for sentence in re.split(r"(?<=\.)\s+", text):
+        head = CATCHWORD_SEGMENT.split(sentence, maxsplit=1)[0].strip(" .")
+        if head.lower().startswith("words and phrase"):
+            break
+        if head:
+            out.append(head)
+    return out
+
+
+def criminal_catchwords(catchwords):
+    """True when the Court filed the judgment under an area this library is for."""
+    return any(CATCHWORD_AREAS.search(a) for a in catchword_areas(catchwords))
 
 
 def auto_analysis_ok(item):
@@ -879,11 +912,12 @@ def auto_analysis_ok(item):
     if item.get("suppliedText") or item.get("via") == "submission":
         return True, ""                       # you chose it and supplied the text
     catch = " ".join(str(item.get("catchwords") or "").split())
-    if catch:                                 # the Court's own one-line description
-        if CRIMINAL_CATCHWORDS.search(catch) or TOPIC_KEYWORDS.search(catch):
+    if catch:                                 # the Court's own classification decides
+        if criminal_catchwords(catch):
             return True, ""
-        return False, (f"{item.get('courtTag', '')}: the Court's catchwords are not criminal or "
-                       f"investigative — '{catch[:140]}'")
+        areas = "; ".join(catchword_areas(catch)[:2]) or "?"
+        return False, (f"{item.get('courtTag', '')}: the Court's catchwords are not criminal — "
+                       f"area: {areas} — '{catch[:140]}'")
     if item.get("nameSuspect"):
         return False, ("the case name could not be parsed cleanly — it would be "
                        "published under a name nobody has verified")
@@ -1102,28 +1136,44 @@ def commit_and_push(label):
 # ---------------------------------------------------------------------------
 # Email
 # ---------------------------------------------------------------------------
-def send_email(user, password, new_cases, stats=None):
+def send_email(user, password, new_cases, stats=None, audited_held=None):
     n = len(new_cases)
     today = dt.datetime.now(dt.timezone.utc).strftime("%d/%m/%Y")
-    subject = f"WA Case-Law Review — {n} new {'case' if n == 1 else 'cases'} ({today})"
+    n_held = len(audited_held or [])
+    subject = (f"WA Case-Law Review — {n} new {'case' if n == 1 else 'cases'} ({today})"
+               + (f" — {n_held} held for review" if n_held else ""))
     lines = [f"{n} new {'case' if n == 1 else 'cases'} added to The Case-Law Review:", ""]
     html_items = []
     for c in new_cases:
         url = f"{APP_BASE}/#/case/{c['id']}"
-        lines += [f"• {c['caseName']} {c['citation']} — {c['courtTag']} · {c['relevance']}",
+        call = c["relevance"] or "HELD FOR REVIEW"
+        lines += [f"• {c['caseName']} {c['citation']} — {c['courtTag']} · {call}",
                   f"  {c['oneLine']}", f"  {url}", ""]
         html_items.append(
             f"<li style='margin-bottom:14px'><strong>{esc(c['caseName'])} {esc(c['citation'])}</strong> — "
-            f"{esc(c['courtTag'])} · {esc(c['relevance'])}<br>"
+            f"{esc(c['courtTag'])} · {esc(call)}<br>"
             f"<span style='color:#46423A'>{esc(c['oneLine'])}</span><br>"
             f"<a href='{esc(url)}'>{esc(url)}</a></li>")
+    reports_html = ""
+    if audited_held:
+        lines += ["", f"{n_held} of these did NOT pass the fact-check and carry no Action/Awareness call "
+                      f"(grey 'Held for review' badge). The report for each, verbatim — tell Cowork "
+                      f"'<case> is held' to have it corrected and re-checked:", ""]
+        for c, report in audited_held:
+            lines += [report, ""]
+        reports_html = ("<h3 style='margin-top:22px'>Held for review</h3><p style='color:#8a5a2b'>"
+                        f"{n_held} of these did not pass the fact-check and carry no call. Tell Cowork "
+                        "'&lt;case&gt; is held' to have it corrected and re-checked.</p>"
+                        + "".join(f"<pre style='white-space:pre-wrap;font-size:12px;background:#f6f4ee;"
+                                  f"padding:10px;border-radius:6px'>{esc(report)}</pre>"
+                                  for _, report in audited_held))
     lines += ["Full analysis + downloads in the app."]
     if stats:
         lines += ["", _health_text(stats)]
     html = (f"<div style='font-family:Inter,Arial,sans-serif;color:#1A1813'>"
             f"<p>{n} new {'case' if n == 1 else 'cases'} added to "
             f"<strong>The Case-Law Review</strong>:</p>"
-            f"<ul style='list-style:none;padding-left:0'>{''.join(html_items)}</ul>"
+            f"<ul style='list-style:none;padding-left:0'>{''.join(html_items)}</ul>{reports_html}"
             f"<p style='color:#7C7563;font-size:13px'>Full analysis + downloads in the app: "
             f"<a href='{esc(APP_BASE)}/'>{esc(APP_BASE)}/</a></p>"
             f"{_health_html(stats) if stats else ''}</div>")
@@ -1204,7 +1254,7 @@ def _health_text(stats):
     line = ("— run health: "
             f"{stats['alerts']} alert(s) · {stats['inScope']} in scope · "
             f"{stats['analysed']} analysed · {stats['watchlist']} to watchlist · "
-            f"{stats.get('held', 0)} held from auto-analysis · "
+            f"{stats.get('held', 0)} held from auto-analysis · {stats.get('auditHeld', 0)} held by the fact-check · "
             f"{stats.get('screened', 0)} screened out · {stats.get('blocked', 0)} blocked · "
             f"{stats['pending']} pending · {stats['errors']} error(s) · "
             f"{stats['gaveUp']} given up.")
@@ -1393,6 +1443,8 @@ def main():
         log("  " + blocked_line(blocked[it["id"]], it))
 
     client = get_client() if work else None
+    audit_dir = DATA / "audits" / dt.date.today().isoformat()   # committed with data/: the report stays readable
+    audited_held = []                                              # (case, report_text) for the email
     new_cases, unresolved, gave_up, errors, processed_now, held = [], [], [], [], [], []
     for it in work.values():
         try:
@@ -1471,6 +1523,25 @@ def main():
                 case["date"] = dmy_to_iso(court_date)
             if flags:
                 case["flags"] = flags
+            # The fact-check — the same second, independent call add_case.py --audit makes.
+            # A problem is a hold (draft published without a call), never a silent publish,
+            # and a failed audit call is a hold too: nothing reaches the library unchecked.
+            when = dt.date.today().isoformat()
+            try:
+                verdict = audit.audit_case(client, case, text)
+            except Exception as e:
+                log(f"  audit call failed for {it['id']}: {e} — holding")
+                verdict = audit.failed_audit_result(e)
+            report = audit.write_audit_report(case, verdict, audit_dir, when, by="pipeline/update.py (daily bot)")
+            if verdict["verdict"] != "CLEAN":
+                label = (report.relative_to(ROOT).as_posix() if report.is_relative_to(ROOT)
+                         else f"data/audits/{when}/{case['id']}.md")
+                audit.hold(case, label, len(verdict["problems"]), when)
+                audited_held.append((case, audit.render_audit_report(case, verdict, when, audit.MODEL,
+                                                                     by="pipeline/update.py (daily bot)")))
+                log(f"  HELD after audit {it['id']}: {len(verdict['problems'])} problem(s) — {report.name}")
+            else:
+                log(f"  audit CLEAN {it['id']}")
             write_llm_file(case, text, analysis, source=source)
             new_cases.append(case)
             if it.get("_msgid"):
@@ -1524,11 +1595,12 @@ def main():
         "analysed": len(new_cases), "watchlist": len(to_notify),
         "pending": len(unresolved), "errors": len(errors), "gaveUp": len(gave_up),
         "held": len(held), "blocked": len(set(blocked_hits)),
+        "auditHeld": len(audited_held),
         "screened": len(screened), "screenedItems": screened,
     }
 
     if new_cases:
-        send_email(user, password, new_cases, stats)
+        send_email(user, password, new_cases, stats, audited_held)
     if to_notify:
         send_watchlist_email(user, password, to_notify, stats)
     if not new_cases and not to_notify:
