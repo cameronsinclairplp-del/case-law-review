@@ -1941,6 +1941,25 @@
       "catchwords": "Criminal law - High Risk Serious Offenders Act 2020 (WA) - Review of continuing detention - Whether respondent remains a high risk serious offender - Respondent not provided with treatment opportunities - Whether respondent's circumstances have changed - Whether supervision order should be made - Turns on own facts",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=d279d571-1a7f-4f47-b476-3f19bdb64bb8"
+    },
+    {
+      "id": "wasca-2025-64",
+      "citation": "[2025] WASCA 64",
+      "courtTag": "WASCA",
+      "year": "2025",
+      "num": "64",
+      "caseName": "Kwld v Webb",
+      "jadeUrl": "https://jade.io/summary/mnc/2025/WASCA/64",
+      "blurb": "Evidence - Legal professional privilege - Electronic records seized by police under the Criminal Investigation Act 2006 (WA) - Proper construction of s 151 of the Criminal Investigation Act - Implied waiver of legal professional privilege",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-23T14:39:15.535091+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Evidence - Legal professional privilege - Electronic records seized by police under the Criminal Investigation Act 2006 (WA) - Proper construction of s 151 of the Criminal Investigation Act - Implied waiver of legal professional privilege",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=534aea5c-fd2d-4177-96b6-8a9356b9e769"
     }
   ],
   "processed": [],
@@ -1955,7 +1974,8 @@
     "wasc-2026-389",
     "wasc-2026-332",
     "wasc-2026-407",
-    "wasc-2026-406"
+    "wasc-2026-406",
+    "wasc-2026-404"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
