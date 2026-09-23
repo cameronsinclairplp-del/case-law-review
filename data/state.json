@@ -1960,6 +1960,25 @@
       "catchwords": "Evidence - Legal professional privilege - Electronic records seized by police under the Criminal Investigation Act 2006 (WA) - Proper construction of s 151 of the Criminal Investigation Act - Implied waiver of legal professional privilege",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=534aea5c-fd2d-4177-96b6-8a9356b9e769"
+    },
+    {
+      "id": "wasc-2026-405",
+      "citation": "[2026] WASC 405",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "405",
+      "caseName": "Wayne v WA Police",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1261411&pid=113502252&h=7099608",
+      "blurb": "Wayne v WA Police [2026] WASC 405",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-23T21:55:39.044611+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
