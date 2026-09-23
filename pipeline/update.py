@@ -58,6 +58,12 @@ FILES_DIR = DATA / "files"
 
 APP_BASE = "https://cameronsinclairplp-del.github.io/case-law-review"
 JADE_FROM = "editors@jade.io"
+# The eCourts Portal's "Recently Published Decisions" subscription (Cameron, 19/09/2026):
+# one email a day when there is an update, a heading per subscribed court, and for each
+# decision the name, citation, the Court's own catchwords and a ViewDecision link. No
+# attachment. Read beside the Jade alerts since 23/09/2026 (HANDOFF 7.8, Layer 2).
+ECOURTS_FROM = "donotreply@justice.wa.gov.au"
+ECOURTS_LINK_RE = re.compile(r"https://ecourts\.justice\.wa\.gov\.au/eCourtsPortal/Decisions/ViewDecision\?id=[0-9A-Fa-f-]+")
 MODEL = os.environ.get("ANALYSIS_MODEL", "claude-opus-4-8")
 MAX_JUDGMENT_CHARS = 500_000      # ~125k tokens; truncate longer judgments (flagged)
 LOOKBACK_DAYS = 3                 # rolling IMAP window; dedupe-by-id makes overlap safe
@@ -88,6 +94,8 @@ COURTS = {
     # kept by the watchlist filter, so the national Jade alert doesn't flood the digest.
     "NSWSC":  {"juris": "nsw", "name": "Supreme Court of New South Wales", "gated": True, "scope": False},
     "NSWCCA": {"juris": "nsw", "name": "Supreme Court of NSW — Court of Criminal Appeal", "gated": True, "scope": False},
+    # Sentencing remarks come through the eCourts subscription; useful by hand, not watch-listed.
+    "WASCSR": {"juris": "wa",  "name": "Supreme Court of Western Australia — Sentencing Remarks", "gated": False, "scope": False},
 }
 
 # Investigation / evidence topics a WA detective cares about (the Canon §8 watchlist
@@ -433,6 +441,15 @@ def imap_since_date(days=LOOKBACK_DAYS):
 # IMAP — read Jade alerts
 # ---------------------------------------------------------------------------
 def fetch_alert_html(user, password, since_dt):
+    return _fetch_bodies(user, password, since_dt, JADE_FROM)
+
+
+def fetch_ecourts_html(user, password, since_dt):
+    """The eCourts Portal's decision emails (see ECOURTS_FROM) — same window, same inbox."""
+    return _fetch_bodies(user, password, since_dt, ECOURTS_FROM)
+
+
+def _fetch_bodies(user, password, since_dt, sender):
     since_str = since_dt.strftime("%d-%b-%Y")
     bodies = []
     try:
@@ -444,12 +461,12 @@ def fetch_alert_html(user, password, since_dt):
         die(f"IMAP connection failed: {e}")
     try:
         M.select("INBOX")
-        typ, data = M.search(None, f'(SINCE "{since_str}" FROM "{JADE_FROM}")')
+        typ, data = M.search(None, f'(SINCE "{since_str}" FROM "{sender}")')
         if typ != "OK":
             die(f"IMAP search failed: {typ}")
         raw = (data[0] if data else b"") or b""   # ('OK', [None]) safety
         ids = raw.split()
-        log(f"IMAP: {len(ids)} message(s) from {JADE_FROM} since {since_str}")
+        log(f"IMAP: {len(ids)} message(s) from {sender} since {since_str}")
         for mid in ids:
             try:
                 typ, msgdata = M.fetch(mid, "(RFC822)")
@@ -701,6 +718,88 @@ def parse_alert(body):
     return out
 
 
+# ---------------------------------------------------------------------------
+# The eCourts decision email (shape verified 22/09/2026):
+#   <h5>Supreme Court Judgments (General Division)</h5>
+#   <div><div>HANSSON -v- THE STATE CORONER OF WESTERN AUSTRALIA [2026] WASC 389</div>
+#        <div>Catchwords: Coroner - Request for a coronial inquest ... - Turns on own facts</div>
+#        https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=...</div>
+#   <h5>District Court Judgments</h5><div>No decisions available for this subscription.</div>
+# ---------------------------------------------------------------------------
+_ECOURTS_KEEP_CAPS = {"WA", "DPP", "CEO", "ACC", "CCC", "DCP", "ATO", "NSW", "NT", "ACT", "SA", "QLD",
+                      "VIC", "TAS", "RSPCA", "ASIC", "CDPP", "AFP", "ODPP"}
+_ECOURTS_SMALL = {"of", "the", "and", "for", "in", "on", "at", "by", "to", "v", "a", "an"}
+
+
+def ecourts_case_name(raw):
+    """'THE STATE OF WESTERN AUSTRALIA -v- BROWN [No 4]' -> 'The State of Western Australia v
+    Brown [No 4]'; 'REYNOLDS -v- WA POLICE' -> 'Reynolds v WA Police'; a party that is a
+    single token of up to three capitals ('MRV', 'DJF') is a pseudonym and stays as it is."""
+    raw = re.sub(r"\s+", " ", (raw or "")).strip()
+    raw = re.sub(r"\s+-v-\s+", " v ", raw, flags=re.I)
+    parties = re.split(r"\s+v\s+", raw, maxsplit=1)
+    out = []
+    for party in parties:
+        suffix = ""
+        m = re.search(r"\s*\[\s*no\.?\s*(\d+)\s*\]\s*$", party, flags=re.I)
+        if m:                                          # "[No 2]" is kept as it is, whatever the case
+            suffix, party = f" [No {m.group(1)}]", party[:m.start()]
+        words = party.split(" ")
+        if len(words) == 1 and re.fullmatch(r"[A-Z]{2,3}", words[0]):
+            out.append(words[0] + suffix)              # pseudonym initials
+            continue
+        fixed = []
+        for i, w in enumerate(words):
+            core = w.strip("[]()")
+            if core.upper() in _ECOURTS_KEEP_CAPS:
+                fixed.append(w.replace(core, core.upper()))
+            elif core.lower() in _ECOURTS_SMALL and i > 0:
+                fixed.append(w.lower())
+            else:
+                fixed.append(w[:1].upper() + w[1:].lower() if w.isupper() or w.islower() else w)
+        out.append(" ".join(fixed) + suffix)
+    return " v ".join(out)
+
+
+def parse_ecourts(body):
+    """One item per decision in an eCourts decision email; [] for anything else."""
+    items = []
+    if "<" not in body or ECOURTS_LINK_RE.search(body) is None:
+        return items
+    soup = BeautifulSoup(body, "html.parser")
+    section = ""
+    for el in soup.find_all(["h5", "div"]):
+        if el.name == "h5":
+            section = " ".join(el.get_text(" ").split())
+            continue
+        inner = el.find_all("div", recursive=False)
+        if len(inner) < 2:
+            continue
+        head = " ".join(inner[0].get_text(" ").split())
+        m = CITATION_RE.search(head)
+        if not m:
+            continue
+        catch = " ".join(inner[1].get_text(" ").split())
+        catch = re.sub(r"^catchwords\s*:\s*", "", catch, flags=re.I)
+        link = ECOURTS_LINK_RE.search(el.get_text(" "))
+        name = ecourts_case_name(head[:m.start()])
+        it = _item_from_match(m, name, "", catch, via="ecourts")
+        it["caseName"] = name                           # the portal's own title, normalised
+        it["nameSuspect"] = not _looks_like_case_name(name)
+        it["catchwords"] = catch
+        it["ecourtsUrl"] = link.group(0) if link else ""
+        it["section"] = section
+        items.append(it)
+    seen, out = set(), []
+    for it in items:
+        if it["id"] not in seen:
+            seen.add(it["id"])
+            out.append(it)
+    if out:
+        log(f"  eCourts email: {len(out)} decision(s)")
+    return out
+
+
 def _scan_text_for_citations(text, items):
     for m in CITATION_RE.finditer(text):
         start = max(0, m.start() - 160)
@@ -816,6 +915,16 @@ def in_scope(item):
         return False, f"{tag}: library-only court (not in watchlist scope)"
     name = str(item.get("caseName") or "")
     blob = f"{name} {item.get('blurb','')}"
+    # A WA item that arrived with the Court's own catchwords (the eCourts decision
+    # email) is judged on their area heading and nothing else — the same rule the
+    # High Court gate uses (catchword_areas). It comes BEFORE the keyword rules so
+    # a criminal appeal whose catchwords mention a visa is not dropped for the word.
+    catch = " ".join(str(item.get("catchwords") or "").split())
+    if catch and COURTS[tag]["juris"] == "wa":
+        if criminal_catchwords(catch):
+            return True, "in scope"
+        areas = "; ".join(catchword_areas(catch)[:2]) or "?"
+        return False, f"{tag}: the Court's catchwords are not criminal — area: {areas}"
     if DROP_KEYWORDS.search(blob):
         return False, "out-of-scope topic"
     if COURTS[tag]["gated"] and not TOPIC_KEYWORDS.search(blob):
@@ -852,7 +961,8 @@ def _screened_out(why):
     these in the run's email: the filter is allowed to be wrong, it is not allowed
     to be silent. Deliberately excludes the pre-existing civil-party drop, which
     has been silent since session 5 and would only dilute the list."""
-    return ("no criminal signal (name-only entry)" in why) or ("vexatious-proceedings" in why)
+    return (("no criminal signal (name-only entry)" in why) or ("vexatious-proceedings" in why)
+            or ("catchwords are not criminal" in why))
 
 
 # ---------------------------------------------------------------------------
@@ -1245,32 +1355,13 @@ def send_watchlist_email(user, password, items, stats=None):
     n = len(items)
     today = dt.datetime.now(dt.timezone.utc).strftime("%d/%m/%Y")
     subject = f"WA Case-Law Review — {n} new decision{'s' if n != 1 else ''} to read ({today})"
-    intro = ("New in-scope decisions from your Jade alerts that the free corpus "
-             "doesn't carry (all WA cases, plus the odd High Court gap). Full text and "
-             "analysis are pending — these are the ones to be across; tap a link to read, "
-             "or forward one to ingest it into the app:")
-    lines = [intro, ""]
-    html_items = []
-    for it in items:
-        au = austlii_url(it)
-        jd = it.get("jadeUrl") or jade_summary_url(it["courtTag"], it["year"], it["num"])
-        blurb = re.sub(r"\s+", " ", it.get("catchwords") or it.get("blurb", "")).strip()[:240]
-        hold = " ".join(str(it.get("holdReason", "")).split())
-        lines += [f"• {it['caseName']} {it['citation']} — {it['courtTag']}"]
-        if blurb:
-            lines.append(f"  {blurb}")
-        if hold:
-            lines.append(f"  NOT auto-analysed — {hold}. The full text IS available; "
-                         f"forward it as an INGEST email if you want it in the library.")
-        lines += [f"  AustLII: {au}", f"  Jade: {jd}", ""]
-        html_items.append(
-            f"<li style='margin-bottom:14px'><strong>{esc(it['caseName'])} {esc(it['citation'])}</strong> "
-            f"— {esc(it['courtTag'])}<br>"
-            + (f"<span style='color:#46423A'>{esc(blurb)}</span><br>" if blurb else "")
-            + (f"<span style='color:#8a5a2b'>Not auto-analysed — {esc(hold)}. The full text "
-               f"IS available; forward it as an INGEST email if you want it in the library."
-               f"</span><br>" if hold else "")
-            + f"<a href='{esc(au)}'>AustLII</a> · <a href='{esc(jd)}'>Jade</a></li>")
+    intro = ("New in-scope decisions from your Jade alerts and the eCourts decision emails "
+             "that the bot cannot fetch itself (all WA cases, plus the odd High Court gap). "
+             "Full text and analysis are pending — these are the ones to be across. For a WA "
+             "case: tap the eCourts link, pass the portal's human check, download the judgment "
+             "and drop it in Cases/ (or forward it as an INGEST email) — the rest is automatic:")
+    lines, html_items = _watchlist_lines(items)
+    lines = [intro, ""] + lines
     lines += ["", "(The app library is unchanged until full analysis is available.)"]
     if stats:
         lines += ["", _health_text(stats)]
@@ -1289,6 +1380,37 @@ def send_watchlist_email(user, password, items, stats=None):
         s.login(user, password)
         s.send_message(em)
     log(f"watchlist email sent: {subject}")
+
+
+def _watchlist_lines(items):
+    """The per-case block of the watchlist email, text and HTML. The eCourts link —
+    the one a person clicks to fetch a WA judgment — comes first when there is one."""
+    lines, html_items = [], []
+    for it in items:
+        au = austlii_url(it)
+        jd = it.get("jadeUrl") or jade_summary_url(it["courtTag"], it["year"], it["num"])
+        ec = str(it.get("ecourtsUrl") or "")
+        blurb = re.sub(r"\s+", " ", it.get("catchwords") or it.get("blurb", "")).strip()[:240]
+        hold = " ".join(str(it.get("holdReason", "")).split())
+        lines += [f"• {it['caseName']} {it['citation']} — {it['courtTag']}"]
+        if blurb:
+            lines.append(f"  {blurb}")
+        if hold:
+            lines.append(f"  NOT auto-analysed — {hold}. The full text IS available; "
+                         f"forward it as an INGEST email if you want it in the library.")
+        if ec:
+            lines.append(f"  eCourts (download the judgment here): {ec}")
+        lines += [f"  AustLII: {au}", f"  Jade: {jd}", ""]
+        html_items.append(
+            f"<li style='margin-bottom:14px'><strong>{esc(it['caseName'])} {esc(it['citation'])}</strong> "
+            f"— {esc(it['courtTag'])}<br>"
+            + (f"<span style='color:#46423A'>{esc(blurb)}</span><br>" if blurb else "")
+            + (f"<span style='color:#8a5a2b'>Not auto-analysed — {esc(hold)}. The full text "
+               f"IS available; forward it as an INGEST email if you want it in the library."
+               f"</span><br>" if hold else "")
+            + (f"<a href='{esc(ec)}'><strong>Download from eCourts</strong></a> · " if ec else "")
+            + f"<a href='{esc(au)}'>AustLII</a> · <a href='{esc(jd)}'>Jade</a></li>")
+    return lines, html_items
 
 
 def esc(s):
@@ -1417,6 +1539,28 @@ def main():
             prev = by_cand.get(it["id"])
             if prev is None or (prev.get("via") != "link" and it.get("via") == "link"):
                 by_cand[it["id"]] = it
+    # The eCourts decision emails (HANDOFF 7.8, Layer 2): WA decisions with the
+    # Court's own catchwords and a ViewDecision link. A Jade entry for the same id
+    # keeps its provenance and gains the Court's fields.
+    try:
+        ebodies = fetch_ecourts_html(user, password, imap_since_date())
+    except Exception as e:                                    # noqa: BLE001
+        ebodies = []
+        log(f"eCourts email fetch failed (non-fatal): {e}")
+    n_ecourts = 0
+    for body in ebodies:
+        for it in parse_ecourts(body):
+            n_ecourts += 1
+            prev = by_cand.get(it["id"])
+            if prev is None:
+                by_cand[it["id"]] = it
+                continue
+            for k in ("catchwords", "ecourtsUrl"):
+                if it.get(k) and not prev.get(k):
+                    prev[k] = it[k]
+            if not prev.get("blurb"):
+                prev["blurb"] = it["blurb"]
+    log(f"eCourts decision emails: {len(ebodies)} message(s), {n_ecourts} decision(s)")
     log(f"candidates parsed: {len(by_cand)}")
     pending_ids = {p.get("id") for p in pending if p.get("id")}
     # The Court's own listing, beside the alerts (HANDOFF 7.8) — only ids nobody has
@@ -1475,7 +1619,7 @@ def main():
             it["nameSuspect"] = bool(prev.get("nameSuspect"))
         # what an earlier run learned from the Court (catchwords, the page and file
         # links, the hold) survives the same alert being re-read for LOOKBACK_DAYS
-        for k in ("catchwords", "hcaMeta", "holdReason"):
+        for k in ("catchwords", "hcaMeta", "holdReason", "ecourtsUrl"):
             if not it.get(k) and prev.get(k):
                 it[k] = prev[k]
         work[it["id"]] = it
@@ -1730,6 +1874,7 @@ def _pending_record(it):
         "heldNotified": bool(it.get("heldNotified", False)),
         "catchwords": it.get("catchwords", ""),
         "hcaMeta": dict(it.get("hcaMeta") or {}),
+        "ecourtsUrl": it.get("ecourtsUrl", ""),
     }
 
 

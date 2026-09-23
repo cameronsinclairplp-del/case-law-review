@@ -840,7 +840,7 @@ def _bot_sandbox(pending, metas, texts, analysis=None, audit=None, discovered=No
     saved = (u.DATA, u.CASES_PATH, u.STATE_PATH, u.BLOCKLIST_PATH, u.FILES_DIR, u.fetch_alert_html,
              u.fetch_submissions, u.fetch_judgment_text, hca.lookup, hca.fetch_text, u.analyse, u.get_client,
              AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email,
-             hca.discover, u.MAX_NEW_PER_RUN, u.RUN_SECONDS_BUDGET)
+             hca.discover, u.MAX_NEW_PER_RUN, u.RUN_SECONDS_BUDGET, u.fetch_ecourts_html)
     seen = {"emails": [], "watchlist": [], "health": [], "pushed": [], "downloads": [], "analysed": [],
             "lookups": [], "discover_known": None, "corpus": []}
     with tempfile.TemporaryDirectory() as d:
@@ -852,6 +852,7 @@ def _bot_sandbox(pending, metas, texts, analysis=None, audit=None, discovered=No
         u.CASES_PATH.write_text("[]", encoding="utf-8")
         u.STATE_PATH.write_text(json.dumps({"pending": pending, "processed": [], "screenedSeen": []}), encoding="utf-8")
         u.fetch_alert_html = lambda user, pw, since: []
+        u.fetch_ecourts_html = lambda user, pw, since: []
         u.fetch_submissions = lambda user, pw, since, processed: []
         def corpus(citation):
             seen["corpus"].append(citation)
@@ -890,7 +891,7 @@ def _bot_sandbox(pending, metas, texts, analysis=None, audit=None, discovered=No
             (u.DATA, u.CASES_PATH, u.STATE_PATH, u.BLOCKLIST_PATH, u.FILES_DIR, u.fetch_alert_html,
              u.fetch_submissions, u.fetch_judgment_text, hca.lookup, hca.fetch_text, u.analyse, u.get_client,
              AU.audit_case, u.commit_and_push, u.send_email, u.send_watchlist_email, u.send_health_email,
-             hca.discover, u.MAX_NEW_PER_RUN, u.RUN_SECONDS_BUDGET) = saved
+             hca.discover, u.MAX_NEW_PER_RUN, u.RUN_SECONDS_BUDGET, u.fetch_ecourts_html) = saved
 
 
 def _pending_hca(num, name, first_seen="2026-09-09T00:00:00+00:00"):
@@ -1075,6 +1076,112 @@ def test_bot_uses_the_corpus_for_older_high_court_citations_only():
     assert seen["corpus"] == ["[2019] HCA 19"]                     # 2026: the Court first, no corpus round-trip
     assert [c for c, _ in seen["lookups"]] == ["[2019] HCA 19", "[2026] HCA 29"]   # a corpus miss still asks the Court
     assert seen["analysed"] == ["hca-2026-29"]
+
+
+# The first eCourts decision email, 22/09/2026 ("Subscription Update for 21/09/2026"),
+# abridged: the shape is the portal's, the decisions are real.
+ECOURTS_HTML = """<html><body>
+<p><img src="cid:9e057c1d"></p>
+<p>Please find below the latest updates in relation to your decision type subscription(s) with the Courts and Tribunals of WA:</p>
+<h5>Supreme Court Judgments (General Division)</h5>
+<div>
+<div>HANSSON -v- THE STATE CORONER OF WESTERN AUSTRALIA [2026] WASC 389</div>
+<div>Catchwords: Coroner - Request for a coronial inquest to be ordered by the court - Proper construction of s 24 of the Coroners Act 1996 (WA) - Whether death a 'reportable death' - Turns on own facts</div>
+https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=f2f7a5bf-6cff-4e57-84f5-6367c51ec4dd
+</div>
+<br>
+<div>
+<div>THE STATE OF WESTERN AUSTRALIA -v- BROWN [No 4] [2026] WASC 401</div>
+<div>Catchwords: Criminal law -&nbsp;High Risk Serious Offenders Act 2020&nbsp;(WA) - Review of continuing detention - Whether respondent remains a high risk serious offender - Turns on own facts</div>
+https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=d279d571-1a7f-4f47-b476-3f19bdb64bb8
+</div>
+<br>
+<div>
+<div>REYNOLDS -v- WA POLICE [2026] WASC 403</div>
+<div>Catchwords: Criminal law - Single judge appeal - Evidentiary certificate - Road Traffic (Administration) Act 2008 (WA) - Whether accused made admissions under s 32 of the Evidence Act 1906 (WA) - Turns on own facts</div>
+https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=57d415a5-fd55-4c21-82d1-55a8242b6212
+</div>
+<br>
+<h5>District Court Judgments</h5>
+<div>No decisions available for this subscription.</div>
+<br>
+<h5>Supreme Court Sentencing Remarks</h5>
+<div>
+<div>THE STATE OF WESTERN AUSTRALIA -v- BELL [2026] WASCSR 24</div>
+<div>Catchwords: With intent to harm, did an act as a result of which the life, health or safety of a person was, or was likely to be, endangered</div>
+https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=07bda675-4b5c-440e-9875-cb09600b119e
+</div>
+<br>
+<h5>Supreme Court Judgments (Court of Appeal)</h5>
+<div>No decisions available for this subscription.</div>
+<div>To change or unsubscribe from your Decisions subscription(s), please follow the link below.</div>
+https://ecourts.justice.wa.gov.au/eCourtsPortal/Home/Subscribe
+</body></html>"""
+
+
+def test_ecourts_case_name_normalises_the_portals_capitals():
+    f = u.ecourts_case_name
+    assert f("THE STATE OF WESTERN AUSTRALIA -v- BROWN [No 4]") == "The State of Western Australia v Brown [No 4]"
+    assert f("HANSSON -v- THE STATE CORONER OF WESTERN AUSTRALIA") == "Hansson v The State Coroner of Western Australia"
+    assert f("REYNOLDS -v- WA POLICE") == "Reynolds v WA Police"
+    assert f("MRV -v- SNW [No 2]") == "MRV v SNW [No 2]"                      # pseudonym initials survive
+    assert f("DJF -v- DIRECTOR OF PUBLIC PROSECUTIONS") == "DJF v Director of Public Prosecutions"
+    assert f("THE STATE OF WESTERN AUSTRALIA -v- BELL") == "The State of Western Australia v Bell"
+
+
+def test_parse_ecourts_reads_every_decision_with_its_catchwords_and_link():
+    items = u.parse_ecourts(ECOURTS_HTML)
+    assert [i["id"] for i in items] == ["wasc-2026-389", "wasc-2026-401", "wasc-2026-403", "wascsr-2026-24"]
+    brown = items[1]
+    assert brown["caseName"] == "The State of Western Australia v Brown [No 4]" and brown["via"] == "ecourts"
+    assert brown["catchwords"].startswith("Criminal law - High Risk Serious Offenders Act 2020 (WA)")
+    assert "Catchwords:" not in brown["catchwords"]
+    assert brown["ecourtsUrl"] == "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=d279d571-1a7f-4f47-b476-3f19bdb64bb8"
+    assert brown["section"] == "Supreme Court Judgments (General Division)" and brown["nameSuspect"] is False
+    assert items[3]["section"] == "Supreme Court Sentencing Remarks" and items[3]["courtTag"] == "WASCSR"
+    assert u.parse_ecourts("<a href='https://jade.io/x'>Smith v Jones [2026] WASC 1</a>") == []   # a Jade alert is not one
+    assert u.parse_ecourts("plain text with no links") == []
+
+
+def test_in_scope_judges_a_wa_item_on_the_courts_catchwords_first():
+    hansson, brown, reynolds, bell = u.parse_ecourts(ECOURTS_HTML)
+    ok, why = u.in_scope(hansson)
+    assert not ok and "area: Coroner" in why and u._screened_out(why)          # a listed drop, never silent
+    assert u.in_scope(brown) == (True, "in scope") and u.in_scope(reynolds) == (True, "in scope")
+    assert u.in_scope(bell) == (False, "WASCSR: library-only court (not in watchlist scope)")
+    # the area rule comes before the keyword rules: a criminal appeal whose catchwords
+    # mention a visa is kept; a civil party name with criminal catchwords is kept too
+    it = dict(brown, catchwords="Criminal law - Sentence - Offender liable to visa cancellation - Whether error", blurb="")
+    assert u.in_scope(it)[0]
+    it = dict(brown, caseName="Westpac Banking Corporation v Smith", catchwords="Evidence - Admissibility - Confession")
+    assert u.in_scope(it)[0]
+    # without catchwords the old WASC name rules still apply, unchanged
+    it = dict(brown, catchwords="", blurb="", caseName="Westpac Banking Corporation v Smith")
+    assert not u.in_scope(it)[0]
+
+
+def test_bot_reads_the_ecourts_emails_and_lists_the_download_link():
+    with _bot_sandbox([], {}, {}) as seen:
+        u.fetch_ecourts_html = lambda user, pw, since: [ECOURTS_HTML]
+        # the same run's Jade alert lists Brown [No 4]: the alert entry keeps its provenance
+        u.fetch_alert_html = lambda user, pw, since: [
+            '<a href="https://jade.io/article/1">The State of Western Australia v Brown [No 4] [2026] WASC 401</a>']
+        u.main()
+        state = json.loads(u.STATE_PATH.read_text(encoding="utf-8"))
+    by_id = {p["id"]: p for p in state["pending"]}
+    assert set(by_id) == {"wasc-2026-401", "wasc-2026-403"}                     # Coroner screened, remarks library-only
+    assert by_id["wasc-2026-401"]["via"] == "link" and by_id["wasc-2026-401"]["ecourtsUrl"].endswith("d279d571-1a7f-4f47-b476-3f19bdb64bb8")
+    assert by_id["wasc-2026-401"]["catchwords"].startswith("Criminal law")
+    assert by_id["wasc-2026-403"]["via"] == "ecourts" and by_id["wasc-2026-403"]["caseName"] == "Reynolds v WA Police"
+    assert seen["lookups"] == [] and seen["downloads"] == []                      # nothing is fetched for WA
+    assert all("WASC" in c for c in seen["corpus"])                               # (the corpus answers WA offline)
+    items, stats = seen["watchlist"][0]
+    assert {i["id"] for i in items} == {"wasc-2026-401", "wasc-2026-403"}
+    assert [s["id"] for s in stats["screenedItems"]] == ["wasc-2026-389"] and "Coroner" in stats["screenedItems"][0]["why"]
+    lines, html = u._watchlist_lines(items)
+    text = "\n".join(lines)
+    assert "eCourts (download the judgment here): https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=57d415a5" in text
+    assert "Download from eCourts" in "".join(html) and "Criminal law - Single judge appeal" in text
 
 
 def test_bot_holds_a_case_the_audit_fails_and_reports_it():
