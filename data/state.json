@@ -203,17 +203,17 @@
       "year": "2026",
       "num": "131",
       "caseName": "Kua v The State of Western Australia",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1258043&pid=113048228&h=1180866499",
-      "blurb": "Kua v The State of Western Australia [2026] WASCA 131",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/131",
+      "blurb": "Criminal law – Appeal against sentence – Offences of uttering forged records, gaining benefits by fraud and unlawful use of restricted access computer system – Factual errors by sentencing judge – Whether to order sentence of imprisonment be suspended",
       "via": "link",
       "nameSuspect": false,
       "firstSeen": "2026-09-16T21:49:07.917495+00:00",
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law – Appeal against sentence – Offences of uttering forged records, gaining benefits by fraud and unlawful use of restricted access computer system – Factual errors by sentencing judge – Whether to order sentence of imprisonment be suspended",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=022f3e60-dc80-434e-aeef-4619fd056da8"
     },
     {
       "id": "wasc-2026-386",
@@ -1976,9 +1976,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Vehicle confiscation order made under s 80C(1) of the Road Traffic Act 1974 (WA) - Appellant committed third impounding offence (driver's licence) within a five-year period - Appellant driving while driver's licence suspended - Magistrate determined application for confiscation in the absence of the appellant - Turns on own facts",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=4482acc9-94cb-47c3-bf1d-ba269b1026d6"
     }
   ],
   "processed": [],
@@ -1994,7 +1994,12 @@
     "wasc-2026-332",
     "wasc-2026-407",
     "wasc-2026-406",
-    "wasc-2026-404"
+    "wasc-2026-404",
+    "wasc-2026-410",
+    "wasc-2026-399",
+    "wasc-2026-398",
+    "wasc-2026-393",
+    "wasc-2026-408"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
