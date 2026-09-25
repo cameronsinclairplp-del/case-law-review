@@ -2093,6 +2093,44 @@
       "catchwords": "Criminal law - High Risk Serious Offenders Act s 35 and s 48 - Application for restriction order - Whether the respondent is a high risk serious offender - Whether unacceptable risk that the respondent will commit a serious offence if not subject to a restriction order - Whether necessary to make a restriction order to ensure adequate protection of community - Whether community can be adequately protection by a supervision order - Whether necessary to make a continuing detention order - Turns on own facts",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=2e08f7ba-d681-4480-ace5-f58c16baa43c"
+    },
+    {
+      "id": "wasc-2026-415",
+      "citation": "[2026] WASC 415",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "415",
+      "caseName": "The State of Western Australia v Dia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1263061&pid=113683971&h=2087792510",
+      "blurb": "The State of Western Australia v Dia [2026] WASC 415",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-25T21:55:14.059127+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
+    },
+    {
+      "id": "wasc-2026-414",
+      "citation": "[2026] WASC 414",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "414",
+      "caseName": "DOWNES v WA Police",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1263064&pid=113683971&h=2087792510",
+      "blurb": "DOWNES v WA Police [2026] WASC 414",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-25T21:55:14.059131+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
@@ -2118,7 +2156,8 @@
     "wasc-2026-409",
     "wasc-2024-370",
     "wadc-2026-92",
-    "wadc-2026-85"
+    "wadc-2026-85",
+    "wasc-2026-413"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
