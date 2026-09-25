@@ -1995,9 +1995,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Practice and procedure - Bail - Application for bail pending determination of appeal against conviction - Whether exceptional reasons exist - Strength of grounds of appeal - Turns on own facts",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=8ef8ec67-831b-499d-b204-bd4f55445eb8"
     },
     {
       "id": "wasca-2026-137",
@@ -2071,9 +2071,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Appeal against conviction - Offence of sexual relationship with a child under the age of 16 years - Evidence by complainant of suicide attempt - Whether direction required to avoid perceptible risk of miscarriage of justice",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=3941d183-5688-4cae-9f17-320c2f71a0a4"
     },
     {
       "id": "wasc-2026-402",
@@ -2090,9 +2090,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - High Risk Serious Offenders Act s 35 and s 48 - Application for restriction order - Whether the respondent is a high risk serious offender - Whether unacceptable risk that the respondent will commit a serious offence if not subject to a restriction order - Whether necessary to make a restriction order to ensure adequate protection of community - Whether community can be adequately protection by a supervision order - Whether necessary to make a continuing detention order - Turns on own facts",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=2e08f7ba-d681-4480-ace5-f58c16baa43c"
     }
   ],
   "processed": [],
@@ -2114,7 +2114,11 @@
     "wasc-2026-398",
     "wasc-2026-393",
     "wasc-2026-408",
-    "wasc-2026-411"
+    "wasc-2026-411",
+    "wasc-2026-409",
+    "wasc-2024-370",
+    "wadc-2026-92",
+    "wadc-2026-85"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
