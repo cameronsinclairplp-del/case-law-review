@@ -2109,9 +2109,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - High Risk Serious Offenders Act 2020 (WA) - Restriction order application - Preliminary hearing - Whether reasonable grounds for believing that the court might find that the respondent is a high risk serious offender - Whether interim supervision order should be made pending determination of restriction order application - Turns on own facts",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=0ee1b329-830c-45c8-8dd8-c8c78ceea4a0"
     },
     {
       "id": "wasc-2026-414",
@@ -2157,7 +2157,8 @@
     "wasc-2024-370",
     "wadc-2026-92",
     "wadc-2026-85",
-    "wasc-2026-413"
+    "wasc-2026-413",
+    "wasc-2026-412"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
