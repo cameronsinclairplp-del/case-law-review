@@ -2131,6 +2131,25 @@
       "catchwords": "",
       "hcaMeta": {},
       "ecourtsUrl": ""
+    },
+    {
+      "id": "wasc-2026-408",
+      "citation": "[2026] WASC 408",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "408",
+      "caseName": "Suppressed",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1262035&pid=113593664&h=255399903",
+      "blurb": "Suppressed [2026] WASC 408",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-09-28T10:40:57.777980+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
