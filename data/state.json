@@ -2177,7 +2177,10 @@
     "wadc-2026-92",
     "wadc-2026-85",
     "wasc-2026-413",
-    "wasc-2026-412"
+    "wasc-2026-412",
+    "wasca-2026-139",
+    "wasc-2026-417",
+    "wasc-2026-329"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
