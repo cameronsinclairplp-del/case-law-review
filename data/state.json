@@ -2150,6 +2150,44 @@
       "catchwords": "",
       "hcaMeta": {},
       "ecourtsUrl": ""
+    },
+    {
+      "id": "wasca-2026-140",
+      "citation": "[2026] WASCA 140",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "140",
+      "caseName": "Rose v The State of Western Australia [No 2]",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/140",
+      "blurb": "Criminal law and procedure - Multiple applications for bail pending trial - Appeal against refusal of bail on third application - 'Serious offences' - Preconditions of new circumstances and exceptional reasons",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-03T09:43:23.571364+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal law and procedure - Multiple applications for bail pending trial - Appeal against refusal of bail on third application - 'Serious offences' - Preconditions of new circumstances and exceptional reasons",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=fc246587-4a41-40c8-aec5-42ebde77a88b"
+    },
+    {
+      "id": "wasca-2026-132",
+      "citation": "[2026] WASCA 132",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "132",
+      "caseName": "Windsor v The State of Western Australia",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/132",
+      "blurb": "Criminal law - Appeal against Conviction - Conviction for possession of 1,4-Butanediol contrary to s 14(1) of the Misuse of Drugs Act 1981 (WA) where no quantity prescribed in Schedule 3 of the Misuse of Drugs Regulations 1982 (WA) - Appeal against conviction where appellant could not at law have been guilty of charged offence Criminal law and sentencing - Where sentence for possession of 1,4-Butanediol was made cumulative - Where cumulative sentence set aside by reason of appeal against conviction - Whether and if so in what manner sentences for other offences should be varied - Criminal Appeals Act 2004 (WA) s 30(6)",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-03T09:43:23.571376+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal law - Appeal against Conviction - Conviction for possession of 1,4-Butanediol contrary to s 14(1) of the Misuse of Drugs Act 1981 (WA) where no quantity prescribed in Schedule 3 of the Misuse of Drugs Regulations 1982 (WA) - Appeal against conviction where appellant could not at law have been guilty of charged offence Criminal law and sentencing - Where sentence for possession of 1,4-Butanediol was made cumulative - Where cumulative sentence set aside by reason of appeal against conviction - Whether and if so in what manner sentences for other offences should be varied - Criminal Appeals Act 2004 (WA) s 30(6)",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=e3b26604-fd6a-4950-88ad-82cfed58cbae"
     }
   ],
   "processed": [],
@@ -2193,7 +2231,13 @@
     "wasc-2026-276",
     "wasc-2026-424",
     "wasc-2026-423",
-    "wasca-2026-135"
+    "wasca-2026-135",
+    "wasc-2026-427",
+    "wasc-2026-426",
+    "wadc-2026-98",
+    "wadc-2026-31",
+    "wadc-2026-84",
+    "wadc-2026-97"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
