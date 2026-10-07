@@ -1,5 +1,41 @@
 [
   {
+    "id": "hca-2026-36",
+    "date": "2026-10-07",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "The King v Bechaud",
+    "citation": "[2026] HCA 36",
+    "decided": "07/10/2026",
+    "appealFrom": "Court of Appeal of the Supreme Court of Victoria",
+    "outcome": "Crown appeal allowed. Orders 2 to 6 of the Court of Appeal (made 04/12/2025) set aside; in their place the respondent's appeal against conviction dismissed, restoring the conviction.",
+    "weight": "High Court of Australia, five-Justice unanimous bench (Gageler CJ, Gordon, Gleeson, Jagot and Beech-Jones JJ). Binding on the point of statutory construction, though confined to Victorian legislation.",
+    "tags": [
+      "jury separation",
+      "separation oath",
+      "jury trial",
+      "statutory construction",
+      "jury integrity",
+      "miscarriage of justice",
+      "Crown appeal"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court held that the jury separation oath under <i>Juries Act 2000</i> (Vic) s 50 can be taken early in a trial and endures throughout — it need not be re-administered or taken shortly before separation during deliberations.",
+    "whatHappened": "BECHAUD was arraigned on 24/07/2024 on two charges of rape and pleaded not guilty. The jury was empanelled that afternoon and, after preliminary directions and before any evidence, each juror took the separation oath under s 50 of the <i>Juries Act 2000</i> (Vic). Evidence ran until 01/08/2024; the jury retired at 2.34 pm on 02/08/2024. The trial judge (Gaynor J) twice allowed the jury to separate during deliberations — on 02/08/2024 and 05/08/2024 — without reminding jurors of the separation oath. By the time deliberations began, nine days had passed since the oath was taken. On 06/08/2024 the jury acquitted on the first charge and convicted on the second. The Victorian Court of Appeal (Priest and Kaye JJA, Taylor JA dissenting) quashed the conviction, holding the oath had to be taken at a time temporally proximate and connected to the first separation during deliberations. The Crown appealed to the High Court.",
+    "whatHeld": "<b>Section 50 does not require the separation oath to be taken at any particular time or stage of the trial.</b> The only requirement in s 50(2) is that each separating juror <b>has taken</b> the oath before the judge allows separation — it operates as a precondition, not a timing rule. The Court rejected reading in words like \"just\" or a \"temporal or factual connection\" requirement. <b>An oath, once taken, endures according to its terms and is not diluted or made futile merely by the passage of time.</b> Jurors should be assumed to understand the oath continues to bind them (following <i>R v Patton</i>). The oath need not be re-administered each time the jury separates. The Court endorsed Taylor JA's dissent: the oath is taken once only, and reminding jurors they remain bound is good practice but not legally mandatory in every case. However, <b>circumstances may arise where failure to remind jurors of the oath before separation would itself be an error or irregularity</b> (e.g. a juror question suggesting a lack of understanding). The trial judge's discretion to allow separation is to be assessed on the circumstances immediately before each separation, but that does not mean the oath must be freshly taken. No miscarriage occurred.",
+    "whatItMeans": "This is a Victorian statute case, so it does not directly govern your WA charging or evidence-gathering — in WA jury separation is dealt with under the <i>Criminal Procedure Act 2004</i> (WA) s 111, which (unlike Victoria and Tasmania) does <b>not</b> require a separation oath. So the specific holding has <b>limited direct operational effect on your casework</b>. The value to you is contextual: it confirms the High Court's modern approach that <b>juries routinely separate during deliberations</b> and that sequestration is now exceptional. For your purposes, the practical point is that <b>jury-integrity challenges based on technical oath-timing are unlikely to succeed</b> where there is no actual suggestion a juror was influenced or failed to comply. If you are ever involved in a matter touching jury conduct, focus on whether there is any <b>real evidence of outside influence or communication</b> — that is what courts care about, not procedural timing technicalities.",
+    "verdict": "AWARENESS only — this interprets Victorian legislation (s 50 <i>Juries Act 2000</i> (Vic)) with no WA equivalent oath requirement, so it does not change how you investigate, gather evidence or charge.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/36.html",
+    "jadeUrl": "https://jade.io/viewArticle.html?aid=1272092&pid=114369905&h=646590114",
+    "files": {
+      "llm": "data/files/hca-2026-36/hca-2026-36.md"
+    },
+    "flags": [
+      "Case concerns Victorian legislation (<i>Juries Act 2000</i> (Vic) s 50); WA has no equivalent separation oath requirement — WA jury separation is under <i>Criminal Procedure Act 2004</i> (WA) s 111 as noted in the judgment.",
+      "Jurisdiction-specific: holding directly governs Victoria only; apply with caution outside that context."
+    ]
+  },
+  {
     "id": "wasca-2026-128",
     "date": "2026-09-04",
     "court": "Supreme Court of WA — Court of Appeal",
