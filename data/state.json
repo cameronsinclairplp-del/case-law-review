@@ -122426,6 +122426,56 @@
       "catchwords": "Criminal law - Criminal Law (Mental Impairment) Act 2023 (WA) - Review of extended custody order - Whether extended custody order should be confirmed - Whether an unacceptable risk that the supervised person would commit a serious offence if not subject to the extended custody order - Extended custody order confirmed - Turns on own facts",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=cfd543fe-84c5-4c0b-ae92-05c29cce9cc4"
+    },
+    {
+      "id": "hca-2026-38",
+      "citation": "[2026] HCA 38",
+      "courtTag": "HCA",
+      "year": "2026",
+      "num": "38",
+      "caseName": "Morton v Minister for Immigration and Citizenship",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/38",
+      "blurb": "Morton v Minister for Immigration and Citizenship [2026] HCA 38 — 14/10/2026 — from the Court's own listing",
+      "via": "court",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-13T23:10:20.846682+00:00",
+      "notified": true,
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Immigration — 'Immigration – Visas – Where delegate refused application for Return (Residence) (Class BB) visa – Where ministerial direction required consi'",
+      "heldNotified": true,
+      "catchwords": "Immigration – Visas – Where delegate refused application for Return (Residence) (Class BB) visa – Where ministerial direction required consideration of protection of Australian community and extent of impediments applicant may face if removed – Whether delegate failed to consider information concerning access to medication, therapy and supports in Singapore – Whether delegate failed to comply with s 54 or s 55 of Migration Act 1958 (Cth) – Whether delegate failed to afford procedural fairness – Whether delegate's findings concerning risk of harm to Australian community legally unreasonable, illogical or irrational. Words and phrases – \"constitutional writ\", \"eye keenly attuned to error\", \"illogical\", \"irrational\", \"legally unreasonable\", \"procedural fairness\", \"substantial and clearly articulated argument\", \"totality of the evidence\", \"unacceptable risk of harm\", \"whole of the reasons\". Migration Act 1958 (Cth) , ss 54(1), 55(1), 499(2A).",
+      "hcaMeta": {
+        "decided": "14/10/2026",
+        "coram": "Gageler CJ, Jagot, Beech-Jones JJ",
+        "caseNumber": "S68/2026",
+        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/morton-v-minister-immigration-and-citizenship",
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-10-14/HCA/Morton%20v%20Minister%20for%20Immigration%20and%20Citizenship%20%28S68-2026%29%20%5B2026%5D%20HCA%2038.pdf"
+      },
+      "ecourtsUrl": ""
+    },
+    {
+      "id": "hca-2026-37",
+      "citation": "[2026] HCA 37",
+      "courtTag": "HCA",
+      "year": "2026",
+      "num": "37",
+      "caseName": "Smith v Chief Executive, Queensland Corrective Services",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/37",
+      "blurb": "Smith v Chief Executive, Queensland Corrective Services [2026] HCA 37 — 14/10/2026 — from the Court's own listing",
+      "via": "court",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-13T23:10:20.846685+00:00",
+      "notified": true,
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Administrative law — 'Administrative law – Judicial review – Prohibition on applying to participate in or participating in \"assisted reproductive technology\" – Co'",
+      "heldNotified": true,
+      "catchwords": "Administrative law – Judicial review – Prohibition on applying to participate in or participating in \"assisted reproductive technology\" – Corrective Services Act 2006 (Qld) – Where appellant prisoner in corrective services facility – Where appellant likely to experience material reduction in fertility prior to release – Where appellant applied to first respondent for approval to undergo treatment at her own cost to extract and freeze eggs – Where application to undergo treatment refused – Whether \"assisted reproductive technology\" includes egg extraction and freezing – Whether Corrective Services Act prohibits appellant from applying to participate in or participating in treatment to extract and freeze eggs. Words and phrases – \"ART\", \"assisted reproductive technology\", \"basic human entitlements\", \"common meaning\", \"conforming interpretation\", \"conjugal visits\", \"constructional choice\", \"contextomy\", \"corrective services\", \"demonstrably justifiable\", \"egg extraction\", \"egg freezing\", \"equality\", \"fertility\", \"fertility-based punishment\", \"fertility preservation\", \"literalism\", \"loss of fertility\", \"natural meaning\", \"non-conforming interpretation\", \"parliamentary intention\", \"partial disapplication\", \"participate in ART\", \"participate in assisted reproductive technology\", \"primary meaning\", \"principle of legality\", \"prisoner dignity\", \"prisoner entitlements\", \"prisoner health\", \"prisoner rights\", \"prisoner special needs\", \"procedures to achieve reproduction\", \"procreation\", \"punishment\", \"reproduction\", \"reproductive autonomy\", \"right to preserve fertility\", \"right to procreate\", \"right to reproduce\", \"severance\", \"value judgments\", \"welfare of prisoners\". Acts Interpretation Act 1954 (Qld) , ss 14A, 14B. Corrective Services Act 2006 (Qld) , ss 3, 22, 154. Human Rights Act 2019 (Qld) , preamble, ss 8, 13, 15, 25, 30, 37, 48. International Covenant on Economic, Social and Cultural Rights (1966) , Art 12.",
+      "hcaMeta": {
+        "decided": "14/10/2026",
+        "coram": "Gordon ACJ, Edelman, Gleeson, Jagot, Beech-Jones JJ",
+        "caseNumber": "B58/2026",
+        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/smith-v-chief-executive-queensland-corrective-services",
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-10-14/HCA/Smith%20v%20Chief%20Executive%2C%20Queensland%20Corrective%20Services%20%28B58-2026%29%20%5B2026%5D%20HCA%2037.pdf"
+      },
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
