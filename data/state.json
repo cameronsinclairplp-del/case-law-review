@@ -122407,12 +122407,29 @@
       "catchwords": "",
       "hcaMeta": {},
       "ecourtsUrl": ""
+    },
+    {
+      "id": "wasc-2026-440",
+      "citation": "[2026] WASC 440",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "440",
+      "caseName": "Attorney General v WAW by his guardian ad litem the Public Advocate [No 2]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1275070&pid=114729003&h=363231037",
+      "blurb": "Attorney General v WAW by his guardian ad litem the Public Advocate [No 2] [2026] WASC 440",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-13T11:29:43.608178+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal law - Criminal Law (Mental Impairment) Act 2023 (WA) - Review of extended custody order - Whether extended custody order should be confirmed - Whether an unacceptable risk that the supervised person would commit a serious offence if not subject to the extended custody order - Extended custody order confirmed - Turns on own facts",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=cfd543fe-84c5-4c0b-ae92-05c29cce9cc4"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2001-162",
-    "wasca-2003-228",
     "wasca-2006-195",
     "wasca-2010-222",
     "wasca-2010-160",
@@ -122910,7 +122927,9 @@
     "wadc-2026-99",
     "wasc-2026-442",
     "wasc-2026-441",
-    "wasc-2026-440"
+    "wasc-2026-440",
+    "wasca-2026-143",
+    "wadc-2025-81"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
