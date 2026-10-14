@@ -122434,9 +122434,9 @@
       "year": "2026",
       "num": "38",
       "caseName": "Morton v Minister for Immigration and Citizenship",
-      "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/38",
-      "blurb": "Morton v Minister for Immigration and Citizenship [2026] HCA 38 — 14/10/2026 — from the Court's own listing",
-      "via": "court",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1276989&pid=114915378&h=551459617",
+      "blurb": "Morton v Minister for Immigration and Citizenship [2026] HCA 38",
+      "via": "link",
       "nameSuspect": false,
       "firstSeen": "2026-10-13T23:10:20.846682+00:00",
       "notified": true,
@@ -122459,9 +122459,9 @@
       "year": "2026",
       "num": "37",
       "caseName": "Smith v Chief Executive, Queensland Corrective Services",
-      "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/37",
-      "blurb": "Smith v Chief Executive, Queensland Corrective Services [2026] HCA 37 — 14/10/2026 — from the Court's own listing",
-      "via": "court",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1276988&pid=114915378&h=551459617",
+      "blurb": "Smith v Chief Executive, Queensland Corrective Services [2026] HCA 37",
+      "via": "link",
       "nameSuspect": false,
       "firstSeen": "2026-10-13T23:10:20.846685+00:00",
       "notified": true,
@@ -122480,7 +122480,6 @@
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2006-195",
     "wasca-2010-222",
     "wasca-2010-160",
     "wasca-2003-129",
@@ -122979,7 +122978,8 @@
     "wasc-2026-441",
     "wasc-2026-440",
     "wasca-2026-143",
-    "wadc-2025-81"
+    "wadc-2025-81",
+    "wasc-2026-444"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
