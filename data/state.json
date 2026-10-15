@@ -122301,8 +122301,8 @@
       "year": "2026",
       "num": "439",
       "caseName": "Anstee Earthmoving Pty Ltd v City of Busselton",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1273223&pid=114526166&h=1205035419",
-      "blurb": "Anstee Earthmoving Pty Ltd v City of Busselton [2026] WASC 439",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/439",
+      "blurb": "Criminal law and procedure - Appeal to single judge against sentence by a magistrate - Fine for breach of planning scheme - Sentence manifestly excessive- Leave to appeal granted - Appeal allowed - Appellant resentenced",
       "via": "link",
       "nameSuspect": false,
       "firstSeen": "2026-10-09T11:10:33.351137+00:00",
@@ -122480,8 +122480,6 @@
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2010-222",
-    "wasca-2010-160",
     "wasca-2003-129",
     "wasca-2015-125",
     "wasca-2004-192",
@@ -122979,7 +122977,9 @@
     "wasc-2026-440",
     "wasca-2026-143",
     "wadc-2025-81",
-    "wasc-2026-444"
+    "wasc-2026-444",
+    "wasc-2026-427",
+    "wasc-2026-421"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
