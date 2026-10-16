@@ -122476,13 +122476,48 @@
         "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-10-14/HCA/Smith%20v%20Chief%20Executive%2C%20Queensland%20Corrective%20Services%20%28B58-2026%29%20%5B2026%5D%20HCA%2037.pdf"
       },
       "ecourtsUrl": ""
+    },
+    {
+      "id": "wasc-2026-443",
+      "citation": "[2026] WASC 443",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "443",
+      "caseName": "King v WA Police",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/443",
+      "blurb": "Criminal law - Single judge appeal - Appeal against conviction and sentence - Whether miscarriage of justice",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-16T14:30:38.597995+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal law - Single judge appeal - Appeal against conviction and sentence - Whether miscarriage of justice",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=673fdcf3-cf49-4f7d-b7c5-cb56df2765bd"
+    },
+    {
+      "id": "wasca-2026-144",
+      "citation": "[2026] WASCA 144",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "144",
+      "caseName": "Dwyer v The State of Western Australia",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASCA/144",
+      "blurb": "Criminal law - Sentencing - Manslaughter - Appeal against sentence - Material error of fact - Appeal allowed - Appellant resentenced",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-16T14:30:38.597998+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal law - Sentencing - Manslaughter - Appeal against sentence - Material error of fact - Appeal allowed - Appellant resentenced",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=96710198-0a45-478b-9c2d-b8d66300ca84"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2003-129",
-    "wasca-2015-125",
-    "wasca-2004-192",
     "wasca-2015-230",
     "wasca-2015-241",
     "wasca-2014-6",
@@ -122979,7 +123014,10 @@
     "wadc-2025-81",
     "wasc-2026-444",
     "wasc-2026-427",
-    "wasc-2026-421"
+    "wasc-2026-421",
+    "wasc-2026-446",
+    "wasc-2026-447",
+    "wadc-2026-101"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
