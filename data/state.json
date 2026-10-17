@@ -122530,9 +122530,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Appeal against sentence - Aggravated home burglary - Unlawful destruction of property - Assault occasioning bodily harm - Where offending occurred in circumstances involving breach of family violence restraining order - Whether sentencing judge erred in finding breach of family violence restraining order was aggravating feature of offending - Whether sentence of 4 years 4 months' immediate imprisonment for aggravated home burglary offence was manifestly excessive - Whether total effective sentence of 4 years 4 months' immediate imprisonment infringed first limb of totality principle",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=c49d3158-025f-4858-b079-b12398348e5c"
     },
     {
       "id": "wasca-2026-145",
@@ -122549,16 +122549,13 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Sexual offences - Sexual penetration without consent - Appeal against conviction - Whether miscarriage of justice arose from directions as to reliability of complainant's evidence - Whether guilty verdict was unreasonable or unsupported by the evidence",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=c6ae92e0-02b7-4f99-90c0-b8f294913378"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2015-230",
-    "wasca-2015-241",
-    "wasca-2014-6",
     "wasca-2015-35",
     "wasca-2011-255",
     "wasca-2001-404",
@@ -123055,7 +123052,10 @@
     "wasc-2026-421",
     "wasc-2026-446",
     "wasc-2026-447",
-    "wadc-2026-101"
+    "wadc-2026-101",
+    "wasc-2026-451",
+    "wasc-2026-450",
+    "wadc-2026-100"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
