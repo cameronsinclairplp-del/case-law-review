@@ -1,25 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasc-2026-343",
-      "citation": "[2026] WASC 343",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "343",
-      "caseName": "KHUU",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1245107&pid=111172380&h=683027049",
-      "blurb": "KHUU [2026] WASC 343",
-      "via": "",
-      "nameSuspect": false,
-      "firstSeen": "2026-08-19T04:38:06.048787+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {},
-      "ecourtsUrl": ""
-    },
-    {
       "id": "wasca-2026-113",
       "citation": "[2026] WASCA 113",
       "courtTag": "WASCA",
