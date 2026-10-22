@@ -122571,11 +122571,48 @@
       "catchwords": "Criminal law - Traffic regulation - Driving under suspension - Whether primary appeal judge subject to reasonable apprehension of bias - Whether primary appeal hearing procedurally unfair - Adequacy of primary appeal judge's reasons for decision - Whether primary appeal judge failed to deal with issues requiring determination",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=d8e4614d-37c9-47e1-8e73-cb8100a531f2"
+    },
+    {
+      "id": "wasca-2026-152",
+      "citation": "[2026] WASCA 152",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "152",
+      "caseName": "Herrigan v Bern",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1285069&pid=115491569&h=1859373059",
+      "blurb": "Herrigan v Bern [2026] WASCA 152",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-22T22:01:40.750040+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
+    },
+    {
+      "id": "wasca-2026-151",
+      "citation": "[2026] WASCA 151",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "151",
+      "caseName": "FRIGGER",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1285070&pid=115491569&h=1859373059",
+      "blurb": "FRIGGER [2026] WASCA 151",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-22T22:01:40.750043+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2005-198",
     "wasca-2005-97",
     "wasca-2012-119",
     "wasca-2014-157",
@@ -123074,7 +123111,8 @@
     "wasc-2026-327",
     "wasc-2026-416",
     "wasc-2026-15",
-    "wasc-2026-455"
+    "wasc-2026-455",
+    "wasc-2026-456"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
