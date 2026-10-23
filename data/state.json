@@ -122609,6 +122609,25 @@
       "catchwords": "",
       "hcaMeta": {},
       "ecourtsUrl": ""
+    },
+    {
+      "id": "wasc-2026-448",
+      "citation": "[2026] WASC 448",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "448",
+      "caseName": "The State of Western Australia v Pindan [No 9]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1286126&pid=115588885&h=1439988147",
+      "blurb": "The State of Western Australia v Pindan [No 9] [2026] WASC 448",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-23T21:48:30.890627+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
