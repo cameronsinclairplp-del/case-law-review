@@ -122723,13 +122723,29 @@
       "catchwords": "Criminal law - Application to admit written statement of prosecution witness into evidence - Where there is no suggestion that the accused contributed to witness's unavailability - Where witness has died - Whether admission of statement unfair to accused",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=17d4c8b4-24af-4fe9-87ec-937544ad4802"
+    },
+    {
+      "id": "wasca-2026-148",
+      "citation": "[2026] WASCA 148",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "148",
+      "caseName": "Lahood v The King",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1289533&pid=115893661&h=359083028",
+      "blurb": "Lahood v The King [2026] WASCA 148",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-28T22:55:38.994091+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2022-120",
-    "wasca-2025-116",
-    "wasca-2011-211",
     "wasca-2002-177",
     "wasca-2002-221",
     "wasca-2019-199",
@@ -123226,7 +123242,10 @@
     "wadc-2026-102",
     "wadc-2026-26",
     "wasca-2026-149",
-    "wasc-2026-154"
+    "wasc-2026-154",
+    "hcasj-2026-35",
+    "wasc-2026-463",
+    "wasc-2026-461"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
