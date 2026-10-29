@@ -122739,16 +122739,32 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law ‑ Appeal against conviction ‑ Importing a commercial quantity of a border‑controlled drug ‑ Whether conviction unsafe and unsatisfactory",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=208c3577-015c-4f12-8798-fcded346a607"
+    },
+    {
+      "id": "wasc-2021-427",
+      "citation": "[2021] WASC 427",
+      "courtTag": "WASC",
+      "year": "2021",
+      "num": "427",
+      "caseName": "The State of Western Australia v Farmer",
+      "jadeUrl": "https://jade.io/summary/mnc/2021/WASC/427",
+      "blurb": "Criminal Law – Evidence – Application to exclude DNA evidence – Expert opinion evidence – Admissibility of alleged verbal admissions by accused to third parties – Pre-trial examination of witnesses by State – Power of court to order State to depose a witness",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-29T10:45:02.473414+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal Law – Evidence – Application to exclude DNA evidence – Expert opinion evidence – Admissibility of alleged verbal admissions by accused to third parties – Pre-trial examination of witnesses by State – Power of court to order State to depose a witness",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=55609fbe-5678-4cb2-a305-c565842b03ad"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2002-177",
-    "wasca-2002-221",
-    "wasca-2019-199",
     "wasca-2002-182",
     "wasca-2005-169",
     "wasca-2003-131",
@@ -123245,7 +123261,10 @@
     "wasc-2026-154",
     "hcasj-2026-35",
     "wasc-2026-463",
-    "wasc-2026-461"
+    "wasc-2026-461",
+    "wasc-2026-466",
+    "wasc-2026-464",
+    "wasc-2026-462"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
