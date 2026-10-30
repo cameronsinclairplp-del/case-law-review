@@ -122780,11 +122780,29 @@
       "catchwords": "",
       "hcaMeta": {},
       "ecourtsUrl": ""
+    },
+    {
+      "id": "hcasj-2026-36",
+      "citation": "[2026] HCASJ 36",
+      "courtTag": "HCASJ",
+      "year": "2026",
+      "num": "36",
+      "caseName": "CZQL v Minister for Immigration, Citizenship and Multicultural Affairs",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1291345&pid=116092179&h=427466072",
+      "blurb": "CZQL v Minister for Immigration, Citizenship and Multicultural Affairs [2026] HCASJ 36",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-10-30T22:44:35.025679+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2006-57",
     "wasca-2002-19",
     "wasca-2013-287",
     "wasca-2003-182",
@@ -123283,7 +123301,8 @@
     "wasc-2026-462",
     "wasc-2026-468",
     "wasc-2026-467",
-    "wasc-2026-465"
+    "wasc-2026-465",
+    "wasc-2026-473"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
