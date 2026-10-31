@@ -1,25 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasc-2026-369",
-      "citation": "[2026] WASC 369",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "369",
-      "caseName": "NICHOLAS NI KOK CHIN",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1251446&pid=112055701&h=1330805862",
-      "blurb": "NICHOLAS NI KOK CHIN [2026] WASC 369",
-      "via": "",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-01T21:31:07.941419+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {},
-      "ecourtsUrl": ""
-    },
-    {
       "id": "wasca-2026-127",
       "citation": "[2026] WASCA 127",
       "courtTag": "WASCA",
