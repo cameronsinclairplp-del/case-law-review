@@ -1,25 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasca-2026-119",
-      "citation": "[2026] WASCA 119",
-      "courtTag": "WASCA",
-      "year": "2026",
-      "num": "119",
-      "caseName": "Suppressed",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1250066&pid=111968912&h=1164120100",
-      "blurb": "Suppressed [2026] WASCA 119",
-      "via": "",
-      "nameSuspect": false,
-      "firstSeen": "2026-08-31T23:04:29.220886+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {},
-      "ecourtsUrl": ""
-    },
-    {
       "id": "wasc-2026-369",
       "citation": "[2026] WASC 369",
       "courtTag": "WASC",
@@ -122803,10 +122784,6 @@
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2002-19",
-    "wasca-2013-287",
-    "wasca-2003-182",
-    "wasca-2000-362",
     "wasca-2018-159",
     "wasca-2014-4",
     "wasca-2011-158",
@@ -123302,7 +123279,11 @@
     "wasc-2026-468",
     "wasc-2026-467",
     "wasc-2026-465",
-    "wasc-2026-473"
+    "wasc-2026-473",
+    "wasc-2026-470",
+    "wasc-2026-469",
+    "wadc-2026-103",
+    "wasc-2026-387"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
