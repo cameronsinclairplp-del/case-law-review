@@ -1,5 +1,46 @@
 [
   {
+    "id": "hca-2026-41",
+    "date": "2026-11-04",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "O'Connell v Director of Public Prosecutions Director of Public Prosecutions v O'Connell",
+    "citation": "[2026] HCA 41",
+    "decided": "04/11/2026",
+    "appealFrom": "Court of Appeal of the Supreme Court of the Australian Capital Territory",
+    "outcome": "In C3/2026 (DPP) appeal allowed; Court of Appeal orders of 27/06/2025 and 29/09/2025 set aside; matter remitted to the ACT Court of Appeal. In C2/2026 (O'Connell) appeal dismissed. Murder conviction restored pending rehearing.",
+    "weight": "High — unanimous outcome, six-Justice joint judgment with Edelman J concurring; authoritative application of M v The Queen and Hillier on unreasonable-verdict review of circumstantial cases.",
+    "tags": [
+      "murder",
+      "manslaughter",
+      "reckless indifference",
+      "circumstantial evidence",
+      "unreasonable verdict",
+      "jury advantage",
+      "appellate review",
+      "mental element",
+      "alternative verdict",
+      "causation"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "High Court restores O'CONNELL's murder conviction, holding the ACT Court of Appeal wrongly found the verdict unreasonable by ignoring jury advantages and treating a circumstantial case piecemeal.",
+    "whatHappened": "Michael O'CONNELL was convicted by an ACT jury of the murder of Danielle JORDAN, who died from head injuries after falling from the bonnet of his moving car during a confrontation on 15/04/2022 (she died 17/04/2022). The prosecution case was that he deliberately drove with her on the bonnet, recklessly indifferent to the probability of causing death, with manslaughter (unlawful and dangerous act) as an alternative. A key witness was Ms X, 13, who saw JORDAN on the bonnet and heard a screech then a 'doof'. CCTV (poor quality, with sound) and collision-reconstruction evidence were also led, and the jury conducted a view of the scene. The Court of Appeal majority set aside the murder verdict as unreasonable and substituted a manslaughter verdict; the Chief Justice dissented. Both sides appealed to the High Court.",
+    "whatHeld": "The DPP's appeal was allowed and O'CONNELL's dismissed. The Court held the Court of Appeal majority <b>failed to make full allowance for the advantages enjoyed by the jury</b>, especially the jury's view of the scene and its ability to assess O'CONNELL's expressions, tone and reaction on the CCTV, when drawing inferences about his state of mind. It also <b>erred by considering the circumstantial case piecemeal</b> — assessing each circumstance in isolation, discarding those that alone did not prove reckless indifference, rather than weighing the <b>combined effect of all the circumstances</b>. The Court distinguished <i>R v Baden-Clay</i>: here the innocence hypothesis arose on the <b>same primary facts</b> the prosecution relied on (only the inference of reckless indifference differed), so it was not mere conjecture. It was legitimate for an appeal court to raise an unargued issue with the parties provided procedural fairness is given. The Court also held <i>Supreme Court Act 1933</i> (ACT) s 37O(1)(d) empowers entry of a guilty verdict to an <b>alternative offence</b>. The matter was remitted to the Court of Appeal.",
+    "whatItMeans": "This reinforces how appellate courts review circumstantial cases, which affects how you should build one. <b>A circumstantial case is proved by the accumulation of all the evidence, not by any single strand</b> — individual facts that look innocent in isolation can together exclude innocence. Gather and present the full picture: the accused's emotional state, prior conduct, manner of driving/acting, knowledge of the victim, and post-event conduct, so the combined effect supports the required mental element. Note the reckless-indifference murder element here turns on foresight of the <b>probability</b> (likelihood) of death, not mere possibility — relevant when framing allegations about an accused's state of mind. This is an ACT case on ACT legislation; the WA equivalent appeal provisions are the <i>Criminal Appeals Act 2004</i> (WA). Nothing here changes your day-to-day procedure, but it is a useful statement of circumstantial-evidence and jury-advantage principles.",
+    "verdict": "AWARENESS — a High Court restatement of circumstantial-evidence and appellate-review principles on ACT legislation; it sharpens understanding of circumstantial proof and the reckless-murder mental element but does not change WA investigative procedure.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/41.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/41",
+    "files": {
+      "llm": "data/files/hca-2026-41/hca-2026-41.md"
+    },
+    "flags": [
+      "Case concerns ACT legislation (Crimes Act 1900 (ACT); Supreme Court Act 1933 (ACT)); WA equivalents differ — confirm before relying",
+      "The s 37O(1)(d) construction finding is specific to the ACT appeal statute",
+      "Edelman J's observations on the meaning of 'probability' in s 12(1)(b) were raised but not decided and are not binding (the leave point was refused below)",
+      "Matter remitted — the reasonableness of the murder verdict is yet to be finally determined"
+    ]
+  },
+  {
     "id": "hca-2026-36",
     "date": "2026-10-07",
     "court": "High Court of Australia",
