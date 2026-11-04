@@ -122777,9 +122777,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - High risk serious offender - Application for restriction order - Whether necessary to make a restriction order to ensure adequate protection of the community - Whether community can be adequately protected by supervision order - Turns on own facts",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=cf5126a4-1fb5-4bf9-83a9-f266ddd80720"
     },
     {
       "id": "hca-2026-40",
@@ -122809,11 +122809,6 @@
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2004-161",
-    "wasca-2014-69",
-    "wasca-2019-198",
-    "wasca-2006-59",
-    "wasca-2006-185",
     "wasca-2000-27",
     "wasca-2011-57",
     "wasca-2001-36",
@@ -123308,7 +123303,12 @@
     "hcasj-2026-38",
     "wasc-2026-476",
     "wasc-2026-471",
-    "wasc-2025-355"
+    "wasc-2025-355",
+    "wasca-2026-154",
+    "wasc-2026-482",
+    "wasc-2026-480",
+    "wasc-2026-478",
+    "wasc-2026-477"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
