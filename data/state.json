@@ -122824,11 +122824,29 @@
       "catchwords": "Criminal Law - High Risk Serious Offenders Act s 7 and s 48 - Application for restriction order - Role and function of the Court - Narrow focus of application - Whether the respondent is a high risk serious offender - Whether there is unacceptable risk that respondent will commit a serious offence if not subject to restriction order - Whether necessary to make restriction order to ensure adequate protection of community - Whether community can be adequately protected by imposition of supervision order - Whether the respondent will substantially comply with standard conditions of a supervision order - Turns on own facts",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=aa90dab9-5471-467a-a68f-1f0cdae42477"
+    },
+    {
+      "id": "wasca-2026-155",
+      "citation": "[2026] WASCA 155",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "155",
+      "caseName": "SPG v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1295003&pid=116494138&h=63966182",
+      "blurb": "SPG v The State of Western Australia [2026] WASCA 155",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-05T23:53:56.693027+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2002-121",
     "wasca-2002-126",
     "wasca-2002-360",
     "wasca-2013-176",
@@ -123327,7 +123345,8 @@
     "wasc-2026-477",
     "wasc-2026-481",
     "wasca-2026-156",
-    "wasc-2026-483"
+    "wasc-2026-483",
+    "wasc-2026-484"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
