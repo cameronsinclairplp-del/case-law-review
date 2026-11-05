@@ -122788,9 +122788,9 @@
       "year": "2026",
       "num": "40",
       "caseName": "Uber Australia Pty Ltd v Chief Commissioner of State Revenue",
-      "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/40",
-      "blurb": "Uber Australia Pty Ltd v Chief Commissioner of State Revenue [2026] HCA 40 — 04/11/2026 — from the Court's own listing",
-      "via": "court",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1293946&pid=116393106&h=1710884452",
+      "blurb": "Uber Australia Pty Ltd v Chief Commissioner of State Revenue [2026] HCA 40",
+      "via": "link",
       "nameSuspect": false,
       "firstSeen": "2026-11-03T23:49:56.580111+00:00",
       "notified": true,
@@ -122805,11 +122805,29 @@
         "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-11-04/HCA/Uber%20Australia%20Pty%20Ltd%20v%20Chief%20Commissioner%20of%20State%20Revenue%20%28S170-2025%29%20%5B2026%5D%20HCA%2040.pdf"
       },
       "ecourtsUrl": ""
+    },
+    {
+      "id": "wasc-2026-479",
+      "citation": "[2026] WASC 479",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "479",
+      "caseName": "The State of Western Australia v McKenna [No 2]",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1294280&pid=116393106&h=1710884452",
+      "blurb": "The State of Western Australia v McKenna [No 2] [2026] WASC 479",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-05T00:03:51.210643+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2000-27",
     "wasca-2011-57",
     "wasca-2001-36",
     "wasca-2002-121",
@@ -123308,7 +123326,8 @@
     "wasc-2026-482",
     "wasc-2026-480",
     "wasc-2026-478",
-    "wasc-2026-477"
+    "wasc-2026-477",
+    "wasc-2026-481"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
