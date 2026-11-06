@@ -122840,15 +122840,13 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Appeal against sentence - Drug‑related offending - Whether sentence of 13 years' imprisonment for possession of 31.5 kg of methylamphetamine with intent to sell or supply is manifestly excessive - Five‑year reduction in sentence for promised future cooperation - No point of principle - Turns on own facts",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=9a3d8073-8acf-42f5-906a-fefcaadee677"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2002-126",
-    "wasca-2002-360",
     "wasca-2013-176",
     "wasca-2005-165",
     "wasca-2015-199",
@@ -123346,7 +123344,9 @@
     "wasc-2026-481",
     "wasca-2026-156",
     "wasc-2026-483",
-    "wasc-2026-484"
+    "wasc-2026-484",
+    "wadc-2026-64",
+    "wadc-2026-105"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
