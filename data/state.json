@@ -1,25 +1,6 @@
 {
   "pending": [
     {
-      "id": "wasc-2026-377",
-      "citation": "[2026] WASC 377",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "377",
-      "caseName": "Suppressed",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1254148&pid=112497910&h=1719849805",
-      "blurb": "Suppressed [2026] WASC 377",
-      "via": "link",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-08T21:31:30.840227+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {},
-      "ecourtsUrl": ""
-    },
-    {
       "id": "hca-2026-33",
       "citation": "[2026] HCA 33",
       "courtTag": "HCA",
