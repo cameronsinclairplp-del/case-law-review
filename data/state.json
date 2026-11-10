@@ -122824,6 +122824,56 @@
       "catchwords": "Criminal law - Appeal against sentence - Drug‑related offending - Whether sentence of 13 years' imprisonment for possession of 31.5 kg of methylamphetamine with intent to sell or supply is manifestly excessive - Five‑year reduction in sentence for promised future cooperation - No point of principle - Turns on own facts",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=9a3d8073-8acf-42f5-906a-fefcaadee677"
+    },
+    {
+      "id": "hca-2026-45",
+      "citation": "[2026] HCA 45",
+      "courtTag": "HCA",
+      "year": "2026",
+      "num": "45",
+      "caseName": "Hatewar v Minister for Immigration and Citizenship",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/45",
+      "blurb": "Hatewar v Minister for Immigration and Citizenship [2026] HCA 45 — 11/11/2026 — from the Court's own listing",
+      "via": "court",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-10T23:50:49.083784+00:00",
+      "notified": true,
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Immigration — 'Immigration – Visas – Where delegate refused application for Return (Residence) (Class BB) visa – Where ministerial direction stated princip'",
+      "heldNotified": true,
+      "catchwords": "Immigration – Visas – Where delegate refused application for Return (Residence) (Class BB) visa – Where ministerial direction stated principle that safety of Australian community is highest priority of Australian Government – Whether delegate misunderstood or misapplied principle – Whether principle required delegate to consider harm caused to plaintiff's family by plaintiff's absence as an aspect of safety of Australian community – Whether delegate's decision illogical or legally unreasonable – Whether delegate failed to consider medical evidence concerning effect of plaintiff's absence on wife's capacity to care for plaintiff's daughter. Words and phrases – \"best interests of minor children in Australia\", \"character test\", \"community safety principle\", \"constitutional writ\", \"expectations of the Australian community\", \"family violence\", \"highest priority\", \"illogical\", \"legally unreasonable\", \"primary considerations\", \"protection of the Australian community\", \"return visa\", \"safety of the Australian community\", \"strength, nature and duration of ties to Australia\", \"unacceptable risk of harm\". Migration Act 1958 (Cth) , ss 347A, 338(7A), 476, 476A(1), 476B, 499(2A), 501(1).",
+      "hcaMeta": {
+        "decided": "11/11/2026",
+        "coram": "Gageler CJ, Gleeson, Jagot JJ",
+        "caseNumber": "S64/2026",
+        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/hatewar-v-minister-immigration-and-citizenship",
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-11-11/HCA/Hatewar%20v%20Minister%20for%20Immigration%20and%20Citizenship%20%28S64-2026%29%20%5B2026%5D%20HCA%2045.pdf"
+      },
+      "ecourtsUrl": ""
+    },
+    {
+      "id": "hca-2026-42",
+      "citation": "[2026] HCA 42",
+      "courtTag": "HCA",
+      "year": "2026",
+      "num": "42",
+      "caseName": "Farm Transparency International Limited v The Game Meats Company of Australia Pty Ltd",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/42",
+      "blurb": "Farm Transparency International Limited v The Game Meats Company of Australia Pty Ltd [2026] HCA 42 — 11/11/2026 — from the Court's own listing",
+      "via": "court",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-10T23:50:49.083806+00:00",
+      "notified": true,
+      "holdReason": "HCA: the Court's catchwords are not criminal — area: Injunctions; Trusts — 'Injunctions – Trespass – Where appellant obtained images through completed trespass on respondent's premises – Where primary judge awarded d'",
+      "heldNotified": true,
+      "catchwords": "Injunctions – Trespass – Where appellant obtained images through completed trespass on respondent's premises – Where primary judge awarded damages but declined to grant injunction – Whether restorative mandatory injunction available to rectify consequences of appellant's trespass – Whether awards of damages adequate to reverse or prevent consequences of trespass – Extent of restraint necessary. Trusts – Constructive trust – Where appellant trespassed on premises of respondent – Where appellant installed and removed hidden cameras to obtain footage for publication – Where Full Court of Federal Court declared that appellant held copyright in images on constructive trust for respondent – Where Full Court made ancillary orders including restraining publication and requiring deletion of images – Whether justice best served by more limited remedy. Words and phrases – \"ancillary orders\", \"auxiliary jurisdiction\", \"constructive trust\", \"constructive trustee\", \"copyright\", \"equitable discretion\", \"exemplary damages\", \"general damages\", \"inadequacy of damages\", \"injunction\", \"institutional constructive trust\", \"justice between the parties\", \"legal assignment\", \"pre-existing right\", \"public interest\", \"rectifying consequential effects\", \"remedial constructive trust\", \"remedial vehicle\", \"remedy\", \"restorative mandatory injunction\", \"resulting trust\", \"specific performance\", \"trespass\", \"unconscionable\", \"wrongful conduct\". Bankruptcy Act 1966 (Cth) , s 116. Copyright Act 1968 (Cth) , ss 13, 15, 22, 86, 90, 98, 101, 115, 116, 196. Federal Court of Australia Act 1976 (Cth) , ss 5, 19, 21, 22, 23. Privacy Act 1988 (Cth) , Sch 2.",
+      "hcaMeta": {
+        "decided": "11/11/2026",
+        "coram": "Gageler CJ, Gordon, Edelman, Steward, Gleeson, Jagot, Beech-Jones JJ",
+        "caseNumber": "M105/2025",
+        "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments/judgments-1998-current/farm-transparency-international-limited-v-game-meats-company-australia-pty-ltd",
+        "pdf": "https://www.hcourt.gov.au/sites/default/files/eresources/2026-11-11/HCA/Farm%20Transparency%20International%20Ltd%20v%20The%20Game%20Meats%20Company%20of%20Australia%20Pty%20Ltd%20%28M105-2025%29%20%5B2026%5D%20HCA%2042.pdf"
+      },
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],

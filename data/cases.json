@@ -1,5 +1,45 @@
 [
   {
+    "id": "hca-2026-44",
+    "date": "2026-11-11",
+    "court": "High Court of Australia",
+    "courtTag": "HCA",
+    "caseName": "Estate of Croft v MTH",
+    "citation": "[2026] HCA 44",
+    "decided": "11/11/2026",
+    "appealFrom": "Court of Appeal of the Supreme Court of New South Wales",
+    "outcome": "Appeal allowed in part. Court of Appeal orders upholding MTH's claim and damages set aside; the proceedings between MTH and the Estate to be retried. Estate to pay the amici's costs; other costs await the retrial.",
+    "weight": "High Court of Australia, unanimous five-judge bench (Gageler CJ, Gordon, Edelman, Steward and Beech-Jones JJ) — authoritative, but interpreting NSW legislation that does not apply in WA.",
+    "tags": [
+      "convictions as evidence",
+      "Evidence Act 1995 (NSW)",
+      "section 92",
+      "section 178",
+      "certificate of conviction",
+      "evidential burden",
+      "legal onus",
+      "civil proceedings",
+      "unrepresented litigants",
+      "sexual abuse damages"
+    ],
+    "relevance": "AWARENESS",
+    "oneLine": "The High Court clarifies that a criminal conviction is admissible in later civil proceedings to prove the facts underlying the offence, but only shifts an evidential burden (not the legal onus) and carries no fixed level of probative value.",
+    "whatHappened": "MTH was placed in foster care with the late Geoffrey CROFT in 1979 when she was 16. In 2019 CROFT was convicted of two rapes and three indecent assaults against MTH, and of offences against a boy, RS. MTH sued for damages for assault; CROFT died and his Estate was substituted as defendant. At trial MTH was unrepresented. The Estate admitted the fact of the convictions but denied the abuse. The primary judge (Cavanagh J) wrongly assumed <i>s 91(1)</i> of the <i>Evidence Act 1995</i> (NSW) barred the convictions being used as proof of the abuse, found MTH not credible, and dismissed her claim. The NSW Court of Appeal allowed her appeal, proceeded 'as if' a certificate of conviction under <i>s 178</i> had been tendered (none ever was), accepted MTH's account and awarded $1,346,000. The Estate appealed to the High Court.",
+    "whatHeld": "The five-judge bench held the primary judge <b>erred</b> by treating <i>s 91(1)</i> as excluding the convictions: the exception in <i>s 92(2)</i> was engaged, so the convictions were <b>admissible as proof of the facts in issue</b> in the criminal proceeding (the elements of each offence). The agreed facts of the convictions were enough — <b>a s 178 certificate is only one way to prove a conviction, not the exclusive or essential means</b>. However, the Court of Appeal <b>wrongly decided the case 'as if' a certificate had been tendered when none existed</b>, and <b>wrongly treated convictions as necessarily having 'high probative value'</b>. A conviction imposes only an <b>evidential burden</b> on the convicted side to point to or produce evidence capable of rebutting the facts — it does <b>not</b> reverse the legal onus, which stays on the plaintiff. Weight varies case by case and must account for the higher criminal standard of proof. The Court also rejected as 'far too absolute' the proposition that a judge must ensure an unrepresented litigant claims all available rights and arguments; the duty is to afford a fair hearing to both sides, not to give running advice. A new trial was ordered.",
+    "whatItMeans": "This is a civil-evidence decision on <i>NSW</i> legislation, so it does not directly govern your WA investigations — <b>WA uses the <i>Evidence Act 1906</i> (WA), not the uniform <i>Evidence Act 1995</i></b>. Treat it as background. The useful takeaway for your awareness: in uniform-evidence jurisdictions a <b>conviction can later be used in civil proceedings to prove the underlying facts</b>, and a certificate of conviction is a convenient but not the only proof of a conviction. Understand the distinction the Court drew between an <b>evidential burden</b> (producing enough to raise an issue) and the <b>legal onus</b> (who must ultimately prove the fact) — that distinction matters whenever you think about how a conviction carries into other proceedings. Do not assume a conviction is automatically treated as near-conclusive; its weight depends on what underpinned it.",
+    "verdict": "AWARENESS — it concerns the civil use of convictions under NSW evidence law, which does not change how you investigate or charge in WA, but the convictions-as-evidence and evidential-burden principles are worth knowing.",
+    "austliiUrl": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCA/2026/44.html",
+    "jadeUrl": "https://jade.io/summary/mnc/2026/HCA/44",
+    "files": {
+      "llm": "data/files/hca-2026-44/hca-2026-44.md"
+    },
+    "flags": [
+      "This decision interprets the <i>Evidence Act 1995</i> (NSW), ss 91, 92, 178 — WA is NOT a uniform evidence jurisdiction and applies the <i>Evidence Act 1906</i> (WA); the specific sections do not apply in WA.",
+      "Civil (damages) proceeding, not a criminal prosecution — relevance to detective casework is indirect.",
+      "The underlying criminal convictions were made under repealed provisions (<i>Crimes Act 1900</i> (NSW), ss 63 and 76, as at 1979)."
+    ]
+  },
+  {
     "id": "hca-2026-41",
     "date": "2026-11-04",
     "court": "High Court of Australia",
