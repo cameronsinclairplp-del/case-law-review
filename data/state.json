@@ -122878,9 +122878,6 @@
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2006-232",
-    "wasca-2004-57",
-    "wasca-2004-103",
     "wasca-2006-67",
     "wasca-2019-20",
     "wasca-2002-33",
@@ -123377,7 +123374,10 @@
     "wasc-2026-485",
     "wasc-2026-489",
     "wasc-2026-486",
-    "wasc-2026-488"
+    "wasc-2026-488",
+    "wasc-2026-491",
+    "wasc-2026-490",
+    "wasc-2026-487"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
