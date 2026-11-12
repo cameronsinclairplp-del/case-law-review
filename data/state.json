@@ -122893,6 +122893,25 @@
       "catchwords": "",
       "hcaMeta": {},
       "ecourtsUrl": ""
+    },
+    {
+      "id": "wasc-2026-494",
+      "citation": "[2026] WASC 494",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "494",
+      "caseName": "Attorney General for Western Australia v Burke",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1298012&pid=116894751&h=1999664751",
+      "blurb": "Attorney General for Western Australia v Burke [2026] WASC 494",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-12T12:17:23.831516+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Evidence - Letter of request from a foreign court for assistance in obtaining evidence - Evidence Act 1906 (WA) s 116 and s 117 - Turns on own facts",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=70154d78-0cbc-47a8-b622-b35e20c127db"
     }
   ],
   "processed": [],
