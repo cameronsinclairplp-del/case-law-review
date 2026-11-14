@@ -45,25 +45,6 @@
       "ecourtsUrl": ""
     },
     {
-      "id": "wasc-2026-384",
-      "citation": "[2026] WASC 384",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "384",
-      "caseName": "Penfold v Magistrate Ruth Dineen",
-      "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/384",
-      "blurb": "Criminal law - Application for judicial review made under s 36 of the Magistrates Court Act 2004 (WA) - Applicant aggrieved by orders allowing prosecution witnesses to give evidence by video link",
-      "via": "link",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-14T22:13:17.470405+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "Criminal law - Application for judicial review made under s 36 of the Magistrates Court Act 2004 (WA) - Applicant aggrieved by orders allowing prosecution witnesses to give evidence by video link",
-      "hcaMeta": {},
-      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=0277563d-ae1f-4d74-aea8-ba573488ff17"
-    },
-    {
       "id": "wasca-2026-130",
       "citation": "[2026] WASCA 130",
       "courtTag": "WASCA",
@@ -122912,6 +122893,25 @@
       "catchwords": "Evidence - Letter of request from a foreign court for assistance in obtaining evidence - Evidence Act 1906 (WA) s 116 and s 117 - Turns on own facts",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=70154d78-0cbc-47a8-b622-b35e20c127db"
+    },
+    {
+      "id": "wasc-2026-497",
+      "citation": "[2026] WASC 497",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "497",
+      "caseName": "Nairn v The State of Western Australia",
+      "jadeUrl": "https://jade.io/viewArticle.html?aid=1299659&pid=117094336&h=661810908",
+      "blurb": "Nairn v The State of Western Australia [2026] WASC 497",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-14T00:04:27.094580+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
