@@ -122836,15 +122836,48 @@
       "catchwords": "Criminal procedure - Accused's application for trial by judge alone - Murder - Unsoundness of mind - Section 27 of the Criminal Code (WA) - Expert psychiatric evidence - Turns on own facts",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=0fa7f8f5-c9d6-4f38-bc9f-2c56736b71a8"
+    },
+    {
+      "id": "wasc-2026-500",
+      "citation": "[2026] WASC 500",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "500",
+      "caseName": "The State of Western Australia v Roffey [No 5]",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/500",
+      "blurb": "Criminal law - High Risk Serious Offenders Act 2020 (WA) - Review of continuing detention order - Whether respondent remains a high risk serious offender - Whether continuing detention order or supervision order appropriate - Turns on own facts",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-17T12:50:51.164802+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal law - High Risk Serious Offenders Act 2020 (WA) - Review of continuing detention order - Whether respondent remains a high risk serious offender - Whether continuing detention order or supervision order appropriate - Turns on own facts",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=cefc3c12-22d5-41b0-92f1-28bbe91ff52a"
+    },
+    {
+      "id": "wadc-2026-107",
+      "citation": "[2026] WADC 107",
+      "courtTag": "WADC",
+      "year": "2026",
+      "num": "107",
+      "caseName": "Re Lawson",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WADC/107",
+      "blurb": "Criminal injuries compensation - Appeal by way of hearing de novo - Alleged assault by unidentified prison officers - Applicant bears onus of proof - Repeated opportunities to particularise alleged offence and provide supporting material - Notices to produce - Extensive production - Recent affidavits - Lack of specificity as to date, place, participants and acts alleged - Whether offence and consequential injury proved on balance of probabilities",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-17T12:50:51.164806+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal injuries compensation - Appeal by way of hearing de novo - Alleged assault by unidentified prison officers - Applicant bears onus of proof - Repeated opportunities to particularise alleged offence and provide supporting material - Notices to produce - Extensive production - Recent affidavits - Lack of specificity as to date, place, participants and acts alleged - Whether offence and consequential injury proved on balance of probabilities",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=8ab0fc4a-8685-4aab-be6c-1c464bec160d"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2001-90",
-    "wasca-2019-19",
-    "wasca-2008-207",
-    "wasca-2010-67",
-    "wasca-2007-191",
     "wasca-2007-178",
     "wasca-2022-1",
     "wasca-2013-232",
@@ -123339,7 +123372,12 @@
     "wasc-2026-496",
     "wasca-2026-157",
     "wasc-2026-474",
-    "wadc-2025-64"
+    "wadc-2025-64",
+    "wasc-2023-494",
+    "wasc-2026-493",
+    "wasc-2026-501",
+    "wadc-2026-106",
+    "wadc-2026-108"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
