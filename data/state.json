@@ -122833,9 +122833,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law and sentencing - Parity - Where appellant one of a group of four home invaders - Where appellant and one co‑offender charged with identical offences - Where appellant and co‑offender of equal culpability - Where appellant already serving sentence of 9 years' imprisonment - Where appellant and co‑offender given nominally identical sentences - Whether sentence infringed parity principle by reason of lack of disparity between appellant's sentence and his co‑offender's - Turns on own facts",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=4e42cd21-76ab-4063-9be0-93cff655fae0"
     },
     {
       "id": "wasc-2026-503",
@@ -122852,16 +122852,13 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Appellant failed to appear at hearing in Magistrates Court - Convicted in absence - Fines imposed - Whether miscarriage of justice occasioned by conviction",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=bd0b7731-ffba-4c61-9d43-57322b7d4d93"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2016-94",
-    "wasca-2003-46",
-    "wasca-2016-7",
     "wasca-2021-152",
     "wasca-2007-134",
     "wasca-2004-272",
@@ -123358,7 +123355,10 @@
     "wadc-2026-108",
     "wasc-2026-498",
     "wasc-2026-504",
-    "wasc-2026-502"
+    "wasc-2026-502",
+    "wasc-2026-508",
+    "wasc-2026-499",
+    "wasc-2026-396"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
