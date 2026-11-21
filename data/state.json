@@ -122833,9 +122833,9 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Appeal against sentence - Eighty child sex and child exploitation material offences - Whether total effective sentence infringes the first limb of the totality principle",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=85781e1f-aaf1-4480-bb8d-1cc72d77d73f"
     },
     {
       "id": "wasca-2026-158",
@@ -122852,14 +122852,32 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Sentencing - Drug importation - Importation of commercial quantity of border controlled drug (1.2 tonnes of methamphetamine - 956 kg pure weight) - Whether sentencing judge erred in identifying offender's role in importation - Offender sentenced to life imprisonment with non-parole period of 23 years - Whether sentence imposed manifestly excessive - Whether sentence imposed infringed parity principle",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=5c57e25e-226b-4be9-8126-92ab9496f93c"
+    },
+    {
+      "id": "wasc-2026-506",
+      "citation": "[2026] WASC 506",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "506",
+      "caseName": "Riseley v Jones",
+      "jadeUrl": "https://jade.io/alert/open/EP_CmNj_5KU01DClhDHWWg?go=case&n=44",
+      "blurb": "Riseley v Jones [2026] WASC 506",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-21T12:14:40.285168+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal law - Single judge appeal - Application for extension of time in which to appeal - Breaches of a violence restraining order - Appellant failed to appear at hearing - Convicted in absence - Whether miscarriage of justice occasioned by conviction in absence of appellant",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=fa0780c9-4fd6-4e39-8079-fa854e92f5bd"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2009-229",
     "wasca-2001-183",
     "wasca-2009-212",
     "wasca-2016-105",
@@ -123358,7 +123376,8 @@
     "wasc-2026-396",
     "hcasj-2026-42",
     "wasc-2026-507",
-    "wasc-2026-506"
+    "wasc-2026-506",
+    "wasc-2026-509"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
