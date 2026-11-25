@@ -122684,13 +122684,48 @@
       "catchwords": "Criminal law - Single judge appeal - Application for extension of time in which to appeal - Breaches of a violence restraining order - Appellant failed to appear at hearing - Convicted in absence - Whether miscarriage of justice occasioned by conviction in absence of appellant",
       "hcaMeta": {},
       "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=fa0780c9-4fd6-4e39-8079-fa854e92f5bd"
+    },
+    {
+      "id": "wasca-2026-163",
+      "citation": "[2026] WASCA 163",
+      "courtTag": "WASCA",
+      "year": "2026",
+      "num": "163",
+      "caseName": "XYZ v The Church of Jesus Christ of LATTER-DAY SAINTS AUSTRALIA",
+      "jadeUrl": "https://jade.io/alert/open/z8ZqCNqRccLlZcDP9f6Dkw?go=case&n=8",
+      "blurb": "XYZ v The Church of Jesus Christ of LATTER-DAY SAINTS AUSTRALIA [2026] WASCA 163",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-25T19:44:17.386904+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
+    },
+    {
+      "id": "wasc-2026-519",
+      "citation": "[2026] WASC 519",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "519",
+      "caseName": "The State of Western Australia v Bradbury [No 3]",
+      "jadeUrl": "https://jade.io/alert/open/z8ZqCNqRccLlZcDP9f6Dkw?go=case&n=31",
+      "blurb": "The State of Western Australia v Bradbury [No 3] [2026] WASC 519",
+      "via": "link",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-25T19:44:17.386920+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "",
+      "hcaMeta": {},
+      "ecourtsUrl": ""
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2005-39",
-    "wasca-2024-38",
-    "wasca-2019-74",
     "wasca-2023-180",
     "wasca-2001-141",
     "wasca-2008-149",
@@ -123187,7 +123222,10 @@
     "wasc-2026-512",
     "wasc-2026-517",
     "wasc-2026-511",
-    "wadc-2026-113"
+    "wadc-2026-113",
+    "wasc-2026-518",
+    "wasc-2026-513",
+    "wasc-2026-510"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
