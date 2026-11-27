@@ -1620,25 +1620,6 @@
       "ecourtsUrl": ""
     },
     {
-      "id": "wasc-2026-408",
-      "citation": "[2026] WASC 408",
-      "courtTag": "WASC",
-      "year": "2026",
-      "num": "408",
-      "caseName": "Suppressed",
-      "jadeUrl": "https://jade.io/viewArticle.html?aid=1262035&pid=113593664&h=255399903",
-      "blurb": "Suppressed [2026] WASC 408",
-      "via": "link",
-      "nameSuspect": false,
-      "firstSeen": "2026-09-28T10:40:57.777980+00:00",
-      "notified": true,
-      "holdReason": "",
-      "heldNotified": false,
-      "catchwords": "",
-      "hcaMeta": {},
-      "ecourtsUrl": ""
-    },
-    {
       "id": "wasca-2026-140",
       "citation": "[2026] WASCA 140",
       "courtTag": "WASCA",
@@ -122738,16 +122719,13 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - Application under r 23 of the Criminal Procedure Rules 2005 (WA) - Australian Criminal Investigation Commission to produce certified evidence pursuant to s 25A(12), s 25A(13) of the Australian Crime Commission Act 2002 (Cth)",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=e0fe8206-95f8-4703-b0f0-21c7520db297"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2008-225",
-    "wasca-2022-9",
-    "wasca-2001-97",
     "wasca-2002-276",
     "wasca-2004-13",
     "wasca-2017-59",
@@ -123244,7 +123222,10 @@
     "wasc-2026-516",
     "wasc-2026-515",
     "wasc-2026-514",
-    "wasc-2026-374"
+    "wasc-2026-374",
+    "wasc-2026-521",
+    "wadc-2026-104",
+    "wadc-2026-110"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
