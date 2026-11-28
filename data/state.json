@@ -122738,18 +122738,51 @@
       "notified": true,
       "holdReason": "",
       "heldNotified": false,
-      "catchwords": "",
+      "catchwords": "Criminal law - High Risk Serious Offenders Act 2020 s 7 and s 46 - Restriction order application - Interim hearing - Whether reasonable grounds for believing that the court might find that the respondent is a high risk serious offender - Whether interim detention order should be made pending determination of restriction order application - Turns on own facts",
       "hcaMeta": {},
-      "ecourtsUrl": ""
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=751edf77-d5b6-44d9-88fe-f506fb102670"
+    },
+    {
+      "id": "wasc-2026-526",
+      "citation": "[2026] WASC 526",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "526",
+      "caseName": "The State of Western Australia v Hughes",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/526",
+      "blurb": "Criminal law - High Risk Serious Offenders Act 2020 (WA) - Restriction order application - Preliminary hearing - Whether reasonable grounds for believing that the court might find that the respondent is a high risk serious offender - Whether interim supervision order should be made pending determination of restriction order application - Turns on own facts",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-28T12:47:45.073301+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal law - High Risk Serious Offenders Act 2020 (WA) - Restriction order application - Preliminary hearing - Whether reasonable grounds for believing that the court might find that the respondent is a high risk serious offender - Whether interim supervision order should be made pending determination of restriction order application - Turns on own facts",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=78294a99-6075-4cf3-846c-fcc10b17b21a"
+    },
+    {
+      "id": "wasc-2026-531",
+      "citation": "[2026] WASC 531",
+      "courtTag": "WASC",
+      "year": "2026",
+      "num": "531",
+      "caseName": "Attorney General for Western Australia v JPF",
+      "jadeUrl": "https://jade.io/summary/mnc/2026/WASC/531",
+      "blurb": "Criminal Law (Mental Impairment) Act 2023 (WA) - Application for extended supervision order - Whether interim supervision order should be made - Turns on own facts",
+      "via": "ecourts",
+      "nameSuspect": false,
+      "firstSeen": "2026-11-28T12:47:45.073304+00:00",
+      "notified": true,
+      "holdReason": "",
+      "heldNotified": false,
+      "catchwords": "Criminal Law (Mental Impairment) Act 2023 (WA) - Application for extended supervision order - Whether interim supervision order should be made - Turns on own facts",
+      "hcaMeta": {},
+      "ecourtsUrl": "https://ecourts.justice.wa.gov.au/eCourtsPortal/Decisions/ViewDecision?id=dd6af8c7-aed2-4598-bd73-06eb8e1496ba"
     }
   ],
   "processed": [],
   "screenedSeen": [
-    "wasca-2002-276",
-    "wasca-2004-13",
-    "wasca-2017-59",
-    "wasca-2021-33",
-    "wasca-2023-80",
     "wasca-2024-51",
     "wasca-2025-62",
     "wasca-2007-237",
@@ -123244,7 +123277,12 @@
     "wasc-2026-374",
     "wasc-2026-521",
     "wadc-2026-104",
-    "wadc-2026-110"
+    "wadc-2026-110",
+    "wasc-2026-525",
+    "wasc-2026-527",
+    "wasc-2026-524",
+    "wasc-2026-529",
+    "wadc-2026-116"
   ],
   "note": "Durable retry queue: cases seen in a Jade alert whose judgment wasn't yet published. Retried every run until resolved or aged out (> 60 days). 'processed' = Message-IDs of judgment emails already ingested (see fetch_submissions). 'screenedSeen' = ids already named in a 'screened out' email, so each is reported ONCE rather than on every run its alert stays in the IMAP window. Written by pipeline/update.py."
 }
